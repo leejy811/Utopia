@@ -24,6 +24,9 @@ public class InputManager : MonoBehaviour
         {
             if (hit.transform.CompareTag("Tile"))
             {
+                Tile tile = hit.transform.gameObject.GetComponent<Tile>();
+                if (!tile.CheckBuilding()) return;
+
                 spawner.SpawnBuilding(hit.transform);
             }
         }
