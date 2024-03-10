@@ -10,6 +10,7 @@ public class Grid : MonoBehaviour
     [SerializeField] private int width;
     [SerializeField] private int height;
     [SerializeField] private Vector2Int startPoint;
+    [SerializeField] private Vector2Int startTileSize;
     [SerializeField] private Vector3 cameraOffset;
 
     private void Awake()
@@ -20,14 +21,22 @@ public class Grid : MonoBehaviour
 
     private void SetTile()
     {
+        if (width % 2 != 0) width++;
+        if (height % 2 != 0) height++;
+
         tiles = new Tile[width, height];
 
         for (int i = 0; i < width; i++)
         {
-            for (int j = 0; j < width; j++)
+            for (int j = 0; j < height; j++)
             {
                 GameObject tile = Instantiate(tilePrefab, new Vector3(startPoint.x + i, 0, startPoint.y + j), Quaternion.identity, transform);
                 tiles[i, j] = tile.GetComponent<Tile>();
+                if (i >= (width / 2) - (startTileSize.x / 2) && i < (width / 2) + (startTileSize.x / 2) &&
+                    j >= (height / 2) - (startTileSize.y / 2) && j < (height / 2) + (startTileSize.y / 2))
+                    tiles[i, j].SetTilePurchased(true);
+                else
+                    tiles[i, j].SetTilePurchased(false);
             }
         }
     }
