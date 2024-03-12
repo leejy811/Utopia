@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] private BuildingSpawner spawner;
     Camera mainCamera;
 
     void Start()
@@ -15,6 +14,12 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            ShopManager.instance.ChangeState(BuyState.None);
+            return;
+        }
+
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
 
         RaycastHit hit;
@@ -24,10 +29,35 @@ public class InputManager : MonoBehaviour
         {
             if (hit.transform.CompareTag("Tile"))
             {
-                Tile tile = hit.transform.gameObject.GetComponent<Tile>();
-                if (!tile.CheckBuilding()) return;
+                BuyState state = ShopManager.instance.buyState;
+                switch(state)
+                {
+                    case BuyState.BuyBuilding:
+                        ShopManager.instance.BuyBuilding(hit.transform);
+                        break;
+                    case BuyState.BuyTile:
+                        ShopManager.instance.BuyTile(hit.transform);
+                        break;
+                    case BuyState.BuildTile:
+                        break;
+                }
+            }
+        }
+        else
+        {
+            if (hit.transform.CompareTag("Tile"))
+            {
+                BuyState state = ShopManager.instance.buyState;
+                switch (state)
+                {
+                    case BuyState.BuyBuilding:
+                        break;
+                    case BuyState.BuyTile:
 
-                spawner.SpawnBuilding(hit.transform);
+                        break;
+                    case BuyState.BuildTile:
+                        break;
+                }
             }
         }
     }

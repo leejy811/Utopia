@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6581096692449990334}
-  - component: {fileID: 661948655570231865}
-  - component: {fileID: 4125105769987182565}
+  - component: {fileID: 7251794707677077687}
   m_Layer: 0
-  m_Name: Building
+  m_Name: BuildingIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +33,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &661948655570231865
+--- !u!114 &7251794707677077687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,47 +42,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2613507314921317539}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1864e527e15c2d04ab1fdc362e6d19a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 75f49e1e25082244386233fc39c8b357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grade: 0
-  type: 0
-  subType: 0
-  happinessRate: 0
-  viewState: 2
-  cost: 0
---- !u!114 &4125105769987182565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2613507314921317539}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92c0ecfa23d7045409feb22297239c7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  existWaterFac: 0
-  existElectricityFac: 0
-  existSewageFac: 0
-  existSoundInsulFac: 0
-  residentCnt:
-    max: 0
-    min: 0
-    cur: 0
-  commercialCSAT:
-    max: 0
-    min: 0
-    cur: 0
-  cultureCSAT:
-    max: 0
-    min: 0
-    cur: 0
-  serviceCSAT:
-    max: 0
-    min: 0
-    cur: 0
 --- !u!1 &6191231180154695126
 GameObject:
   m_ObjectHideFlags: 0

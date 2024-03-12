@@ -2,17 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum TileType { Ground, Road, Decoration}
+public enum TileType { Ground, Road, Decoration }
+
 public class Tile : MonoBehaviour
 {
     public TileType type;
     public bool isPurchased { get; private set; }
-    [SerializeField] private int cost;
-    [SerializeField] private int costPerDay;
+    public bool existBuilding { get; set; }
+    public int costPerDay { get; private set; }
 
     public bool CheckBuilding()
     {
-        return type == TileType.Ground && isPurchased;
+        return type == TileType.Ground && isPurchased && !existBuilding;
+    }
+
+    public bool CheckPurchased()
+    {
+        return !isPurchased;
     }
 
     public void SetTilePurchased(bool isPurchased)

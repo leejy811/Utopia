@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
+    static public Grid instance;
+
     public GameObject tilePrefab;
     public Tile[ , ] tiles;
+    public int tileCost;
 
     [SerializeField] private int width;
     [SerializeField] private int height;
@@ -14,6 +17,17 @@ public class Grid : MonoBehaviour
     [SerializeField] private Vector3 cameraOffset;
 
     private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+    }
+
+    private void Start()
     {
         SetTile();
         SetCamera();

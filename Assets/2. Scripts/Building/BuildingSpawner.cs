@@ -6,11 +6,9 @@ public class BuildingSpawner : MonoBehaviour
 {
     static public BuildingSpawner instance;
 
-    public bool isBuyBuilding = false;
-    public Building curPickBuilding;
     public List<Building> buildings;
 
-    [SerializeField] private GameObject[] buildingPrefabs;
+    public GameObject[] buildingPrefabs;
 
     private void Awake()
     {
@@ -23,22 +21,13 @@ public class BuildingSpawner : MonoBehaviour
         instance = this;
     }
 
-    public void SpawnBuilding(Transform spawnPos)
+    public void PlaceBuilding(int index, Transform spawnTrans)
     {
-        if (!isBuyBuilding) return;
+        Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
+        if (!tile.CheckBuilding()) return;
 
-        buildings.Add(curPickBuilding);
-        curPickBuilding.transform.position = new Vector3(spawnPos.position.x, 0, spawnPos.position.z);
-        curPickBuilding.isSpawn = true;
-        isBuyBuilding = false;
-        curPickBuilding = null;
-    }
-
-    public void BuyBuilding(int index)
-    {
-        if (isBuyBuilding) return;
-        isBuyBuilding = true;
-
-        curPickBuilding = Instantiate(buildingPrefabs[index], transform).GetComponent<Building>();
+        tile.existBuilding = true;
+        Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), Quaternion.identity, transform).GetComponent<Building>();
+        buildings.Add(building);
     }
 }

@@ -16,10 +16,9 @@ public class Building : MonoBehaviour
     [SerializeField] private BuildingType type;
     [SerializeField] private BuildingSubType subType;
     [SerializeField, Range(0, 100)] private int happinessRate;
-    [SerializeField] private int cost;
     [SerializeField] private ViewStateType viewState;
 
-    public bool isSpawn;
+    public int cost;
 
     Material material;
 
@@ -28,7 +27,25 @@ public class Building : MonoBehaviour
         material = GetComponentInChildren<MeshRenderer>().material;
     }
 
-    private void ChangeViewState(ViewStateType state)
+    private void Update()
+    {
+        BuyState state = ShopManager.instance.buyState;
+        switch (state)
+        {
+            case BuyState.None:
+                ChangeViewState(ViewStateType.Opaque);
+                break;
+            case BuyState.BuyBuilding:
+                ChangeViewState(ViewStateType.Translucent);
+                break;
+            case BuyState.BuyTile:
+            case BuyState.BuildTile:
+                ChangeViewState(ViewStateType.Transparent);
+                break;
+        }
+    }
+
+    public void ChangeViewState(ViewStateType state)
     {
         viewState = state;
         material.color = new Color(1, 1, 1, (float)state / 2.0f);

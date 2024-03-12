@@ -6,18 +6,15 @@ public class FollowMouse : MonoBehaviour
 {
     Vector3 mousePos;
     Camera main;
-    Building building;
 
     void Start()
     {
-        building = gameObject.GetComponent<Building>();
         main = Camera.main;
         SetPosition();
     }
 
     void Update()
     {
-        if (building.isSpawn) return;
         SetPosition();
     }
 
