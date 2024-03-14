@@ -14,7 +14,7 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
         {
             ShopManager.instance.ChangeState(BuyState.None);
             return;
@@ -35,6 +35,9 @@ public class InputManager : MonoBehaviour
                     case BuyState.BuyBuilding:
                         ShopManager.instance.BuyBuilding(hit.transform);
                         break;
+                    case BuyState.SellBuilding:
+                        ShopManager.instance.SellBuilding(hit.transform);
+                        break;
                     case BuyState.BuyTile:
                         ShopManager.instance.BuyTile(hit.transform);
                         break;
@@ -51,9 +54,11 @@ public class InputManager : MonoBehaviour
                 switch (state)
                 {
                     case BuyState.BuyBuilding:
+                        ShopManager.instance.CheckBuyBuilding(hit.transform);
+                        break;
+                    case BuyState.SellBuilding:
                         break;
                     case BuyState.BuyTile:
-
                         break;
                     case BuyState.BuildTile:
                         break;

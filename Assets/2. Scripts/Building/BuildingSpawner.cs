@@ -23,11 +23,8 @@ public class BuildingSpawner : MonoBehaviour
 
     public void PlaceBuilding(int index, Transform spawnTrans)
     {
-        Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
-        if (!tile.CheckBuilding()) return;
-
-        tile.existBuilding = true;
         Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), Quaternion.identity, transform).GetComponent<Building>();
         buildings.Add(building);
+        spawnTrans.gameObject.GetComponent<Tile>().building = building.gameObject;
     }
 }

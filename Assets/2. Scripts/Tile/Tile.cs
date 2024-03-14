@@ -8,12 +8,12 @@ public class Tile : MonoBehaviour
 {
     public TileType type;
     public bool isPurchased { get; private set; }
-    public bool existBuilding { get; set; }
     public int costPerDay { get; private set; }
+    public GameObject building;
 
     public bool CheckBuilding()
     {
-        return type == TileType.Ground && isPurchased && !existBuilding;
+        return type == TileType.Ground && isPurchased && building == null;
     }
 
     public bool CheckPurchased()

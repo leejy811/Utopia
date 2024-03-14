@@ -33,6 +33,7 @@ public class Building : MonoBehaviour
         switch (state)
         {
             case BuyState.None:
+            case BuyState.SellBuilding:
                 ChangeViewState(ViewStateType.Opaque);
                 break;
             case BuyState.BuyBuilding:

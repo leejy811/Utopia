@@ -11,7 +11,7 @@ public class ShopManager : MonoBehaviour
     static public ShopManager instance;
 
     public BuyState buyState;
-    public int money { get; private set; } = 20;
+    public int money;
 
     public GameObject[] buildingPrefabs;
 
@@ -29,7 +29,7 @@ public class ShopManager : MonoBehaviour
         instance = this;
     }
 
-    private void GetCoin(int amount)
+    private void GetMoney(int amount)
     {
         money += amount;
     }
@@ -62,11 +62,24 @@ public class ShopManager : MonoBehaviour
     public void BuyBuilding(Transform spawnTrans)
     {
         int cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+        Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyBuilding) return;
         if (!PayMoney(cost)) return;
+        if (!tile.CheckBuilding()) return;
 
         BuildingSpawner.instance.PlaceBuilding(curPickIndex, spawnTrans);
+    }
+
+    public void SellBuilding(Transform spawnTrans)
+    {
+        int cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+        Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
+
+        if (buyState != BuyState.SellBuilding) return;
+
+        Destroy(tile.building);
+        GetMoney(cost);
     }
 
     public void BuyTile(Transform tileTrans)
@@ -79,5 +92,20 @@ public class ShopManager : MonoBehaviour
         if (!tile.CheckPurchased()) return;
 
         tile.SetTilePurchased(true);
+    }
+
+    public void CheckBuyBuilding(Transform tileTrans)
+    {
+        Tile tile = tileTrans.gameObject.GetComponent<Tile>();
+        if (tile.CheckBuilding())
+            SetObjectColor(curPickObject, Color.white);
+        else
+            SetObjectColor(curPickObject, Color.red);
+    }
+
+    private void SetObjectColor(GameObject building, Color color)
+    {
+        Material mat = building.GetComponentInChildren<MeshRenderer>().material;
+        mat.color = color;
     }
 }
