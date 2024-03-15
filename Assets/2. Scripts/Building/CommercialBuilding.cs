@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Building))]
-public class CommercialBuilding : MonoBehaviour
+public class CommercialBuilding : Building
 {
-    [SerializeField] private int influencePower;
-
     [SerializeField] private BoundaryValue customerCnt;
     [SerializeField] private BoundaryValue productPrice;
 }

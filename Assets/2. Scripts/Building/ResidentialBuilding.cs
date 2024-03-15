@@ -4,8 +4,7 @@ using UnityEngine;
 
 public enum OptionType { Water = 0, Electricity, Sewage, SoundInsulation }
 
-[RequireComponent(typeof(Building))]
-public class ResidentialBuilding : MonoBehaviour
+public class ResidentialBuilding : Building
 {
     [SerializeField] private bool[] existFacility;
 

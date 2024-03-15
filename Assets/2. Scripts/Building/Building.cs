@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BuildingType { Residential, Commrcial, culture, Service }
+public enum BuildingType { Residential = -1, Commrcial, culture, Service }
 public enum BuildingSubType { Apartment, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
 
@@ -12,11 +12,12 @@ public struct BoundaryValue { public int max, min, cur; }
 
 public class Building : MonoBehaviour
 {
-    [SerializeField, Range(0, 3)] private int grade;
-    [SerializeField] private BuildingType type;
-    [SerializeField] private BuildingSubType subType;
-    [SerializeField, Range(0, 100)] private int happinessRate;
-    [SerializeField] private ViewStateType viewState;
+    [SerializeField, Range(0, 3)] protected int grade;
+    [SerializeField] protected BuildingType type;
+    [SerializeField] protected BuildingSubType subType;
+    [SerializeField] protected ViewStateType viewState;
+    [SerializeField, Range(0, 100)] protected int happinessRate;
+    [SerializeField] protected int influencePower;
 
     public int cost;
 

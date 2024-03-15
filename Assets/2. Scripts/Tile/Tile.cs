@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
     public TileType type;
     public bool isPurchased { get; private set; }
     public int costPerDay { get; private set; }
+    public int[] influenceValues = new int[3];
     public GameObject building;
 
     public bool CheckBuilding()
@@ -31,5 +32,10 @@ public class Tile : MonoBehaviour
             mat.color = Color.green;
         else
             mat.color = Color.red;
+    }
+
+    public void SetInfluenceValue(BuildingType type, int value, bool isAdd)
+    {
+        influenceValues[(int)type] += isAdd ? value : -value;
     }
 }

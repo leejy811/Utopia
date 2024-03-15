@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Building))]
-public class ServiceBuilding : MonoBehaviour
+public class ServiceBuilding : Building
 {
     [SerializeField] private int costPerDay;
-    [SerializeField] private int influencePower;
 
     [SerializeField] private BoundaryValue employmentValue;
 }
