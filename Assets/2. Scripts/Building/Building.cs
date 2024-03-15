@@ -49,6 +49,6 @@ public class Building : MonoBehaviour
     public void ChangeViewState(ViewStateType state)
     {
         viewState = state;
-        material.color = new Color(1, 1, 1, (float)state / 2.0f);
+        material.color = new Color(material.color.r, material.color.g, material.color.b, (float)state / 2.0f);
     }
 }

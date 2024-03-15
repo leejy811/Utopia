@@ -1,9 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    static public UIManager instance;
+
+    public GameObject optionPopUp;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+    }
+
+    public void SetOptionPopUp(bool active)
+    {
+        optionPopUp.SetActive(active);
+    }
+
     public void OnClickBuildingBuy(int index)
     {
         ShopManager.instance.ChangeState(BuyState.BuyBuilding, index);
@@ -22,5 +43,11 @@ public class UIManager : MonoBehaviour
     public void OnClickTileBuild(int index)
     {
         ShopManager.instance.ChangeState(BuyState.BuildTile, index);
+    }
+
+    public void OnClickOptionBuy(OptionType type)
+    {
+        //TO DO
+        //ShopManager에 Option 실제 구매 연결 해야됨 - Building 상속 후에 구현해야될듯?
     }
 }

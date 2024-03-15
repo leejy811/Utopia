@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6581096692449990334}
   - component: {fileID: 661948655570231865}
   - component: {fileID: 4125105769987182565}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Building
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,9 +96,9 @@ GameObject:
   - component: {fileID: 6170124410597111754}
   - component: {fileID: 4625718724518298695}
   - component: {fileID: 3297346912684703961}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Building
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

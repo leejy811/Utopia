@@ -14,22 +14,14 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
-        {
-            ShopManager.instance.ChangeState(BuyState.None);
-            return;
-        }
-
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
         RaycastHit hit;
-        if (!Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile"))) return;
+        BuyState state = ShopManager.instance.buyState;
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (hit.transform.CompareTag("Tile"))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
-                BuyState state = ShopManager.instance.buyState;
                 switch(state)
                 {
                     case BuyState.BuyBuilding:
@@ -46,11 +38,24 @@ public class InputManager : MonoBehaviour
                 }
             }
         }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
+                UIManager.instance.SetOptionPopUp(true);
+            else
+                ShopManager.instance.ChangeState(BuyState.None);
+        }
         else
         {
-            if (hit.transform.CompareTag("Tile"))
+            if(state == BuyState.SellBuilding && Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                BuyState state = ShopManager.instance.buyState;
+                if (hit.transform.tag == "Building")
+                    ShopManager.instance.SetSellBuilding(hit.transform.gameObject);
+                else
+                    ShopManager.instance.SetSellBuilding(null);
+            }
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
+            {
                 switch (state)
                 {
                     case BuyState.BuyBuilding:

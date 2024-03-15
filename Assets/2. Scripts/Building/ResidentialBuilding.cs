@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum OptionType { Water = 0, Electricity, Sewage, SoundInsulation }
+
 [RequireComponent(typeof(Building))]
 public class ResidentialBuilding : MonoBehaviour
 {
-    [SerializeField] private bool existWaterFac;
-    [SerializeField] private bool existElectricityFac;
-    [SerializeField] private bool existSewageFac;
-    [SerializeField] private bool existSoundInsulFac;
+    [SerializeField] private bool[] existFacility;
 
     [SerializeField] private BoundaryValue residentCnt;
     [SerializeField] private BoundaryValue commercialCSAT;

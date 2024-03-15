@@ -103,9 +103,27 @@ public class ShopManager : MonoBehaviour
             SetObjectColor(curPickObject, Color.red);
     }
 
-    private void SetObjectColor(GameObject building, Color color)
+    public void SetObjectColor(GameObject building, Color color)
     {
         Material mat = building.GetComponentInChildren<MeshRenderer>().material;
         mat.color = color;
+    }
+
+    public void SetSellBuilding(GameObject building)
+    {
+        if (curPickObject != null)
+        {
+            Material preMat = curPickObject.GetComponent<MeshRenderer>().material;
+            preMat.color = Color.white;
+        }
+
+        if (building != null)
+        {
+            Debug.Log(building);
+            Material curMat = building.GetComponent<MeshRenderer>().material;
+            curMat.color = Color.red;
+        }
+
+        curPickObject = building;
     }
 }
