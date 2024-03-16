@@ -45,9 +45,8 @@ public class UIManager : MonoBehaviour
         ShopManager.instance.ChangeState(BuyState.BuildTile, index);
     }
 
-    public void OnClickOptionBuy(OptionType type)
+    public void OnClickOptionBuy(int index)
     {
-        //TO DO
-        //ShopManager에 Option 실제 구매 연결 해야됨 - Building 상속 후에 구현해야될듯?
+        ShopManager.instance.BuyOption((OptionType)index);
     }
 }

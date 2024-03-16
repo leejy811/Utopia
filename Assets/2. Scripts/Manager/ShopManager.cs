@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile }
+public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, BuyOption }
 
 public class ShopManager : MonoBehaviour
 {
@@ -45,7 +45,7 @@ public class ShopManager : MonoBehaviour
         return true;
     }
 
-    public void ChangeState(BuyState state, int index = 0)
+    public void ChangeState(BuyState state, int index = 0, GameObject pickObject = null)
     {
         if (state == buyState) return;
 
@@ -55,6 +55,11 @@ public class ShopManager : MonoBehaviour
             Destroy(curPickObject);
         else if(state == BuyState.BuyBuilding)
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
+
+        if (buyState == BuyState.BuyOption)
+            SetBuyOption(false, pickObject);
+        else if (state == BuyState.BuyOption)
+            SetBuyOption(true, pickObject);
 
         buyState = state;
     }
@@ -71,14 +76,15 @@ public class ShopManager : MonoBehaviour
         BuildingSpawner.instance.PlaceBuilding(curPickIndex, spawnTrans);
     }
 
-    public void SellBuilding(Transform spawnTrans)
+    public void SellBuilding()
     {
-        int cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
-        Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
+        if (curPickObject == null) return;
+
+        int cost = curPickObject.GetComponentInParent<Building>().cost;
 
         if (buyState != BuyState.SellBuilding) return;
 
-        Destroy(tile.building);
+        Destroy(curPickObject);
         GetMoney(cost);
     }
 
@@ -88,10 +94,21 @@ public class ShopManager : MonoBehaviour
         Tile tile = tileTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyTile) return;
-        if (!PayMoney(cost)) return;
         if (!tile.CheckPurchased()) return;
+        if (!PayMoney(cost)) return;
 
         tile.SetTilePurchased(true);
+    }
+
+    public void BuyOption(OptionType type)
+    {
+        ResidentialBuilding building = curPickObject.GetComponent<ResidentialBuilding>();
+
+        if (buyState != BuyState.BuyOption) return;
+        if (building.CheckFacility(type)) return;
+        if (!PayMoney(0)) return;
+
+        building.BuyFacility(type);
     }
 
     public void CheckBuyBuilding(Transform tileTrans)
@@ -105,7 +122,7 @@ public class ShopManager : MonoBehaviour
 
     public void SetObjectColor(GameObject building, Color color)
     {
-        Material mat = building.GetComponentInChildren<MeshRenderer>().material;
+        Material mat = building.GetComponent<MeshRenderer>().material;
         mat.color = color;
     }
 
@@ -119,11 +136,17 @@ public class ShopManager : MonoBehaviour
 
         if (building != null)
         {
-            Debug.Log(building);
             Material curMat = building.GetComponent<MeshRenderer>().material;
             curMat.color = Color.red;
         }
 
         curPickObject = building;
+    }
+
+    private void SetBuyOption(bool active, GameObject pickObject)
+    {
+        SetSellBuilding(null);
+        curPickObject = pickObject;
+        UIManager.instance.SetOptionPopUp(active);
     }
 }

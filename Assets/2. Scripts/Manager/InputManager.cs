@@ -20,15 +20,16 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
+            if(state == BuyState.SellBuilding)
+            {
+                ShopManager.instance.SellBuilding();
+            }
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
                 switch(state)
                 {
                     case BuyState.BuyBuilding:
                         ShopManager.instance.BuyBuilding(hit.transform);
-                        break;
-                    case BuyState.SellBuilding:
-                        ShopManager.instance.SellBuilding(hit.transform);
                         break;
                     case BuyState.BuyTile:
                         ShopManager.instance.BuyTile(hit.transform);
@@ -41,7 +42,7 @@ public class InputManager : MonoBehaviour
         else if (Input.GetMouseButtonDown(1))
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
-                UIManager.instance.SetOptionPopUp(true);
+                ShopManager.instance.ChangeState(BuyState.BuyOption, 0, hit.transform.gameObject);
             else
                 ShopManager.instance.ChangeState(BuyState.None);
         }

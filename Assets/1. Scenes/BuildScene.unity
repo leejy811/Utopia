@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildings: []
   buildingPrefabs:
-  - {fileID: 2613507314921317539, guid: c9b0e8b3ba445ce43a7e732d7a982a49, type: 3}
+  - {fileID: 8178530623523808377, guid: 773143dff57b53449b4af40fcbf0da14, type: 3}
 --- !u!4 &32394688
 Transform:
   m_ObjectHideFlags: 0
@@ -491,7 +491,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 166105803}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455419182}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OnClickOptionBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &166105803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1554,7 +1566,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1298924744}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455419182}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OnClickOptionBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1298924744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1618,7 +1642,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344043574}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.5297594, y: 1.4606261, z: 4.2159734}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1640,7 +1664,7 @@ MonoBehaviour:
   buyState: 0
   money: 20
   buildingPrefabs:
-  - {fileID: 2613507314921317539, guid: 74fbdacba06938f40a902cd27cc9b7e4, type: 3}
+  - {fileID: 1066757415603302540, guid: 0f558c018f151f240a645a10bf39e221, type: 3}
 --- !u!1 &1361391947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1748,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1361391950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455419182}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OnClickOptionBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1361391950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1792,10 +1828,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c265bc9477290a24eb5b969c328b3041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 4302967633685291923, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
+  tilePrefab: {fileID: 451193195964710563, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
   tileCost: 0
-  width: 5
-  height: 5
+  width: 11
+  height: 11
   startPoint: {x: 0, y: 0}
   startTileSize: {x: 3, y: 3}
   cameraOffset: {x: -6, y: 10.5, z: -6}
@@ -1937,7 +1973,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1618690757}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 455419182}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: OnClickOptionBuy
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1618690757
 MonoBehaviour:
   m_ObjectHideFlags: 0
