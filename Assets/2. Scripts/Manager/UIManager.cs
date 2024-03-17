@@ -49,4 +49,9 @@ public class UIManager : MonoBehaviour
     {
         ShopManager.instance.BuyOption((OptionType)index);
     }
+
+    public void OnClickRandomRoulette()
+    {
+        EventManager.instance.RandomRoulette();
+    }
 }

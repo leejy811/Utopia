@@ -20,6 +20,7 @@ public class Building : MonoBehaviour
     [SerializeField] protected int influencePower;
     [SerializeField] protected int influenceSize;
 
+    public List<Event> curEvents;
     public int cost;
 
     private void Start()
@@ -74,6 +75,14 @@ public class Building : MonoBehaviour
         {
             Tile tile = hit.transform.gameObject.GetComponent<Tile>();
             tile.influenceValues[(int)type] += isAdd ? influencePower : -influencePower;
+        }
+    }
+
+    public void ApplyEvent(Event newEvent)
+    {
+        if (!curEvents.Contains(newEvent))
+        {
+            curEvents.Add(newEvent);
         }
     }
 }
