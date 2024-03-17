@@ -24,14 +24,16 @@ public class Tile : MonoBehaviour
 
     public void SetTilePurchased(bool isPurchased)
     {
-        Material mat = gameObject.GetComponent<MeshRenderer>().material;
+        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer renderer in renderers)
+        {
+            if (isPurchased)
+                renderer.material.color = Color.green;
+            else
+                renderer.material.color = Color.red;
+        }
 
         this.isPurchased = isPurchased;
-
-        if (isPurchased)
-            mat.color = Color.green;
-        else
-            mat.color = Color.red;
     }
 
     public void SetInfluenceValue(BuildingType type, int value, bool isAdd)

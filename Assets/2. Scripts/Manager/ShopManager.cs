@@ -122,22 +122,31 @@ public class ShopManager : MonoBehaviour
 
     public void SetObjectColor(GameObject building, Color color)
     {
-        Material mat = building.GetComponent<MeshRenderer>().material;
-        mat.color = color;
+        MeshRenderer[] renderers = building.GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.material.color = color;
+        }
     }
 
     public void SetSellBuilding(GameObject building)
     {
         if (curPickObject != null)
         {
-            Material preMat = curPickObject.GetComponent<MeshRenderer>().material;
-            preMat.color = Color.white;
+            MeshRenderer[] renderers = curPickObject.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer renderer in renderers)
+            {
+                renderer.material.color = Color.white;
+            }
         }
 
         if (building != null)
         {
-            Material curMat = building.GetComponent<MeshRenderer>().material;
-            curMat.color = Color.red;
+            MeshRenderer[] renderers = building.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer renderer in renderers)
+            {
+                renderer.material.color = Color.red;
+            }
         }
 
         curPickObject = building;

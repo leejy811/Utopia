@@ -22,11 +22,8 @@ public class Building : MonoBehaviour
 
     public int cost;
 
-    Material material;
-
     private void Start()
     {
-        material = GetComponent<MeshRenderer>().material;
         ApplyInfluenceToTile(true);
     }
 
@@ -57,7 +54,12 @@ public class Building : MonoBehaviour
     public void ChangeViewState(ViewStateType state)
     {
         viewState = state;
-        material.color = new Color(material.color.r, material.color.g, material.color.b, (float)state / 2.0f);
+
+        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
+        foreach(MeshRenderer renderer in renderers)
+        {
+            renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, (float)state / 2.0f);
+        }
     }
 
     protected void ApplyInfluenceToTile(bool isAdd)

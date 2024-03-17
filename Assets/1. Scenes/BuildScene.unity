@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildings: []
   buildingPrefabs:
-  - {fileID: 8178530623523808377, guid: 773143dff57b53449b4af40fcbf0da14, type: 3}
+  - {fileID: 6249387795973439619, guid: 773143dff57b53449b4af40fcbf0da14, type: 3}
 --- !u!4 &32394688
 Transform:
   m_ObjectHideFlags: 0
@@ -1664,7 +1664,7 @@ MonoBehaviour:
   buyState: 0
   money: 20
   buildingPrefabs:
-  - {fileID: 1066757415603302540, guid: 0f558c018f151f240a645a10bf39e221, type: 3}
+  - {fileID: 6249387795973439619, guid: 5858e47bac8b67a4a8fc399143b72f88, type: 3}
 --- !u!1 &1361391947
 GameObject:
   m_ObjectHideFlags: 0
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c265bc9477290a24eb5b969c328b3041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 451193195964710563, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
+  tilePrefab: {fileID: 1179345971447982024, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
   tileCost: 0
   width: 11
   height: 11
