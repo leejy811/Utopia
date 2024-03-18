@@ -10,6 +10,7 @@ public class Tile : MonoBehaviour
     public bool isPurchased { get; private set; }
     public int costPerDay { get; private set; }
     public int[] influenceValues = new int[3];
+    public int[] subInfluenceValues = new int[7];
     public GameObject building;
 
     public bool CheckBuilding()
@@ -36,8 +37,9 @@ public class Tile : MonoBehaviour
         this.isPurchased = isPurchased;
     }
 
-    public void SetInfluenceValue(BuildingType type, int value, bool isAdd)
+    public void SetInfluenceValue(BuildingType type, BuildingSubType subType, int value, bool isAdd)
     {
         influenceValues[(int)type] += isAdd ? value : -value;
+        subInfluenceValues[(int)type] += isAdd ? 1 : -1;
     }
 }

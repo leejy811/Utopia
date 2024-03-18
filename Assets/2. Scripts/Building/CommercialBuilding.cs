@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CommercialBuilding : Building
 {
-    [SerializeField] private BoundaryValue customerCnt;
-    [SerializeField] private BoundaryValue productPrice;
+    public BoundaryValue customerCnt;
+    public BoundaryValue productPrice;
+
+    public int income;
 }

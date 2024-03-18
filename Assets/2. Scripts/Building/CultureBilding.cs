@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CultureBilding : Building
 {
-    [SerializeField] private BoundaryValue trendValue;
-    [SerializeField] private BoundaryValue fee;
+    public BoundaryValue trendValue;
+    public BoundaryValue fee;
+
+    public int income;
 }

@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum BuildingType { Residential = -1, Commrcial, culture, Service }
-public enum BuildingSubType { Apartment, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
+public enum BuildingType { Residential = -1, Commercial, culture, Service }
+public enum BuildingSubType { Apartment = -1, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
 
 [Serializable]
@@ -12,13 +12,15 @@ public struct BoundaryValue { public int max, min, cur; }
 
 public class Building : MonoBehaviour
 {
-    [SerializeField, Range(0, 3)] protected int grade;
-    [SerializeField] protected BuildingType type;
-    [SerializeField] protected BuildingSubType subType;
-    [SerializeField] protected ViewStateType viewState;
-    [SerializeField, Range(0, 100)] protected int happinessRate;
-    [SerializeField] protected int influencePower;
-    [SerializeField] protected int influenceSize;
+    public int grade;
+    public BuildingType type;
+    public BuildingSubType subType;
+    public ViewStateType viewState;
+    public int happinessRate;
+
+    public Vector2Int position;
+    public int influencePower;
+    public int influenceSize;
 
     public List<Event> curEvents;
     public int cost;
@@ -74,7 +76,7 @@ public class Building : MonoBehaviour
         foreach (Collider hit in hits)
         {
             Tile tile = hit.transform.gameObject.GetComponent<Tile>();
-            tile.influenceValues[(int)type] += isAdd ? influencePower : -influencePower;
+            tile.SetInfluenceValue(type, subType, influencePower, true);
         }
     }
 
@@ -84,5 +86,15 @@ public class Building : MonoBehaviour
         {
             curEvents.Add(newEvent);
         }
+    }
+
+    public void SetPosition(Vector3 position)
+    {
+        this.position = new Vector2Int((int)position.x, (int)position.z);
+    }
+
+    public bool CheckInfluence(BuildingSubType type)
+    {
+        return Grid.instance.tiles[position.x, position.y].subInfluenceValues[(int)type] != 0;
     }
 }

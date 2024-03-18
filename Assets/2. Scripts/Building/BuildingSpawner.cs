@@ -26,5 +26,6 @@ public class BuildingSpawner : MonoBehaviour
         Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), Quaternion.identity, transform).GetComponent<Building>();
         buildings.Add(building);
         spawnTrans.gameObject.GetComponent<Tile>().building = building.gameObject;
+        building.SetPosition(spawnTrans.position);
     }
 }

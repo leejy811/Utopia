@@ -29,26 +29,67 @@ public class EventManager : MonoBehaviour
         }
     }
 
+    public void CheckEvents()
+    {
+        targetBuildings.Clear();
+        curEvents.Clear();
+
+        foreach (Event e in events)
+        {
+            foreach (Building building in BuildingSpawner.instance.buildings)
+            {
+                if (e.CheckCondition(building))
+                {
+                    targetBuildings[e].Add(building);
+                    if (!curEvents.Contains(e))
+                        curEvents.Add(e);
+                }
+            }
+        }
+    }
+
     public void RandomRoulette()
     {
-        curEvents.Clear();
+        List<Event> ranEvents = new List<Event>();
 
         for(int i = 0;i < 3; i++)
         {
-            int ranidx = Random.Range(0, events.Count);
-            curEvents.Add(events[ranidx]);
+            int ranidx = Random.Range(0, curEvents.Count);
+            ranEvents.Add(curEvents[ranidx]);
         }
 
-        ApplyEvents();
+        if (ranEvents[0] == ranEvents[1] && ranEvents[1] == ranEvents[2])
+        {
+            ranEvents[0].duplication = 3;
+            ranEvents.RemoveAt(1);
+            ranEvents.RemoveAt(2);
+        }
+        else if(ranEvents[0] == ranEvents[1])
+        {
+            ranEvents[0].duplication = 2;
+            ranEvents.RemoveAt(1);
+        }
+        else if(ranEvents[0] == ranEvents[2])
+        {
+            ranEvents[0].duplication = 2;
+            ranEvents.RemoveAt(2);
+        }
+        else if(ranEvents[1] == ranEvents[2])
+        {
+            ranEvents[0].duplication = 2;
+            ranEvents.RemoveAt(2);
+        }
+
+        ApplyEvents(ranEvents);
     }
 
-    public void ApplyEvents()
+    public void ApplyEvents(List<Event> ranEvents)
     {
-        foreach(Event ce in curEvents)
+        foreach(Event ranEvent in ranEvents)
         {
-            foreach(Building building in BuildingSpawner.instance.buildings)
+            foreach(Building building in targetBuildings[ranEvent])
             {
-                building.ApplyEvent(ce);
+                building.ApplyEvent(ranEvent);
             }
         }
     }

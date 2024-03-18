@@ -6,12 +6,12 @@ public enum OptionType { Water = 0, Electricity, Sewage, SoundInsulation }
 
 public class ResidentialBuilding : Building
 {
-    [SerializeField] private bool[] existFacility;
+    public bool[] existFacility;
 
-    [SerializeField] private BoundaryValue residentCnt;
-    [SerializeField] private BoundaryValue commercialCSAT;
-    [SerializeField] private BoundaryValue cultureCSAT;
-    [SerializeField] private BoundaryValue serviceCSAT;
+    public BoundaryValue residentCnt;
+    public BoundaryValue commercialCSAT;
+    public BoundaryValue cultureCSAT;
+    public BoundaryValue serviceCSAT;
 
     private void Awake()
     {
