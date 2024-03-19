@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,54 +6,62 @@ using UnityEngine;
 public class RoutineManager : MonoBehaviour
 {
     public int day;
+    public int cityHappiness;
 
     public void DailyUpdate()
     {
+        UpdateHappiness();
+        ShopManager.instance.GetMoney(CalculateTax());
+        ShopManager.instance.money -= CalculateExpenditure();
 
+        EventManager.instance.CheckEvents();
     }
 
-    private int CalculateIncome()
+    private int CalculateTax()
     {
-        int totalIncome = 0;
+        int total = 0;
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
-            switch (building.type)
-            {
-                case BuildingType.Residential:
-                    ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
-                    totalIncome += residentialBuilding.residentCnt.cur * building.happinessRate * (4 - building.grade);
-                    break;
-                case BuildingType.Commercial:
-                    CommercialBuilding commercialBuilding = building as CommercialBuilding;
-                    totalIncome += commercialBuilding.income * building.happinessRate;
-                    break;
-                case BuildingType.culture:
-                    CultureBilding cultureBilding = building as CultureBilding;
-                    totalIncome += cultureBilding.income * building.happinessRate;
-                    break;
-            }
+            total += building.CalculateIncome();
+
+            if (building.type == BuildingType.Commercial && Convert.ToBoolean(building.CheckBonus()))
+                total += 5;
+            else if (building.type == BuildingType.culture && Convert.ToBoolean(building.CheckBonus()))
+                total += 10;
         }
+
+        return total;
+    }
+
+    private int CalculateExpenditure()
+    {
+        int total = 0;
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
-            switch (building.type)
-            {
-                case BuildingType.Residential:
-                    ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
-                    totalIncome += residentialBuilding.residentCnt.cur * building.happinessRate * (4 - building.grade);
-                    break;
-                case BuildingType.Commercial:
-                    CommercialBuilding commercialBuilding = building as CommercialBuilding;
-                    totalIncome += commercialBuilding.income * building.happinessRate;
-                    break;
-                case BuildingType.culture:
-                    CultureBilding cultureBilding = building as CultureBilding;
-                    totalIncome += cultureBilding.income * building.happinessRate;
-                    break;
-            }
+            if (building.type == BuildingType.Service)
+                total += building.CalculateIncome();
+            else if (building.type == BuildingType.Residential)
+                total += building.CheckBonus() * 5;
         }
 
-        return totalIncome;
+        return total;
+    }
+
+    private void UpdateHappiness()
+    {
+        int total = 0;
+
+        foreach (Building building in BuildingSpawner.instance.buildings)
+        {
+            building.UpdateHappiness();
+            total += building.happinessRate;
+        }
+
+        //ToDo
+        //사회 현상에 의한 행복도 업데이트 구현
+
+        cityHappiness = total / BuildingSpawner.instance.buildings.Count;
     }
 }

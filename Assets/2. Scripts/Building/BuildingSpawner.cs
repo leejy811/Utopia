@@ -24,8 +24,23 @@ public class BuildingSpawner : MonoBehaviour
     public void PlaceBuilding(int index, Transform spawnTrans)
     {
         Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), Quaternion.identity, transform).GetComponent<Building>();
-        buildings.Add(building);
         spawnTrans.gameObject.GetComponent<Tile>().building = building.gameObject;
         building.SetPosition(spawnTrans.position);
+
+        switch(building.type)
+        {
+            case BuildingType.Residential:
+                buildings.Add(building as ResidentialBuilding);
+                break;
+            case BuildingType.Commercial:
+                buildings.Add(building as CommercialBuilding);
+                break;
+            case BuildingType.culture:
+                buildings.Add(building as CultureBilding);
+                break;
+            case BuildingType.Service:
+                buildings.Add(building as ServiceBuilding);
+                break;
+        }
     }
 }

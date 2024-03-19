@@ -29,12 +29,12 @@ public class ShopManager : MonoBehaviour
         instance = this;
     }
 
-    private void GetMoney(int amount)
+    public void GetMoney(int amount)
     {
         money += amount;
     }
 
-    private bool PayMoney(int amount)
+    public bool PayMoney(int amount)
     {
         if (money - amount < 0)
         {

@@ -97,4 +97,19 @@ public class Building : MonoBehaviour
     {
         return Grid.instance.tiles[position.x, position.y].subInfluenceValues[(int)type] != 0;
     }
+
+    public virtual int CalculateIncome()
+    {
+        return 0;
+    }
+
+    public virtual int CheckBonus()
+    {
+        return 0;
+    }
+
+    public virtual void UpdateHappiness()
+    {
+        
+    }
 }
