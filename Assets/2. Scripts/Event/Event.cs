@@ -16,6 +16,8 @@ public class Event : MonoBehaviour
     public int targetIndex;
     public int duplication;
     public int DurationTime;
+    public List<int> effectValue;
+    public List<int> effectJackpotValue;
 
     public bool CheckCondition(Building building)
     {

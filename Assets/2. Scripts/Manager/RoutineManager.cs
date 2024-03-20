@@ -10,6 +10,8 @@ public class RoutineManager : MonoBehaviour
 
     public void DailyUpdate()
     {
+        day++;
+
         UpdateHappiness();
         ShopManager.instance.GetMoney(CalculateTax());
         ShopManager.instance.money -= CalculateExpenditure();

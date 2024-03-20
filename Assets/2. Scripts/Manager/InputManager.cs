@@ -42,7 +42,10 @@ public class InputManager : MonoBehaviour
         else if (Input.GetMouseButtonDown(1))
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
-                ShopManager.instance.ChangeState(BuyState.BuyOption, 0, hit.transform.gameObject);
+            {
+                if (hit.transform.gameObject.GetComponent<ResidentialBuilding>() != null)
+                    ShopManager.instance.ChangeState(BuyState.BuyOption, 0, hit.transform.gameObject);
+            }
             else
                 ShopManager.instance.ChangeState(BuyState.None);
         }
