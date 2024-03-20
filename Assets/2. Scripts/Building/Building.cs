@@ -6,7 +6,7 @@ using UnityEngine;
 public enum BuildingType { Residential = -1, Commercial, culture, Service }
 public enum BuildingSubType { Apartment = -1, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
-public enum ValueType { None, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
+public enum ValueType { None = -1, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
 
 [Serializable]
 public struct BoundaryValue 

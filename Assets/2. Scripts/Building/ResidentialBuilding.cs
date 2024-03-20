@@ -34,6 +34,13 @@ public class ResidentialBuilding : Building
         existFacility[(int)type] = true;
     }
 
+    public void ApplyInfluence(BuildingType type, int value, bool isAdd)
+    {
+        BoundaryValue cast = values[(ValueType)type];
+        cast.cur += isAdd ? value : -value;
+        values[(ValueType)type] = cast;
+    }
+
     public override int CalculateIncome()
     {
         if (happinessRate < 40)

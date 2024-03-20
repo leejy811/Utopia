@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum TileType { Ground, Road, Decoration }
@@ -41,5 +42,14 @@ public class Tile : MonoBehaviour
     {
         influenceValues[(int)type] += isAdd ? value : -value;
         subInfluenceValues[(int)type] += isAdd ? 1 : -1;
+
+        if (building == null) return;
+
+        Building buildCom = building.GetComponent<Building>();
+
+        if (buildCom.type == BuildingType.Residential)
+        {
+            (buildCom as ResidentialBuilding).ApplyInfluence(type, value, isAdd);
+        }
     }
 }
