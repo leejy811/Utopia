@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EventManager : MonoBehaviour
 {
@@ -89,7 +90,44 @@ public class EventManager : MonoBehaviour
         {
             foreach(Building building in targetBuildings[ranEvent])
             {
+                if (curEvents[i].duplication == 3)
+                    building.ApplyEventEffect(ranEvent.effectJackpotValue[ranEvent.curDay - 1], ranEvent.valueType);
+                else
+                    building.ApplyEventEffect(ranEvent.effectValue[ranEvent.curDay - 1], ranEvent.valueType);
                 building.ApplyEvent(ranEvent);
+            }
+        }
+    }
+
+    public void EffectUpdate()
+    {
+        for (int i = 0; i < curEvents.Count; i++)
+        {
+            curEvents[i].curDay++;
+
+            foreach (Building building in targetBuildings[curEvents[i]])
+            {
+                if (curEvents[i].type == EventType.Event) break;
+
+                if (curEvents[i].duplication == 3)
+                    building.happinessRate -= curEvents[i].effectJackpotValue[curEvents[i].curDay - 1];
+                else
+                    building.happinessRate -= curEvents[i].effectValue[curEvents[i].curDay - 1] * curEvents[i].duplication;
+            }
+
+            if (curEvents[i].curDay == curEvents[i].effectValue.Count)
+            {
+                if (curEvents[i].type == EventType.Event)
+                {
+                    foreach (Building building in targetBuildings[curEvents[i]])
+                    {
+                        if (curEvents[i].duplication == 3)
+                            building.ApplyEventEffect(curEvents[i].effectJackpotValue[curEvents[i].curDay - 1] * -1, curEvents[i].valueType);
+                        else
+                            building.ApplyEventEffect(curEvents[i].effectValue[curEvents[i].curDay - 1] * -1, curEvents[i].valueType);
+                    }
+                    curEvents.RemoveAt(i);
+                }
             }
         }
     }

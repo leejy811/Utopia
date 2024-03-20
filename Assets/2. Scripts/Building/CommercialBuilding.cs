@@ -10,6 +10,12 @@ public class CommercialBuilding : Building
 
     public int income;
 
+    private void Awake()
+    {
+        values[ValueType.Customer] = customerCnt;
+        values[ValueType.Product] = productPrice;
+    }
+
     public override int CalculateIncome()
     {
         int res = income * happinessRate;
@@ -17,25 +23,25 @@ public class CommercialBuilding : Building
     }
     public override int CheckBonus()
     {
-        int res = productPrice.cur > productPrice.max ? 1 : 0;
+        int res = values[ValueType.Product].cur > values[ValueType.Product].max ? 1 : 0;
         return res;
     }
 
     public override void UpdateHappiness()
     {
         //customerCnt
-        if (customerCnt.cur > customerCnt.max)
+        if (values[ValueType.Customer].cur > values[ValueType.Customer].max)
             happinessRate += 2;
-        else if (customerCnt.cur < customerCnt.min)
+        else if (values[ValueType.Customer].cur < values[ValueType.Customer].min)
             happinessRate -= 2;
 
         //productPrice
-        if (productPrice.cur > productPrice.max)
+        if (values[ValueType.Product].cur > values[ValueType.Product].max)
         {
             happinessRate += 2;
             ShopManager.instance.money += 5;
         }
-        else if (productPrice.cur < productPrice.min)
+        else if (values[ValueType.Product].cur < values[ValueType.Product].min)
             happinessRate -= 1;
     }
 

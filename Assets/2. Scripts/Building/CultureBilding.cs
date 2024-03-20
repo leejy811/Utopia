@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CultureBilding : Building
@@ -9,6 +10,12 @@ public class CultureBilding : Building
 
     public int income;
 
+    private void Awake()
+    {
+        values[ValueType.Trend] = trendValue;
+        values[ValueType.Fee] = fee;
+    }
+
     public override int CalculateIncome()
     {
         int res = income * happinessRate;
@@ -17,29 +24,29 @@ public class CultureBilding : Building
 
     public override int CheckBonus()
     {
-        int res = fee.cur > fee.max ? 1 : 0;
+        int res = values[ValueType.Fee].cur > values[ValueType.Fee].max ? 1 : 0;
         return res;
     }
 
     public override void UpdateHappiness()
     {
         //trendValue
-        if (trendValue.cur > trendValue.max)
+        if (values[ValueType.Trend].cur > values[ValueType.Trend].max)
         {
             happinessRate += 2;
             //ToDo
             //영향력 범위 늘리기 추가
         }
-        else if (trendValue.cur < trendValue.min)
+        else if (values[ValueType.Trend].cur < values[ValueType.Trend].min)
             happinessRate -= 2;
 
         //fee
-        if (fee.cur > fee.max)
+        if (values[ValueType.Fee].cur > values[ValueType.Fee].max)
         {
             happinessRate += 2;
             ShopManager.instance.money += 10;
         }
-        else if (fee.cur < fee.min)
+        else if (values[ValueType.Fee].cur < values[ValueType.Fee].min)
             happinessRate -= 1;
     }
 }

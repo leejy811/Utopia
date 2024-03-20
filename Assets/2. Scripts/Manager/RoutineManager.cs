@@ -61,8 +61,7 @@ public class RoutineManager : MonoBehaviour
             total += building.happinessRate;
         }
 
-        //ToDo
-        //사회 현상에 의한 행복도 업데이트 구현
+        EventManager.instance.EffectUpdate();
 
         cityHappiness = total / BuildingSpawner.instance.buildings.Count;
     }

@@ -6,9 +6,20 @@ using UnityEngine;
 public enum BuildingType { Residential = -1, Commercial, culture, Service }
 public enum BuildingSubType { Apartment = -1, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
+public enum ValueType { CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
 
 [Serializable]
-public struct BoundaryValue { public int max, min, cur; }
+public struct BoundaryValue 
+{ 
+    public int max, min, cur; 
+    
+    public BoundaryValue(int max, int min, int cur)
+    {
+        this.max = max;
+        this.min = min;
+        this.cur = cur;
+    }
+}
 
 public class Building : MonoBehaviour
 {
@@ -24,6 +35,8 @@ public class Building : MonoBehaviour
 
     public List<Event> curEvents;
     public int cost;
+
+    public Dictionary<ValueType, BoundaryValue> values = new Dictionary<ValueType, BoundaryValue>();
 
     private void Start()
     {
@@ -96,6 +109,13 @@ public class Building : MonoBehaviour
     public bool CheckInfluence(BuildingSubType type)
     {
         return Grid.instance.tiles[position.x, position.y].subInfluenceValues[(int)type] != 0;
+    }
+
+    public void ApplyEventEffect(int amount, ValueType type)
+    {
+        BoundaryValue value = values[type];
+        value.cur += amount;
+        values[type] = value;
     }
 
     public virtual int CalculateIncome()

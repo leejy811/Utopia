@@ -17,6 +17,11 @@ public class ResidentialBuilding : Building
     private void Awake()
     {
         existFacility = new bool[4];
+
+        values[ValueType.Resident] = residentCnt;
+        values[ValueType.CommercialCSAT] = commercialCSAT;
+        values[ValueType.CultureCSAT] = cultureCSAT;
+        values[ValueType.ServiceCSAT] = serviceCSAT;
     }
 
     public bool CheckFacility(OptionType type)
@@ -31,10 +36,14 @@ public class ResidentialBuilding : Building
 
     public override int CalculateIncome()
     {
-        if(happinessRate < 40)
-            residentCnt.cur -= (int)(residentCnt.max * 0.1f);
+        if (happinessRate < 40)
+        {
+            BoundaryValue resident = values[ValueType.Resident];
+            resident.cur -= (int)(values[ValueType.Resident].max * 0.1f);
+            values[ValueType.Resident] = resident;
+        }
 
-        int res = residentCnt.cur * happinessRate * (4 - grade);
+        int res = values[ValueType.Resident].cur * happinessRate * (4 - grade);
         return happinessRate >= 80 ? ((int)(res * 1.5f)) : res;
     }
 
@@ -42,9 +51,9 @@ public class ResidentialBuilding : Building
     {
         int res = 0;
 
-        if (commercialCSAT.cur > commercialCSAT.max)
+        if (values[ValueType.CommercialCSAT].cur > values[ValueType.CommercialCSAT].max)
             res += 1;
-        else if (cultureCSAT.cur > cultureCSAT.max)
+        if (values[ValueType.CultureCSAT].cur > values[ValueType.CultureCSAT].max)
             res += 2;
 
         return res;
@@ -53,31 +62,31 @@ public class ResidentialBuilding : Building
     public override void UpdateHappiness()
     {
         //commercialCSAT
-        if (commercialCSAT.cur > commercialCSAT.max)
+        if (values[ValueType.CommercialCSAT].cur > values[ValueType.CommercialCSAT].max)
         {
             happinessRate -= 1;
             ShopManager.instance.money -= 5;
         }
-        else if (commercialCSAT.cur < commercialCSAT.min)
+        else if (values[ValueType.CommercialCSAT].cur < values[ValueType.CommercialCSAT].min)
             happinessRate -= 2;
         else
             happinessRate += 1;
 
         //cultureCSAT
-        if (cultureCSAT.cur > cultureCSAT.max)
+        if (values[ValueType.CultureCSAT].cur > values[ValueType.CultureCSAT].max)
         {
             happinessRate -= 1;
             ShopManager.instance.money -= 10;
         }
-        else if (cultureCSAT.cur < cultureCSAT.min)
+        else if (values[ValueType.CultureCSAT].cur < values[ValueType.CultureCSAT].min)
             happinessRate -= 3;
         else
             happinessRate += 1;
 
         //serviceCSAT
-        if (serviceCSAT.cur > serviceCSAT.max)
+        if (values[ValueType.ServiceCSAT].cur > values[ValueType.ServiceCSAT].max)
             happinessRate -= 2;
-        else if (serviceCSAT.cur < serviceCSAT.min)
+        else if (values[ValueType.ServiceCSAT].cur < values[ValueType.ServiceCSAT].min)
             happinessRate -= 2;
         else
             happinessRate += 1;

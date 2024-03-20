@@ -5,9 +5,14 @@ using UnityEngine.SocialPlatforms;
 
 public class ServiceBuilding : Building
 {
-    [SerializeField] private int costPerDay;
+    public int costPerDay;
 
-    [SerializeField] private BoundaryValue employmentValue;
+    public BoundaryValue employmentValue;
+
+    private void Awake()
+    {
+        values[ValueType.Employment] = employmentValue;
+    }
 
     public override int CalculateIncome()
     {
@@ -18,13 +23,13 @@ public class ServiceBuilding : Building
     public override void UpdateHappiness()
     {
         //employmentValue
-        if (employmentValue.cur > employmentValue.max)
+        if (values[ValueType.Employment].cur > values[ValueType.Employment].max)
         {
             happinessRate += 1;
             //ToDo
             //영향력 범위 늘리기 추가
         }
-        else if (employmentValue.cur < employmentValue.min)
+        else if (values[ValueType.Employment].cur < values[ValueType.Employment].min)
             happinessRate -= 1;
     }
 }
