@@ -90,7 +90,7 @@ public class EventManager : MonoBehaviour
         {
             foreach(Building building in targetBuildings[ranEvent])
             {
-                if (curEvents[i].duplication == 3)
+                if (ranEvent.duplication == 3)
                     building.ApplyEventEffect(ranEvent.effectJackpotValue[ranEvent.curDay - 1], ranEvent.valueType);
                 else
                     building.ApplyEventEffect(ranEvent.effectValue[ranEvent.curDay - 1], ranEvent.valueType);
