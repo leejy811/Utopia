@@ -54,4 +54,9 @@ public class UIManager : MonoBehaviour
     {
         EventManager.instance.RandomRoulette();
     }
+
+    public void OnClickNextDay()
+    {
+        RoutineManager.instance.DailyUpdate();
+    }
 }

@@ -5,8 +5,26 @@ using UnityEngine;
 
 public class RoutineManager : MonoBehaviour
 {
+    public static RoutineManager instance;
+
     public int day;
     public int cityHappiness;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+    }
+
+    private void Start()
+    {
+        day++;
+    }
 
     public void DailyUpdate()
     {
@@ -55,14 +73,15 @@ public class RoutineManager : MonoBehaviour
     {
         int total = 0;
 
-        foreach (Building building in BuildingSpawner.instance.buildings)
-        {
-            building.UpdateHappiness();
-            total += building.happinessRate;
-        }
+        //foreach (Building building in BuildingSpawner.instance.buildings)
+        //{
+        //    building.UpdateHappiness();
+        //    total += building.happinessRate;
+        //}
 
         EventManager.instance.EffectUpdate();
 
-        cityHappiness = total / BuildingSpawner.instance.buildings.Count;
+        if (BuildingSpawner.instance.buildings.Count != 0)
+            cityHappiness = total / BuildingSpawner.instance.buildings.Count;
     }
 }

@@ -7,8 +7,9 @@ public class EventManager : MonoBehaviour
 {
     static public EventManager instance;
 
-    public Dictionary<Event, List<Building>> targetBuildings = new Dictionary<Event, List<Building>>();
+    public List<List<Building>> targetBuildings = new List<List<Building>>();
     public List<Event> events;
+    public List<Event> possibleEvents;
     public List<Event> curEvents;
 
     private void Awake()
@@ -24,29 +25,37 @@ public class EventManager : MonoBehaviour
 
     private void Start()
     {
-        foreach(Event e in events)
+        for (int i = 0; i < events.Count; i++)
         {
-            targetBuildings[e] = new List<Building>();
+            targetBuildings.Add(new List<Building>());
         }
     }
 
     public void CheckEvents()
     {
-        targetBuildings.Clear();
-        curEvents.Clear();
+        List<List<Building>> buildings = new List<List<Building>>();
 
-        foreach (Event e in events)
+        for (int i = 0; i < events.Count; i++)
+        {
+            buildings.Add(new List<Building>());
+        }
+
+        possibleEvents.Clear();
+
+        for (int i = 0; i < events.Count; i++)
         {
             foreach (Building building in BuildingSpawner.instance.buildings)
             {
-                if (e.CheckCondition(building))
+                if (events[i].CheckCondition(building))
                 {
-                    targetBuildings[e].Add(building);
-                    if (!curEvents.Contains(e))
-                        curEvents.Add(e);
+                    buildings[events[i].eventIndex].Add(building);
+                    if (!possibleEvents.Contains(events[i]))
+                        possibleEvents.Add(events[i]);
                 }
             }
         }
+
+        targetBuildings = buildings;
     }
 
     public void RandomRoulette()
@@ -55,30 +64,39 @@ public class EventManager : MonoBehaviour
 
         for(int i = 0;i < 3; i++)
         {
-            int ranidx = Random.Range(0, curEvents.Count);
-            ranEvents.Add(curEvents[ranidx]);
+            int ranidx = Random.Range(0, possibleEvents.Count);
+            ranEvents.Add(possibleEvents[ranidx]);
         }
 
         if (ranEvents[0] == ranEvents[1] && ranEvents[1] == ranEvents[2])
         {
             ranEvents[0].duplication = 3;
-            ranEvents.RemoveAt(1);
             ranEvents.RemoveAt(2);
+            ranEvents.RemoveAt(1);
         }
         else if(ranEvents[0] == ranEvents[1])
         {
             ranEvents[0].duplication = 2;
+            ranEvents[2].duplication = 1;
             ranEvents.RemoveAt(1);
         }
         else if(ranEvents[0] == ranEvents[2])
         {
             ranEvents[0].duplication = 2;
+            ranEvents[1].duplication = 1;
             ranEvents.RemoveAt(2);
         }
         else if(ranEvents[1] == ranEvents[2])
         {
-            ranEvents[0].duplication = 2;
+            ranEvents[1].duplication = 2;
+            ranEvents[0].duplication = 1;
             ranEvents.RemoveAt(2);
+        }
+        else
+        {
+            ranEvents[0].duplication = 1;
+            ranEvents[1].duplication = 1;
+            ranEvents[2].duplication = 1;
         }
 
         ApplyEvents(ranEvents);
@@ -88,47 +106,69 @@ public class EventManager : MonoBehaviour
     {
         foreach(Event ranEvent in ranEvents)
         {
-            foreach(Building building in targetBuildings[ranEvent])
+            if (!curEvents.Contains(ranEvent))
             {
-                if (ranEvent.duplication == 3)
-                    building.ApplyEventEffect(ranEvent.effectJackpotValue[ranEvent.curDay - 1], ranEvent.valueType);
-                else
-                    building.ApplyEventEffect(ranEvent.effectValue[ranEvent.curDay - 1], ranEvent.valueType);
-                building.ApplyEvent(ranEvent);
+                curEvents.Add(ranEvent);
+                foreach (Building building in targetBuildings[ranEvent.eventIndex])
+                {
+                    if (ranEvent.type == EventType.Event)
+                    {
+                        if (ranEvent.duplication == 3)
+                            building.ApplyEventEffect(ranEvent.effectJackpotValue[ranEvent.curDay], ranEvent.valueType);
+                        else
+                            building.ApplyEventEffect(ranEvent.effectValue[ranEvent.curDay], ranEvent.valueType);
+                    }
+                    building.ApplyEvent(ranEvent);
+                }
             }
         }
     }
 
     public void EffectUpdate()
     {
+        List<int> removeIdx = new List<int>();
+
         for (int i = 0; i < curEvents.Count; i++)
         {
-            curEvents[i].curDay++;
+            Event curevent = curEvents[i];
+            curevent.curDay++;
 
-            foreach (Building building in targetBuildings[curEvents[i]])
+            foreach (Building building in targetBuildings[curevent.eventIndex])
             {
-                if (curEvents[i].type == EventType.Event) break;
-
-                if (curEvents[i].duplication == 3)
-                    building.happinessRate -= curEvents[i].effectJackpotValue[curEvents[i].curDay - 1];
-                else
-                    building.happinessRate -= curEvents[i].effectValue[curEvents[i].curDay - 1] * curEvents[i].duplication;
-            }
-
-            if (curEvents[i].curDay == curEvents[i].effectValue.Count)
-            {
-                if (curEvents[i].type == EventType.Event)
+                if (curevent.curDay >= curevent.effectValue.Count)
                 {
-                    foreach (Building building in targetBuildings[curEvents[i]])
-                    {
-                        if (curEvents[i].duplication == 3)
-                            building.ApplyEventEffect(curEvents[i].effectJackpotValue[curEvents[i].curDay - 1] * -1, curEvents[i].valueType);
-                        else
-                            building.ApplyEventEffect(curEvents[i].effectValue[curEvents[i].curDay - 1] * -1, curEvents[i].valueType);
-                    }
-                    curEvents.RemoveAt(i);
+                    building.RemoveEvent(curevent);
+                    continue;
                 }
+                if (curevent.type == EventType.Event) continue;
+
+                if (curevent.duplication == 3)
+                    building.happinessRate -= curevent.effectJackpotValue[curevent.curDay - 1];
+                else
+                    building.happinessRate -= curevent.effectValue[curevent.curDay - 1] * curevent.duplication;
             }
+
+            if (curevent.curDay >= curevent.effectValue.Count)
+            {
+                if (curevent.type == EventType.Event)
+                {
+                    foreach (Building building in targetBuildings[curevent.eventIndex])
+                    {
+                        if (curevent.duplication == 3)
+                            building.ApplyEventEffect(curevent.effectJackpotValue[curevent.curDay - 1] * -1, curevent.valueType);
+                        else
+                            building.ApplyEventEffect(curevent.effectValue[curevent.curDay - 1] * -1, curevent.valueType);
+                    }
+                }
+                removeIdx.Add(i);
+            }
+            else
+                curEvents[i] = curevent;
+        }
+
+        for (int i = 0;i < removeIdx.Count;i++)
+        {
+            curEvents.RemoveAt(removeIdx[i] - i);
         }
     }
 }

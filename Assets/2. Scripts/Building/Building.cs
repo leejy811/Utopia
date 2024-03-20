@@ -6,7 +6,7 @@ using UnityEngine;
 public enum BuildingType { Residential = -1, Commercial, culture, Service }
 public enum BuildingSubType { Apartment = -1, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
-public enum ValueType { CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
+public enum ValueType { None, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
 
 [Serializable]
 public struct BoundaryValue 
@@ -101,6 +101,15 @@ public class Building : MonoBehaviour
         }
     }
 
+    public void RemoveEvent(Event removeEvent)
+    {
+        for (int i = 0;i < curEvents.Count;i++)
+        {
+            if(removeEvent.eventIndex == curEvents[i].eventIndex)
+                curEvents.RemoveAt(i);
+        }
+    }
+
     public void SetPosition(Vector3 position)
     {
         this.position = new Vector2Int((int)position.x, (int)position.z);
@@ -116,6 +125,8 @@ public class Building : MonoBehaviour
         BoundaryValue value = values[type];
         value.cur += amount;
         values[type] = value;
+
+        Debug.Log(value.cur + " " + amount + " " + type);
     }
 
     public virtual int CalculateIncome()

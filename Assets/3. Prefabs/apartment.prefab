@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6769360740669774393}
   - component: {fileID: 5588036235135980336}
-  - component: {fileID: 7646186361170174001}
+  - component: {fileID: -7234925099977917409}
   m_Layer: 7
   m_Name: apartment
   m_TagString: Building
@@ -215,7 +215,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 1.1, z: 0.8}
   m_Center: {x: 0, y: 0.55, z: 0}
---- !u!114 &7646186361170174001
+--- !u!114 &-7234925099977917409
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,22 +224,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 6249387795973439619}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f404c6e7523fc846aa947da297b730e, type: 3}
+  m_Script: {fileID: 11500000, guid: 92c0ecfa23d7045409feb22297239c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   grade: 0
-  type: 0
-  subType: 0
+  type: -1
+  subType: -1
   viewState: 0
   happinessRate: 0
-  influencePower: 5
-  influenceSize: 1
+  position: {x: 0, y: 0}
+  influencePower: 0
+  influenceSize: 0
+  curEvents: []
   cost: 0
-  customerCnt:
+  existFacility: 
+  residentCnt:
     max: 0
     min: 0
     cur: 0
-  productPrice:
+  commercialCSAT:
+    max: 0
+    min: 0
+    cur: 0
+  cultureCSAT:
+    max: 0
+    min: 0
+    cur: 0
+  serviceCSAT:
     max: 0
     min: 0
     cur: 0

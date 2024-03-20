@@ -2,13 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public enum EventType { Problem, Event }
 public enum ConditionType { Option, Influence, Exist }
 
 [Serializable]
-public class Event : MonoBehaviour
+public class Event
 {
     public string eventName;
     public int eventIndex;
@@ -26,7 +25,7 @@ public class Event : MonoBehaviour
         switch (conditionType)
         {
             case ConditionType.Option:
-                return CheckCondition((OptionType)targetIndex, (ResidentialBuilding)building);
+                return CheckCondition((OptionType)targetIndex, building);
             case ConditionType.Influence:
                 return CheckCondition((BuildingSubType)targetIndex, building);
             case ConditionType.Exist:
@@ -36,9 +35,11 @@ public class Event : MonoBehaviour
         return false;
     }
 
-    private bool CheckCondition(OptionType type, ResidentialBuilding building)
+    private bool CheckCondition(OptionType type, Building building)
     {
-        return building.CheckFacility(type);
+        if (building.type != BuildingType.Residential) return false;
+
+        return !(building as ResidentialBuilding).CheckFacility(type);
     }
 
     private bool CheckCondition(BuildingSubType subType, Building building)
@@ -56,5 +57,11 @@ public class Event : MonoBehaviour
             return building.subType == (BuildingSubType)subType;
         else
             return building.type == type;
+    }
+
+    public override bool Equals(object obj)
+    {
+        Event e = obj as Event;
+        return e != null && e.eventIndex == this.eventIndex;
     }
 }
