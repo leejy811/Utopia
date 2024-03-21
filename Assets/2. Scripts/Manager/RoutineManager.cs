@@ -35,6 +35,7 @@ public class RoutineManager : MonoBehaviour
         ShopManager.instance.money -= CalculateExpenditure();
 
         EventManager.instance.CheckEvents();
+        EventManager.instance.isRoll = false;
     }
 
     private int CalculateTax()
