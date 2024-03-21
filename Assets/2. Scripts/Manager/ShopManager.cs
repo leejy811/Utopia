@@ -109,7 +109,7 @@ public class ShopManager : MonoBehaviour
 
         if (buyState != BuyState.BuyOption) return;
         if (building.CheckFacility(type)) return;
-        if (!PayMoney(0)) return;
+        if (!PayMoney(500)) return;
 
         building.BuyFacility(type);
     }
