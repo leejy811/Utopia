@@ -25,6 +25,11 @@ public class UIManager : MonoBehaviour
         optionPopUp.SetActive(active);
     }
 
+    public void SetBuildingPopUp(bool active, GameObject building = null)
+    {
+        //ToDo - 건물 클릭시 팝업 그룹 띄우고 그 안의 변수들 세팅
+    }
+
     public void OnClickBuildingBuy(int index)
     {
         ShopManager.instance.ChangeState(BuyState.BuyBuilding, index);

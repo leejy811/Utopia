@@ -24,6 +24,10 @@ public class InputManager : MonoBehaviour
             {
                 ShopManager.instance.SellBuilding();
             }
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && state == BuyState.None)
+            {
+                UIManager.instance.SetBuildingPopUp(true, hit.transform.gameObject);
+            }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
                 switch(state)
@@ -41,13 +45,17 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && state == BuyState.None)
             {
                 if (hit.transform.gameObject.GetComponent<ResidentialBuilding>() != null)
                     ShopManager.instance.ChangeState(BuyState.BuyOption, 0, hit.transform.gameObject);
             }
             else
                 ShopManager.instance.ChangeState(BuyState.None);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIManager.instance.SetBuildingPopUp(false);
         }
         else
         {
