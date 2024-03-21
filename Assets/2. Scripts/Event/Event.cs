@@ -7,6 +7,13 @@ public enum EventType { Problem, Event }
 public enum ConditionType { Option, Influence, Exist }
 
 [Serializable]
+public struct EventSolution 
+{
+    public string name;
+    public int cost, prob; 
+}
+
+[Serializable]
 public class Event
 {
     public string eventName;
@@ -17,6 +24,7 @@ public class Event
     public int targetIndex;
     public int duplication;
     public int curDay;
+    public List<EventSolution> solutions;
     public List<int> effectValue;
     public List<int> effectJackpotValue;
 
@@ -57,6 +65,11 @@ public class Event
             return building.subType == (BuildingSubType)subType;
         else
             return building.type == type;
+    }
+
+    public override int GetHashCode()
+    {
+        return eventIndex.GetHashCode();
     }
 
     public override bool Equals(object obj)
