@@ -1293,6 +1293,7 @@ MonoBehaviour:
     effectJackpotValue: 9cffffff9cffffff9cffffff
   possibleEvents: []
   curEvents: []
+  isRoll: 0
 --- !u!4 &555182732
 Transform:
   m_ObjectHideFlags: 0
@@ -2415,11 +2416,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 1179345971447982024, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
   tileCost: 0
-  width: 11
-  height: 11
+  width: 12
+  height: 12
   startPoint: {x: 0, y: 0}
   startTileSize: {x: 3, y: 3}
-  cameraOffset: {x: -6, y: 10.5, z: -6}
+  cameraOffset: {x: -5.75, y: 11, z: -5.75}
 --- !u!4 &1394218994
 Transform:
   m_ObjectHideFlags: 0
