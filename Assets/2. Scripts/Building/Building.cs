@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public enum BuildingType { Residential = -1, Commercial, culture, Service }
 public enum BuildingSubType { Apartment = -1, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
@@ -95,19 +97,65 @@ public class Building : MonoBehaviour
 
     public void ApplyEvent(Event newEvent)
     {
-        if (!curEvents.Contains(newEvent))
+        if (!curEvents.Contains(newEvent) && curEvents.Count < 2)
         {
+            if (newEvent.type == EventType.Event)
+            {
+                if (newEvent.duplication == 3)
+                    ApplyEventEffect(newEvent.effectJackpotValue[newEvent.curDay], newEvent.valueType);
+                else
+                    ApplyEventEffect(newEvent.effectValue[newEvent.curDay], newEvent.valueType);
+            }
             curEvents.Add(newEvent);
         }
     }
 
-    public void RemoveEvent(Event removeEvent)
+    public void UpdateEventEffect()
     {
-        for (int i = 0;i < curEvents.Count;i++)
+        List<int> removeIdx = new List<int>();
+
+        for (int i = 0; i < curEvents.Count; i++)
         {
-            if(removeEvent.eventIndex == curEvents[i].eventIndex)
-                curEvents.RemoveAt(i);
+            Event curevent = curEvents[i];
+            curevent.curDay++;
+
+            if(curevent.curDay >= curevent.effectValue.Count)
+            {
+                removeIdx.Add(i);
+                if(curevent.type == EventType.Event)
+                {
+                    if (curevent.duplication == 3)
+                        ApplyEventEffect(curevent.effectJackpotValue[curevent.curDay - 1] * -1, curevent.valueType);
+                    else
+                        ApplyEventEffect(curevent.effectValue[curevent.curDay - 1] * -1, curevent.valueType);
+                }
+                continue;
+            }
+
+            if (curevent.type == EventType.Problem)
+            {
+                if (curevent.duplication == 3)
+                    happinessRate -= curevent.effectJackpotValue[curevent.curDay - 1];
+                else
+                    happinessRate -= curevent.effectValue[curevent.curDay - 1] * curevent.duplication;
+            }
+
+            curEvents[i] = curevent;
         }
+
+        for (int i = 0; i < removeIdx.Count; i++)
+        {
+            curEvents.RemoveAt(removeIdx[i] - i);
+        }
+    }
+
+    public void SolveEvent(int index)
+    {
+        if (curEvents[index / 2].type == EventType.Event) return;
+        int ran = Random.Range(0, 100);
+
+        if (ran < curEvents[index / 2].solutions[index % 2].prob)
+            curEvents.RemoveAt(index / 2);
     }
 
     public void SetPosition(Vector3 position)
@@ -125,8 +173,6 @@ public class Building : MonoBehaviour
         BoundaryValue value = values[type];
         value.cur += amount;
         values[type] = value;
-
-        Debug.Log(value.cur + " " + amount + " " + type);
     }
 
     public virtual int CalculateIncome()

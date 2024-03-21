@@ -1406,7 +1406,6 @@ MonoBehaviour:
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
   possibleEvents: []
-  curEvents: []
 --- !u!4 &555182732
 Transform:
   m_ObjectHideFlags: 0

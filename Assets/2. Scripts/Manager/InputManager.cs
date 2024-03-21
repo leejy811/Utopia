@@ -26,7 +26,7 @@ public class InputManager : MonoBehaviour
             }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && state == BuyState.None)
             {
-                UIManager.instance.SetBuildingPopUp(true, hit.transform.gameObject);
+                ShopManager.instance.ChangeState(BuyState.SolveEvent, 0, hit.transform.gameObject);
             }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
@@ -55,10 +55,7 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (state == BuyState.None)
-                UIManager.instance.SetBuildingPopUp(false);
-            else
-                ShopManager.instance.ChangeState(BuyState.None);
+            ShopManager.instance.ChangeState(BuyState.None);
         }
         else
         {

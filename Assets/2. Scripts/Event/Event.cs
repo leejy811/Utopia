@@ -14,7 +14,7 @@ public struct EventSolution
 }
 
 [Serializable]
-public class Event
+public struct Event
 {
     public string eventName;
     public int eventIndex;
@@ -74,7 +74,15 @@ public class Event
 
     public override bool Equals(object obj)
     {
-        Event e = obj as Event;
-        return e != null && e.eventIndex == this.eventIndex;
+        return obj is Event e && e.eventIndex == this.eventIndex;
+    }
+
+    public static bool operator ==(Event left, Event right)
+    {
+        return left.eventIndex == right.eventIndex;
+    }
+    public static bool operator !=(Event left, Event right)
+    {
+        return left.eventIndex != right.eventIndex;
     }
 }

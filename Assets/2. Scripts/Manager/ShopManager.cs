@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, BuyOption }
+public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, BuyOption, SolveEvent }
 
 public class ShopManager : MonoBehaviour
 {
@@ -61,6 +61,11 @@ public class ShopManager : MonoBehaviour
         else if (state == BuyState.BuyOption)
             SetBuyOption(true, pickObject);
 
+        if (buyState == BuyState.SolveEvent)
+            SetSolveEvent(false, pickObject);
+        else if (state == BuyState.SolveEvent)
+            SetSolveEvent(true, pickObject);
+
         buyState = state;
     }
 
@@ -109,6 +114,17 @@ public class ShopManager : MonoBehaviour
         building.BuyFacility(type);
     }
 
+    public void SolveEvent(int index)
+    {
+        Building building = curPickObject.GetComponent<Building>();
+        int cost = building.curEvents[index / 2].solutions[index % 2].cost;
+
+        if (buyState != BuyState.SolveEvent) return;
+        if (!PayMoney(cost)) return;
+
+        building.SolveEvent(index);
+    }
+
     public void CheckBuyBuilding(Transform tileTrans)
     {
         Tile tile = tileTrans.gameObject.GetComponent<Tile>();
@@ -155,5 +171,11 @@ public class ShopManager : MonoBehaviour
         SetSellBuilding(null);
         curPickObject = pickObject;
         UIManager.instance.SetOptionPopUp(active);
+    }
+
+    private void SetSolveEvent(bool active, GameObject pickObject)
+    {
+        curPickObject = pickObject;
+        UIManager.instance.SetBuildingPopUp(active);
     }
 }

@@ -52,4 +52,19 @@ public class Tile : MonoBehaviour
             (buildCom as ResidentialBuilding).ApplyInfluence(type, value, isAdd);
         }
     }
+
+    public void ApplyInfluenceToBuilding()
+    {
+        if (building == null) return;
+
+        Building buildCom = building.GetComponent<Building>();
+
+        if (buildCom.type == BuildingType.Residential)
+        {
+            for (int i = 0;i < influenceValues.Length;i++)
+            {
+                (buildCom as ResidentialBuilding).ApplyInfluence((BuildingType)i, influenceValues[i], true);
+            }
+        }
+    }
 }

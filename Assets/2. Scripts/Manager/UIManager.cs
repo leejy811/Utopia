@@ -59,4 +59,9 @@ public class UIManager : MonoBehaviour
     {
         RoutineManager.instance.DailyUpdate();
     }
+
+    public void OnClickSolveEvent(int index)
+    {
+        ShopManager.instance.SolveEvent(index);
+    }
 }
