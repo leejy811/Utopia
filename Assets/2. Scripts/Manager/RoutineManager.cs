@@ -35,7 +35,7 @@ public class RoutineManager : MonoBehaviour
         ShopManager.instance.money -= CalculateExpenditure();
 
         EventManager.instance.CheckEvents();
-        EventManager.instance.isRoll = false;
+        EventManager.instance.RandomRoulette();
     }
 
     private int CalculateTax()
@@ -74,11 +74,11 @@ public class RoutineManager : MonoBehaviour
     {
         int total = 0;
 
-        //foreach (Building building in BuildingSpawner.instance.buildings)
-        //{
-        //    building.UpdateHappiness();
-        //    total += building.happinessRate;
-        //}
+        foreach (Building building in BuildingSpawner.instance.buildings)
+        {
+            building.UpdateHappiness();
+            total += building.happinessRate;
+        }
 
         EventManager.instance.EffectUpdate();
 

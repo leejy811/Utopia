@@ -12,8 +12,6 @@ public class EventManager : MonoBehaviour
     public List<Event> possibleEvents;
     public List<Event> curEvents;
 
-    public bool isRoll;
-
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -63,9 +61,7 @@ public class EventManager : MonoBehaviour
     public void RandomRoulette()
     {
         if(possibleEvents.Count == 0) return;
-        if (isRoll) return;
 
-        isRoll = true;
         List<Event> ranEvents = new List<Event>();
 
         for(int i = 0;i < 3; i++)

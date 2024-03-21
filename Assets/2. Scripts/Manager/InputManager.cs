@@ -55,7 +55,10 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
-            UIManager.instance.SetBuildingPopUp(false);
+            if (state == BuyState.None)
+                UIManager.instance.SetBuildingPopUp(false);
+            else
+                ShopManager.instance.ChangeState(BuyState.None);
         }
         else
         {

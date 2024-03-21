@@ -43,4 +43,16 @@ public class BuildingSpawner : MonoBehaviour
                 break;
         }
     }
+
+    public void RemoveBuilding(GameObject building)
+    {
+        for(int i = 0;i < buildings.Count; i++)
+        {
+            if (building.GetComponent<Building>().position == buildings[i].position)
+            {
+                buildings.RemoveAt(i);
+                break;
+            }
+        }
+    }
 }

@@ -16,8 +16,8 @@ public class ServiceBuilding : Building
 
     public override int CalculateIncome()
     {
-        int tax = costPerDay * (100 - happinessRate);
-        return happinessRate < 40 ? ((int)(tax * 1.5f)) : tax;
+        float tax = costPerDay * (1.0f - (happinessRate / 100.0f));
+        return happinessRate < 40 ? ((int)(tax * 1.5f)) : (int)tax;
     }
 
     public override void UpdateHappiness()

@@ -80,12 +80,10 @@ public class ShopManager : MonoBehaviour
     {
         if (curPickObject == null) return;
 
-        int cost = curPickObject.GetComponentInParent<Building>().cost;
-
         if (buyState != BuyState.SellBuilding) return;
 
+        BuildingSpawner.instance.RemoveBuilding(curPickObject);
         Destroy(curPickObject);
-        GetMoney(cost);
     }
 
     public void BuyTile(Transform tileTrans)

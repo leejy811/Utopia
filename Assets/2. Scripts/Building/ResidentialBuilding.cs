@@ -61,8 +61,8 @@ public class ResidentialBuilding : Building
             values[ValueType.Resident] = resident;
         }
 
-        int res = values[ValueType.Resident].cur * happinessRate * (4 - grade);
-        return happinessRate >= 80 ? ((int)(res * 1.5f)) : res;
+        float res = values[ValueType.Resident].cur * happinessRate / 100.0f * (4 - grade);
+        return happinessRate >= 80 ? ((int)(res * 1.5f)) : (int)res;
     }
 
     public override int CheckBonus()
