@@ -155,6 +155,15 @@ MonoBehaviour:
   buildings: []
   buildingPrefabs:
   - {fileID: 6249387795973439619, guid: 773143dff57b53449b4af40fcbf0da14, type: 3}
+  - {fileID: 6249387795973439619, guid: 002a06bf3aa8198438689a685e28dcb6, type: 3}
+  - {fileID: 6249387795973439619, guid: 1b2f844d7befe484e9e35a90e391e97d, type: 3}
+  - {fileID: 6249387795973439619, guid: a6450c991af92f9459f53ac725f24df8, type: 3}
+  - {fileID: 6249387795973439619, guid: 0831e36d5a2e6704c93f1ba1af154167, type: 3}
+  - {fileID: 6249387795973439619, guid: 3786b1ae684eb0b44b001d76ff60f788, type: 3}
+  - {fileID: 6249387795973439619, guid: 387b1f76950e3d541957bfc2ed832ef8, type: 3}
+  - {fileID: 6249387795973439619, guid: 47d7658836a323e4c8fc60fff2e53d5c, type: 3}
+  - {fileID: 6249387795973439619, guid: 275013a7396a9d247b52d1220b802131, type: 3}
+  - {fileID: 6249387795973439619, guid: 23f48cf7a5747ae46b7b411e1e721d31, type: 3}
 --- !u!4 &32394688
 Transform:
   m_ObjectHideFlags: 0
@@ -2248,9 +2257,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyState: 0
-  money: 20
+  money: 1000
   buildingPrefabs:
   - {fileID: 6249387795973439619, guid: 5858e47bac8b67a4a8fc399143b72f88, type: 3}
+  - {fileID: 6249387795973439619, guid: 1c733af9dd7704844b1208c57deeae18, type: 3}
+  - {fileID: 6249387795973439619, guid: d3afcf3b2eb86324095cf59871d652cb, type: 3}
+  - {fileID: 6249387795973439619, guid: ded655b987870ec4ab40797f34a747b5, type: 3}
+  - {fileID: 6249387795973439619, guid: 7426837596f41ee40aeb93cb532a74cc, type: 3}
+  - {fileID: 6249387795973439619, guid: 3dde85935e5c9114eae79376819e97eb, type: 3}
+  - {fileID: 6249387795973439619, guid: 24c606ec0618d2c449499004b1e66a9a, type: 3}
+  - {fileID: 6249387795973439619, guid: 45c065ef13e772848a4680934ee248f5, type: 3}
+  - {fileID: 6249387795973439619, guid: 85bf8e0de3952b94bb9cbcd2ce27fa0e, type: 3}
+  - {fileID: 6249387795973439619, guid: 2eb4029d9b376984689bc9acde2d6d82, type: 3}
 --- !u!1 &1361391947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,7 +2433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 1179345971447982024, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
-  tileCost: 0
+  tileCost: 5
   width: 12
   height: 12
   startPoint: {x: 0, y: 0}
