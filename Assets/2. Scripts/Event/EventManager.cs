@@ -134,9 +134,18 @@ public class EventManager : MonoBehaviour
     {
         foreach (Event ranEvent in ranEvents)
         {
-            foreach (Building building in targetBuildings[ranEvent.eventIndex])
+            List<int> indexs = new List<int>();
+            int range = Mathf.RoundToInt((targetBuildings[ranEvent.eventIndex].Count / 2.0f) + 0.1f);
+
+            for (int i = 0;i < range; i++)
             {
-                building.ApplyEvent(ranEvent);
+                int ranIdx = Random.Range(0, range);
+                while (indexs.Contains(ranIdx))
+                {
+                    ranIdx = Random.Range(0, range);
+                }
+                indexs.Add(ranIdx);
+                targetBuildings[ranEvent.eventIndex][ranIdx].ApplyEvent(ranEvent);
             }
         }
     }

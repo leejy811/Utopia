@@ -53,7 +53,7 @@ public struct Event
     private bool CheckCondition(BuildingSubType subType, Building building)
     {
         if (subType == BuildingSubType.Police || subType == BuildingSubType.FireFighting || building.type == BuildingType.Residential)
-            return building.CheckInfluence(subType);
+            return !building.CheckInfluence(subType);
 
         return false;
     }

@@ -74,13 +74,13 @@ public class RoutineManager : MonoBehaviour
     {
         int total = 0;
 
+        EventManager.instance.EffectUpdate();
+
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
             building.UpdateHappiness();
             total += building.happinessRate;
         }
-
-        EventManager.instance.EffectUpdate();
 
         if (BuildingSpawner.instance.buildings.Count != 0)
             cityHappiness = total / BuildingSpawner.instance.buildings.Count;

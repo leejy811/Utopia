@@ -53,6 +53,8 @@ public class Tile : MonoBehaviour
         {
             (buildCom as ResidentialBuilding).ApplyInfluence(type, value, isAdd);
         }
+
+        buildCom.SolveEventToInfluence(subType);
     }
 
     public void ApplyInfluenceToBuilding()

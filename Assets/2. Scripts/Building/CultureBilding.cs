@@ -33,20 +33,20 @@ public class CultureBilding : Building
         //trendValue
         if (values[ValueType.Trend].cur > values[ValueType.Trend].max)
         {
-            happinessRate += 2;
+            SetHappiness(2);
             //ToDo
             //영향력 범위 늘리기 추가
         }
         else if (values[ValueType.Trend].cur < values[ValueType.Trend].min)
-            happinessRate -= 2;
+            SetHappiness(-2);
 
         //fee
         if (values[ValueType.Fee].cur > values[ValueType.Fee].max)
         {
-            happinessRate += 2;
+            SetHappiness(2);
             ShopManager.instance.money += 10;
         }
         else if (values[ValueType.Fee].cur < values[ValueType.Fee].min)
-            happinessRate -= 1;
+            SetHappiness(-1);
     }
 }

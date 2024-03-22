@@ -82,31 +82,31 @@ public class ResidentialBuilding : Building
         //commercialCSAT
         if (values[ValueType.CommercialCSAT].cur > values[ValueType.CommercialCSAT].max)
         {
-            happinessRate -= 1;
+            SetHappiness(-1);
             ShopManager.instance.money -= 5;
         }
         else if (values[ValueType.CommercialCSAT].cur < values[ValueType.CommercialCSAT].min)
-            happinessRate -= 2;
+            SetHappiness(-2);
         else
-            happinessRate += 1;
+            SetHappiness(1);
 
         //cultureCSAT
         if (values[ValueType.CultureCSAT].cur > values[ValueType.CultureCSAT].max)
         {
-            happinessRate -= 1;
+            SetHappiness(-1);
             ShopManager.instance.money -= 10;
         }
         else if (values[ValueType.CultureCSAT].cur < values[ValueType.CultureCSAT].min)
-            happinessRate -= 3;
+            SetHappiness(-3);
         else
-            happinessRate += 1;
+            SetHappiness(1);
 
         //serviceCSAT
         if (values[ValueType.ServiceCSAT].cur > values[ValueType.ServiceCSAT].max)
-            happinessRate -= 2;
+            SetHappiness(-2);
         else if (values[ValueType.ServiceCSAT].cur < values[ValueType.ServiceCSAT].min)
-            happinessRate -= 2;
+            SetHappiness(-2);
         else
-            happinessRate += 1;
+            SetHappiness(1);
     }
 }

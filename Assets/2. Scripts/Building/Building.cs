@@ -135,9 +135,9 @@ public class Building : MonoBehaviour
             if (curevent.type == EventType.Problem)
             {
                 if (curevent.duplication == 3)
-                    happinessRate -= curevent.effectJackpotValue[curevent.curDay - 1];
+                    SetHappiness(curevent.effectJackpotValue[curevent.curDay - 1] * -1);
                 else
-                    happinessRate -= curevent.effectValue[curevent.curDay - 1] * curevent.duplication;
+                    SetHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * -1);
             }
 
             curEvents[i] = curevent;
@@ -149,13 +149,30 @@ public class Building : MonoBehaviour
         }
     }
 
+    public void SetHappiness(int amount)
+    {
+        if (happinessRate + amount < 0)
+        {
+            happinessRate = 0;
+            return;
+        }
+
+        happinessRate += amount;
+    }
+
     public void SolveEvent(int index)
     {
         if (curEvents[index / 2].type == EventType.Event) return;
         int ran = Random.Range(0, 100);
 
         if (ran < curEvents[index / 2].solutions[index % 2].prob)
+        {
+            if(curEvents[index / 2].conditionType == ConditionType.Option)
+            {
+                (this as ResidentialBuilding).BuyFacility((OptionType)curEvents[index / 2].targetIndex);
+            }
             curEvents.RemoveAt(index / 2);
+        }
     }
 
     public void SetPosition(Vector3 position)
@@ -166,6 +183,18 @@ public class Building : MonoBehaviour
     public bool CheckInfluence(BuildingSubType type)
     {
         return Grid.instance.tiles[position.x, position.y].subInfluenceValues[(int)type] != 0;
+    }
+
+    public void SolveEventToInfluence(BuildingSubType type)
+    {
+        for(int i = 0;i < curEvents.Count; i++)
+        {
+            if (curEvents[i].conditionType == ConditionType.Influence && curEvents[i].targetIndex == (int)type)
+            {
+                curEvents.RemoveAt(i);
+                break;
+            }
+        }
     }
 
     public void ApplyEventEffect(int amount, ValueType type)

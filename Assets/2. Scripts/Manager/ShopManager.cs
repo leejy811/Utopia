@@ -75,8 +75,8 @@ public class ShopManager : MonoBehaviour
         Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyBuilding) return;
-        if (!PayMoney(cost)) return;
         if (!tile.CheckBuilding()) return;
+        if (!PayMoney(cost)) return;
 
         BuildingSpawner.instance.PlaceBuilding(curPickIndex, spawnTrans);
     }

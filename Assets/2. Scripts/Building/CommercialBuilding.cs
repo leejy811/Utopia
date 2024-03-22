@@ -31,18 +31,18 @@ public class CommercialBuilding : Building
     {
         //customerCnt
         if (values[ValueType.Customer].cur > values[ValueType.Customer].max)
-            happinessRate += 2;
+            SetHappiness(2);
         else if (values[ValueType.Customer].cur < values[ValueType.Customer].min)
-            happinessRate -= 2;
+            SetHappiness(-2);
 
         //productPrice
         if (values[ValueType.Product].cur > values[ValueType.Product].max)
         {
-            happinessRate += 2;
+            SetHappiness(2);
             ShopManager.instance.money += 5;
         }
         else if (values[ValueType.Product].cur < values[ValueType.Product].min)
-            happinessRate -= 1;
+            SetHappiness(-2);
     }
 
 }

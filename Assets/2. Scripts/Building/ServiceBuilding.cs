@@ -25,11 +25,11 @@ public class ServiceBuilding : Building
         //employmentValue
         if (values[ValueType.Employment].cur > values[ValueType.Employment].max)
         {
-            happinessRate += 1;
+            SetHappiness(1);
             //ToDo
             //영향력 범위 늘리기 추가
         }
         else if (values[ValueType.Employment].cur < values[ValueType.Employment].min)
-            happinessRate -= 1;
+            SetHappiness(-1);
     }
 }
