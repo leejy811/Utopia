@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class BuildingSpawner : MonoBehaviour
@@ -31,6 +32,7 @@ public class BuildingSpawner : MonoBehaviour
         building.SetPosition(spawnTrans.position);
 
         buildingCount[(int)building.subType + 1]++;
+        building.count = buildingCount[(int)building.subType + 1];
 
         switch (building.type)
         {

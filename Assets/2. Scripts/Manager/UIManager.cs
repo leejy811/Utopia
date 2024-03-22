@@ -46,10 +46,27 @@ public class UIManager : MonoBehaviour
     [Header("Building")]
     public BuildingUIInfo[] buildingUIInfos;
 
+    [Header("Building Special")]
+    public TextMeshProUGUI residentText;
+    public TextMeshProUGUI commercialText;
+    public TextMeshProUGUI cultureText;
+    public TextMeshProUGUI serviceText;
+
+    public TextMeshProUGUI[] faciltyTexts;
+    public TextMeshProUGUI[] faciltyBuyTexts;
+
+    public TextMeshProUGUI influenceText;
+    public TextMeshProUGUI costText;
+
+    [Header("Roulette")]
+    public TextMeshProUGUI rouletteText;
+
     [Header("PopUp")]
     public GameObject optionPopUp;
+    public GameObject roulettePopUp;
     public GameObject[] buildingPopUp;
     public GameObject[] buildingBuyPopUp;
+    public GameObject[] buildingSpecialPopUp;
 
     #endregion
 
@@ -94,7 +111,7 @@ public class UIManager : MonoBehaviour
     {
         BuildingUIInfo info = buildingUIInfos[targetBuilding.curEvents.Count];
 
-        info.nameText.text = targetBuilding.subType.ToString() + " " + BuildingSpawner.instance.buildingCount[(int)targetBuilding.subType + 1];
+        info.nameText.text = targetBuilding.subType.ToString() + " " + targetBuilding.count;
         info.gradeText.text = targetBuilding.grade.ToString();
         info.typeText.text = targetBuilding.type.ToString();
         info.subTypeText.text = targetBuilding.subType.ToString();
@@ -112,6 +129,43 @@ public class UIManager : MonoBehaviour
                 info.eventUIInfos[i].solutionUIInfos[j].probText.text = targetBuilding.curEvents[i].solutions[j].prob.ToString() + "%";
             }
         }
+
+        if(targetBuilding.type == BuildingType.Residential)
+        {
+            buildingSpecialPopUp[0].SetActive(true);
+            buildingSpecialPopUp[1].SetActive(false);
+
+            ResidentialBuilding residential = targetBuilding as ResidentialBuilding;
+
+            residentText.text = targetBuilding.values[ValueType.Resident].cur.ToString() + " / " + targetBuilding.values[ValueType.Resident].max.ToString();
+            commercialText.text = targetBuilding.values[ValueType.CommercialCSAT].cur.ToString() + "%";
+            cultureText.text = targetBuilding.values[ValueType.CultureCSAT].cur.ToString() + "%";
+            serviceText.text = targetBuilding.values[ValueType.ServiceCSAT].cur.ToString() + "%";
+
+            for(int i = 0;i < faciltyTexts.Length;i++)
+            {
+                faciltyTexts[i].text = residential.CheckFacility((OptionType)i) ? "O" : "X";
+            }
+        }
+        else
+        {
+            buildingSpecialPopUp[1].SetActive(true);
+            buildingSpecialPopUp[0].SetActive(false);
+            influenceText.text = targetBuilding.influencePower.ToString();
+
+            if(targetBuilding.type == BuildingType.Service)
+            {
+                buildingSpecialPopUp[2].SetActive(true);
+                costText.text = (targetBuilding as ServiceBuilding).costPerDay.ToString();
+            }
+            else
+                buildingSpecialPopUp[2].SetActive(false);
+        }
+    }
+
+    public void SetRoulette(List<Event> ranEvents)
+    {
+        rouletteText.text = ranEvents[0].eventEngName + " / " + ranEvents[1].eventEngName + " / " + ranEvents[2].eventEngName;
     }
 
     #endregion
@@ -123,6 +177,11 @@ public class UIManager : MonoBehaviour
         optionPopUp.SetActive(active);
     }
 
+    public void SetRoulettePopUp(bool active)
+    {
+        roulettePopUp.SetActive(active);
+    }
+
     public void SetBuildingPopUp(bool active, GameObject building = null)
     {
         if(building == null)
@@ -132,6 +191,8 @@ public class UIManager : MonoBehaviour
             {
                 buildingPopUp[i].SetActive(false);
             }
+            buildingSpecialPopUp[0].SetActive(false);
+            buildingSpecialPopUp[1].SetActive(false);
             return;
         }
 
@@ -170,11 +231,13 @@ public class UIManager : MonoBehaviour
 
     public void OnClickBuildingSell()
     {
+        OnClickBuildingBuyPopUp(-1);
         ShopManager.instance.ChangeState(BuyState.SellBuilding);
     }
 
     public void OnClickTileBuy()
     {
+        OnClickBuildingBuyPopUp(-1);
         ShopManager.instance.ChangeState(BuyState.BuyTile);
     }
 
@@ -185,7 +248,8 @@ public class UIManager : MonoBehaviour
 
     public void OnClickOptionBuy(int index)
     {
-        ShopManager.instance.BuyOption((OptionType)index);
+        if (ShopManager.instance.BuyOption((OptionType)index))
+            faciltyBuyTexts[index].text = "Complete";
     }
 
     public void OnClickNextDay()

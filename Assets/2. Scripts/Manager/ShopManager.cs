@@ -47,7 +47,11 @@ public class ShopManager : MonoBehaviour
 
     public void ChangeState(BuyState state, int index = 0, GameObject pickObject = null)
     {
-        if (state == buyState) return;
+        if (state == buyState)
+        {
+
+            return;
+        }
 
         curPickIndex = index;
 
@@ -65,6 +69,11 @@ public class ShopManager : MonoBehaviour
             SetSolveEvent(false, pickObject);
         else if (state == BuyState.SolveEvent)
             SetSolveEvent(true, pickObject);
+
+        if (buyState == BuyState.None)
+            UIManager.instance.SetRoulettePopUp(false);
+        else if (state == BuyState.None)
+            UIManager.instance.SetRoulettePopUp(true);
 
         buyState = state;
     }
@@ -103,15 +112,16 @@ public class ShopManager : MonoBehaviour
         tile.SetTilePurchased(true);
     }
 
-    public void BuyOption(OptionType type)
+    public bool BuyOption(OptionType type)
     {
         ResidentialBuilding building = curPickObject.GetComponent<ResidentialBuilding>();
 
-        if (buyState != BuyState.BuyOption) return;
-        if (building.CheckFacility(type)) return;
-        if (!PayMoney(500)) return;
+        if (buyState != BuyState.BuyOption) return false;
+        if (building.CheckFacility(type)) return false;
+        if (!PayMoney(500)) return false;
 
         building.BuyFacility(type);
+        return true;
     }
 
     public void SolveEvent(int index)

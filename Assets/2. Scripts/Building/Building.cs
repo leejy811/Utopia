@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public enum BuildingType { Residential = -1, Commercial, Culture, Service }
-public enum BuildingSubType { Apartment = -1, Store, Cinema, PoliceStation, Restaurant, Gallery, FireStation, Park }
+public enum BuildingSubType { Apartment = -1, Store, Cinema, Police, Restaurant, Gallery, Fire, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
 public enum ValueType { None = -1, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
 
@@ -26,6 +26,7 @@ public struct BoundaryValue
 
 public class Building : MonoBehaviour
 {
+    public int count;
     public int grade;
     public BuildingType type;
     public BuildingSubType subType;

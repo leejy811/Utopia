@@ -69,6 +69,8 @@ public class EventManager : MonoBehaviour
             ranEvents.Add(possibleEvents[ranidx]);
         }
 
+        UIManager.instance.SetRoulette(ranEvents);
+
         Event e;
         if (ranEvents[0] == ranEvents[1] && ranEvents[1] == ranEvents[2])
         {
