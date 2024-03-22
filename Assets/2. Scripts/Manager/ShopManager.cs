@@ -91,10 +91,10 @@ public class ShopManager : MonoBehaviour
         Destroy(curPickObject);
     }
 
-    public void BuyTile(Transform tileTrans)
+    public void BuyTile()
     {
         int cost = Grid.instance.tileCost;
-        Tile tile = tileTrans.gameObject.GetComponent<Tile>();
+        Tile tile = curPickObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyTile) return;
         if (!tile.CheckPurchased()) return;
@@ -134,41 +134,41 @@ public class ShopManager : MonoBehaviour
             SetObjectColor(curPickObject, Color.red);
     }
 
-    public void SetObjectColor(GameObject building, Color color)
+    public void SetObjectColor(GameObject obj, Color color)
     {
-        MeshRenderer[] renderers = building.GetComponentsInChildren<MeshRenderer>();
+        if(obj.GetComponent<Tile>() != null)
+        {
+            if (obj.GetComponent<Tile>().CheckPurchased())
+                obj.GetComponent<Tile>().SetTileColor(color);
+            return;
+        }
+
+        MeshRenderer[] renderers = obj.GetComponentsInChildren<MeshRenderer>();
         foreach (MeshRenderer renderer in renderers)
         {
-            renderer.material.color = color;
+            foreach (Material material in renderer.materials)
+                material.color = color;
         }
     }
 
-    public void SetSellBuilding(GameObject building)
+    public void SetTargetObject(GameObject obj, Color targetColor, Color otherColor)
     {
         if (curPickObject != null)
         {
-            MeshRenderer[] renderers = curPickObject.GetComponentsInChildren<MeshRenderer>();
-            foreach (MeshRenderer renderer in renderers)
-            {
-                renderer.material.color = Color.white;
-            }
+            SetObjectColor(curPickObject, otherColor);
         }
 
-        if (building != null)
+        if (obj != null)
         {
-            MeshRenderer[] renderers = building.GetComponentsInChildren<MeshRenderer>();
-            foreach (MeshRenderer renderer in renderers)
-            {
-                renderer.material.color = Color.red;
-            }
+            SetObjectColor(obj, targetColor);
         }
 
-        curPickObject = building;
+        curPickObject = obj;
     }
 
     private void SetBuyOption(bool active, GameObject pickObject)
     {
-        SetSellBuilding(null);
+        SetTargetObject(null, Color.red, Color.white);
         curPickObject = pickObject;
         UIManager.instance.SetOptionPopUp(active);
     }

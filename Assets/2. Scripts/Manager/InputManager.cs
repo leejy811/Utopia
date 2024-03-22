@@ -36,7 +36,7 @@ public class InputManager : MonoBehaviour
                         ShopManager.instance.BuyBuilding(hit.transform);
                         break;
                     case BuyState.BuyTile:
-                        ShopManager.instance.BuyTile(hit.transform);
+                        ShopManager.instance.BuyTile();
                         break;
                     case BuyState.BuildTile:
                         break;
@@ -59,27 +59,32 @@ public class InputManager : MonoBehaviour
         }
         else
         {
-            if(state == BuyState.SellBuilding && Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
             {
-                if (hit.transform.tag == "Building")
-                    ShopManager.instance.SetSellBuilding(hit.transform.gameObject);
-                else
-                    ShopManager.instance.SetSellBuilding(null);
-            }
-            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
-            {
-                switch (state)
+                if (hit.transform.tag == "Tile")
                 {
-                    case BuyState.BuyBuilding:
-                        ShopManager.instance.CheckBuyBuilding(hit.transform);
-                        break;
-                    case BuyState.SellBuilding:
-                        break;
-                    case BuyState.BuyTile:
-                        break;
-                    case BuyState.BuildTile:
-                        break;
+                    switch (state)
+                    {
+                        case BuyState.BuyBuilding:
+                            ShopManager.instance.CheckBuyBuilding(hit.transform);
+                            break;
+                        case BuyState.BuyTile:
+                            ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.green, Color.red);
+                            break;
+                        case BuyState.BuildTile:
+                            break;
+                    }
                 }
+                else if(state == BuyState.BuyTile)
+                    ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+
+                if (hit.transform.tag == "Building")
+                {
+                    if (state == BuyState.SellBuilding)
+                        ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.red, Color.white); ;
+                }
+                else if (state == BuyState.SellBuilding)
+                    ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
             }
         }
     }

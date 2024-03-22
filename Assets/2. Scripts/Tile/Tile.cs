@@ -27,15 +27,10 @@ public class Tile : MonoBehaviour
 
     public void SetTilePurchased(bool isPurchased)
     {
-        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer renderer in renderers)
-        {
-            if (renderer == border) continue;
-            if (isPurchased)
-                renderer.material.color = Color.green;
-            else
-                renderer.material.color = Color.red;
-        }
+        if (isPurchased)
+            SetTileColor(Color.green);
+        else
+            SetTileColor(Color.red);
 
         this.isPurchased = isPurchased;
     }
@@ -69,6 +64,17 @@ public class Tile : MonoBehaviour
             {
                 (buildCom as ResidentialBuilding).ApplyInfluence((BuildingType)i, influenceValues[i], true);
             }
+        }
+    }
+
+    public void SetTileColor(Color color)
+    {
+        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer renderer in renderers)
+        {
+            if (renderer == border) continue;
+
+            renderer.material.color = color;
         }
     }
 }

@@ -76,7 +76,10 @@ public class Building : MonoBehaviour
         MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
         foreach(MeshRenderer renderer in renderers)
         {
-            renderer.material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, (float)state / 2.0f);
+            foreach (Material material in renderer.materials)
+            {
+                material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, (float)state / 2.0f);
+            }
         }
     }
 
