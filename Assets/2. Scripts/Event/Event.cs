@@ -10,6 +10,7 @@ public enum ConditionType { Option, Influence, Exist }
 public struct EventSolution 
 {
     public string name;
+    public string engName;
     public int cost, prob; 
 }
 
@@ -17,6 +18,7 @@ public struct EventSolution
 public struct Event
 {
     public string eventName;
+    public string eventEngName;
     public int eventIndex;
     public EventType type;
     public ConditionType conditionType;
@@ -52,7 +54,7 @@ public struct Event
 
     private bool CheckCondition(BuildingSubType subType, Building building)
     {
-        if (subType == BuildingSubType.Police || subType == BuildingSubType.FireFighting || building.type == BuildingType.Residential)
+        if (subType == BuildingSubType.PoliceStation || subType == BuildingSubType.FireStation || building.type == BuildingType.Residential)
             return !building.CheckInfluence(subType);
 
         return false;

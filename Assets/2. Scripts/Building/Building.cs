@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
-public enum BuildingType { Residential = -1, Commercial, culture, Service }
-public enum BuildingSubType { Apartment = -1, Store, Movie, Police, Restaurant, Art, FireFighting, Park }
+public enum BuildingType { Residential = -1, Commercial, Culture, Service }
+public enum BuildingSubType { Apartment = -1, Store, Cinema, PoliceStation, Restaurant, Gallery, FireStation, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
 public enum ValueType { None = -1, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
 
@@ -137,10 +138,7 @@ public class Building : MonoBehaviour
 
             if (curevent.type == EventType.Problem)
             {
-                if (curevent.duplication == 3)
-                    SetHappiness(curevent.effectJackpotValue[curevent.curDay - 1] * -1);
-                else
-                    SetHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * -1);
+                ApplyEventProblem(curevent, false);
             }
 
             curEvents[i] = curevent;
@@ -174,6 +172,8 @@ public class Building : MonoBehaviour
             {
                 (this as ResidentialBuilding).BuyFacility((OptionType)curEvents[index / 2].targetIndex);
             }
+
+            ApplyEventProblem(curEvents[index / 2], true);
             curEvents.RemoveAt(index / 2);
         }
     }
@@ -206,12 +206,19 @@ public class Building : MonoBehaviour
         value.cur += amount;
         values[type] = value;
     }
-
+    
+    public void ApplyEventProblem(Event curevent, bool isAdd)
+    {
+        int sign = isAdd ? 1 : -1;
+        if (curevent.duplication == 3)
+            SetHappiness(curevent.effectJackpotValue[curevent.curDay - 1] * sign);
+        else
+            SetHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * sign);
+    }
     public virtual int CalculateIncome()
     {
         return 0;
     }
-
     public virtual int CheckBonus()
     {
         return 0;

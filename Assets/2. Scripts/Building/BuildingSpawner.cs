@@ -10,6 +10,8 @@ public class BuildingSpawner : MonoBehaviour
 
     public GameObject[] buildingPrefabs;
 
+    public int[] buildingCount = new int[8];
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -28,7 +30,9 @@ public class BuildingSpawner : MonoBehaviour
         spawnTrans.gameObject.GetComponent<Tile>().ApplyInfluenceToBuilding();
         building.SetPosition(spawnTrans.position);
 
-        switch(building.type)
+        buildingCount[(int)building.subType + 1]++;
+
+        switch (building.type)
         {
             case BuildingType.Residential:
                 buildings.Add(building as ResidentialBuilding);
@@ -36,8 +40,8 @@ public class BuildingSpawner : MonoBehaviour
             case BuildingType.Commercial:
                 buildings.Add(building as CommercialBuilding);
                 break;
-            case BuildingType.culture:
-                buildings.Add(building as CultureBilding);
+            case BuildingType.Culture:
+                buildings.Add(building as CultureBuilding);
                 break;
             case BuildingType.Service:
                 buildings.Add(building as ServiceBuilding);

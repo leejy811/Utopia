@@ -51,7 +51,11 @@ public class InputManager : MonoBehaviour
                     ShopManager.instance.ChangeState(BuyState.BuyOption, 0, hit.transform.gameObject);
             }
             else
+            {
+                if(state == BuyState.BuyTile)
+                    ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
                 ShopManager.instance.ChangeState(BuyState.None);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {

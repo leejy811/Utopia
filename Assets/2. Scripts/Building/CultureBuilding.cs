@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CultureBilding : Building
+public class CultureBuilding : Building
 {
     public BoundaryValue trendValue;
     public BoundaryValue fee;

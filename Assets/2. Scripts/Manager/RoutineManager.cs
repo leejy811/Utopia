@@ -30,12 +30,14 @@ public class RoutineManager : MonoBehaviour
     {
         day++;
 
+        EventManager.instance.CheckEvents();
+        EventManager.instance.RandomRoulette();
         UpdateHappiness();
+
         ShopManager.instance.GetMoney(CalculateTax());
         ShopManager.instance.money -= CalculateExpenditure();
 
-        EventManager.instance.CheckEvents();
-        EventManager.instance.RandomRoulette();
+        UIManager.instance.UpdateDailyInfo();
     }
 
     private int CalculateTax()
@@ -48,7 +50,7 @@ public class RoutineManager : MonoBehaviour
 
             if (building.type == BuildingType.Commercial && Convert.ToBoolean(building.CheckBonus()))
                 total += 5;
-            else if (building.type == BuildingType.culture && Convert.ToBoolean(building.CheckBonus()))
+            else if (building.type == BuildingType.Culture && Convert.ToBoolean(building.CheckBonus()))
                 total += 10;
         }
 

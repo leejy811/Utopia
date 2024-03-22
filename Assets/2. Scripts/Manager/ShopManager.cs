@@ -123,6 +123,7 @@ public class ShopManager : MonoBehaviour
         if (!PayMoney(cost)) return;
 
         building.SolveEvent(index);
+        UIManager.instance.SetBuildingPopUp(true, curPickObject);
     }
 
     public void CheckBuyBuilding(Transform tileTrans)
@@ -179,9 +180,9 @@ public class ShopManager : MonoBehaviour
         UIManager.instance.SetOptionPopUp(active);
     }
 
-    private void SetSolveEvent(bool active, GameObject pickObject)
+    private void SetSolveEvent(bool active, GameObject pickObject = null)
     {
         curPickObject = pickObject;
-        UIManager.instance.SetBuildingPopUp(active);
+        UIManager.instance.SetBuildingPopUp(active, pickObject);
     }
 }
