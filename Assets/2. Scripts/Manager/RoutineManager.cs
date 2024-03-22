@@ -86,5 +86,7 @@ public class RoutineManager : MonoBehaviour
 
         if (BuildingSpawner.instance.buildings.Count != 0)
             cityHappiness = total / BuildingSpawner.instance.buildings.Count;
+        else
+            cityHappiness = 0;
     }
 }
