@@ -129,9 +129,15 @@ public class ShopManager : MonoBehaviour
     {
         Tile tile = tileTrans.gameObject.GetComponent<Tile>();
         if (tile.CheckBuilding())
+        {
+            curPickObject.GetComponent<FollowMouse>().tile = tile.gameObject;
             SetObjectColor(curPickObject, Color.white);
+        }
         else
+        {
             SetObjectColor(curPickObject, Color.red);
+            curPickObject.GetComponent<FollowMouse>().tile = null;
+        }
     }
 
     public void SetObjectColor(GameObject obj, Color color)

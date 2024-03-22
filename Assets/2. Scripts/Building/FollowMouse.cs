@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FollowMouse : MonoBehaviour
 {
+    public GameObject tile;
     Vector3 mousePos;
     Camera main;
 
@@ -15,7 +16,10 @@ public class FollowMouse : MonoBehaviour
 
     void Update()
     {
-        SetPosition();
+        if (tile != null)
+            transform.position = tile.transform.position;
+        else
+            SetPosition();
     }
 
     void SetPosition()
