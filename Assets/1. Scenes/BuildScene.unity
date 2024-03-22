@@ -5907,7 +5907,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6.2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9667,7 +9667,7 @@ MonoBehaviour:
   height: 12
   startPoint: {x: 0, y: 0}
   startTileSize: {x: 3, y: 3}
-  cameraOffset: {x: -5.75, y: 11, z: -5.75}
+  cameraOffset: {x: -5.75, y: 9.4, z: -5.75}
 --- !u!4 &1394218994
 Transform:
   m_ObjectHideFlags: 0
