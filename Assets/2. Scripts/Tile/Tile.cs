@@ -13,6 +13,7 @@ public class Tile : MonoBehaviour
     public int[] influenceValues = new int[3];
     public int[] subInfluenceValues = new int[7];
     public GameObject building;
+    public MeshRenderer border;
 
     public bool CheckBuilding()
     {
@@ -29,6 +30,7 @@ public class Tile : MonoBehaviour
         MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
         foreach (MeshRenderer renderer in renderers)
         {
+            if (renderer == border) continue;
             if (isPurchased)
                 renderer.material.color = Color.green;
             else
