@@ -141,10 +141,10 @@ public class EventManager : MonoBehaviour
 
             for (int i = 0;i < range; i++)
             {
-                int ranIdx = Random.Range(0, range);
+                int ranIdx = Random.Range(0, targetBuildings[ranEvent.eventIndex].Count);
                 while (indexs.Contains(ranIdx))
                 {
-                    ranIdx = Random.Range(0, range);
+                    ranIdx = Random.Range(0, targetBuildings[ranEvent.eventIndex].Count);
                 }
                 indexs.Add(ranIdx);
                 targetBuildings[ranEvent.eventIndex][ranIdx].ApplyEvent(ranEvent);
