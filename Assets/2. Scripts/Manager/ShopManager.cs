@@ -49,7 +49,7 @@ public class ShopManager : MonoBehaviour
     {
         if (state == buyState)
         {
-
+            ChangePickObject(index, pickObject);
             return;
         }
 
@@ -66,7 +66,7 @@ public class ShopManager : MonoBehaviour
             SetBuyOption(true, pickObject);
 
         if (buyState == BuyState.SolveEvent)
-            SetSolveEvent(false, pickObject);
+            SetSolveEvent(false);
         else if (state == BuyState.SolveEvent)
             SetSolveEvent(true, pickObject);
 
@@ -76,6 +76,22 @@ public class ShopManager : MonoBehaviour
             UIManager.instance.SetRoulettePopUp(true);
 
         buyState = state;
+    }
+
+    public void ChangePickObject(int index = 0, GameObject pickObject = null)
+    {
+        curPickIndex = index;
+
+        if (buyState == BuyState.BuyBuilding)
+        {
+            Destroy(curPickObject);
+            curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
+        }
+        else if (buyState == BuyState.SolveEvent)
+        {
+            SetSolveEvent(false);
+            SetSolveEvent(true, pickObject);
+        }
     }
 
     public void BuyBuilding(Transform spawnTrans)
@@ -103,6 +119,8 @@ public class ShopManager : MonoBehaviour
     public void BuyTile()
     {
         int cost = Grid.instance.tileCost;
+
+        if (curPickObject == null) return;
         Tile tile = curPickObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyTile) return;
@@ -192,7 +210,8 @@ public class ShopManager : MonoBehaviour
 
     private void SetSolveEvent(bool active, GameObject pickObject = null)
     {
-        curPickObject = pickObject;
+        if (pickObject != null)
+            curPickObject = pickObject;
         UIManager.instance.SetBuildingPopUp(active, pickObject);
     }
 }

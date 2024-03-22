@@ -139,9 +139,9 @@ public class UIManager : MonoBehaviour
             ResidentialBuilding residential = targetBuilding as ResidentialBuilding;
 
             residentText.text = targetBuilding.values[ValueType.Resident].cur.ToString() + " / " + targetBuilding.values[ValueType.Resident].max.ToString();
-            commercialText.text = targetBuilding.values[ValueType.CommercialCSAT].cur.ToString() + "%";
-            cultureText.text = targetBuilding.values[ValueType.CultureCSAT].cur.ToString() + "%";
-            serviceText.text = targetBuilding.values[ValueType.ServiceCSAT].cur.ToString() + "%";
+            commercialText.text = targetBuilding.values[ValueType.CommercialCSAT].cur.ToString();
+            cultureText.text = targetBuilding.values[ValueType.CultureCSAT].cur.ToString();
+            serviceText.text = targetBuilding.values[ValueType.ServiceCSAT].cur.ToString();
 
             for(int i = 0;i < faciltyTexts.Length;i++)
             {
@@ -255,6 +255,7 @@ public class UIManager : MonoBehaviour
 
     public void OnClickNextDay()
     {
+        OnClickBuildingBuyPopUp(-1);
         RoutineManager.instance.DailyUpdate();
     }
 

@@ -96,7 +96,7 @@ public class Building : MonoBehaviour
         foreach (Collider hit in hits)
         {
             Tile tile = hit.transform.gameObject.GetComponent<Tile>();
-            tile.SetInfluenceValue(type, subType, influencePower, true);
+            tile.SetInfluenceValue(type, subType, influencePower, isAdd);
         }
     }
 

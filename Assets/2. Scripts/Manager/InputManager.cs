@@ -24,7 +24,7 @@ public class InputManager : MonoBehaviour
             {
                 ShopManager.instance.SellBuilding();
             }
-            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && state == BuyState.None)
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && (state == BuyState.None || state == BuyState.SolveEvent))
             {
                 ShopManager.instance.ChangeState(BuyState.SolveEvent, 0, hit.transform.gameObject);
             }
