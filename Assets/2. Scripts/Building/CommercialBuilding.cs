@@ -42,7 +42,7 @@ public class CommercialBuilding : Building
             ShopManager.instance.money += 5;
         }
         else if (values[ValueType.Product].cur < values[ValueType.Product].min)
-            SetHappiness(-2);
+            SetHappiness(-1);
     }
 
 }
