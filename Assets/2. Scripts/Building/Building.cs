@@ -179,6 +179,17 @@ public class Building : MonoBehaviour
         }
     }
 
+    public List<Event> GetEventProblem()
+    {
+        List<Event> events = new List<Event>();
+        foreach (Event curEvent in curEvents)
+        {
+            if (curEvent.type == EventType.Problem)
+                events.Add(curEvent);
+        }
+        return events;
+    }
+
     public void SetPosition(Vector3 position)
     {
         this.position = new Vector2Int((int)position.x, (int)position.z);

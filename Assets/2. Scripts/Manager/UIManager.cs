@@ -109,7 +109,8 @@ public class UIManager : MonoBehaviour
 
     public void SetBuildingValue()
     {
-        BuildingUIInfo info = buildingUIInfos[targetBuilding.curEvents.Count];
+        List<Event> curEvent = targetBuilding.GetEventProblem();
+        BuildingUIInfo info = buildingUIInfos[curEvent.Count];
 
         info.nameText.text = targetBuilding.subType.ToString() + " " + targetBuilding.count;
         info.gradeText.text = targetBuilding.grade.ToString();
@@ -119,14 +120,14 @@ public class UIManager : MonoBehaviour
 
         for(int i = 0;i < info.eventUIInfos.Length; i++)
         {
-            info.eventUIInfos[i].nameText.text = targetBuilding.curEvents[i].eventEngName.ToString();
-            info.eventUIInfos[i].dayText.text = (targetBuilding.curEvents[i].effectValue.Count - targetBuilding.curEvents[i].curDay).ToString();
+            info.eventUIInfos[i].nameText.text = curEvent[i].eventEngName.ToString();
+            info.eventUIInfos[i].dayText.text = (curEvent[i].effectValue.Count - curEvent[i].curDay).ToString();
 
             for(int j = 0;j < info.eventUIInfos[i].solutionUIInfos.Length; j++)
             {
-                info.eventUIInfos[i].solutionUIInfos[j].nameText.text = targetBuilding.curEvents[i].solutions[j].engName.ToString();
-                info.eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + targetBuilding.curEvents[i].solutions[j].cost.ToString() + ")";
-                info.eventUIInfos[i].solutionUIInfos[j].probText.text = targetBuilding.curEvents[i].solutions[j].prob.ToString() + "%";
+                info.eventUIInfos[i].solutionUIInfos[j].nameText.text = curEvent[i].solutions[j].engName.ToString();
+                info.eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + ")";
+                info.eventUIInfos[i].solutionUIInfos[j].probText.text = curEvent[i].solutions[j].prob.ToString() + "%";
             }
         }
 
@@ -200,7 +201,7 @@ public class UIManager : MonoBehaviour
 
         for(int i = 0;i < buildingPopUp.Length; i++)
         {
-            if(i == targetBuilding.curEvents.Count)
+            if(i == targetBuilding.GetEventProblem().Count)
                 buildingPopUp[i].SetActive(active);
             else
                 buildingPopUp[i].SetActive(false);
