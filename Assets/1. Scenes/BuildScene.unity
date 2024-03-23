@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.24873863, g: 0.33308524, b: 0.50950694, a: 1}
+  m_IndirectSpecularColor: {r: 0.2487622, g: 0.33301473, b: 0.50936025, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4989,7 +4989,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Small Art Gallery
 
-    (-150)'
+    (-200)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5327,7 +5327,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Police
 
-    (-200)'
+    (-300)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5599,7 +5599,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Local Cinema
 
-    (-150)'
+    (-200)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8094,7 +8094,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Park
 
-    (-500)'
+    (-300)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -9298,7 +9298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyState: 0
-  money: 100000000
+  money: 10000
   buildingPrefabs:
   - {fileID: 6249387795973439619, guid: 5858e47bac8b67a4a8fc399143b72f88, type: 3}
   - {fileID: 6249387795973439619, guid: 1c733af9dd7704844b1208c57deeae18, type: 3}
@@ -9905,7 +9905,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Apartment
 
-    (-300)'
+    (-50)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10042,7 +10042,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fire Station
 
-    (-200)'
+    (-300)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
