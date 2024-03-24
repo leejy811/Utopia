@@ -137,7 +137,7 @@ public class EventManager : MonoBehaviour
         foreach (Event ranEvent in ranEvents)
         {
             List<int> indexs = new List<int>();
-            int range = Mathf.RoundToInt((targetBuildings[ranEvent.eventIndex].Count / 2.0f) + 0.1f);
+            int range = Mathf.CeilToInt((targetBuildings[ranEvent.eventIndex].Count / 2.0f));
 
             for (int i = 0;i < range; i++)
             {

@@ -24,7 +24,8 @@ public class InputManager : MonoBehaviour
             {
                 ShopManager.instance.SellBuilding();
             }
-            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && (state == BuyState.None || state == BuyState.SolveEvent))
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && 
+                (state == BuyState.None || state == BuyState.SolveEvent || state == BuyState.BuyOption))
             {
                 ShopManager.instance.ChangeState(BuyState.SolveEvent, 0, hit.transform.gameObject);
             }
@@ -45,7 +46,8 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1))
         {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && state == BuyState.None)
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) &&
+                (state == BuyState.None || state == BuyState.SolveEvent || state == BuyState.BuyOption))
             {
                 if (hit.transform.gameObject.GetComponent<ResidentialBuilding>() != null)
                     ShopManager.instance.ChangeState(BuyState.BuyOption, 0, hit.transform.gameObject);
@@ -67,35 +69,28 @@ public class InputManager : MonoBehaviour
         }
         else
         {
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
-                if (hit.transform.tag == "Tile")
+                switch (state)
                 {
-                    switch (state)
-                    {
-                        case BuyState.BuyBuilding:
-                            ShopManager.instance.CheckBuyBuilding(hit.transform);
-                            break;
-                        case BuyState.BuyTile:
-                            ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.green, Color.red);
-                            break;
-                        case BuyState.BuildTile:
-                            break;
-                    }
+                    case BuyState.BuyBuilding:
+                        ShopManager.instance.CheckBuyBuilding(hit.transform);
+                        break;
+                    case BuyState.BuyTile:
+                        ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.green, Color.red);
+                        break;
+                    case BuyState.BuildTile:
+                        break;
                 }
-                else if(state == BuyState.BuyTile)
-                    ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
-
-                if (hit.transform.tag == "Building")
-                {
-                    if (state == BuyState.SellBuilding)
-                        ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.red, Color.white); ;
-                }
-                else if (state == BuyState.SellBuilding)
-                    ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
             }
             else if (state == BuyState.BuyTile)
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
+            {
+                if (state == BuyState.SellBuilding)
+                    ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.red, Color.white); ;
+            }
             else if (state == BuyState.SellBuilding)
                 ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
         }

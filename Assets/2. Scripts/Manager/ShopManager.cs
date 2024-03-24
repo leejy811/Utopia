@@ -113,6 +113,7 @@ public class ShopManager : MonoBehaviour
         if (buyState != BuyState.SellBuilding) return;
 
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
+        UIManager.instance.SetBuildingPopUp(false);
         Destroy(curPickObject);
     }
 
