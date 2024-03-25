@@ -38,7 +38,7 @@ public class Tile : MonoBehaviour
     public void SetInfluenceValue(BuildingType type, BuildingSubType subType, int value, bool isAdd)
     {
         influenceValues[(int)type] += isAdd ? value : -value;
-        subInfluenceValues[(int)type] += isAdd ? 1 : -1;
+        subInfluenceValues[(int)subType] += isAdd ? 1 : -1;
 
         if (building == null) return;
 
