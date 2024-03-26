@@ -92,6 +92,11 @@ public class ShopManager : MonoBehaviour
             SetSolveEvent(false);
             SetSolveEvent(true, pickObject);
         }
+        else if (buyState == BuyState.BuyOption)
+        {
+            SetBuyOption(false);
+            SetBuyOption(true, pickObject);
+        }
     }
 
     public void BuyBuilding(Transform spawnTrans)
@@ -103,6 +108,7 @@ public class ShopManager : MonoBehaviour
         if (!tile.CheckBuilding()) return;
         if (!PayMoney(cost)) return;
 
+        spawnTrans.rotation = curPickObject.transform.rotation;
         BuildingSpawner.instance.PlaceBuilding(curPickIndex, spawnTrans);
     }
 
@@ -202,11 +208,16 @@ public class ShopManager : MonoBehaviour
         curPickObject = obj;
     }
 
-    private void SetBuyOption(bool active, GameObject pickObject)
+    public void RotatePickBuilding()
+    {
+        curPickObject.transform.Rotate(Vector3.up * 90f);
+    }
+
+    private void SetBuyOption(bool active, GameObject pickObject = null)
     {
         SetTargetObject(null, Color.red, Color.white);
         curPickObject = pickObject;
-        UIManager.instance.SetOptionPopUp(active);
+        UIManager.instance.SetOptionPopUp(active, pickObject);
     }
 
     private void SetSolveEvent(bool active, GameObject pickObject = null)

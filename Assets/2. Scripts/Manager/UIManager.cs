@@ -164,6 +164,18 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    public void SetOption(GameObject building)
+    {
+        for(int i = 0;i < System.Enum.GetValues(typeof(OptionType)).Length; i++)
+        {
+            bool exist = building.GetComponent<ResidentialBuilding>().CheckFacility((OptionType)i);
+            if(exist)
+                faciltyBuyTexts[i].text = "Complete";
+            else
+                faciltyBuyTexts[i].text = "Add(-500)";
+        }
+    }
+
     public void SetRoulette(List<Event> ranEvents)
     {
         rouletteText.text = ranEvents[0].eventEngName + " / " + ranEvents[1].eventEngName + " / " + ranEvents[2].eventEngName;
@@ -173,9 +185,14 @@ public class UIManager : MonoBehaviour
 
     #region PopUp
 
-    public void SetOptionPopUp(bool active)
+    public void SetOptionPopUp(bool active, GameObject building = null)
     {
         optionPopUp.SetActive(active);
+
+        if(building != null)
+        {
+            SetOption(building);
+        }
     }
 
     public void SetRoulettePopUp(bool active)

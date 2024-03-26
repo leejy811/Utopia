@@ -67,6 +67,11 @@ public class InputManager : MonoBehaviour
         {
             ShopManager.instance.ChangeState(BuyState.None);
         }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (state == BuyState.BuyBuilding)
+                ShopManager.instance.RotatePickBuilding();
+        }
         else
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
