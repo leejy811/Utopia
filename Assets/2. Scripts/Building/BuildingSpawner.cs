@@ -30,6 +30,7 @@ public class BuildingSpawner : MonoBehaviour
         spawnTrans.gameObject.GetComponent<Tile>().building = building.gameObject;
         spawnTrans.gameObject.GetComponent<Tile>().ApplyInfluenceToBuilding();
         building.SetPosition(spawnTrans.position);
+        building.ChangeViewState(ViewStateType.Translucent);
 
         buildingCount[(int)building.subType + 1]++;
         building.count = buildingCount[(int)building.subType + 1];
@@ -60,6 +61,14 @@ public class BuildingSpawner : MonoBehaviour
                 buildings.RemoveAt(i);
                 break;
             }
+        }
+    }
+
+    public void ChangeViewState(ViewStateType stateType)
+    {
+        foreach(Building building in buildings)
+        {
+            building.ChangeViewState(stateType);
         }
     }
 }

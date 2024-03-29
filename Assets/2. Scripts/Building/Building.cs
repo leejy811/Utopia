@@ -47,25 +47,6 @@ public class Building : MonoBehaviour
         ApplyInfluenceToTile(true);
     }
 
-    private void Update()
-    {
-        BuyState state = ShopManager.instance.buyState;
-        switch (state)
-        {
-            case BuyState.None:
-            case BuyState.SellBuilding:
-                ChangeViewState(ViewStateType.Opaque);
-                break;
-            case BuyState.BuyBuilding:
-                ChangeViewState(ViewStateType.Translucent);
-                break;
-            case BuyState.BuyTile:
-            case BuyState.BuildTile:
-                ChangeViewState(ViewStateType.Transparent);
-                break;
-        }
-    }
-
     private void OnDestroy()
     {
         ApplyInfluenceToTile(false);

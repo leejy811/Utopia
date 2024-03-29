@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Grid : MonoBehaviour
@@ -10,11 +12,14 @@ public class Grid : MonoBehaviour
     public Tile[ , ] tiles;
     public int tileCost;
 
+    public Color[] tileColors;
+
     [SerializeField] private int width;
     [SerializeField] private int height;
     [SerializeField] private Vector2Int startPoint;
     [SerializeField] private Vector2Int startTileSize;
     [SerializeField] private Vector3 cameraOffset;
+    [SerializeField] private bool isColorMode;
 
     private void Awake()
     {
@@ -59,5 +64,25 @@ public class Grid : MonoBehaviour
     {
         Camera camera = Camera.main;
         camera.transform.position = ((Vector3Int)startPoint) + cameraOffset;
+    }
+
+    public void SetTileColorMode()
+    {
+        isColorMode = !isColorMode;
+        Color color;
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (tiles[i, j].building != null)
+                {
+                    Building building = tiles[i, j].building.GetComponent<Building>();
+                    color = isColorMode ? tileColors[(int)building.type + 1] : Color.green;
+
+                    tiles[i, j].SetTileColor(color);
+                    building.ChangeViewState((ViewStateType)(Convert.ToInt32(!isColorMode) * 2));
+                }
+            }
+        }
     }
 }

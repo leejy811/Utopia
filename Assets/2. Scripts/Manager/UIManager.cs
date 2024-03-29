@@ -281,5 +281,10 @@ public class UIManager : MonoBehaviour
         ShopManager.instance.SolveEvent(index);
     }
 
+    public void OnClickTileColorMode()
+    {
+        Grid.instance.SetTileColorMode();
+    }
+
     #endregion
 }

@@ -77,6 +77,21 @@ public class ShopManager : MonoBehaviour
         else if (state == BuyState.None)
             UIManager.instance.SetRoulettePopUp(true);
 
+        switch (state)
+        {
+            case BuyState.None:
+            case BuyState.SellBuilding:
+                BuildingSpawner.instance.ChangeViewState(ViewStateType.Opaque);
+                break;
+            case BuyState.BuyBuilding:
+                BuildingSpawner.instance.ChangeViewState(ViewStateType.Translucent);
+                break;
+            case BuyState.BuyTile:
+            case BuyState.BuildTile:
+                BuildingSpawner.instance.ChangeViewState(ViewStateType.Transparent);
+                break;
+        }
+
         buyState = state;
     }
 
