@@ -36,16 +36,30 @@ public class InputManager : MonoBehaviour
                     case BuyState.BuyBuilding:
                         ShopManager.instance.BuyBuilding(hit.transform);
                         break;
-                    case BuyState.BuyTile:
-                        ShopManager.instance.BuyTile();
-                        break;
                     case BuyState.BuildTile:
                         break;
                 }
             }
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButton(0))
         {
+            if(state == BuyState.BuyTile)
+            {
+                if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
+                {
+                    ShopManager.instance.AddTile(hit.transform);
+                }
+            }
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            if (state == BuyState.BuyTile)
+            {
+                ShopManager.instance.BuyTile();
+            }
+        }
+        else if (Input.GetMouseButtonDown(1))
+                    {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) &&
                 (state == BuyState.None || state == BuyState.SolveEvent || state == BuyState.BuyOption))
             {
