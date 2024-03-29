@@ -18,6 +18,8 @@ public class ShopManager : MonoBehaviour
     private GameObject curPickObject;
     private int curPickIndex;
 
+    public List<Vector2Int> curPickTiles = new List<Vector2Int>();
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -125,16 +127,31 @@ public class ShopManager : MonoBehaviour
 
     public void BuyTile()
     {
-        int cost = Grid.instance.tileCost;
-
-        if (curPickObject == null) return;
-        Tile tile = curPickObject.GetComponent<Tile>();
+        int cost = Grid.instance.tileCost * curPickTiles.Count;
 
         if (buyState != BuyState.BuyTile) return;
-        if (!tile.CheckPurchased()) return;
         if (!PayMoney(cost)) return;
 
-        tile.SetTilePurchased(true);
+        foreach(Vector2Int pos in curPickTiles)
+        {
+            Grid.instance.tiles[pos.x, pos.y].SetTilePurchased(true);
+        }
+
+        curPickTiles.Clear();
+    }
+
+    public void AddTile(Transform tile)
+    {
+        Vector2Int pos = new Vector2Int((int)tile.position.x, (int)tile.position.z);
+
+        if (!curPickTiles.Contains(pos))
+        {
+            if (Grid.instance.tiles[pos.x, pos.y].CheckPurchased())
+            {
+                curPickTiles.Add(pos);
+                Grid.instance.tiles[pos.x, pos.y].SetTileColor(Color.green);
+            }
+        }
     }
 
     public bool BuyOption(OptionType type)

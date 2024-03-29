@@ -8,7 +8,7 @@ public enum TileType { Ground, Road, Decoration }
 public class Tile : MonoBehaviour
 {
     public TileType type;
-    public bool isPurchased { get; private set; }
+    public bool isPurchased;
     public int costPerDay { get; private set; }
     public int[] influenceValues = new int[3];
     public int[] subInfluenceValues = new int[7];
