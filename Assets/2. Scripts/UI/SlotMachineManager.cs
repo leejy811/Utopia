@@ -7,23 +7,29 @@ public class SlotMachineManager : MonoBehaviour
     public GameObject slotContainer2;
     public GameObject slotContainer3;
 
-    // isFirstFunction 변수를 추가합니다.
+    public float spinSpeed = 23f; 
+    public float distanceMultiplier = 25f; 
+    public float returnPositionMultiplier = 25f; 
+    public float slot1Distance = 1f; 
+    public float slot2Distance = 2f; 
+    public float slot3Distance = 6f; 
+
     private bool isFirstFunction = true;
 
     private IEnumerator SpinSlot(GameObject slotContainer, float reachedDistance)
     {
         float movedDistance = 0;
 
-        while (movedDistance < reachedDistance * 25f)
+        while (movedDistance < reachedDistance * distanceMultiplier)
         {
             foreach (Transform image in slotContainer.transform)
             {
-                image.localPosition += Vector3.up * 5f;
+                image.localPosition += Vector3.up * spinSpeed * Time.fixedDeltaTime;
             }
 
-            movedDistance += 5f;
+            movedDistance += spinSpeed * Time.fixedDeltaTime;
 
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForFixedUpdate();
         }
     }
 
@@ -37,52 +43,42 @@ public class SlotMachineManager : MonoBehaviour
         }
         else
         {
-            // 괄호를 추가하여 메서드 호출을 올바르게 마무리합니다.
-            SpinReturnPos(slotContainer1, slotContainer2, slotContainer3, 1f, 2f, 3f);
+            SpinReturnPos(slotContainer1, slotContainer2, slotContainer3, slot1Distance, slot2Distance, slot3Distance);
         }
-
 
         isFirstFunction = !isFirstFunction;
     }
 
-
-
     private void SpinReturnPos(GameObject slotContainer1, GameObject slotContainer2, GameObject slotContainer3, float reachedDistance1, float reachedDistance2, float reachedDistance3)
     {
-
         foreach (Transform image in slotContainer1.transform)
         {
-            image.localPosition -= Vector3.up * 25f * reachedDistance1;
+            image.localPosition -= Vector3.up * returnPositionMultiplier * reachedDistance1;
         }
 
         foreach (Transform image in slotContainer2.transform)
         {
-            image.localPosition -= Vector3.up * 25f * reachedDistance2;
+            image.localPosition -= Vector3.up * returnPositionMultiplier * reachedDistance2;
         }
 
         foreach (Transform image in slotContainer3.transform)
         {
-            image.localPosition -= Vector3.up * 25f * reachedDistance3;
+            image.localPosition -= Vector3.up * returnPositionMultiplier * reachedDistance3;
         }
     }
 
-
-    // 각각의 슬롯 컨테이너를 독립적으로 시작하는 메서드
     public void StartSlot1()
     {
-        StartCoroutine(SpinSlot(slotContainer1, 1f));
+        StartCoroutine(SpinSlot(slotContainer1, slot1Distance));
     }
 
     public void StartSlot2()
     {
-        StartCoroutine(SpinSlot(slotContainer2, 2f));
+        StartCoroutine(SpinSlot(slotContainer2, slot2Distance));
     }
 
     public void StartSlot3()
     {
-        StartCoroutine(SpinSlot(slotContainer3, 3f));
+        StartCoroutine(SpinSlot(slotContainer3, slot3Distance));
     }
-
-
-
 }
