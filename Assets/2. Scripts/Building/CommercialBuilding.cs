@@ -3,46 +3,11 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
-public class CommercialBuilding : Building
+public class CommercialBuilding : UtilityBuilding
 {
-    public BoundaryValue customerCnt;
-    public BoundaryValue productPrice;
-
-    public int income;
-
-    private void Awake()
+    public override int CalculateBonus()
     {
-        values[ValueType.Customer] = customerCnt;
-        values[ValueType.Product] = productPrice;
-    }
-
-    public override int CalculateIncome()
-    {
-        int res = income * happinessRate;
-        return happinessRate >= 80 ? (int)(res * 1.5f) : happinessRate < 20 ? (int)(res * 0.5f) : res;
-    }
-    public override int CheckBonus()
-    {
-        int res = values[ValueType.Product].cur > values[ValueType.Product].max ? 1 : 0;
+        int res = values[ValueType.utility].cur > values[ValueType.utility].max ? 1 : 0;
         return res;
     }
-
-    public override void UpdateHappiness()
-    {
-        //customerCnt
-        if (values[ValueType.Customer].cur > values[ValueType.Customer].max)
-            SetHappiness(2);
-        else if (values[ValueType.Customer].cur < values[ValueType.Customer].min)
-            SetHappiness(-2);
-
-        //productPrice
-        if (values[ValueType.Product].cur > values[ValueType.Product].max)
-        {
-            SetHappiness(2);
-            ShopManager.instance.money += 5;
-        }
-        else if (values[ValueType.Product].cur < values[ValueType.Product].min)
-            SetHappiness(-1);
-    }
-
 }

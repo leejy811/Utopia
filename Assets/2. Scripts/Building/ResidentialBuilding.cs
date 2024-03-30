@@ -65,14 +65,14 @@ public class ResidentialBuilding : Building
         return happinessRate >= 80 ? ((int)(res * 1.5f)) : (int)res;
     }
 
-    public override int CheckBonus()
+    public override int CalculateBonus()
     {
         int res = 0;
 
         if (values[ValueType.CommercialCSAT].cur > values[ValueType.CommercialCSAT].max)
-            res += 1;
+            res -= 50;
         if (values[ValueType.CultureCSAT].cur > values[ValueType.CultureCSAT].max)
-            res += 2;
+            res -= 100;
 
         return res;
     }
@@ -83,7 +83,6 @@ public class ResidentialBuilding : Building
         if (values[ValueType.CommercialCSAT].cur > values[ValueType.CommercialCSAT].max)
         {
             SetHappiness(-1);
-            ShopManager.instance.money -= 5;
         }
         else if (values[ValueType.CommercialCSAT].cur < values[ValueType.CommercialCSAT].min)
             SetHappiness(-2);
@@ -94,7 +93,6 @@ public class ResidentialBuilding : Building
         if (values[ValueType.CultureCSAT].cur > values[ValueType.CultureCSAT].max)
         {
             SetHappiness(-1);
-            ShopManager.instance.money -= 10;
         }
         else if (values[ValueType.CultureCSAT].cur < values[ValueType.CultureCSAT].min)
             SetHappiness(-3);

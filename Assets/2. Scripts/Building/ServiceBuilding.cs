@@ -3,33 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
-public class ServiceBuilding : Building
+public class ServiceBuilding : UtilityBuilding
 {
-    public int costPerDay;
-
-    public BoundaryValue employmentValue;
-
-    private void Awake()
-    {
-        values[ValueType.Employment] = employmentValue;
-    }
-
     public override int CalculateIncome()
     {
-        float tax = costPerDay * (1.0f - (happinessRate / 100.0f));
-        return happinessRate < 40 ? ((int)(tax * 1.5f)) : (int)tax;
+        float tax = costPerDay * (1.0f - (happinessRate / 100.0f)) * -1;
+        return happinessRate < 40 ? ((int)(tax * 1.5f)) : happinessRate >= 80 ? ((int)(tax * 0.5f)) : (int)tax;
     }
 
-    public override void UpdateHappiness()
+    public override int CalculateBonus()
     {
-        //employmentValue
-        if (values[ValueType.Employment].cur > values[ValueType.Employment].max)
-        {
-            SetHappiness(1);
-            //ToDo
-            //영향력 범위 늘리기 추가
-        }
-        else if (values[ValueType.Employment].cur < values[ValueType.Employment].min)
-            SetHappiness(-1);
+        return 0;
     }
 }

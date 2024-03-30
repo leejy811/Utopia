@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 public enum BuildingType { Residential = -1, Commercial, Culture, Service }
 public enum BuildingSubType { Apartment = -1, Store, Cinema, Police, Restaurant, Gallery, Fire, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
-public enum ValueType { None = -1, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, Customer, Product, Trend, Fee, Employment }
+public enum ValueType { None = -1, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility }
 
 [Serializable]
 public struct BoundaryValue 
@@ -212,7 +212,7 @@ public class Building : MonoBehaviour
     {
         return 0;
     }
-    public virtual int CheckBonus()
+    public virtual int CalculateBonus()
     {
         return 0;
     }

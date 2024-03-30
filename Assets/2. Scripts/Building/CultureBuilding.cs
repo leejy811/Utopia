@@ -3,50 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class CultureBuilding : Building
+public class CultureBuilding : UtilityBuilding
 {
-    public BoundaryValue trendValue;
-    public BoundaryValue fee;
-
-    public int income;
-
-    private void Awake()
+    public override int CalculateBonus()
     {
-        values[ValueType.Trend] = trendValue;
-        values[ValueType.Fee] = fee;
-    }
-
-    public override int CalculateIncome()
-    {
-        int res = income * happinessRate;
-        return happinessRate >= 80 ? (int)(res * 1.5f) : happinessRate < 20 ? (int)(res * 0.5f) : res;
-    }
-
-    public override int CheckBonus()
-    {
-        int res = values[ValueType.Fee].cur > values[ValueType.Fee].max ? 1 : 0;
+        int res = values[ValueType.utility].cur > values[ValueType.utility].max ? 1 : 0;
         return res;
-    }
-
-    public override void UpdateHappiness()
-    {
-        //trendValue
-        if (values[ValueType.Trend].cur > values[ValueType.Trend].max)
-        {
-            SetHappiness(2);
-            //ToDo
-            //영향력 범위 늘리기 추가
-        }
-        else if (values[ValueType.Trend].cur < values[ValueType.Trend].min)
-            SetHappiness(-2);
-
-        //fee
-        if (values[ValueType.Fee].cur > values[ValueType.Fee].max)
-        {
-            SetHappiness(2);
-            ShopManager.instance.money += 10;
-        }
-        else if (values[ValueType.Fee].cur < values[ValueType.Fee].min)
-            SetHappiness(-1);
     }
 }
