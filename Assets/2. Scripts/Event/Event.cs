@@ -63,7 +63,7 @@ public struct Event
     private bool CheckCondition(BuildingType type, Building building)
     {
         int subType = (int)type - System.Enum.GetValues(typeof(BuildingType)).Length;
-        if (subType >= -1)
+        if (subType >= 0)
             return building.subType == (BuildingSubType)subType;
         else
             return building.type == type;

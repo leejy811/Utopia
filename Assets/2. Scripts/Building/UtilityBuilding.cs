@@ -87,4 +87,11 @@ public class UtilityBuilding : Building
                 SetHappiness(0);
         }
     }
+
+    public override void ApplyInfluence(int value, bool isAdd, BuildingType type = 0)
+    {
+        BoundaryValue cast = values[ValueType.utility];
+        cast.cur += isAdd ? value : -value;
+        values[ValueType.utility] = cast;
+    }
 }

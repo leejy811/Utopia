@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
-public enum BuildingType { Residential = -1, Commercial, Culture, Service }
-public enum BuildingSubType { Apartment = -1, Store, Cinema, Police, Restaurant, Gallery, Fire, Park }
+public enum BuildingType { Residential = 0, Commercial, Culture, Service }
+public enum BuildingSubType { Apartment = 0, Store, Cinema, Police, Restaurant, Gallery, Fire, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
-public enum ValueType { None = -1, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility }
+public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility }
 
 [Serializable]
 public struct BoundaryValue 
@@ -68,8 +68,6 @@ public class Building : MonoBehaviour
 
     protected void ApplyInfluenceToTile(bool isAdd)
     {
-        if (type == BuildingType.Residential) return;
-
         Vector3 size = new Vector3(influenceSize * 2 - 1, 1, influenceSize * 2 - 1);
 
         Collider[] hits = Physics.OverlapBox(transform.position, size * 0.5f, transform.rotation, LayerMask.GetMask("Tile"));
@@ -77,7 +75,10 @@ public class Building : MonoBehaviour
         foreach (Collider hit in hits)
         {
             Tile tile = hit.transform.gameObject.GetComponent<Tile>();
-            tile.SetInfluenceValue(type, subType, influencePower, isAdd);
+            if(tile.building != gameObject)
+            {
+                tile.SetInfluenceValue(type, subType, influencePower, isAdd);
+            }
         }
     }
 
@@ -208,6 +209,7 @@ public class Building : MonoBehaviour
         else
             SetHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * sign);
     }
+
     public virtual int CalculateIncome()
     {
         return 0;
@@ -220,5 +222,12 @@ public class Building : MonoBehaviour
     public virtual void UpdateHappiness()
     {
         
+    }
+
+    public virtual void ApplyInfluence(int value, bool isAdd, BuildingType type)
+    {
+        BoundaryValue cast = values[(ValueType)type];
+        cast.cur += isAdd ? value : -value;
+        values[(ValueType)type] = cast;
     }
 }

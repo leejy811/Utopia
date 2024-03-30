@@ -59,9 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e491fcce5a564ca4fa4e1c7cc3f5afe1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  count: 0
   grade: 3
-  type: 2
-  subType: 2
+  type: 3
+  subType: 3
   viewState: 0
   happinessRate: 50
   position: {x: 0, y: 0}
@@ -70,9 +71,13 @@ MonoBehaviour:
   curEvents: []
   cost: 200
   costPerDay: 50
-  employmentValue:
-    max: 100
-    min: 50
+  userCnt:
+    max: 0
+    min: 0
+    cur: 0
+  utilityValue:
+    max: 0
+    min: 0
     cur: 0
 --- !u!1001 &1674615967649719768
 PrefabInstance:

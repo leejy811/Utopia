@@ -61,8 +61,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   count: 0
   grade: 3
-  type: 1
-  subType: 1
+  type: 2
+  subType: 2
   viewState: 0
   happinessRate: 50
   position: {x: 0, y: 0}
@@ -70,15 +70,15 @@ MonoBehaviour:
   influenceSize: 1
   curEvents: []
   cost: 150
-  trendValue:
+  costPerDay: 0
+  userCnt:
     max: 100
     min: 50
-    cur: 0
-  fee:
+    cur: 50
+  utilityValue:
     max: 100
     min: 50
-    cur: 0
-  income: 150
+    cur: 50
 --- !u!1001 &4472435167321243572
 PrefabInstance:
   m_ObjectHideFlags: 0

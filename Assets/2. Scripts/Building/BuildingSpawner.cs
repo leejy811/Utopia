@@ -11,7 +11,7 @@ public class BuildingSpawner : MonoBehaviour
 
     public GameObject[] buildingPrefabs;
 
-    public int[] buildingCount = new int[8];
+    public int[] buildingCount = new int[System.Enum.GetValues(typeof(BuildingSubType)).Length];
 
     private void Awake()
     {
@@ -32,8 +32,8 @@ public class BuildingSpawner : MonoBehaviour
         building.SetPosition(spawnTrans.position);
         building.ChangeViewState(ViewStateType.Translucent);
 
-        buildingCount[(int)building.subType + 1]++;
-        building.count = buildingCount[(int)building.subType + 1];
+        buildingCount[(int)building.subType]++;
+        building.count = buildingCount[(int)building.subType];
 
         switch (building.type)
         {

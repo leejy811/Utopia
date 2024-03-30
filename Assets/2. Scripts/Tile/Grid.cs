@@ -77,7 +77,7 @@ public class Grid : MonoBehaviour
                 if (tiles[i, j].building != null)
                 {
                     Building building = tiles[i, j].building.GetComponent<Building>();
-                    color = isColorMode ? tileColors[(int)building.type + 1] : Color.green;
+                    color = isColorMode ? tileColors[(int)building.type] : Color.green;
 
                     tiles[i, j].SetTileColor(color);
                     building.ChangeViewState((ViewStateType)(Convert.ToInt32(!isColorMode) * 2));

@@ -4995,7 +4995,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 0
+    targetIndex: 1
     duplication: 0
     curDay: 0
     solutions:
@@ -5015,7 +5015,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 1
+    targetIndex: 2
     duplication: 0
     curDay: 0
     solutions:
@@ -5035,7 +5035,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 4
+    targetIndex: 5
     duplication: 0
     curDay: 0
     solutions:
@@ -5055,7 +5055,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 6
+    targetIndex: 7
     duplication: 0
     curDay: 0
     solutions:
@@ -5075,7 +5075,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 5
+    targetIndex: 6
     duplication: 0
     curDay: 0
     solutions:
@@ -5095,7 +5095,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 2
+    targetIndex: 3
     duplication: 0
     curDay: 0
     solutions:
@@ -5115,7 +5115,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 2
+    targetIndex: 3
     duplication: 0
     curDay: 0
     solutions:
@@ -5135,7 +5135,7 @@ MonoBehaviour:
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 2
+    targetIndex: 3
     duplication: 0
     curDay: 0
     solutions:
@@ -5155,7 +5155,7 @@ MonoBehaviour:
     type: 0
     conditionType: 2
     valueType: 3
-    targetIndex: -1
+    targetIndex: 0
     duplication: 0
     curDay: 0
     solutions:
@@ -5175,7 +5175,7 @@ MonoBehaviour:
     type: 0
     conditionType: 2
     valueType: 3
-    targetIndex: -1
+    targetIndex: 0
     duplication: 0
     curDay: 0
     solutions:
@@ -5194,8 +5194,8 @@ MonoBehaviour:
     eventIndex: 14
     type: 1
     conditionType: 2
-    valueType: 6
-    targetIndex: 0
+    valueType: 7
+    targetIndex: 1
     duplication: 0
     curDay: 0
     solutions: []
@@ -5206,20 +5206,8 @@ MonoBehaviour:
     eventIndex: 15
     type: 1
     conditionType: 2
-    valueType: 8
-    targetIndex: 1
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: 190000001900000019000000
-    effectJackpotValue: 640000006400000064000000
-  - eventName: "\uC601\uD654\uAC00 \uC720\uD589\uD574\uC694"
-    eventEngName: 'Movie Popular  '
-    eventIndex: 16
-    type: 1
-    conditionType: 2
     valueType: 7
-    targetIndex: 5
+    targetIndex: 2
     duplication: 0
     curDay: 0
     solutions: []
@@ -5230,8 +5218,8 @@ MonoBehaviour:
     eventIndex: 17
     type: 1
     conditionType: 2
-    valueType: 9
-    targetIndex: 2
+    valueType: 7
+    targetIndex: 3
     duplication: 0
     curDay: 0
     solutions: []
@@ -5242,32 +5230,20 @@ MonoBehaviour:
     eventIndex: 18
     type: 1
     conditionType: 2
-    valueType: 8
-    targetIndex: 1
+    valueType: 7
+    targetIndex: 2
     duplication: 0
     curDay: 0
     solutions: []
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
-  - eventName: "\uBBF8\uC220\uC774 \uC720\uD589\uD574\uC694"
-    eventEngName: 'Art Popular  '
-    eventIndex: 19
-    type: 1
-    conditionType: 2
-    valueType: 7
-    targetIndex: 8
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: 190000001900000019000000
-    effectJackpotValue: 640000006400000064000000
   - eventName: "\uC77C\uC790\uB9AC\uAC00 \uB9CE\uC544\uC694"
     eventEngName: 'Many Job  '
     eventIndex: 20
     type: 1
     conditionType: 2
-    valueType: 9
-    targetIndex: 2
+    valueType: 7
+    targetIndex: 3
     duplication: 0
     curDay: 0
     solutions: []
@@ -5278,8 +5254,8 @@ MonoBehaviour:
     eventIndex: 21
     type: 1
     conditionType: 2
-    valueType: 6
-    targetIndex: 0
+    valueType: 7
+    targetIndex: 1
     duplication: 0
     curDay: 0
     solutions: []
@@ -9437,7 +9413,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 230e4ed8f16cb064586b39a2545abb6e, type: 3}
   m_Name: 
@@ -13913,6 +13889,7 @@ MonoBehaviour:
   - {fileID: 6249387795973439619, guid: 45c065ef13e772848a4680934ee248f5, type: 3}
   - {fileID: 6249387795973439619, guid: 85bf8e0de3952b94bb9cbcd2ce27fa0e, type: 3}
   - {fileID: 6249387795973439619, guid: 2eb4029d9b376984689bc9acde2d6d82, type: 3}
+  curPickTiles: []
 --- !u!1 &1360077860
 GameObject:
   m_ObjectHideFlags: 0
@@ -14443,11 +14420,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 1179345971447982024, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
   tileCost: 5
+  tileColors: []
   width: 12
   height: 12
   startPoint: {x: 0, y: 0}
   startTileSize: {x: 3, y: 3}
   cameraOffset: {x: -5.75, y: 9.4, z: -5.75}
+  isColorMode: 0
 --- !u!4 &1394218994
 Transform:
   m_ObjectHideFlags: 0

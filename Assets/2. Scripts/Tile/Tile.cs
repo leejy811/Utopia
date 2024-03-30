@@ -10,8 +10,8 @@ public class Tile : MonoBehaviour
     public TileType type;
     public bool isPurchased;
     public int costPerDay { get; private set; }
-    public int[] influenceValues = new int[3];
-    public int[] subInfluenceValues = new int[7];
+    public int[] influenceValues = new int[System.Enum.GetValues(typeof(BuildingType)).Length];
+    public int[] subInfluenceValues = new int[System.Enum.GetValues(typeof(BuildingSubType)).Length];
     public GameObject building;
     public MeshRenderer border;
 
@@ -44,11 +44,7 @@ public class Tile : MonoBehaviour
 
         Building buildCom = building.GetComponent<Building>();
 
-        if (buildCom.type == BuildingType.Residential)
-        {
-            (buildCom as ResidentialBuilding).ApplyInfluence(type, value, isAdd);
-        }
-
+        buildCom.ApplyInfluence(value, isAdd, type);
         buildCom.SolveEventToInfluence(subType);
     }
 
@@ -60,11 +56,13 @@ public class Tile : MonoBehaviour
 
         if (buildCom.type == BuildingType.Residential)
         {
-            for (int i = 0;i < influenceValues.Length;i++)
+            for (int i = 1;i < influenceValues.Length;i++)
             {
-                (buildCom as ResidentialBuilding).ApplyInfluence((BuildingType)i, influenceValues[i], true);
+                buildCom.ApplyInfluence(influenceValues[i], true, (BuildingType)i);
             }
         }
+        else
+            buildCom.ApplyInfluence(influenceValues[(int)BuildingType.Residential], true, 0);
     }
 
     public void SetTileColor(Color color)

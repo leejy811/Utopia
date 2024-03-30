@@ -16,7 +16,7 @@ public class ResidentialBuilding : Building
 
     private void Awake()
     {
-        existFacility = new bool[4];
+        existFacility = new bool[System.Enum.GetValues(typeof(OptionType)).Length];
 
         if(grade <= 2)
         {
@@ -33,6 +33,8 @@ public class ResidentialBuilding : Building
         values[ValueType.CommercialCSAT] = commercialCSAT;
         values[ValueType.CultureCSAT] = cultureCSAT;
         values[ValueType.ServiceCSAT] = serviceCSAT;
+
+        influencePower = residentCnt.cur;
     }
 
     public bool CheckFacility(OptionType type)
@@ -43,13 +45,6 @@ public class ResidentialBuilding : Building
     public void BuyFacility(OptionType type)
     {
         existFacility[(int)type] = true;
-    }
-
-    public void ApplyInfluence(BuildingType type, int value, bool isAdd)
-    {
-        BoundaryValue cast = values[(ValueType)type];
-        cast.cur += isAdd ? value : -value;
-        values[(ValueType)type] = cast;
     }
 
     public override int CalculateIncome()
