@@ -240,6 +240,7 @@ public class UIManager : MonoBehaviour
             else
                 buildingBuyPopUp[i].SetActive(false);
         }
+        ShopManager.instance.ChangeState(BuyState.None);
     }
 
     public void OnClickBuildingBuy(int index)
