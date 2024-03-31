@@ -88,17 +88,12 @@ public class UIManager : MonoBehaviour
         UpdateDailyInfo();
     }
 
-    private void Update()
-    {
-        Setmoney();
-    }
-
     #region SetValue
 
     public void UpdateDailyInfo()
     {
         dayText.text = RoutineManager.instance.day.ToString();
-        moneyText.text = ShopManager.instance.money.ToString();
+        moneyText.text = ShopManager.instance.Money.ToString();
         happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString();
     }
 
@@ -109,7 +104,7 @@ public class UIManager : MonoBehaviour
 
     public void Setmoney()
     {
-        moneyText.text = ShopManager.instance.money.ToString();
+        moneyText.text = ShopManager.instance.Money.ToString();
     }
 
     public void SetBuildingValue()

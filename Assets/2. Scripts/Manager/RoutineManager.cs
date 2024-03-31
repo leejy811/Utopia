@@ -63,6 +63,8 @@ public class RoutineManager : MonoBehaviour
         {
             total += building.CalculateBonus();
         }
+
+        ShopManager.instance.GetMoney(total);
     }
 
     private void UpdateHappiness()

@@ -11,7 +11,8 @@ public class ShopManager : MonoBehaviour
     static public ShopManager instance;
 
     public BuyState buyState;
-    public int money;
+    private int money;
+    public int Money { get { return money; } set { money = value; UIManager.instance.Setmoney(); } }
 
     public GameObject[] buildingPrefabs;
 
@@ -29,21 +30,22 @@ public class ShopManager : MonoBehaviour
         }
 
         instance = this;
+        Money = 10000;
     }
 
     public void GetMoney(int amount)
     {
-        money += amount;
+        Money += amount;
     }
 
     public bool PayMoney(int amount)
     {
-        if (money - amount < 0)
+        if (Money - amount < 0)
         {
             return false;
         }
 
-        money -= amount;
+        Money -= amount;
         return true;
     }
 

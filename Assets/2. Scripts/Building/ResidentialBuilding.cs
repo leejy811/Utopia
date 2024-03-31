@@ -7,6 +7,8 @@ public enum OptionType { Water = 0, Electricity, Sewage, SoundInsulation }
 
 public class ResidentialBuilding : Building
 {
+    public static int cityResident;
+
     public bool[] existFacility;
 
     public BoundaryValue residentCnt;
@@ -35,6 +37,12 @@ public class ResidentialBuilding : Building
         values[ValueType.ServiceCSAT] = serviceCSAT;
 
         influencePower = residentCnt.cur;
+        cityResident += residentCnt.cur;
+    }
+
+    private void OnDestroy()
+    {
+        cityResident -= residentCnt.cur;
     }
 
     public bool CheckFacility(OptionType type)
@@ -66,10 +74,11 @@ public class ResidentialBuilding : Building
         {
             BoundaryValue resident = values[ValueType.Resident];
             resident.cur -= (int)(values[ValueType.Resident].max * 0.1f);
+            cityResident -= (int)(values[ValueType.Resident].max * 0.1f);
             values[ValueType.Resident] = resident;
         }
 
-        float res = values[ValueType.Resident].cur * happinessRate / 100.0f * (4 - grade);
+        float res = values[ValueType.Resident].cur * (happinessRate / 100.0f) * (4 - grade);
         return happinessRate >= 80 ? ((int)(res * 1.5f)) : (int)res;
     }
 
