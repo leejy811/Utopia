@@ -90,8 +90,8 @@ public class UtilityBuilding : Building
 
     public override void ApplyInfluence(int value, BuildingType type = 0)
     {
-        BoundaryValue cast = values[ValueType.utility];
+        BoundaryValue cast = values[ValueType.user];
         cast.cur += value;
-        values[ValueType.utility] = cast;
+        values[ValueType.user] = cast;
     }
 }

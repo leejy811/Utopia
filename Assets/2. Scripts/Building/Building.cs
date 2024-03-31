@@ -261,10 +261,6 @@ public class Building : MonoBehaviour
 
     public virtual void ApplyInfluence(int value, BuildingType type)
     {
-        if (!values.ContainsKey((ValueType)type)) return;
-
-        BoundaryValue cast = values[(ValueType)type];
-        cast.cur += value;
-        values[(ValueType)type] = cast;
+       
     }
 }
