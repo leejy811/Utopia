@@ -10,7 +10,8 @@ using Random = UnityEngine.Random;
 public enum BuildingType { Residential = 0, Commercial, Culture, Service }
 public enum BuildingSubType { Apartment = 0, Store, Cinema, Police, Restaurant, Gallery, Fire, Park }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
-public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility }
+public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility, Influence }
+public enum BoundaryType { Less = -1, Include, More }
 
 [Serializable]
 public struct BoundaryValue 
@@ -22,6 +23,16 @@ public struct BoundaryValue
         this.max = max;
         this.min = min;
         this.cur = cur;
+    }
+
+    public BoundaryType CheckBoundary()
+    {
+        if (cur > max)
+            return BoundaryType.More;
+        else if (cur < min)
+            return BoundaryType.Less;
+        else
+            return BoundaryType.Include;
     }
 }
 
@@ -45,12 +56,12 @@ public class Building : MonoBehaviour
 
     private void Start()
     {
-        ApplyInfluenceToTile(true);
+        ApplyInfluenceToTile(influencePower);
     }
 
     private void OnDestroy()
     {
-        ApplyInfluenceToTile(false);
+        ApplyInfluenceToTile(-influencePower);
     }
 
     public void ChangeViewState(ViewStateType state)
@@ -67,7 +78,7 @@ public class Building : MonoBehaviour
         }
     }
 
-    protected void ApplyInfluenceToTile(bool isAdd)
+    protected void ApplyInfluenceToTile(int power)
     {
         Vector3 size = new Vector3(influenceSize * 2 - 1, 1, influenceSize * 2 - 1);
 
@@ -78,7 +89,7 @@ public class Building : MonoBehaviour
             Tile tile = hit.transform.gameObject.GetComponent<Tile>();
             if(tile.building != gameObject)
             {
-                tile.SetInfluenceValue(type, subType, influencePower, isAdd);
+                tile.SetInfluenceValue(type, subType, power);
             }
         }
     }
@@ -203,8 +214,25 @@ public class Building : MonoBehaviour
 
     public void ApplyEventEffect(int amount, ValueType type)
     {
+        if(type == ValueType.Influence)
+        {
+            ApplyInfluenceToTile((int)(influencePower * (amount / 100.0f)));
+            return;
+        }
+
         BoundaryValue value = values[type];
-        value.cur += amount;
+        value.cur *= (int)(1.0f  + amount / 100.0f);
+
+        if((value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Include)
+            || (value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.Less))
+            ApplyInfluenceToTile((int)(influencePower * 0.5f));
+        else if ((value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.More)
+            || (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.Include))
+            ApplyInfluenceToTile((int)(influencePower * -0.5f));
+        else if(value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Less)
+            ApplyInfluenceToTile(influencePower);
+        else if (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.More)
+            ApplyInfluenceToTile(-influencePower);
         values[type] = value;
     }
     
@@ -231,12 +259,12 @@ public class Building : MonoBehaviour
         
     }
 
-    public virtual void ApplyInfluence(int value, bool isAdd, BuildingType type)
+    public virtual void ApplyInfluence(int value, BuildingType type)
     {
         if (!values.ContainsKey((ValueType)type)) return;
 
         BoundaryValue cast = values[(ValueType)type];
-        cast.cur += isAdd ? value : -value;
+        cast.cur += value;
         values[(ValueType)type] = cast;
     }
 }

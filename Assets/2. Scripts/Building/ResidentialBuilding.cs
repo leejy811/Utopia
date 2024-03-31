@@ -86,9 +86,9 @@ public class ResidentialBuilding : Building
     {
         int res = 0;
 
-        if (values[ValueType.CommercialCSAT].cur > values[ValueType.CommercialCSAT].max)
+        if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
             res -= 50;
-        if (values[ValueType.CultureCSAT].cur > values[ValueType.CultureCSAT].max)
+        if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
             res -= 100;
 
         return res;
@@ -97,29 +97,29 @@ public class ResidentialBuilding : Building
     public override void UpdateHappiness()
     {
         //commercialCSAT
-        if (values[ValueType.CommercialCSAT].cur > values[ValueType.CommercialCSAT].max)
+        if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
         {
             SetHappiness(-1);
         }
-        else if (values[ValueType.CommercialCSAT].cur < values[ValueType.CommercialCSAT].min)
+        else if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.Less)
             SetHappiness(-2);
         else
             SetHappiness(1);
 
         //cultureCSAT
-        if (values[ValueType.CultureCSAT].cur > values[ValueType.CultureCSAT].max)
+        if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
         {
             SetHappiness(-1);
         }
-        else if (values[ValueType.CultureCSAT].cur < values[ValueType.CultureCSAT].min)
+        else if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.Less)
             SetHappiness(-3);
         else
             SetHappiness(1);
 
         //serviceCSAT
-        if (values[ValueType.ServiceCSAT].cur > values[ValueType.ServiceCSAT].max)
+        if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
             SetHappiness(-2);
-        else if (values[ValueType.ServiceCSAT].cur < values[ValueType.ServiceCSAT].min)
+        else if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.Less)
             SetHappiness(-2);
         else
             SetHappiness(1);

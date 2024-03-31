@@ -26,29 +26,29 @@ public class UtilityBuilding : Building
     {
         int res = 0;
         
-        if(values[ValueType.user].cur > values[ValueType.user].max)
+        if(values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
-            if (values[ValueType.user].cur > values[ValueType.user].max)
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 res += 100;
-            else if (values[ValueType.user].cur < values[ValueType.user].min)
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 res += 0;
             else
                 res += 50;
         }
-        else if(values[ValueType.user].cur < values[ValueType.user].min)
+        else if(values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
-            if (values[ValueType.user].cur > values[ValueType.user].max)
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 res += 0;
-            else if (values[ValueType.user].cur < values[ValueType.user].min)
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 res -= 100;
             else
                 res -= 50;
         }
         else
         {
-            if (values[ValueType.user].cur > values[ValueType.user].max)
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 res += 50;
-            else if (values[ValueType.user].cur < values[ValueType.user].min)
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 res -= 50;
             else
                 res += 0;
@@ -59,39 +59,39 @@ public class UtilityBuilding : Building
 
     public override void UpdateHappiness()
     {
-        if (values[ValueType.user].cur > values[ValueType.user].max)
+        if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
-            if (values[ValueType.user].cur > values[ValueType.user].max)
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 SetHappiness(2);
-            else if (values[ValueType.user].cur < values[ValueType.user].min)
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 SetHappiness(0);
             else
                 SetHappiness(1);
         }
-        else if (values[ValueType.user].cur < values[ValueType.user].min)
+        else if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
-            if (values[ValueType.user].cur > values[ValueType.user].max)
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 SetHappiness(0);
-            else if (values[ValueType.user].cur < values[ValueType.user].min)
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 SetHappiness(-2);
             else
                 SetHappiness(-1);
         }
         else
         {
-            if (values[ValueType.user].cur > values[ValueType.user].max)
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 SetHappiness(1);
-            else if (values[ValueType.user].cur < values[ValueType.user].min)
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 SetHappiness(-1);
             else
                 SetHappiness(0);
         }
     }
 
-    public override void ApplyInfluence(int value, bool isAdd, BuildingType type = 0)
+    public override void ApplyInfluence(int value, BuildingType type = 0)
     {
         BoundaryValue cast = values[ValueType.utility];
-        cast.cur += isAdd ? value : -value;
+        cast.cur += value;
         values[ValueType.utility] = cast;
     }
 }
