@@ -99,7 +99,12 @@ public class UIManager : MonoBehaviour
     {
         dayText.text = RoutineManager.instance.day.ToString();
         moneyText.text = ShopManager.instance.money.ToString();
-        happinessText.text = RoutineManager.instance.cityHappiness.ToString();
+        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString();
+    }
+
+    public void SetHappiness()
+    {
+        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString();
     }
 
     public void Setmoney()

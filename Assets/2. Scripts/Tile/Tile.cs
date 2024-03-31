@@ -10,10 +10,16 @@ public class Tile : MonoBehaviour
     public TileType type;
     public bool isPurchased;
     public int costPerDay { get; private set; }
-    public int[] influenceValues = new int[System.Enum.GetValues(typeof(BuildingType)).Length];
-    public int[] subInfluenceValues = new int[System.Enum.GetValues(typeof(BuildingSubType)).Length];
+    public int[] influenceValues;
+    public int[] subInfluenceValues;
     public GameObject building;
     public MeshRenderer border;
+
+    private void Awake()
+    {
+        influenceValues = new int[System.Enum.GetValues(typeof(BuildingType)).Length];
+        subInfluenceValues = new int[System.Enum.GetValues(typeof(BuildingSubType)).Length];
+    }
 
     public bool CheckBuilding()
     {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -156,9 +157,15 @@ public class Building : MonoBehaviour
                 (this as ResidentialBuilding).BuyFacility((OptionType)curEvents[index / 2].targetIndex);
             }
 
-            ApplyEventProblem(curEvents[index / 2], true);
-            curEvents.RemoveAt(index / 2);
+            SetSolveEvent(index / 2);
         }
+    }
+
+    protected void SetSolveEvent(int index)
+    {
+        RoutineManager.instance.SetCityHappiness(happinessRate, 0);
+        ApplyEventProblem(curEvents[index], true);
+        curEvents.RemoveAt(index);
     }
 
     public List<Event> GetEventProblem()
@@ -188,7 +195,7 @@ public class Building : MonoBehaviour
         {
             if (curEvents[i].conditionType == ConditionType.Influence && curEvents[i].targetIndex == (int)type)
             {
-                curEvents.RemoveAt(i);
+                SetSolveEvent(i);
                 break;
             }
         }
@@ -226,6 +233,8 @@ public class Building : MonoBehaviour
 
     public virtual void ApplyInfluence(int value, bool isAdd, BuildingType type)
     {
+        if (!values.ContainsKey((ValueType)type)) return;
+
         BoundaryValue cast = values[(ValueType)type];
         cast.cur += isAdd ? value : -value;
         values[(ValueType)type] = cast;

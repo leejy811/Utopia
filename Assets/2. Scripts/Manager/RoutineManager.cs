@@ -8,7 +8,7 @@ public class RoutineManager : MonoBehaviour
     public static RoutineManager instance;
 
     public int day;
-    public int cityHappiness;
+    public float cityHappiness;
 
     private void Awake()
     {
@@ -81,5 +81,12 @@ public class RoutineManager : MonoBehaviour
             cityHappiness = total / BuildingSpawner.instance.buildings.Count;
         else
             cityHappiness = 0;
+    }
+
+    public void SetCityHappiness(int happiness, int sign)
+    {
+        int count = BuildingSpawner.instance.buildings.Count;
+        cityHappiness = ((cityHappiness * count) + happiness) / (count + sign);
+        UIManager.instance.SetHappiness();
     }
 }

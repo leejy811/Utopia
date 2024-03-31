@@ -35,6 +35,8 @@ public class BuildingSpawner : MonoBehaviour
         buildingCount[(int)building.subType]++;
         building.count = buildingCount[(int)building.subType];
 
+        RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
+
         switch (building.type)
         {
             case BuildingType.Residential:
@@ -54,10 +56,11 @@ public class BuildingSpawner : MonoBehaviour
 
     public void RemoveBuilding(GameObject building)
     {
-        for(int i = 0;i < buildings.Count; i++)
+        for (int i = 0;i < buildings.Count; i++)
         {
             if (building.GetComponent<Building>().position == buildings[i].position)
             {
+                RoutineManager.instance.SetCityHappiness(buildings[i].happinessRate * -1, -1);
                 buildings.RemoveAt(i);
                 break;
             }

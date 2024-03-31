@@ -45,6 +45,19 @@ public class ResidentialBuilding : Building
     public void BuyFacility(OptionType type)
     {
         existFacility[(int)type] = true;
+        SolveEventToOption(type);
+    }
+
+    private void SolveEventToOption(OptionType type)
+    {
+        for (int i = 0; i < curEvents.Count; i++)
+        {
+            if (curEvents[i].conditionType == ConditionType.Option && curEvents[i].targetIndex == (int)type)
+            {
+                SetSolveEvent(i);
+                break;
+            }
+        }
     }
 
     public override int CalculateIncome()
