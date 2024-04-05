@@ -19,42 +19,61 @@ public class UtilityBuilding : Building
     public override int CalculateIncome()
     {
         int res = costPerDay * happinessRate;
-        return happinessRate >= 80 ? (int)(res * 1.5f) : happinessRate < 20 ? (int)(res * 0.5f) : res;
+        res = happinessRate >= 80 ? (int)(res * 1.5f) : happinessRate < 20 ? (int)(res * 0.5f) : res;
+
+        if (type == BuildingType.Commercial)
+            CommercialBuilding.income += res;
+        else if (type == BuildingType.Culture)
+            CultureBuilding.income += res;
+
+        return res;
     }
 
     public override int CalculateBonus()
     {
-        int res = 0;
-        
-        if(values[ValueType.user].CheckBoundary() == BoundaryType.More)
+        int income = 0;
+        int cost = 0;
+
+        if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                res += 100;
+                income += 100;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                res += 0;
+                income += 0;
             else
-                res += 50;
+                income += 50;
         }
         else if(values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                res += 0;
+                income += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                res -= 100;
+                cost -= 100;
             else
-                res -= 50;
+                cost -= 50;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                res += 50;
+                income += 50;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                res -= 50;
+                cost -= 50;
             else
-                res += 0;
+                income += 0;
         }
 
-        return res;
+        if (type == BuildingType.Commercial)
+        {
+            CommercialBuilding.bonusIncome += income;
+            CommercialBuilding.bonusCost += cost;
+        }
+        else if (type == BuildingType.Culture)
+        {
+            CultureBuilding.bonusIncome += income;
+            CultureBuilding.bonusCost += cost;
+        }
+
+        return income + cost;
     }
 
     public override void UpdateHappiness()

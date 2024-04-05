@@ -14,12 +14,14 @@ public class Grid : MonoBehaviour
 
     public Color[] tileColors;
 
+    public bool isColorMode;
+    public bool isInfluenceMode;
+
     [SerializeField] private int width;
     [SerializeField] private int height;
     [SerializeField] private Vector2Int startPoint;
     [SerializeField] private Vector2Int startTileSize;
     [SerializeField] private Vector3 cameraOffset;
-    [SerializeField] private bool isColorMode;
 
     private void Awake()
     {
@@ -84,5 +86,16 @@ public class Grid : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SetTileInfluenceMode()
+    {
+        isInfluenceMode = !isInfluenceMode;
+    }
+
+    public void NotifyTileInfluence(Transform tileTransform)
+    {
+        Tile tile = tiles[(int)tileTransform.position.x, (int)tileTransform.position.y];
+        UIManager.instance.SetInfluencePopUp(tile);
     }
 }

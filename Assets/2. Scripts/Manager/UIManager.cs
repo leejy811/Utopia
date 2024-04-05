@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI dayText;
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI happinessText;
+    public TextMeshProUGUI cityResidentText;
 
     [Header("Building")]
     public BuildingUIInfo[] buildingUIInfos;
@@ -55,18 +56,23 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI[] faciltyTexts;
     public TextMeshProUGUI[] faciltyBuyTexts;
 
-    public TextMeshProUGUI influenceText;
+    public TextMeshProUGUI buildingInfluenceText;
     public TextMeshProUGUI costText;
 
     [Header("Roulette")]
     public TextMeshProUGUI rouletteText;
 
+    [Header("Influence")]
+    public TextMeshProUGUI[] tileInfluenceText;
+
     [Header("PopUp")]
     public GameObject optionPopUp;
     public GameObject roulettePopUp;
+    public GameObject influencePopUp;
     public GameObject[] buildingPopUp;
     public GameObject[] buildingBuyPopUp;
     public GameObject[] buildingSpecialPopUp;
+    public GameObject[] ButtonInfoPopUp;
 
     #endregion
 
@@ -85,16 +91,25 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateDailyInfo();
+        //UpdateDailyInfo();
+
+        //To Do 게임 시작 후 주거 건물 건설만 가능하도록
     }
 
     #region SetValue
 
+    private string GetCommaText(int data)
+    {
+        return string.Format("{0:#,###}", data);
+    }
+
     public void UpdateDailyInfo()
     {
-        dayText.text = RoutineManager.instance.day.ToString();
-        moneyText.text = ShopManager.instance.Money.ToString();
-        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString();
+        DateTime curDay = RoutineManager.instance.day;
+        dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd");
+        SetHappiness();
+        Setmoney();
+        SetCityResident();
     }
 
     public void SetHappiness()
@@ -104,7 +119,12 @@ public class UIManager : MonoBehaviour
 
     public void Setmoney()
     {
-        moneyText.text = ShopManager.instance.Money.ToString();
+        //moneyText.text = GetCommaText(ShopManager.instance.Money);
+    }
+
+    public void SetCityResident()
+    {
+        cityResidentText.text = GetCommaText(ResidentialBuilding.cityResident);
     }
 
     public void SetBuildingValue()
@@ -152,7 +172,7 @@ public class UIManager : MonoBehaviour
         {
             buildingSpecialPopUp[1].SetActive(true);
             buildingSpecialPopUp[0].SetActive(false);
-            influenceText.text = targetBuilding.influencePower.ToString();
+            buildingInfluenceText.text = targetBuilding.influencePower.ToString();
 
             if(targetBuilding.type == BuildingType.Service)
             {
@@ -227,6 +247,45 @@ public class UIManager : MonoBehaviour
         SetBuildingValue();
     }
 
+    public void SetInfluencePopUp(Tile tile = null)
+    {
+        if (tile == null)
+            influencePopUp.SetActive(false);
+        else
+        {
+            influencePopUp.SetActive(true);
+            for (int i = 0; i < tileInfluenceText.Length; i++)
+            {
+                tileInfluenceText[i].text = tile.influenceValues[i].ToString();
+            }
+
+            Canvas canvas = GetComponentInParent<Canvas>();
+            Camera uiCamera = canvas.worldCamera;
+            RectTransform rectParent = canvas.GetComponent<RectTransform>();
+            RectTransform rectSelf = influencePopUp.GetComponent<RectTransform>();
+
+            var screenPos = Camera.main.WorldToScreenPoint(tile.transform.position);
+
+            var localPos = Vector2.zero;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
+
+            rectSelf.localPosition = localPos;
+        }
+    }
+
+    public void SetButtonInfoPopUp(int index, RectTransform rect)
+    {
+        for (int i = 0; i < ButtonInfoPopUp.Length; i++)
+        {
+            if (i == index)
+            {
+                ButtonInfoPopUp[i].SetActive(!ButtonInfoPopUp[i].activeSelf);
+                ButtonInfoPopUp[i].GetComponent<RectTransform>().localPosition = rect.localPosition;
+                return;
+            }
+        }
+    }
+
     #endregion
 
     #region OnClick
@@ -285,6 +344,11 @@ public class UIManager : MonoBehaviour
     public void OnClickTileColorMode()
     {
         Grid.instance.SetTileColorMode();
+    }
+
+    public void OnClickTileInfluenceMode()
+    {
+        Grid.instance.SetTileInfluenceMode();
     }
 
     #endregion

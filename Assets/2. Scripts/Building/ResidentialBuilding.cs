@@ -8,6 +8,9 @@ public enum OptionType { Water = 0, Electricity, Sewage, SoundInsulation }
 public class ResidentialBuilding : Building
 {
     public static int cityResident;
+    public static int residentReduction;
+    public static int income;
+    public static int bonusCost;
 
     public bool[] existFacility;
 
@@ -74,7 +77,7 @@ public class ResidentialBuilding : Building
         {
             BoundaryValue resident = values[ValueType.Resident];
             resident.cur -= (int)(values[ValueType.Resident].max * 0.1f);
-            cityResident -= (int)(values[ValueType.Resident].max * 0.1f);
+            residentReduction += (int)(values[ValueType.Resident].max * 0.1f);
             values[ValueType.Resident] = resident;
         }
 
@@ -91,6 +94,7 @@ public class ResidentialBuilding : Building
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
             res -= 100;
 
+        bonusCost += res;
         return res;
     }
 

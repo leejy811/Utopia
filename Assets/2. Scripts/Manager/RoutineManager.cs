@@ -7,7 +7,7 @@ public class RoutineManager : MonoBehaviour
 {
     public static RoutineManager instance;
 
-    public int day;
+    public DateTime day;
     public float cityHappiness;
 
     private void Awake()
@@ -23,13 +23,14 @@ public class RoutineManager : MonoBehaviour
 
     private void Start()
     {
-        day++;
+        day = new DateTime(2024, 1, 1);
     }
 
     public void DailyUpdate()
     {
-        day++;
+        day.AddDays(1);
 
+        Building.InitStaticCalcValue();
         CalculateBuilding();
         CalculateAdditional();
 

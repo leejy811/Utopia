@@ -263,4 +263,22 @@ public class Building : MonoBehaviour
     {
        
     }
+
+    public static void InitStaticCalcValue()
+    {
+        ResidentialBuilding.cityResident -= ResidentialBuilding.residentReduction;
+        ResidentialBuilding.residentReduction = 0;
+        ResidentialBuilding.income = 0;
+        ResidentialBuilding.bonusCost = 0;
+
+        CommercialBuilding.income = 0;
+        CommercialBuilding.bonusCost = 0;
+        CommercialBuilding.bonusIncome = 0;
+
+        CultureBuilding.income = 0;
+        CultureBuilding.bonusCost = 0;
+        CultureBuilding.bonusIncome = 0;
+
+        ServiceBuilding.income = 0;
+    }
 }
