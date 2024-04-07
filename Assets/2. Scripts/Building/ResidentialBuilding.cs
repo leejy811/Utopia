@@ -41,6 +41,7 @@ public class ResidentialBuilding : Building
 
         influencePower = residentCnt.cur;
         cityResident += residentCnt.cur;
+        CityLevelManager.instance.UpdateCityType();
     }
 
     private void OnDestroy()

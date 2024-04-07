@@ -16,6 +16,7 @@ public class Grid : MonoBehaviour
 
     public bool isColorMode;
     public bool isInfluenceMode;
+    public bool isAddtionalMode;
 
     [SerializeField] private int width;
     [SerializeField] private int height;
@@ -68,9 +69,8 @@ public class Grid : MonoBehaviour
         camera.transform.position = ((Vector3Int)startPoint) + cameraOffset;
     }
 
-    public void SetTileColorMode()
+    private void SetTileColorMode(bool isOn)
     {
-        isColorMode = !isColorMode;
         Color color;
         for (int i = 0; i < width; i++)
         {
@@ -79,18 +79,45 @@ public class Grid : MonoBehaviour
                 if (tiles[i, j].building != null)
                 {
                     Building building = tiles[i, j].building.GetComponent<Building>();
-                    color = isColorMode ? tileColors[(int)building.type] : Color.green;
+                    color = isOn ? tileColors[(int)building.type] : Color.green;
 
                     tiles[i, j].SetTileColor(color);
-                    building.ChangeViewState((ViewStateType)(Convert.ToInt32(!isColorMode) * 2));
+                    building.ChangeViewState((ViewStateType)(Convert.ToInt32(!isOn) * 2));
                 }
             }
         }
     }
 
+    public void SetTileColorMode()
+    {
+        if(isInfluenceMode)
+        {
+            isColorMode = false;
+            SetTileColorMode(isAddtionalMode);
+            return;
+        }
+
+        isColorMode = !isColorMode;
+        SetTileColorMode(isColorMode);
+
+        if (isColorMode)
+            SetTileInfluenceMode();
+    }
+
     public void SetTileInfluenceMode()
     {
         isInfluenceMode = !isInfluenceMode;
+
+        if (isInfluenceMode)
+            SetTileColorMode();
+    }
+
+    public void AddMode()
+    {
+        isAddtionalMode = !isAddtionalMode;
+
+        if (isInfluenceMode)
+            SetTileColorMode();
     }
 
     public void NotifyTileInfluence(Transform tileTransform)

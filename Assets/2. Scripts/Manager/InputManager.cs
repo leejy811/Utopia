@@ -98,7 +98,7 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.T))
         {
-            //To Do 추가 실행 시스템 작성
+            Grid.instance.AddMode();
         }
         else
         {

@@ -153,6 +153,9 @@ public class Building : MonoBehaviour
             return;
         }
 
+        if(amount > 0)
+            CityLevelManager.instance.UpdateCityType();
+
         happinessRate += amount;
     }
 
@@ -266,7 +269,6 @@ public class Building : MonoBehaviour
 
     public static void InitStaticCalcValue()
     {
-        ResidentialBuilding.cityResident -= ResidentialBuilding.residentReduction;
         ResidentialBuilding.residentReduction = 0;
         ResidentialBuilding.income = 0;
         ResidentialBuilding.bonusCost = 0;
