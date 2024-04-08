@@ -5,33 +5,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-[Serializable]
-public struct SolutionUIInfo
-{
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI costText;
-    public TextMeshProUGUI probText;
-}
-
-[Serializable]
-public struct EventUIInfo
-{
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI dayText;
-    public SolutionUIInfo[] solutionUIInfos;
-}
-
-[Serializable]
-public struct BuildingUIInfo
-{
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI gradeText;
-    public TextMeshProUGUI typeText;
-    public TextMeshProUGUI subTypeText;
-    public TextMeshProUGUI happinessText;
-    public EventUIInfo[] eventUIInfos;
-}
-
 public class UIManager : MonoBehaviour
 {
     static public UIManager instance;
@@ -45,7 +18,6 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI cityResidentText;
 
     [Header("Building")]
-    public BuildingUIInfo[] buildingUIInfos;
 
     [Header("Building Special")]
     public TextMeshProUGUI residentText;
@@ -129,59 +101,59 @@ public class UIManager : MonoBehaviour
 
     public void SetBuildingValue()
     {
-        List<Event> curEvent = targetBuilding.GetEventProblem();
-        BuildingUIInfo info = buildingUIInfos[curEvent.Count];
+        //List<Event> curEvent = targetBuilding.GetEventProblem();
+        //BuildingUIInfo info = buildingUIInfos[curEvent.Count];
 
-        info.nameText.text = targetBuilding.subType.ToString() + " " + targetBuilding.count;
-        info.gradeText.text = targetBuilding.grade.ToString();
-        info.typeText.text = targetBuilding.type.ToString();
-        info.subTypeText.text = targetBuilding.subType.ToString();
-        info.happinessText.text = targetBuilding.happinessRate.ToString() + "%";
+        //info.nameText.text = targetBuilding.subType.ToString() + " " + targetBuilding.count;
+        //info.gradeText.text = targetBuilding.grade.ToString();
+        //info.typeText.text = targetBuilding.type.ToString();
+        //info.subTypeText.text = targetBuilding.subType.ToString();
+        //info.happinessText.text = targetBuilding.happinessRate.ToString() + "%";
 
-        for(int i = 0;i < info.eventUIInfos.Length; i++)
-        {
-            info.eventUIInfos[i].nameText.text = curEvent[i].eventEngName.ToString();
-            info.eventUIInfos[i].dayText.text = (curEvent[i].effectValue.Count - curEvent[i].curDay).ToString();
+        //for(int i = 0;i < info.eventUIInfos.Length; i++)
+        //{
+        //    info.eventUIInfos[i].nameText.text = curEvent[i].eventEngName.ToString();
+        //    info.eventUIInfos[i].dayText.text = (curEvent[i].effectValue.Count - curEvent[i].curDay).ToString();
 
-            for(int j = 0;j < info.eventUIInfos[i].solutionUIInfos.Length; j++)
-            {
-                info.eventUIInfos[i].solutionUIInfos[j].nameText.text = curEvent[i].solutions[j].engName.ToString();
-                info.eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + ")";
-                info.eventUIInfos[i].solutionUIInfos[j].probText.text = curEvent[i].solutions[j].prob.ToString() + "%";
-            }
-        }
+        //    for(int j = 0;j < info.eventUIInfos[i].solutionUIInfos.Length; j++)
+        //    {
+        //        info.eventUIInfos[i].solutionUIInfos[j].nameText.text = curEvent[i].solutions[j].engName.ToString();
+        //        info.eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + ")";
+        //        info.eventUIInfos[i].solutionUIInfos[j].probText.text = curEvent[i].solutions[j].prob.ToString() + "%";
+        //    }
+        //}
 
-        if(targetBuilding.type == BuildingType.Residential)
-        {
-            buildingSpecialPopUp[0].SetActive(true);
-            buildingSpecialPopUp[1].SetActive(false);
+        //if(targetBuilding.type == BuildingType.Residential)
+        //{
+        //    buildingSpecialPopUp[0].SetActive(true);
+        //    buildingSpecialPopUp[1].SetActive(false);
 
-            ResidentialBuilding residential = targetBuilding as ResidentialBuilding;
+        //    ResidentialBuilding residential = targetBuilding as ResidentialBuilding;
 
-            residentText.text = targetBuilding.values[ValueType.Resident].cur.ToString() + " / " + targetBuilding.values[ValueType.Resident].max.ToString();
-            commercialText.text = targetBuilding.values[ValueType.CommercialCSAT].cur.ToString();
-            cultureText.text = targetBuilding.values[ValueType.CultureCSAT].cur.ToString();
-            serviceText.text = targetBuilding.values[ValueType.ServiceCSAT].cur.ToString();
+        //    residentText.text = targetBuilding.values[ValueType.Resident].cur.ToString() + " / " + targetBuilding.values[ValueType.Resident].max.ToString();
+        //    commercialText.text = targetBuilding.values[ValueType.CommercialCSAT].cur.ToString();
+        //    cultureText.text = targetBuilding.values[ValueType.CultureCSAT].cur.ToString();
+        //    serviceText.text = targetBuilding.values[ValueType.ServiceCSAT].cur.ToString();
 
-            for(int i = 0;i < faciltyTexts.Length;i++)
-            {
-                faciltyTexts[i].text = residential.CheckFacility((OptionType)i) ? "O" : "X";
-            }
-        }
-        else
-        {
-            buildingSpecialPopUp[1].SetActive(true);
-            buildingSpecialPopUp[0].SetActive(false);
-            buildingInfluenceText.text = targetBuilding.influencePower.ToString();
+        //    for(int i = 0;i < faciltyTexts.Length;i++)
+        //    {
+        //        faciltyTexts[i].text = residential.CheckFacility((OptionType)i) ? "O" : "X";
+        //    }
+        //}
+        //else
+        //{
+        //    buildingSpecialPopUp[1].SetActive(true);
+        //    buildingSpecialPopUp[0].SetActive(false);
+        //    buildingInfluenceText.text = targetBuilding.influencePower.ToString();
 
-            if(targetBuilding.type == BuildingType.Service)
-            {
-                buildingSpecialPopUp[2].SetActive(true);
-                costText.text = (targetBuilding as ServiceBuilding).costPerDay.ToString();
-            }
-            else
-                buildingSpecialPopUp[2].SetActive(false);
-        }
+        //    if(targetBuilding.type == BuildingType.Service)
+        //    {
+        //        buildingSpecialPopUp[2].SetActive(true);
+        //        costText.text = (targetBuilding as ServiceBuilding).costPerDay.ToString();
+        //    }
+        //    else
+        //        buildingSpecialPopUp[2].SetActive(false);
+        //}
     }
 
     public void SetOption(GameObject building)
