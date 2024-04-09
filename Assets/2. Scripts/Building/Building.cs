@@ -34,16 +34,37 @@ public struct BoundaryValue
         else
             return BoundaryType.Include;
     }
+
+    public string BoundaryToString()
+    {
+        string res = "";
+        BoundaryType type = CheckBoundary();
+        switch (type)
+        {
+            case BoundaryType.More:
+                res = "<color=#FF0000>높음</color>";
+                break;
+            case BoundaryType.Include:
+                res = "보통";
+                break;
+            case BoundaryType.Less:
+                res = "<color=#0019FF>낮음</color>";
+                break;
+        }
+        return res;
+    }
 }
 
 public class Building : MonoBehaviour
 {
+    public string buildingName;
     public int count;
     public int grade;
     public BuildingType type;
     public BuildingSubType subType;
     public ViewStateType viewState;
     public int happinessRate;
+    public int happinessDifference;
 
     public Vector2Int position;
     public int influencePower;
@@ -147,11 +168,16 @@ public class Building : MonoBehaviour
 
     public void SetHappiness(int amount)
     {
+        happinessDifference += amount;
+
         if (happinessRate + amount < 0)
         {
             happinessRate = 0;
             return;
         }
+
+        if(amount > 0)
+            CityLevelManager.instance.UpdateCityType();
 
         happinessRate += amount;
     }
@@ -262,5 +288,22 @@ public class Building : MonoBehaviour
     public virtual void ApplyInfluence(int value, BuildingType type)
     {
        
+    }
+
+    public static void InitStaticCalcValue()
+    {
+        ResidentialBuilding.residentReduction = 0;
+        ResidentialBuilding.income = 0;
+        ResidentialBuilding.bonusCost = 0;
+
+        CommercialBuilding.income = 0;
+        CommercialBuilding.bonusCost = 0;
+        CommercialBuilding.bonusIncome = 0;
+
+        CultureBuilding.income = 0;
+        CultureBuilding.bonusCost = 0;
+        CultureBuilding.bonusIncome = 0;
+
+        ServiceBuilding.income = 0;
     }
 }

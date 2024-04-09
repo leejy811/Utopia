@@ -43,11 +43,15 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
-            if(state == BuyState.BuyTile)
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
-                if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
+                if (state == BuyState.BuyTile)
                 {
                     ShopManager.instance.AddTile(hit.transform);
+                }
+                else if (Grid.instance.isInfluenceMode)
+                {
+                    Grid.instance.NotifyTileInfluence(hit.transform);
                 }
             }
         }
@@ -59,7 +63,7 @@ public class InputManager : MonoBehaviour
             }
         }
         else if (Input.GetMouseButtonDown(1))
-                    {
+        {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) &&
                 (state == BuyState.None || state == BuyState.SolveEvent || state == BuyState.BuyOption))
             {
@@ -91,6 +95,10 @@ public class InputManager : MonoBehaviour
         {
             if (state == BuyState.BuyBuilding)
                 ShopManager.instance.RotatePickBuilding();
+        }
+        else if (Input.GetKeyDown(KeyCode.T))
+        {
+            Grid.instance.AddMode();
         }
         else
         {

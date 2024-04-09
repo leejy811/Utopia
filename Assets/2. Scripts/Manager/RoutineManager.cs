@@ -7,8 +7,9 @@ public class RoutineManager : MonoBehaviour
 {
     public static RoutineManager instance;
 
-    public int day;
+    public DateTime day;
     public float cityHappiness;
+    public float cityHappinessDifference;
 
     private void Awake()
     {
@@ -23,13 +24,14 @@ public class RoutineManager : MonoBehaviour
 
     private void Start()
     {
-        day++;
+        day = new DateTime(2024, 1, 1);
     }
 
     public void DailyUpdate()
     {
-        day++;
+        day.AddDays(1);
 
+        Building.InitStaticCalcValue();
         CalculateBuilding();
         CalculateAdditional();
 
@@ -40,7 +42,7 @@ public class RoutineManager : MonoBehaviour
         }
         UpdateHappiness();
 
-        UIManager.instance.UpdateDailyInfo();
+        //Ελ°θ UI Set
     }
 
     private void CalculateBuilding()
@@ -73,6 +75,7 @@ public class RoutineManager : MonoBehaviour
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
+            building.happinessDifference = 0;
             building.UpdateHappiness();
             total += building.happinessRate;
         }
@@ -80,7 +83,9 @@ public class RoutineManager : MonoBehaviour
         EventManager.instance.EffectUpdate();
 
         if (BuildingSpawner.instance.buildings.Count != 0)
-            cityHappiness = total / BuildingSpawner.instance.buildings.Count;
+        {
+            cityHappinessDifference = cityHappiness - total / BuildingSpawner.instance.buildings.Count;
+        }
         else
             cityHappiness = 0;
     }
@@ -90,5 +95,12 @@ public class RoutineManager : MonoBehaviour
         int count = BuildingSpawner.instance.buildings.Count;
         cityHappiness = ((cityHappiness * count) + happiness) / (count + sign);
         UIManager.instance.SetHappiness();
+    }
+
+    private void UpdateAfterStat()
+    {
+        ResidentialBuilding.cityResident -= ResidentialBuilding.residentReduction;
+        cityHappiness -= cityHappinessDifference;
+        UIManager.instance.UpdateDailyInfo();
     }
 }
