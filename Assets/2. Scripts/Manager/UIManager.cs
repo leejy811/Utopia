@@ -18,33 +18,23 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI cityResidentText;
 
     [Header("Building")]
+    public BuildingInfoUI[] buildingInfos;
+    public BuildingIntroUI[] buildingIntros;
+    public BuildingListUI[] buildingLists;
 
-    [Header("Building Special")]
-    public TextMeshProUGUI residentText;
-    public TextMeshProUGUI commercialText;
-    public TextMeshProUGUI cultureText;
-    public TextMeshProUGUI serviceText;
-
-    public TextMeshProUGUI[] faciltyTexts;
-    public TextMeshProUGUI[] faciltyBuyTexts;
-
-    public TextMeshProUGUI buildingInfluenceText;
-    public TextMeshProUGUI costText;
+    [Header("Tile")]
+    public TileInfoUI tileInfo;
+    public TileInfluenceUI tileInfluenceInfo;
 
     [Header("Roulette")]
     public TextMeshProUGUI rouletteText;
 
-    [Header("Influence")]
-    public TextMeshProUGUI[] tileInfluenceText;
+    [Header("Statistic")]
+    public StatisticUI statistic;
 
     [Header("PopUp")]
-    public GameObject optionPopUp;
     public GameObject roulettePopUp;
-    public GameObject influencePopUp;
-    public GameObject[] buildingPopUp;
-    public GameObject[] buildingBuyPopUp;
-    public GameObject[] buildingSpecialPopUp;
-    public GameObject[] ButtonInfoPopUp;
+    public GameObject tileListPopUp;
 
     #endregion
 
@@ -63,7 +53,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        //UpdateDailyInfo();
+        UpdateDailyInfo();
 
         //To Do 게임 시작 후 주거 건물 건설만 가능하도록
     }
@@ -91,7 +81,7 @@ public class UIManager : MonoBehaviour
 
     public void Setmoney()
     {
-        //moneyText.text = GetCommaText(ShopManager.instance.Money);
+        moneyText.text = GetCommaText(ShopManager.instance.Money);
     }
 
     public void SetCityResident()
@@ -99,73 +89,25 @@ public class UIManager : MonoBehaviour
         cityResidentText.text = GetCommaText(ResidentialBuilding.cityResident);
     }
 
-    public void SetBuildingValue()
+    public void SetBuildingIntroValue()
     {
-        //List<Event> curEvent = targetBuilding.GetEventProblem();
-        //BuildingUIInfo info = buildingUIInfos[curEvent.Count];
-
-        //info.nameText.text = targetBuilding.subType.ToString() + " " + targetBuilding.count;
-        //info.gradeText.text = targetBuilding.grade.ToString();
-        //info.typeText.text = targetBuilding.type.ToString();
-        //info.subTypeText.text = targetBuilding.subType.ToString();
-        //info.happinessText.text = targetBuilding.happinessRate.ToString() + "%";
-
-        //for(int i = 0;i < info.eventUIInfos.Length; i++)
-        //{
-        //    info.eventUIInfos[i].nameText.text = curEvent[i].eventEngName.ToString();
-        //    info.eventUIInfos[i].dayText.text = (curEvent[i].effectValue.Count - curEvent[i].curDay).ToString();
-
-        //    for(int j = 0;j < info.eventUIInfos[i].solutionUIInfos.Length; j++)
-        //    {
-        //        info.eventUIInfos[i].solutionUIInfos[j].nameText.text = curEvent[i].solutions[j].engName.ToString();
-        //        info.eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + ")";
-        //        info.eventUIInfos[i].solutionUIInfos[j].probText.text = curEvent[i].solutions[j].prob.ToString() + "%";
-        //    }
-        //}
-
-        //if(targetBuilding.type == BuildingType.Residential)
-        //{
-        //    buildingSpecialPopUp[0].SetActive(true);
-        //    buildingSpecialPopUp[1].SetActive(false);
-
-        //    ResidentialBuilding residential = targetBuilding as ResidentialBuilding;
-
-        //    residentText.text = targetBuilding.values[ValueType.Resident].cur.ToString() + " / " + targetBuilding.values[ValueType.Resident].max.ToString();
-        //    commercialText.text = targetBuilding.values[ValueType.CommercialCSAT].cur.ToString();
-        //    cultureText.text = targetBuilding.values[ValueType.CultureCSAT].cur.ToString();
-        //    serviceText.text = targetBuilding.values[ValueType.ServiceCSAT].cur.ToString();
-
-        //    for(int i = 0;i < faciltyTexts.Length;i++)
-        //    {
-        //        faciltyTexts[i].text = residential.CheckFacility((OptionType)i) ? "O" : "X";
-        //    }
-        //}
-        //else
-        //{
-        //    buildingSpecialPopUp[1].SetActive(true);
-        //    buildingSpecialPopUp[0].SetActive(false);
-        //    buildingInfluenceText.text = targetBuilding.influencePower.ToString();
-
-        //    if(targetBuilding.type == BuildingType.Service)
-        //    {
-        //        buildingSpecialPopUp[2].SetActive(true);
-        //        costText.text = (targetBuilding as ServiceBuilding).costPerDay.ToString();
-        //    }
-        //    else
-        //        buildingSpecialPopUp[2].SetActive(false);
-        //}
+        int idx = GetBuildingIndex();
+        buildingIntros[idx].SetValue(targetBuilding);
     }
 
-    public void SetOption(GameObject building)
+    public void SetBuildingListValue(int index)
     {
-        for(int i = 0;i < System.Enum.GetValues(typeof(OptionType)).Length; i++)
-        {
-            bool exist = building.GetComponent<ResidentialBuilding>().CheckFacility((OptionType)i);
-            if(exist)
-                faciltyBuyTexts[i].text = "Complete";
-            else
-                faciltyBuyTexts[i].text = "Add(-500)";
-        }
+        buildingLists[index].SetValue((BuildingType)index);
+    }
+
+    public void SetTileInfoValue()
+    {
+        tileInfo.SetValue(Grid.instance.tilePrefab.GetComponent<Tile>());
+    }
+
+    public void SetTileInfluenceValue(Tile tile)
+    {
+        tileInfluenceInfo.SetValue(tile);
     }
 
     public void SetRoulette(List<Event> ranEvents)
@@ -177,85 +119,71 @@ public class UIManager : MonoBehaviour
 
     #region PopUp
 
-    public void SetOptionPopUp(bool active, GameObject building = null)
-    {
-        optionPopUp.SetActive(active);
-
-        if(building != null)
-        {
-            SetOption(building);
-        }
-    }
-
     public void SetRoulettePopUp(bool active)
     {
         roulettePopUp.SetActive(active);
     }
 
-    public void SetBuildingPopUp(bool active, GameObject building = null)
+    public void SetBuildingInfoPopUp(int typeIndex, int buildingIndex, RectTransform rect)
     {
-        if(building == null)
+        if(typeIndex == (int)UIButtonType.Tile)
         {
-            targetBuilding = null;
-            for (int i = 0; i < buildingPopUp.Length; i++)
-            {
-                buildingPopUp[i].SetActive(false);
-            }
-            buildingSpecialPopUp[0].SetActive(false);
-            buildingSpecialPopUp[1].SetActive(false);
-            return;
+            SetTileInfoPopUp(buildingIndex, rect);
         }
 
-        targetBuilding = building.GetComponent<Building>();
-
-        for(int i = 0;i < buildingPopUp.Length; i++)
+        for (int i = 0; i < buildingInfos.Length; i++)
         {
-            if(i == targetBuilding.GetEventProblem().Count)
-                buildingPopUp[i].SetActive(active);
-            else
-                buildingPopUp[i].SetActive(false);
-        }
-
-        SetBuildingValue();
-    }
-
-    public void SetInfluencePopUp(Tile tile = null)
-    {
-        if (tile == null)
-            influencePopUp.SetActive(false);
-        else
-        {
-            influencePopUp.SetActive(true);
-            for (int i = 0; i < tileInfluenceText.Length; i++)
+            if (i == typeIndex)
             {
-                tileInfluenceText[i].text = tile.influenceValues[i].ToString();
-            }
+                buildingInfos[i].gameObject.SetActive(!buildingInfos[i].gameObject.activeSelf);
 
-            Canvas canvas = GetComponentInParent<Canvas>();
-            Camera uiCamera = canvas.worldCamera;
-            RectTransform rectParent = canvas.GetComponent<RectTransform>();
-            RectTransform rectSelf = influencePopUp.GetComponent<RectTransform>();
-
-            var screenPos = Camera.main.WorldToScreenPoint(tile.transform.position);
-
-            var localPos = Vector2.zero;
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
-
-            rectSelf.localPosition = localPos;
-        }
-    }
-
-    public void SetButtonInfoPopUp(int index, RectTransform rect)
-    {
-        for (int i = 0; i < ButtonInfoPopUp.Length; i++)
-        {
-            if (i == index)
-            {
-                ButtonInfoPopUp[i].SetActive(!ButtonInfoPopUp[i].activeSelf);
-                ButtonInfoPopUp[i].GetComponent<RectTransform>().localPosition = rect.localPosition;
+                Vector3 pos = buildingInfos[i].gameObject.GetComponent<RectTransform>().localPosition;
+                float xOffset = 0.0f;
+                buildingInfos[i].OnUI(BuildingSpawner.instance.buildingPrefabs[buildingIndex].GetComponent<Building>(), new Vector3(rect.position.x + xOffset, pos.y, pos.z));
                 return;
             }
         }
+    }
+
+    public void SetBuildingIntroPopUp(Building building = null)
+    {
+        targetBuilding = building;
+        int idx = GetBuildingIndex();
+
+        if (building == null)
+            buildingIntros[idx].gameObject.SetActive(false);
+        else
+        {
+            buildingIntros[idx].gameObject.SetActive(true);
+            buildingIntros[idx].SetValue(building);
+        }
+    }
+
+    public void SetTileInfoPopUp(int tileIndex, RectTransform rect)
+    {
+        tileInfo.gameObject.SetActive(!tileInfo.gameObject.activeSelf);
+
+        Vector3 pos = tileInfo.gameObject.GetComponent<RectTransform>().localPosition;
+        float xOffset = 0.0f;
+        tileInfo.OnUI(null, new Vector3(rect.position.x + xOffset, pos.y, pos.z));
+        return;
+    }
+
+    public void SetTileInfluencePopUp(Tile tile = null)
+    {
+        if (tile == null)
+            tileInfluenceInfo.gameObject.SetActive(false);
+        else
+        {
+            tileInfluenceInfo.gameObject.SetActive(true);
+            tileInfluenceInfo.SetValue(tile);
+        }
+    }
+
+    public void SetStatisticPopUp(bool active)
+    {
+        statistic.gameObject.SetActive(active);
+        statistic.SetValue();
     }
 
     #endregion
@@ -264,14 +192,24 @@ public class UIManager : MonoBehaviour
 
     public void OnClickBuildingBuyPopUp(int index)
     {
-        for (int i = 0;i < buildingBuyPopUp.Length;i++)
+        for (int i = 0;i < buildingLists.Length;i++)
         {
             if(i == index)
-                buildingBuyPopUp[i].SetActive(!buildingBuyPopUp[i].activeSelf);
+                buildingLists[i].gameObject.SetActive(!buildingLists[i].gameObject.activeSelf);
             else
-                buildingBuyPopUp[i].SetActive(false);
+                buildingLists[i].gameObject.SetActive(false);
         }
+        SetBuildingListValue(index);
         ShopManager.instance.ChangeState(BuyState.None);
+    }
+
+    public void OnClickTileBuildPopUp(bool active)
+    {
+        tileListPopUp.gameObject.SetActive(active);
+    }
+    public void OnClickTileBuild(int index)
+    {
+        ShopManager.instance.ChangeState(BuyState.BuildTile, index);
     }
 
     public void OnClickBuildingBuy(int index)
@@ -291,21 +229,27 @@ public class UIManager : MonoBehaviour
         ShopManager.instance.ChangeState(BuyState.BuyTile);
     }
 
-    public void OnClickTileBuild(int index)
-    {
-        ShopManager.instance.ChangeState(BuyState.BuildTile, index);
-    }
-
     public void OnClickOptionBuy(int index)
     {
         if (ShopManager.instance.BuyOption((OptionType)index))
-            faciltyBuyTexts[index].text = "Complete";
+        {
+            int idx = GetBuildingIndex();
+            buildingIntros[idx].SetValue(targetBuilding);
+        }
     }
 
     public void OnClickNextDay()
     {
         OnClickBuildingBuyPopUp(-1);
         RoutineManager.instance.DailyUpdate();
+        SetStatisticPopUp(true);
+    }
+
+    public void OnClickCloseStatistic()
+    {
+        SetStatisticPopUp(false);
+        RoutineManager.instance.UpdateAfterStat();
+        UpdateDailyInfo();
     }
 
     public void OnClickSolveEvent(int index)
@@ -323,5 +267,17 @@ public class UIManager : MonoBehaviour
         Grid.instance.SetTileInfluenceMode();
     }
 
+    public void OnClickCityLevelMode()
+    {
+        //ToDo 도시 레벨 UI 추가
+    }
+
     #endregion
+
+    private int GetBuildingIndex()
+    {
+        int idx = targetBuilding.type == BuildingType.Residential ? 0 : 1;
+        int eventidx = targetBuilding.curEvents.Count;
+        return idx * 3 + eventidx;
+    }
 }

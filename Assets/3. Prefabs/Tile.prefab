@@ -59,7 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564c5dd2f1ad27848a8490141e107267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  tileName: 
+  type: -1
+  isPurchased: 0
   influenceValues: 000000000000000000000000
   subInfluenceValues: 00000000000000000000000000000000000000000000000000000000
   building: {fileID: 0}

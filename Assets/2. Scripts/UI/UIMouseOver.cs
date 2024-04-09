@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public enum UIButtonType { Residential, Commercial, Culture, Service, Tile }
+
 public class UIMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public UIButtonType buttonType;
+    public int index;
 
     RectTransform rect;
 
@@ -17,11 +19,11 @@ public class UIMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        UIManager.instance.SetButtonInfoPopUp((int)buttonType, rect);
+        
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        UIManager.instance.SetButtonInfoPopUp((int)buttonType, rect);
+        
     }
 }

@@ -41,8 +41,6 @@ public class RoutineManager : MonoBehaviour
             EventManager.instance.RandomRoulette();
         }
         UpdateHappiness();
-
-        //Ελ°θ UI Set
     }
 
     private void CalculateBuilding()
@@ -97,10 +95,9 @@ public class RoutineManager : MonoBehaviour
         UIManager.instance.SetHappiness();
     }
 
-    private void UpdateAfterStat()
+    public void UpdateAfterStat()
     {
         ResidentialBuilding.cityResident -= ResidentialBuilding.residentReduction;
         cityHappiness -= cityHappinessDifference;
-        UIManager.instance.UpdateDailyInfo();
     }
 }

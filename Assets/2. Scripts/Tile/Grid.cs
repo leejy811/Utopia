@@ -123,6 +123,6 @@ public class Grid : MonoBehaviour
     public void NotifyTileInfluence(Transform tileTransform)
     {
         Tile tile = tiles[(int)tileTransform.position.x, (int)tileTransform.position.y];
-        UIManager.instance.SetInfluencePopUp(tile);
+        UIManager.instance.SetTileInfluencePopUp(tile);
     }
 }

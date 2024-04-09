@@ -51,4 +51,10 @@ public class BuildingInfoUI : MonoBehaviour
                 costPerDayText.text = (building as ServiceBuilding).costPerDay.ToString();
         }
     }
+
+    public void OnUI(Building building, Vector3 pos)
+    {
+        transform.localPosition = pos;
+        SetValue(building);
+    }
 }

@@ -43,6 +43,7 @@ public class BuildingIntroUI : MonoBehaviour
 
     string[] typeString = { "주거", "상업", "문화", "서비스" };
     string[] subTypeString = { "아파트", "잡화", "영화", "경찰", "음식", "미술", "소방", "여가" };
+    string[] valueTypeString = { "상품 가격", "입장료", "취업률" };
     string[] happyIcon = { "10", "4", "0", "14", "5" };
 
     public void SetValue(Building building)
@@ -66,15 +67,14 @@ public class BuildingIntroUI : MonoBehaviour
             {
                 if (residentialBuilding.CheckFacility((OptionType)i))
                 {
-                    optionButtons[i].Select();
-                    optionToggles[i].Select();
+                    SetOptionBuy(i);
                 }
             }
         }
         else
         {
             influenceText.text = building.influencePower.ToString();
-            utilityText.text = building.values[ValueType.utility].BoundaryToString();
+            utilityText.text = valueTypeString[(int)building.type - 1] + ": " + building.values[ValueType.utility].BoundaryToString();
             userText.text = building.values[ValueType.user].BoundaryToString();
         }
 
@@ -92,5 +92,19 @@ public class BuildingIntroUI : MonoBehaviour
                 eventUIInfos[i].solutionUIInfos[j].probText.text = curEvent[i].solutions[j].prob.ToString() + "%";
             }
         }
+    }
+
+    public void OnUI(Building building, Vector3 pos)
+    {
+        transform.localPosition = pos;
+        SetValue(building);
+    }
+
+    public void SetOptionBuy(int index)
+    {
+        optionButtons[index].Select();
+        optionToggles[index].Select();
+
+        optionButtons[index].interactable = false;
     }
 }

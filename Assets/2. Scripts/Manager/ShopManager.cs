@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, BuyOption, SolveEvent }
+public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, SolveBuilding }
 
 public class ShopManager : MonoBehaviour
 {
@@ -64,15 +64,10 @@ public class ShopManager : MonoBehaviour
         else if(state == BuyState.BuyBuilding)
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
 
-        if (buyState == BuyState.BuyOption)
-            SetBuyOption(false, pickObject);
-        else if (state == BuyState.BuyOption)
-            SetBuyOption(true, pickObject);
-
-        if (buyState == BuyState.SolveEvent)
-            SetSolveEvent(false);
-        else if (state == BuyState.SolveEvent)
-            SetSolveEvent(true, pickObject);
+        if (buyState == BuyState.SolveBuilding)
+            SetSolveEvent();
+        else if (state == BuyState.SolveBuilding)
+            SetSolveEvent(pickObject);
 
         if (buyState == BuyState.None)
             UIManager.instance.SetRoulettePopUp(false);
@@ -106,15 +101,10 @@ public class ShopManager : MonoBehaviour
             Destroy(curPickObject);
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
         }
-        else if (buyState == BuyState.SolveEvent)
+        else if (buyState == BuyState.SolveBuilding)
         {
-            SetSolveEvent(false);
-            SetSolveEvent(true, pickObject);
-        }
-        else if (buyState == BuyState.BuyOption)
-        {
-            SetBuyOption(false);
-            SetBuyOption(true, pickObject);
+            SetSolveEvent();
+            SetSolveEvent(pickObject);
         }
     }
 
@@ -138,7 +128,7 @@ public class ShopManager : MonoBehaviour
         if (buyState != BuyState.SellBuilding) return;
 
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
-        UIManager.instance.SetBuildingPopUp(false);
+        UIManager.instance.SetBuildingIntroPopUp();
         Destroy(curPickObject);
     }
 
@@ -175,7 +165,7 @@ public class ShopManager : MonoBehaviour
     {
         ResidentialBuilding building = curPickObject.GetComponent<ResidentialBuilding>();
 
-        if (buyState != BuyState.BuyOption) return false;
+        if (buyState != BuyState.SolveBuilding) return false;
         if (building.CheckFacility(type)) return false;
         if (!PayMoney(500)) return false;
 
@@ -188,11 +178,11 @@ public class ShopManager : MonoBehaviour
         Building building = curPickObject.GetComponent<Building>();
         int cost = building.curEvents[index / 2].solutions[index % 2].cost;
 
-        if (buyState != BuyState.SolveEvent) return;
+        if (buyState != BuyState.SolveBuilding) return;
         if (!PayMoney(cost)) return;
 
         building.SolveEvent(index);
-        UIManager.instance.SetBuildingPopUp(true, curPickObject);
+        UIManager.instance.SetBuildingIntroPopUp(building);
     }
 
     public void CheckBuyBuilding(Transform tileTrans)
@@ -247,17 +237,10 @@ public class ShopManager : MonoBehaviour
         curPickObject.transform.Rotate(Vector3.up * 90f);
     }
 
-    private void SetBuyOption(bool active, GameObject pickObject = null)
-    {
-        SetTargetObject(null, Color.red, Color.white);
-        curPickObject = pickObject;
-        UIManager.instance.SetOptionPopUp(active, pickObject);
-    }
-
-    private void SetSolveEvent(bool active, GameObject pickObject = null)
+    private void SetSolveEvent(GameObject pickObject = null)
     {
         if (pickObject != null)
             curPickObject = pickObject;
-        UIManager.instance.SetBuildingPopUp(active, pickObject);
+        UIManager.instance.SetBuildingIntroPopUp(pickObject.GetComponent<Building>());
     }
 }

@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public enum TileType { Ground, Road, Decoration }
+public enum TileType { Ground = -1, Road, Decoration }
 
 public class Tile : MonoBehaviour
 {
+    public static int income;
+
+    public string tileName;
     public TileType type;
     public bool isPurchased;
+    public int cost { get; private set; }
     public int costPerDay { get; private set; }
     public int[] influenceValues;
     public int[] subInfluenceValues;
