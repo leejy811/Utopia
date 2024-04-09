@@ -74,7 +74,7 @@ public class RoutineManager : MonoBehaviour
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
             building.happinessDifference = 0;
-            building.UpdateHappiness();
+            building.UpdateHappiness(false);
             total += building.happinessRate;
         }
 

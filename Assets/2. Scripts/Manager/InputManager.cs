@@ -49,10 +49,6 @@ public class InputManager : MonoBehaviour
                 {
                     ShopManager.instance.AddTile(hit.transform);
                 }
-                else if (Grid.instance.isInfluenceMode)
-                {
-                    Grid.instance.NotifyTileInfluence(hit.transform);
-                }
             }
         }
         else if (Input.GetMouseButtonUp(0))
@@ -95,6 +91,10 @@ public class InputManager : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
+                if (Grid.instance.isInfluenceMode)
+                {
+                    Grid.instance.NotifyTileInfluence(hit.transform);
+                }
                 switch (state)
                 {
                     case BuyState.BuyBuilding:
@@ -113,7 +113,7 @@ public class InputManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
             {
                 if (state == BuyState.SellBuilding)
-                    ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.red, Color.white); ;
+                    ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.red, Color.white);
             }
             else if (state == BuyState.SellBuilding)
                 ShopManager.instance.SetTargetObject(null, Color.red, Color.white);

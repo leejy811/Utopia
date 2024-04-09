@@ -42,6 +42,8 @@ public class ShopManager : MonoBehaviour
     {
         if (Money - amount < 0)
         {
+            Vector3 pos = curPickObject == null ? Vector3.zero : curPickObject.transform.position;
+            UIManager.instance.SetErrorPopUp("!! 돈이 부족합니다.", pos);
             return false;
         }
 
@@ -192,6 +194,8 @@ public class ShopManager : MonoBehaviour
         {
             curPickObject.GetComponent<FollowMouse>().tile = tile.gameObject;
             SetObjectColor(curPickObject, Color.white);
+
+            //ToDo 건설 비용 표시
         }
         else
         {

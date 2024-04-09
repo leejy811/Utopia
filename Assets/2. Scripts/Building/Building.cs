@@ -168,6 +168,9 @@ public class Building : MonoBehaviour
 
     public void SetHappiness(int amount)
     {
+        if (amount != 0)
+            UIManager.instance.SetHappinessPopUp(amount, transform.position);
+
         happinessDifference += amount;
 
         if (happinessRate + amount < 0)
@@ -280,9 +283,9 @@ public class Building : MonoBehaviour
         return 0;
     }
 
-    public virtual void UpdateHappiness()
+    public virtual int UpdateHappiness(bool isExpect)
     {
-        
+        return 0;
     }
 
     public virtual void ApplyInfluence(int value, BuildingType type)

@@ -99,35 +99,38 @@ public class ResidentialBuilding : Building
         return res;
     }
 
-    public override void UpdateHappiness()
+    public override int UpdateHappiness(bool isExpect)
     {
+        int changeAmount = 0;
         //commercialCSAT
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-        {
-            SetHappiness(-1);
-        }
+            changeAmount += -1;
         else if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.Less)
-            SetHappiness(-2);
+            changeAmount += -2;
         else
-            SetHappiness(1);
+            changeAmount += 1;
 
         //cultureCSAT
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-        {
-            SetHappiness(-1);
-        }
+            changeAmount += -1;
         else if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.Less)
-            SetHappiness(-3);
+            changeAmount += -3;
         else
-            SetHappiness(1);
+            changeAmount += 1;
 
         //serviceCSAT
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            SetHappiness(-2);
+            changeAmount += -2;
         else if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.Less)
-            SetHappiness(-2);
+            changeAmount += -2;
         else
-            SetHappiness(1);
+            changeAmount += 1;
+
+        if(isExpect)
+            return changeAmount;
+
+        SetHappiness(changeAmount);
+        return 0;
     }
 
     public override void ApplyInfluence(int value, BuildingType type)
@@ -137,5 +140,8 @@ public class ResidentialBuilding : Building
         BoundaryValue cast = values[(ValueType)type];
         cast.cur += value;
         values[(ValueType)type] = cast;
+
+        int amount = UpdateHappiness(true);
+        UIManager.instance.SetHappinessPopUp(amount, transform.position);
     }
 }

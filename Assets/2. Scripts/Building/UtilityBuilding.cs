@@ -76,35 +76,43 @@ public class UtilityBuilding : Building
         return income + cost;
     }
 
-    public override void UpdateHappiness()
+    public override int UpdateHappiness(bool isExpect)
     {
+        int changeAmount = 0;
+
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                SetHappiness(2);
+                changeAmount += 2;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                SetHappiness(0);
+                changeAmount += 0;
             else
-                SetHappiness(1);
+                changeAmount += 1;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                SetHappiness(0);
+                changeAmount += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                SetHappiness(-2);
+                changeAmount += -2;
             else
-                SetHappiness(-1);
+                changeAmount += -1;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                SetHappiness(1);
+                changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                SetHappiness(-1);
+                changeAmount += -1;
             else
-                SetHappiness(0);
+                changeAmount += 0;
         }
+
+        if (isExpect)
+            return changeAmount;
+
+        SetHappiness(changeAmount);
+        return 0;
     }
 
     public override void ApplyInfluence(int value, BuildingType type = 0)
@@ -112,5 +120,8 @@ public class UtilityBuilding : Building
         BoundaryValue cast = values[ValueType.user];
         cast.cur += value;
         values[ValueType.user] = cast;
+
+        int amount = UpdateHappiness(true);
+        UIManager.instance.SetHappinessPopUp(amount, transform.position);
     }
 }

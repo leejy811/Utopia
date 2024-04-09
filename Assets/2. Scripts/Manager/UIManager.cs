@@ -36,6 +36,13 @@ public class UIManager : MonoBehaviour
     public GameObject roulettePopUp;
     public GameObject tileListPopUp;
 
+    [Header("Message")]
+    public GameObject errorMessagePrefab;
+    public GameObject happinessMessagePrefab;
+
+    [Header("Cost")]
+    public CostUI costInfo;
+
     #endregion
 
     private Building targetBuilding;
@@ -71,7 +78,7 @@ public class UIManager : MonoBehaviour
         dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd");
         SetHappiness();
         Setmoney();
-        SetCityResident();
+        //SetCityResident();
     }
 
     public void SetHappiness()
@@ -184,6 +191,25 @@ public class UIManager : MonoBehaviour
     {
         statistic.gameObject.SetActive(active);
         statistic.SetValue();
+    }
+
+    public void SetErrorPopUp(string massage, Vector3 position)
+    {
+        TemporayUI message =  Instantiate(errorMessagePrefab).GetComponent<TemporayUI>();
+        message.SetUI(massage, position);
+    }
+
+    public void SetHappinessPopUp(int amount, Vector3 position)
+    {
+        string massage = amount > 0 ? "<sprite=?> <sprite=?>" : "<sprite=?> <sprite=?>";
+
+        TemporayUI message = Instantiate(happinessMessagePrefab).GetComponent<TemporayUI>();
+        message.SetUI(massage, position);
+    }
+
+    public void SetCostPopUp(int cost, Vector3 position)
+    {
+        costInfo.OnUI(cost, position);
     }
 
     #endregion
