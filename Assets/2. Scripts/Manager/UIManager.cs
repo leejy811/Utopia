@@ -32,6 +32,9 @@ public class UIManager : MonoBehaviour
     [Header("Statistic")]
     public StatisticUI statistic;
 
+    [Header("Statistic")]
+    public CityLevelUI cityLevel;
+
     [Header("PopUp")]
     public GameObject roulettePopUp;
     public GameObject tileListPopUp;
