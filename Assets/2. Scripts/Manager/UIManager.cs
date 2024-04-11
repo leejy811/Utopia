@@ -79,7 +79,7 @@ public class UIManager : MonoBehaviour
         dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd");
         SetHappiness();
         Setmoney();
-        //SetCityResident();
+        SetCityResident();
     }
 
     public void SetHappiness()

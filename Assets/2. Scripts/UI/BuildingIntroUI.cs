@@ -16,6 +16,7 @@ public struct SolutionUIInfo
 [Serializable]
 public struct EventUIInfo
 {
+    public Image iconImage;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dayText;
     public SolutionUIInfo[] solutionUIInfos;
@@ -89,7 +90,7 @@ public class BuildingIntroUI : MonoBehaviour
             {
                 eventUIInfos[i].solutionUIInfos[j].nameText.text = curEvent[i].solutions[j].name.ToString();
                 eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + "¿ø)";
-                eventUIInfos[i].solutionUIInfos[j].probText.text = curEvent[i].solutions[j].prob.ToString() + "%";
+                eventUIInfos[i].solutionUIInfos[j].probText.text = "ÇØ°áÈ®·ü " + curEvent[i].solutions[j].prob.ToString() + "%";
             }
         }
     }

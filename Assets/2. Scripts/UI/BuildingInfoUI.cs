@@ -31,9 +31,10 @@ public class BuildingInfoUI : MonoBehaviour
 
         if(building.type == BuildingType.Residential)
         {
-            residentText.text = building.values[ValueType.Resident].max.ToString();
-
             ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
+
+            residentText.text = residentialBuilding.residentCnt.max.ToString();
+
             for (int i = 0;i < residentialBuilding.existFacility.Length; i++)
             {
                 if (residentialBuilding.CheckFacility((OptionType)i))

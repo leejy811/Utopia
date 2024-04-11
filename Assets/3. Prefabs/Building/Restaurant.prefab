@@ -59,12 +59,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f404c6e7523fc846aa947da297b730e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingName: 
   count: 0
   grade: 3
   type: 1
   subType: 4
   viewState: 0
   happinessRate: 50
+  happinessDifference: 0
   position: {x: 0, y: 0}
   influencePower: 50
   influenceSize: 1
@@ -74,7 +76,7 @@ MonoBehaviour:
   userCnt:
     max: 300
     min: 100
-    cur: 100
+    cur: 0
   utilityValue:
     max: 100
     min: 30

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4374343452285481833}
   - component: {fileID: 5759817767567603514}
   - component: {fileID: 4795150799456783364}
-  - component: {fileID: 6503583245623770307}
   m_Layer: 6
   m_Name: Tile
   m_TagString: Tile
@@ -67,18 +66,6 @@ MonoBehaviour:
   subInfluenceValues: 00000000000000000000000000000000000000000000000000000000
   building: {fileID: 0}
   border: {fileID: 2695823580447920191}
---- !u!114 &6503583245623770307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179345971447982024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed438032fa38d2f468079d41a480a629, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7721245679912073706
 PrefabInstance:
   m_ObjectHideFlags: 0

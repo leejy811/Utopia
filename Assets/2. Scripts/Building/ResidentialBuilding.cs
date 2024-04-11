@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
-public enum OptionType { Water = 0, Electricity, Sewage, SoundInsulation }
+public enum OptionType { Water = 0, Sewage, Electricity, SoundInsulation }
 
 public class ResidentialBuilding : Building
 {
@@ -41,12 +41,14 @@ public class ResidentialBuilding : Building
 
         influencePower = residentCnt.cur;
         cityResident += residentCnt.cur;
+        UIManager.instance.SetCityResident();
         CityLevelManager.instance.UpdateCityType();
     }
 
     private void OnDestroy()
     {
         cityResident -= residentCnt.cur;
+        UIManager.instance.SetCityResident();
     }
 
     public bool CheckFacility(OptionType type)

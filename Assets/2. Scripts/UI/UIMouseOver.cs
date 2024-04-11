@@ -19,11 +19,11 @@ public class UIMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        
+        UIManager.instance.SetBuildingInfoPopUp((int)buttonType, index, rect);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        
+        UIManager.instance.SetBuildingInfoPopUp((int)buttonType, index, rect);
     }
 }
