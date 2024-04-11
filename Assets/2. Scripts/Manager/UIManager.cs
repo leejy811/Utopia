@@ -1,9 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -25,19 +23,16 @@ public class UIManager : MonoBehaviour
     [Header("Tile")]
     public TileInfoUI tileInfo;
     public TileInfluenceUI tileInfluenceInfo;
-
-    [Header("Roulette")]
-    public TextMeshProUGUI rouletteText;
+    public GameObject tileListPopUp;
 
     [Header("Statistic")]
     public StatisticUI statistic;
 
-    [Header("Statistic")]
+    [Header("CityLevel")]
     public CityLevelUI cityLevel;
 
-    [Header("PopUp")]
-    public GameObject roulettePopUp;
-    public GameObject tileListPopUp;
+    [Header("Roulette")]
+    public EventRouletteUI eventRoulette;
 
     [Header("Message")]
     public GameObject errorMessagePrefab;
@@ -45,6 +40,9 @@ public class UIManager : MonoBehaviour
 
     [Header("Cost")]
     public CostUI costInfo;
+
+    [Header("Event Notify")]
+    public EventNotifyUI eventNotify;
 
     #endregion
 
@@ -105,6 +103,11 @@ public class UIManager : MonoBehaviour
         buildingIntros[idx].SetValue(targetBuilding);
     }
 
+    public void SetEventNotifyValue(Building building)
+    {
+        eventNotify.SetValue(building);
+    }
+
     public void SetBuildingListValue(int index)
     {
         buildingLists[index].SetValue((BuildingType)index);
@@ -120,18 +123,16 @@ public class UIManager : MonoBehaviour
         tileInfluenceInfo.SetValue(tile);
     }
 
-    public void SetRoulette(List<Event> ranEvents)
-    {
-        rouletteText.text = ranEvents[0].eventEngName + " / " + ranEvents[1].eventEngName + " / " + ranEvents[2].eventEngName;
-    }
-
     #endregion
 
     #region PopUp
 
-    public void SetRoulettePopUp(bool active)
+    public void SetRoulettePopUp(bool active, List<Event> ranEvents = null)
     {
-        roulettePopUp.SetActive(active);
+        eventRoulette.gameObject.SetActive(active);
+
+        if (active)
+            eventRoulette.SetValue(ranEvents);
     }
 
     public void SetBuildingInfoPopUp(int typeIndex, int buildingIndex, RectTransform rect)
@@ -157,6 +158,9 @@ public class UIManager : MonoBehaviour
 
     public void SetBuildingIntroPopUp(Building building = null)
     {
+        if(eventNotify.gameObject.activeSelf)
+            SetEventNotifyValue(building);
+
         targetBuilding = building;
         int idx = GetBuildingIndex();
 
@@ -167,6 +171,14 @@ public class UIManager : MonoBehaviour
             buildingIntros[idx].gameObject.SetActive(true);
             buildingIntros[idx].SetValue(building);
         }
+    }
+
+    public void SetEventNotifyPopUp(bool active)
+    {
+        eventNotify.gameObject.SetActive(active);
+
+        if (active)
+            eventNotify.Init();
     }
 
     public void SetTileInfoPopUp(int tileIndex, RectTransform rect)
@@ -215,6 +227,14 @@ public class UIManager : MonoBehaviour
         costInfo.OnUI(cost, position);
     }
 
+    public void SetCityLevelPopUp(bool active)
+    {
+        cityLevel.gameObject.SetActive(active);
+
+        if (active)
+            cityLevel.SetValue();
+    }
+
     #endregion
 
     #region OnClick
@@ -236,6 +256,7 @@ public class UIManager : MonoBehaviour
     {
         tileListPopUp.gameObject.SetActive(active);
     }
+
     public void OnClickTileBuild(int index)
     {
         ShopManager.instance.ChangeState(BuyState.BuildTile, index);
@@ -281,6 +302,11 @@ public class UIManager : MonoBehaviour
         UpdateDailyInfo();
     }
 
+    public void OnClickCloseEventRoulette()
+    {
+        SetRoulettePopUp(false);
+    }
+
     public void OnClickSolveEvent(int index)
     {
         ShopManager.instance.SolveEvent(index);
@@ -298,7 +324,25 @@ public class UIManager : MonoBehaviour
 
     public void OnClickCityLevelMode()
     {
-        //ToDo 도시 레벨 UI 추가
+        SetCityLevelPopUp(true);
+    }
+
+    public void OnClickEventHighLight()
+    {
+        BuildingSpawner.instance.EventBuildingsHighlight();
+    }
+
+    public void OnClickEventNotify()
+    {
+        SetEventNotifyPopUp(true);
+    }
+
+    public void OnClickEventNotifyNext(bool isRight)
+    {
+        if (EventManager.instance.eventBuildings.Count == 0)
+            return;
+
+        eventNotify.NextBuilding(isRight);
     }
 
     #endregion

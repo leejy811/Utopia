@@ -71,11 +71,6 @@ public class ShopManager : MonoBehaviour
         else if (state == BuyState.SolveBuilding)
             SetSolveEvent(pickObject);
 
-        if (buyState == BuyState.None)
-            UIManager.instance.SetRoulettePopUp(false);
-        else if (state == BuyState.None)
-            UIManager.instance.SetRoulettePopUp(true);
-
         switch (state)
         {
             case BuyState.None:
@@ -195,7 +190,8 @@ public class ShopManager : MonoBehaviour
             curPickObject.GetComponent<FollowMouse>().tile = tile.gameObject;
             SetObjectColor(curPickObject, Color.white);
 
-            //ToDo 건설 비용 표시
+            int cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+            UIManager.instance.SetCostPopUp(cost, tile.transform.position);
         }
         else
         {

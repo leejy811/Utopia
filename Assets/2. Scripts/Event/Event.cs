@@ -19,6 +19,7 @@ public struct Event
 {
     public string eventName;
     public string eventEngName;
+    public Sprite eventIcon;
     public int eventIndex;
     public EventType type;
     public ConditionType conditionType;

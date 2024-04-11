@@ -88,7 +88,7 @@ public class BuildingIntroUI : MonoBehaviour
             for (int j = 0; j < eventUIInfos[i].solutionUIInfos.Length; j++)
             {
                 eventUIInfos[i].solutionUIInfos[j].nameText.text = curEvent[i].solutions[j].name.ToString();
-                eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + ")";
+                eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + "¿ø)";
                 eventUIInfos[i].solutionUIInfos[j].probText.text = curEvent[i].solutions[j].prob.ToString() + "%";
             }
         }

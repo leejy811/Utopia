@@ -13,6 +13,8 @@ public class BuildingSpawner : MonoBehaviour
 
     public int[] buildingCount = new int[System.Enum.GetValues(typeof(BuildingSubType)).Length];
 
+    private bool isHighlightMode;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -72,6 +74,19 @@ public class BuildingSpawner : MonoBehaviour
         foreach(Building building in buildings)
         {
             building.ChangeViewState(stateType);
+        }
+    }
+
+    public void EventBuildingsHighlight()
+    {
+        isHighlightMode = !isHighlightMode;
+
+        foreach (Building building in buildings)
+        {
+            if(building.curEvents.Count > 0 && isHighlightMode)
+                ShopManager.instance.SetObjectColor(building.gameObject, Color.yellow);
+            else
+                ShopManager.instance.SetObjectColor(building.gameObject, Color.white);
         }
     }
 }

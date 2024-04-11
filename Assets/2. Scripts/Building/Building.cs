@@ -126,6 +126,9 @@ public class Building : MonoBehaviour
                 else
                     ApplyEventEffect(newEvent.effectValue[newEvent.curDay], newEvent.valueType);
             }
+
+            if (GetEventProblemCount() == 0)
+                EventManager.instance.SetEventBuildings(this, true);
             curEvents.Add(newEvent);
         }
     }
@@ -206,6 +209,9 @@ public class Building : MonoBehaviour
         RoutineManager.instance.SetCityHappiness(happinessRate, 0);
         ApplyEventProblem(curEvents[index], true);
         curEvents.RemoveAt(index);
+
+        if (GetEventProblemCount() == 0)
+            EventManager.instance.SetEventBuildings(this, false);
     }
 
     public List<Event> GetEventProblem()
@@ -217,6 +223,18 @@ public class Building : MonoBehaviour
                 events.Add(curEvent);
         }
         return events;
+    }
+
+    public int GetEventProblemCount()
+    {
+        int cnt = 0;
+
+        foreach (Event curEvent in curEvents)
+        {
+            if (curEvent.type == EventType.Problem)
+                cnt++;
+        }
+        return cnt;
     }
 
     public void SetPosition(Vector3 position)

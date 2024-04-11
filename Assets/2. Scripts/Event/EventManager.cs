@@ -10,6 +10,7 @@ public class EventManager : MonoBehaviour
     public List<List<Building>> targetBuildings = new List<List<Building>>();
     public List<Event> events;
     public List<Event> possibleEvents;
+    public List<Building> eventBuildings;
 
     private void Awake()
     {
@@ -69,7 +70,7 @@ public class EventManager : MonoBehaviour
             ranEvents.Add(possibleEvents[ranidx]);
         }
 
-        UIManager.instance.SetRoulette(ranEvents);
+        UIManager.instance.SetRoulettePopUp(true, ranEvents);
 
         Event e;
         if (ranEvents[0] == ranEvents[1] && ranEvents[1] == ranEvents[2])
@@ -157,6 +158,28 @@ public class EventManager : MonoBehaviour
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
             building.UpdateEventEffect();
+        }
+    }
+
+    public void SetEventBuildings(Building building, bool isAdd)
+    {
+        if(isAdd)
+            eventBuildings.Add(building);
+        else
+        {
+            for(int i = 0;i < eventBuildings.Count; i++)
+            {
+                if (ReferenceEquals(eventBuildings[i], building))
+                {
+                    eventBuildings.RemoveAt(i);
+                    break;
+                }
+            }
+
+            if (eventBuildings.Count == 0)
+                UIManager.instance.SetEventNotifyPopUp(false);
+            else
+                UIManager.instance.OnClickEventNotifyNext(false);
         }
     }
 }

@@ -118,5 +118,59 @@ public class InputManager : MonoBehaviour
             else if (state == BuyState.SellBuilding)
                 ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
         }
+
+        InputButtonShortKey();
+    }
+
+    private void InputButtonShortKey()
+    {
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            UIManager.instance.OnClickBuildingBuyPopUp(0);
+        }
+        else if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            UIManager.instance.OnClickBuildingBuyPopUp(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            UIManager.instance.OnClickBuildingBuyPopUp(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            UIManager.instance.OnClickBuildingBuyPopUp(4);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            UIManager.instance.OnClickBuildingSell();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            UIManager.instance.OnClickTileBuy();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            UIManager.instance.OnClickTileBuildPopUp(true);
+        }
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            UIManager.instance.OnClickEventHighLight();
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            //ToDo 문제 알림 시스템 연결
+        }
+        else if (Input.GetKeyDown(KeyCode.V))
+        {
+            UIManager.instance.OnClickTileInfluenceMode();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            UIManager.instance.OnClickTileColorMode();
+        }
+        else if (Input.GetKeyDown(KeyCode.B))
+        {
+            UIManager.instance.OnClickCityLevelMode();
+        }
     }
 }
