@@ -2,10 +2,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	880454473	Play_Select_Button			\Default Work Unit\Play_Select_Button	
 	1073654463	Play_Slot_rimshot			\Default Work Unit\Play_Slot_rimshot	
 	2446290240	Play_singsingsingmybird			\Default Work Unit\Play_singsingsingmybird	
+	2611274067	Play_buildingsound			\Default Work Unit\Play_buildingsound	
 	3149538809	Play_ForestAmbience			\Default Work Unit\Play_ForestAmbience	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	95965161	Select_Button	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Select_Button		257408
+	337361210	buildingsound	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\utopia sound design2_11A4CF5B.wem		\Actor-Mixer Hierarchy\Default Work Unit\buildingsound		78548
 	779451324	Slot_rimshot	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SO_BA_rim_chin_upbounce_F1EB82C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		13792
 	824445506	ForestAmbience	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\utopia sound design_73CAD344.wem		\Actor-Mixer Hierarchy\Default Work Unit\ForestAmbience		38527736
 	987196180	singsingsingmybird	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\singsingsingmybird_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\singsingsingmybird\singsingsingmybird\singsingsingmybird		34003324

@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584886944507464783
+    m_lastTime: -8584886862529250645
     List:
     - name: Main
       guid: 3b7239bccf5897409d336b79c2e2756f
@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584886944507544298
+    m_lastTime: -8584886862529330012
     List:
+    - name: Play_buildingsound
+      guid: 1a0ead8cfff3374eba9a45792a2331ca
+      id: 2611274067
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_buildingsound
+        ObjectType: 3
+        guid: 1a0ead8cfff3374eba9a45792a2331ca
+      Path: Events\Default Work Unit\Play_buildingsound
+      maxAttenuation: 0
+      maxDuration: 0.44473922
+      minDuration: 0.44473922
     - name: Play_ForestAmbience
       guid: 4d99023123977c449b5c80ce8afeb234
       id: 3149538809
@@ -111,8 +128,8 @@ MonoBehaviour:
         guid: 4d99023123977c449b5c80ce8afeb234
       Path: Events\Default Work Unit\Play_ForestAmbience
       maxAttenuation: 0
-      maxDuration: 218.41066
-      minDuration: 218.41066
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Select_Button
       guid: 84c6369bcf91e748b6e9c8192be67e41
       id: 880454473
@@ -221,7 +238,7 @@ MonoBehaviour:
     m_lastTime: -8584897083625962771
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c0000000d000000bb000000bc000000
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c0000000d0000003f00000040000000bb000000bc000000bd000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

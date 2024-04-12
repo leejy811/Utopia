@@ -22,13 +22,17 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{59C0CDEC-E79A-6EE6-3831-1DBBC7766CF8}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A90F6295-0622-814D-5C6F-B5255A7BE203}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="95965161" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button.wav</ShortName>
 					<CachePath>SFX/ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem</CachePath>
+				</File>
+				<File Id="337361210" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>utopia sound design2.wav</ShortName>
+					<CachePath>SFX/utopia sound design2_11A4CF5B.wem</CachePath>
 				</File>
 				<File Id="779451324" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SO_BA_rim_chin_upbounce.wav</ShortName>
@@ -44,6 +48,11 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="2611274067" Name="Play_buildingsound" DurationType="OneShot" DurationMin="0.44473922" DurationMax="0.44473922">
+					<MediaRefs>
+						<MediaRef Id="337361210"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3149538809" Name="Play_ForestAmbience" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="824445506"/>
@@ -67,5 +76,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{090785D8-3BFA-36F2-AAA6-BDAC0EE24BF3}</FileHash>
+	<FileHash>{9B0F3EB7-9A38-FDEB-E098-44183579BBA2}</FileHash>
 </SoundBanksInfo>

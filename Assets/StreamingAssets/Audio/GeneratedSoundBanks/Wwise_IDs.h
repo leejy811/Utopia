@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_BUILDINGSOUND = 2611274067U;
         static const AkUniqueID PLAY_FORESTAMBIENCE = 3149538809U;
         static const AkUniqueID PLAY_SELECT_BUTTON = 880454473U;
         static const AkUniqueID PLAY_SINGSINGSINGMYBIRD = 2446290240U;

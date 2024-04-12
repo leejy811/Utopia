@@ -47,6 +47,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_buildingsound" ID="{8CAD0E1A-F3FF-4E37-BA9A-45792A2331CA}">
+					<ChildrenList>
+						<Action Name="" ID="{0F1C8F01-71F4-49F2-8FDD-3DB6F777F4EE}" ShortID="452349867">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="buildingsound" ID="{3502F2A5-7402-41C9-86C9-0863459EEC6D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

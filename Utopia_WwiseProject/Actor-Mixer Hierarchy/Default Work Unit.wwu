@@ -88,6 +88,33 @@
 						<ActiveSource Name="SO_BA_rim_chin_upbounce" ID="{4DF51A62-2DE4-4EE7-A7DD-9F02EF267239}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="buildingsound" ID="{3502F2A5-7402-41C9-86C9-0863459EEC6D}" ShortID="755163049">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="utopia sound design2" ID="{8C595040-8C9D-443A-9C0D-22B3147F521D}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.00271182456722526"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0318639386648968"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>utopia sound design2.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="337361210"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="utopia sound design2" ID="{8C595040-8C9D-443A-9C0D-22B3147F521D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
