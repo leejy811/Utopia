@@ -216,7 +216,7 @@ public class Building : MonoBehaviour
         ApplyEventProblem(curEvents[index], true);
         if (GetEventProblemCount() == 1 && curEvents[index].type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, false);
-        curEvents.RemoveAt(index);
+        this.curEvents.Remove(curEvents[index]);
     }
 
     public List<Event> GetEventProblem()

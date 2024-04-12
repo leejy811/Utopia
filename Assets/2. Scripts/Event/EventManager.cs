@@ -163,7 +163,7 @@ public class EventManager : MonoBehaviour
 
     public void SetEventBuildings(Building building, bool isAdd)
     {
-        if(isAdd)
+        if (isAdd)
             eventBuildings.Add(building);
         else
         {
