@@ -96,4 +96,17 @@ public class BuildingSpawner : MonoBehaviour
                 ShopManager.instance.SetObjectColor(building.gameObject, Color.white);
         }
     }
+
+    public int GetEventBuildingCount()
+    {
+        int cnt = 0;
+
+        foreach (Building building in buildings)
+        {
+            if (building.curEvents.Count > 0)
+                cnt++;
+        }
+
+        return cnt;
+    }
 }

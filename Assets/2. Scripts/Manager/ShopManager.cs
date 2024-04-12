@@ -53,7 +53,6 @@ public class ShopManager : MonoBehaviour
 
     public void ChangeState(BuyState state, int index = 0, GameObject pickObject = null)
     {
-        Debug.Log(state);
         if (state == buyState)
         {
             ChangePickObject(index, pickObject);

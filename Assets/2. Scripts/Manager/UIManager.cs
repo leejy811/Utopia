@@ -404,6 +404,8 @@ public class UIManager : MonoBehaviour
 
     public void OnClickEventNotify()
     {
+        if (BuildingSpawner.instance.GetEventBuildingCount() <= 0) return;
+
         OnClickBuildingBuyPopUp(-1);
         SetCityLevelPopUp(false);
         tileListPopUp.gameObject.SetActive(false);
