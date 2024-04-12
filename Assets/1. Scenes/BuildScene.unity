@@ -67981,8 +67981,8 @@ MonoBehaviour:
   isColorMode: 0
   isInfluenceMode: 0
   isAddtionalMode: 0
-  width: 12
-  height: 12
+  width: 32
+  height: 32
   startPoint: {x: 0, y: 0}
   startTileSize: {x: 2, y: 2}
   cameraOffset: {x: -5.75, y: 9.4, z: -5.75}
