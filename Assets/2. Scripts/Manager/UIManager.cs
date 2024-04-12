@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -264,6 +265,15 @@ public class UIManager : MonoBehaviour
             cityLevel.SetValue();
     }
 
+    public void SetAllPopUp()
+    {
+        ShopManager.instance.ChangeState(BuyState.None);
+        OnClickBuildingBuyPopUp(-1);
+        SetEventNotifyPopUp(false);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
+    }
+
     #endregion
 
     #region OnClick
@@ -287,10 +297,14 @@ public class UIManager : MonoBehaviour
         }
 
         ShopManager.instance.ChangeState(BuyState.None);
+        SetEventNotifyPopUp(false);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
     }
 
     public void OnClickTileBuildPopUp(bool active)
     {
+        SetAllPopUp();
         tileListPopUp.gameObject.SetActive(active);
     }
 
@@ -306,13 +320,13 @@ public class UIManager : MonoBehaviour
 
     public void OnClickBuildingSell()
     {
-        OnClickBuildingBuyPopUp(-1);
+        SetAllPopUp();
         ShopManager.instance.ChangeState(BuyState.SellBuilding);
     }
 
     public void OnClickTileBuy()
     {
-        OnClickBuildingBuyPopUp(-1);
+        SetAllPopUp();
         ShopManager.instance.ChangeState(BuyState.BuyTile);
     }
 
@@ -327,7 +341,7 @@ public class UIManager : MonoBehaviour
 
     public void OnClickNextDay()
     {
-        OnClickBuildingBuyPopUp(-1);
+        SetAllPopUp();
         RoutineManager.instance.DailyUpdate();
         SetStatisticPopUp(true);
     }
@@ -351,26 +365,31 @@ public class UIManager : MonoBehaviour
 
     public void OnClickTileColorMode()
     {
+        SetAllPopUp();
         Grid.instance.SetTileColorMode();
     }
 
     public void OnClickTileInfluenceMode()
     {
+        SetAllPopUp();
         Grid.instance.SetTileInfluenceMode();
     }
 
     public void OnClickCityLevelMode()
     {
+        SetAllPopUp();
         SetCityLevelPopUp(true);
     }
 
     public void OnClickEventHighLight()
     {
+        SetAllPopUp();
         BuildingSpawner.instance.EventBuildingsHighlight();
     }
 
     public void OnClickEventNotify()
     {
+        SetAllPopUp();
         ShopManager.instance.ChangeState(BuyState.EventCheck);
     }
 

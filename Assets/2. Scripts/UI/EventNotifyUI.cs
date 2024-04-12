@@ -43,6 +43,8 @@ public class EventNotifyUI : MonoBehaviour
     public void Init()
     {
         curIndex = 0;
-        SetValue(EventManager.instance.eventBuildings[curIndex]);
+
+        if (EventManager.instance.eventBuildings.Count != 0)
+            SetValue(EventManager.instance.eventBuildings[curIndex]);
     }
 }

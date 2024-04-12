@@ -20,18 +20,18 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if(state == BuyState.SellBuilding)
+            if (state == BuyState.SellBuilding)
             {
                 ShopManager.instance.SellBuilding();
             }
-            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) && 
+            else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) &&
                 (state == BuyState.None || state == BuyState.SolveBuilding))
             {
                 ShopManager.instance.ChangeState(BuyState.SolveBuilding, 0, hit.transform.gameObject);
             }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
-                switch(state)
+                switch (state)
                 {
                     case BuyState.BuyBuilding:
                         ShopManager.instance.BuyBuilding(hit.transform);
@@ -58,25 +58,14 @@ public class InputManager : MonoBehaviour
                 ShopManager.instance.BuyTile();
             }
         }
-        else if (Input.GetMouseButtonDown(1))
+        else if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (state == BuyState.BuyTile)
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
             else if (state == BuyState.SellBuilding)
                 ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
 
-            ShopManager.instance.ChangeState(BuyState.None);
-            UIManager.instance.OnClickBuildingBuyPopUp(-1);
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (state == BuyState.BuyTile)
-                ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
-            else if (state == BuyState.SellBuilding)
-                ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
-
-            ShopManager.instance.ChangeState(BuyState.None);
-            UIManager.instance.OnClickBuildingBuyPopUp(-1);
+            UIManager.instance.SetAllPopUp();
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
