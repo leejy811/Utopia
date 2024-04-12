@@ -109,6 +109,8 @@ public class InputManager : MonoBehaviour
             }
             else if (state == BuyState.BuyTile)
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+            else if (Grid.instance.isInfluenceMode)
+                UIManager.instance.SetTileInfluencePopUp(null);
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
             {

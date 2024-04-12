@@ -142,16 +142,20 @@ public class Building : MonoBehaviour
             Event curevent = curEvents[i];
             curevent.curDay++;
 
-            if(curevent.curDay >= curevent.effectValue.Count)
+            if(curevent.curDay == curevent.effectValue.Count)
             {
-                removeIdx.Add(i);
                 if(curevent.type == EventType.Event)
                 {
                     if (curevent.duplication == 3)
                         ApplyEventEffect(curevent.effectJackpotValue[curevent.curDay - 1] * -1, curevent.valueType);
                     else
                         ApplyEventEffect(curevent.effectValue[curevent.curDay - 1] * -1, curevent.valueType);
+                    continue;
                 }
+            }
+            else if(curevent.curDay > curevent.effectValue.Count)
+            {
+                removeIdx.Add(i);
                 continue;
             }
 
@@ -195,18 +199,18 @@ public class Building : MonoBehaviour
 
         if (ran < curEvents[index / 2].solutions[index % 2].prob)
         {
-            if(curEvents[index / 2].conditionType == ConditionType.Option)
+            if (curEvents[index / 2].conditionType == ConditionType.Option)
             {
                 (this as ResidentialBuilding).BuyFacility((OptionType)curEvents[index / 2].targetIndex);
             }
-
-            SetSolveEvent(index / 2);
+            else
+                SetSolveEvent(index / 2);
         }
     }
 
     protected void SetSolveEvent(int index)
     {
-        RoutineManager.instance.SetCityHappiness(happinessRate, 0);
+        Debug.Log(index);
         ApplyEventProblem(curEvents[index], true);
         curEvents.RemoveAt(index);
 
@@ -287,9 +291,15 @@ public class Building : MonoBehaviour
     {
         int sign = isAdd ? 1 : -1;
         if (curevent.duplication == 3)
+        {
             SetHappiness(curevent.effectJackpotValue[curevent.curDay - 1] * sign);
+            RoutineManager.instance.SetCityHappiness(curevent.effectJackpotValue[curevent.curDay - 1] * sign, 0);
+        }
         else
+        {
             SetHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * sign);
+            RoutineManager.instance.SetCityHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * sign, 0);
+        }
     }
 
     public virtual int CalculateIncome()
@@ -313,7 +323,6 @@ public class Building : MonoBehaviour
 
     public static void InitStaticCalcValue()
     {
-        ResidentialBuilding.residentReduction = 0;
         ResidentialBuilding.income = 0;
         ResidentialBuilding.bonusCost = 0;
 

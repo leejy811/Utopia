@@ -13,6 +13,7 @@ public class Grid : MonoBehaviour
     public int tileCost;
 
     public Color[] tileColors;
+    public Color[] tilePurchaseColors;
 
     public bool isColorMode;
     public bool isInfluenceMode;
@@ -79,7 +80,7 @@ public class Grid : MonoBehaviour
                 if (tiles[i, j].building != null)
                 {
                     Building building = tiles[i, j].building.GetComponent<Building>();
-                    color = isOn ? tileColors[(int)building.type] : Color.green;
+                    color = isOn ? tileColors[(int)building.type] : tilePurchaseColors[1];
 
                     tiles[i, j].SetTileColor(color);
                     building.ChangeViewState((ViewStateType)(Convert.ToInt32(!isOn) * 2));
@@ -101,6 +102,9 @@ public class Grid : MonoBehaviour
     {
         isInfluenceMode = !isInfluenceMode;
 
+        if (!isInfluenceMode)
+            UIManager.instance.SetTileInfluencePopUp(null);
+
         if (isInfluenceMode & isColorMode)
             SetTileColorMode();
     }
@@ -115,7 +119,7 @@ public class Grid : MonoBehaviour
 
     public void NotifyTileInfluence(Transform tileTransform)
     {
-        Tile tile = tiles[(int)tileTransform.position.x, (int)tileTransform.position.y];
+        Tile tile = tiles[(int)tileTransform.position.x, (int)tileTransform.position.z];
         UIManager.instance.SetTileInfluencePopUp(tile);
     }
 }

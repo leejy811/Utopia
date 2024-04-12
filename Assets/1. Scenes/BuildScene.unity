@@ -1910,7 +1910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2756,7 +2756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4331,7 +4331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -4656,7 +4656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -5643,7 +5643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -6483,7 +6483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -7029,7 +7029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -8010,7 +8010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -8281,7 +8281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -8970,7 +8970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -9267,7 +9267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -9613,7 +9613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -9921,7 +9921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -10831,7 +10831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -11454,7 +11454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -13386,7 +13386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -14235,7 +14235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -15923,7 +15923,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -19019,7 +19019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -19325,7 +19325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -19694,7 +19694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -19856,7 +19856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -21793,7 +21793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -22394,7 +22394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -23434,7 +23434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -24167,7 +24167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -24846,7 +24846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -24981,7 +24981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -25386,7 +25386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -25845,7 +25845,7 @@ MonoBehaviour:
   events:
   - eventName: "\uC9D1\uC5D0 \uBB3C\uC774 \uC548\uB098\uC640\uC694"
     eventEngName: No Water
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 3ec4feab67571874686cc764af22f77f, type: 3}
     eventIndex: 0
     type: 0
     conditionType: 0
@@ -25864,35 +25864,14 @@ MonoBehaviour:
       prob: 50
     effectValue: 030000000600000009000000
     effectJackpotValue: 0a0000000f00000014000000
-  - eventName: "\uC9D1\uC5D0 \uC804\uAE30\uAC00 \uC548\uB4E4\uC5B4\uC640\uC694"
-    eventEngName: 'No Electricity  '
-    eventIcon: {fileID: 0}
+  - eventName: "\uD558\uC218\uAD6C\uC5D0\uC11C \uB0C4\uC0C8\uB098\uC694"
+    eventEngName: Smell
+    eventIcon: {fileID: 21300000, guid: 574538540cf7a7c48854aeef0087e8e5, type: 3}
     eventIndex: 1
     type: 0
     conditionType: 0
     valueType: 3
     targetIndex: 1
-    duplication: 0
-    curDay: 0
-    solutions:
-    - name: "\uC804\uAE30 \uC2DC\uC124 \uC635\uC158 \uCD94\uAC00"
-      engName: Add Electricity
-      cost: 500
-      prob: 100
-    - name: "\uD615\uAD11\uB4F1 \uAD50\uCCB4"
-      engName: Repair
-      cost: 250
-      prob: 50
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a0000000f00000014000000
-  - eventName: "\uD558\uC218\uAD6C\uC5D0\uC11C \uB0C4\uC0C8\uB098\uC694"
-    eventEngName: Smell
-    eventIcon: {fileID: 0}
-    eventIndex: 2
-    type: 0
-    conditionType: 0
-    valueType: 3
-    targetIndex: 2
     duplication: 0
     curDay: 0
     solutions:
@@ -25906,9 +25885,30 @@ MonoBehaviour:
       prob: 30
     effectValue: 030000000600000009000000
     effectJackpotValue: 0a0000000f00000014000000
+  - eventName: "\uC9D1\uC5D0 \uC804\uAE30\uAC00 \uC548\uB4E4\uC5B4\uC640\uC694"
+    eventEngName: 'No Electricity  '
+    eventIcon: {fileID: 21300000, guid: 31a6061301232c949b33e4a253aa05cb, type: 3}
+    eventIndex: 2
+    type: 0
+    conditionType: 0
+    valueType: 3
+    targetIndex: 2
+    duplication: 0
+    curDay: 0
+    solutions:
+    - name: "\uC804\uAE30 \uC2DC\uC124 \uC635\uC158 \uCD94\uAC00"
+      engName: Add Electricity
+      cost: 500
+      prob: 100
+    - name: "\uD615\uAD11\uB4F1 \uAD50\uCCB4"
+      engName: Repair
+      cost: 250
+      prob: 50
+    effectValue: 030000000600000009000000
+    effectJackpotValue: 0a0000000f00000014000000
   - eventName: "\uC774\uC6C3\uB4E4\uC774 \uC2DC\uB044\uB7EC\uC6CC\uC694"
     eventEngName: Noisy
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 4cca3031a745b514d8444175c86e74f9, type: 3}
     eventIndex: 3
     type: 0
     conditionType: 0
@@ -25930,7 +25930,7 @@ MonoBehaviour:
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBB3C\uAC74\uC744 \uC0B4 \uACF3\uC774
       \uC5C6\uC5B4\uC694"
     eventEngName: 'Can not Buy '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 36d7e36461108c24f8380a6ebac145e2, type: 3}
     eventIndex: 4
     type: 0
     conditionType: 1
@@ -25951,7 +25951,7 @@ MonoBehaviour:
     effectJackpotValue: 080000000f000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC601\uD654\uAD00\uC774 \uC5C6\uC5B4\uC694"
     eventEngName: 'No Movie '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: fc7e3638a385eeb408576a8bab747b4b, type: 3}
     eventIndex: 5
     type: 0
     conditionType: 1
@@ -25972,7 +25972,7 @@ MonoBehaviour:
     effectJackpotValue: 080000000f000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBBF8\uC220\uAD00\uC774 \uC5C6\uC5B4\uC694"
     eventEngName: No Art Museum
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 5e84bd72e18de1d41a89b9f49f1ccebb, type: 3}
     eventIndex: 6
     type: 0
     conditionType: 1
@@ -25993,7 +25993,7 @@ MonoBehaviour:
     effectJackpotValue: 080000000f000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uACF5\uC6D0\uC774 \uC5C6\uC5B4\uC694"
     eventEngName: No Park
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: bab9c7a3d772d0f49ac99fd8dba4880d, type: 3}
     eventIndex: 7
     type: 0
     conditionType: 1
@@ -26014,7 +26014,7 @@ MonoBehaviour:
     effectJackpotValue: 0f000000140000001e000000
   - eventName: "\uBD88\uC774 \uB0AC\uC5B4\uC694"
     eventEngName: Fire
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 4f94b5b8b82eb744ea821e5e99b0a873, type: 3}
     eventIndex: 8
     type: 0
     conditionType: 1
@@ -26035,7 +26035,7 @@ MonoBehaviour:
     effectJackpotValue: 19000000
   - eventName: "\uAC70\uB9AC\uAC00 \uBB34\uC11C\uC6CC\uC694"
     eventEngName: Scared Street
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 71204e6f62efead4d83b09b468210523, type: 3}
     eventIndex: 9
     type: 0
     conditionType: 1
@@ -26056,7 +26056,7 @@ MonoBehaviour:
     effectJackpotValue: 0a0000000c0000000f000000
   - eventName: "\uB204\uAC00 \uBB3C\uAC74\uC744 \uD6D4\uCCD0\uAC14\uC5B4\uC694"
     eventEngName: 'Steal '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 0e83afd756bddb54a9353c4f0267a34a, type: 3}
     eventIndex: 10
     type: 0
     conditionType: 1
@@ -26077,7 +26077,7 @@ MonoBehaviour:
     effectJackpotValue: 0d0000000d000000
   - eventName: "\uB3C4\uB451\uC774 \uB4E4\uC5C8\uC5B4\uC694"
     eventEngName: Thief
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 16df50db958fc4b4e873c2063c5ca0f3, type: 3}
     eventIndex: 11
     type: 0
     conditionType: 1
@@ -26098,7 +26098,7 @@ MonoBehaviour:
     effectJackpotValue: 28000000
   - eventName: "\uBCD1\uC5D0 \uAC78\uB838\uC5B4\uC694"
     eventEngName: 'Sick  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 8be40f3a31e26c64bac203e0e5837b4e, type: 3}
     eventIndex: 12
     type: 0
     conditionType: 2
@@ -26119,7 +26119,7 @@ MonoBehaviour:
     effectJackpotValue: 03000000070000000a000000
   - eventName: "\uC5D8\uB9AC\uBCA0\uC774\uD130\uAC00 \uACE0\uC7A5\uB0AC\uC5B4\uC694"
     eventEngName: 'Broken  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 71338e6ee788d0c41bb77d3aaed9381e, type: 3}
     eventIndex: 13
     type: 0
     conditionType: 2
@@ -26140,7 +26140,7 @@ MonoBehaviour:
     effectJackpotValue: 030000000500000008000000
   - eventName: "\uC0C1\uD488\uAC00\uACA9\uC774 \uC62C\uB790\uC5B4\uC694"
     eventEngName: 'Price Up  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 2be1bf446da23524185bba8c452cea40, type: 3}
     eventIndex: 14
     type: 1
     conditionType: 2
@@ -26153,7 +26153,7 @@ MonoBehaviour:
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uC62C\uB790\uC5B4\uC694"
     eventEngName: 'Fee Up  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: ab2e1e7e7cccd104aa70cdbe50fe68d5, type: 3}
     eventIndex: 15
     type: 1
     conditionType: 2
@@ -26164,9 +26164,22 @@ MonoBehaviour:
     solutions: []
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
+  - eventName: "\uC601\uD654\uAC00 \uC720\uD589\uD574\uC694"
+    eventEngName: 'Price Down  '
+    eventIcon: {fileID: 21300000, guid: 061b07b766137fc45a01f46900600446, type: 3}
+    eventIndex: 16
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 6
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 190000001900000019000000
+    effectJackpotValue: 640000006400000064000000
   - eventName: "\uC77C\uC790\uB9AC\uAC00 \uC5C6\uC5B4\uC694"
     eventEngName: 'No Job  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 59c5e1ef2587ed34889fd3031b4bebb2, type: 3}
     eventIndex: 17
     type: 1
     conditionType: 2
@@ -26179,7 +26192,7 @@ MonoBehaviour:
     effectJackpotValue: 9cffffff9cffffff9cffffff
   - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uB0B4\uB838\uC5B4\uC694"
     eventEngName: 'Fee Down  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: bad46331ebd05c74cb929944df5fa0f4, type: 3}
     eventIndex: 18
     type: 1
     conditionType: 2
@@ -26190,9 +26203,22 @@ MonoBehaviour:
     solutions: []
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
+  - eventName: "\uBBF8\uC220\uC774 \uC720\uD589\uD574\uC694"
+    eventEngName: 'Price Down  '
+    eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
+    eventIndex: 19
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 9
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 190000001900000019000000
+    effectJackpotValue: 640000006400000064000000
   - eventName: "\uC77C\uC790\uB9AC\uAC00 \uB9CE\uC544\uC694"
     eventEngName: 'Many Job  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 510d45d535d1a1042a69fd5d90698d05, type: 3}
     eventIndex: 20
     type: 1
     conditionType: 2
@@ -26205,7 +26231,7 @@ MonoBehaviour:
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uC0C1\uD488 \uAC00\uACA9\uC774 \uB0B4\uB838\uC5B4\uC694"
     eventEngName: 'Price Down  '
-    eventIcon: {fileID: 0}
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 21
     type: 1
     conditionType: 2
@@ -29040,7 +29066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -29793,7 +29819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -31292,7 +31318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -32101,7 +32127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -33162,7 +33188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -33304,7 +33330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -34676,7 +34702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -35503,7 +35529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -35742,7 +35768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -35875,7 +35901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -36851,7 +36877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -39963,7 +39989,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -40125,7 +40151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -40365,7 +40391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -41409,7 +41435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -41544,7 +41570,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -41795,8 +41821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34.8, y: -117.75}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -27.43, y: -97.29}
+  m_SizeDelta: {x: 214.74, y: 9.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858571503
 MonoBehaviour:
@@ -41818,7 +41844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 70
+  m_text: 70%
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
   m_sharedMaterial: {fileID: 4479025330240497328, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
@@ -42340,7 +42366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -42613,7 +42639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -43370,7 +43396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -44315,7 +44341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -46870,7 +46896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -47329,7 +47355,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.5764706, g: 0.76862746, b: 0.5254902, a: 0}
+  m_BackGroundColor: {r: 0.5764706, g: 0.7686275, b: 0.5254902, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -49681,7 +49707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -50586,7 +50612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -54592,7 +54618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -56567,7 +56593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -57826,7 +57852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -58124,7 +58150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -58714,7 +58740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -59748,7 +59774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -60446,7 +60472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -61423,7 +61449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -61940,7 +61966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -62087,7 +62113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -62740,7 +62766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -64553,7 +64579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -65628,7 +65654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -67949,6 +67975,9 @@ MonoBehaviour:
   - {r: 0.8627451, g: 0.92941177, b: 0.19215687, a: 0}
   - {r: 0.9372549, g: 0.1764706, b: 0.3372549, a: 0}
   - {r: 0.26666668, g: 0.06666667, b: 0.31764707, a: 0}
+  tilePurchaseColors:
+  - {r: 0.86274517, g: 0.73333335, b: 0.5372549, a: 0}
+  - {r: 0.5764706, g: 0.7686275, b: 0.5254902, a: 0}
   isColorMode: 0
   isInfluenceMode: 0
   isAddtionalMode: 0
@@ -68457,7 +68486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -70968,7 +70997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -73593,7 +73622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -74207,7 +74236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -74477,7 +74506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -74747,7 +74776,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -75611,7 +75640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -76393,7 +76422,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -76998,7 +77027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -77909,7 +77938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -79661,7 +79690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -79933,7 +79962,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -80316,7 +80345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -80766,7 +80795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -81565,7 +81594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -82987,7 +83016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -83594,7 +83623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -84948,7 +84977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ce468ce5683454d8fcd7adcd0f928f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIdx: 0
+  levelIdx: -1
   level:
   - type: 0
     residentCondition: 0
@@ -85248,7 +85277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -85719,7 +85748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -86151,7 +86180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -86497,7 +86526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -86922,7 +86951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -90215,7 +90244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -91910,7 +91939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -93610,7 +93639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -94688,7 +94717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -95668,7 +95697,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -96937,7 +96966,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -97589,7 +97618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -98466,7 +98495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -99254,7 +99283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -99813,7 +99842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -101344,7 +101373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -101951,7 +101980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}

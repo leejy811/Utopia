@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -37,10 +38,7 @@ public class Tile : MonoBehaviour
 
     public void SetTilePurchased(bool isPurchased)
     {
-        if (isPurchased)
-            SetTileColor(Color.green);
-        else
-            SetTileColor(Color.red);
+        SetTileColor(isPurchased);
 
         this.isPurchased = isPurchased;
     }
@@ -83,6 +81,17 @@ public class Tile : MonoBehaviour
             if (renderer == border) continue;
 
             renderer.material.color = color;
+        }
+    }
+
+    public void SetTileColor(bool isPurchased)
+    {
+        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
+        foreach (MeshRenderer renderer in renderers)
+        {
+            if (renderer == border) continue;
+
+            renderer.material.color = Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)];
         }
     }
 }

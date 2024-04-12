@@ -13,10 +13,10 @@ public struct StatisticBar
 
     public void SetValue(int total, int value)
     {
-        float ratio = value / total;
+        float ratio = total == 0 ? 0 : value / (float)total;
 
         moneyText.text = value.ToString() + "원";
-        ratioText.text = ((int)ratio).ToString() + "%";
+        ratioText.text = ((int)(ratio * 100)).ToString() + "%";
         ratioSlider.value = ratio;
     }
 }
@@ -32,7 +32,7 @@ public struct ComprisonUI
     {
         resultText.text = today.ToString();
         yesterdayText.text = yesterday.ToString();
-        todayText.text = yesterday.ToString() + (today - yesterday).ToString("+#;-#;0") + "=" + today.ToString();
+        todayText.text = yesterday.ToString() + " " + GetSignString(today - yesterday, "-") + "=" + today.ToString();
 
         if (isHappiness)
         {
@@ -40,6 +40,27 @@ public struct ComprisonUI
             yesterdayText.text += "%";
             todayText.text += "%";
         }
+        else
+        {
+            resultText.text += "명";
+            yesterdayText.text += "명";
+            todayText.text += "명";
+        }
+
+        if (yesterday > today)
+            resultText.text += "<sprite=5>";
+        else if(yesterday < today)
+            resultText.text += "<sprite=6>";
+    }
+
+    public string GetSignString(int data, string zeroSign)
+    {
+        if (data > 0)
+            return "+ " + data.ToString();
+        else if (data < 0)
+            return "- " + Mathf.Abs(data).ToString();
+        else
+            return zeroSign + " " + data.ToString();
     }
 }
 
@@ -73,8 +94,8 @@ public class StatisticUI : MonoBehaviour
         int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + CommercialBuilding.bonusCost + CultureBuilding.bonusCost + Tile.income;
 
         cityLevelText.text = levelString[CityLevelManager.instance.levelIdx];
-        totalTaxText.text = totalTax.ToString("+#;-#;0") + "원";
-        totalSpendText.text = totalSpend.ToString("+#;-#;0") + "원";
+        totalTaxText.text = GetSignString(totalTax, "+") + "원";
+        totalSpendText.text = GetSignString(totalSpend, "-") + "원";
 
         residentialTaxBar.SetValue(totalTax, ResidentialBuilding.income);
         commercialTaxBar.SetValue(totalTax, CommercialBuilding.income + CommercialBuilding.bonusIncome);
@@ -84,8 +105,19 @@ public class StatisticUI : MonoBehaviour
         tileCostBar.SetValue(totalSpend, Tile.income);
         etcCostBar.SetValue(totalSpend, ResidentialBuilding.bonusCost + CommercialBuilding.bonusCost + CultureBuilding.bonusCost);
 
-        totalCostText.text = totalTax.ToString() + totalSpend.ToString("+#;-#;0") + "=" + (totalTax - totalSpend).ToString("+#;-#;0");
+        totalCostText.text = totalTax.ToString() + " " + GetSignString(totalSpend, "-") + " = " + GetSignString(totalTax + totalSpend, "");
         happinessComparison.SetValue((int)RoutineManager.instance.cityHappiness, (int)(RoutineManager.instance.cityHappiness - RoutineManager.instance.cityHappinessDifference), true);
-        residentComparison.SetValue(ResidentialBuilding.cityResident, ResidentialBuilding.cityResident - ResidentialBuilding.residentReduction, false);
+        residentComparison.SetValue(ResidentialBuilding.yesterDayResident, ResidentialBuilding.cityResident, false);
+    }
+
+    private string GetSignString(int data, string zeroSign)
+    {
+        
+        if (data > 0)
+            return "+ " + data.ToString();
+        else if (data < 0)
+            return "- " + Mathf.Abs(data).ToString();
+        else
+            return zeroSign + " " + data.ToString();
     }
 }

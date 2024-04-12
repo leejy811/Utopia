@@ -165,15 +165,27 @@ public class UIManager : MonoBehaviour
         if(eventNotify.gameObject.activeSelf)
             SetEventNotifyValue(building);
 
-        targetBuilding = building;
-        int idx = GetBuildingIndex();
-
         if (building == null)
-            buildingIntros[idx].gameObject.SetActive(false);
+        {
+            foreach(BuildingIntroUI introUI in buildingIntros)
+                introUI.gameObject.SetActive(false);
+        }
         else
         {
-            buildingIntros[idx].gameObject.SetActive(true);
-            buildingIntros[idx].SetValue(building);
+            targetBuilding = building;
+            int idx = GetBuildingIndex();
+
+            for(int i = 0;i < buildingIntros.Length;i++)
+            {
+                if(i == idx)
+                {
+                    buildingIntros[i].gameObject.SetActive(true);
+                    buildingIntros[i].SetValue(building);
+
+                }
+                else
+                    buildingIntros[i].gameObject.SetActive(false);
+            }
         }
     }
 
@@ -219,7 +231,7 @@ public class UIManager : MonoBehaviour
 
     public void SetHappinessPopUp(int amount, Vector3 position)
     {
-        string massage = amount > 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>";
+        string massage = amount < 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>";
 
         TemporayUI message = Instantiate(happinessMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(massage, position);
@@ -339,7 +351,7 @@ public class UIManager : MonoBehaviour
 
     public void OnClickEventNotify()
     {
-        SetEventNotifyPopUp(true);
+        ShopManager.instance.ChangeState(BuyState.EventCheck);
     }
 
     public void OnClickEventNotifyNext(bool isRight)

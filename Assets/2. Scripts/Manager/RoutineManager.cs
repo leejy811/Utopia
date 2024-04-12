@@ -29,17 +29,11 @@ public class RoutineManager : MonoBehaviour
 
     public void DailyUpdate()
     {
-        day.AddDays(1);
+        day = day.AddDays(1);
 
         Building.InitStaticCalcValue();
         CalculateBuilding();
         CalculateAdditional();
-
-        if (BuildingSpawner.instance.buildings.Count >= 12)
-        {
-            EventManager.instance.CheckEvents();
-            EventManager.instance.RandomRoulette();
-        }
         UpdateHappiness();
     }
 
@@ -78,8 +72,6 @@ public class RoutineManager : MonoBehaviour
             total += building.happinessRate;
         }
 
-        EventManager.instance.EffectUpdate();
-
         if (BuildingSpawner.instance.buildings.Count != 0)
         {
             cityHappinessDifference = cityHappiness - total / BuildingSpawner.instance.buildings.Count;
@@ -98,7 +90,15 @@ public class RoutineManager : MonoBehaviour
 
     public void UpdateAfterStat()
     {
-        ResidentialBuilding.cityResident -= ResidentialBuilding.residentReduction;
+        ResidentialBuilding.yesterDayResident = ResidentialBuilding.cityResident;
         cityHappiness -= cityHappinessDifference;
+
+        if (BuildingSpawner.instance.buildings.Count >= 1)
+        {
+            EventManager.instance.CheckEvents();
+            EventManager.instance.RandomRoulette();
+        }
+
+        EventManager.instance.EffectUpdate();
     }
 }

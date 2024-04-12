@@ -8,7 +8,7 @@ public enum OptionType { Water = 0, Sewage, Electricity, SoundInsulation }
 public class ResidentialBuilding : Building
 {
     public static int cityResident;
-    public static int residentReduction;
+    public static int yesterDayResident;
     public static int income;
     public static int bonusCost;
 
@@ -67,12 +67,14 @@ public class ResidentialBuilding : Building
         {
             BoundaryValue resident = values[ValueType.Resident];
             resident.cur -= (int)(values[ValueType.Resident].max * 0.1f);
-            residentReduction += (int)(values[ValueType.Resident].max * 0.1f);
+            cityResident -= (int)(values[ValueType.Resident].max * 0.1f);
             values[ValueType.Resident] = resident;
         }
 
         float res = values[ValueType.Resident].cur * (happinessRate / 100.0f) * (4 - grade);
-        return happinessRate >= 80 ? ((int)(res * 1.5f)) : (int)res;
+        res = happinessRate >= 80 ? ((int)(res * 1.5f)) : (int)res;
+        income += (int)res;
+        return (int)res;
     }
 
     public override int CalculateBonus()

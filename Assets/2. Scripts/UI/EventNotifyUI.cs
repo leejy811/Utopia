@@ -35,7 +35,7 @@ public class EventNotifyUI : MonoBehaviour
             ShopManager.instance.SetObjectColor(EventManager.instance.eventBuildings[curIndex].gameObject, Color.white);
 
         int sign = isRight ? 1 : -1;
-        curIndex = (curIndex + sign) % EventManager.instance.eventBuildings.Count;
+        curIndex = (curIndex + sign + EventManager.instance.eventBuildings.Count) % EventManager.instance.eventBuildings.Count;
 
         SetValue(EventManager.instance.eventBuildings[curIndex]);
     }
@@ -44,10 +44,5 @@ public class EventNotifyUI : MonoBehaviour
     {
         curIndex = 0;
         SetValue(EventManager.instance.eventBuildings[curIndex]);
-    }
-
-    private void OnDisable()
-    {
-        ShopManager.instance.SetObjectColor(EventManager.instance.eventBuildings[curIndex].gameObject, Color.white);
     }
 }

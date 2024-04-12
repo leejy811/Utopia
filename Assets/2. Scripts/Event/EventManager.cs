@@ -171,15 +171,22 @@ public class EventManager : MonoBehaviour
             {
                 if (ReferenceEquals(eventBuildings[i], building))
                 {
+                    ShopManager.instance.SetObjectColor(eventBuildings[i].gameObject, Color.white);
+
+                    if (UIManager.instance.eventNotify.gameObject.activeSelf)
+                    {
+                        if (eventBuildings.Count == 1)
+                            UIManager.instance.SetEventNotifyPopUp(false);
+                        else if(i == 0)
+                            UIManager.instance.OnClickEventNotifyNext(true);
+                        else
+                            UIManager.instance.OnClickEventNotifyNext(false);
+                    }
+
                     eventBuildings.RemoveAt(i);
                     break;
                 }
             }
-
-            if (eventBuildings.Count == 0)
-                UIManager.instance.SetEventNotifyPopUp(false);
-            else
-                UIManager.instance.OnClickEventNotifyNext(false);
         }
     }
 }

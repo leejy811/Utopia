@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
 
-public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, SolveBuilding }
+public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, SolveBuilding, EventCheck }
 
 public class ShopManager : MonoBehaviour
 {
@@ -70,6 +70,11 @@ public class ShopManager : MonoBehaviour
             SetSolveEvent();
         else if (state == BuyState.SolveBuilding)
             SetSolveEvent(pickObject);
+
+        if (buyState == BuyState.EventCheck)
+            SetCheckEvent(false);
+        else if (state == BuyState.EventCheck)
+            SetCheckEvent(true);
 
         switch (state)
         {
@@ -137,7 +142,7 @@ public class ShopManager : MonoBehaviour
         {
             foreach (Vector2Int pos in curPickTiles)
             {
-                Grid.instance.tiles[pos.x, pos.y].SetTileColor(Color.red);
+                Grid.instance.tiles[pos.x, pos.y].SetTileColor(false);
             }
             curPickTiles.Clear();
             return;
@@ -160,7 +165,7 @@ public class ShopManager : MonoBehaviour
             if (Grid.instance.tiles[pos.x, pos.y].CheckPurchased())
             {
                 curPickTiles.Add(pos);
-                Grid.instance.tiles[pos.x, pos.y].SetTileColor(Color.green);
+                Grid.instance.tiles[pos.x, pos.y].SetTileColor(true);
             }
         }
     }
@@ -179,14 +184,23 @@ public class ShopManager : MonoBehaviour
 
     public void SolveEvent(int index)
     {
-        Building building = curPickObject.GetComponent<Building>();
+        Building building;
+        if (buyState == BuyState.SolveBuilding)
+            building = curPickObject.GetComponent<Building>();
+        else
+            building = EventManager.instance.eventBuildings[UIManager.instance.eventNotify.curIndex];
+
         int cost = building.curEvents[index / 2].solutions[index % 2].cost;
 
-        if (buyState != BuyState.SolveBuilding) return;
+        if (buyState != BuyState.SolveBuilding && buyState != BuyState.EventCheck) return;
         if (!PayMoney(cost)) return;
 
         building.SolveEvent(index);
-        UIManager.instance.SetBuildingIntroPopUp(building);
+
+        if (buyState == BuyState.SolveBuilding)
+            UIManager.instance.SetBuildingIntroPopUp(building);
+        else if(buyState == BuyState.EventCheck && building.GetEventProblemCount() != 0)
+            UIManager.instance.SetEventNotifyValue(building);
     }
 
     public void CheckBuyBuilding(Transform tileTrans)
@@ -212,7 +226,10 @@ public class ShopManager : MonoBehaviour
         if(obj.tag == "Tile")
         {
             if (obj.GetComponent<Tile>().CheckPurchased())
-                obj.GetComponent<Tile>().SetTileColor(color);
+            {
+                bool isPurchased = color == Color.red ? false : true;
+                obj.GetComponent<Tile>().SetTileColor(isPurchased);
+            }
             return;
         }
 
@@ -247,7 +264,16 @@ public class ShopManager : MonoBehaviour
     private void SetSolveEvent(GameObject pickObject = null)
     {
         if (pickObject != null)
+        {
             curPickObject = pickObject;
-        UIManager.instance.SetBuildingIntroPopUp(pickObject.GetComponent<Building>());
+            UIManager.instance.SetBuildingIntroPopUp(pickObject.GetComponent<Building>());
+        }
+        else
+            UIManager.instance.SetBuildingIntroPopUp();
+    }
+
+    private void SetCheckEvent(bool active)
+    {
+        UIManager.instance.SetEventNotifyPopUp(active);
     }
 }

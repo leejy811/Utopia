@@ -45,14 +45,13 @@ public class BuildingIntroUI : MonoBehaviour
     string[] typeString = { "주거", "상업", "문화", "서비스" };
     string[] subTypeString = { "아파트", "잡화", "영화", "경찰", "음식", "미술", "소방", "여가" };
     string[] valueTypeString = { "상품 가격", "입장료", "취업률" };
-    string[] happyIcon = { "10", "4", "0", "14", "5" };
 
     public void SetValue(Building building)
     {
         buildingNameText.text = building.buildingName;
         buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType] + "/" + building.grade + "등급";
-        happinessText.text = "<sprite=" + happyIcon[building.happinessRate / 20] + "> " + building.happinessRate + "(+" + building.happinessDifference + ")%";
-        happinessStringText.text = building.happinessDifference > 0 ? "행복도 증가" : building.happinessDifference < 0 ? "행복도 감소" : "행복도 변화없음";
+        happinessText.text = "<sprite=" + building.happinessRate / 20 + "> " + building.happinessRate + "(" + building.happinessDifference + ")%";
+        happinessStringText.text = building.happinessDifference > 0 ? "행복도 증가<sprite=6>" : building.happinessDifference < 0 ? "행복도 감소<sprite=5>" : "행복도 유지";
 
         if (building.type == BuildingType.Residential)
         {
@@ -83,8 +82,9 @@ public class BuildingIntroUI : MonoBehaviour
 
         for (int i = 0;i < eventUIInfos.Length; i++)
         {
+            eventUIInfos[i].iconImage.sprite = curEvent[i].eventIcon;
             eventUIInfos[i].nameText.text = curEvent[i].eventName.ToString();
-            eventUIInfos[i].dayText.text = "(D-" + (curEvent[i].effectValue.Count - curEvent[i].curDay).ToString() + ")";
+            eventUIInfos[i].dayText.text = "(D-" + (curEvent[i].effectValue.Count - curEvent[i].curDay + 1).ToString() + ")";
 
             for (int j = 0; j < eventUIInfos[i].solutionUIInfos.Length; j++)
             {
