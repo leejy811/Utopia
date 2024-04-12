@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A64E31A3-4803-4680-9012-D6B012ACB40A}" SchemaVersion="119">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{A64E31A3-4803-4680-9012-D6B012ACB40A}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{BC39723B-58CF-4097-9D33-6B79C2E2756F}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_ForestAmbience" ID="{3102994D-9723-447C-9B5C-80CE8AFEB234}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Slot_rimshot" ID="{7E2A8A70-AF09-4661-89A2-CA94201918A9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_singsingsingmybird" ID="{71C98809-300D-474F-8BB9-A49AF57F7D98}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Select_Button" ID="{9B36C684-91CF-48E7-B6E9-C8192BE67E41}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

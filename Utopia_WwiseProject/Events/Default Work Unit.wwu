@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" SchemaVersion="119">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_ForestAmbience" ID="{3102994D-9723-447C-9B5C-80CE8AFEB234}">
+					<ChildrenList>
+						<Action Name="" ID="{442435F0-9E43-4B0E-8EBD-2BE93732864D}" ShortID="1002114348">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestAmbience" ID="{0537576E-F521-4F97-B2B4-2FBAF13ACD8F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Select_Button" ID="{9B36C684-91CF-48E7-B6E9-C8192BE67E41}">
+					<ChildrenList>
+						<Action Name="" ID="{BD508AA1-65A0-4E4E-970A-8F2E850CCDEF}" ShortID="51466501">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Select_Button" ID="{5531BEA6-7886-4331-B4FD-52B99033651D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Slot_rimshot" ID="{7E2A8A70-AF09-4661-89A2-CA94201918A9}">
+					<ChildrenList>
+						<Action Name="" ID="{ABC45735-6632-4010-9BF5-33DF62F0990B}" ShortID="263061852">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slot_rimshot" ID="{BF6851CF-5F8D-4300-909D-7425A9DAD7D6}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_singsingsingmybird" ID="{71C98809-300D-474F-8BB9-A49AF57F7D98}">
+					<ChildrenList>
+						<Action Name="" ID="{7F1A9118-2105-42A3-9032-9FA8E55CFF3A}" ShortID="164483660">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="singsingsingmybird" ID="{8F914638-3622-4223-B09B-AEBE066755E4}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

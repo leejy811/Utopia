@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" SchemaVersion="119">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="ForestAmbience" ID="{0537576E-F521-4F97-B2B4-2FBAF13ACD8F}" ShortID="858632466">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="utopia sound design" ID="{D7C1FF03-D1F2-4AE0-9BB5-8ABD3620A55D}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="1.99765845362535"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="1.99765845362535"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>utopia sound design.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="824445506"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="utopia sound design" ID="{D7C1FF03-D1F2-4AE0-9BB5-8ABD3620A55D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Select_Button" ID="{5531BEA6-7886-4331-B4FD-52B99033651D}" ShortID="829550600">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button" ID="{6AF99F73-3A87-41C0-BA32-D08C9E004A75}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.00263891371044995"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0755837619600686"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="95965161"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button" ID="{6AF99F73-3A87-41C0-BA32-D08C9E004A75}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Slot_rimshot" ID="{BF6851CF-5F8D-4300-909D-7425A9DAD7D6}" ShortID="293382248">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="SO_BA_rim_chin_upbounce" ID="{4DF51A62-2DE4-4EE7-A7DD-9F02EF267239}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.00129749460759914"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0382760909241745"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.0776334273546817"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>SO_BA_rim_chin_upbounce.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="779451324"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="SO_BA_rim_chin_upbounce" ID="{4DF51A62-2DE4-4EE7-A7DD-9F02EF267239}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

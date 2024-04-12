@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{59C0CDEC-E79A-6EE6-3831-1DBBC7766CF8}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="95965161" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button.wav</ShortName>
+					<CachePath>SFX/ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem</CachePath>
+				</File>
+				<File Id="779451324" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SO_BA_rim_chin_upbounce.wav</ShortName>
+					<CachePath>SFX/SO_BA_rim_chin_upbounce_F1EB82C2.wem</CachePath>
+				</File>
+				<File Id="824445506" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>utopia sound design.wav</ShortName>
+					<CachePath>SFX/utopia sound design_73CAD344.wem</CachePath>
+				</File>
+				<File Id="987196180" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>singsingsingmybird.wav</ShortName>
+					<CachePath>SFX/singsingsingmybird_FBC78EF0.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3149538809" Name="Play_ForestAmbience" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="824445506"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="880454473" Name="Play_Select_Button" DurationType="OneShot" DurationMin="1.458322" DurationMax="1.458322">
+					<MediaRefs>
+						<MediaRef Id="95965161"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2446290240" Name="Play_singsingsingmybird" DurationType="OneShot" DurationMin="177.10014" DurationMax="177.10014">
+					<MediaRefs>
+						<MediaRef Id="987196180"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1073654463" Name="Play_Slot_rimshot" DurationType="OneShot" DurationMin="0.077633426" DurationMax="0.077633426">
+					<MediaRefs>
+						<MediaRef Id="779451324"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{090785D8-3BFA-36F2-AAA6-BDAC0EE24BF3}</FileHash>
+</SoundBanksInfo>

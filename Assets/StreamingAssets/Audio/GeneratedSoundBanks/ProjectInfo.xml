@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo>
+	<Project Name="Utopia_WwiseProject" GUID="{8DD74451-AF4E-4011-BD1A-88E91136089A}" Generator="2023.1.2.8444"/>
+	<CacheRoot>../../../../Utopia_WwiseProject/.cache</CacheRoot>
+	<Platforms>
+		<Platform Name="Android" GUID="{D1FBAD29-E2EB-4067-8663-EA6B2B6F8DE0}" BasePlatform="Android" BasePlatformGUID="{A2D401DE-B8B6-4FEB-8142-137C34D507CA}" Path="../../../../Utopia_WwiseProject/GeneratedSoundBanks/Android"/>
+		<Platform Name="Mac" GUID="{956D11FF-F9F8-4501-899E-B3B884E0140F}" BasePlatform="Mac" BasePlatformGUID="{9C6217D5-DD11-4795-87C1-6CE02853C540}" Path="../../../../Utopia_WwiseProject/GeneratedSoundBanks/Mac"/>
+		<Platform Name="Windows" GUID="{793EF516-F07B-4720-8135-260F0FAB24FE}" BasePlatform="Windows" BasePlatformGUID="{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}" Path="../../../../Utopia_WwiseProject/GeneratedSoundBanks/Windows"/>
+	</Platforms>
+	<Languages>
+		<Language Name="English(US)" Id="684519430" GUID="{04EE30E9-BBE0-406C-9DA5-5FD804674DC0}" Default="true" UseAsStandIn="true"/>
+	</Languages>
+	<FileHash>{6DB5D692-01F4-32F9-4F40-4158239271CE}</FileHash>
+</ProjectInfo>
