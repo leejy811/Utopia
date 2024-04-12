@@ -127,7 +127,7 @@ public class Building : MonoBehaviour
                     ApplyEventEffect(newEvent.effectValue[newEvent.curDay], newEvent.valueType);
             }
 
-            if (GetEventProblemCount() == 0)
+            if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
                 EventManager.instance.SetEventBuildings(this, true);
             curEvents.Add(newEvent);
         }
@@ -210,12 +210,10 @@ public class Building : MonoBehaviour
 
     protected void SetSolveEvent(int index)
     {
-        Debug.Log(index);
         ApplyEventProblem(curEvents[index], true);
-        curEvents.RemoveAt(index);
-
-        if (GetEventProblemCount() == 0)
+        if (GetEventProblemCount() == 1 && curEvents[index].type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, false);
+        curEvents.RemoveAt(index);
     }
 
     public List<Event> GetEventProblem()
