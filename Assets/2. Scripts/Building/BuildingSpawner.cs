@@ -13,7 +13,7 @@ public class BuildingSpawner : MonoBehaviour
 
     public int[] buildingCount;
 
-    private bool isHighlightMode;
+    public bool isHighlightMode;
 
     private void Awake()
     {
@@ -90,7 +90,7 @@ public class BuildingSpawner : MonoBehaviour
 
         foreach (Building building in buildings)
         {
-            if(building.curEvents.Count > 0 && isHighlightMode)
+            if(building.GetEventProblemCount() > 0 && isHighlightMode)
                 ShopManager.instance.SetObjectColor(building.gameObject, Color.yellow);
             else
                 ShopManager.instance.SetObjectColor(building.gameObject, Color.white);
@@ -103,7 +103,7 @@ public class BuildingSpawner : MonoBehaviour
 
         foreach (Building building in buildings)
         {
-            if (building.curEvents.Count > 0)
+            if (building.GetEventProblemCount() > 0)
                 cnt++;
         }
 

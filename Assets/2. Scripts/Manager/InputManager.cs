@@ -60,11 +60,6 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
         {
-            if (state == BuyState.BuyTile)
-                ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
-            else if (state == BuyState.SellBuilding)
-                ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
-
             UIManager.instance.SetAllPopUp();
         }
         else if (Input.GetKeyDown(KeyCode.R))
