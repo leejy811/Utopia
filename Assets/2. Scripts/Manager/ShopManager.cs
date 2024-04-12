@@ -30,7 +30,7 @@ public class ShopManager : MonoBehaviour
         }
 
         instance = this;
-        Money = 500;
+        Money = 3000;
     }
 
     public void GetMoney(int amount)

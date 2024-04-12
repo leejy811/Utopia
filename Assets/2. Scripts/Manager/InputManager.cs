@@ -160,15 +160,15 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.X))
         {
-            //ToDo 문제 알림 시스템 연결
+            UIManager.instance.OnClickEventNotify();
         }
         else if (Input.GetKeyDown(KeyCode.V))
         {
-            UIManager.instance.OnClickTileInfluenceMode();
+            UIManager.instance.OnClickTileColorMode();
         }
         else if (Input.GetKeyDown(KeyCode.C))
         {
-            UIManager.instance.OnClickTileColorMode();
+            UIManager.instance.OnClickTileInfluenceMode();
         }
         else if (Input.GetKeyDown(KeyCode.B))
         {
