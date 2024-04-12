@@ -315,10 +315,19 @@ public class UIManager : MonoBehaviour
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
             else if (ShopManager.instance.buyState == BuyState.SellBuilding)
                 ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
             ShopManager.instance.ChangeState(BuyState.None);
             SetCityLevelPopUp(false);
             tileListPopUp.gameObject.SetActive(false);
-            SetBuildingListValue(index);
+
+            if (Grid.instance.isInfluenceMode)
+                Grid.instance.SetTileInfluenceMode();
+
+            if (Grid.instance.isColorMode)
+                Grid.instance.SetTileColorMode();
+
+            if (BuildingSpawner.instance.isHighlightMode)
+                BuildingSpawner.instance.EventBuildingsHighlight();
         }
         else
         {
@@ -333,9 +342,19 @@ public class UIManager : MonoBehaviour
             ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
         else if (ShopManager.instance.buyState == BuyState.SellBuilding)
             ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
         ShopManager.instance.ChangeState(BuyState.None);
         OnClickBuildingBuyPopUp(-1);
         SetCityLevelPopUp(false);
+
+        if (Grid.instance.isInfluenceMode)
+            Grid.instance.SetTileInfluenceMode();
+
+        if (Grid.instance.isColorMode)
+            Grid.instance.SetTileColorMode();
+
+        if (BuildingSpawner.instance.isHighlightMode)
+            BuildingSpawner.instance.EventBuildingsHighlight();
 
         tileListPopUp.gameObject.SetActive(!tileListPopUp.gameObject.activeSelf);
 
@@ -355,13 +374,47 @@ public class UIManager : MonoBehaviour
 
     public void OnClickBuildingSell()
     {
-        SetAllPopUp();
+        if (ShopManager.instance.buyState == BuyState.BuyTile)
+            ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+        else if (ShopManager.instance.buyState == BuyState.SellBuilding)
+            ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
+        OnClickBuildingBuyPopUp(-1);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
+
+        if (Grid.instance.isInfluenceMode)
+            Grid.instance.SetTileInfluenceMode();
+
+        if (Grid.instance.isColorMode)
+            Grid.instance.SetTileColorMode();
+
+        if (BuildingSpawner.instance.isHighlightMode)
+            BuildingSpawner.instance.EventBuildingsHighlight();
+
         ShopManager.instance.ChangeState(BuyState.SellBuilding);
     }
 
     public void OnClickTileBuy()
     {
-        SetAllPopUp();
+        if (ShopManager.instance.buyState == BuyState.BuyTile)
+            ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+        else if (ShopManager.instance.buyState == BuyState.SellBuilding)
+            ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
+        OnClickBuildingBuyPopUp(-1);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
+
+        if (Grid.instance.isInfluenceMode)
+            Grid.instance.SetTileInfluenceMode();
+
+        if (Grid.instance.isColorMode)
+            Grid.instance.SetTileColorMode();
+
+        if (BuildingSpawner.instance.isHighlightMode)
+            BuildingSpawner.instance.EventBuildingsHighlight();
+
         ShopManager.instance.ChangeState(BuyState.BuyTile);
     }
 
@@ -400,13 +453,41 @@ public class UIManager : MonoBehaviour
 
     public void OnClickTileColorMode()
     {
-        SetAllPopUp();
+        if (ShopManager.instance.buyState == BuyState.BuyTile)
+            ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+        else if (ShopManager.instance.buyState == BuyState.SellBuilding)
+            ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
+        ShopManager.instance.ChangeState(BuyState.None);
+        OnClickBuildingBuyPopUp(-1);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
+
+        if (Grid.instance.isInfluenceMode)
+            Grid.instance.SetTileInfluenceMode();
+
+        if (BuildingSpawner.instance.isHighlightMode)
+            BuildingSpawner.instance.EventBuildingsHighlight();
         Grid.instance.SetTileColorMode();
     }
 
     public void OnClickTileInfluenceMode()
     {
-        SetAllPopUp();
+        if (ShopManager.instance.buyState == BuyState.BuyTile)
+            ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+        else if (ShopManager.instance.buyState == BuyState.SellBuilding)
+            ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
+        ShopManager.instance.ChangeState(BuyState.None);
+        OnClickBuildingBuyPopUp(-1);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
+
+        if (Grid.instance.isColorMode)
+            Grid.instance.SetTileColorMode();
+
+        if (BuildingSpawner.instance.isHighlightMode)
+            BuildingSpawner.instance.EventBuildingsHighlight();
         Grid.instance.SetTileInfluenceMode();
     }
 
@@ -416,15 +497,40 @@ public class UIManager : MonoBehaviour
             ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
         else if (ShopManager.instance.buyState == BuyState.SellBuilding)
             ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
         ShopManager.instance.ChangeState(BuyState.None);
         OnClickBuildingBuyPopUp(-1);
         tileListPopUp.gameObject.SetActive(false);
+
+        if (Grid.instance.isInfluenceMode)
+            Grid.instance.SetTileInfluenceMode();
+
+        if (Grid.instance.isColorMode)
+            Grid.instance.SetTileColorMode();
+
+        if (BuildingSpawner.instance.isHighlightMode)
+            BuildingSpawner.instance.EventBuildingsHighlight();
+
         SetCityLevelPopUp(!cityLevel.gameObject.activeSelf);
     }
 
     public void OnClickEventHighLight()
     {
-        SetAllPopUp();
+        if (ShopManager.instance.buyState == BuyState.BuyTile)
+            ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
+        else if (ShopManager.instance.buyState == BuyState.SellBuilding)
+            ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
+        ShopManager.instance.ChangeState(BuyState.None);
+        OnClickBuildingBuyPopUp(-1);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
+
+        if (Grid.instance.isInfluenceMode)
+            Grid.instance.SetTileInfluenceMode();
+
+        if (Grid.instance.isColorMode)
+            Grid.instance.SetTileColorMode();
         BuildingSpawner.instance.EventBuildingsHighlight();
     }
 
@@ -436,9 +542,20 @@ public class UIManager : MonoBehaviour
             ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
         else if (ShopManager.instance.buyState == BuyState.SellBuilding)
             ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
+
         OnClickBuildingBuyPopUp(-1);
         SetCityLevelPopUp(false);
         tileListPopUp.gameObject.SetActive(false);
+
+        if (Grid.instance.isInfluenceMode)
+            Grid.instance.SetTileInfluenceMode();
+
+        if (Grid.instance.isColorMode)
+            Grid.instance.SetTileColorMode();
+
+        if (BuildingSpawner.instance.isHighlightMode)
+            BuildingSpawner.instance.EventBuildingsHighlight();
+
         ShopManager.instance.ChangeState(BuyState.EventCheck);
     }
 

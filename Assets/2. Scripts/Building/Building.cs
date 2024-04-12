@@ -80,7 +80,7 @@ public class Building : MonoBehaviour
         ApplyInfluenceToTile(influencePower);
     }
 
-    private void OnDestroy()
+    protected void OnDestroy()
     {
         ApplyInfluenceToTile(-influencePower);
     }

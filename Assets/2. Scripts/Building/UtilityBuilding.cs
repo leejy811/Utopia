@@ -117,6 +117,8 @@ public class UtilityBuilding : Building
 
     public override void ApplyInfluence(int value, BuildingType type = 0)
     {
+        if (!values.ContainsKey((ValueType)type)) return;
+
         BoundaryValue cast = values[ValueType.user];
         cast.cur += value;
         values[ValueType.user] = cast;

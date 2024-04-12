@@ -80,6 +80,7 @@ public class ShopManager : MonoBehaviour
         {
             case BuyState.None:
             case BuyState.SellBuilding:
+            case BuyState.EventCheck:
                 BuildingSpawner.instance.ChangeViewState(ViewStateType.Opaque);
                 break;
             case BuyState.BuyBuilding:
@@ -108,7 +109,7 @@ public class ShopManager : MonoBehaviour
             SetSolveEvent();
             SetSolveEvent(pickObject);
         }
-        else if (buyState == BuyState.EventCheck)
+        else if (buyState == BuyState.EventCheck || buyState == BuyState.SellBuilding || buyState == BuyState.BuyTile)
         {
             ChangeState(BuyState.None);
         }

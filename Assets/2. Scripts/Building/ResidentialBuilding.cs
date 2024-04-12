@@ -32,8 +32,9 @@ public class ResidentialBuilding : Building
         CityLevelManager.instance.UpdateCityType();
     }
 
-    private void OnDestroy()
+    private new void OnDestroy()
     {
+        base.OnDestroy();
         cityResident -= residentCnt.cur;
         UIManager.instance.SetCityResident();
     }

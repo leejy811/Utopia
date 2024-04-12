@@ -90,7 +90,7 @@ public class BuildingSpawner : MonoBehaviour
 
         foreach (Building building in buildings)
         {
-            if(building.GetEventProblemCount() > 0 && isHighlightMode)
+            if (building.GetEventProblemCount() > 0 && isHighlightMode)
                 ShopManager.instance.SetObjectColor(building.gameObject, Color.yellow);
             else
                 ShopManager.instance.SetObjectColor(building.gameObject, Color.white);
