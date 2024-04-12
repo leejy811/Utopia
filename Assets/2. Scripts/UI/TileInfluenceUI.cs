@@ -29,7 +29,5 @@ public class TileInfluenceUI : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
 
         rectSelf.localPosition = localPos;
-
-        Debug.Log(tile.transform.position + " / " + localPos);
     }
 }

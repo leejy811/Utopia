@@ -70,7 +70,7 @@ public class Grid : MonoBehaviour
         camera.transform.position = ((Vector3Int)startPoint) + cameraOffset;
     }
 
-    private void SetTileColorMode(bool isOn)
+    public void SetTileColorMode(bool isOn)
     {
         Color color;
         for (int i = 0; i < width; i++)
@@ -94,6 +94,12 @@ public class Grid : MonoBehaviour
         isColorMode = !isColorMode;
         SetTileColorMode(isColorMode);
 
+        if (isAddtionalMode && !isColorMode)
+        {
+            isAddtionalMode = false;
+            SetTileInfluenceMode(false);
+        }
+
         if (isColorMode && isInfluenceMode)
             SetTileInfluenceMode();
     }
@@ -102,11 +108,24 @@ public class Grid : MonoBehaviour
     {
         isInfluenceMode = !isInfluenceMode;
 
-        if (!isInfluenceMode)
-            UIManager.instance.SetTileInfluencePopUp(null);
+        SetTileInfluenceMode(isInfluenceMode);
+
+        if (isAddtionalMode && !isInfluenceMode)
+        {
+            isAddtionalMode = false;
+            SetTileColorMode(false);
+        }
 
         if (isInfluenceMode & isColorMode)
             SetTileColorMode();
+    }
+
+    public void SetTileInfluenceMode(bool isOn)
+    {
+        if (!isOn)
+        {
+            UIManager.instance.SetTileInfluencePopUp(null);
+        }
     }
 
     public void AddMode()
@@ -114,7 +133,19 @@ public class Grid : MonoBehaviour
         isAddtionalMode = !isAddtionalMode;
 
         if (isInfluenceMode)
-            SetTileColorMode();
+        {
+            if (isAddtionalMode)
+                SetTileColorMode(true);
+            else
+                SetTileColorMode(false);
+        }
+        else if (isColorMode)
+        {
+            if (isAddtionalMode)
+                SetTileInfluenceMode(true);
+            else
+                SetTileInfluenceMode(false);
+        }
     }
 
     public void NotifyTileInfluence(Transform tileTransform)

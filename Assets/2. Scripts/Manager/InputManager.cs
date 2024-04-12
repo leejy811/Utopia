@@ -75,7 +75,7 @@ public class InputManager : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
-                if (Grid.instance.isInfluenceMode)
+                if (Grid.instance.isInfluenceMode || (Grid.instance.isColorMode && Grid.instance.isAddtionalMode))
                 {
                     Grid.instance.NotifyTileInfluence(hit.transform);
                 }
@@ -93,7 +93,7 @@ public class InputManager : MonoBehaviour
             }
             else if (state == BuyState.BuyTile)
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
-            else if (Grid.instance.isInfluenceMode)
+            else if (Grid.instance.isInfluenceMode || (Grid.instance.isColorMode && Grid.instance.isAddtionalMode))
                 UIManager.instance.SetTileInfluencePopUp(null);
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
