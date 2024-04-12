@@ -68,19 +68,19 @@ MonoBehaviour:
   happinessRate: 50
   happinessDifference: 0
   position: {x: 0, y: 0}
-  influencePower: 50
-  influenceSize: 1
+  influencePower: 1000
+  influenceSize: 2
   curEvents: []
-  cost: 100
-  costPerDay: 0
+  cost: 1000
+  costPerDay: 500
   userCnt:
-    max: 300
-    min: 100
+    max: 4800
+    min: 3400
     cur: 0
   utilityValue:
     max: 100
-    min: 30
-    cur: 30
+    min: 50
+    cur: 70
 --- !u!1001 &4390299073639260627
 PrefabInstance:
   m_ObjectHideFlags: 0

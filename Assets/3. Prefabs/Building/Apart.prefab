@@ -239,23 +239,23 @@ MonoBehaviour:
   influencePower: 0
   influenceSize: 1
   curEvents: []
-  cost: 50
+  cost: 100
   existFacility: 00000000
   residentCnt:
     max: 100
     min: 0
     cur: 100
   commercialCSAT:
-    max: 100
-    min: 40
+    max: 200
+    min: 100
     cur: 0
   cultureCSAT:
-    max: 100
-    min: 10
+    max: 200
+    min: 100
     cur: 0
   serviceCSAT:
-    max: 100
-    min: 10
+    max: 200
+    min: 100
     cur: 0
 --- !u!1 &7429514735005035953
 GameObject:

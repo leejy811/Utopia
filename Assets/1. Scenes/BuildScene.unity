@@ -25854,7 +25854,7 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uC218\uB3C4 \uC2DC\uC124 \uC635\uC158 \uCD94\uAC00"
+    - name: "\uC218\uB3C4 \uC635\uC158 \uCD94\uAC00"
       engName: Add Water
       cost: 500
       prob: 100
@@ -25875,7 +25875,7 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uD558\uC218 \uC2DC\uC124 \uC635\uC158 \uCD94\uAC00"
+    - name: "\uD558\uC218 \uC635\uC158 \uCD94\uAC00"
       engName: Add Sewage
       cost: 500
       prob: 100
@@ -25896,7 +25896,7 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uC804\uAE30 \uC2DC\uC124 \uC635\uC158 \uCD94\uAC00"
+    - name: "\uC804\uB825 \uC635\uC158 \uCD94\uAC00"
       engName: Add Electricity
       cost: 500
       prob: 100
@@ -25917,11 +25917,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uBC29\uC74C \uC2DC\uC124 \uC635\uC158 \uCD94\uAC00"
+    - name: "\uBC29\uC74C \uC635\uC158 \uCD94\uAC00"
       engName: Add No Sound
       cost: 500
       prob: 100
-    - name: "\uC6B0\uD37C\uB85C \uBCF4\uBCF5\uD558\uAE30"
+    - name: "\uC6B0\uD37C\uB85C \uBCF4\uBCF5"
       engName: Revenge
       cost: 50
       prob: 20
@@ -25939,11 +25939,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uC778\uD130\uB137\uC73C\uB85C \uC8FC\uBB38\uD558\uAE30"
+    - name: "\uC628\uB77C\uC778 \uC1FC\uD551"
       engName: Buy Internet
       cost: 300
       prob: 80
-    - name: "\uB300\uC911\uAD50\uD1B5 \uD0C0\uACE0 \uC1FC\uD551\uAC00\uAE30"
+    - name: "\uCC28 \uD0C0\uACE0 \uC1FC\uD551"
       engName: GO Shopping Center
       cost: 150
       prob: 40
@@ -25960,11 +25960,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "OTT \uAD6C\uB3C5\uD558\uAE30"
+    - name: "OTT \uAD6C\uB3C5"
       engName: Buy OTT
       cost: 300
       prob: 80
-    - name: "\uB300\uC911\uAD50\uD1B5 \uD0C0\uACE0 \uC601\uD654\uAD00\uAC00\uAE30"
+    - name: "\uBA3C \uC601\uD654\uAD00 \uAC00\uAE30"
       engName: Go Movie
       cost: 150
       prob: 40
@@ -25981,11 +25981,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "VR \uC138\uC0C1 \uC18D \uBBF8\uC220\uAD00\uAC00\uAE30"
+    - name: "VR\uB85C \uC990\uAE30\uAE30"
       engName: Go VR
       cost: 10
       prob: 5
-    - name: "\uB300\uC911\uAD50\uD1B5 \uD0C0\uACE0 \uBBF8\uC220\uAD00 \uAC00\uAE30"
+    - name: "\uBA3C \uBBF8\uC220\uAD00 \uAC00\uAE30"
       engName: Go Art Museum
       cost: 150
       prob: 40
@@ -26002,11 +26002,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uAC78\uC5B4\uC11C \uACF5\uC6D0\uAC00\uAE30"
+    - name: "\uAC78\uC5B4\uC11C \uACF5\uC6D0 \uAC00\uAE30"
       engName: Walking to Park
       cost: 10
       prob: 5
-    - name: "\uB300\uC911\uAD50\uD1B5 \uD0C0\uACE0 \uACF5\uC6D0\uAC00\uAE30"
+    - name: "\uBA3C \uACF5\uC6D0 \uAC00\uAE30"
       engName: Go Park
       cost: 150
       prob: 40
@@ -26027,7 +26027,7 @@ MonoBehaviour:
       engName: Call 119
       cost: 250
       prob: 90
-    - name: "\uC18C\uD654\uAE30 \uC0AC\uC6A9\uD558\uAE30"
+    - name: "\uC18C\uD654\uAE30 \uC0AC\uC6A9"
       engName: Use
       cost: 150
       prob: 40
@@ -26044,11 +26044,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uD638\uB8E8\uB77C\uAE30 \uAD6C\uB9E4\uD558\uAE30"
+    - name: "\uD638\uB8E8\uB77C\uAE30 \uAD6C\uB9E4"
       engName: Buy Item
       cost: 150
       prob: 40
-    - name: "\uACBD\uD638\uC6D0 \uACE0\uC6A9\uD558\uAE30"
+    - name: "\uACBD\uD638\uC6D0 \uACE0\uC6A9"
       engName: Hire Guard
       cost: 300
       prob: 90
@@ -26065,11 +26065,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "CCTV \uC124\uCE58\uD558\uAE30"
+    - name: "CCTV \uC124\uCE58"
       engName: Install CCTV
       cost: 200
       prob: 40
-    - name: "\uBCF4\uC548\uC5C5\uCCB4\uC640 \uACC4\uC57D\uD558\uAE30"
+    - name: "\uBCF4\uC548\uC5C5\uCCB4\uC640 \uACC4\uC57D"
       engName: Contract Security
       cost: 400
       prob: 80
@@ -26086,11 +26086,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "CCTV \uC124\uCE58\uD558\uAE30"
+    - name: "CCTV \uC124\uCE58"
       engName: Install CCTV
       cost: 200
       prob: 40
-    - name: "\uBCF4\uC548\uC5C5\uCCB4\uC640 \uACC4\uC57D\uD558\uAE30"
+    - name: "\uBCF4\uC548\uC5C5\uCCB4\uC640 \uACC4\uC57D"
       engName: Contract Security
       cost: 400
       prob: 80
@@ -26128,11 +26128,11 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uC218\uB9AC\uD558\uAE30"
+    - name: "\uC218\uB9AC"
       engName: Repair
       cost: 300
       prob: 100
-    - name: "\uACC4\uB2E8 \uC774\uC6A9\uD558\uAE30"
+    - name: "\uACC4\uB2E8 \uC774\uC6A9"
       engName: Use Stairs
       cost: 10
       prob: 10
@@ -47396,7 +47396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.27781588, y: 0.36497167, z: -0.1150751, w: 0.8811196}
-  m_LocalPosition: {x: -8.07, y: 7.71, z: -7.93}
+  m_LocalPosition: {x: -5.75, y: 9.4, z: -5.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -67969,7 +67969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 1179345971447982024, guid: d06f7461a4cedc7489ffc6352e905f09, type: 3}
-  tileCost: 5
+  tileCost: 50
   tileColors:
   - {r: 0.047058824, g: 0.80784315, b: 0.41960785, a: 0}
   - {r: 0.8627451, g: 0.92941177, b: 0.19215687, a: 0}
@@ -67984,7 +67984,7 @@ MonoBehaviour:
   width: 12
   height: 12
   startPoint: {x: 0, y: 0}
-  startTileSize: {x: 3, y: 3}
+  startTileSize: {x: 2, y: 2}
   cameraOffset: {x: -5.75, y: 9.4, z: -5.75}
 --- !u!4 &1394218994
 Transform:

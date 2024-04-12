@@ -71,23 +71,23 @@ MonoBehaviour:
   influencePower: 0
   influenceSize: 1
   curEvents: []
-  cost: 2000
+  cost: 10000
   existFacility: 01010101
   residentCnt:
-    max: 500
+    max: 10000
     min: 0
-    cur: 500
+    cur: 10000
   commercialCSAT:
-    max: 500
-    min: 250
+    max: 20000
+    min: 10000
     cur: 0
   cultureCSAT:
-    max: 300
-    min: 200
+    max: 20000
+    min: 10000
     cur: 0
   serviceCSAT:
-    max: 300
-    min: 200
+    max: 20000
+    min: 10000
     cur: 0
 --- !u!1001 &8274662097333036730
 PrefabInstance:

@@ -438,21 +438,21 @@ MonoBehaviour:
   influencePower: 0
   influenceSize: 1
   curEvents: []
-  cost: 500
+  cost: 1000
   existFacility: 01010000
   residentCnt:
-    max: 250
+    max: 1000
     min: 0
-    cur: 250
+    cur: 1000
   commercialCSAT:
-    max: 250
-    min: 100
+    max: 2000
+    min: 1000
     cur: 0
   cultureCSAT:
-    max: 200
-    min: 100
+    max: 2000
+    min: 1000
     cur: 0
   serviceCSAT:
-    max: 200
-    min: 100
+    max: 2000
+    min: 1000
     cur: 0
