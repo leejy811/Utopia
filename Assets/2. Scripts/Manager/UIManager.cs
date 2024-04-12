@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -50,6 +51,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Buttons")]
     public Button[] buttons;
+    public bool isButtonLock;
 
     #endregion
 
@@ -76,13 +78,19 @@ public class UIManager : MonoBehaviour
     
     public void LockButtons(bool active)
     {
+        isButtonLock = active;
+
         foreach (Button button in buttons)
         {
             button.interactable = active;
         }
 
-        if(active)
+        if (active)
+        {
             SetCityLevelPopUp(true);
+            ShopManager.instance.ChangeState(BuyState.None);
+            OnClickBuildingBuyPopUp(-1);
+        }
     }
 
     private string GetCommaText(int data)
@@ -269,7 +277,6 @@ public class UIManager : MonoBehaviour
     {
         ShopManager.instance.ChangeState(BuyState.None);
         OnClickBuildingBuyPopUp(-1);
-        SetEventNotifyPopUp(false);
         SetCityLevelPopUp(false);
         tileListPopUp.gameObject.SetActive(false);
     }
@@ -289,23 +296,29 @@ public class UIManager : MonoBehaviour
         }
 
         if (index != -1)
+        {
+            ShopManager.instance.ChangeState(BuyState.None);
+            SetCityLevelPopUp(false);
+            tileListPopUp.gameObject.SetActive(false);
             SetBuildingListValue(index);
+        }
         else
         {
             for (int i = 0; i < buildingInfos.Length; i++)
                 buildingInfos[i].gameObject.SetActive(false);
         }
-
-        ShopManager.instance.ChangeState(BuyState.None);
-        SetEventNotifyPopUp(false);
-        SetCityLevelPopUp(false);
-        tileListPopUp.gameObject.SetActive(false);
     }
 
-    public void OnClickTileBuildPopUp(bool active)
+    public void OnClickTileBuildPopUp()
     {
-        SetAllPopUp();
-        tileListPopUp.gameObject.SetActive(active);
+        ShopManager.instance.ChangeState(BuyState.None);
+        OnClickBuildingBuyPopUp(-1);
+        SetCityLevelPopUp(false);
+
+        tileListPopUp.gameObject.SetActive(!tileListPopUp.gameObject.activeSelf);
+
+        if(!tileListPopUp.gameObject.activeSelf)
+            tileInfo.gameObject.SetActive(false);
     }
 
     public void OnClickTileBuild(int index)
@@ -377,8 +390,10 @@ public class UIManager : MonoBehaviour
 
     public void OnClickCityLevelMode()
     {
-        SetAllPopUp();
-        SetCityLevelPopUp(true);
+        ShopManager.instance.ChangeState(BuyState.None);
+        OnClickBuildingBuyPopUp(-1);
+        tileListPopUp.gameObject.SetActive(false);
+        SetCityLevelPopUp(!cityLevel.gameObject.activeSelf);
     }
 
     public void OnClickEventHighLight()
@@ -389,7 +404,9 @@ public class UIManager : MonoBehaviour
 
     public void OnClickEventNotify()
     {
-        SetAllPopUp();
+        OnClickBuildingBuyPopUp(-1);
+        SetCityLevelPopUp(false);
+        tileListPopUp.gameObject.SetActive(false);
         ShopManager.instance.ChangeState(BuyState.EventCheck);
     }
 

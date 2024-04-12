@@ -32,7 +32,7 @@ public class TemporayUI : MonoBehaviour
         var localPos = Vector2.zero;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
 
-        rectSelf.localPosition = localPos;
+        rectSelf.localPosition = localPos + new Vector2(-10, 10);
     }
 
     IEnumerator TempUpdate()

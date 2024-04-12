@@ -119,7 +119,10 @@ public class InputManager : MonoBehaviour
         {
             UIManager.instance.OnClickBuildingBuyPopUp(0);
         }
-        else if(Input.GetKeyDown(KeyCode.Alpha2))
+
+        if (!UIManager.instance.isButtonLock) return;
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             UIManager.instance.OnClickBuildingBuyPopUp(1);
         }
@@ -141,7 +144,7 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha7))
         {
-            UIManager.instance.OnClickTileBuildPopUp(true);
+            UIManager.instance.OnClickTileBuildPopUp();
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {

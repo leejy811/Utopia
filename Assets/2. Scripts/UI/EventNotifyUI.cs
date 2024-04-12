@@ -47,4 +47,10 @@ public class EventNotifyUI : MonoBehaviour
         if (EventManager.instance.eventBuildings.Count != 0)
             SetValue(EventManager.instance.eventBuildings[curIndex]);
     }
+
+    public void OnDisable()
+    {
+        if (EventManager.instance.eventBuildings.Count != 0)
+            ShopManager.instance.SetObjectColor(EventManager.instance.eventBuildings[curIndex].gameObject, Color.white);
+    }
 }
