@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -46,6 +47,9 @@ public class UIManager : MonoBehaviour
     [Header("Event Notify")]
     public EventNotifyUI eventNotify;
 
+    [Header("Buttons")]
+    public Button[] buttons;
+
     #endregion
 
     private Building targetBuilding;
@@ -64,11 +68,21 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         UpdateDailyInfo();
-
-        //To Do 게임 시작 후 주거 건물 건설만 가능하도록
+        LockButtons(false);
     }
 
     #region SetValue
+    
+    public void LockButtons(bool active)
+    {
+        foreach (Button button in buttons)
+        {
+            button.interactable = active;
+        }
+
+        if(active)
+            SetCityLevelPopUp(true);
+    }
 
     private string GetCommaText(int data)
     {
@@ -266,6 +280,12 @@ public class UIManager : MonoBehaviour
 
         if (index != -1)
             SetBuildingListValue(index);
+        else
+        {
+            for (int i = 0; i < buildingInfos.Length; i++)
+                buildingInfos[i].gameObject.SetActive(false);
+        }
+
         ShopManager.instance.ChangeState(BuyState.None);
     }
 

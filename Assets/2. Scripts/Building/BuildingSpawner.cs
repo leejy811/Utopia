@@ -11,7 +11,7 @@ public class BuildingSpawner : MonoBehaviour
 
     public GameObject[] buildingPrefabs;
 
-    public int[] buildingCount = new int[System.Enum.GetValues(typeof(BuildingSubType)).Length];
+    public int[] buildingCount;
 
     private bool isHighlightMode;
 
@@ -24,6 +24,8 @@ public class BuildingSpawner : MonoBehaviour
         }
 
         instance = this;
+
+        buildingCount = new int[buildingPrefabs.Length];
     }
 
     public void PlaceBuilding(int index, Transform spawnTrans)
@@ -34,8 +36,11 @@ public class BuildingSpawner : MonoBehaviour
         building.SetPosition(spawnTrans.position);
         building.ChangeViewState(ViewStateType.Translucent);
 
-        buildingCount[(int)building.subType]++;
-        building.count = buildingCount[(int)building.subType];
+        buildingCount[index]++;
+        building.count = buildingCount[index];
+
+        if (index == 0 & buildingCount[index] == 1)
+            UIManager.instance.LockButtons(true);
 
         RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
 

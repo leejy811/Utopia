@@ -9,6 +9,7 @@ public class TemporayUI : MonoBehaviour
     public Image panel;
     public TextMeshProUGUI text;
     public float speed;
+    public bool isFixed;
 
     private void Start()
     {
@@ -18,6 +19,8 @@ public class TemporayUI : MonoBehaviour
     public void SetUI(string str, Vector3 pos)
     {
         text.text = str;
+
+        if (isFixed) return;
 
         Canvas canvas = GetComponentInParent<Canvas>();
         Camera uiCamera = canvas.worldCamera;

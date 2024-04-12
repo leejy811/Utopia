@@ -48,7 +48,7 @@ public class BuildingIntroUI : MonoBehaviour
 
     public void SetValue(Building building)
     {
-        buildingNameText.text = building.buildingName;
+        buildingNameText.text = building.buildingName + building.count;
         buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType] + "/" + building.grade + "등급";
         happinessText.text = "<sprite=" + building.happinessRate / 20 + "> " + building.happinessRate + "(" + building.happinessDifference + ")%";
         happinessStringText.text = building.happinessDifference > 0 ? "행복도 증가<sprite=6>" : building.happinessDifference < 0 ? "행복도 감소<sprite=5>" : "행복도 유지";

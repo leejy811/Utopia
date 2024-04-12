@@ -20806,6 +20806,19 @@ MonoBehaviour:
   happinessMessagePrefab: {fileID: 4705107201506718318, guid: b120aa420eda4e24096a9ce292ecba7e, type: 3}
   costInfo: {fileID: 1544417250}
   eventNotify: {fileID: 1399707713}
+  buttons:
+  - {fileID: 776225494}
+  - {fileID: 891856523}
+  - {fileID: 182086556}
+  - {fileID: 2000803059}
+  - {fileID: 2077049788}
+  - {fileID: 310388639}
+  - {fileID: 1261439749}
+  - {fileID: 1201214436}
+  - {fileID: 1235991150}
+  - {fileID: 1026458740}
+  - {fileID: 45353409}
+  - {fileID: 259052518}
 --- !u!4 &455419183
 Transform:
   m_ObjectHideFlags: 0
@@ -84977,7 +84990,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ce468ce5683454d8fcd7adcd0f928f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIdx: -1
+  levelIdx: 0
   level:
   - type: 0
     residentCondition: 0

@@ -18,7 +18,7 @@ public class UtilityBuilding : Building
 
     public override int CalculateIncome()
     {
-        int res = costPerDay * happinessRate;
+        int res = costPerDay * (int)(happinessRate / 100.0f);
         res = happinessRate >= 80 ? (int)(res * 1.5f) : happinessRate < 20 ? (int)(res * 0.5f) : res;
 
         if (type == BuildingType.Commercial)
