@@ -194,7 +194,8 @@ public class ShopManager : MonoBehaviour
         else
             building = EventManager.instance.eventBuildings[UIManager.instance.eventNotify.curIndex];
 
-        int cost = building.curEvents[index / 2].solutions[index % 2].cost;
+        List<Event> curEvents = building.GetEventProblem();
+        int cost = curEvents[index / 2].solutions[index % 2].cost;
 
         if (buyState != BuyState.SolveBuilding && buyState != BuyState.EventCheck) return;
         if (!PayMoney(cost)) return;
