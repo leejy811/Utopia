@@ -13420,7 +13420,7 @@ MonoBehaviour:
       - m_Target: {fileID: 455419182}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: OnClickTileBuildPopUp
-        m_Mode: 6
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -20819,6 +20819,7 @@ MonoBehaviour:
   - {fileID: 1026458740}
   - {fileID: 45353409}
   - {fileID: 259052518}
+  isButtonLock: 0
 --- !u!4 &455419183
 Transform:
   m_ObjectHideFlags: 0
@@ -34221,7 +34222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &704522811
 RectTransform:
   m_ObjectHideFlags: 0
