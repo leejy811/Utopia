@@ -21,19 +21,6 @@ public class ResidentialBuilding : Building
 
     private void Awake()
     {
-        existFacility = new bool[System.Enum.GetValues(typeof(OptionType)).Length];
-
-        if(grade <= 2)
-        {
-            existFacility[(int)OptionType.Water] = true;
-            existFacility[(int)OptionType.Electricity] = true;
-            if(grade == 1)
-            {
-                existFacility[(int)OptionType.Sewage] = true;
-                existFacility[(int)OptionType.SoundInsulation] = true;
-            }
-        }
-
         values[ValueType.Resident] = residentCnt;
         values[ValueType.CommercialCSAT] = commercialCSAT;
         values[ValueType.CultureCSAT] = cultureCSAT;

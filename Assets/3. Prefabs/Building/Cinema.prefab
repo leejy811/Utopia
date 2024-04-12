@@ -59,12 +59,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a37370fdbecdc448db5eb6f38f2733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingName: "\uC601\uD654\uAD00"
   count: 0
   grade: 3
   type: 2
   subType: 2
   viewState: 0
   happinessRate: 50
+  happinessDifference: 0
   position: {x: 0, y: 0}
   influencePower: 30
   influenceSize: 1

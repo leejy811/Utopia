@@ -10,20 +10,15 @@ public class UIMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public UIButtonType buttonType;
     public int index;
 
-    RectTransform rect;
-
-    private void Start()
-    {
-        rect = GetComponent<RectTransform>();
-    }
+    public float xPos;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        UIManager.instance.SetBuildingInfoPopUp((int)buttonType, index, rect);
+        UIManager.instance.SetBuildingInfoPopUp((int)buttonType, index, xPos);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        UIManager.instance.SetBuildingInfoPopUp((int)buttonType, index, rect);
+        UIManager.instance.SetBuildingInfoPopUp((int)buttonType, index, xPos);
     }
 }

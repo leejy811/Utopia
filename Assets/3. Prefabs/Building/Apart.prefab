@@ -227,18 +227,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92c0ecfa23d7045409feb22297239c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buildingName: "\uC544\uD30C\uD2B8"
   count: 0
   grade: 3
   type: 0
   subType: 0
   viewState: 0
   happinessRate: 50
+  happinessDifference: 0
   position: {x: 0, y: 0}
   influencePower: 0
   influenceSize: 1
   curEvents: []
   cost: 50
-  existFacility: 
+  existFacility: 00000000
   residentCnt:
     max: 100
     min: 0

@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f404c6e7523fc846aa947da297b730e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingName: 
+  buildingName: "\uC74C\uC2DD\uC810"
   count: 0
   grade: 3
   type: 1

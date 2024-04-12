@@ -68,7 +68,7 @@ public class BuildingIntroUI : MonoBehaviour
             {
                 if (residentialBuilding.CheckFacility((OptionType)i))
                 {
-                    SetOptionBuy(i);
+                    SetOptionBuy(residentialBuilding, i);
                 }
             }
         }
@@ -101,10 +101,22 @@ public class BuildingIntroUI : MonoBehaviour
         SetValue(building);
     }
 
-    public void SetOptionBuy(int index)
+    public void SetOptionBuy(ResidentialBuilding residentialBuilding, int index)
     {
-        optionButtons[index].Select();
-        optionToggles[index].Select();
+        if (residentialBuilding.CheckFacility((OptionType)index))
+        {
+            ColorBlock block = optionButtons[index].colors;
+            block.disabledColor = block.selectedColor;
+            optionButtons[index].colors = block;
+            optionToggles[index].colors = block;
+        }
+        else
+        {
+            ColorBlock block = optionButtons[index].colors;
+            block.disabledColor = block.normalColor;
+            optionButtons[index].colors = block;
+            optionToggles[index].colors = block;
+        }
 
         optionButtons[index].interactable = false;
     }

@@ -54,6 +54,8 @@ public class BuildingSpawner : MonoBehaviour
                 buildings.Add(building as ServiceBuilding);
                 break;
         }
+
+        BottonSound.instance.Click("Play_buildingsound");
     }
 
     public void RemoveBuilding(GameObject building)

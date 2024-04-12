@@ -39,8 +39,17 @@ public class BuildingInfoUI : MonoBehaviour
             {
                 if (residentialBuilding.CheckFacility((OptionType)i))
                 {
-                    optionButtons[i].Select();
-                    optionToggles[i].Select();
+                    ColorBlock block = optionButtons[i].colors;
+                    block.disabledColor = block.selectedColor;
+                    optionButtons[i].colors = block;
+                    optionToggles[i].colors = block;
+                }
+                else
+                {
+                    ColorBlock block = optionButtons[i].colors;
+                    block.disabledColor = block.normalColor;
+                    optionButtons[i].colors = block;
+                    optionToggles[i].colors = block;
                 }
             }
         }

@@ -90,17 +90,10 @@ public class Grid : MonoBehaviour
 
     public void SetTileColorMode()
     {
-        if(isInfluenceMode)
-        {
-            isColorMode = false;
-            SetTileColorMode(isAddtionalMode);
-            return;
-        }
-
         isColorMode = !isColorMode;
         SetTileColorMode(isColorMode);
 
-        if (isColorMode)
+        if (isColorMode && isInfluenceMode)
             SetTileInfluenceMode();
     }
 
@@ -108,7 +101,7 @@ public class Grid : MonoBehaviour
     {
         isInfluenceMode = !isInfluenceMode;
 
-        if (isInfluenceMode)
+        if (isInfluenceMode & isColorMode)
             SetTileColorMode();
     }
 

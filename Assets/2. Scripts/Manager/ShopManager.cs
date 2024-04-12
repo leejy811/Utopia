@@ -125,7 +125,6 @@ public class ShopManager : MonoBehaviour
         if (buyState != BuyState.SellBuilding) return;
 
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
-        UIManager.instance.SetBuildingIntroPopUp();
         Destroy(curPickObject);
     }
 
@@ -134,7 +133,15 @@ public class ShopManager : MonoBehaviour
         int cost = Grid.instance.tileCost * curPickTiles.Count;
 
         if (buyState != BuyState.BuyTile) return;
-        if (!PayMoney(cost)) return;
+        if (!PayMoney(cost))
+        {
+            foreach (Vector2Int pos in curPickTiles)
+            {
+                Grid.instance.tiles[pos.x, pos.y].SetTileColor(Color.red);
+            }
+            curPickTiles.Clear();
+            return;
+        }
 
         foreach(Vector2Int pos in curPickTiles)
         {

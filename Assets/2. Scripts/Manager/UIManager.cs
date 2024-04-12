@@ -9,6 +9,8 @@ public class UIManager : MonoBehaviour
 
     #region UIComponent
 
+    public Canvas canvas;
+
     [Header("Info")]
     public TextMeshProUGUI dayText;
     public TextMeshProUGUI moneyText;
@@ -70,7 +72,10 @@ public class UIManager : MonoBehaviour
 
     private string GetCommaText(int data)
     {
-        return string.Format("{0:#,###}", data);
+        if (data == 0)
+            return data.ToString();
+        else
+            return string.Format("{0:#,###}", data);
     }
 
     public void UpdateDailyInfo()
@@ -84,7 +89,7 @@ public class UIManager : MonoBehaviour
 
     public void SetHappiness()
     {
-        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString();
+        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%";
     }
 
     public void Setmoney()
@@ -135,11 +140,11 @@ public class UIManager : MonoBehaviour
             eventRoulette.SetValue(ranEvents);
     }
 
-    public void SetBuildingInfoPopUp(int typeIndex, int buildingIndex, RectTransform rect)
+    public void SetBuildingInfoPopUp(int typeIndex, int buildingIndex, float xPos)
     {
         if(typeIndex == (int)UIButtonType.Tile)
         {
-            SetTileInfoPopUp(buildingIndex, rect);
+            SetTileInfoPopUp(buildingIndex, xPos);
         }
 
         for (int i = 0; i < buildingInfos.Length; i++)
@@ -149,8 +154,7 @@ public class UIManager : MonoBehaviour
                 buildingInfos[i].gameObject.SetActive(!buildingInfos[i].gameObject.activeSelf);
 
                 Vector3 pos = buildingInfos[i].gameObject.GetComponent<RectTransform>().localPosition;
-                float xOffset = 0.0f;
-                buildingInfos[i].OnUI(BuildingSpawner.instance.buildingPrefabs[buildingIndex].GetComponent<Building>(), new Vector3(rect.position.x + xOffset, pos.y, pos.z));
+                buildingInfos[i].OnUI(BuildingSpawner.instance.buildingPrefabs[buildingIndex].GetComponent<Building>(), new Vector3(xPos, pos.y, pos.z));
                 return;
             }
         }
@@ -181,13 +185,12 @@ public class UIManager : MonoBehaviour
             eventNotify.Init();
     }
 
-    public void SetTileInfoPopUp(int tileIndex, RectTransform rect)
+    public void SetTileInfoPopUp(int tileIndex, float xPos)
     {
         tileInfo.gameObject.SetActive(!tileInfo.gameObject.activeSelf);
 
         Vector3 pos = tileInfo.gameObject.GetComponent<RectTransform>().localPosition;
-        float xOffset = 0.0f;
-        tileInfo.OnUI(null, new Vector3(rect.position.x + xOffset, pos.y, pos.z));
+        tileInfo.OnUI(null, new Vector3(xPos, pos.y, pos.z));
         return;
     }
 
@@ -210,15 +213,15 @@ public class UIManager : MonoBehaviour
 
     public void SetErrorPopUp(string massage, Vector3 position)
     {
-        TemporayUI message =  Instantiate(errorMessagePrefab).GetComponent<TemporayUI>();
+        TemporayUI message =  Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(massage, position);
     }
 
     public void SetHappinessPopUp(int amount, Vector3 position)
     {
-        string massage = amount > 0 ? "<sprite=?> <sprite=?>" : "<sprite=?> <sprite=?>";
+        string massage = amount > 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>";
 
-        TemporayUI message = Instantiate(happinessMessagePrefab).GetComponent<TemporayUI>();
+        TemporayUI message = Instantiate(happinessMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(massage, position);
     }
 
@@ -248,7 +251,9 @@ public class UIManager : MonoBehaviour
             else
                 buildingLists[i].gameObject.SetActive(false);
         }
-        SetBuildingListValue(index);
+
+        if (index != -1)
+            SetBuildingListValue(index);
         ShopManager.instance.ChangeState(BuyState.None);
     }
 

@@ -91,7 +91,8 @@ public class RoutineManager : MonoBehaviour
     public void SetCityHappiness(int happiness, int sign)
     {
         int count = BuildingSpawner.instance.buildings.Count;
-        cityHappiness = ((cityHappiness * count) + happiness) / (count + sign);
+
+        cityHappiness = count + sign == 0 ? 0 : ((cityHappiness * count) + happiness) / (count + sign);
         UIManager.instance.SetHappiness();
     }
 

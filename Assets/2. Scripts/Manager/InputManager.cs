@@ -134,11 +134,11 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            UIManager.instance.OnClickBuildingBuyPopUp(3);
+            UIManager.instance.OnClickBuildingBuyPopUp(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            UIManager.instance.OnClickBuildingBuyPopUp(4);
+            UIManager.instance.OnClickBuildingBuyPopUp(3);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {

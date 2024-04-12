@@ -36,7 +36,7 @@ public class TemporayUI : MonoBehaviour
     {
         while (panel.color.a > 0)
         {
-            transform.localPosition += Vector3.up * speed * Time.fixedDeltaTime;
+            transform.localPosition += Vector3.up * speed * 20 * Time.fixedDeltaTime;
             panel.color -= Color.black * speed * Time.fixedDeltaTime;
             text.color -= Color.black * speed * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();

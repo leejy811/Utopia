@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class BottonSound : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public static BottonSound instance;
+
+    private void Awake()
+    {
+        if (instance != null && instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        instance = this;
+    }
+
     public void Click(string NAME)
     {
         AkSoundEngine.PostEvent(NAME, gameObject);
     }
-
-
 }

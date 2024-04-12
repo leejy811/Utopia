@@ -24,6 +24,6 @@ public class TileInfoUI : MonoBehaviour
     public void OnUI(Tile tile, Vector3 pos)
     {
         transform.localPosition = pos;
-        SetValue(tile);
+        //SetValue(tile);
     }
 }
