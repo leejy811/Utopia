@@ -159,6 +159,18 @@ public class EventManager : MonoBehaviour
         {
             building.UpdateEventEffect();
         }
+
+        List<int> removeIdx = new List<int>();
+        for (int i = 0; i < eventBuildings.Count; i++)
+        {
+            if (eventBuildings[i].GetEventProblemCount() == 0)
+                removeIdx.Add(i);
+        }
+
+        for (int i = 0; i < removeIdx.Count; i++)
+        {
+            eventBuildings.RemoveAt(removeIdx[i] - i);
+        }
     }
 
     public void SetEventBuildings(Building building, bool isAdd)
