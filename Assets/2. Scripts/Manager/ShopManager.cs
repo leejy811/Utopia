@@ -177,13 +177,18 @@ public class ShopManager : MonoBehaviour
 
     public bool BuyOption(OptionType type)
     {
-        ResidentialBuilding building = curPickObject.GetComponent<ResidentialBuilding>();
+        ResidentialBuilding building;
+        if (buyState == BuyState.SolveBuilding)
+            building = curPickObject.GetComponent<ResidentialBuilding>();
+        else
+            building = EventManager.instance.eventBuildings[UIManager.instance.eventNotify.curIndex] as ResidentialBuilding;
 
-        if (buyState != BuyState.SolveBuilding) return false;
+        if (buyState != BuyState.SolveBuilding && buyState != BuyState.EventCheck) return false;
         if (building.CheckFacility(type)) return false;
         if (!PayMoney(500)) return false;
 
         building.BuyFacility(type);
+
         return true;
     }
 

@@ -190,7 +190,10 @@ public class EventManager : MonoBehaviour
                         if (eventBuildings.Count == 1)
                             UIManager.instance.SetEventNotifyPopUp(false);
                         else if(i == 0)
+                        {
                             UIManager.instance.OnClickEventNotifyNext(true);
+                            UIManager.instance.eventNotify.curIndex--;
+                        }
                         else
                             UIManager.instance.OnClickEventNotifyNext(false);
                     }
