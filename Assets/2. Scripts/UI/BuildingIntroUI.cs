@@ -50,7 +50,7 @@ public class BuildingIntroUI : MonoBehaviour
     {
         buildingNameText.text = building.buildingName + building.count;
         buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType] + "/" + building.grade + "등급";
-        happinessText.text = "<sprite=" + building.happinessRate / 20 + "> " + building.happinessRate + "(" + building.happinessDifference + ")%";
+        happinessText.text = "<sprite=" + building.happinessRate / 20 + "> " + building.happinessRate + "(" + GetSignString(building.happinessDifference, "+") + ")%";
         happinessStringText.text = building.happinessDifference > 0 ? "행복도 증가<sprite=6>" : building.happinessDifference < 0 ? "행복도 감소<sprite=5>" : "행복도 유지";
 
         if (building.type == BuildingType.Residential)
@@ -119,5 +119,16 @@ public class BuildingIntroUI : MonoBehaviour
         }
 
         optionButtons[index].interactable = false;
+    }
+
+    private string GetSignString(int data, string zeroSign)
+    {
+
+        if (data > 0)
+            return "+ " + data.ToString();
+        else if (data < 0)
+            return "- " + Mathf.Abs(data).ToString();
+        else
+            return zeroSign + " " + data.ToString();
     }
 }
