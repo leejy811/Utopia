@@ -7,6 +7,11 @@ public class EventManager : MonoBehaviour
 {
     static public EventManager instance;
 
+    [Header("Value")]
+    public int eventCondition;
+    [Range(0.0f, 1.0f)] public float eventProb;
+
+    [Header("Event List")]
     public List<List<Building>> targetBuildings = new List<List<Building>>();
     public List<Event> events;
     public List<Event> possibleEvents;
@@ -33,6 +38,9 @@ public class EventManager : MonoBehaviour
 
     public void CheckEvents()
     {
+        if (BuildingSpawner.instance.buildings.Count < eventCondition) return;
+        if (Random.Range(0.0f, 1.0f) > eventProb) return;
+
         List<List<Building>> buildings = new List<List<Building>>();
 
         for (int i = 0; i < events.Count; i++)
@@ -56,6 +64,8 @@ public class EventManager : MonoBehaviour
         }
 
         targetBuildings = buildings;
+
+        RandomRoulette();
     }
 
     public void RandomRoulette()

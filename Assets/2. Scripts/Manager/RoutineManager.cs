@@ -93,12 +93,7 @@ public class RoutineManager : MonoBehaviour
         ResidentialBuilding.yesterDayResident = ResidentialBuilding.cityResident;
         cityHappiness -= cityHappinessDifference;
 
-        if (BuildingSpawner.instance.buildings.Count >= 12)
-        {
-            EventManager.instance.CheckEvents();
-            EventManager.instance.RandomRoulette();
-        }
-
+        EventManager.instance.CheckEvents();
         EventManager.instance.EffectUpdate();
     }
 }
