@@ -76,6 +76,9 @@ public class ShopManager : MonoBehaviour
         else if (state == BuyState.EventCheck)
             SetCheckEvent(true);
 
+        if (buyState == BuyState.SolveBuilding && state == BuyState.BuyTile)
+            curPickObject = null;
+
         switch (state)
         {
             case BuyState.None:
@@ -98,7 +101,7 @@ public class ShopManager : MonoBehaviour
     public void ChangePickObject(int index = 0, GameObject pickObject = null)
     {
         curPickIndex = index;
-
+        
         if (buyState == BuyState.BuyBuilding)
         {
             Destroy(curPickObject);
@@ -143,6 +146,7 @@ public class ShopManager : MonoBehaviour
         int cost = Grid.instance.tileCost * curPickTiles.Count;
 
         if (buyState != BuyState.BuyTile) return;
+        if (cost == 0) return;
         if (!PayMoney(cost))
         {
             foreach (Vector2Int pos in curPickTiles)
@@ -234,7 +238,7 @@ public class ShopManager : MonoBehaviour
 
     public void SetObjectColor(GameObject obj, Color color)
     {
-        if(obj.tag == "Tile")
+        if (obj.tag == "Tile")
         {
             if (obj.GetComponent<Tile>().CheckPurchased())
             {
