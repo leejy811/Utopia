@@ -18,14 +18,15 @@ public class UtilityBuilding : Building
 
     public override int CalculateIncome()
     {
-        int res = costPerDay * (int)(happinessRate / 100.0f);
-        res = happinessRate >= 80 ? (int)(res * 1.5f) : happinessRate < 20 ? (int)(res * 0.5f) : res;
+        float tax = costPerDay * (happinessRate / 100.0f);
+        int res = happinessRate >= 80 ? (int)(tax * 1.5f) : happinessRate < 20 ? (int)(tax * 0.5f) : (int)tax;
 
         if (type == BuildingType.Commercial)
             CommercialBuilding.income += res;
         else if (type == BuildingType.Culture)
             CultureBuilding.income += res;
 
+        Debug.Log(res + " / " + CommercialBuilding.income + " / " + CultureBuilding.income);
         return res;
     }
 
@@ -117,6 +118,8 @@ public class UtilityBuilding : Building
 
     public override void ApplyInfluence(int value, BuildingType type = 0)
     {
+        if (type != BuildingType.Residential) return;
+
         BoundaryValue cast = values[ValueType.user];
         cast.cur += value;
         values[ValueType.user] = cast;
