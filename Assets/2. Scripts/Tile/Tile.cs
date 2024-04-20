@@ -94,4 +94,13 @@ public class Tile : MonoBehaviour
             renderer.material.color = Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)];
         }
     }
+
+    public void Coloring(bool isOn)
+    {
+        Building building = this.building.GetComponent<Building>();
+        Color color = isOn ? Grid.instance.tileColors[(int)building.type] : Grid.instance.tilePurchaseColors[1];
+
+        SetTileColor(color);
+        building.ChangeViewState((ViewStateType)(Convert.ToInt32(!isOn) * 2));
+    }
 }

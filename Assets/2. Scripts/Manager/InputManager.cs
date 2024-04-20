@@ -71,6 +71,10 @@ public class InputManager : MonoBehaviour
         {
             Grid.instance.AddMode();
         }
+        else if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            Grid.instance.SetTileColorMode();
+        }
         else
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))

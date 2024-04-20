@@ -33,6 +33,7 @@ public class BuildingSpawner : MonoBehaviour
         Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), spawnTrans.rotation, transform).GetComponent<Building>();
         spawnTrans.gameObject.GetComponent<Tile>().building = building.gameObject;
         spawnTrans.gameObject.GetComponent<Tile>().ApplyInfluenceToBuilding();
+        spawnTrans.gameObject.GetComponent<Tile>().Coloring(Grid.instance.isColorMode);
         building.SetPosition(spawnTrans.position);
         building.ChangeViewState(ViewStateType.Translucent);
 

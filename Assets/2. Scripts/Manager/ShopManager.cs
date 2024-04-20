@@ -65,7 +65,10 @@ public class ShopManager : MonoBehaviour
         if (buyState == BuyState.BuyBuilding)
             Destroy(curPickObject);
         else if(state == BuyState.BuyBuilding)
+        {
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
+            Grid.instance.SetTileColorMode();
+        }
 
         if (buyState == BuyState.SolveBuilding)
             SetSolveEvent();
@@ -88,7 +91,6 @@ public class ShopManager : MonoBehaviour
                 BuildingSpawner.instance.ChangeViewState(ViewStateType.Opaque);
                 break;
             case BuyState.BuyBuilding:
-                BuildingSpawner.instance.ChangeViewState(ViewStateType.Translucent);
                 break;
             case BuyState.BuyTile:
             case BuyState.BuildTile:
