@@ -26,7 +26,6 @@ public class UtilityBuilding : Building
         else if (type == BuildingType.Culture)
             CultureBuilding.income += res;
 
-        Debug.Log(res + " / " + CommercialBuilding.income + " / " + CultureBuilding.income);
         return res;
     }
 

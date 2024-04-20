@@ -11,7 +11,8 @@ public class ShopManager : MonoBehaviour
     static public ShopManager instance;
 
     public BuyState buyState;
-    private int money;
+
+    [SerializeField] private int money;
     public int Money { get { return money; } set { money = value; UIManager.instance.Setmoney(); } }
 
     public GameObject[] buildingPrefabs;
