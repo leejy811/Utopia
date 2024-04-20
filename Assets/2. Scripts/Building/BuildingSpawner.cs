@@ -35,7 +35,6 @@ public class BuildingSpawner : MonoBehaviour
         spawnTrans.gameObject.GetComponent<Tile>().ApplyInfluenceToBuilding();
         spawnTrans.gameObject.GetComponent<Tile>().Coloring(Grid.instance.isColorMode);
         building.SetPosition(spawnTrans.position);
-        building.ChangeViewState(ViewStateType.Translucent);
 
         buildingCount[index]++;
         building.count = buildingCount[index];
