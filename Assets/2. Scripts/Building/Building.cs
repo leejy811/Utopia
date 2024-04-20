@@ -8,9 +8,9 @@ using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public enum BuildingType { Residential = 0, Commercial, Culture, Service }
-public enum BuildingSubType { Apartment = 0, Store, Cinema, Police, Restaurant, Gallery, Fire, Park }
+public enum BuildingSubType { Apartment = 0, Store, Cinema, Police, Restaurant, Gallery, Fire, Park, Hospital }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
-public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility, Influence }
+public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility, Influence, Tax, Cost, FinalIncome }
 public enum BoundaryType { Less = -1, Include, More }
 
 [Serializable]
@@ -120,12 +120,7 @@ public class Building : MonoBehaviour
         if (!curEvents.Contains(newEvent) && curEvents.Count < 2)
         {
             if (newEvent.type == EventType.Event)
-            {
-                if (newEvent.duplication == 3)
-                    ApplyEventEffect(newEvent.effectJackpotValue[newEvent.curDay], newEvent.valueType);
-                else
-                    ApplyEventEffect(newEvent.effectValue[newEvent.curDay], newEvent.valueType);
-            }
+                ApplyEventEffect(newEvent.GetEffectValue(newEvent.curDay), newEvent.valueType);
 
             if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
                 EventManager.instance.SetEventBuildings(this, true);
@@ -146,10 +141,7 @@ public class Building : MonoBehaviour
             {
                 if(curevent.type == EventType.Event)
                 {
-                    if (curevent.duplication == 3)
-                        ApplyEventEffect(curevent.effectJackpotValue[curevent.curDay - 1] * -1, curevent.valueType);
-                    else
-                        ApplyEventEffect(curevent.effectValue[curevent.curDay - 1] * -1, curevent.valueType);
+                    ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 1) * -1, curevent.valueType);
                     continue;
                 }
             }
@@ -287,20 +279,13 @@ public class Building : MonoBehaviour
             ApplyInfluenceToTile(-influencePower);
         values[type] = value;
     }
-    
+
     public void ApplyEventProblem(Event curevent, bool isAdd)
     {
         int sign = isAdd ? 1 : -1;
-        if (curevent.duplication == 3)
-        {
-            SetHappiness(curevent.effectJackpotValue[curevent.curDay - 1] * sign);
-            RoutineManager.instance.SetCityHappiness(curevent.effectJackpotValue[curevent.curDay - 1] * sign, 0);
-        }
-        else
-        {
-            SetHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * sign);
-            RoutineManager.instance.SetCityHappiness(curevent.effectValue[curevent.curDay - 1] * curevent.duplication * sign, 0);
-        }
+        int value = curevent.GetEffectValue(curevent.curDay - 1) * sign;
+        SetHappiness(value);
+        RoutineManager.instance.SetCityHappiness(value, 0);
     }
 
     public virtual int CalculateIncome()
@@ -336,5 +321,20 @@ public class Building : MonoBehaviour
         CultureBuilding.bonusIncome = 0;
 
         ServiceBuilding.income = 0;
+    }
+
+    protected float GetIncomeEvent()
+    {
+        float total = 0.0f;
+
+        foreach (Event globalEvent in EventManager.instance.globalEvents)
+        {
+            if (globalEvent.valueType == ValueType.Tax && globalEvent.targetIndex == (int)type)
+            {
+                total += globalEvent.GetEffectValue(0) / 100.0f;
+            }
+        }
+
+        return total;
     }
 }

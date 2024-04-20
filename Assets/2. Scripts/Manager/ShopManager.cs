@@ -123,7 +123,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyBuilding(Transform spawnTrans)
     {
-        int cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+        int cost = CalculateCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost);
         Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyBuilding) return;
@@ -146,7 +146,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyTile()
     {
-        int cost = Grid.instance.tileCost * curPickTiles.Count;
+        int cost = CalculateCost(Grid.instance.tileCost * curPickTiles.Count);
 
         if (buyState != BuyState.BuyTile) return;
         if (cost == 0) return;
@@ -293,5 +293,18 @@ public class ShopManager : MonoBehaviour
     private void SetCheckEvent(bool active)
     {
         UIManager.instance.SetEventNotifyPopUp(active);
+    }
+
+    private int CalculateCost(int cost)
+    {
+        foreach (Event globalEvent in EventManager.instance.globalEvents)
+        {
+            if(globalEvent.valueType == ValueType.Cost && globalEvent.targetIndex == (int)buyState)
+            {
+                cost += (int)(cost * (globalEvent.GetEffectValue(0) / 100.0f));
+            }
+        }
+
+        return cost;
     }
 }

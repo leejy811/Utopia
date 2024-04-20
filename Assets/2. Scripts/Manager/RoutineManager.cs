@@ -32,24 +32,29 @@ public class RoutineManager : MonoBehaviour
         day = day.AddDays(1);
 
         Building.InitStaticCalcValue();
-        CalculateBuilding();
-        CalculateAdditional();
+        CalculateIncome();
         UpdateHappiness();
     }
 
-    private void CalculateBuilding()
+    private void CalculateIncome()
     {
         int total = 0;
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
-            total += building.CalculateIncome();
+            total += building.CalculateIncome() + building.CalculateBonus();
         }
 
+        foreach (Event globalEvent in EventManager.instance.globalEvents)
+        {
+            if (globalEvent.valueType == ValueType.FinalIncome)
+                total += (int)(Mathf.Abs(total) * (globalEvent.GetEffectValue(0) / 100.0f));
+        }
+        
         ShopManager.instance.GetMoney(total);
     }
 
-    private void CalculateAdditional()
+    private void CalculateBonus()
     {
         int total = 0;
 

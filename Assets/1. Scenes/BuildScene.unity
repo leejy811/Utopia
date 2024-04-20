@@ -25965,10 +25965,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventCondition: 0
-  eventProb: 0
+  eventProb: 1
   events:
   - eventName: "\uC9D1\uC5D0 \uBB3C\uC774 \uC548\uB098\uC640\uC694"
-    eventEngName: No Water
     eventIcon: {fileID: 21300000, guid: 3ec4feab67571874686cc764af22f77f, type: 3}
     eventIndex: 0
     type: 0
@@ -25979,17 +25978,14 @@ MonoBehaviour:
     curDay: 0
     solutions:
     - name: "\uC218\uB3C4 \uC635\uC158 \uCD94\uAC00"
-      engName: Add Water
       cost: 500
       prob: 100
     - name: "\uC218\uB3C4\uAD00 \uAD50\uCCB4"
-      engName: Repair
       cost: 250
       prob: 50
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a0000000f00000014000000
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uD558\uC218\uAD6C\uC5D0\uC11C \uB0C4\uC0C8\uB098\uC694"
-    eventEngName: Smell
     eventIcon: {fileID: 21300000, guid: 574538540cf7a7c48854aeef0087e8e5, type: 3}
     eventIndex: 1
     type: 0
@@ -26000,17 +25996,14 @@ MonoBehaviour:
     curDay: 0
     solutions:
     - name: "\uD558\uC218 \uC635\uC158 \uCD94\uAC00"
-      engName: Add Sewage
       cost: 500
       prob: 100
     - name: "\uB6AB\uC5B4\uBEE5 \uC0AC\uC6A9"
-      engName: Repair
       cost: 150
       prob: 30
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a0000000f00000014000000
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC9D1\uC5D0 \uC804\uAE30\uAC00 \uC548\uB4E4\uC5B4\uC640\uC694"
-    eventEngName: 'No Electricity  '
     eventIcon: {fileID: 21300000, guid: 31a6061301232c949b33e4a253aa05cb, type: 3}
     eventIndex: 2
     type: 0
@@ -26021,17 +26014,14 @@ MonoBehaviour:
     curDay: 0
     solutions:
     - name: "\uC804\uB825 \uC635\uC158 \uCD94\uAC00"
-      engName: Add Electricity
       cost: 500
       prob: 100
     - name: "\uD615\uAD11\uB4F1 \uAD50\uCCB4"
-      engName: Repair
       cost: 250
       prob: 50
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a0000000f00000014000000
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC774\uC6C3\uB4E4\uC774 \uC2DC\uB044\uB7EC\uC6CC\uC694"
-    eventEngName: Noisy
     eventIcon: {fileID: 21300000, guid: 4cca3031a745b514d8444175c86e74f9, type: 3}
     eventIndex: 3
     type: 0
@@ -26042,18 +26032,15 @@ MonoBehaviour:
     curDay: 0
     solutions:
     - name: "\uBC29\uC74C \uC635\uC158 \uCD94\uAC00"
-      engName: Add No Sound
       cost: 500
       prob: 100
-    - name: "\uC6B0\uD37C\uB85C \uBCF4\uBCF5"
-      engName: Revenge
+    - name: "\uADC0\uB9C8\uAC1C \uAD6C\uB9E4"
       cost: 50
-      prob: 20
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a0000000f00000014000000
+      prob: 25
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBB3C\uAC74\uC744 \uC0B4 \uACF3\uC774
       \uC5C6\uC5B4\uC694"
-    eventEngName: 'Can not Buy '
     eventIcon: {fileID: 21300000, guid: 36d7e36461108c24f8380a6ebac145e2, type: 3}
     eventIndex: 4
     type: 0
@@ -26064,19 +26051,34 @@ MonoBehaviour:
     curDay: 0
     solutions:
     - name: "\uC628\uB77C\uC778 \uC1FC\uD551"
-      engName: Buy Internet
       cost: 300
       prob: 80
     - name: "\uCC28 \uD0C0\uACE0 \uC1FC\uD551"
-      engName: GO Shopping Center
-      cost: 150
+      cost: 100
       prob: 40
-    effectValue: 0300000005000000
-    effectJackpotValue: 080000000f000000
-  - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC601\uD654\uAD00\uC774 \uC5C6\uC5B4\uC694"
-    eventEngName: 'No Movie '
-    eventIcon: {fileID: 21300000, guid: fc7e3638a385eeb408576a8bab747b4b, type: 3}
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC74C\uC2DD\uC810\uC774 \uC5C6\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 5
+    type: 0
+    conditionType: 1
+    valueType: 4
+    targetIndex: 4
+    duplication: 0
+    curDay: 0
+    solutions:
+    - name: "\uBC30\uB2EC \uC2DC\uD0A4\uAE30"
+      cost: 300
+      prob: 80
+    - name: "\uC9D1 \uBC25 \uBA39\uAE30"
+      cost: 100
+      prob: 40
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC601\uD654\uAD00\uC774 \uC5C6\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: fc7e3638a385eeb408576a8bab747b4b, type: 3}
+    eventIndex: 6
     type: 0
     conditionType: 1
     valueType: 3
@@ -26085,19 +26087,16 @@ MonoBehaviour:
     curDay: 0
     solutions:
     - name: "OTT \uAD6C\uB3C5"
-      engName: Buy OTT
       cost: 300
       prob: 80
     - name: "\uBA3C \uC601\uD654\uAD00 \uAC00\uAE30"
-      engName: Go Movie
-      cost: 150
+      cost: 100
       prob: 40
-    effectValue: 0300000005000000
-    effectJackpotValue: 080000000f000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBBF8\uC220\uAD00\uC774 \uC5C6\uC5B4\uC694"
-    eventEngName: No Art Museum
     eventIcon: {fileID: 21300000, guid: 5e84bd72e18de1d41a89b9f49f1ccebb, type: 3}
-    eventIndex: 6
+    eventIndex: 7
     type: 0
     conditionType: 1
     valueType: 3
@@ -26105,41 +26104,35 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "VR\uB85C \uC990\uAE30\uAE30"
-      engName: Go VR
-      cost: 10
-      prob: 5
+    - name: "\uCC45\uC73C\uB85C \uBCF4\uAE30"
+      cost: 300
+      prob: 80
     - name: "\uBA3C \uBBF8\uC220\uAD00 \uAC00\uAE30"
-      engName: Go Art Museum
-      cost: 150
+      cost: 100
       prob: 40
-    effectValue: 0300000005000000
-    effectJackpotValue: 080000000f000000
-  - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uACF5\uC6D0\uC774 \uC5C6\uC5B4\uC694"
-    eventEngName: No Park
-    eventIcon: {fileID: 21300000, guid: bab9c7a3d772d0f49ac99fd8dba4880d, type: 3}
-    eventIndex: 7
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uAC70\uB9AC\uAC00 \uBB34\uC11C\uC6CC\uC694"
+    eventIcon: {fileID: 21300000, guid: 71204e6f62efead4d83b09b468210523, type: 3}
+    eventIndex: 8
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 7
+    targetIndex: 3
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uAC78\uC5B4\uC11C \uACF5\uC6D0 \uAC00\uAE30"
-      engName: Walking to Park
-      cost: 10
-      prob: 5
-    - name: "\uBA3C \uACF5\uC6D0 \uAC00\uAE30"
-      engName: Go Park
-      cost: 150
-      prob: 40
-    effectValue: 050000000a0000000f000000
-    effectJackpotValue: 0f000000140000001e000000
-  - eventName: "\uBD88\uC774 \uB0AC\uC5B4\uC694"
-    eventEngName: Fire
+    - name: "\uACBD\uD638\uC6D0 \uACE0\uC6A9\uD558\uAE30"
+      cost: 300
+      prob: 80
+    - name: "\uD638\uC2E0\uC6A9\uD488 \uCC59\uAE30\uAE30"
+      cost: 50
+      prob: 20
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uD654\uC7AC\uAC00 \uBC1C\uC0DD\uD588\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 4f94b5b8b82eb744ea821e5e99b0a873, type: 3}
-    eventIndex: 8
+    eventIndex: 9
     type: 0
     conditionType: 1
     valueType: 3
@@ -26147,82 +26140,52 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "119 \uBD80\uB974\uAE30"
-      engName: Call 119
-      cost: 250
-      prob: 90
     - name: "\uC18C\uD654\uAE30 \uC0AC\uC6A9"
-      engName: Use
-      cost: 150
-      prob: 40
-    effectValue: 0a000000
-    effectJackpotValue: 19000000
-  - eventName: "\uAC70\uB9AC\uAC00 \uBB34\uC11C\uC6CC\uC694"
-    eventEngName: Scared Street
-    eventIcon: {fileID: 21300000, guid: 71204e6f62efead4d83b09b468210523, type: 3}
-    eventIndex: 9
-    type: 0
-    conditionType: 1
-    valueType: 3
-    targetIndex: 3
-    duplication: 0
-    curDay: 0
-    solutions:
-    - name: "\uD638\uB8E8\uB77C\uAE30 \uAD6C\uB9E4"
-      engName: Buy Item
-      cost: 150
-      prob: 40
-    - name: "\uACBD\uD638\uC6D0 \uACE0\uC6A9"
-      engName: Hire Guard
       cost: 300
-      prob: 90
-    effectValue: 030000000500000007000000
-    effectJackpotValue: 0a0000000c0000000f000000
-  - eventName: "\uB204\uAC00 \uBB3C\uAC74\uC744 \uD6D4\uCCD0\uAC14\uC5B4\uC694"
-    eventEngName: 'Steal '
-    eventIcon: {fileID: 21300000, guid: 0e83afd756bddb54a9353c4f0267a34a, type: 3}
+      prob: 80
+    - name: "119\uC5D0 \uC804\uD654"
+      cost: 50
+      prob: 20
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uBCD1\uC5D0 \uAC78\uB838\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 8be40f3a31e26c64bac203e0e5837b4e, type: 3}
     eventIndex: 10
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 3
+    targetIndex: 8
     duplication: 0
     curDay: 0
     solutions:
-    - name: "CCTV \uC124\uCE58"
-      engName: Install CCTV
-      cost: 200
-      prob: 40
-    - name: "\uBCF4\uC548\uC5C5\uCCB4\uC640 \uACC4\uC57D"
-      engName: Contract Security
-      cost: 400
+    - name: "\uBCD1\uC6D0 \uAC00\uAE30"
+      cost: 300
       prob: 80
-    effectValue: 0500000005000000
-    effectJackpotValue: 0d0000000d000000
-  - eventName: "\uB3C4\uB451\uC774 \uB4E4\uC5C8\uC5B4\uC694"
-    eventEngName: Thief
-    eventIcon: {fileID: 21300000, guid: 16df50db958fc4b4e873c2063c5ca0f3, type: 3}
+    - name: "\uC0C1\uBE44\uC57D \uBA39\uAE30"
+      cost: 100
+      prob: 40
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uAC70\uB9AC\uAC00 \uC0AD\uB9C9\uD574\uC694"
+    eventIcon: {fileID: 21300000, guid: bab9c7a3d772d0f49ac99fd8dba4880d, type: 3}
     eventIndex: 11
     type: 0
     conditionType: 1
     valueType: 3
-    targetIndex: 3
+    targetIndex: 7
     duplication: 0
     curDay: 0
     solutions:
-    - name: "CCTV \uC124\uCE58"
-      engName: Install CCTV
-      cost: 200
-      prob: 40
-    - name: "\uBCF4\uC548\uC5C5\uCCB4\uC640 \uACC4\uC57D"
-      engName: Contract Security
-      cost: 400
+    - name: "\uC8FC\uBCC0 \uAFB8\uBBF8\uAE30"
+      cost: 300
       prob: 80
-    effectValue: 0a000000
-    effectJackpotValue: 28000000
-  - eventName: "\uBCD1\uC5D0 \uAC78\uB838\uC5B4\uC694"
-    eventEngName: 'Sick  '
-    eventIcon: {fileID: 21300000, guid: 8be40f3a31e26c64bac203e0e5837b4e, type: 3}
+    - name: "\uBA3C \uACF5\uC6D0 \uAC00\uAE30"
+      cost: 100
+      prob: 40
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uC5D8\uB9AC\uBCA0\uC774\uD130\uAC00 \uACE0\uC7A5\uB0AC\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 71338e6ee788d0c41bb77d3aaed9381e, type: 3}
     eventIndex: 12
     type: 0
     conditionType: 2
@@ -26231,39 +26194,33 @@ MonoBehaviour:
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uBCD1\uC6D0 \uAC00\uAE30"
-      engName: Go Hospital
+    - name: "\uC5C5\uCCB4\uC5D0 \uB9E1\uAE30\uAE30"
       cost: 300
       prob: 80
-    - name: "\uC57D\uAD6D \uAC00\uAE30"
-      engName: Buy Medicine
-      cost: 200
-      prob: 60
+    - name: "\uC790\uCCB4 \uC218\uB9AC\uD558\uAE30"
+      cost: 50
+      prob: 20
     effectValue: 010000000200000003000000
-    effectJackpotValue: 03000000070000000a000000
-  - eventName: "\uC5D8\uB9AC\uBCA0\uC774\uD130\uAC00 \uACE0\uC7A5\uB0AC\uC5B4\uC694"
-    eventEngName: 'Broken  '
-    eventIcon: {fileID: 21300000, guid: 71338e6ee788d0c41bb77d3aaed9381e, type: 3}
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uB3C4\uB451\uC774 \uB4E4\uC5C8\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 16df50db958fc4b4e873c2063c5ca0f3, type: 3}
     eventIndex: 13
     type: 0
-    conditionType: 2
+    conditionType: 3
     valueType: 3
     targetIndex: 0
     duplication: 0
     curDay: 0
     solutions:
-    - name: "\uC218\uB9AC"
-      engName: Repair
+    - name: "CCTV \uC124\uCE58\uD558\uAE30"
       cost: 300
-      prob: 100
-    - name: "\uACC4\uB2E8 \uC774\uC6A9"
-      engName: Use Stairs
-      cost: 10
-      prob: 10
-    effectValue: 010000000100000002000000
-    effectJackpotValue: 030000000500000008000000
+      prob: 80
+    - name: "\uB3C4\uC5B4\uB77D \uBCC0\uACBD\uD558\uAE30"
+      cost: 100
+      prob: 40
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC0C1\uD488\uAC00\uACA9\uC774 \uC62C\uB790\uC5B4\uC694"
-    eventEngName: 'Price Up  '
     eventIcon: {fileID: 21300000, guid: 2be1bf446da23524185bba8c452cea40, type: 3}
     eventIndex: 14
     type: 1
@@ -26275,88 +26232,9 @@ MonoBehaviour:
     solutions: []
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
-  - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uC62C\uB790\uC5B4\uC694"
-    eventEngName: 'Fee Up  '
-    eventIcon: {fileID: 21300000, guid: ab2e1e7e7cccd104aa70cdbe50fe68d5, type: 3}
+  - eventName: "\uC0C1\uD488\uAC00\uACA9\uC774 \uB0B4\uB838\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 2be1bf446da23524185bba8c452cea40, type: 3}
     eventIndex: 15
-    type: 1
-    conditionType: 2
-    valueType: 7
-    targetIndex: 2
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: 190000001900000019000000
-    effectJackpotValue: 640000006400000064000000
-  - eventName: "\uC601\uD654\uAC00 \uC720\uD589\uD574\uC694"
-    eventEngName: 'Price Down  '
-    eventIcon: {fileID: 21300000, guid: 061b07b766137fc45a01f46900600446, type: 3}
-    eventIndex: 16
-    type: 1
-    conditionType: 2
-    valueType: 8
-    targetIndex: 6
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: 190000001900000019000000
-    effectJackpotValue: 640000006400000064000000
-  - eventName: "\uC77C\uC790\uB9AC\uAC00 \uC5C6\uC5B4\uC694"
-    eventEngName: 'No Job  '
-    eventIcon: {fileID: 21300000, guid: 59c5e1ef2587ed34889fd3031b4bebb2, type: 3}
-    eventIndex: 17
-    type: 1
-    conditionType: 2
-    valueType: 7
-    targetIndex: 3
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: e7ffffffe7ffffffe7ffffff
-    effectJackpotValue: 9cffffff9cffffff9cffffff
-  - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uB0B4\uB838\uC5B4\uC694"
-    eventEngName: 'Fee Down  '
-    eventIcon: {fileID: 21300000, guid: bad46331ebd05c74cb929944df5fa0f4, type: 3}
-    eventIndex: 18
-    type: 1
-    conditionType: 2
-    valueType: 7
-    targetIndex: 2
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: e7ffffffe7ffffffe7ffffff
-    effectJackpotValue: 9cffffff9cffffff9cffffff
-  - eventName: "\uBBF8\uC220\uC774 \uC720\uD589\uD574\uC694"
-    eventEngName: 'Price Down  '
-    eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
-    eventIndex: 19
-    type: 1
-    conditionType: 2
-    valueType: 8
-    targetIndex: 9
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: 190000001900000019000000
-    effectJackpotValue: 640000006400000064000000
-  - eventName: "\uC77C\uC790\uB9AC\uAC00 \uB9CE\uC544\uC694"
-    eventEngName: 'Many Job  '
-    eventIcon: {fileID: 21300000, guid: 510d45d535d1a1042a69fd5d90698d05, type: 3}
-    eventIndex: 20
-    type: 1
-    conditionType: 2
-    valueType: 7
-    targetIndex: 3
-    duplication: 0
-    curDay: 0
-    solutions: []
-    effectValue: 190000001900000019000000
-    effectJackpotValue: 640000006400000064000000
-  - eventName: "\uC0C1\uD488 \uAC00\uACA9\uC774 \uB0B4\uB838\uC5B4\uC694"
-    eventEngName: 'Price Down  '
-    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
-    eventIndex: 21
     type: 1
     conditionType: 2
     valueType: 7
@@ -26366,7 +26244,296 @@ MonoBehaviour:
     solutions: []
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
+  - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uC62C\uB790\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: ab2e1e7e7cccd104aa70cdbe50fe68d5, type: 3}
+    eventIndex: 16
+    type: 1
+    conditionType: 2
+    valueType: 7
+    targetIndex: 2
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 190000001900000019000000
+    effectJackpotValue: 640000006400000064000000
+  - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uB0B4\uB838\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: bad46331ebd05c74cb929944df5fa0f4, type: 3}
+    eventIndex: 17
+    type: 1
+    conditionType: 2
+    valueType: 7
+    targetIndex: 2
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: e7ffffffe7ffffffe7ffffff
+    effectJackpotValue: 9cffffff9cffffff9cffffff
+  - eventName: "\uC77C\uC790\uB9AC\uAC00 \uB9CE\uC544\uC694"
+    eventIcon: {fileID: 21300000, guid: 510d45d535d1a1042a69fd5d90698d05, type: 3}
+    eventIndex: 18
+    type: 1
+    conditionType: 2
+    valueType: 7
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 190000001900000019000000
+    effectJackpotValue: 640000006400000064000000
+  - eventName: "\uC77C\uC790\uB9AC\uAC00 \uC5C6\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 59c5e1ef2587ed34889fd3031b4bebb2, type: 3}
+    eventIndex: 19
+    type: 1
+    conditionType: 2
+    valueType: 7
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: e7ffffffe7ffffffe7ffffff
+    effectJackpotValue: 9cffffff9cffffff9cffffff
+  - eventName: "\uBB3C\uAC00\uAC00 \uB0B4\uB838\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 061b07b766137fc45a01f46900600446, type: 3}
+    eventIndex: 20
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 1
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 190000001900000019000000
+    effectJackpotValue: 640000006400000064000000
+  - eventName: "\uBB3C\uAC00\uAC00 \uC62C\uB790\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
+    eventIndex: 21
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 1
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: e7ffffffe7ffffffe7ffffff
+    effectJackpotValue: 9cffffff9cffffff9cffffff
+  - eventName: "\uBB38\uD654\uC0DD\uD65C\uC774 \uC720\uD589\uD574\uC694"
+    eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
+    eventIndex: 21
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 2
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 190000001900000019000000
+    effectJackpotValue: 640000006400000064000000
+  - eventName: "\uBB38\uD654\uC0DD\uD65C\uC744 \uC548\uD574\uC694"
+    eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
+    eventIndex: 21
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 2
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: e7ffffffe7ffffffe7ffffff
+    effectJackpotValue: 9cffffff9cffffff9cffffff
+  - eventName: "\uACF5\uAE30\uC5C5\uC774 \uC720\uD589\uD574\uC694"
+    eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
+    eventIndex: 21
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 190000001900000019000000
+    effectJackpotValue: 640000006400000064000000
+  - eventName: "\uC0AC\uAE30\uC5C5\uC774 \uC720\uD589\uD574\uC694"
+    eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
+    eventIndex: 21
+    type: 1
+    conditionType: 2
+    valueType: 8
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: e7ffffffe7ffffffe7ffffff
+    effectJackpotValue: 9cffffff9cffffff9cffffff
+  - eventName: "\uD0C0\uC77C \uBE44\uC6A9\uC774 \uC62C\uB790\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 22
+    type: 2
+    conditionType: 3
+    valueType: 10
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 32000000
+    effectJackpotValue: c8000000
+  - eventName: "\uD0C0\uC77C \uBE44\uC6A9\uC774 \uB0B4\uB838\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 23
+    type: 2
+    conditionType: 3
+    valueType: 10
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: f6ffffff
+    effectJackpotValue: ceffffff
+  - eventName: "\uAC74\uC124 \uBE44\uC6A9\uC774 \uC62C\uB790\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 24
+    type: 2
+    conditionType: 3
+    valueType: 10
+    targetIndex: 1
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 32000000
+    effectJackpotValue: c8000000
+  - eventName: "\uAC74\uC124 \uBE44\uC6A9\uC774 \uB0B4\uB838\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 25
+    type: 2
+    conditionType: 3
+    valueType: 10
+    targetIndex: 1
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: f6ffffff
+    effectJackpotValue: ceffffff
+  - eventName: "\uC9D1\uC774 \uC88B\uC544\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 26
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 0
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 0a000000
+    effectJackpotValue: 32000000
+  - eventName: "\uC9D1\uC774 \uB098\uBE60\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 27
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 0
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: f6ffffff
+    effectJackpotValue: ceffffff
+  - eventName: "\uC0C1\uD488\uC774 \uC798 \uD314\uB824\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 28
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 1
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 0a000000
+    effectJackpotValue: 32000000
+  - eventName: "\uC0C1\uD488\uC774 \uC548 \uD314\uB824\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 29
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 1
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: f6ffffff
+    effectJackpotValue: ceffffff
+  - eventName: "\uBB38\uD654 \uC0DD\uD65C\uC774 \uD65C\uBC1C\uD574\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 30
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 2
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 0a000000
+    effectJackpotValue: 32000000
+  - eventName: "\uBB38\uD654 \uC0DD\uD65C\uC744 \uC548\uD574\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 31
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 2
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: f6ffffff
+    effectJackpotValue: ceffffff
+  - eventName: "\uC790\uC6D0\uBD09\uC0AC\uC790\uAC00 \uB9CE\uC544\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 32
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 0a000000
+    effectJackpotValue: 32000000
+  - eventName: "\uC790\uC6D0\uBD09\uC0AC\uC790\uAC00 \uC801\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 33
+    type: 2
+    conditionType: 2
+    valueType: 9
+    targetIndex: 3
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: f6ffffff
+    effectJackpotValue: ceffffff
+  - eventName: "\uD22C\uC790\uC5D0 \uC131\uACF5\uD588\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 33
+    type: 2
+    conditionType: 3
+    valueType: 11
+    targetIndex: 0
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: 32000000
+    effectJackpotValue: c8000000
+  - eventName: "\uD22C\uC790\uC5D0 \uC2E4\uD328\uD588\uC5B4\uC694"
+    eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
+    eventIndex: 33
+    type: 2
+    conditionType: 3
+    valueType: 11
+    targetIndex: 0
+    duplication: 0
+    curDay: 0
+    solutions: []
+    effectValue: ceffffff
+    effectJackpotValue: 38ffffff
   possibleEvents: []
+  globalEvents: []
   eventBuildings: []
 --- !u!4 &555182732
 Transform:
@@ -66522,6 +66689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyState: 0
+  money: 0
   buildingPrefabs:
   - {fileID: 6249387795973439619, guid: 5858e47bac8b67a4a8fc399143b72f88, type: 3}
   - {fileID: 6249387795973439619, guid: 7426837596f41ee40aeb93cb532a74cc, type: 3}

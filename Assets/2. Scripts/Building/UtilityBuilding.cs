@@ -19,6 +19,7 @@ public class UtilityBuilding : Building
     public override int CalculateIncome()
     {
         float tax = costPerDay * (happinessRate / 100.0f);
+        tax += tax * GetIncomeEvent();
         int res = happinessRate >= 80 ? (int)(tax * 1.5f) : happinessRate < 20 ? (int)(tax * 0.5f) : (int)tax;
 
         if (type == BuildingType.Commercial)

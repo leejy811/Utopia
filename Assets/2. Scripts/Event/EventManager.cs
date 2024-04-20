@@ -15,6 +15,7 @@ public class EventManager : MonoBehaviour
     public List<List<Building>> targetBuildings = new List<List<Building>>();
     public List<Event> events;
     public List<Event> possibleEvents;
+    public List<Event> globalEvents;
     public List<Building> eventBuildings;
 
     private void Awake()
@@ -33,6 +34,10 @@ public class EventManager : MonoBehaviour
         for (int i = 0; i < events.Count; i++)
         {
             targetBuildings.Add(new List<Building>());
+
+            Event e = events[i];
+            e.eventIndex = i;
+            events[i] = e;
         }
     }
 
@@ -64,6 +69,7 @@ public class EventManager : MonoBehaviour
         }
 
         targetBuildings = buildings;
+        globalEvents.Clear();
 
         RandomRoulette();
     }
@@ -147,6 +153,12 @@ public class EventManager : MonoBehaviour
     {
         foreach (Event ranEvent in ranEvents)
         {
+            if (ranEvent.type == EventType.Global)
+            {
+                globalEvents.Add(ranEvent);
+                continue;
+            }
+            
             List<int> indexs = new List<int>();
             int range = Mathf.CeilToInt((targetBuildings[ranEvent.eventIndex].Count / 3.0f));
 
