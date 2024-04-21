@@ -61,9 +61,12 @@ public class EventManager : MonoBehaviour
             {
                 if (events[i].CheckCondition(building))
                 {
-                    buildings[events[i].eventIndex].Add(building);
-                    if (!possibleEvents.Contains(events[i]))
-                        possibleEvents.Add(events[i]);
+                    if (building.CheckApplyEvent(events[i]))
+                    {
+                        buildings[events[i].eventIndex].Add(building);
+                        if (!possibleEvents.Contains(events[i]))
+                            possibleEvents.Add(events[i]);
+                    }
                 }
             }
         }
