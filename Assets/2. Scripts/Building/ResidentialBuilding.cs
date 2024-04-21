@@ -73,6 +73,7 @@ public class ResidentialBuilding : Building
         }
 
         float res = values[ValueType.Resident].cur * (happinessRate / 100.0f) * (4 - grade);
+        res += res * GetIncomeEvent();
         res = happinessRate >= 80 ? ((int)(res * 1.5f)) : (int)res;
         income += (int)res;
         return (int)res;

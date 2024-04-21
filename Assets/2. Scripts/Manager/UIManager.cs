@@ -420,10 +420,16 @@ public class UIManager : MonoBehaviour
 
     public void OnClickOptionBuy(int index)
     {
+        Debug.Log("Click");
         if (ShopManager.instance.BuyOption((OptionType)index))
         {
-            int idx = GetBuildingIndex();
-            buildingIntros[idx].SetValue(targetBuilding);
+            if (ShopManager.instance.buyState == BuyState.SolveBuilding)
+            {
+                int idx = GetBuildingIndex();
+                buildingIntros[idx].SetValue(targetBuilding);
+            }
+            else
+                eventNotify.SetValue(EventManager.instance.eventBuildings[eventNotify.curIndex]);
         }
     }
 

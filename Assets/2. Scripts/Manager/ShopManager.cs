@@ -11,7 +11,8 @@ public class ShopManager : MonoBehaviour
     static public ShopManager instance;
 
     public BuyState buyState;
-    private int money;
+
+    [SerializeField] private int money;
     public int Money { get { return money; } set { money = value; UIManager.instance.Setmoney(); } }
 
     public GameObject[] buildingPrefabs;
@@ -64,7 +65,10 @@ public class ShopManager : MonoBehaviour
         if (buyState == BuyState.BuyBuilding)
             Destroy(curPickObject);
         else if(state == BuyState.BuyBuilding)
+        {
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
+            Grid.instance.SetTileColorMode();
+        }
 
         if (buyState == BuyState.SolveBuilding)
             SetSolveEvent();
@@ -76,6 +80,9 @@ public class ShopManager : MonoBehaviour
         else if (state == BuyState.EventCheck)
             SetCheckEvent(true);
 
+        if (buyState == BuyState.SolveBuilding && state == BuyState.BuyTile)
+            curPickObject = null;
+
         switch (state)
         {
             case BuyState.None:
@@ -84,7 +91,6 @@ public class ShopManager : MonoBehaviour
                 BuildingSpawner.instance.ChangeViewState(ViewStateType.Opaque);
                 break;
             case BuyState.BuyBuilding:
-                BuildingSpawner.instance.ChangeViewState(ViewStateType.Translucent);
                 break;
             case BuyState.BuyTile:
             case BuyState.BuildTile:
@@ -98,7 +104,7 @@ public class ShopManager : MonoBehaviour
     public void ChangePickObject(int index = 0, GameObject pickObject = null)
     {
         curPickIndex = index;
-
+        
         if (buyState == BuyState.BuyBuilding)
         {
             Destroy(curPickObject);
@@ -117,7 +123,7 @@ public class ShopManager : MonoBehaviour
 
     public void BuyBuilding(Transform spawnTrans)
     {
-        int cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+        int cost = CalculateCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost);
         Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyBuilding) return;
@@ -140,9 +146,10 @@ public class ShopManager : MonoBehaviour
 
     public void BuyTile()
     {
-        int cost = Grid.instance.tileCost * curPickTiles.Count;
+        int cost = CalculateCost(Grid.instance.tileCost * curPickTiles.Count);
 
         if (buyState != BuyState.BuyTile) return;
+        if (cost == 0) return;
         if (!PayMoney(cost))
         {
             foreach (Vector2Int pos in curPickTiles)
@@ -177,13 +184,18 @@ public class ShopManager : MonoBehaviour
 
     public bool BuyOption(OptionType type)
     {
-        ResidentialBuilding building = curPickObject.GetComponent<ResidentialBuilding>();
+        ResidentialBuilding building;
+        if (buyState == BuyState.SolveBuilding)
+            building = curPickObject.GetComponent<ResidentialBuilding>();
+        else
+            building = EventManager.instance.eventBuildings[UIManager.instance.eventNotify.curIndex] as ResidentialBuilding;
 
-        if (buyState != BuyState.SolveBuilding) return false;
+        if (buyState != BuyState.SolveBuilding && buyState != BuyState.EventCheck) return false;
         if (building.CheckFacility(type)) return false;
         if (!PayMoney(500)) return false;
 
         building.BuyFacility(type);
+
         return true;
     }
 
@@ -229,7 +241,7 @@ public class ShopManager : MonoBehaviour
 
     public void SetObjectColor(GameObject obj, Color color)
     {
-        if(obj.tag == "Tile")
+        if (obj.tag == "Tile")
         {
             if (obj.GetComponent<Tile>().CheckPurchased())
             {
@@ -281,5 +293,18 @@ public class ShopManager : MonoBehaviour
     private void SetCheckEvent(bool active)
     {
         UIManager.instance.SetEventNotifyPopUp(active);
+    }
+
+    private int CalculateCost(int cost)
+    {
+        foreach (Event globalEvent in EventManager.instance.globalEvents)
+        {
+            if(globalEvent.valueType == ValueType.Cost && globalEvent.targetIndex == (int)buyState)
+            {
+                cost += (int)(cost * (globalEvent.GetEffectValue(0) / 100.0f));
+            }
+        }
+
+        return cost;
     }
 }

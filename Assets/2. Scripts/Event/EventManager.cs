@@ -7,9 +7,15 @@ public class EventManager : MonoBehaviour
 {
     static public EventManager instance;
 
+    [Header("Value")]
+    public int eventCondition;
+    [Range(0.0f, 1.0f)] public float eventProb;
+
+    [Header("Event List")]
     public List<List<Building>> targetBuildings = new List<List<Building>>();
     public List<Event> events;
     public List<Event> possibleEvents;
+    public List<Event> globalEvents;
     public List<Building> eventBuildings;
 
     private void Awake()
@@ -28,11 +34,18 @@ public class EventManager : MonoBehaviour
         for (int i = 0; i < events.Count; i++)
         {
             targetBuildings.Add(new List<Building>());
+
+            Event e = events[i];
+            e.eventIndex = i;
+            events[i] = e;
         }
     }
 
     public void CheckEvents()
     {
+        if (BuildingSpawner.instance.buildings.Count < eventCondition) return;
+        if (Random.Range(0.0f, 1.0f) > eventProb) return;
+
         List<List<Building>> buildings = new List<List<Building>>();
 
         for (int i = 0; i < events.Count; i++)
@@ -56,6 +69,9 @@ public class EventManager : MonoBehaviour
         }
 
         targetBuildings = buildings;
+        globalEvents.Clear();
+
+        RandomRoulette();
     }
 
     public void RandomRoulette()
@@ -137,6 +153,12 @@ public class EventManager : MonoBehaviour
     {
         foreach (Event ranEvent in ranEvents)
         {
+            if (ranEvent.type == EventType.Global)
+            {
+                globalEvents.Add(ranEvent);
+                continue;
+            }
+            
             List<int> indexs = new List<int>();
             int range = Mathf.CeilToInt((targetBuildings[ranEvent.eventIndex].Count / 3.0f));
 
@@ -190,7 +212,10 @@ public class EventManager : MonoBehaviour
                         if (eventBuildings.Count == 1)
                             UIManager.instance.SetEventNotifyPopUp(false);
                         else if(i == 0)
+                        {
                             UIManager.instance.OnClickEventNotifyNext(true);
+                            UIManager.instance.eventNotify.curIndex--;
+                        }
                         else
                             UIManager.instance.OnClickEventNotifyNext(false);
                     }

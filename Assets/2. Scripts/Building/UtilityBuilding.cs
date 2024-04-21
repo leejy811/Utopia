@@ -18,8 +18,9 @@ public class UtilityBuilding : Building
 
     public override int CalculateIncome()
     {
-        int res = costPerDay * (int)(happinessRate / 100.0f);
-        res = happinessRate >= 80 ? (int)(res * 1.5f) : happinessRate < 20 ? (int)(res * 0.5f) : res;
+        float tax = costPerDay * (happinessRate / 100.0f);
+        tax += tax * GetIncomeEvent();
+        int res = happinessRate >= 80 ? (int)(tax * 1.5f) : happinessRate < 20 ? (int)(tax * 0.5f) : (int)tax;
 
         if (type == BuildingType.Commercial)
             CommercialBuilding.income += res;
@@ -43,7 +44,7 @@ public class UtilityBuilding : Building
             else
                 income += 50;
         }
-        else if(values[ValueType.user].CheckBoundary() == BoundaryType.More)
+        else if(values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 income += 0;
@@ -89,7 +90,7 @@ public class UtilityBuilding : Building
             else
                 changeAmount += 1;
         }
-        else if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
+        else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 changeAmount += 0;
@@ -117,7 +118,7 @@ public class UtilityBuilding : Building
 
     public override void ApplyInfluence(int value, BuildingType type = 0)
     {
-        if (!values.ContainsKey((ValueType)type)) return;
+        if (type != BuildingType.Residential) return;
 
         BoundaryValue cast = values[ValueType.user];
         cast.cur += value;

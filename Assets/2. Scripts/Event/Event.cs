@@ -3,14 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EventType { Problem, Event }
-public enum ConditionType { Option, Influence, Exist }
+public enum EventType { Problem, Event, Global }
+public enum ConditionType { Option, Influence, Exist, None }
 
 [Serializable]
 public struct EventSolution 
 {
     public string name;
-    public string engName;
     public int cost, prob; 
 }
 
@@ -18,7 +17,6 @@ public struct EventSolution
 public struct Event
 {
     public string eventName;
-    public string eventEngName;
     public Sprite eventIcon;
     public int eventIndex;
     public EventType type;
@@ -41,6 +39,8 @@ public struct Event
                 return CheckCondition((BuildingSubType)targetIndex, building);
             case ConditionType.Exist:
                 return CheckCondition((BuildingType)targetIndex, building);
+            case ConditionType.None:
+                return true;
         }
 
         return false;
@@ -55,7 +55,8 @@ public struct Event
 
     private bool CheckCondition(BuildingSubType subType, Building building)
     {
-        if (subType == BuildingSubType.Police || subType == BuildingSubType.Fire || building.type == BuildingType.Residential)
+        if (subType == BuildingSubType.Police || subType == BuildingSubType.Fire
+            || subType == BuildingSubType.Park || subType == BuildingSubType.Hospital || building.type == BuildingType.Residential)
             return !building.CheckInfluence(subType);
 
         return false;
@@ -87,5 +88,12 @@ public struct Event
     public static bool operator !=(Event left, Event right)
     {
         return left.eventIndex != right.eventIndex;
+    }
+
+    public int GetEffectValue(int day)
+    {
+        int res = duplication == 3 ? effectJackpotValue[day] : effectValue[day] * duplication;
+
+        return res;
     }
 }
