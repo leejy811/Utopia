@@ -8,10 +8,10 @@ public class CinemachineCameraController : MonoBehaviour
     public float rotationSpeed = 90.0f;
     public float zoomSpeed = 5.0f;
 
-    public float minX = -40f;
-    public float maxX = 40f;
-    public float minZ = -40f;
-    public float maxZ = 40f;
+    public float minX = -10f;
+    public float maxX = 25f;
+    public float minZ = -10f;
+    public float maxZ = 25f;
 
     private CinemachineTransposer transposer;
     private CinemachineComposer composer;
@@ -21,6 +21,8 @@ public class CinemachineCameraController : MonoBehaviour
     private Transform originalLookAt;
     private bool isUsingOriginalTarget = true;
     public Transform newTarget;
+    public float publicOrthographicSize;
+
 
     void Start()
     {
@@ -33,16 +35,17 @@ public class CinemachineCameraController : MonoBehaviour
         MoveCamera();
         RotateCamera();
         ZoomCamera();
+        PitchCamera();
+        UpdateCameraSettings();
+
 
         if (Input.GetKeyDown(KeyCode.T))
         {
             ToggleCameraTarget();
         }
-
-
     }
 
-    void MoveCamera()
+        void MoveCamera()
     {
         Vector3 forward = virtualCamera.transform.forward;
         Vector3 right = virtualCamera.transform.right;
@@ -103,6 +106,15 @@ public class CinemachineCameraController : MonoBehaviour
         {
             float zoomChange = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
             virtualCamera.m_Lens.OrthographicSize = Mathf.Max(virtualCamera.m_Lens.OrthographicSize - zoomChange, 1f);
+
+            if (virtualCamera.m_Lens.OrthographicSize <= 5)
+            {
+                moveSpeed = 5.0f;
+            }
+            else
+            {
+                moveSpeed = virtualCamera.m_Lens.OrthographicSize * 2; 
+            }
         }
     }
 
@@ -124,11 +136,40 @@ public class CinemachineCameraController : MonoBehaviour
         }
     }
 
-    void ChangeAimTarget(Transform newTarget)
+    public void ChangeAimTarget(Transform newTarget)
     {
-        if (virtualCamera != null)
+        if (virtualCamera != null && newTarget != null)
         {
+            Quaternion currentRotation = virtualCamera.transform.rotation;
+
             virtualCamera.LookAt = newTarget;
+
+
+            if (transposer != null)
+            {
+                virtualCamera.transform.position = newTarget.position - transposer.m_FollowOffset;
+            }
+
+            virtualCamera.transform.rotation = currentRotation;
         }
+    }
+
+    void PitchCamera()
+    {
+        if (Input.GetMouseButton(2)) 
+        {
+            float pitchChange = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
+            virtualCamera.transform.Rotate(-pitchChange, 0f, 0f);  
+
+            float currentXRotation = virtualCamera.transform.localEulerAngles.x;
+            currentXRotation = (currentXRotation > 180) ? currentXRotation - 360 : currentXRotation; 
+            currentXRotation = Mathf.Clamp(currentXRotation, -80, 80); 
+            virtualCamera.transform.localEulerAngles = new Vector3(currentXRotation, virtualCamera.transform.localEulerAngles.y, 0);
+        }
+    }
+
+    void UpdateCameraSettings()
+    {
+        virtualCamera.m_Lens.OrthographicSize = publicOrthographicSize;
     }
 }
