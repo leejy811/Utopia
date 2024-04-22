@@ -28,6 +28,9 @@ public class CinemachineCameraController : MonoBehaviour
     {
         transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
         composer = virtualCamera.GetCinemachineComponent<CinemachineComposer>();
+
+        publicOrthographicSize = 10.0f;
+        virtualCamera.m_Lens.OrthographicSize = publicOrthographicSize;
     }
 
     void Update()
@@ -170,6 +173,6 @@ public class CinemachineCameraController : MonoBehaviour
 
     void UpdateCameraSettings()
     {
-        virtualCamera.m_Lens.OrthographicSize = publicOrthographicSize;
+        publicOrthographicSize = virtualCamera.m_Lens.OrthographicSize;
     }
 }
