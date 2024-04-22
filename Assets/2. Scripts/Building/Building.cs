@@ -117,15 +117,17 @@ public class Building : MonoBehaviour
 
     public void ApplyEvent(Event newEvent)
     {
-        if (!curEvents.Contains(newEvent) && curEvents.Count < 2)
-        {
-            if (newEvent.type == EventType.Event)
-                ApplyEventEffect(newEvent.GetEffectValue(newEvent.curDay), newEvent.valueType);
+        if (newEvent.type == EventType.Event)
+            ApplyEventEffect(newEvent.GetEffectValue(newEvent.curDay), newEvent.valueType, true);
 
-            if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
-                EventManager.instance.SetEventBuildings(this, true);
-            curEvents.Add(newEvent);
-        }
+        if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
+            EventManager.instance.SetEventBuildings(this, true);
+        curEvents.Add(newEvent);
+    }
+
+    public bool CheckApplyEvent(Event newEvent)
+    {
+        return !curEvents.Contains(newEvent) && curEvents.Count < 2;
     }
 
     public void UpdateEventEffect()
@@ -137,16 +139,19 @@ public class Building : MonoBehaviour
             Event curevent = curEvents[i];
             curevent.curDay++;
 
-            if(curevent.curDay == curevent.effectValue.Count)
+            //if(curevent.curDay == curevent.effectValue.Count)
+            //{
+            //    if(curevent.type == EventType.Event)
+            //    {
+            //        ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 1), curevent.valueType, false);
+            //        removeIdx.Add(i);
+            //        continue;
+            //    }
+            //}
+            if(curevent.curDay > curevent.effectValue.Count)
             {
-                if(curevent.type == EventType.Event)
-                {
-                    ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 1) * -1, curevent.valueType);
-                    continue;
-                }
-            }
-            else if(curevent.curDay > curevent.effectValue.Count)
-            {
+                if (curevent.type == EventType.Event)
+                    ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 2), curevent.valueType, false);
                 removeIdx.Add(i);
                 continue;
             }
@@ -256,28 +261,30 @@ public class Building : MonoBehaviour
         }
     }
 
-    public void ApplyEventEffect(int amount, ValueType type)
+    public void ApplyEventEffect(int amount, ValueType type, bool enable)
     {
         if(type == ValueType.Influence)
         {
+            if (!enable) amount *= -1;
             ApplyInfluenceToTile((int)(influencePower * (amount / 100.0f)));
             return;
         }
 
         BoundaryValue value = values[type];
-        value.cur *= (int)(1.0f  + amount / 100.0f);
-
-        if((value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Include)
-            || (value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.Less))
-            ApplyInfluenceToTile((int)(influencePower * 0.5f));
-        else if ((value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.More)
-            || (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.Include))
-            ApplyInfluenceToTile((int)(influencePower * -0.5f));
-        else if(value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Less)
-            ApplyInfluenceToTile(influencePower);
-        else if (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.More)
-            ApplyInfluenceToTile(-influencePower);
+        float percent = enable ? (int)((100.0f + amount) / 100.0f) : (int)(100.0f / (100.0f + amount));
+        value.cur = (int)(value.cur * percent);
         values[type] = value;
+
+        //if((value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Include)
+        //    || (value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.Less))
+        //    ApplyInfluenceToTile((int)(influencePower * 0.5f));
+        //else if ((value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.More)
+        //    || (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.Include))
+        //    ApplyInfluenceToTile((int)(influencePower * -0.5f));
+        //else if(value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Less)
+        //    ApplyInfluenceToTile(influencePower);
+        //else if (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.More)
+        //    ApplyInfluenceToTile(-influencePower);
     }
 
     public void ApplyEventProblem(Event curevent, bool isAdd)
