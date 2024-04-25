@@ -6,6 +6,8 @@ using UnityEngine.SocialPlatforms;
 public class ServiceBuilding : UtilityBuilding
 {
     public static int income;
+    public static int bonusIncome;
+    public static int bonusCost;
     public override int CalculateIncome()
     {
         float tax = costPerDay * (1.0f - (happinessRate / 100.0f)) * -1;
@@ -17,6 +19,79 @@ public class ServiceBuilding : UtilityBuilding
 
     public override int CalculateBonus()
     {
+        int income = 0;
+        int cost = 0;
+
+        if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
+        {
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
+                income += 100;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+                income += 0;
+            else
+                income += 50;
+        }
+        else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
+        {
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
+                income += 0;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+                cost -= 100;
+            else
+                cost -= 50;
+        }
+        else
+        {
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
+                income += 50;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+                cost -= 50;
+            else
+                income += 0;
+        }
+
+        bonusIncome += income;
+        bonusCost += cost;
+
+        return income + cost;
+    }
+
+    public override int UpdateHappiness(bool isExpect)
+    {
+        int changeAmount = 0;
+
+        if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
+        {
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
+                changeAmount += 2;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+                changeAmount += 0;
+            else
+                changeAmount += 1;
+        }
+        else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
+        {
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
+                changeAmount += 0;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+                changeAmount += -2;
+            else
+                changeAmount += -1;
+        }
+        else
+        {
+            if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
+                changeAmount += 1;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+                changeAmount += -1;
+            else
+                changeAmount += 0;
+        }
+
+        if (isExpect)
+            return changeAmount;
+
+        SetHappiness(changeAmount);
         return 0;
     }
 }
