@@ -66,12 +66,17 @@ public class ResidentialBuilding : Building
     {
         if (happinessRate < 40)
         {
+            int value = (int)(values[ValueType.Resident].max * -0.1f);
+
+            if (values[ValueType.Resident].cur + value < 0)
+                value = -values[ValueType.Resident].cur;
+
             BoundaryValue resident = values[ValueType.Resident];
-            resident.cur -= (int)(values[ValueType.Resident].max * 0.1f);
-            cityResident -= (int)(values[ValueType.Resident].max * 0.1f);
+            resident.cur += value;
+            cityResident += value;
             values[ValueType.Resident] = resident;
 
-            ApplyInfluenceToTile((int)(values[ValueType.Resident].max * -0.1f));
+            ApplyInfluenceToTile(value);
         }
 
         float res = values[ValueType.Resident].cur * (happinessRate / 100.0f) * (4 - grade);
