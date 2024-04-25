@@ -77,12 +77,14 @@ public class Building : MonoBehaviour
 
     private void Start()
     {
-        ApplyInfluenceToTile(influencePower);
+        int power = type == BuildingType.Residential ? values[ValueType.Resident].cur : influencePower;
+        ApplyInfluenceToTile(power);
     }
 
     protected void OnDestroy()
     {
-        ApplyInfluenceToTile(-influencePower);
+        int power = type == BuildingType.Residential ? values[ValueType.Resident].cur : influencePower;
+        ApplyInfluenceToTile(-power);
     }
 
     public void ChangeViewState(ViewStateType state)
