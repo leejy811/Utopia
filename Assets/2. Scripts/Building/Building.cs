@@ -78,13 +78,22 @@ public class Building : MonoBehaviour
     private void Start()
     {
         int power = type == BuildingType.Residential ? values[ValueType.Resident].cur : influencePower;
-        ApplyInfluenceToTile(power);
+        ApplyInfluenceToTile(power, true, true);
     }
 
     protected void OnDestroy()
     {
         int power = type == BuildingType.Residential ? values[ValueType.Resident].cur : influencePower;
-        ApplyInfluenceToTile(-power);
+
+        foreach(Event curEvent in curEvents)
+        {
+            if(curEvent.valueType == ValueType.Influence)
+            {
+                power += (int)(power * (curEvent.GetEffectValue(0) / 100.0f));
+            }
+        }
+
+        ApplyInfluenceToTile(-power, true, false);
     }
 
     public void ChangeViewState(ViewStateType state)
@@ -101,7 +110,7 @@ public class Building : MonoBehaviour
         }
     }
 
-    protected void ApplyInfluenceToTile(int power)
+    protected void ApplyInfluenceToTile(int power, bool isInit, bool subEnable = false)
     {
         Vector3 size = new Vector3(influenceSize * 2 - 1, 1, influenceSize * 2 - 1);
 
@@ -112,13 +121,18 @@ public class Building : MonoBehaviour
             Tile tile = hit.transform.gameObject.GetComponent<Tile>();
             if(tile.transform.position != gameObject.transform.position)
             {
-                tile.SetInfluenceValue(type, subType, power);
+                tile.SetInfluenceValue(type, power);
+
+                if (isInit)
+                    tile.SetSubInfluenceValue(subType, subEnable);
             }
         }
     }
 
     public void ApplyEvent(Event newEvent)
     {
+        if (!CheckApplyEvent(newEvent)) return;
+
         if (newEvent.type == EventType.Event)
             ApplyEventEffect(newEvent.GetEffectValue(newEvent.curDay), newEvent.valueType, true);
 
@@ -141,15 +155,6 @@ public class Building : MonoBehaviour
             Event curevent = curEvents[i];
             curevent.curDay++;
 
-            //if(curevent.curDay == curevent.effectValue.Count)
-            //{
-            //    if(curevent.type == EventType.Event)
-            //    {
-            //        ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 1), curevent.valueType, false);
-            //        removeIdx.Add(i);
-            //        continue;
-            //    }
-            //}
             if(curevent.curDay > curevent.effectValue.Count)
             {
                 if (curevent.type == EventType.Event)
@@ -184,6 +189,11 @@ public class Building : MonoBehaviour
             happinessRate = 0;
             return;
         }
+        else if (happinessRate + amount > 100)
+        {
+            happinessRate = 100;
+            return;
+        }
 
         if(amount > 0)
             CityLevelManager.instance.UpdateCityType();
@@ -199,7 +209,7 @@ public class Building : MonoBehaviour
 
         if (ran < curEvents[index / 2].solutions[index % 2].prob)
         {
-            if (curEvents[index / 2].conditionType == ConditionType.Option)
+            if (curEvents[index / 2].conditionType == ConditionType.Option && curEvents[index / 2].solutions[index % 2].prob == 100)
             {
                 (this as ResidentialBuilding).BuyFacility((OptionType)curEvents[index / 2].targetIndex);
             }
@@ -268,7 +278,7 @@ public class Building : MonoBehaviour
         if(type == ValueType.Influence)
         {
             if (!enable) amount *= -1;
-            ApplyInfluenceToTile((int)(influencePower * (amount / 100.0f)));
+            ApplyInfluenceToTile((int)(influencePower * (amount / 100.0f)), false);
             return;
         }
 

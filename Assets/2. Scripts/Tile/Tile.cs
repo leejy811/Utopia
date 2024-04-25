@@ -43,16 +43,23 @@ public class Tile : MonoBehaviour
         this.isPurchased = isPurchased;
     }
 
-    public void SetInfluenceValue(BuildingType type, BuildingSubType subType, int value)
+    public void SetInfluenceValue(BuildingType type, int value)
     {
         influenceValues[(int)type] += value;
-        subInfluenceValues[(int)subType] += value >= 0 ? 1 : -1;
 
         if (building == null) return;
 
         Building buildCom = building.GetComponent<Building>();
-
         buildCom.ApplyInfluence(value, type);
+    }
+
+    public void SetSubInfluenceValue(BuildingSubType subType, bool enable)
+    {
+        subInfluenceValues[(int)subType] += enable ? 1 : -1;
+
+        if (building == null) return;
+
+        Building buildCom = building.GetComponent<Building>();
         buildCom.SolveEventToInfluence(subType);
     }
 

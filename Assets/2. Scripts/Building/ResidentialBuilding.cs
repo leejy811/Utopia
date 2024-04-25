@@ -76,7 +76,7 @@ public class ResidentialBuilding : Building
             cityResident += value;
             values[ValueType.Resident] = resident;
 
-            ApplyInfluenceToTile(value);
+            ApplyInfluenceToTile(value, false);
         }
 
         float res = values[ValueType.Resident].cur * (happinessRate / 100.0f) * (4 - grade);

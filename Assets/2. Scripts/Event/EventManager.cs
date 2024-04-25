@@ -156,6 +156,8 @@ public class EventManager : MonoBehaviour
     {
         foreach (Event ranEvent in ranEvents)
         {
+            Debug.Log(ranEvent.eventName);
+
             if (ranEvent.type == EventType.Global)
             {
                 globalEvents.Add(ranEvent);
