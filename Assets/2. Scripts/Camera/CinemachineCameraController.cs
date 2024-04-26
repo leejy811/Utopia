@@ -13,14 +13,12 @@ public class CinemachineCameraController : MonoBehaviour
     public float minZ = -10f;
     public float maxZ = 25f;
 
-    private CinemachineTransposer transposer;
-    private CinemachineComposer composer;
+    public CinemachineTransposer transposer;
+    public CinemachineComposer composer;
     private bool isWithinBounds = true;
 
     private Vector3 originalPosition;
-    private Transform originalLookAt;
     private bool isUsingOriginalTarget = true;
-    public Transform newTarget;
     public float publicOrthographicSize;
 
 
@@ -41,14 +39,9 @@ public class CinemachineCameraController : MonoBehaviour
         PitchCamera();
         UpdateCameraSettings();
 
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            ToggleCameraTarget();
-        }
     }
 
-        void MoveCamera()
+    void MoveCamera()
     {
         Vector3 forward = virtualCamera.transform.forward;
         Vector3 right = virtualCamera.transform.right;
@@ -62,24 +55,17 @@ public class CinemachineCameraController : MonoBehaviour
         float v = Input.GetAxis("Vertical");
 
         Vector3 moveDirection = (h * right + v * forward) * moveSpeed * Time.deltaTime;
-        Vector3 newPosition = virtualCamera.transform.position + moveDirection;
 
-        if (isWithinBounds)
+        RaycastHit hit;
+        if (!Physics.Raycast(virtualCamera.transform.position, moveDirection, out hit, moveDirection.magnitude))
         {
-            newPosition.x = Mathf.Clamp(newPosition.x, minX, maxX);
-            newPosition.z = Mathf.Clamp(newPosition.z, minZ, maxZ);
-        }
+            Vector3 newPosition = virtualCamera.transform.position + moveDirection;
 
-        if (newPosition.x >= minX && newPosition.x <= maxX && newPosition.z >= minZ && newPosition.z <= maxZ)
-        {
-            isWithinBounds = true;
-        }
-        else
-        {
-            isWithinBounds = false;
-        }
+            newPosition.x = Mathf.Clamp(newPosition.x, 0f, 32f);
+            newPosition.z = Mathf.Clamp(newPosition.z, 0f, 32f);
 
-        virtualCamera.transform.position = newPosition;
+            virtualCamera.transform.position = newPosition;
+        }
     }
 
     void RotateCamera()
@@ -98,7 +84,7 @@ public class CinemachineCameraController : MonoBehaviour
                 virtualCamera.transform.RotateAround(hitPoint, Vector3.up, rotationSpeed * direction * Time.deltaTime);
             }
 
-            isWithinBounds = false; 
+            isWithinBounds = false;
         }
     }
 
@@ -116,57 +102,23 @@ public class CinemachineCameraController : MonoBehaviour
             }
             else
             {
-                moveSpeed = virtualCamera.m_Lens.OrthographicSize * 2; 
+                moveSpeed = virtualCamera.m_Lens.OrthographicSize * 2;
             }
         }
     }
 
-    void ToggleCameraTarget()
-    {
-        if (isUsingOriginalTarget)
-        {
-            if (newTarget != null)
-            {
-                ChangeAimTarget(newTarget);
-                isUsingOriginalTarget = false;
-            }
-        }
-        else
-        {
-            ChangeAimTarget(originalLookAt);
-            virtualCamera.transform.position = originalPosition;
-            isUsingOriginalTarget = true;
-        }
-    }
 
-    public void ChangeAimTarget(Transform newTarget)
-    {
-        if (virtualCamera != null && newTarget != null)
-        {
-            Quaternion currentRotation = virtualCamera.transform.rotation;
-
-            virtualCamera.LookAt = newTarget;
-
-
-            if (transposer != null)
-            {
-                virtualCamera.transform.position = newTarget.position - transposer.m_FollowOffset;
-            }
-
-            virtualCamera.transform.rotation = currentRotation;
-        }
-    }
 
     void PitchCamera()
     {
-        if (Input.GetMouseButton(2)) 
+        if (Input.GetMouseButton(2))
         {
             float pitchChange = Input.GetAxis("Mouse Y") * rotationSpeed * Time.deltaTime;
-            virtualCamera.transform.Rotate(-pitchChange, 0f, 0f);  
+            virtualCamera.transform.Rotate(-pitchChange, 0f, 0f);
 
             float currentXRotation = virtualCamera.transform.localEulerAngles.x;
-            currentXRotation = (currentXRotation > 180) ? currentXRotation - 360 : currentXRotation; 
-            currentXRotation = Mathf.Clamp(currentXRotation, -80, 80); 
+            currentXRotation = (currentXRotation > 180) ? currentXRotation - 360 : currentXRotation;
+            currentXRotation = Mathf.Clamp(currentXRotation, -80, 80);
             virtualCamera.transform.localEulerAngles = new Vector3(currentXRotation, virtualCamera.transform.localEulerAngles.y, 0);
         }
     }
