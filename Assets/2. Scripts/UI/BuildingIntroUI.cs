@@ -50,7 +50,7 @@ public class BuildingIntroUI : MonoBehaviour
     {
         buildingNameText.text = building.buildingName + building.count;
         buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType] + "/" + building.grade + "등급";
-        happinessText.text = "<sprite=" + building.happinessRate / 20 + "> " + building.happinessRate + "(" + GetSignString(building.happinessDifference, "+") + ")%";
+        happinessText.text = "<sprite=" + Mathf.Min(building.happinessRate / 20, 4) + "> " + building.happinessRate + "(" + GetSignString(building.happinessDifference, "+") + ")%";
         happinessStringText.text = building.happinessDifference > 0 ? "행복도 증가<sprite=6>" : building.happinessDifference < 0 ? "행복도 감소<sprite=5>" : "행복도 유지";
 
         if (building.type == BuildingType.Residential)
@@ -65,10 +65,7 @@ public class BuildingIntroUI : MonoBehaviour
             ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
             for (int i = 0; i < residentialBuilding.existFacility.Length; i++)
             {
-                if (residentialBuilding.CheckFacility((OptionType)i))
-                {
-                    SetOptionBuy(residentialBuilding, i);
-                }
+                SetOptionBuy(residentialBuilding, i);
             }
         }
         else
@@ -109,6 +106,7 @@ public class BuildingIntroUI : MonoBehaviour
             block.disabledColor = block.selectedColor;
             optionButtons[index].colors = block;
             optionToggles[index].colors = block;
+            optionButtons[index].interactable = false;
         }
         else
         {
@@ -117,8 +115,6 @@ public class BuildingIntroUI : MonoBehaviour
             optionButtons[index].colors = block;
             optionToggles[index].colors = block;
         }
-
-        optionButtons[index].interactable = false;
     }
 
     private string GetSignString(int data, string zeroSign)

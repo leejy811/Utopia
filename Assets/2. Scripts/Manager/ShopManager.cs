@@ -141,6 +141,7 @@ public class ShopManager : MonoBehaviour
         if (buyState != BuyState.SellBuilding) return;
 
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
+        EventManager.instance.SetEventBuildings(curPickObject.GetComponent<Building>(), false);
         Destroy(curPickObject);
     }
 
