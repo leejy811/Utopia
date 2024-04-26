@@ -56,17 +56,76 @@ public class CinemachineCameraController : MonoBehaviour
 
         Vector3 moveDirection = (h * right + v * forward) * moveSpeed * Time.deltaTime;
 
-        RaycastHit hit;
-        if (!Physics.Raycast(virtualCamera.transform.position, moveDirection, out hit, moveDirection.magnitude))
+        Vector3 expectedPosition = transform.position + moveDirection;
+
+        Ray ray = new Ray(virtualCamera.transform.position, virtualCamera.transform.forward);
+        Plane plane = new Plane(Vector3.up, Vector3.zero);
+        float enter = 0.0f;
+
+        if (plane.Raycast(ray, out enter))
         {
-            Vector3 newPosition = virtualCamera.transform.position + moveDirection;
+            Vector3 hitPoint = ray.GetPoint(enter);
 
-            newPosition.x = Mathf.Clamp(newPosition.x, 0f, 32f);
-            newPosition.z = Mathf.Clamp(newPosition.z, 0f, 32f);
+            bool insideX = hitPoint.x >= 0f && hitPoint.x <= 32f;
+            bool insideZ = hitPoint.z >= 0f && hitPoint.z <= 32f;
 
-            virtualCamera.transform.position = newPosition;
+            if (insideX && insideZ)
+            {
+                transform.Translate(moveDirection, Space.World); 
+            }
+            else if (!insideX && insideZ)
+            {
+                if (hitPoint.x < 0f && h > 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+                else if (hitPoint.x > 32f && h < 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+            }
+            else if (insideX && !insideZ)
+            {
+                if (hitPoint.z < 0f && v > 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+                else if (hitPoint.z > 32f && v < 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+            }
+            else if (!insideX && !insideZ)
+            {
+                if (hitPoint.z < 0f && v > 0 && hitPoint.x < 0f && h > 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+                else if (hitPoint.z < 0f && v > 0 && hitPoint.x > 0f && h < 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+                else if (hitPoint.z > 0f && v < 0 && hitPoint.x < 0f && h > 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+                else if (hitPoint.z > 0f && v < 0 && hitPoint.x  0f && h < 0)
+                {
+                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
+                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
+                }
+            }
         }
     }
+
+
 
     void RotateCamera()
     {

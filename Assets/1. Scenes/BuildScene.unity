@@ -422,6 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11117638}
   - component: {fileID: 11117637}
+  - component: {fileID: 11117639}
   m_Layer: 0
   m_Name: CM vcam2
   m_TagString: Untagged
@@ -451,7 +452,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 6.2
+    OrthographicSize: 2.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -483,6 +484,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11117639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11117636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f801d7cb688ec5141b9c5600fa219467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraController: {fileID: 2028396364}
+  sourceCameraTransform: {fileID: 2028396363}
+  virtualCamera2: {fileID: 11117637}
+  newTarget: {fileID: 0}
 --- !u!1 &13673577
 GameObject:
   m_ObjectHideFlags: 0
@@ -26086,8 +26103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e0cc911bfcf264797125ecf53db702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventCondition: 12
-  eventProb: 0.7
+  eventCondition: 0
+  eventProb: 1
   events:
   - eventName: "\uC9D1\uC5D0 \uBB3C\uC774 \uC548\uB098\uC640\uC694"
     eventIcon: {fileID: 21300000, guid: 3ec4feab67571874686cc764af22f77f, type: 3}
@@ -26105,8 +26122,8 @@ MonoBehaviour:
     - name: "\uC218\uB3C4\uAD00 \uAD50\uCCB4"
       cost: 250
       prob: 50
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uD558\uC218\uAD6C\uC5D0\uC11C \uB0C4\uC0C8\uB098\uC694"
     eventIcon: {fileID: 21300000, guid: 574538540cf7a7c48854aeef0087e8e5, type: 3}
     eventIndex: 1
@@ -26123,8 +26140,8 @@ MonoBehaviour:
     - name: "\uB6AB\uC5B4\uBEE5 \uC0AC\uC6A9"
       cost: 150
       prob: 30
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC9D1\uC5D0 \uC804\uAE30\uAC00 \uC548\uB4E4\uC5B4\uC640\uC694"
     eventIcon: {fileID: 21300000, guid: 31a6061301232c949b33e4a253aa05cb, type: 3}
     eventIndex: 2
@@ -26141,8 +26158,8 @@ MonoBehaviour:
     - name: "\uD615\uAD11\uB4F1 \uAD50\uCCB4"
       cost: 250
       prob: 50
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC774\uC6C3\uB4E4\uC774 \uC2DC\uB044\uB7EC\uC6CC\uC694"
     eventIcon: {fileID: 21300000, guid: 4cca3031a745b514d8444175c86e74f9, type: 3}
     eventIndex: 3
@@ -26159,8 +26176,8 @@ MonoBehaviour:
     - name: "\uADC0\uB9C8\uAC1C \uAD6C\uB9E4"
       cost: 50
       prob: 25
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000300000005000000
+    effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBB3C\uAC74\uC744 \uC0B4 \uACF3\uC774
       \uC5C6\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 36d7e36461108c24f8380a6ebac145e2, type: 3}
@@ -26178,8 +26195,8 @@ MonoBehaviour:
     - name: "\uCC28 \uD0C0\uACE0 \uC1FC\uD551"
       cost: 100
       prob: 40
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC74C\uC2DD\uC810\uC774 \uC5C6\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 5
@@ -26196,8 +26213,8 @@ MonoBehaviour:
     - name: "\uC9D1 \uBC25 \uBA39\uAE30"
       cost: 100
       prob: 40
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC601\uD654\uAD00\uC774 \uC5C6\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: fc7e3638a385eeb408576a8bab747b4b, type: 3}
     eventIndex: 6
@@ -26214,8 +26231,8 @@ MonoBehaviour:
     - name: "\uBA3C \uC601\uD654\uAD00 \uAC00\uAE30"
       cost: 100
       prob: 40
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBBF8\uC220\uAD00\uC774 \uC5C6\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 5e84bd72e18de1d41a89b9f49f1ccebb, type: 3}
     eventIndex: 7
@@ -26232,8 +26249,8 @@ MonoBehaviour:
     - name: "\uBA3C \uBBF8\uC220\uAD00 \uAC00\uAE30"
       cost: 100
       prob: 40
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uAC70\uB9AC\uAC00 \uBB34\uC11C\uC6CC\uC694"
     eventIcon: {fileID: 21300000, guid: 71204e6f62efead4d83b09b468210523, type: 3}
     eventIndex: 8
@@ -26250,8 +26267,8 @@ MonoBehaviour:
     - name: "\uD638\uC2E0\uC6A9\uD488 \uCC59\uAE30\uAE30"
       cost: 50
       prob: 20
-    effectValue: 030000000400000005000000
-    effectJackpotValue: 090000000d00000010000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uD654\uC7AC\uAC00 \uBC1C\uC0DD\uD588\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 4f94b5b8b82eb744ea821e5e99b0a873, type: 3}
     eventIndex: 9
@@ -26268,8 +26285,8 @@ MonoBehaviour:
     - name: "119\uC5D0 \uC804\uD654"
       cost: 50
       prob: 20
-    effectValue: 030000000400000005000000
-    effectJackpotValue: 090000000d00000010000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uBCD1\uC5D0 \uAC78\uB838\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 8be40f3a31e26c64bac203e0e5837b4e, type: 3}
     eventIndex: 10
@@ -26286,8 +26303,8 @@ MonoBehaviour:
     - name: "\uC0C1\uBE44\uC57D \uBA39\uAE30"
       cost: 100
       prob: 40
-    effectValue: 030000000400000005000000
-    effectJackpotValue: 090000000d00000010000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uAC70\uB9AC\uAC00 \uC0AD\uB9C9\uD574\uC694"
     eventIcon: {fileID: 21300000, guid: bab9c7a3d772d0f49ac99fd8dba4880d, type: 3}
     eventIndex: 11
@@ -26304,8 +26321,8 @@ MonoBehaviour:
     - name: "\uBA3C \uACF5\uC6D0 \uAC00\uAE30"
       cost: 100
       prob: 40
-    effectValue: 030000000400000005000000
-    effectJackpotValue: 090000000d00000010000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC5D8\uB9AC\uBCA0\uC774\uD130\uAC00 \uACE0\uC7A5\uB0AC\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 71338e6ee788d0c41bb77d3aaed9381e, type: 3}
     eventIndex: 12
@@ -26322,8 +26339,8 @@ MonoBehaviour:
     - name: "\uC790\uCCB4 \uC218\uB9AC\uD558\uAE30"
       cost: 50
       prob: 20
-    effectValue: 030000000600000009000000
-    effectJackpotValue: 0a000000140000001e000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uB3C4\uB451\uC774 \uB4E4\uC5C8\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 16df50db958fc4b4e873c2063c5ca0f3, type: 3}
     eventIndex: 13
@@ -26340,8 +26357,8 @@ MonoBehaviour:
     - name: "\uB3C4\uC5B4\uB77D \uBCC0\uACBD\uD558\uAE30"
       cost: 100
       prob: 40
-    effectValue: 030000000400000005000000
-    effectJackpotValue: 090000000d00000010000000
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC0C1\uD488\uAC00\uACA9\uC774 \uC62C\uB790\uC5B4\uC694"
     eventIcon: {fileID: 21300000, guid: 2be1bf446da23524185bba8c452cea40, type: 3}
     eventIndex: 14
@@ -47881,7 +47898,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.2
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -47904,8 +47921,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.27781588, y: 0.36497167, z: -0.1150751, w: 0.8811196}
-  m_LocalPosition: {x: 3.933206, y: 9.4, z: 3.933206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -98511,7 +98528,8 @@ MonoBehaviour:
   maxX: 40
   minZ: -40
   maxZ: 40
-  newTarget: {fileID: 0}
+  transposer: {fileID: 0}
+  composer: {fileID: 0}
   publicOrthographicSize: 0
 --- !u!1 &2030383455
 GameObject:
