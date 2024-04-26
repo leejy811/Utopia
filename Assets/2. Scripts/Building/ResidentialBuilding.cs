@@ -91,9 +91,9 @@ public class ResidentialBuilding : Building
         int res = 0;
 
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 50;
-        if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
             res -= 100;
+        if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
+            res -= 50;
 
         bonusCost += res;
         return res;
@@ -104,7 +104,7 @@ public class ResidentialBuilding : Building
         int changeAmount = 0;
         //commercialCSAT
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            changeAmount += -1;
+            changeAmount += 0;
         else if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.Less)
             changeAmount += -2;
         else
@@ -112,17 +112,17 @@ public class ResidentialBuilding : Building
 
         //cultureCSAT
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            changeAmount += -1;
+            changeAmount += 0;
         else if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.Less)
-            changeAmount += -3;
+            changeAmount += -2;
         else
             changeAmount += 1;
 
         //serviceCSAT
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            changeAmount += -2;
+            changeAmount += 0;
         else if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.Less)
-            changeAmount += -2;
+            changeAmount += -3;
         else
             changeAmount += 1;
 

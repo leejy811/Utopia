@@ -68,14 +68,14 @@ MonoBehaviour:
   happinessRate: 50
   happinessDifference: 0
   position: {x: 0, y: 0}
-  influencePower: 1000
+  influencePower: 200
   influenceSize: 2
   curEvents: []
   cost: 1000
   costPerDay: 500
   userCnt:
-    max: 4800
-    min: 3400
+    max: 1080
+    min: 540
     cur: 0
   utilityValue:
     max: 100
