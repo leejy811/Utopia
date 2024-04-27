@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            if (IsPointerOverUIObject(Input.mousePosition)) return;
+
             if (state == BuyState.SellBuilding)
             {
                 ShopManager.instance.SellBuilding();
@@ -43,6 +46,8 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetMouseButton(0))
         {
+            if (IsPointerOverUIObject(Input.mousePosition)) return;
+
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
                 if (state == BuyState.BuyTile)
@@ -165,5 +170,18 @@ public class InputManager : MonoBehaviour
         {
             UIManager.instance.OnClickCityLevelMode();
         }
+    }
+
+    private bool IsPointerOverUIObject(Vector2 touchPos)
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+
+        eventDataCurrentPosition.position = touchPos;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+
+        return results.Count > 0;
     }
 }
