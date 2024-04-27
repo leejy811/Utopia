@@ -70,7 +70,7 @@ public class BuildingIntroUI : MonoBehaviour
         }
         else
         {
-            influenceText.text = building.influencePower.ToString();
+            influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString();
             utilityText.text = valueTypeString[(int)building.type - 1] + ": " + building.values[ValueType.utility].BoundaryToString();
             userText.text = building.values[ValueType.user].BoundaryToString();
         }

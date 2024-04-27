@@ -170,6 +170,13 @@ public class InputManager : MonoBehaviour
         {
             UIManager.instance.OnClickCityLevelMode();
         }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (UIManager.instance.statistic.gameObject.activeSelf)
+                UIManager.instance.OnClickCloseStatistic();
+            else
+                UIManager.instance.OnClickNextDay();
+        }
     }
 
     private bool IsPointerOverUIObject(Vector2 touchPos)

@@ -435,6 +435,8 @@ public class UIManager : MonoBehaviour
 
     public void OnClickNextDay()
     {
+        if (eventRoulette.gameObject.activeSelf) return;
+
         SetAllPopUp();
         RoutineManager.instance.DailyUpdate();
         SetStatisticPopUp(true);

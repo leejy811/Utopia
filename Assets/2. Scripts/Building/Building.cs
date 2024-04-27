@@ -68,6 +68,7 @@ public class Building : MonoBehaviour
 
     public Vector2Int position;
     public int influencePower;
+    public int additionalInfluencePower;
     public int influenceSize;
 
     public List<Event> curEvents;
@@ -279,6 +280,7 @@ public class Building : MonoBehaviour
         {
             if (!enable) amount *= -1;
             ApplyInfluenceToTile((int)(influencePower * (amount / 100.0f)), false);
+            additionalInfluencePower += (int)(influencePower * (amount / 100.0f));
             return;
         }
 
