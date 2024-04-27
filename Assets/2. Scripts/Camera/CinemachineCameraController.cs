@@ -116,7 +116,7 @@ public class CinemachineCameraController : MonoBehaviour
                     transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
                     transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
                 }
-                else if (hitPoint.z > 0f && v < 0 && hitPoint.x  0f && h < 0)
+                else if (hitPoint.z > 0f && v < 0 && hitPoint.x > 0f && h < 0)
                 {
                     transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
                     transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
