@@ -10,6 +10,9 @@ public class EventNotifyUI : MonoBehaviour
     [Header("Event List")]
     public int curIndex;
 
+    [Header("Camera")]
+    public CameraPriorityController cameraPriorityController;
+
     public void SetValue(Building building)
     {
         ShopManager.instance.SetObjectColor(building.gameObject, Color.red);
@@ -38,6 +41,7 @@ public class EventNotifyUI : MonoBehaviour
         curIndex = (curIndex + sign + EventManager.instance.eventBuildings.Count) % EventManager.instance.eventBuildings.Count;
 
         SetValue(EventManager.instance.eventBuildings[curIndex]);
+        cameraPriorityController.ChangeLookTarget(EventManager.instance.eventBuildings[curIndex].transform);
     }
 
     public void Init()
@@ -45,12 +49,18 @@ public class EventNotifyUI : MonoBehaviour
         curIndex = 0;
 
         if (EventManager.instance.eventBuildings.Count != 0)
+        {
             SetValue(EventManager.instance.eventBuildings[curIndex]);
+            cameraPriorityController.ChangeActiveState();
+            cameraPriorityController.ChangeLookTarget(EventManager.instance.eventBuildings[curIndex].transform);
+        }
     }
 
     public void OnDisable()
     {
         if (EventManager.instance.eventBuildings.Count != 0 && curIndex < EventManager.instance.eventBuildings.Count && EventManager.instance.eventBuildings[curIndex].gameObject != null)
             ShopManager.instance.SetObjectColor(EventManager.instance.eventBuildings[curIndex].gameObject, Color.white);
+
+        cameraPriorityController.ChangeActiveState();
     }
 }

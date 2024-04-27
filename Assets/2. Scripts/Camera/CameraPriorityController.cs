@@ -9,10 +9,10 @@ public class CameraPriorityController : MonoBehaviour
 
     private int defaultPriority = 5;
     private int activePriority = 20;
-    private bool isActive = false;
     private Transform originalLookAt;
     public Transform newTarget;
 
+    public bool isActive { get; set; } = true;
 
     void Update()
     {
@@ -37,14 +37,33 @@ public class CameraPriorityController : MonoBehaviour
                 }
             }
         }
-        if (cameraController != null) Debug.Log(cameraController.gameObject.name);
+        if (cameraController != null) ;
     }
 
-    private void ChangeLookTarget(Transform target)
+    public void ChangeLookTarget(Transform target)
     {
         if (cameraController.virtualCamera != null && target != null)
         {
             virtualCamera2.LookAt = target;
+        }
+    }
+
+    public void ChangeActiveState()
+    {
+        if (cameraController != null && cameraController.virtualCamera != null && sourceCameraTransform != null)
+        {
+            if (!isActive)
+            {
+                virtualCamera2.transform.position = sourceCameraTransform.position - (cameraController.virtualCamera.transform.position - sourceCameraTransform.position) * 0.5f;
+                cameraController.virtualCamera.Priority = activePriority;
+                ChangeLookTarget(newTarget);
+                isActive = true;
+            }
+            else
+            {
+                cameraController.virtualCamera.Priority = defaultPriority;
+                isActive = false;
+            }
         }
     }
 }
