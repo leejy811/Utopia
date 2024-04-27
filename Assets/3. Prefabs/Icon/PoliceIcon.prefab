@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f49e1e25082244386233fc39c8b357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tile: {fileID: 0}
 --- !u!1001 &4450179695024399419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52,6 +53,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6769360740669774393}
     m_Modifications:
+    - target: {fileID: 7625130226012025342, guid: c1d3259b1b00f2745934a591a64234a2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7625130226012025342, guid: c1d3259b1b00f2745934a591a64234a2, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

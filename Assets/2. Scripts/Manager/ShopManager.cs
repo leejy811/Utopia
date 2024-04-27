@@ -91,7 +91,6 @@ public class ShopManager : MonoBehaviour
                 BuildingSpawner.instance.ChangeViewState(ViewStateType.Opaque);
                 break;
             case BuyState.BuyBuilding:
-                break;
             case BuyState.BuyTile:
             case BuyState.BuildTile:
                 BuildingSpawner.instance.ChangeViewState(ViewStateType.Transparent);
