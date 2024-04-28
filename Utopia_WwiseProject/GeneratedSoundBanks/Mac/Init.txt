@@ -1,3 +1,13 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	1427264549	HAPPY			\Default Work Unit\HAPPY	
+
+State	ID	Name	State Group			Notes
+	748895195	None	HAPPY			
+	1197651426	HA20to50	HAPPY			
+	1968623160	HA50to80	HAPPY			
+	3586288172	HA80to100	HAPPY			
+	3759462269	HA0to20	HAPPY			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

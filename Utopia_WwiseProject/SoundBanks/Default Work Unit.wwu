@@ -8,8 +8,10 @@
 						<ObjectRef Name="Play_ForestAmbience" ID="{3102994D-9723-447C-9B5C-80CE8AFEB234}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_rimshot" ID="{7E2A8A70-AF09-4661-89A2-CA94201918A9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_singsingsingmybird" ID="{71C98809-300D-474F-8BB9-A49AF57F7D98}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Wind" ID="{06C3253B-8B70-484F-A5A9-22C238D68BE3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Select_Button" ID="{9B36C684-91CF-48E7-B6E9-C8192BE67E41}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_buildingsound" ID="{8CAD0E1A-F3FF-4E37-BA9A-45792A2331CA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_testing" ID="{2B595B72-8A90-4F2C-8115-50D7C0AB7A77}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

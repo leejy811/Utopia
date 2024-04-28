@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}" SchemaVersion="119">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="7.5"/>
+						<Property Name="Max" Type="Real64" Value="15"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+						<Property Name="RTPCRamping" Type="int16" Value="1"/>
+						<Property Name="SlewRateDown" Type="Real64" Value="100"/>
+						<Property Name="SlewRateUp" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

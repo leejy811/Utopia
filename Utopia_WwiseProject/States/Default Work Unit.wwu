@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{A3AE7366-F2FC-46A3-BD9D-8638D5B78CF3}" SchemaVersion="119">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{A3AE7366-F2FC-46A3-BD9D-8638D5B78CF3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{A3AE7366-F2FC-46A3-BD9D-8638D5B78CF3}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="HAPPY" ID="{F347F55A-4817-4FA4-856B-0BC87646A8C6}">
+					<ChildrenList>
+						<State Name="None" ID="{2FADD133-FCE6-4172-999B-D956C15786AB}"/>
+						<State Name="HA0to20" ID="{36019319-6D32-467D-A6EE-7B583F1A165A}"/>
+						<State Name="HA20to50" ID="{837426BB-134A-410A-B5D5-8171D4D17DAA}"/>
+						<State Name="HA50to80" ID="{39182A02-50FE-4510-B8D6-EFC7310ADDD0}"/>
+						<State Name="HA80to100" ID="{1AD8DDB6-F359-4C7A-91C1-561D4CD24C69}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

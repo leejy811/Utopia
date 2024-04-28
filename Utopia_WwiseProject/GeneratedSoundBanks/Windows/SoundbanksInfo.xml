@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{B6CBD692-12EC-CDBA-0932-48F63C40C91F}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{257C16F9-071E-C7FC-7046-B9F7627E20F0}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -21,18 +21,53 @@
 			<Busses>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
+			<GameParameters>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="1427264549" Name="HAPPY">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="1197651426" Name="HA20to50"/>
+						<State Id="1968623160" Name="HA50to80"/>
+						<State Id="3586288172" Name="HA80to100"/>
+						<State Id="3759462269" Name="HA0to20"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A90F6295-0622-814D-5C6F-B5255A7BE203}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{58605A04-473B-2D68-3FC5-85B89E84AE4B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="65709662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xylophone.wav</ShortName>
+					<CachePath>SFX/xylophone_40887594.wem</CachePath>
+				</File>
+				<File Id="81639684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>marimbaC#.wav</ShortName>
+					<CachePath>SFX/marimbaC#_FCCA26EC.wem</CachePath>
+				</File>
 				<File Id="95965161" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button.wav</ShortName>
 					<CachePath>SFX/ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem</CachePath>
 				</File>
+				<File Id="336403806" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>105guitarriffCmaj.wav</ShortName>
+					<CachePath>SFX/105guitarriffCmaj_818F3B66.wem</CachePath>
+				</File>
 				<File Id="337361210" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>utopia sound design2.wav</ShortName>
-					<CachePath>SFX/utopia sound design2_11A4CF5B.wem</CachePath>
+					<CachePath>SFX/utopia sound design2_0E31C2CE.wem</CachePath>
+				</File>
+				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>airplane.wav</ShortName>
+					<CachePath>SFX/airplane_6BF23048.wem</CachePath>
+				</File>
+				<File Id="742924674" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Wind_Loop_Distant_Air_Steady_1.wav</ShortName>
+					<CachePath>SFX/ESM_Wind_Loop_Distant_Air_Steady_1_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="779451324" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SO_BA_rim_chin_upbounce.wav</ShortName>
@@ -68,13 +103,30 @@
 						<MediaRef Id="987196180"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1073654463" Name="Play_Slot_rimshot" DurationType="OneShot" DurationMin="0.077633426" DurationMax="0.077633426">
+				<Event Id="1073654463" Name="Play_Slot_rimshot" DurationType="OneShot" DurationMin="4.0776334" DurationMax="4.0776334">
 					<MediaRefs>
 						<MediaRef Id="779451324"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2149296550" Name="Play_testing" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="65709662"/>
+						<MediaRef Id="81639684"/>
+						<MediaRef Id="336403806"/>
+						<MediaRef Id="583359231"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1020223172" Name="Play_Wind" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="742924674"/>
+					</MediaRefs>
+				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9B0F3EB7-9A38-FDEB-E098-44183579BBA2}</FileHash>
+	<FileHash>{C81A31DF-370A-F599-16F4-1FC8018289EA}</FileHash>
 </SoundBanksInfo>

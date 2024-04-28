@@ -1,14 +1,25 @@
 Event	ID	Name			Wwise Object Path	Notes
 	880454473	Play_Select_Button			\Default Work Unit\Play_Select_Button	
+	1020223172	Play_Wind			\Default Work Unit\Play_Wind	
 	1073654463	Play_Slot_rimshot			\Default Work Unit\Play_Slot_rimshot	
+	2149296550	Play_testing			\Default Work Unit\Play_testing	
 	2446290240	Play_singsingsingmybird			\Default Work Unit\Play_singsingsingmybird	
 	2611274067	Play_buildingsound			\Default Work Unit\Play_buildingsound	
 	3149538809	Play_ForestAmbience			\Default Work Unit\Play_ForestAmbience	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	848835168	ZOOM			\Default Work Unit\ZOOM	
+	1427264549	HAPPY			\Default Work Unit\HAPPY	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	95965161	Select_Button	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Android\SFX\ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Select_Button		257408
-	337361210	buildingsound	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Android\SFX\utopia sound design2_11A4CF5B.wem		\Actor-Mixer Hierarchy\Default Work Unit\buildingsound		78548
-	779451324	Slot_rimshot	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SO_BA_rim_chin_upbounce_F1EB82C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		13792
-	824445506	ForestAmbience	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Android\SFX\utopia sound design_73CAD344.wem		\Actor-Mixer Hierarchy\Default Work Unit\ForestAmbience		38527736
-	987196180	singsingsingmybird	C:\Users\이종혁은간치철철\OneDrive\바탕 화면\Utopia\Utopia_WwiseProject\.cache\Android\SFX\singsingsingmybird_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\singsingsingmybird\singsingsingmybird\singsingsingmybird		34003324
+	65709662	xylophone	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\xylophone_40887594.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\xylophone		452380
+	81639684	marimbaC#	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\marimbaC#_FCCA26EC.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\marimbaC#		333656
+	95965161	Select_Button	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Select_Button		257408
+	336403806	105guitarriffCmaj	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\105guitarriffCmaj_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\105guitarriffCmaj		3510952
+	337361210	buildingsound	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\utopia sound design2_0E31C2CE.wem		\Actor-Mixer Hierarchy\Default Work Unit\buildingsound		78548
+	583359231	airplane	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\airplane_6BF23048.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Blend Container\airplane		2562680
+	742924674	Wind	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\ESM_Wind_Loop_Distant_Air_Steady_1_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\Wind		9024160
+	779451324	Slot_rimshot	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SO_BA_rim_chin_upbounce_F1EB82C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		13792
+	824445506	ForestAmbience	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\utopia sound design_73CAD344.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\ForestAmbience		38527736
+	987196180	singsingsingmybird	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\singsingsingmybird_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\singsingsingmybird\singsingsingmybird\singsingsingmybird		34003324
 

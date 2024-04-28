@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 24e07c87093835479306e84d8ee884e1
     GuidInternal: 
-    m_lastTime: -8584882584195141066
+    m_lastTime: -8584874766032966354
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584882584183441065
+    m_lastTime: -8584874073436960852
     List:
     - name: Main
       guid: 3b7239bccf5897409d336b79c2e2756f
@@ -94,7 +94,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584882584212826629
+    m_lastTime: -8584874048963883022
     List:
     - name: Play_buildingsound
       guid: 1a0ead8cfff3374eba9a45792a2331ca
@@ -179,8 +179,42 @@ MonoBehaviour:
         guid: 708a2a7e09af614689a2ca94201918a9
       Path: Events\Default Work Unit\Play_Slot_rimshot
       maxAttenuation: 0
-      maxDuration: 0.077633426
-      minDuration: 0.077633426
+      maxDuration: 4.0776334
+      minDuration: 4.0776334
+    - name: Play_testing
+      guid: 725b592b908a2c4f811550d7c0ab7a77
+      id: 2149296550
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_testing
+        ObjectType: 3
+        guid: 725b592b908a2c4f811550d7c0ab7a77
+      Path: Events\Default Work Unit\Play_testing
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Wind
+      guid: 3b25c306708b4f48a5a922c238d68be3
+      id: 1020223172
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Wind
+        ObjectType: 3
+        guid: 3b25c306708b4f48a5a922c238d68be3
+      Path: Events\Default Work Unit\Play_Wind
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -193,8 +227,36 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584882584212656638
-    List: []
+    m_lastTime: -8584873203741400269
+    List:
+    - name: HAPPY
+      guid: 241b23b608d3494a88db22d262f76310
+      id: 1427264549
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: HAPPY
+        ObjectType: 13
+        guid: 241b23b608d3494a88db22d262f76310
+      Path: Game Parameters\Default Work Unit\HAPPY
+    - name: ZOOM
+      guid: d89a3f682cb49749a4a0fc50453698a0
+      id: 848835168
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: ZOOM
+        ObjectType: 13
+        guid: d89a3f682cb49749a4a0fc50453698a0
+      Path: Game Parameters\Default Work Unit\ZOOM
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -207,8 +269,106 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 6673aea3fcf2a346bd9d8638d5b78cf3
     GuidInternal: 
-    m_lastTime: -8584882584182391051
-    List: []
+    m_lastTime: -8584873208225195541
+    List:
+    - name: HAPPY
+      guid: 5af547f31748a44f856b0bc87646a8c6
+      id: 1427264549
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6673aea3fcf2a346bd9d8638d5b78cf3
+      - ElementName: HAPPY
+        ObjectType: 9
+        guid: 5af547f31748a44f856b0bc87646a8c6
+      Path: States\Default Work Unit\HAPPY
+      values:
+      - name: HA0to20
+        guid: 19930136326d7d46a6ee7b583f1a165a
+        id: 3759462269
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6673aea3fcf2a346bd9d8638d5b78cf3
+        - ElementName: HAPPY
+          ObjectType: 9
+          guid: 5af547f31748a44f856b0bc87646a8c6
+        - ElementName: HA0to20
+          ObjectType: 8
+          guid: 19930136326d7d46a6ee7b583f1a165a
+      - name: HA20to50
+        guid: bb2674834a130a41b5d58171d4d17daa
+        id: 1197651426
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6673aea3fcf2a346bd9d8638d5b78cf3
+        - ElementName: HAPPY
+          ObjectType: 9
+          guid: 5af547f31748a44f856b0bc87646a8c6
+        - ElementName: HA20to50
+          ObjectType: 8
+          guid: bb2674834a130a41b5d58171d4d17daa
+      - name: HA50to80
+        guid: 022a1839fe501045b8d6efc7310addd0
+        id: 1968623160
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6673aea3fcf2a346bd9d8638d5b78cf3
+        - ElementName: HAPPY
+          ObjectType: 9
+          guid: 5af547f31748a44f856b0bc87646a8c6
+        - ElementName: HA50to80
+          ObjectType: 8
+          guid: 022a1839fe501045b8d6efc7310addd0
+      - name: HA80to100
+        guid: b6ddd81a59f37a4c91c1561d4cd24c69
+        id: 3586288172
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6673aea3fcf2a346bd9d8638d5b78cf3
+        - ElementName: HAPPY
+          ObjectType: 9
+          guid: 5af547f31748a44f856b0bc87646a8c6
+        - ElementName: HA80to100
+          ObjectType: 8
+          guid: b6ddd81a59f37a4c91c1561d4cd24c69
+      - name: None
+        guid: 33d1ad2fe6fc7241999bd956c15786ab
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6673aea3fcf2a346bd9d8638d5b78cf3
+        - ElementName: HAPPY
+          ObjectType: 9
+          guid: 5af547f31748a44f856b0bc87646a8c6
+        - ElementName: None
+          ObjectType: 8
+          guid: 33d1ad2fe6fc7241999bd956c15786ab
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -238,7 +398,7 @@ MonoBehaviour:
     m_lastTime: -8584882584181251060
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c0000000d0000003f00000040000000bb000000bc000000bd000000
+  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c0000000d0000000f000000100000001b0000001c0000003f00000040000000bb000000bc000000bd000000b8020000ff02000000030000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

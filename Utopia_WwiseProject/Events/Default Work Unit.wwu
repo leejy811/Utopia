@@ -58,6 +58,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_testing" ID="{2B595B72-8A90-4F2C-8115-50D7C0AB7A77}">
+					<ChildrenList>
+						<Action Name="" ID="{62F76A19-40C0-42F3-8480-17BA7C75C60F}" ShortID="196301460">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="testing" ID="{AF1FA326-C145-4FE6-A2D0-69973DBCD741}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Wind" ID="{06C3253B-8B70-484F-A5A9-22C238D68BE3}">
+					<ChildrenList>
+						<Action Name="" ID="{3E1E58BC-7AE4-4A71-A14A-A0EC3F546C40}" ShortID="385520036">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind" ID="{91F06F63-020A-4CD8-9F20-7C4632F0AD9E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

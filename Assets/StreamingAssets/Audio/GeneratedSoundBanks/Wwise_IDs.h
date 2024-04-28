@@ -18,7 +18,33 @@ namespace AK
         static const AkUniqueID PLAY_SELECT_BUTTON = 880454473U;
         static const AkUniqueID PLAY_SINGSINGSINGMYBIRD = 2446290240U;
         static const AkUniqueID PLAY_SLOT_RIMSHOT = 1073654463U;
+        static const AkUniqueID PLAY_TESTING = 2149296550U;
+        static const AkUniqueID PLAY_WIND = 1020223172U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace HAPPY
+        {
+            static const AkUniqueID GROUP = 1427264549U;
+
+            namespace STATE
+            {
+                static const AkUniqueID HA0TO20 = 3759462269U;
+                static const AkUniqueID HA20TO50 = 1197651426U;
+                static const AkUniqueID HA50TO80 = 1968623160U;
+                static const AkUniqueID HA80TO100 = 3586288172U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace HAPPY
+
+    } // namespace STATES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID HAPPY = 1427264549U;
+        static const AkUniqueID ZOOM = 848835168U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

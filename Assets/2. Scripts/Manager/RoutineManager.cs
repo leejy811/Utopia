@@ -91,6 +91,7 @@ public class RoutineManager : MonoBehaviour
 
         cityHappiness = count + sign == 0 ? 0 : ((cityHappiness * count) + happiness) / (count + sign);
         UIManager.instance.SetHappiness();
+        AkSoundEngine.SetRTPCValue("HAPPY", cityHappiness);
     }
 
     public void UpdateAfterStat()

@@ -3,36 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="ForestAmbience" ID="{0537576E-F521-4F97-B2B4-2FBAF13ACD8F}" ShortID="858632466">
-					<PropertyList>
-						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="utopia sound design" ID="{D7C1FF03-D1F2-4AE0-9BB5-8ABD3620A55D}">
-							<PropertyList>
-								<Property Name="FadeInDuration" Type="Real64" Value="1.99765845362535"/>
-								<Property Name="FadeOutDuration" Type="Real64" Value="1.99765845362535"/>
-								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-							</PropertyList>
-							<Language>SFX</Language>
-							<AudioFile>utopia sound design.wav</AudioFile>
-							<MediaIDList>
-								<MediaID ID="824445506"/>
-							</MediaIDList>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="utopia sound design" ID="{D7C1FF03-D1F2-4AE0-9BB5-8ABD3620A55D}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Select_Button" ID="{5531BEA6-7886-4331-B4FD-52B99033651D}" ShortID="829550600">
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -61,6 +31,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Slot_rimshot" ID="{BF6851CF-5F8D-4300-909D-7425A9DAD7D6}" ShortID="293382248">
+					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -115,6 +92,772 @@
 						<ActiveSource Name="utopia sound design2" ID="{8C595040-8C9D-443A-9C0D-22B3147F521D}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="AMb" ID="{E5BF1152-28B3-48D4-8911-67EA6E8BE0AF}" ShortID="230529009">
+					<ChildrenList>
+						<RandomSequenceContainer Name="testing" ID="{AF1FA326-C145-4FE6-A2D0-69973DBCD741}" ShortID="1008655996">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>3.5</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{350C2F42-1969-4743-BD12-BF8656EB2EA1}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="7">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{57C82862-1540-4E61-A589-BB788298242C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="RestartBeginningOrBackward" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="New Random Container" ID="{CCC9356F-EAF5-411B-9D99-054359EEBB7C}" ShortID="85598259">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C130F2DC-8E07-4485-953C-DE33782704D1}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="105guitarriffCmaj" ID="{B8A25245-0BD2-4530-B05F-7CD5F1615E9D}" ShortID="247917547">
+											<PropertyList>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{4040EE30-A2AF-4CCB-ACE9-CCD4A9DCD5F8}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="105guitarriffCmaj" ID="{3DB31EEC-9B4E-4C4A-A9F8-AE59432E5C61}">
+													<Language>SFX</Language>
+													<AudioFile>105guitarriffCmaj.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="336403806"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="105guitarriffCmaj" ID="{3DB31EEC-9B4E-4C4A-A9F8-AE59432E5C61}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="marimbaC#" ID="{F15504DC-A9BA-47D4-A234-56533E7D6DAD}" ShortID="497320472">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="marimbaC#" ID="{A861C273-33D4-4BBC-852D-F18F29F0716E}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.73728951959206"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>marimbaC#.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="81639684"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="marimbaC#" ID="{A861C273-33D4-4BBC-852D-F18F29F0716E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="xylophone" ID="{5C1329C9-61AD-4B72-8557-2F784A12CF72}" ShortID="74960751">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="xylophone" ID="{D7972282-F1FA-41FB-A910-183A756822FC}">
+													<PropertyList>
+														<Property Name="LoopBegin" Type="Real64" Value="0"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.35564680622651"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>xylophone.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="65709662"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="xylophone" ID="{D7972282-F1FA-41FB-A910-183A756822FC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<BlendContainer Name="New Blend Container" ID="{CA0735E6-0B8F-41D6-B7A3-C4A812CF6132}" ShortID="87545958">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C34884F6-306F-4BFB-AB04-B0F52A7D170F}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="airplane" ID="{40C90DB6-7AFE-48C7-8656-09C133F53F6B}" ShortID="1046109342">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{5F8557DD-BF25-4ED1-9691-C03A8292C8E2}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="airplane" ID="{34F254C1-5573-4FA7-80AD-AEEAC3DB6CEC}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="4.97677227589909"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="13.3467983762748"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>airplane.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="583359231"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{3968A8F2-EBB8-41F0-AC41-F2E70BF3867E}">
+													<PropertyList>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="airplane_Path" ID="{4D409B28-9A60-433C-ABB5-92A2D5D97F04}">
+															<PointList>
+																<Point>
+																	<XPos>-88.32487</XPos>
+																	<YPos>91.80791</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>0.50761</XPos>
+																	<YPos>-63.84181</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>92.38579</XPos>
+																	<YPos>85.31074</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="airplane_Path_01" ID="{DD5E960C-0F2C-4D1A-A212-BA79FAE162DA}">
+															<PointList>
+																<Point>
+																	<XPos>-91.37056</XPos>
+																	<YPos>90.67797</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>0.50761</XPos>
+																	<YPos>-0.56497</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>-77.66497</XPos>
+																	<YPos>-90.39548</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="airplane_Path_02" ID="{093EC457-ACFD-4320-95A5-FAB3EEBC831A}">
+															<PointList>
+																<Point>
+																	<XPos>-90.86294</XPos>
+																	<YPos>87.28814</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>9.13706</XPos>
+																	<YPos>4.51977</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>87.3096446700508</XPos>
+																	<YPos>89.8305084745763</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="airplane_Path_03" ID="{742C2F42-04D4-482A-88C6-91FE1C97F0FC}">
+															<PointList>
+																<Point>
+																	<XPos>87.81726</XPos>
+																	<YPos>88.41808</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>2.03045</XPos>
+																	<YPos>-0.56497</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>91.37056</XPos>
+																	<YPos>-88.70057</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="airplane_Path_04" ID="{DBE5E9BF-D2BE-4A00-AC17-951B5180DD2C}">
+															<PointList>
+																<Point>
+																	<XPos>77.15736</XPos>
+																	<YPos>95.19775</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-3.04569</XPos>
+																	<YPos>-19.20904</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>87.81726</XPos>
+																	<YPos>-89.26554</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="airplane_Path_05" ID="{0E9CCE1D-A65F-4D7E-9F9B-A45AA4DE3600}">
+															<PointList>
+																<Point>
+																	<XPos>-88.32487</XPos>
+																	<YPos>92.93785</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-5.07614</XPos>
+																	<YPos>-2.82486</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>-83.24873</XPos>
+																	<YPos>-88.70057</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="airplane_Path_06" ID="{BF7B24EA-A85A-47F9-8ECA-B3DD1DAA4DCB}">
+															<PointList>
+																<Point>
+																	<XPos>-87.81726</XPos>
+																	<YPos>-88.98305</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-86.80203</XPos>
+																	<YPos>83.05085</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>83.75634</XPos>
+																	<YPos>94.35028</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="airplane_Path_07" ID="{D2409FA6-4441-49E3-BE23-3F0152A040B3}">
+															<PointList>
+																<Point>
+																	<XPos>90.35533</XPos>
+																	<YPos>-91.80791</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>79.18781</XPos>
+																	<YPos>89.26554</YPos>
+																	<Flags>0</Flags>
+																	<Time>2500</Time>
+																</Point>
+																<Point>
+																	<XPos>-90.86294</XPos>
+																	<YPos>88.13559</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="airplane" ID="{34F254C1-5573-4FA7-80AD-AEEAC3DB6CEC}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</BlendContainer>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<Reference>
+										<ObjectRef Name="New Blend Container" ID="{CA0735E6-0B8F-41D6-B7A3-C4A812CF6132}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+									</Reference>
+									<Reference>
+										<ObjectRef Name="New Random Container" ID="{CCC9356F-EAF5-411B-9D99-054359EEBB7C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+									</Reference>
+								</ObjectList>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{58E33BC6-CA44-48A2-9FED-D3008FB8E441}" ShortID="555670574">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{B35CF997-0B51-4388-BB2B-8D6D75E61BE6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8.8828</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp2</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>12.02166</XPos>
+																		<YPos>-0.0275</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>15</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{4422E7A2-5D1C-455D-A22D-1C7313CF8E09}" ShortID="645922683">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{3662D167-2E9A-4ACD-96D1-41C514BA1DEB}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50.35236</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50.35336</XPos>
+																		<YPos>-0.12307</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<Sound Name="Wind" ID="{91F06F63-020A-4CD8-9F20-7C4632F0AD9E}" ShortID="1000381249">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_Wind_Loop_Distant_Air_Steady_1" ID="{303F831C-5B75-467E-903C-4C54BE006D55}">
+									<Language>SFX</Language>
+									<AudioFile>ESM_Wind_Loop_Distant_Air_Steady_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="742924674"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{69CF0304-9358-48CB-B288-0B6F02A3A8EE}" ShortID="1038808343">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{C7158BFA-8CB8-43BD-ABF5-951102A1E0CF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8.09796</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>13.01866</XPos>
+																		<YPos>-11.21969</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Exp3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>15</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{3F69D38E-1006-4B7E-9D49-46F8CE3FDE18}" ShortID="887899142">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{5C925C1C-C7E3-4A21-91FD-397FB2C4CD14}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>20.14034</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>20.14134</XPos>
+																		<YPos>-0.02685</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_Wind_Loop_Distant_Air_Steady_1" ID="{303F831C-5B75-467E-903C-4C54BE006D55}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ForestAmbience" ID="{0537576E-F521-4F97-B2B4-2FBAF13ACD8F}" ShortID="858632466">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="utopia sound design" ID="{D7C1FF03-D1F2-4AE0-9BB5-8ABD3620A55D}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="1.99765845362535"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.99765845362535"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>utopia sound design.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="824445506"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{52D7EB38-7736-4E51-8517-0CF6214711B0}" ShortID="240117465">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{4FF598D3-71AC-4BD3-8E02-7C686B853D29}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>4.74495</XPos>
+																		<YPos>-19.95455</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10.014</XPos>
+																		<YPos>-0.21716</YPos>
+																		<Flags>0</Flags>
+																		<SegmentShape>Log3</SegmentShape>
+																	</Point>
+																	<Point>
+																		<XPos>12.9108</XPos>
+																		<YPos>-177.58141</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>15</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{FFA02776-B75A-4356-A8AE-F83C5EA69A0A}" ShortID="175850438">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{3CEE9239-E612-4003-94CB-EA02080700D7}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>49.999</XPos>
+																		<YPos>-38.1697</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>50</XPos>
+																		<YPos>-0.01921</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="utopia sound design" ID="{D7C1FF03-D1F2-4AE0-9BB5-8ABD3620A55D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

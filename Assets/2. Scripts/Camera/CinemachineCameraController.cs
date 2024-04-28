@@ -38,7 +38,7 @@ public class CinemachineCameraController : MonoBehaviour
         ZoomCamera();
         PitchCamera();
         UpdateCameraSettings();
-
+        AkSoundEngine.SetRTPCValue("ZOOM", publicOrthographicSize);
     }
 
     void MoveCamera()
