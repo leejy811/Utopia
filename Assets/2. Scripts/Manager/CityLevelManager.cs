@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CityType { Village = 0, Town, City }
+public enum CityType { Village = 0, Town, City, Utopia }
 
 [System.Serializable]
 public struct CityLevel
@@ -11,8 +11,6 @@ public struct CityLevel
     public int residentCondition;
     public int happinessCondition;
     public int moneyReward;
-    public int taxRewardDuration;
-    public int taxRewardAmount;
 }
 
 public class CityLevelManager : MonoBehaviour
@@ -49,7 +47,9 @@ public class CityLevelManager : MonoBehaviour
     {
         levelIdx++;
         ShopManager.instance.GetMoney(level[levelIdx].moneyReward);
-        //ToDo 세금 3일간 증가 로직 작성
+
+        if (levelIdx == level.Length)
+            EventManager.instance.eventProb = 0.5f;
     }
 
     public bool CheckBuildingLevel(Building building)

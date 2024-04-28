@@ -47410,7 +47410,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.2
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -47433,8 +47433,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.27781588, y: 0.36497167, z: -0.1150751, w: 0.8811196}
-  m_LocalPosition: {x: 3.933206, y: 9.4, z: 3.933206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -84900,20 +84900,18 @@ MonoBehaviour:
     residentCondition: 0
     happinessCondition: 0
     moneyReward: 0
-    taxRewardDuration: 0
-    taxRewardAmount: 0
   - type: 1
-    residentCondition: 10000
+    residentCondition: 2000
     happinessCondition: 60
-    moneyReward: 10000
-    taxRewardDuration: 0
-    taxRewardAmount: 0
+    moneyReward: 6000
   - type: 2
-    residentCondition: 50000
+    residentCondition: 15000
+    happinessCondition: 70
+    moneyReward: 10000
+  - type: 3
+    residentCondition: 100000
     happinessCondition: 80
-    moneyReward: 50000
-    taxRewardDuration: 0
-    taxRewardAmount: 0
+    moneyReward: 100000
 --- !u!4 &1744008805
 Transform:
   m_ObjectHideFlags: 0
