@@ -51,4 +51,10 @@ public class CityLevelManager : MonoBehaviour
         ShopManager.instance.GetMoney(level[levelIdx].moneyReward);
         //ToDo 세금 3일간 증가 로직 작성
     }
+
+    public bool CheckBuildingLevel(Building building)
+    {
+        int levelCondition = 3 - levelIdx;
+        return building.grade >= levelCondition;
+    }
 }

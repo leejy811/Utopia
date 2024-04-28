@@ -174,10 +174,13 @@ public class UIManager : MonoBehaviour
         {
             if (i == typeIndex)
             {
+                Building building = BuildingSpawner.instance.buildingPrefabs[buildingIndex].GetComponent<Building>();
+                if (!CityLevelManager.instance.CheckBuildingLevel(building)) return;
+
                 buildingInfos[i].gameObject.SetActive(!buildingInfos[i].gameObject.activeSelf);
 
                 Vector3 pos = buildingInfos[i].gameObject.GetComponent<RectTransform>().localPosition;
-                buildingInfos[i].OnUI(BuildingSpawner.instance.buildingPrefabs[buildingIndex].GetComponent<Building>(), new Vector3(xPos, pos.y, pos.z));
+                buildingInfos[i].OnUI(building, new Vector3(xPos, pos.y, pos.z));
                 return;
             }
         }
@@ -311,6 +314,8 @@ public class UIManager : MonoBehaviour
 
         if (index != -1)
         {
+            SetBuildingListValue(index);
+
             if (ShopManager.instance.buyState == BuyState.BuyTile)
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
             else if (ShopManager.instance.buyState == BuyState.SellBuilding)

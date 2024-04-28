@@ -74,6 +74,8 @@ public class Building : MonoBehaviour
     public List<Event> curEvents;
     public int cost;
 
+    public Sprite buildingIcon;
+
     public Dictionary<ValueType, BoundaryValue> values = new Dictionary<ValueType, BoundaryValue>();
 
     private void Start()
