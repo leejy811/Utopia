@@ -33,8 +33,11 @@ public class CinemachineCameraController : MonoBehaviour
 
     void Update()
     {
-        MoveCamera();
-        RotateCamera();
+        if (virtualCamera.Priority == 20)
+        {
+            MoveCamera();
+            RotateCamera();
+        }
         ZoomCamera();
         PitchCamera();
         UpdateCameraSettings();
@@ -153,7 +156,8 @@ public class CinemachineCameraController : MonoBehaviour
         if (virtualCamera.m_Lens.Orthographic)
         {
             float zoomChange = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
-            virtualCamera.m_Lens.OrthographicSize = Mathf.Max(virtualCamera.m_Lens.OrthographicSize - zoomChange, 1f);
+
+            virtualCamera.m_Lens.OrthographicSize = Mathf.Min(Mathf.Max(virtualCamera.m_Lens.OrthographicSize - zoomChange, 1f), 25f);
 
             if (virtualCamera.m_Lens.OrthographicSize <= 5)
             {
