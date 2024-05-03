@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584872361120765014
+    m_lastTime: -8584869448793428509
     List:
     - name: Main
       guid: 3b7239bccf5897409d336b79c2e2756f
@@ -94,8 +94,42 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584872361136898213
+    m_lastTime: -8584869413013852179
     List:
+    - name: Play_BGM
+      guid: f75f0f8b8d67a64aa1a49a7f337ec94d
+      id: 3126765036
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_BGM
+        ObjectType: 3
+        guid: f75f0f8b8d67a64aa1a49a7f337ec94d
+      Path: Events\Default Work Unit\Play_BGM
+      maxAttenuation: 0
+      maxDuration: 120
+      minDuration: 120
+    - name: Play_BGMsequnce
+      guid: 661bf05f034f434e9f05be98cf74d7aa
+      id: 314683120
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_BGMsequnce
+        ObjectType: 3
+        guid: 661bf05f034f434e9f05be98cf74d7aa
+      Path: Events\Default Work Unit\Play_BGMsequnce
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_buildingsound
       guid: 1a0ead8cfff3374eba9a45792a2331ca
       id: 2611274067
@@ -113,6 +147,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.44473922
       minDuration: 0.44473922
+    - name: Play_construction
+      guid: b2105577e2d93b4da21a0bbe2b7ad426
+      id: 1598463209
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_construction
+        ObjectType: 3
+        guid: b2105577e2d93b4da21a0bbe2b7ad426
+      Path: Events\Default Work Unit\Play_construction
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_ForestAmbience
       guid: 4d99023123977c449b5c80ce8afeb234
       id: 3149538809
@@ -215,6 +266,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop_construction
+      guid: f52f07cca1b231439ba45051290aac45
+      id: 3493507479
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_construction
+        ObjectType: 3
+        guid: f52f07cca1b231439ba45051290aac45
+      Path: Events\Default Work Unit\Stop_construction
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -398,7 +466,7 @@ MonoBehaviour:
     m_lastTime: -8584878539406240187
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000000a0000000b0000000c0000000d0000000f000000100000001b0000001c0000003f00000040000000bb000000bc000000bd000000b8020000ff02000000030000
+  ExpandedWaapiItemIds: 05000000070000000a0000000b0000000c0000000d0000000f000000100000001b0000001c0000003f00000040000000bb000000bc000000bd000000b8020000ff02000000030000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

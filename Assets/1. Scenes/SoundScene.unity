@@ -500,6 +500,7 @@ MonoBehaviour:
   sourceCameraTransform: {fileID: 2028396363}
   virtualCamera2: {fileID: 11117637}
   newTarget: {fileID: 0}
+  isDelayActive: 0
 --- !u!1 &13673577
 GameObject:
   m_ObjectHideFlags: 0
@@ -5057,6 +5058,9 @@ MonoBehaviour:
   - {fileID: 709138156}
   - {fileID: 1771856606}
   - {fileID: 1504232077}
+  buildingButton: []
+  buildingButtonImage: []
+  lockSprite: {fileID: 0}
 --- !u!1 &119735912
 GameObject:
   m_ObjectHideFlags: 0
@@ -6985,6 +6989,9 @@ MonoBehaviour:
   - {fileID: 301966572}
   - {fileID: 1240111932}
   - {fileID: 2035724538}
+  buildingButton: []
+  buildingButtonImage: []
+  lockSprite: {fileID: 0}
 --- !u!1 &152403290
 GameObject:
   m_ObjectHideFlags: 0
@@ -47815,11 +47822,9 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194231}
   - component: {fileID: 963194230}
-  - component: {fileID: 963194232}
-  - component: {fileID: 963194233}
-  - component: {fileID: 963194236}
   - component: {fileID: 963194234}
   - component: {fileID: 963194235}
+  - component: {fileID: 963194238}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -47921,64 +47926,6 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
---- !u!114 &963194232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d20422e7f043c942af23b0e1cbb47c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: caff6f1cbf4ddd94b8234543a816496f, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
---- !u!114 &963194233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d20422e7f043c942af23b0e1cbb47c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: a124e27ddada7314e9e013b99b155a62, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
 --- !u!114 &963194234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47992,7 +47939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
+  m_ShowCameraFrustum: 0
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
   m_UpdateMethod: 2
@@ -48073,7 +48020,7 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &963194236
+--- !u!114 &963194238
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48082,26 +48029,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d20422e7f043c942af23b0e1cbb47c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 87d71428aa31cc845941d49e078eaceb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 21241191eabf4114f927a924fc7aaeae, type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
 --- !u!1 &963970003
 GameObject:
   m_ObjectHideFlags: 0
@@ -67151,6 +67081,9 @@ MonoBehaviour:
   costText:
   - {fileID: 1973826457}
   - {fileID: 2105153091}
+  buildingButton: []
+  buildingButtonImage: []
+  lockSprite: {fileID: 0}
 --- !u!1 &1353367432
 GameObject:
   m_ObjectHideFlags: 0
@@ -85571,20 +85504,14 @@ MonoBehaviour:
     residentCondition: 0
     happinessCondition: 0
     moneyReward: 0
-    taxRewardDuration: 0
-    taxRewardAmount: 0
   - type: 1
     residentCondition: 10000
     happinessCondition: 60
     moneyReward: 10000
-    taxRewardDuration: 0
-    taxRewardAmount: 0
   - type: 2
     residentCondition: 50000
     happinessCondition: 80
     moneyReward: 50000
-    taxRewardDuration: 0
-    taxRewardAmount: 0
 --- !u!4 &1744008805
 Transform:
   m_ObjectHideFlags: 0
@@ -88558,6 +88485,9 @@ MonoBehaviour:
   - {fileID: 141313405}
   - {fileID: 673753170}
   - {fileID: 938926917}
+  buildingButton: []
+  buildingButtonImage: []
+  lockSprite: {fileID: 0}
 --- !u!1 &1798949770
 GameObject:
   m_ObjectHideFlags: 0

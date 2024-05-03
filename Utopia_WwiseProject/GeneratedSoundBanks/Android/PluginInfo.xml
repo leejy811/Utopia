@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PluginInfo Platform="Android" BasePlatform="Android">
 	<PluginLibs>
+		<PluginLib LibName="Wwise Silence" LibId="6619138" Type="Source" DLL="AkSilenceGenerator" StaticLib="AkSilenceSource"/>
 		<PluginLib LibName="System" LibId="11403271" Type="AudioDevice"/>
 		<PluginLib LibName="No Output" LibId="11862023" Type="AudioDevice"/>
 	</PluginLibs>
-	<FileHash>{802CB29E-2A07-E260-0929-231C7A375A1D}</FileHash>
+	<FileHash>{C1D23FB4-383D-4A7E-949B-1B25447AD1C9}</FileHash>
 </PluginInfo>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{12B19B3D-D877-56CE-97D7-56E65457BD52}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{658F3926-F503-40E2-B2DB-77DB377B1471}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -37,7 +37,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{58605A04-473B-2D68-3FC5-85B89E84AE4B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{A7405DB4-3F7F-DCB3-B24F-75ED9C86A710}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -53,6 +53,10 @@
 					<ShortName>ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button.wav</ShortName>
 					<CachePath>SFX/ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem</CachePath>
 				</File>
+				<File Id="159506193" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM2.wav</ShortName>
+					<CachePath>SFX/BGM2_5C4D602B.wem</CachePath>
+				</File>
 				<File Id="336403806" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>105guitarriffCmaj.wav</ShortName>
 					<CachePath>SFX/105guitarriffCmaj_818F3B66.wem</CachePath>
@@ -60,6 +64,10 @@
 				<File Id="337361210" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>utopia sound design2.wav</ShortName>
 					<CachePath>SFX/utopia sound design2_0E31C2CE.wem</CachePath>
+				</File>
+				<File Id="394814525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM.wav</ShortName>
+					<CachePath>SFX/BGM_11A93380.wem</CachePath>
 				</File>
 				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>airplane.wav</ShortName>
@@ -75,14 +83,35 @@
 				</File>
 				<File Id="824445506" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>utopia sound design.wav</ShortName>
-					<CachePath>SFX/utopia sound design_73CAD344.wem</CachePath>
+					<CachePath>SFX/utopia sound design_37F8CF45.wem</CachePath>
 				</File>
 				<File Id="987196180" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>singsingsingmybird.wav</ShortName>
 					<CachePath>SFX/singsingsingmybird_FBC78EF0.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="1000201217" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+			</Plugins>
 			<Events>
+				<Event Id="3126765036" Name="Play_BGM" DurationType="OneShot" DurationMin="120" DurationMax="120">
+					<MediaRefs>
+						<MediaRef Id="394814525"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="314683120" Name="Play_BGMsequnce" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="159506193"/>
+						<MediaRef Id="394814525"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1000201217"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 				<Event Id="2611274067" Name="Play_buildingsound" DurationType="OneShot" DurationMin="0.44473922" DurationMax="0.44473922">
 					<MediaRefs>
 						<MediaRef Id="337361210"/>
@@ -128,5 +157,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1007F504-207C-B537-1D56-45CA0EC55555}</FileHash>
+	<FileHash>{53A72DCA-6943-AEC3-9EB0-922FE4E6856C}</FileHash>
 </SoundBanksInfo>

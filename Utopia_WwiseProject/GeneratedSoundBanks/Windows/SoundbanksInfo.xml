@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{257C16F9-071E-C7FC-7046-B9F7627E20F0}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3F9F8132-4DCB-5C76-8F4C-FE27D2A355DA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -37,10 +37,14 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{58605A04-473B-2D68-3FC5-85B89E84AE4B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4798B337-9AE5-16E8-3AE6-B9C0DB0D4B96}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="32765491" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>shs_oat_ambience_construction_work_1_jackhammer.wav</ShortName>
+					<CachePath>SFX/shs_oat_ambience_construction_work_1_jackhammer_11A93380.wem</CachePath>
+				</File>
 				<File Id="65709662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>xylophone.wav</ShortName>
 					<CachePath>SFX/xylophone_40887594.wem</CachePath>
@@ -53,6 +57,14 @@
 					<ShortName>ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button.wav</ShortName>
 					<CachePath>SFX/ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem</CachePath>
 				</File>
+				<File Id="159506193" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM2.wav</ShortName>
+					<CachePath>SFX/BGM2_5C4D602B.wem</CachePath>
+				</File>
+				<File Id="181388217" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>shs_oat_ambience_construction_work_5_jackhammer.wav</ShortName>
+					<CachePath>SFX/shs_oat_ambience_construction_work_5_jackhammer_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="336403806" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>105guitarriffCmaj.wav</ShortName>
 					<CachePath>SFX/105guitarriffCmaj_818F3B66.wem</CachePath>
@@ -60,6 +72,14 @@
 				<File Id="337361210" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>utopia sound design2.wav</ShortName>
 					<CachePath>SFX/utopia sound design2_0E31C2CE.wem</CachePath>
+				</File>
+				<File Id="367849771" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Construction_S08IN.354.wav</ShortName>
+					<CachePath>SFX/Construction_S08IN.354_6DC157CB.wem</CachePath>
+				</File>
+				<File Id="394814525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM.wav</ShortName>
+					<CachePath>SFX/BGM_11A93380.wem</CachePath>
 				</File>
 				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>airplane.wav</ShortName>
@@ -75,17 +95,50 @@
 				</File>
 				<File Id="824445506" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>utopia sound design.wav</ShortName>
-					<CachePath>SFX/utopia sound design_73CAD344.wem</CachePath>
+					<CachePath>SFX/utopia sound design_37F8CF45.wem</CachePath>
 				</File>
 				<File Id="987196180" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>singsingsingmybird.wav</ShortName>
 					<CachePath>SFX/singsingsingmybird_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="1034700149" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Construction_S08IN.355.wav</ShortName>
+					<CachePath>SFX/Construction_S08IN.355_FBC78EF0.wem</CachePath>
+				</File>
 			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="1000201217" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+			</Plugins>
 			<Events>
+				<Event Id="3126765036" Name="Play_BGM" DurationType="OneShot" DurationMin="120" DurationMax="120">
+					<MediaRefs>
+						<MediaRef Id="394814525"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="314683120" Name="Play_BGMsequnce" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="159506193"/>
+						<MediaRef Id="394814525"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1000201217"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
 				<Event Id="2611274067" Name="Play_buildingsound" DurationType="OneShot" DurationMin="0.44473922" DurationMax="0.44473922">
 					<MediaRefs>
 						<MediaRef Id="337361210"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1598463209" Name="Play_construction" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="32765491"/>
+						<MediaRef Id="181388217"/>
+						<MediaRef Id="367849771"/>
+						<MediaRef Id="1034700149"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3149538809" Name="Play_ForestAmbience" DurationType="Infinite">
@@ -121,6 +174,7 @@
 						<MediaRef Id="742924674"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3493507479" Name="Stop_construction" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="848835168" Name="ZOOM"/>
@@ -128,5 +182,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C81A31DF-370A-F599-16F4-1FC8018289EA}</FileHash>
+	<FileHash>{70CC60B0-6D81-E675-4B26-497591BFA51F}</FileHash>
 </SoundBanksInfo>

@@ -80,6 +80,57 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_BGM" ID="{8B0F5FF7-678D-4AA6-A1A4-9A7F337EC94D}">
+					<ChildrenList>
+						<Action Name="" ID="{C564B8D3-E03D-4B81-B259-E4335AD7EDA6}" ShortID="505225691">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM" ID="{8D70AA5C-DE1F-4267-88EC-A079CA151328}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_BGMsequnce" ID="{5FF01B66-4F03-4E43-9F05-BE98CF74D7AA}">
+					<ChildrenList>
+						<Action Name="" ID="{E76F0B3A-4EB5-4F38-9718-A4FDA42BE65A}" ShortID="644481320">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGMsequnce" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_construction" ID="{775510B2-D9E2-4D3B-A21A-0BBE2B7AD426}">
+					<ChildrenList>
+						<Action Name="" ID="{D2A9DCE3-3CBD-4D79-8EB2-D4B1BBEC6181}" ShortID="275435286">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="construction" ID="{15A5693D-6B15-487C-8325-1EBEEF376D76}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_construction" ID="{CC072FF5-B2A1-4331-9BA4-5051290AAC45}">
+					<ChildrenList>
+						<Action Name="" ID="{D530C036-E97F-4AE9-83C7-39692CEB761E}" ShortID="426440420">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="construction" ID="{15A5693D-6B15-487C-8325-1EBEEF376D76}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
