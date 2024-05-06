@@ -7,12 +7,12 @@ public class SlotMachineManager : MonoBehaviour
     public GameObject slotContainer2;
     public GameObject slotContainer3;
 
-    public float spinSpeed = 23f; 
-    public float distanceMultiplier = 25f; 
-    public float returnPositionMultiplier = 25f; 
-    public float slot1Distance = 1f; 
-    public float slot2Distance = 2f; 
-    public float slot3Distance = 6f; 
+    public float spinSpeed = 25f; 
+    public float distanceMultiplier = 70f; 
+    public float returnPositionMultiplier = 70f; 
+    public float slot1Distance; 
+    public float slot2Distance; 
+    public float slot3Distance; 
 
     private bool isFirstFunction = true;
 
@@ -35,6 +35,10 @@ public class SlotMachineManager : MonoBehaviour
 
     public void OnButtonClick()
     {
+        slot1Distance = Random.Range(1, 8); 
+        slot2Distance = Random.Range(1, 8);
+        slot3Distance = Random.Range(1, 8);
+
         if (isFirstFunction)
         {
             StartSlot1();
