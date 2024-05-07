@@ -27,7 +27,9 @@ public class BuildingInfoUI : InfoUI
         if (!CityLevelManager.instance.CheckBuildingLevel(building.GetComponent<Building>())) return;
 
         gameObject.SetActive(!gameObject.activeSelf);
+
         return;
+
         nameText.text = building.buildingName;
         typeText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType];
         buildingGradeText.text = building.grade + "µî±Þ";

@@ -166,8 +166,8 @@ public class UIManager : MonoBehaviour
 
     public void SetBuildingIntroPopUp(Building building = null)
     {
-        if(eventNotify.gameObject.activeSelf)
-            SetEventNotifyValue(building);
+        //if(eventNotify.gameObject.activeSelf)
+        //    SetEventNotifyValue(building);
 
         if (building == null)
         {
@@ -393,7 +393,6 @@ public class UIManager : MonoBehaviour
     private int GetBuildingIndex()
     {
         int idx = targetBuilding.type == BuildingType.Residential ? 0 : 1;
-        int eventidx = targetBuilding.GetEventProblemCount();
-        return idx * 3 + eventidx;
+        return idx;
     }
 }

@@ -35,20 +35,39 @@ public struct BoundaryValue
             return BoundaryType.Include;
     }
 
-    public string BoundaryToString()
+    public string CastToString()
     {
         string res = "";
         BoundaryType type = CheckBoundary();
         switch (type)
         {
             case BoundaryType.More:
-                res = "<color=#FF0000>높음</color>";
+                res = "과도";
                 break;
             case BoundaryType.Include:
-                res = "보통";
+                res = "충족";
                 break;
             case BoundaryType.Less:
-                res = "<color=#0019FF>낮음</color>";
+                res = "부족";
+                break;
+        }
+        return res;
+    }
+
+    public string ValueToString()
+    {
+        string res = "";
+        BoundaryType type = CheckBoundary();
+        switch (type)
+        {
+            case BoundaryType.More:
+                res = "높음";
+                break;
+            case BoundaryType.Include:
+                res = "평범";
+                break;
+            case BoundaryType.Less:
+                res = "낮음";
                 break;
         }
         return res;

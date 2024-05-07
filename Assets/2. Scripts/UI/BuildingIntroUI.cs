@@ -20,6 +20,41 @@ public struct EventUIInfo
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dayText;
     public SolutionUIInfo[] solutionUIInfos;
+
+    public void SetEventUIInfo(Event curEvent)
+    {
+        iconImage.sprite = curEvent.eventIcon;
+        nameText.text = curEvent.eventName.ToString();
+        dayText.text = "(D-" + (curEvent.effectValue.Count - curEvent.curDay + 1).ToString() + ")";
+
+        for (int j = 0; j < solutionUIInfos.Length; j++)
+        {
+            solutionUIInfos[j].nameText.text = curEvent.solutions[j].name.ToString();
+            solutionUIInfos[j].costText.text = "(-" + curEvent.solutions[j].cost.ToString() + "원)";
+            solutionUIInfos[j].probText.text = "해결확률 " + curEvent.solutions[j].prob.ToString() + "%";
+        }
+    }
+}
+
+[Serializable]
+public struct ValueSlider
+{
+    public TextMeshProUGUI minText;
+    public TextMeshProUGUI maxText;
+    public TextMeshProUGUI curText;
+    public TextMeshProUGUI stringText;
+    public Slider slider;
+
+    public void SetSlider(BoundaryValue value)
+    {
+        minText.text = value.min.ToString();
+        maxText.text = value.max.ToString();
+        curText.text = value.cur.ToString();
+        stringText.text = value.CastToString();
+
+        int boundary = (int)value.CheckBoundary();
+        slider.value = (float)(boundary + 2) / 3;
+    }
 }
 
 public class BuildingIntroUI : MonoBehaviour
@@ -28,14 +63,14 @@ public class BuildingIntroUI : MonoBehaviour
     public TextMeshProUGUI buildingNameText;
     public TextMeshProUGUI buildingInfoText;
     public TextMeshProUGUI happinessText;
-    public TextMeshProUGUI happinessStringText;
 
     [Header("Special")]
     public TextMeshProUGUI influenceText;
-    public TextMeshProUGUI utilityText;
-    public TextMeshProUGUI userText;
     public TextMeshProUGUI residentText;
-    public TextMeshProUGUI[] castText;
+    public TextMeshProUGUI valueTypeText;
+    public ValueSlider utilitySlider;
+    public ValueSlider userSlider;
+    public ValueSlider[] castSlider;
     public Button[] optionButtons;
     public Toggle[] optionToggles;
 
@@ -51,7 +86,6 @@ public class BuildingIntroUI : MonoBehaviour
         buildingNameText.text = building.buildingName + building.count;
         buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType] + "/" + building.grade + "등급";
         happinessText.text = "<sprite=" + Mathf.Min(building.happinessRate / 20, 4) + "> " + building.happinessRate + "(" + GetSignString(building.happinessDifference, "+") + ")%";
-        happinessStringText.text = building.happinessDifference > 0 ? "행복도 증가<sprite=6>" : building.happinessDifference < 0 ? "행복도 감소<sprite=5>" : "행복도 유지";
 
         if (building.type == BuildingType.Residential)
         {
@@ -59,7 +93,7 @@ public class BuildingIntroUI : MonoBehaviour
 
             for (int i = 0; i < 3; i++)
             {
-                castText[i].text = building.values[(ValueType)(i + 1)].BoundaryToString();
+                castSlider[i].SetSlider(building.values[(ValueType)(i + 1)]);
             }
 
             ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
@@ -70,25 +104,17 @@ public class BuildingIntroUI : MonoBehaviour
         }
         else
         {
-            influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString();
-            utilityText.text = valueTypeString[(int)building.type - 1] + ": " + building.values[ValueType.utility].BoundaryToString();
-            userText.text = building.values[ValueType.user].BoundaryToString();
+            influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString() + "(+" + building.additionalInfluencePower.ToString() + ")";
+            valueTypeText.text = valueTypeString[(int)building.type - 1];
+            utilitySlider.SetSlider(building.values[ValueType.utility]);
+            userSlider.SetSlider(building.values[ValueType.user]);
         }
 
         List<Event> curEvent = building.GetEventProblem();
 
         for (int i = 0;i < eventUIInfos.Length; i++)
         {
-            eventUIInfos[i].iconImage.sprite = curEvent[i].eventIcon;
-            eventUIInfos[i].nameText.text = curEvent[i].eventName.ToString();
-            eventUIInfos[i].dayText.text = "(D-" + (curEvent[i].effectValue.Count - curEvent[i].curDay + 1).ToString() + ")";
-
-            for (int j = 0; j < eventUIInfos[i].solutionUIInfos.Length; j++)
-            {
-                eventUIInfos[i].solutionUIInfos[j].nameText.text = curEvent[i].solutions[j].name.ToString();
-                eventUIInfos[i].solutionUIInfos[j].costText.text = "(-" + curEvent[i].solutions[j].cost.ToString() + "원)";
-                eventUIInfos[i].solutionUIInfos[j].probText.text = "해결확률 " + curEvent[i].solutions[j].prob.ToString() + "%";
-            }
+            eventUIInfos[i].SetEventUIInfo(curEvent[i]);
         }
     }
 
