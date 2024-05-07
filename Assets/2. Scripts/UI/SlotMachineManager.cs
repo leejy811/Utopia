@@ -7,19 +7,20 @@ public class SlotMachineManager : MonoBehaviour
     public GameObject slotContainer2;
     public GameObject slotContainer3;
 
-    public float spinSpeed = 25f; 
-    public float distanceMultiplier = 70f; 
-    public float returnPositionMultiplier = 70f; 
-    public float slot1Distance; 
-    public float slot2Distance; 
-    public float slot3Distance; 
+    public float spinSpeed = 25f;
+    public float distanceMultiplier = 70f;
+    public float returnPositionMultiplier = 70f;
+    public float slot1Distance;
+    public float slot2Distance;
+    public float slot3Distance;
 
     private bool isFirstFunction = true;
 
     private IEnumerator SpinSlot(GameObject slotContainer, float reachedDistance)
     {
-        float movedDistance = 0;
+        float initialYPosition = slotContainer.transform.localPosition.y;
 
+        float movedDistance = 0;
         while (movedDistance < reachedDistance * distanceMultiplier)
         {
             foreach (Transform image in slotContainer.transform)
@@ -31,13 +32,23 @@ public class SlotMachineManager : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+
+        // Return to initial position after spinning
+        Vector3 pos = slotContainer.transform.localPosition;
+        pos.y = initialYPosition;
+        slotContainer.transform.localPosition = pos;
     }
 
     public void OnButtonClick()
     {
-        slot1Distance = Random.Range(1, 8); 
-        slot2Distance = Random.Range(1, 8);
-        slot3Distance = Random.Range(1, 8);
+        slot1Distance = Random.Range(1, 31);
+        slot2Distance = Random.Range(1, 31);
+        slot3Distance = Random.Range(1, 31);
+
+        // Set initial positions based on the random distance ranges
+        SetInitialPosition(slotContainer1, slot1Distance);
+        SetInitialPosition(slotContainer2, slot2Distance);
+        SetInitialPosition(slotContainer3, slot3Distance);
 
         if (isFirstFunction)
         {
@@ -51,6 +62,23 @@ public class SlotMachineManager : MonoBehaviour
         }
 
         isFirstFunction = !isFirstFunction;
+    }
+
+    private void SetInitialPosition(GameObject slotContainer, float distance)
+    {
+        float positionShift = 0;
+        if (distance >= 11 && distance <= 20)
+        {
+            positionShift = 700f;
+        }
+        else if (distance >= 21 && distance <= 30)
+        {
+            positionShift = 1400f;
+        }
+
+        Vector3 newPosition = slotContainer.transform.localPosition;
+        newPosition.y += positionShift;
+        slotContainer.transform.localPosition = newPosition;
     }
 
     private void SpinReturnPos(GameObject slotContainer1, GameObject slotContainer2, GameObject slotContainer3, float reachedDistance1, float reachedDistance2, float reachedDistance3)
