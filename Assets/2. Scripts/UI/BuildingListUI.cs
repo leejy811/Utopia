@@ -4,33 +4,29 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class BuildingListUI : MonoBehaviour
+public class BuildingListUI : ListUI
 {
-    [Header("Cost")]
-    public TextMeshProUGUI[] costText;
-
     [Header("Button")]
-    public Button[] buildingButton;
-    public Image[] buildingButtonImage;
+    public Button[] Button;
     public Sprite lockSprite;
 
-    int[] buildingCount = { 3, 4, 2, 3 };
+    int[] buildingCount = { 0, 3, 7, 10 };
 
-    public void SetValue(BuildingType type)
+    public override void SetValue(int type)
     {
         int cnt = 0;
 
         for(int i = 0;i < System.Enum.GetValues(typeof(BuildingType)).Length; i++)
         {
-            if(type == (BuildingType)i)
+            if(type == i)
             {
                 for(int j = 0;j < costText.Length;j++)
                 {
                     Building building = BuildingSpawner.instance.buildingPrefabs[cnt + j].GetComponent<Building>();
                     bool checkGrade = CityLevelManager.instance.CheckBuildingLevel(building);
                     costText[j].text = building.cost.ToString() + "$";
-                    buildingButtonImage[j].sprite = !checkGrade ? lockSprite : building.buildingIcon;
-                    buildingButton[j].interactable = checkGrade;
+                    ButtonImage[j].sprite = !checkGrade ? lockSprite : building.buildingIcon;
+                    Button[j].interactable = checkGrade;
                 }
                 break;
             }

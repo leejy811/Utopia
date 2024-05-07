@@ -7,12 +7,14 @@ public class ButtonManager : MonoBehaviour
 
     private Button lastDisabledButton = null;
 
-    void Update()
+    void Start()
     {
         foreach (Button btn in buttons)
         {
             btn.onClick.AddListener(() => ButtonClicked(btn));
         }
+
+        lastDisabledButton = buttons[0];
     }
 
     void ButtonClicked(Button clickedButton)

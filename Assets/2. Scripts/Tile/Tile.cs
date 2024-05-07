@@ -18,7 +18,6 @@ public class Tile : MonoBehaviour
     public int[] influenceValues;
     public int[] subInfluenceValues;
     public GameObject building;
-    public MeshRenderer border;
 
     private void Awake()
     {
@@ -85,8 +84,6 @@ public class Tile : MonoBehaviour
         MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
         foreach (MeshRenderer renderer in renderers)
         {
-            if (renderer == border) continue;
-
             renderer.material.color = color;
         }
     }
@@ -96,8 +93,6 @@ public class Tile : MonoBehaviour
         MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
         foreach (MeshRenderer renderer in renderers)
         {
-            if (renderer == border) continue;
-
             renderer.material.color = Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)];
         }
     }

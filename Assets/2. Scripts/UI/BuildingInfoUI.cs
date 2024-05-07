@@ -4,11 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class BuildingInfoUI : MonoBehaviour
+public class BuildingInfoUI : InfoUI
 {
     [Header("Building")]
-    public TextMeshProUGUI buildingNameText;
-    public TextMeshProUGUI buildingTypeText;
     public TextMeshProUGUI buildingGradeText;
     public TextMeshProUGUI buildingCostText;
 
@@ -22,10 +20,16 @@ public class BuildingInfoUI : MonoBehaviour
     string[] typeString = { "주거", "상업", "문화", "서비스" };
     string[] subTypeString = { "아파트", "잡화", "영화", "경찰", "음식", "미술", "소방", "여가" };
 
-    public void SetValue(Building building)
+    public override void SetValue(int index)
     {
-        buildingNameText.text = building.buildingName;
-        buildingTypeText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType];
+        Building building = BuildingSpawner.instance.buildingPrefabs[index].GetComponent<Building>();
+
+        if (!CityLevelManager.instance.CheckBuildingLevel(building.GetComponent<Building>())) return;
+
+        gameObject.SetActive(!gameObject.activeSelf);
+        return;
+        nameText.text = building.buildingName;
+        typeText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType];
         buildingGradeText.text = building.grade + "등급";
         buildingCostText.text = building.cost.ToString();
 
@@ -60,11 +64,5 @@ public class BuildingInfoUI : MonoBehaviour
             if(building.type == BuildingType.Service)
                 costPerDayText.text = (building as ServiceBuilding).costPerDay.ToString();
         }
-    }
-
-    public void OnUI(Building building, Vector3 pos)
-    {
-        transform.localPosition = pos;
-        SetValue(building);
     }
 }

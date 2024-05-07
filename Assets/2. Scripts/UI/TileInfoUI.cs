@@ -3,27 +3,23 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TileInfoUI : MonoBehaviour
+public class TileInfoUI : InfoUI
 {
     [Header("Tile")]
-    public TextMeshProUGUI tileNameText;
-    public TextMeshProUGUI tileTypeText;
     public TextMeshProUGUI tileCostText;
     public TextMeshProUGUI tileCostPerDayText;
 
     string[] typeString = { "도로", "조경" };
 
-    public void SetValue(Tile tile)
+    public override void SetValue(int index)
     {
-        tileNameText.text = tile.tileName;
-        tileTypeText.text = typeString[(int)tile.type];
-        tileCostText.text = tile.cost.ToString();
-        tileCostPerDayText.text = tile.costPerDay.ToString();
-    }
+        gameObject.SetActive(!gameObject.activeSelf);
 
-    public void OnUI(Tile tile, Vector3 pos)
-    {
-        transform.localPosition = pos;
-        //SetValue(tile);
+        //ToDo 타일 건설 완료 후 tile Gameobject 연결
+
+        //nameText.text = tile.tileName;
+        //typeText.text = typeString[(int)tile.type];
+        //tileCostText.text = tile.cost.ToString();
+        //tileCostPerDayText.text = tile.costPerDay.ToString();
     }
 }

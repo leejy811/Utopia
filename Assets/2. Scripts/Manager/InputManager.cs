@@ -121,22 +121,22 @@ public class InputManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            UIManager.instance.OnClickBuildingBuyPopUp(0);
+            UIManager.instance.OnClickBuyPopUp(0);
         }
 
         if (!UIManager.instance.isButtonLock) return;
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            UIManager.instance.OnClickBuildingBuyPopUp(1);
+            UIManager.instance.OnClickBuyPopUp(1);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            UIManager.instance.OnClickBuildingBuyPopUp(2);
+            UIManager.instance.OnClickBuyPopUp(2);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            UIManager.instance.OnClickBuildingBuyPopUp(3);
+            UIManager.instance.OnClickBuyPopUp(3);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
@@ -145,10 +145,6 @@ public class InputManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             UIManager.instance.OnClickTileBuy();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            UIManager.instance.OnClickTileBuildPopUp();
         }
         else if (Input.GetKeyDown(KeyCode.Z))
         {

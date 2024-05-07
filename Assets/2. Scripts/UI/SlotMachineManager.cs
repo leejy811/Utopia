@@ -18,6 +18,8 @@ public class SlotMachineManager : MonoBehaviour
 
     private bool isFirstFunction = true;
 
+    private List<Event> ranEvents;
+
     private IEnumerator SpinSlot(GameObject slotContainer, float reachedDistance)
     {
         float initialYPosition = slotContainer.transform.localPosition.y;
@@ -40,37 +42,14 @@ public class SlotMachineManager : MonoBehaviour
         slotContainer.transform.localPosition = pos;
     }
 
-    private void AssignIconsToContainer()
-    {
-        Image[] images1 = slotContainer1.GetComponentsInChildren<Image>();
-        for (int i = 0; i < images1.Length && i < EventManager.instance.events.Count; i++)
-        {
-            images1[i].sprite = EventManager.instance.events[i].eventIcon;
-        }
-
-        Image[] images2 = slotContainer2.GetComponentsInChildren<Image>();
-        for (int i = 0; i < images2.Length && i < EventManager.instance.events.Count; i++)
-        {
-            images2[i].sprite = EventManager.instance.events[i].eventIcon;
-        }
-
-        Image[] images3 = slotContainer3.GetComponentsInChildren<Image>();
-        for (int i = 0; i < images3.Length && i < EventManager.instance.events.Count; i++)
-        {
-            images3[i].sprite = EventManager.instance.events[i].eventIcon;
-        }
-    }
-
     public void OnButtonClick()
     {
-        List<Event> events = new List<Event>
+        ProcessButtonClick(ranEvents);
+    }
+
+    public void SetEvent(List<Event> events)
     {
-        new Event { eventIndex = 1 },
-        new Event { eventIndex = 2 },
-        new Event { eventIndex = 3 }
-    };
-        AssignIconsToContainer();
-        ProcessButtonClick(events);
+        ranEvents = events;
     }
 
     private void ProcessButtonClick(List<Event> events)
