@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class SlotMachineManager : MonoBehaviour
 {
@@ -33,19 +35,50 @@ public class SlotMachineManager : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        // Return to initial position after spinning
         Vector3 pos = slotContainer.transform.localPosition;
         pos.y = initialYPosition;
         slotContainer.transform.localPosition = pos;
     }
 
+    private void AssignIconsToContainer()
+    {
+        Image[] images1 = slotContainer1.GetComponentsInChildren<Image>();
+        for (int i = 0; i < images1.Length && i < EventManager.instance.events.Count; i++)
+        {
+            images1[i].sprite = EventManager.instance.events[i].eventIcon;
+        }
+
+        Image[] images2 = slotContainer2.GetComponentsInChildren<Image>();
+        for (int i = 0; i < images2.Length && i < EventManager.instance.events.Count; i++)
+        {
+            images2[i].sprite = EventManager.instance.events[i].eventIcon;
+        }
+
+        Image[] images3 = slotContainer3.GetComponentsInChildren<Image>();
+        for (int i = 0; i < images3.Length && i < EventManager.instance.events.Count; i++)
+        {
+            images3[i].sprite = EventManager.instance.events[i].eventIcon;
+        }
+    }
+
     public void OnButtonClick()
     {
-        slot1Distance = Random.Range(1, 31);
-        slot2Distance = Random.Range(1, 31);
-        slot3Distance = Random.Range(1, 31);
+        List<Event> events = new List<Event>
+    {
+        new Event { eventIndex = 1 },
+        new Event { eventIndex = 2 },
+        new Event { eventIndex = 3 }
+    };
+        AssignIconsToContainer();
+        ProcessButtonClick(events);
+    }
 
-        // Set initial positions based on the random distance ranges
+    private void ProcessButtonClick(List<Event> events)
+    {
+        slot1Distance = events[0].eventIndex;
+        slot2Distance = events[1].eventIndex;
+        slot3Distance = events[2].eventIndex;
+
         SetInitialPosition(slotContainer1, slot1Distance);
         SetInitialPosition(slotContainer2, slot2Distance);
         SetInitialPosition(slotContainer3, slot3Distance);
@@ -63,6 +96,7 @@ public class SlotMachineManager : MonoBehaviour
 
         isFirstFunction = !isFirstFunction;
     }
+
 
     private void SetInitialPosition(GameObject slotContainer, float distance)
     {
