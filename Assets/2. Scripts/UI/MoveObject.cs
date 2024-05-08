@@ -26,7 +26,7 @@ public class MoveObject : MonoBehaviour
             NextButton.interactable = true; 
         }
 
-        if (objectToMove.transform.localPosition.x >= -60)
+        if (objectToMove.transform.localPosition.x >= -1040)
         {
             PrevButton.interactable = false;
         }

@@ -19,6 +19,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI happinessText;
     public TextMeshProUGUI cityResidentText;
+    public TextMeshProUGUI NewsMessage;
+
+
 
     [Header("Building")]
     public BuildingIntroUI[] buildingIntros;
@@ -57,8 +60,12 @@ public class UIManager : MonoBehaviour
 
     #endregion
 
+
     private Building targetBuilding;
 
+    public int NewsHappiness;
+    private int previousHappiness;
+    private bool UpdateNews = false;
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -73,11 +80,84 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         UpdateDailyInfo();
-        //LockButtons(false);
+        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+        previousHappiness = NewsHappiness;
     }
 
+    #region NewsMessage
+
+    void Update()
+    {
+        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+
+        if(NewsHappiness != 0 && UpdateNews == false)
+        {
+            previousHappiness = NewsHappiness;
+            UpdateNews = true;
+        }
+
+        if (previousHappiness != NewsHappiness && UpdateNews == true)
+        {
+            HappinessBasedNews();
+            Debug.Log("술 한잔 마셨습니다...\n우리 시장 틀니 압수");
+        }
+    }
+
+    public void HappinessBasedNews()
+    {
+
+        if (previousHappiness > 20 && NewsHappiness <= 20)
+        {
+            NewsMessage.text = "이 도시가 행복하다는 느낌을 알까요?\n이 곳도 다른 곳이랑 다를게 없구나...";
+            previousHappiness = NewsHappiness;
+        }
+        else if (previousHappiness < 20 && NewsHappiness >= 20)
+        {
+            NewsMessage.text = "개같이 부활ㅋㅋ\n이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔";
+            previousHappiness = NewsHappiness;
+        }
+        else if (previousHappiness > 40 && NewsHappiness <= 40)
+        {
+            NewsMessage.text = "술 한잔 마셨습니다...\n우리 시장 틀니 압수";
+            previousHappiness = NewsHappiness;
+        }
+        else if (previousHappiness < 40 && NewsHappiness >= 40)
+        {
+            NewsMessage.text = "술은 마셨지만 음주 음전은 하지 않았다.\n시장님 임플란트 심어드릴게요";
+            previousHappiness = NewsHappiness;
+        }
+        else if (previousHappiness > 60 && NewsHappiness <= 60)
+        {
+            NewsMessage.text = "시장아 시민을 속인거니?\n취직이 잘되는 사회를 만들던가";
+            previousHappiness = NewsHappiness;
+        }
+        else if (previousHappiness < 60 && NewsHappiness >= 60)
+        {
+            NewsMessage.text = "이거 보고 우리 시장님 뽑기로 했다.\n지금부터 시장님과 나는 한 몸으로 간주한다";
+            previousHappiness = NewsHappiness;
+        }
+        else if (previousHappiness > 80 && NewsHappiness <= 80)
+        {
+            NewsMessage.text = "이곳이 유토피아라는건 정계의 학설\n뭐 조금 아쉬운거지~";
+            previousHappiness = NewsHappiness;
+        }
+        else if (previousHappiness < 80 && NewsHappiness >= 80)
+        {
+            NewsMessage.text = "도시 역사상 최고...GOAT.\n이곳이 유토피아라는게 학계의 정설";
+            previousHappiness = NewsHappiness;
+        }
+
+    }
+
+    #endregion
+
+
+
+
+
+
     #region SetValue
-    
+
     public void LockButtons(bool active)
     {
         isButtonLock = active;
@@ -171,7 +251,7 @@ public class UIManager : MonoBehaviour
 
         if (building == null)
         {
-            foreach(BuildingIntroUI introUI in buildingIntros)
+            foreach (BuildingIntroUI introUI in buildingIntros)
                 introUI.gameObject.SetActive(false);
         }
         else
@@ -179,9 +259,9 @@ public class UIManager : MonoBehaviour
             targetBuilding = building;
             int idx = GetBuildingIndex();
 
-            for(int i = 0;i < buildingIntros.Length;i++)
+            for (int i = 0; i < buildingIntros.Length; i++)
             {
-                if(i == idx)
+                if (i == idx)
                 {
                     buildingIntros[i].gameObject.SetActive(true);
                     buildingIntros[i].SetValue(building);
@@ -220,7 +300,7 @@ public class UIManager : MonoBehaviour
 
     public void SetErrorPopUp(string massage, Vector3 position)
     {
-        TemporayUI message =  Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
+        TemporayUI message = Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(massage, position);
     }
 
@@ -281,9 +361,9 @@ public class UIManager : MonoBehaviour
 
     public void OnClickBuyPopUp(int index)
     {
-        for (int i = 0;i < lists.Length;i++)
+        for (int i = 0; i < lists.Length; i++)
         {
-            if(i == index)
+            if (i == index)
                 lists[i].gameObject.SetActive(!lists[i].gameObject.activeSelf);
             else
                 lists[i].gameObject.SetActive(false);
