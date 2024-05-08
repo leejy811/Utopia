@@ -13,5 +13,6 @@ public class Slot : MonoBehaviour
         {
             images[i].sprite = EventManager.instance.events[i].eventIcon;
         }
+        images[40].sprite = EventManager.instance.events[0].eventIcon;
     }
 }

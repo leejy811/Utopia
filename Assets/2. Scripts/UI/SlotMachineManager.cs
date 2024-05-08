@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
+
 public class SlotMachineManager : MonoBehaviour
 {
     public GameObject slotContainer1;
@@ -15,8 +16,13 @@ public class SlotMachineManager : MonoBehaviour
     public float slot1Distance;
     public float slot2Distance;
     public float slot3Distance;
+    public float slot1Rand;
+    public float slot2Rand;
+    public float slot3Rand;
 
     private bool isFirstFunction = true;
+    private System.Random random = new System.Random();
+
 
     private List<Event> ranEvents;
 
@@ -25,6 +31,7 @@ public class SlotMachineManager : MonoBehaviour
         float initialYPosition = slotContainer.transform.localPosition.y;
 
         float movedDistance = 0;
+
         while (movedDistance < reachedDistance * distanceMultiplier)
         {
             foreach (Transform image in slotContainer.transform)
@@ -32,24 +39,49 @@ public class SlotMachineManager : MonoBehaviour
                 image.localPosition += Vector3.up * spinSpeed * Time.fixedDeltaTime;
             }
 
+            bool shouldReset = false;
+            foreach (Transform image in slotContainer.transform)
+            {
+                if (image.localPosition.y >= 2799)
+                {
+                    shouldReset = true;
+                    break;
+                }
+            }
+
+            if (shouldReset)
+            {
+                foreach (Transform image in slotContainer.transform)
+                {
+                    Vector3 pos = image.localPosition;
+                    pos.y -= 2800;
+                    image.localPosition = pos;
+                }
+            }
+
             movedDistance += spinSpeed * Time.fixedDeltaTime;
 
             yield return new WaitForFixedUpdate();
         }
 
-        Vector3 pos = slotContainer.transform.localPosition;
-        pos.y = initialYPosition;
-        slotContainer.transform.localPosition = pos;
+        Vector3 resetPosition = slotContainer.transform.localPosition;
+        resetPosition.y = initialYPosition;
+        slotContainer.transform.localPosition = resetPosition;
     }
+
+
 
     public void OnButtonClick()
     {
+
         ProcessButtonClick(ranEvents);
     }
 
     public void SetEvent(List<Event> events)
     {
         ranEvents = events;
+
+
     }
 
     private void ProcessButtonClick(List<Event> events)
@@ -58,41 +90,38 @@ public class SlotMachineManager : MonoBehaviour
         slot2Distance = events[1].eventIndex;
         slot3Distance = events[2].eventIndex;
 
-        SetInitialPosition(slotContainer1, slot1Distance);
-        SetInitialPosition(slotContainer2, slot2Distance);
-        SetInitialPosition(slotContainer3, slot3Distance);
+        slot1Rand = RandomRange(3, 5);
+        slot2Rand = RandomRange(5, 7);
+        slot3Rand = RandomRange(7, 9);
 
-        if (isFirstFunction)
+        foreach (Transform image in slotContainer1.transform)
         {
-            StartSlot1();
-            StartSlot2();
-            StartSlot3();
-        }
-        else
-        {
-            SpinReturnPos(slotContainer1, slotContainer2, slotContainer3, slot1Distance, slot2Distance, slot3Distance);
+            image.localPosition += Vector3.up * returnPositionMultiplier *
+                ((slot1Distance - slot1Rand) < 0 ? 40 - Mathf.Abs(slot1Distance - slot1Rand) : (slot1Distance - slot1Rand));
         }
 
-        isFirstFunction = !isFirstFunction;
+        foreach (Transform image in slotContainer2.transform)
+        {
+            image.localPosition += Vector3.up * returnPositionMultiplier *
+                ((slot2Distance - slot2Rand) < 0 ? 40 - Mathf.Abs(slot2Distance - slot2Rand) : (slot2Distance - slot2Rand));
+        }
+
+        foreach (Transform image in slotContainer3.transform)
+        {
+            image.localPosition += Vector3.up * returnPositionMultiplier *
+                ((slot3Distance - slot3Rand) < 0 ? 40 - Mathf.Abs(slot3Distance - slot3Rand) : (slot3Distance - slot3Rand));
+        }
+
+        StartSlot1();
+        StartSlot2();
+        StartSlot3();
     }
 
-
-    private void SetInitialPosition(GameObject slotContainer, float distance)
+    private float RandomRange(float min, float max)
     {
-        float positionShift = 0;
-        if (distance >= 11 && distance <= 20)
-        {
-            positionShift = 700f;
-        }
-        else if (distance >= 21 && distance <= 30)
-        {
-            positionShift = 1400f;
-        }
-
-        Vector3 newPosition = slotContainer.transform.localPosition;
-        newPosition.y += positionShift;
-        slotContainer.transform.localPosition = newPosition;
+        return (float)random.NextDouble() * (max - min) + min;
     }
+
 
     private void SpinReturnPos(GameObject slotContainer1, GameObject slotContainer2, GameObject slotContainer3, float reachedDistance1, float reachedDistance2, float reachedDistance3)
     {
@@ -114,16 +143,16 @@ public class SlotMachineManager : MonoBehaviour
 
     public void StartSlot1()
     {
-        StartCoroutine(SpinSlot(slotContainer1, slot1Distance));
+        StartCoroutine(SpinSlot(slotContainer1, slot1Rand));
     }
 
     public void StartSlot2()
     {
-        StartCoroutine(SpinSlot(slotContainer2, slot2Distance));
+        StartCoroutine(SpinSlot(slotContainer2, slot2Rand));
     }
 
     public void StartSlot3()
     {
-        StartCoroutine(SpinSlot(slotContainer3, slot3Distance));
+        StartCoroutine(SpinSlot(slotContainer3, slot3Rand));
     }
 }
