@@ -151,11 +151,6 @@ public class UIManager : MonoBehaviour
 
     #endregion
 
-
-
-
-
-
     #region SetValue
 
     public void LockButtons(bool active)

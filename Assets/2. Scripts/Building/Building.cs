@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -33,44 +34,6 @@ public struct BoundaryValue
             return BoundaryType.Less;
         else
             return BoundaryType.Include;
-    }
-
-    public string CastToString()
-    {
-        string res = "";
-        BoundaryType type = CheckBoundary();
-        switch (type)
-        {
-            case BoundaryType.More:
-                res = "과도";
-                break;
-            case BoundaryType.Include:
-                res = "충족";
-                break;
-            case BoundaryType.Less:
-                res = "부족";
-                break;
-        }
-        return res;
-    }
-
-    public string ValueToString()
-    {
-        string res = "";
-        BoundaryType type = CheckBoundary();
-        switch (type)
-        {
-            case BoundaryType.More:
-                res = "높음";
-                break;
-            case BoundaryType.Include:
-                res = "평범";
-                break;
-            case BoundaryType.Less:
-                res = "낮음";
-                break;
-        }
-        return res;
     }
 }
 

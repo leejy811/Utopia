@@ -17,6 +17,7 @@ public struct EventSolution
 public struct Event
 {
     public string eventName;
+    public string eventEffectComment;
     public Sprite eventIcon;
     public int eventIndex;
     public EventType type;
