@@ -18,8 +18,6 @@ public class EventNotifyUI : MonoBehaviour
         ShopManager.instance.SetObjectColor(building.gameObject, Color.red);
 
         int idx = building.type == BuildingType.Residential ? 0 : 1;
-        int eventidx = building.GetEventProblemCount() - 1;
-        idx = idx * 2 + eventidx;
 
         for(int i = 0;i < buildingIntros.Length;i++)
         {

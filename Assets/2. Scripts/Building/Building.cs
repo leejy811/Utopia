@@ -188,8 +188,6 @@ public class Building : MonoBehaviour
 
     public void SolveEvent(int index)
     {
-        List<Event> curEvents = GetEventProblem();
-
         int ran = Random.Range(0, 100);
 
         if (ran < curEvents[index / 2].solutions[index % 2].prob)
@@ -205,23 +203,10 @@ public class Building : MonoBehaviour
 
     protected void SetSolveEvent(int index)
     {
-        List<Event> curEvents = GetEventProblem();
-
         ApplyEventProblem(curEvents[index], true);
         if (GetEventProblemCount() == 1 && curEvents[index].type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, false);
-        this.curEvents.Remove(curEvents[index]);
-    }
-
-    public List<Event> GetEventProblem()
-    {
-        List<Event> events = new List<Event>();
-        foreach (Event curEvent in curEvents)
-        {
-            if (curEvent.type == EventType.Problem)
-                events.Add(curEvent);
-        }
-        return events;
+        curEvents.Remove(curEvents[index]);
     }
 
     public int GetEventProblemCount()
