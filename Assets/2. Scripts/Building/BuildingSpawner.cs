@@ -39,9 +39,6 @@ public class BuildingSpawner : MonoBehaviour
         buildingCount[index]++;
         building.count = buildingCount[index];
 
-        //if (index == 0 & buildingCount[index] == 1)
-        //    UIManager.instance.LockButtons(true);
-
         RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
 
         switch (building.type)
