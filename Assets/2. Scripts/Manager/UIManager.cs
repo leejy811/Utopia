@@ -359,7 +359,10 @@ public class UIManager : MonoBehaviour
         for (int i = 0; i < lists.Length; i++)
         {
             if (i == index)
+            {
                 lists[i].gameObject.SetActive(!lists[i].gameObject.activeSelf);
+                lists[i].SetValue(i);
+            }
             else
                 lists[i].gameObject.SetActive(false);
         }

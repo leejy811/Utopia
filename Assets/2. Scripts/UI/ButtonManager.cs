@@ -15,6 +15,7 @@ public class ButtonManager : MonoBehaviour
         }
 
         lastDisabledButton = buttons[0];
+        buttons[0].onClick.Invoke();
     }
 
     void ButtonClicked(Button clickedButton)
