@@ -86,7 +86,7 @@ public class ResidentialBuilding : Building
         return (int)res;
     }
 
-    public override int CalculateBonus()
+    public override int CalculateBonus(bool isExpect = false)
     {
         int res = 0;
 
@@ -99,37 +99,50 @@ public class ResidentialBuilding : Building
         return res;
     }
 
-    public override int UpdateHappiness(bool isExpect)
+    public override int UpdateHappiness(bool isExpect = false, int valueType = 0)
     {
-        int changeAmount = 0;
+        int commercialAmount = 0;
+        int cultureAmount = 0;
+        int serviceAmount = 0;
+
         //commercialCSAT
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            changeAmount += 0;
+            commercialAmount += 0;
         else if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.Less)
-            changeAmount += -2;
+            commercialAmount += -2;
         else
-            changeAmount += 1;
+            commercialAmount += 1;
 
         //cultureCSAT
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            changeAmount += 0;
+            cultureAmount += 0;
         else if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.Less)
-            changeAmount += -2;
+            cultureAmount += -2;
         else
-            changeAmount += 1;
+            cultureAmount += 1;
 
         //serviceCSAT
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            changeAmount += 0;
+            serviceAmount += 0;
         else if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.Less)
-            changeAmount += -3;
+            serviceAmount += -3;
         else
-            changeAmount += 1;
+            serviceAmount += 1;
 
-        if(isExpect)
-            return changeAmount;
+        if (isExpect)
+        {
+            switch ((ValueType)valueType)
+            {
+                case ValueType.CommercialCSAT:
+                    return commercialAmount;
+                case ValueType.CultureCSAT:
+                    return cultureAmount;
+                case ValueType.ServiceCSAT:
+                    return serviceAmount;
+            }
+        }
 
-        SetHappiness(changeAmount);
+        SetHappiness(commercialAmount + cultureAmount + serviceAmount);
         return 0;
     }
 
@@ -141,7 +154,7 @@ public class ResidentialBuilding : Building
         cast.cur += value;
         values[(ValueType)type] = cast;
 
-        int amount = UpdateHappiness(true);
+        int amount = UpdateHappiness(true, (int)type);
         UIManager.instance.SetHappinessPopUp(amount, transform.position);
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Xml.Linq;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -34,32 +35,36 @@ public class BuildingIntroUI : MonoBehaviour
 
     [Header("Event")]
     public BuildingEventUIInfo[] eventUIInfos;
+    public TextMeshProUGUI[] eventTexts;
 
     [Header("Slider Info")]
     public string[] boundaryString;
     [Range(0.0f, 1.0f)] public float[] sliderValue;
     public Color[] sliderColor;
 
-    string[] typeString = { "주거", "상업", "문화", "서비스" };
+    protected string[] typeString = { "주거", "상업", "문화", "서비스" };
     string[] subTypeString = { "아파트", "잡화", "영화", "경찰", "음식", "미술", "소방", "여가" };
 
     public virtual void SetValue(Building building)
     {
+        SetInitState();
+
         buildingNameText.text = building.buildingName + building.count;
         buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType] + "/" + building.grade + "등급";
         happinessText.text = "<sprite=" + Mathf.Min(building.happinessRate / 20, 4) + "> " + building.happinessRate + "(" + GetSignString(building.happinessDifference, "+") + ")%";
-
-        foreach(var uiInfo in eventUIInfos)
-        {
-            uiInfo.gameObject.SetActive(false);
-        }
 
         for (int i = 0;i < building.curEvents.Count; i++)
         {
             int idx = building.curEvents[i].type == EventType.Event ? 2 : 0;
             eventUIInfos[idx + i].gameObject.SetActive(true);
             eventUIInfos[idx + i].SetEventUIInfo(building.curEvents[i]);
+
+            eventTexts[i].gameObject.SetActive(true);
+            eventTexts[i].text = "사회현상 발생으로 인해 " + building.curEvents[i].GetEventToString();
         }
+
+        if(building.GetEventProblemCount() == 2)
+            eventTexts[1].gameObject.SetActive(false);
     }
 
     public void OnUI(Building building, Vector3 pos)
@@ -94,11 +99,21 @@ public class BuildingIntroUI : MonoBehaviour
         slider.slider.colors = colorBlock;
     }
 
-    private void OnDisable()
+    protected void OnDisable()
     {
-        foreach(BuildingEventUIInfo uiInfo in eventUIInfos)
+        SetInitState();
+    }
+
+    protected virtual void SetInitState()
+    {
+        foreach (BuildingEventUIInfo uiInfo in eventUIInfos)
         {
             uiInfo.gameObject.SetActive(false);
+        }
+
+        foreach (TextMeshProUGUI text in eventTexts)
+        {
+            text.gameObject.SetActive(false);
         }
     }
 }

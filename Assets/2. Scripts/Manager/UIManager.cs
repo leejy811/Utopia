@@ -88,19 +88,19 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+        //NewsHappiness = (int)RoutineManager.instance.cityHappiness;
 
-        if(NewsHappiness != 0 && UpdateNews == false)
-        {
-            previousHappiness = NewsHappiness;
-            UpdateNews = true;
-        }
+        //if(NewsHappiness != 0 && UpdateNews == false)
+        //{
+        //    previousHappiness = NewsHappiness;
+        //    UpdateNews = true;
+        //}
 
-        if (previousHappiness != NewsHappiness && UpdateNews == true)
-        {
-            HappinessBasedNews();
-            Debug.Log("술 한잔 마셨습니다...\n우리 시장 틀니 압수");
-        }
+        //if (previousHappiness != NewsHappiness && UpdateNews == true)
+        //{
+        //    HappinessBasedNews();
+        //    Debug.Log("술 한잔 마셨습니다...\n우리 시장 틀니 압수");
+        //}
     }
 
     public void HappinessBasedNews()

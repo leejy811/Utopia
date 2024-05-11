@@ -297,12 +297,12 @@ public class Building : MonoBehaviour
     {
         return 0;
     }
-    public virtual int CalculateBonus()
+    public virtual int CalculateBonus(bool isExpect = false)
     {
         return 0;
     }
 
-    public virtual int UpdateHappiness(bool isExpect)
+    public virtual int UpdateHappiness(bool isExpect = false, int valueType = 0)
     {
         return 0;
     }

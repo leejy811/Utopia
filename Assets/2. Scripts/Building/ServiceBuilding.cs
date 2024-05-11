@@ -17,7 +17,7 @@ public class ServiceBuilding : UtilityBuilding
         return res;
     }
 
-    public override int CalculateBonus()
+    public override int CalculateBonus(bool isExpect = false)
     {
         int income = 0;
         int cost = 0;
@@ -56,7 +56,7 @@ public class ServiceBuilding : UtilityBuilding
         return income + cost;
     }
 
-    public override int UpdateHappiness(bool isExpect)
+    public override int UpdateHappiness(bool isExpect = false, int valueType = 0)
     {
         int changeAmount = 0;
 

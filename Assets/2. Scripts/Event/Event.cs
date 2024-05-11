@@ -97,4 +97,27 @@ public struct Event
 
         return res;
     }
+
+    public string GetEventToString()
+    {
+        string res = "";
+        string[] valueString = { "상품가격", "입장료", "취업률" };
+
+        if (valueType == ValueType.utility)
+            res += valueString[targetIndex - 1];
+        else if (valueType == ValueType.Influence)
+            res += "영향력";
+        else
+            res += "행복도";
+
+        if (duplication == 3)
+            res += " 대폭";
+
+        if (type == EventType.Problem)
+            res += " 감소";
+        else
+            res += GetEffectValue(0) > 0 ? " 증가" : " 감소";
+
+        return res;
+    }
 }
