@@ -25,8 +25,6 @@ public class BuildingListUI : ListUI
                     costText[j].text = building.cost.ToString() + "$";
                     ButtonImage[j].sprite = !checkGrade ? lockSprite : building.buildingIcon;
                     Button[j].interactable = checkGrade;
-
-                    Debug.Log(building.buildingName);
                 }
                 break;
             }

@@ -229,4 +229,15 @@ public class EventManager : MonoBehaviour
             }
         }
     }
+
+    public float GetFinalIncomeEventValue()
+    {
+        float res = 1.0f;
+        foreach(Event globalEvent in globalEvents)
+        {
+            if(globalEvent.valueType == ValueType.FinalIncome)
+                res += globalEvent.GetEffectValue(0) / 100.0f;
+        }
+        return res;
+    }
 }

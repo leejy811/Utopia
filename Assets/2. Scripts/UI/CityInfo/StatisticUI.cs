@@ -75,18 +75,20 @@ public class StatisticUI : MonoBehaviour
     public StatisticBar residentialTaxBar;
     public StatisticBar commercialTaxBar;
     public StatisticBar cultureTaxBar;
+    public StatisticBar bonusTaxBar;
 
     [Header("Spend Bar")]
     public StatisticBar serviceSpendBar;
     public StatisticBar tileCostBar;
-    public StatisticBar etcCostBar;
+    public StatisticBar residentialBonusBar;
+    public StatisticBar serviceBonusBar;
 
     [Header("Total")]
     public TextMeshProUGUI totalCostText;
-    public ComprisonUI happinessComparison;
-    public ComprisonUI residentComparison;
+    public TextMeshProUGUI happinessText;
+    public TextMeshProUGUI residentText;
 
-    string[] levelString = { "빌리지", "타운", "시티" };
+    string[] levelString = { "빌리지", "타운", "시티", "유토피아" };
 
     public void SetValue()
     {
@@ -98,16 +100,22 @@ public class StatisticUI : MonoBehaviour
         totalSpendText.text = GetSignString(totalSpend, "-") + "원";
 
         residentialTaxBar.SetValue(totalTax, ResidentialBuilding.income);
-        commercialTaxBar.SetValue(totalTax, CommercialBuilding.income + CommercialBuilding.bonusIncome);
-        cultureTaxBar.SetValue(totalTax, CultureBuilding.income + CultureBuilding.bonusIncome);
+        commercialTaxBar.SetValue(totalTax, CommercialBuilding.income);
+        cultureTaxBar.SetValue(totalTax, CultureBuilding.income);
+        bonusTaxBar.SetValue(totalTax, CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome);
 
         serviceSpendBar.SetValue(totalSpend, ServiceBuilding.income);
         tileCostBar.SetValue(totalSpend, Tile.income);
-        etcCostBar.SetValue(totalSpend, ResidentialBuilding.bonusCost + CommercialBuilding.bonusCost + CultureBuilding.bonusCost);
+        residentialBonusBar.SetValue(totalSpend, ResidentialBuilding.bonusCost);
+        serviceBonusBar.SetValue(totalSpend, ServiceBuilding.bonusCost);
 
-        totalCostText.text = totalTax.ToString() + " " + GetSignString(totalSpend, "-") + " = " + GetSignString(totalTax + totalSpend, "");
-        happinessComparison.SetValue((int)RoutineManager.instance.cityHappiness, (int)(RoutineManager.instance.cityHappiness - RoutineManager.instance.cityHappinessDifference), true);
-        residentComparison.SetValue(ResidentialBuilding.yesterDayResident, ResidentialBuilding.cityResident, false);
+        int total = (int)(Mathf.Abs(totalTax + totalSpend) * EventManager.instance.GetFinalIncomeEventValue());
+        totalCostText.text = totalTax.ToString() + " " + GetSignString(totalSpend, "-") + " = " + (totalTax + totalSpend).ToString() + " * " + EventManager.instance.GetFinalIncomeEventValue().ToString() + " = " + total.ToString();
+        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%(" + Mathf.Abs((int)RoutineManager.instance.cityHappinessDifference).ToString() + "% " + (RoutineManager.instance.cityHappinessDifference > 0 ? "증가" : "김소") + ")";
+        residentText.text = ResidentialBuilding.cityResident.ToString() + "명(" + Mathf.Abs(ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident).ToString() + "명 " + ((ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident) > 0 ? "증가" : "김소") + ")";
+
+        //happinessComparison.SetValue((int)RoutineManager.instance.cityHappiness, (int)(RoutineManager.instance.cityHappiness - RoutineManager.instance.cityHappinessDifference), true);
+        //residentComparison.SetValue(ResidentialBuilding.yesterDayResident, ResidentialBuilding.cityResident, false);
     }
 
     private string GetSignString(int data, string zeroSign)

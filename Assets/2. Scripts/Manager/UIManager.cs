@@ -38,7 +38,12 @@ public class UIManager : MonoBehaviour
     public StatisticUI statistic;
 
     [Header("CityLevel")]
-    public CityLevelUI cityLevel;
+    public GameObject cityLevelPanel;
+    public CityLevelUI[] cityLevels;
+
+    [Header("CityLevelUp")]
+    public GameObject cityLevelUpPanel;
+    public GameObject[] cityLevelUps;
 
     [Header("Roulette")]
     public EventRouletteUI eventRoulette;
@@ -98,18 +103,18 @@ public class UIManager : MonoBehaviour
 
     void Update()
     {
-        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+        //NewsHappiness = (int)RoutineManager.instance.cityHappiness;
 
-        if (NewsHappiness != 0 && UpdateNews == false)
-        {
-            previousHappiness = NewsHappiness;
-            UpdateNews = true;
-        }
+        //if (NewsHappiness != 0 && UpdateNews == false)
+        //{
+        //    previousHappiness = NewsHappiness;
+        //    UpdateNews = true;
+        //}
 
-        if (previousHappiness != NewsHappiness && UpdateNews == true)
-        {
-            StartCoroutine(HappinessBasedNews());
-        }
+        //if (previousHappiness != NewsHappiness && UpdateNews == true)
+        //{
+        //    StartCoroutine(HappinessBasedNews());
+        //}
     }
 
 
@@ -332,7 +337,7 @@ public class UIManager : MonoBehaviour
     public void SetStatisticPopUp(bool active)
     {
         statistic.gameObject.SetActive(active);
-        //statistic.SetValue();
+        statistic.SetValue();
     }
 
     public void SetErrorPopUp(string massage, Vector3 position)
@@ -356,10 +361,31 @@ public class UIManager : MonoBehaviour
 
     public void SetCityLevelPopUp(bool active)
     {
-        cityLevel.gameObject.SetActive(active);
+        cityLevelPanel.SetActive(active);
 
-        //if (active)
-        //    cityLevel.SetValue();
+        if (active)
+        {
+            foreach(CityLevelUI cityLevel in cityLevels)
+            {
+                cityLevel.SetValue();
+            }
+        }
+    }
+
+    public void SetCityLevelUpPopUp(bool active, int index = 0)
+    {
+        cityLevelUpPanel.SetActive(active);
+
+        if (active)
+        {
+            for (int i = 0;i < cityLevelUps.Length; i++)
+            {
+                if(i == index)
+                    cityLevelUps[i].SetActive(true);
+                else
+                    cityLevelUps[i].SetActive(false);
+            }
+        }
     }
 
     public void SetAllPopUp()
@@ -485,7 +511,7 @@ public class UIManager : MonoBehaviour
 
     public void OnClickCityLevelMode()
     {
-        SetCityLevelPopUp(!cityLevel.gameObject.activeSelf);
+        SetCityLevelPopUp(!cityLevelPanel.activeSelf);
     }
 
     public void OnClickEventHighLight()

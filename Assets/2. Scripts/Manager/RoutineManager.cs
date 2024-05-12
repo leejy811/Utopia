@@ -45,11 +45,7 @@ public class RoutineManager : MonoBehaviour
             total += building.CalculateIncome() + building.CalculateBonus();
         }
 
-        foreach (Event globalEvent in EventManager.instance.globalEvents)
-        {
-            if (globalEvent.valueType == ValueType.FinalIncome)
-                total += (int)(Mathf.Abs(total) * (globalEvent.GetEffectValue(0) / 100.0f));
-        }
+        total += (int)(Mathf.Abs(total) * EventManager.instance.GetFinalIncomeEventValue());
         
         ShopManager.instance.GetMoney(total);
     }
@@ -79,7 +75,8 @@ public class RoutineManager : MonoBehaviour
 
         if (BuildingSpawner.instance.buildings.Count != 0)
         {
-            cityHappinessDifference = cityHappiness - total / BuildingSpawner.instance.buildings.Count;
+            cityHappinessDifference = total / BuildingSpawner.instance.buildings.Count - cityHappiness;
+            cityHappiness += cityHappinessDifference;
         }
         else
             cityHappiness = 0;
@@ -97,7 +94,6 @@ public class RoutineManager : MonoBehaviour
     public void UpdateAfterStat()
     {
         ResidentialBuilding.yesterDayResident = ResidentialBuilding.cityResident;
-        cityHappiness -= cityHappinessDifference;
 
         EventManager.instance.CheckEvents();
         EventManager.instance.EffectUpdate();
