@@ -5,6 +5,10 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
+using System.Collections;
+using DG.Tweening;
+
 
 public class UIManager : MonoBehaviour
 {
@@ -20,8 +24,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI happinessText;
     public TextMeshProUGUI cityResidentText;
     public TextMeshProUGUI NewsMessage;
-
-
+    public TextMeshProUGUI NewsMessage2;
 
     [Header("Building")]
     public BuildingIntroUI[] buildingIntros;
@@ -66,6 +69,7 @@ public class UIManager : MonoBehaviour
     public int NewsHappiness;
     private int previousHappiness;
     private bool UpdateNews = false;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -76,80 +80,118 @@ public class UIManager : MonoBehaviour
 
         instance = this;
     }
+    public RectTransform imageRectTransform;
+    public RectTransform imageRectTransform2;
+    public TextMeshProUGUI textComponent;
+
 
     private void Start()
     {
+        DOTween.SetTweensCapacity(500, 50);
         UpdateDailyInfo();
         NewsHappiness = (int)RoutineManager.instance.cityHappiness;
         previousHappiness = NewsHappiness;
+
     }
 
     #region NewsMessage
 
     void Update()
     {
-        //NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
 
-        //if(NewsHappiness != 0 && UpdateNews == false)
-        //{
-        //    previousHappiness = NewsHappiness;
-        //    UpdateNews = true;
-        //}
+        if (NewsHappiness != 0 && UpdateNews == false)
+        {
+            previousHappiness = NewsHappiness;
+            UpdateNews = true;
+        }
 
-        //if (previousHappiness != NewsHappiness && UpdateNews == true)
-        //{
-        //    HappinessBasedNews();
-        //    Debug.Log("술 한잔 마셨습니다...\n우리 시장 틀니 압수");
-        //}
+        if (previousHappiness != NewsHappiness && UpdateNews == true)
+        {
+            StartCoroutine(HappinessBasedNews());
+        }
     }
 
-    public void HappinessBasedNews()
-    {
 
+    IEnumerator HappinessBasedNews()
+    {
         if (previousHappiness > 20 && NewsHappiness <= 20)
         {
-            NewsMessage.text = "이 도시가 행복하다는 느낌을 알까요?\n이 곳도 다른 곳이랑 다를게 없구나...";
+            NewsMessage.text = "이 도시가 행복하다는 느낌을 알까요?";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = "메시지 갱신 후 메시지";
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness < 20 && NewsHappiness >= 20)
         {
-            NewsMessage.text = "개같이 부활ㅋㅋ\n이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔";
+            NewsMessage.text = "개같이 부활ㅋㅋ";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔.";
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness > 40 && NewsHappiness <= 40)
         {
-            NewsMessage.text = "술 한잔 마셨습니다...\n우리 시장 틀니 압수";
+
+            NewsMessage.text = "술 한잔 마셨습니다...";
+            yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
+            NewsMessage2.text = "메시지 갱신 후sssssssssssssssssssssssssssssssss 메시지";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
+            NewsMessage.text = "메시지 갱신 후sssssssssssssssssssssssssssssssss 메시지";
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness < 40 && NewsHappiness >= 40)
         {
-            NewsMessage.text = "술은 마셨지만 음주 음전은 하지 않았다.\n시장님 임플란트 심어드릴게요";
+            NewsMessage.text = "술은 마셨지만 음주 음전은 하지 않았다.";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = "시장님 임플란트 심어드릴게요";
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness > 60 && NewsHappiness <= 60)
         {
-            NewsMessage.text = "시장아 시민을 속인거니?\n취직이 잘되는 사회를 만들던가";
+            NewsMessage.text = "시장아 시민을 속인거니?";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = "취직이 잘되는 사회를 만들던가";
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness < 60 && NewsHappiness >= 60)
         {
-            NewsMessage.text = "이거 보고 우리 시장님 뽑기로 했다.\n지금부터 시장님과 나는 한 몸으로 간주한다";
+            NewsMessage.text = "이거 보고 우리 시장님 뽑기로 했다.";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = "지금부터 시장님과 나는 한 몸으로 간주한다";
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness > 80 && NewsHappiness <= 80)
         {
-            NewsMessage.text = "이곳이 유토피아라는건 정계의 학설\n뭐 조금 아쉬운거지~";
+            NewsMessage.text = "이곳이 유토피아라는건 정계의 학설";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = "뭐 조금 아쉬운거지~";
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness < 80 && NewsHappiness >= 80)
         {
-            NewsMessage.text = "도시 역사상 최고...GOAT.\n이곳이 유토피아라는게 학계의 정설";
+            NewsMessage.text = "도시 역사상 최고...GOAT";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = "이곳이 유토피아라는게 학계의 정설";
             previousHappiness = NewsHappiness;
         }
+    }
 
+    Vector2 CalculateTextSize(string text)
+    {
+        // 임시로 텍스트를 설정
+        textComponent.text = text;
+        // 적절한 크기를 반환 (이 예시에서는 간단하게 가로 크기만 조정)
+        return new Vector2(textComponent.preferredWidth + 20, imageRectTransform.sizeDelta.y);
     }
 
     #endregion
+
+
 
     #region SetValue
 
