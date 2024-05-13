@@ -93,7 +93,7 @@ public class StatisticUI : MonoBehaviour, IObserver
     public void SetValue()
     {
         int totalTax = ResidentialBuilding.income + CommercialBuilding.income + CultureBuilding.income + CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome;
-        int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + CommercialBuilding.bonusCost + CultureBuilding.bonusCost + Tile.income;
+        int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + Tile.income;
 
         cityLevelText.text = levelString[CityLevelManager.instance.levelIdx];
         totalTaxText.text = GetSignString(totalTax, "+") + "¿ø";

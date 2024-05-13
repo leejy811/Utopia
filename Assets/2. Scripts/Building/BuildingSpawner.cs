@@ -102,6 +102,39 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
         return cnt;
     }
+    
+    public int[] GetBuildingsHappiness()
+    {
+        int[] cnt = new int[4];
+        int[] happiness = new int[4];
+
+        foreach (Building building in buildings)
+        {
+            cnt[(int)building.type]++;
+            happiness[(int)building.type] += building.happinessRate;
+        }
+
+        for(int i = 0;i < cnt.Length; i++)
+        {
+            if (cnt[i] != 0)
+                happiness[i] /= cnt[i];
+        }
+
+        return happiness;
+    }
+
+    public int[] GetBuildingsResident()
+    {
+        int[] resident = new int[3];
+
+        foreach (Building building in buildings)
+        {
+            if (building.values.ContainsKey(ValueType.Resident))
+                resident[3 - building.grade] += building.values[ValueType.Resident].cur;
+        }
+
+        return resident;
+    }
 
     public void Notify(EventState state)
     {

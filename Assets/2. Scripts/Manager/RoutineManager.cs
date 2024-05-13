@@ -50,18 +50,6 @@ public class RoutineManager : MonoBehaviour
         ShopManager.instance.GetMoney(total);
     }
 
-    private void CalculateBonus()
-    {
-        int total = 0;
-
-        foreach (Building building in BuildingSpawner.instance.buildings)
-        {
-            total += building.CalculateBonus();
-        }
-
-        ShopManager.instance.GetMoney(total);
-    }
-
     private void UpdateHappiness()
     {
         int total = 0;
