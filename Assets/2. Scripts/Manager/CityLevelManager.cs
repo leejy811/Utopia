@@ -51,7 +51,7 @@ public class CityLevelManager : MonoBehaviour
         if (levelIdx == level.Length)
             EventManager.instance.eventProb = 0.5f;
 
-        UIManager.instance.SetCityLevelUpPopUp(true, levelIdx);
+        UIManager.instance.SetCityLevelUpPopUp(levelIdx);
     }
 
     public bool CheckBuildingLevel(Building building)

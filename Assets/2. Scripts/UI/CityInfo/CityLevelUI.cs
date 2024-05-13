@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class CityLevelUI : MonoBehaviour
+public class CityLevelUI : MonoBehaviour, IObserver
 {
     [Header("city Level")]
     public CityType cityType;
@@ -36,4 +36,11 @@ public class CityLevelUI : MonoBehaviour
         else
             return string.Format("{0:#,###}", data);
     }
+
+    public void Notify(EventState state)
+    {
+        if (state == EventState.CityLevel)
+            SetValue();
+    }
+
 }

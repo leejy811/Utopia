@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Grid : MonoBehaviour
+public class Grid : MonoBehaviour, IObserver
 {
     static public Grid instance;
 
@@ -17,7 +17,6 @@ public class Grid : MonoBehaviour
 
     public bool isColorMode;
     public bool isInfluenceMode;
-    public bool isAddtionalMode;
 
     [SerializeField] private int width;
     [SerializeField] private int height;
@@ -88,31 +87,6 @@ public class Grid : MonoBehaviour
     {
         isColorMode = !isColorMode;
         SetTileColorMode(isColorMode);
-
-        if (isAddtionalMode && !isColorMode)
-        {
-            isAddtionalMode = false;
-            SetTileInfluenceMode(false);
-        }
-
-        if (isColorMode && isInfluenceMode)
-            SetTileInfluenceMode();
-    }
-
-    public void SetTileInfluenceMode()
-    {
-        isInfluenceMode = !isInfluenceMode;
-
-        SetTileInfluenceMode(isInfluenceMode);
-
-        if (isAddtionalMode && !isInfluenceMode)
-        {
-            isAddtionalMode = false;
-            SetTileColorMode(false);
-        }
-
-        if (isInfluenceMode & isColorMode)
-            SetTileColorMode();
     }
 
     public void SetTileInfluenceMode(bool isOn)
@@ -123,29 +97,31 @@ public class Grid : MonoBehaviour
         }
     }
 
-    public void AddMode()
-    {
-        isAddtionalMode = !isAddtionalMode;
-
-        if (isInfluenceMode)
-        {
-            if (isAddtionalMode)
-                SetTileColorMode(true);
-            else
-                SetTileColorMode(false);
-        }
-        else if (isColorMode)
-        {
-            if (isAddtionalMode)
-                SetTileInfluenceMode(true);
-            else
-                SetTileInfluenceMode(false);
-        }
-    }
-
     public void NotifyTileInfluence(Transform tileTransform)
     {
         Tile tile = tiles[(int)tileTransform.position.x, (int)tileTransform.position.z];
         UIManager.instance.SetTileInfluencePopUp(tile);
+    }
+
+    public void Notify(EventState state)
+    {
+        if (state == EventState.TileInfluence && !isInfluenceMode)
+            isInfluenceMode = true;
+        else
+        {
+            isInfluenceMode = false;
+            UIManager.instance.SetTileInfluencePopUp(null);
+        }
+
+        if (state == EventState.TileColor && !isColorMode)
+        {
+            isColorMode = true;
+            SetTileColorMode(true);
+        }
+        else
+        {
+            isColorMode = false;
+            SetTileColorMode(false);
+        }
     }
 }

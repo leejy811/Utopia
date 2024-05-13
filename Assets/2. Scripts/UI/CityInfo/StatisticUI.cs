@@ -64,7 +64,7 @@ public struct ComprisonUI
     }
 }
 
-public class StatisticUI : MonoBehaviour
+public class StatisticUI : MonoBehaviour, IObserver
 {
     [Header("Top Text")]
     public TextMeshProUGUI cityLevelText;
@@ -127,5 +127,14 @@ public class StatisticUI : MonoBehaviour
             return "- " + Mathf.Abs(data).ToString();
         else
             return zeroSign + " " + data.ToString();
+    }
+
+    public void Notify(EventState state)
+    {
+        if(state == EventState.Statistic)
+        {
+            gameObject.SetActive(true);
+            SetValue();
+        }
     }
 }

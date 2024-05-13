@@ -6,7 +6,7 @@ using UnityEngine;
 
 public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, SolveBuilding, EventCheck }
 
-public class ShopManager : MonoBehaviour
+public class ShopManager : MonoBehaviour, IObserver
 {
     static public ShopManager instance;
 
@@ -75,11 +75,6 @@ public class ShopManager : MonoBehaviour
         else if (state == BuyState.SolveBuilding)
             SetSolveEvent(pickObject);
 
-        if (buyState == BuyState.EventCheck)
-            SetCheckEvent(false);
-        else if (state == BuyState.EventCheck)
-            SetCheckEvent(true);
-
         if (buyState == BuyState.SolveBuilding && state == BuyState.BuyTile)
             curPickObject = null;
 
@@ -114,7 +109,7 @@ public class ShopManager : MonoBehaviour
             SetSolveEvent();
             SetSolveEvent(pickObject);
         }
-        else if (buyState == BuyState.EventCheck || buyState == BuyState.SellBuilding || buyState == BuyState.BuyTile)
+        else if (buyState == BuyState.SellBuilding || buyState == BuyState.BuyTile)
         {
             ChangeState(BuyState.None);
         }
@@ -254,7 +249,7 @@ public class ShopManager : MonoBehaviour
         foreach (MeshRenderer renderer in renderers)
         {
             foreach (Material material in renderer.materials)
-                material.color = color;
+                material.color = new Color(color.r, color.g, color.b, material.color.a);
         }
     }
 
@@ -289,11 +284,6 @@ public class ShopManager : MonoBehaviour
             UIManager.instance.SetBuildingIntroPopUp();
     }
 
-    private void SetCheckEvent(bool active)
-    {
-        UIManager.instance.SetEventNotifyPopUp(active);
-    }
-
     private int CalculateCost(int cost)
     {
         foreach (Event globalEvent in EventManager.instance.globalEvents)
@@ -305,5 +295,10 @@ public class ShopManager : MonoBehaviour
         }
 
         return cost;
+    }
+
+    public void Notify(EventState state)
+    {
+        UIManager.instance.SetBuildingIntroPopUp();
     }
 }

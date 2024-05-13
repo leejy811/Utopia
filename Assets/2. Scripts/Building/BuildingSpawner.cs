@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class BuildingSpawner : MonoBehaviour
+public class BuildingSpawner : MonoBehaviour, IObserver
 {
     static public BuildingSpawner instance;
 
@@ -12,8 +12,6 @@ public class BuildingSpawner : MonoBehaviour
     public GameObject[] buildingPrefabs;
 
     public int[] buildingCount;
-
-    public bool isHighlightMode;
 
     private void Awake()
     {
@@ -81,13 +79,11 @@ public class BuildingSpawner : MonoBehaviour
         }
     }
 
-    public void EventBuildingsHighlight()
+    public void EventBuildingsHighlight(bool active)
     {
-        isHighlightMode = !isHighlightMode;
-
         foreach (Building building in buildings)
         {
-            if (building.GetEventProblemCount() > 0 && isHighlightMode)
+            if (building.GetEventProblemCount() > 0 && active)
                 ShopManager.instance.SetObjectColor(building.gameObject, Color.yellow);
             else
                 ShopManager.instance.SetObjectColor(building.gameObject, Color.white);
@@ -105,5 +101,13 @@ public class BuildingSpawner : MonoBehaviour
         }
 
         return cnt;
+    }
+
+    public void Notify(EventState state)
+    {
+        if (state == EventState.EventIcon)
+            EventBuildingsHighlight(true);
+        else
+            EventBuildingsHighlight(false);
     }
 }

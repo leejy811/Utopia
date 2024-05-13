@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventNotifyUI : MonoBehaviour
+public class EventNotifyUI : MonoBehaviour, IObserver
 {
     [Header("Building Intro")]
     public BuildingIntroUI[] buildingIntros;
@@ -60,5 +60,16 @@ public class EventNotifyUI : MonoBehaviour
             ShopManager.instance.SetObjectColor(EventManager.instance.eventBuildings[curIndex].gameObject, Color.white);
 
         cameraPriorityController.ChangeActiveState();
+    }
+
+    public void Notify(EventState state)
+    {
+        if(state == EventState.EventNotify && !gameObject.activeSelf)
+        {
+            gameObject.SetActive(true);
+            Init();
+        }
+        else
+            gameObject.SetActive(false);
     }
 }

@@ -10,7 +10,7 @@ using System.Collections;
 using DG.Tweening;
 
 
-public class UIManager : MonoBehaviour
+public class UIManager : MonoBehaviour, ISubject
 {
     static public UIManager instance;
 
@@ -38,11 +38,11 @@ public class UIManager : MonoBehaviour
     public StatisticUI statistic;
 
     [Header("CityLevel")]
-    public GameObject cityLevelPanel;
+    public UIElement cityLevelPanel;
     public CityLevelUI[] cityLevels;
 
     [Header("CityLevelUp")]
-    public GameObject cityLevelUpPanel;
+    public UIElement cityLevelUpPanel;
     public GameObject[] cityLevelUps;
 
     [Header("Roulette")]
@@ -58,10 +58,6 @@ public class UIManager : MonoBehaviour
     [Header("Event Notify")]
     public EventNotifyUI eventNotify;
 
-    [Header("Buttons")]
-    public Button[] buttons;
-    public bool isButtonLock;
-
     [Header("Func")]
     public UIElement construct;
     public UIElement etcFunc;
@@ -70,6 +66,7 @@ public class UIManager : MonoBehaviour
 
 
     private Building targetBuilding;
+    private List<IObserver> observers = new List<IObserver>();
 
     public int NewsHappiness;
     private int previousHappiness;
@@ -97,6 +94,7 @@ public class UIManager : MonoBehaviour
         NewsHappiness = (int)RoutineManager.instance.cityHappiness;
         previousHappiness = NewsHappiness;
 
+        InitObserver();
     }
 
     #region NewsMessage
@@ -200,22 +198,6 @@ public class UIManager : MonoBehaviour
 
     #region SetValue
 
-    public void LockButtons(bool active)
-    {
-        isButtonLock = active;
-
-        foreach (Button button in buttons)
-        {
-            button.interactable = active;
-        }
-
-        if (active)
-        {
-            SetCityLevelPopUp(true);
-            ShopManager.instance.ChangeState(BuyState.None);
-        }
-    }
-
     private string GetCommaText(int data)
     {
         if (data == 0)
@@ -288,8 +270,8 @@ public class UIManager : MonoBehaviour
 
     public void SetBuildingIntroPopUp(Building building = null)
     {
-        //if(eventNotify.gameObject.activeSelf)
-        //    SetEventNotifyValue(building);
+        if (eventNotify.gameObject.activeSelf)
+            SetEventNotifyValue(building);
 
         if (building == null)
         {
@@ -361,7 +343,7 @@ public class UIManager : MonoBehaviour
 
     public void SetCityLevelPopUp(bool active)
     {
-        cityLevelPanel.SetActive(active);
+        cityLevelPanel.gameObject.SetActive(active);
 
         if (active)
         {
@@ -372,19 +354,15 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public void SetCityLevelUpPopUp(bool active, int index = 0)
+    public void SetCityLevelUpPopUp(int index = 0)
     {
-        cityLevelUpPanel.SetActive(active);
-
-        if (active)
+        notifyObserver(EventState.CityLevelUp);
+        for (int i = 0; i < cityLevelUps.Length; i++)
         {
-            for (int i = 0;i < cityLevelUps.Length; i++)
-            {
-                if(i == index)
-                    cityLevelUps[i].SetActive(true);
-                else
-                    cityLevelUps[i].SetActive(false);
-            }
+            if (i == index)
+                cityLevelUps[i].SetActive(true);
+            else
+                cityLevelUps[i].SetActive(false);
         }
     }
 
@@ -396,16 +374,6 @@ public class UIManager : MonoBehaviour
             ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
 
         ShopManager.instance.ChangeState(BuyState.None);
-        //SetCityLevelPopUp(false);
-
-        //if (Grid.instance.isInfluenceMode)
-        //    Grid.instance.SetTileInfluenceMode();
-
-        //if (Grid.instance.isColorMode)
-        //    Grid.instance.SetTileColorMode();
-
-        //if (BuildingSpawner.instance.isHighlightMode)
-        //    BuildingSpawner.instance.EventBuildingsHighlight();
     }
 
     #endregion
@@ -414,12 +382,12 @@ public class UIManager : MonoBehaviour
 
     public void OnClickConstructButton()
     {
-        construct.gameObject.SetActive(!construct.gameObject.activeSelf);
+        notifyObserver(EventState.Construct);
     }
 
     public void OnClickEtcFuncButton()
     {
-        etcFunc.gameObject.SetActive(!etcFunc.gameObject.activeSelf);
+        notifyObserver(EventState.EtcFunc);
     }
 
     public void OnClickBuyPopUp(int index)
@@ -477,9 +445,8 @@ public class UIManager : MonoBehaviour
     {
         if (eventRoulette.gameObject.activeSelf) return;
 
-        SetAllPopUp();
         RoutineManager.instance.DailyUpdate();
-        SetStatisticPopUp(true);
+        notifyObserver(EventState.Statistic);
     }
 
     public void OnClickCloseStatistic()
@@ -501,22 +468,22 @@ public class UIManager : MonoBehaviour
 
     public void OnClickTileColorMode()
     {
-        Grid.instance.SetTileColorMode();
+        notifyObserver(EventState.TileColor);
     }
 
     public void OnClickTileInfluenceMode()
     {
-        Grid.instance.SetTileInfluenceMode();
+        notifyObserver(EventState.TileInfluence);
     }
 
     public void OnClickCityLevelMode()
     {
-        SetCityLevelPopUp(!cityLevelPanel.activeSelf);
+        notifyObserver(EventState.CityLevel);
     }
 
     public void OnClickEventHighLight()
     {
-        BuildingSpawner.instance.EventBuildingsHighlight();
+        notifyObserver(EventState.EventIcon);
     }
 
     public void OnClickEventNotify()
@@ -524,6 +491,7 @@ public class UIManager : MonoBehaviour
         if (BuildingSpawner.instance.GetEventBuildingCount() <= 0) return;
 
         ShopManager.instance.ChangeState(BuyState.EventCheck);
+        notifyObserver(EventState.EventNotify);
     }
 
     public void OnClickEventNotifyNext(bool isRight)
@@ -541,4 +509,44 @@ public class UIManager : MonoBehaviour
         int idx = targetBuilding.type == BuildingType.Residential ? 0 : 1;
         return idx;
     }
+
+    #region Observer
+    public void addObserver(IObserver observer)
+    {
+        observers.Add(observer);
+    }
+
+    public void removeObserver(IObserver observer)
+    {
+        observers.Remove(observer);
+    }
+
+    public void notifyObserver(EventState state)
+    {
+        foreach(IObserver observer in observers)
+        {
+            observer.Notify(state);
+        }
+    }
+
+    private void InitObserver()
+    {
+        addObserver(ShopManager.instance);
+        addObserver(Grid.instance);
+        addObserver(BuildingSpawner.instance);
+        addObserver(statistic);
+
+        addObserver(cityLevelPanel);
+        addObserver(cityLevelUpPanel);
+        addObserver(eventNotify);
+
+        addObserver(construct);
+        addObserver(etcFunc);
+
+        foreach(CityLevelUI cityLevel in cityLevels)
+        {
+            addObserver(cityLevel);
+        }
+    }
+    #endregion
 }

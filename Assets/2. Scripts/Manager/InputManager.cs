@@ -65,26 +65,26 @@ public class InputManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
         {
-            UIManager.instance.SetAllPopUp();
+            UIManager.instance.notifyObserver(EventState.None);
+            ShopManager.instance.ChangeState(BuyState.None);
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             if (state == BuyState.BuyBuilding)
                 ShopManager.instance.RotatePickBuilding();
         }
-        else if (Input.GetKeyDown(KeyCode.T))
-        {
-            Grid.instance.AddMode();
-        }
         else if (Input.GetKeyDown(KeyCode.Tab))
         {
-            Grid.instance.SetTileColorMode();
+            if (state == BuyState.BuyBuilding)
+                Grid.instance.SetTileColorMode();
+            else
+                UIManager.instance.notifyObserver(EventState.TileColor);
         }
         else
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
-                if (Grid.instance.isInfluenceMode || (Grid.instance.isColorMode && Grid.instance.isAddtionalMode))
+                if (Grid.instance.isInfluenceMode)
                 {
                     Grid.instance.NotifyTileInfluence(hit.transform);
                 }
@@ -102,7 +102,7 @@ public class InputManager : MonoBehaviour
             }
             else if (state == BuyState.BuyTile)
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
-            else if (Grid.instance.isInfluenceMode || (Grid.instance.isColorMode && Grid.instance.isAddtionalMode))
+            else if (Grid.instance.isInfluenceMode)
                 UIManager.instance.SetTileInfluencePopUp(null);
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
@@ -123,8 +123,6 @@ public class InputManager : MonoBehaviour
         {
             UIManager.instance.OnClickBuyPopUp(0);
         }
-
-        if (!UIManager.instance.isButtonLock) return;
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
