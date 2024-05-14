@@ -77,16 +77,11 @@ public class CinemachineCameraController : MonoBehaviour
 
             if (insideX && insideZ)
             {
-                transform.Translate(moveDirection, Space.World); 
+                transform.Translate(moveDirection, Space.World);
             }
             else if (!insideX && insideZ)
             {
-                if (hitPoint.x < 0f && h > 0)
-                {
-                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
-                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
-                }
-                else if (hitPoint.x > 32f && h < 0)
+                if ((hitPoint.x <= 0f && h >= 0) || (hitPoint.x >= 32f && h <= 0))
                 {
                     transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
                     transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
@@ -94,12 +89,7 @@ public class CinemachineCameraController : MonoBehaviour
             }
             else if (insideX && !insideZ)
             {
-                if (hitPoint.z < 0f && v > 0)
-                {
-                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
-                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
-                }
-                else if (hitPoint.z > 32f && v < 0)
+                if ((hitPoint.z <= 0f && v >= 0) || (hitPoint.z >= 32f && v <= 0))
                 {
                     transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
                     transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
@@ -107,22 +97,10 @@ public class CinemachineCameraController : MonoBehaviour
             }
             else if (!insideX && !insideZ)
             {
-                if (hitPoint.z < 0f && v > 0 && hitPoint.x < 0f && h > 0)
-                {
-                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
-                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
-                }
-                else if (hitPoint.z < 0f && v > 0 && hitPoint.x > 0f && h < 0)
-                {
-                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
-                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
-                }
-                else if (hitPoint.z > 0f && v < 0 && hitPoint.x < 0f && h > 0)
-                {
-                    transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
-                    transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
-                }
-                else if (hitPoint.z > 0f && v < 0 && hitPoint.x > 0f && h < 0)
+                if ((hitPoint.z <= 0f && v >= 0 && hitPoint.x <= 0f && h >= 0) ||
+                    (hitPoint.z <= 0f && v >= 0 && hitPoint.x >= 0f && h <= 0) ||
+                    (hitPoint.z >= 0f && v <= 0 && hitPoint.x <= 0f && h >= 0) ||
+                    (hitPoint.z >= 0f && v <= 0 && hitPoint.x >= 0f && h <= 0))
                 {
                     transform.Translate(Vector3.right * h * moveSpeed * Time.deltaTime, Space.World);
                     transform.Translate(Vector3.forward * v * moveSpeed * Time.deltaTime, Space.World);
