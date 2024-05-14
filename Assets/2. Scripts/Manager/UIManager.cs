@@ -86,9 +86,8 @@ public class UIManager : MonoBehaviour, ISubject
         instance = this;
     }
     public RectTransform imageRectTransform;
-    public RectTransform imageRectTransform2;
     public TextMeshProUGUI textComponent;
-
+    public float animationDuration = 0.5f;
 
     private void Start()
     {
@@ -105,18 +104,18 @@ public class UIManager : MonoBehaviour, ISubject
 
     void Update()
     {
-        //NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
 
-        //if (NewsHappiness != 0 && UpdateNews == false)
-        //{
-        //    previousHappiness = NewsHappiness;
-        //    UpdateNews = true;
-        //}
+        if (NewsHappiness != 0 && UpdateNews == false)
+        {
+            previousHappiness = NewsHappiness;
+            UpdateNews = true;
+        }
 
-        //if (previousHappiness != NewsHappiness && UpdateNews == true)
-        //{
-        //    StartCoroutine(HappinessBasedNews());
-        //}
+        if (previousHappiness != NewsHappiness && UpdateNews == true)
+        {
+            StartCoroutine(HappinessBasedNews());
+        }
     }
 
 
@@ -124,123 +123,328 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (previousHappiness > 20 && NewsHappiness <= 20)
         {
-            NewsMessage.text = "이 도시가 행복하다는 느낌을 알까요?";
+
+
+            previousHappiness = NewsHappiness;
+            NewsMessage2.text = "이 도시가 행복하다는 느낌을 알까요?";
+
+            Canvas.ForceUpdateCanvases();
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "이 도시가 행복하다는 느낌을 알까요?";
+            });
             yield return new WaitForSeconds(2);
 
-            float animationDuration = 3f;
-            NewsMessage.text = "메시지 갱신 후 메시지";
+
+            NewsMessage.text = " ";
+            NewsMessage2.text = "이 곳도 다른 곳이랑 다를게 없구나...";
+
             yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
-            NewsMessage.text = "메시지 갱신 후 메시지";
-            previousHappiness = NewsHappiness;
+            Canvas.ForceUpdateCanvases();
+
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
+            NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
         }
         else if (previousHappiness < 20 && NewsHappiness >= 20)
         {
-            NewsMessage.text = "개같이 부활ㅋㅋ";
+
+            previousHappiness = NewsHappiness;
+            NewsMessage2.text = "개같이 부활ㅋㅋ";
+
+            Canvas.ForceUpdateCanvases();
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "개같이 부활ㅋㅋ";
+            });
             yield return new WaitForSeconds(2);
 
-            float animationDuration = 3f;
-            NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔.";
+
+            NewsMessage.text = " ";
+            NewsMessage2.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔.";
+
             yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
+            Canvas.ForceUpdateCanvases();
+
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
 
             NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔.";
-            previousHappiness = NewsHappiness;
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
         }
         else if (previousHappiness > 40 && NewsHappiness <= 40)
         {
+            previousHappiness = NewsHappiness;
+            NewsMessage2.text = "술 한잔 마셨습니다...";
 
-            NewsMessage.text = "술 한잔 마셨습니다...";
+            Canvas.ForceUpdateCanvases(); 
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y); 
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "술 한잔 마셨습니다...";
+            });
             yield return new WaitForSeconds(2);
 
-            float animationDuration = 3f;
-            NewsMessage2.text = "메시지 갱신 후sssssssssssssssssssssssssssssssss 메시지";
+
+            NewsMessage.text = " ";
+            NewsMessage2.text = "우리 시장 틀니 압수";
+
             yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
-            NewsMessage.text = "메시지 갱신 후sssssssssssssssssssssssssssssssss 메시지";
-            previousHappiness = NewsHappiness;
+            Canvas.ForceUpdateCanvases();
+
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
+            NewsMessage.text = "우리 시장 틀니 압수";
+            yield return new WaitForSeconds(2);
+
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
         }
         else if (previousHappiness < 40 && NewsHappiness >= 40)
         {
-            NewsMessage.text = "술은 마셨지만 음주 음전은 하지 않았다.";
+            previousHappiness = NewsHappiness;
+            NewsMessage2.text = "술은 마셨지만 음주 음전은 하지 않았다.";
+
+            Canvas.ForceUpdateCanvases();
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "술은 마셨지만 음주 음전은 하지 않았다.";
+            });
             yield return new WaitForSeconds(2);
 
-            float animationDuration = 3f;
-            NewsMessage.text = "시장님 임플란트 심어드릴게요";
-            yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
-            NewsMessage.text = "시장님 임플란트 심어드릴게요";
 
-            previousHappiness = NewsHappiness;
+            NewsMessage.text = " ";
+            NewsMessage2.text = "시장님 임플란트 심어드릴게요";
+
+            yield return new WaitForSeconds(1);
+            Canvas.ForceUpdateCanvases();
+
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
+            NewsMessage.text = "시장님 임플란트 심어드릴게요";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
+
         }
         else if (previousHappiness > 60 && NewsHappiness <= 60)
         {
-            NewsMessage.text = "시장아 시민을 속인거니?";
-            yield return new WaitForSeconds(2);
-
-            float animationDuration = 3f;
-            NewsMessage.text = "취직이 잘되는 사회를 만들던가";
-            yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
-            NewsMessage.text = "시장님 임플란트 심어드릴게요";
 
             previousHappiness = NewsHappiness;
+            NewsMessage2.text = "시장아 시민을 속인거니?";
+
+            Canvas.ForceUpdateCanvases();
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "시장아 시민을 속인거니?";
+            });
+            yield return new WaitForSeconds(2);
+
+
+            NewsMessage.text = " ";
+            NewsMessage2.text = "취직이 잘되는 사회를 만들던가";
+
+            yield return new WaitForSeconds(1);
+            Canvas.ForceUpdateCanvases();
+
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
+            NewsMessage.text = "취직이 잘되는 사회를 만들던가";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
         }
         else if (previousHappiness < 60 && NewsHappiness >= 60)
         {
-            NewsMessage.text = "이거 보고 우리 시장님 뽑기로 했다.";
+
+            previousHappiness = NewsHappiness;
+            NewsMessage2.text = "이거 보고 우리 시장님 뽑기로 했다.";
+
+            Canvas.ForceUpdateCanvases();
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "이거 보고 우리 시장님 뽑기로 했다.";
+            });
             yield return new WaitForSeconds(2);
 
-            float animationDuration = 3f;
+
+            NewsMessage.text = " ";
+            NewsMessage2.text = "지금부터 시장님과 나는 한 몸으로 간주한다";
+
+            yield return new WaitForSeconds(1);
+            Canvas.ForceUpdateCanvases();
+
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
 
             NewsMessage.text = "지금부터 시장님과 나는 한 몸으로 간주한다";
-            yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
-            NewsMessage.text = "지금부터 시장님과 나는 한 몸으로 간주한다";
-            previousHappiness = NewsHappiness;
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
         }
         else if (previousHappiness > 80 && NewsHappiness <= 80)
         {
-            NewsMessage.text = "이곳이 유토피아라는건 정계의 학설";
+            previousHappiness = NewsHappiness;
+            NewsMessage2.text = "이곳이 유토피아라는건 정계의 학설";
+
+            Canvas.ForceUpdateCanvases();
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "이곳이 유토피아라는건 정계의 학설";
+            });
             yield return new WaitForSeconds(2);
 
-            float animationDuration = 3f;
+
+            NewsMessage.text = " ";
+            NewsMessage2.text = "뭐 조금 아쉬운거지~";
+
+            yield return new WaitForSeconds(1);
+            Canvas.ForceUpdateCanvases();
+
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
 
             NewsMessage.text = "뭐 조금 아쉬운거지~";
-            yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
-            NewsMessage.text = "뭐 조금 아쉬운거지~";
-            previousHappiness = NewsHappiness;
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
         }
         else if (previousHappiness < 80 && NewsHappiness >= 80)
         {
-            NewsMessage.text = "도시 역사상 최고...GOAT";
+            previousHappiness = NewsHappiness;
+            NewsMessage2.text = "이곳이 유토피아라는게 학계의 정설";
+
+            Canvas.ForceUpdateCanvases();
+            float preferredWidth = NewsMessage2.preferredWidth;
+
+            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            {
+                NewsMessage.text = "이곳이 유토피아라는게 학계의 정설";
+            });
             yield return new WaitForSeconds(2);
 
-            float animationDuration = 3f;
 
-            NewsMessage.text = "이곳이 유토피아라는게 학계의 정설";
+            NewsMessage.text = " ";
+            NewsMessage2.text = "도시 역사상 최고...GOAT";
+
             yield return new WaitForSeconds(1);
-            TweeningObject tweeningobject = GetComponent<TweeningObject>();
-            tweeningobject.MatchSizes();
-            yield return new WaitForSeconds(animationDuration);
-            NewsMessage.text = "이곳이 유토피아라는게 학계의 정설";
+            Canvas.ForceUpdateCanvases();
 
-            previousHappiness = NewsHappiness;
+            preferredWidth = NewsMessage2.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+
+            NewsMessage.text = "도시 역사상 최고...GOAT";
+            yield return new WaitForSeconds(2);
+            NewsMessage.text = " ";
+
+            preferredWidth = NewsMessage.preferredWidth;
+
+            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+
+            imageRectTransform.DOSizeDelta(newSize, animationDuration);
         }
     }
 
