@@ -35,13 +35,13 @@ public class UtilityBuildingIntroUI : BuildingIntroUI
         if (building.UpdateHappiness(true) != 0)
         {
             paramHappinessText.gameObject.SetActive(true);
-            paramHappinessText.text = res + (building.UpdateHappiness(true) > 0 ? " 행복도 증가 예정" : " 행복도 감소 예정");
+            paramHappinessText.text = res + (building.UpdateHappiness(true) > 0 ? " <color=#00FF00>행복도 증가 예정" : " <color=#FF0000>행복도 감소 예정") + "</color>";
         }
 
         if (building.CalculateBonus(true) != 0)
         {
             paramBonusText.gameObject.SetActive(true);
-            paramBonusText.text = res + (building.CalculateBonus(true) > 0 ? " 추가 소득 발생 예정" : " 추가 지출 발생 예정");
+            paramBonusText.text = res + (building.CalculateBonus(true) > 0 ? " <color=#00FF00>추가 소득 발생 예정" : " <color=#FF0000>추가 지출 발생 예정") + "</color>";
             return;
         }
 

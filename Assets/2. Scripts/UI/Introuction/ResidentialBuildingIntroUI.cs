@@ -72,7 +72,7 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
 
     private string GetOptionString(int type)
     {
-        string res = optionString[type] + "옵션 설치로 인해 특정 사회현상 발생 차단";
+        string res = optionString[type] + "옵션 설치로 인해 <color=#00FF00>특정 사회현상 발생 차단</color>";
         return res;
     }
 
@@ -82,11 +82,11 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         string castEffectString = "";
 
         if (building.UpdateHappiness(true, type) != 0)
-            castEffectString = building.UpdateHappiness(true, type) > 0 ? "행복도 증가" : "행복도 감소";
+            castEffectString = building.UpdateHappiness(true, type) > 0 ? "<color=#00FF00>행복도 증가" : "<color=#FF0000>행복도 감소";
         else if (building.CalculateBonus(true) != 0)
-            castEffectString = "추가 지출 발생";
+            castEffectString = "<color=#FF0000>추가 지출 발생";
 
-        res += boundaryString[boundaryIdx] + "한 " + typeString[type] + " 만족도로 인해 " + castEffectString + " 예정";
+        res += boundaryString[boundaryIdx] + "한 " + typeString[type] + " 만족도로 인해 " + castEffectString + " 예정</color>";
         return res;
     }
 

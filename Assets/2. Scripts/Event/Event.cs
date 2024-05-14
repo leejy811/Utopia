@@ -111,7 +111,7 @@ public struct Event
             res += "青汗档";
 
         if (duplication == 3)
-            res += " 措气";
+            res += " <color=#FF0000>措气</color>";
 
         if (type == EventType.Problem)
             res += " 皑家";
