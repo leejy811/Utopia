@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class IconNameMouseOver : UIMouseOver
+public class IconNameMouseOver : UIMouseOver, IObserver
 {
     public GameObject iconName;
 
@@ -15,5 +15,11 @@ public class IconNameMouseOver : UIMouseOver
     public override void OnPointerExit(PointerEventData eventData)
     {
         iconName.gameObject.SetActive(false);
+    }
+
+    public void Notify(EventState state)
+    {
+        if (state != EventState.TileColor)
+            iconName.gameObject.SetActive(false);
     }
 }

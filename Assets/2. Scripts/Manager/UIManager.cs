@@ -65,6 +65,9 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("LockButton")]
     public UILockButton[] lockButtons;
 
+    [Header("MouseOver")]
+    public IconNameMouseOver[] mouseOvers;
+
     #endregion
 
 
@@ -815,6 +818,11 @@ public class UIManager : MonoBehaviour, ISubject
         foreach (UILockButton lockButton in lockButtons)
         {
             addObserver(lockButton);
+        }
+
+        foreach (IconNameMouseOver mouseOver in mouseOvers)
+        {
+            addObserver(mouseOver);
         }
     }
     #endregion
