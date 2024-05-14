@@ -15,7 +15,7 @@ public class UtilityBuildingInfoUI : BuildingInfoUI
 
         influenceText.text = building.influencePower.ToString();
 
-        //if (building.type == BuildingType.Service)
-        //    costPerDayText.text = (building as ServiceBuilding).costPerDay.ToString();
+        if (building.type == BuildingType.Service)
+            costPerDayText.text = (building as ServiceBuilding).costPerDay.ToString();
     }
 }
