@@ -299,6 +299,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public void Notify(EventState state)
     {
-        UIManager.instance.SetBuildingIntroPopUp();
+        if (state != EventState.TileColor)
+            UIManager.instance.SetBuildingIntroPopUp();
     }
 }

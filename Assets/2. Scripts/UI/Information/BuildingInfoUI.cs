@@ -19,7 +19,7 @@ public class BuildingInfoUI : InfoUI
     {
         building = BuildingSpawner.instance.buildingPrefabs[index].GetComponent<Building>();
 
-        if (!CityLevelManager.instance.CheckBuildingLevel(building.GetComponent<Building>())) return;
+        if (!CityLevelManager.instance.CheckBuildingLevel(building.GetComponent<Building>()) && index != 0) return;
 
         gameObject.SetActive(!gameObject.activeSelf);
 

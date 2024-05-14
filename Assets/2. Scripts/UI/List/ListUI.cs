@@ -10,7 +10,9 @@ public class ListUI : MonoBehaviour
     public TextMeshProUGUI[] costText;
 
     [Header("Button")]
+    public Button[] Button;
     public Image[] ButtonImage;
+    public Sprite lockSprite;
 
     public virtual void SetValue(int type)
     {

@@ -10,7 +10,7 @@ public class UIElement : MonoBehaviour, IObserver
     {
         if(this.state == state && !gameObject.activeSelf)
             gameObject.SetActive(true);
-        else
+        else if (state != EventState.TileColor)
             gameObject.SetActive(false);
     }
 }

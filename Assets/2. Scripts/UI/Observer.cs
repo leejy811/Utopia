@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum EventState { None, EventNotify, CityLevel, CityLevelUp, Statistic, 
-                        Construct, EtcFunc, EventIcon, TileInfluence, TileColor }
+                        Construct, EtcFunc, EventIcon, TileInfluence, TileColor, LockButton }
 
 public interface IObserver
 {

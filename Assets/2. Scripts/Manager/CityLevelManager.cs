@@ -36,7 +36,7 @@ public class CityLevelManager : MonoBehaviour
         if(levelIdx == level.Length - 1)
             return;
 
-        if(ResidentialBuilding.cityResident >= level[levelIdx + 1].residentCondition &&
+        if (ResidentialBuilding.cityResident >= level[levelIdx + 1].residentCondition &&
             RoutineManager.instance.cityHappiness >= level[levelIdx + 1].happinessCondition)
         {
             LevelUp();

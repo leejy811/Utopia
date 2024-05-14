@@ -62,6 +62,9 @@ public class UIManager : MonoBehaviour, ISubject
     public UIElement construct;
     public UIElement etcFunc;
 
+    [Header("LockButton")]
+    public UILockButton[] lockButtons;
+
     #endregion
 
 
@@ -95,6 +98,7 @@ public class UIManager : MonoBehaviour, ISubject
         previousHappiness = NewsHappiness;
 
         InitObserver();
+        notifyObserver(EventState.LockButton);
     }
 
     #region NewsMessage
@@ -122,6 +126,13 @@ public class UIManager : MonoBehaviour, ISubject
         {
             NewsMessage.text = "이 도시가 행복하다는 느낌을 알까요?";
             yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
+            NewsMessage.text = "메시지 갱신 후 메시지";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
             NewsMessage.text = "메시지 갱신 후 메시지";
             previousHappiness = NewsHappiness;
         }
@@ -129,6 +140,14 @@ public class UIManager : MonoBehaviour, ISubject
         {
             NewsMessage.text = "개같이 부활ㅋㅋ";
             yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
+            NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔.";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
+
             NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔.";
             previousHappiness = NewsHappiness;
         }
@@ -151,20 +170,44 @@ public class UIManager : MonoBehaviour, ISubject
         {
             NewsMessage.text = "술은 마셨지만 음주 음전은 하지 않았다.";
             yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
             NewsMessage.text = "시장님 임플란트 심어드릴게요";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
+            NewsMessage.text = "시장님 임플란트 심어드릴게요";
+
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness > 60 && NewsHappiness <= 60)
         {
             NewsMessage.text = "시장아 시민을 속인거니?";
             yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
             NewsMessage.text = "취직이 잘되는 사회를 만들던가";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
+            NewsMessage.text = "시장님 임플란트 심어드릴게요";
+
             previousHappiness = NewsHappiness;
         }
         else if (previousHappiness < 60 && NewsHappiness >= 60)
         {
             NewsMessage.text = "이거 보고 우리 시장님 뽑기로 했다.";
             yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
+
+            NewsMessage.text = "지금부터 시장님과 나는 한 몸으로 간주한다";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
             NewsMessage.text = "지금부터 시장님과 나는 한 몸으로 간주한다";
             previousHappiness = NewsHappiness;
         }
@@ -172,6 +215,14 @@ public class UIManager : MonoBehaviour, ISubject
         {
             NewsMessage.text = "이곳이 유토피아라는건 정계의 학설";
             yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
+
+            NewsMessage.text = "뭐 조금 아쉬운거지~";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
             NewsMessage.text = "뭐 조금 아쉬운거지~";
             previousHappiness = NewsHappiness;
         }
@@ -179,7 +230,16 @@ public class UIManager : MonoBehaviour, ISubject
         {
             NewsMessage.text = "도시 역사상 최고...GOAT";
             yield return new WaitForSeconds(2);
+
+            float animationDuration = 3f;
+
             NewsMessage.text = "이곳이 유토피아라는게 학계의 정설";
+            yield return new WaitForSeconds(1);
+            TweeningObject tweeningobject = GetComponent<TweeningObject>();
+            tweeningobject.MatchSizes();
+            yield return new WaitForSeconds(animationDuration);
+            NewsMessage.text = "이곳이 유토피아라는게 학계의 정설";
+
             previousHappiness = NewsHappiness;
         }
     }
@@ -546,6 +606,11 @@ public class UIManager : MonoBehaviour, ISubject
         foreach(CityLevelUI cityLevel in cityLevels)
         {
             addObserver(cityLevel);
+        }
+
+        foreach (UILockButton lockButton in lockButtons)
+        {
+            addObserver(lockButton);
         }
     }
     #endregion
