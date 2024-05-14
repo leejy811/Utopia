@@ -7,6 +7,9 @@ public class CinemachineCameraController : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float rotationSpeed = 90.0f;
     public float zoomSpeed = 5.0f;
+    public float smoothZoomSpeed = 2.0f;
+    private float targetOrthographicSize= 6.2f;
+
 
     public float minX = -10f;
     public float maxX = 25f;
@@ -27,7 +30,7 @@ public class CinemachineCameraController : MonoBehaviour
         transposer = virtualCamera.GetCinemachineComponent<CinemachineTransposer>();
         composer = virtualCamera.GetCinemachineComponent<CinemachineComposer>();
 
-        publicOrthographicSize = 10.0f;
+        publicOrthographicSize = 6.2f;
         virtualCamera.m_Lens.OrthographicSize = publicOrthographicSize;
     }
 
@@ -156,21 +159,27 @@ public class CinemachineCameraController : MonoBehaviour
         if (virtualCamera.m_Lens.Orthographic)
         {
             float zoomChange = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
+            targetOrthographicSize -= zoomChange;
+            targetOrthographicSize = Mathf.Clamp(targetOrthographicSize, 1f, 25f);
 
-            virtualCamera.m_Lens.OrthographicSize = Mathf.Min(Mathf.Max(virtualCamera.m_Lens.OrthographicSize - zoomChange, 1f), 25f);
+            virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(virtualCamera.m_Lens.OrthographicSize, targetOrthographicSize, Time.deltaTime * smoothZoomSpeed);
 
-            if (virtualCamera.m_Lens.OrthographicSize <= 5)
-            {
-                moveSpeed = 5.0f;
-            }
-            else
-            {
-                moveSpeed = virtualCamera.m_Lens.OrthographicSize * 2;
-            }
+            UpdateMoveSpeed();
         }
     }
 
 
+    void UpdateMoveSpeed()
+    {
+        if (virtualCamera.m_Lens.OrthographicSize <= 5)
+        {
+            moveSpeed = 5.0f;
+        }
+        else
+        {
+            moveSpeed = virtualCamera.m_Lens.OrthographicSize * 2;
+        }
+    }
 
     void PitchCamera()
     {
