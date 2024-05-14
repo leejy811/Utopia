@@ -62,6 +62,9 @@ public class UIManager : MonoBehaviour, ISubject
     public UIElement construct;
     public UIElement etcFunc;
 
+    [Header("LockButton")]
+    public UILockButton[] lockButtons;
+
     #endregion
 
 
@@ -95,6 +98,7 @@ public class UIManager : MonoBehaviour, ISubject
         previousHappiness = NewsHappiness;
 
         InitObserver();
+        notifyObserver(EventState.LockButton);
     }
 
     #region NewsMessage
@@ -546,6 +550,11 @@ public class UIManager : MonoBehaviour, ISubject
         foreach(CityLevelUI cityLevel in cityLevels)
         {
             addObserver(cityLevel);
+        }
+
+        foreach (UILockButton lockButton in lockButtons)
+        {
+            addObserver(lockButton);
         }
     }
     #endregion

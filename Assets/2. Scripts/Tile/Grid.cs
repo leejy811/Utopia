@@ -24,6 +24,8 @@ public class Grid : MonoBehaviour, IObserver
     [SerializeField] private Vector2Int startTileSize;
     [SerializeField] private Vector3 cameraOffset;
 
+    private bool isSetTile = false;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -61,6 +63,8 @@ public class Grid : MonoBehaviour, IObserver
                     tiles[i, j].SetTilePurchased(false);
             }
         }
+
+        isSetTile = true;
     }
 
     private void SetCamera()
@@ -118,7 +122,7 @@ public class Grid : MonoBehaviour, IObserver
             isColorMode = true;
             SetTileColorMode(true);
         }
-        else
+        else if (isSetTile)
         {
             isColorMode = false;
             SetTileColorMode(false);
