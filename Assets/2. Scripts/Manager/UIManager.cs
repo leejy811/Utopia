@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour, ISubject
     #region UIComponent
 
     public Canvas canvas;
+    public InputManager inputManager;
 
     [Header("Info")]
     public TextMeshProUGUI dayText;
@@ -522,12 +523,12 @@ public class UIManager : MonoBehaviour, ISubject
 
     #region PopUp
 
-    public void SetRoulettePopUp(bool active, List<Event> ranEvents = null)
+    public void SetRoulettePopUp(bool active, Event[] ranEvents = null)
     {
         eventRoulette.gameObject.SetActive(active);
 
         if (active)
-            eventRoulette.SetValue(ranEvents);
+            eventRoulette.SetEvent(ranEvents);
     }
 
     public void SetInfoPopUp(int typeIndex, int index)
@@ -703,7 +704,7 @@ public class UIManager : MonoBehaviour, ISubject
                 int idx = GetBuildingIndex();
                 buildingIntros[idx].SetValue(targetBuilding);
             }
-            else
+            else if (eventNotify.curIndex < EventManager.instance.eventBuildings.Count)
                 eventNotify.SetValue(EventManager.instance.eventBuildings[eventNotify.curIndex]);
         }
     }
@@ -757,7 +758,6 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (BuildingSpawner.instance.GetEventBuildingCount() <= 0) return;
 
-        ShopManager.instance.ChangeState(BuyState.EventCheck);
         notifyObserver(EventState.EventNotify);
     }
 
@@ -767,6 +767,28 @@ public class UIManager : MonoBehaviour, ISubject
             return;
 
         eventNotify.NextBuilding(isRight);
+    }
+
+    public void OnClickEventRoulette()
+    {
+        eventRoulette.OnButtonClick();
+    }
+
+    public void OnClickSpaceBar()
+    {
+        if (CityLevelManager.instance.levelIdx == -1) return;
+
+        if (statistic.gameObject.activeSelf)
+            OnClickCloseStatistic();
+        else if (eventRoulette.gameObject.activeSelf)
+        {
+            if (eventRoulette.state == RouletteState.End)
+                OnClickCloseEventRoulette();
+            else if (eventRoulette.state == RouletteState.Start)
+                OnClickEventRoulette();
+        }
+        else
+            OnClickNextDay();
     }
 
     #endregion
@@ -798,6 +820,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     private void InitObserver()
     {
+        addObserver(inputManager);
         addObserver(ShopManager.instance);
         addObserver(Grid.instance);
         addObserver(BuildingSpawner.instance);

@@ -89,7 +89,7 @@ public class EventManager : MonoBehaviour
             ranEvents.Add(possibleEvents[ranidx]);
         }
 
-        UIManager.instance.SetRoulettePopUp(true, ranEvents);
+        UIManager.instance.SetRoulettePopUp(true, ranEvents.ToArray());
 
         Event e;
         if (ranEvents[0] == ranEvents[1] && ranEvents[1] == ranEvents[2])

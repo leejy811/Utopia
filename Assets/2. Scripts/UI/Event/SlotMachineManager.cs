@@ -80,8 +80,6 @@ public class SlotMachineManager : MonoBehaviour
     public void SetEvent(List<Event> events)
     {
         ranEvents = events;
-
-
     }
 
     private void ProcessButtonClick(List<Event> events)

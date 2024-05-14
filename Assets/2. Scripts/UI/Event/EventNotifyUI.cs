@@ -66,6 +66,7 @@ public class EventNotifyUI : MonoBehaviour, IObserver
     {
         if(state == EventState.EventNotify && !gameObject.activeSelf)
         {
+            ShopManager.instance.ChangeState(BuyState.EventCheck);
             gameObject.SetActive(true);
             Init();
         }

@@ -2,10 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class InputManager : MonoBehaviour
+public class InputManager : MonoBehaviour, IObserver
 {
+    public Button[] buttons;
+
+    public Button[] alpha1Buttons;
+    public Button[] alpha3Buttons;
+
+    bool onAlpha1 = false;
+    bool onAlpha3 = false;
+
     Camera mainCamera;
 
     void Start()
@@ -121,55 +130,53 @@ public class InputManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            UIManager.instance.OnClickBuyPopUp(0);
+            int idx = NumKeyCodeToInt(KeyCode.Alpha1);
+            if (onAlpha1)
+                InvokeButton(alpha1Buttons[idx]);
+            else if (onAlpha3)
+                InvokeButton(alpha3Buttons[idx]);
+            else
+                InvokeButton(buttons[idx]);
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            UIManager.instance.OnClickBuyPopUp(1);
+            int idx = NumKeyCodeToInt(KeyCode.Alpha2);
+            if (onAlpha1)
+                InvokeButton(alpha1Buttons[idx]);
+            else if (onAlpha3)
+                InvokeButton(alpha3Buttons[idx]);
+            else
+                InvokeButton(buttons[idx]);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            UIManager.instance.OnClickBuyPopUp(2);
+            int idx = NumKeyCodeToInt(KeyCode.Alpha3);
+            if (onAlpha1)
+                InvokeButton(alpha1Buttons[idx]);
+            else if (onAlpha3)
+                InvokeButton(alpha3Buttons[idx]);
+            else
+                InvokeButton(buttons[idx]);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            UIManager.instance.OnClickBuyPopUp(3);
+            int idx = NumKeyCodeToInt(KeyCode.Alpha4);
+            if (onAlpha1)
+                InvokeButton(alpha1Buttons[idx]);
+            else if (onAlpha3)
+                InvokeButton(alpha3Buttons[idx]);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            UIManager.instance.OnClickBuildingSell();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            UIManager.instance.OnClickTileBuy();
-        }
-        else if (Input.GetKeyDown(KeyCode.Z))
-        {
-            UIManager.instance.OnClickEventHighLight();
-        }
-        else if (Input.GetKeyDown(KeyCode.X))
-        {
-            UIManager.instance.OnClickEventNotify();
-        }
-        else if (Input.GetKeyDown(KeyCode.V))
-        {
-            UIManager.instance.OnClickTileColorMode();
-        }
-        else if (Input.GetKeyDown(KeyCode.C))
-        {
-            UIManager.instance.OnClickTileInfluenceMode();
-        }
-        else if (Input.GetKeyDown(KeyCode.B))
-        {
-            UIManager.instance.OnClickCityLevelMode();
+            int idx = NumKeyCodeToInt(KeyCode.Alpha5);
+            if (onAlpha1)
+                InvokeButton(alpha1Buttons[idx]);
+            else if (onAlpha3)
+                InvokeButton(alpha3Buttons[idx]);
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (UIManager.instance.statistic.gameObject.activeSelf)
-                UIManager.instance.OnClickCloseStatistic();
-            else
-                UIManager.instance.OnClickNextDay();
+            UIManager.instance.OnClickSpaceBar();
         }
     }
 
@@ -184,5 +191,32 @@ public class InputManager : MonoBehaviour
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
 
         return results.Count > 0;
+    }
+
+    private int NumKeyCodeToInt(KeyCode code)
+    {
+        return (int)code - (int)KeyCode.Alpha1;
+    }
+
+    private void InvokeButton(Button button)
+    {
+        if (button.interactable)
+        {
+            button.Select();
+            button.onClick.Invoke();
+        }
+    }
+
+    public void Notify(EventState state)
+    {
+        if (state == EventState.Construct && !onAlpha1)
+            onAlpha1 = true;
+        else
+            onAlpha1 = false;
+
+        if (state == EventState.EtcFunc && !onAlpha3)
+            onAlpha3 = true;
+        else
+            onAlpha3 = false;
     }
 }

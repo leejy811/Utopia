@@ -18,10 +18,11 @@ public class BuildingListUI : ListUI
                 {
                     Building building = BuildingSpawner.instance.buildingPrefabs[buildingCount[i] + j].GetComponent<Building>();
 
+                    costText[j].text = building.cost.ToString("C");
+
                     if (buildingCount[i] + j == 0) continue;
 
                     bool checkGrade = CityLevelManager.instance.CheckBuildingLevel(building);
-                    costText[j].text = building.cost.ToString() + "$";
                     ButtonImage[j].sprite = !checkGrade ? lockSprite : building.buildingIcon;
                     Button[j].interactable = checkGrade;
                 }

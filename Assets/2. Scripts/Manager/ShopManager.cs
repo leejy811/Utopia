@@ -78,6 +78,11 @@ public class ShopManager : MonoBehaviour, IObserver
         if (buyState == BuyState.SolveBuilding && state == BuyState.BuyTile)
             curPickObject = null;
 
+        if(buyState == BuyState.BuyTile)
+            SetTargetObject(null, Color.green, Color.red);
+        else if (buyState == BuyState.SellBuilding)
+            SetTargetObject(null, Color.red, Color.white);
+
         switch (state)
         {
             case BuyState.None:
@@ -299,7 +304,9 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public void Notify(EventState state)
     {
-        if (state != EventState.TileColor)
-            UIManager.instance.SetBuildingIntroPopUp();
+        if (state != EventState.TileColor && state != EventState.EventNotify)
+        {
+            ChangeState(BuyState.None);
+        }
     }
 }
