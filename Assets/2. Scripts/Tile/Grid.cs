@@ -111,7 +111,7 @@ public class Grid : MonoBehaviour, IObserver
     {
         if (state == EventState.TileInfluence && !isInfluenceMode)
             isInfluenceMode = true;
-        else
+        else if(state != EventState.TileColor)
         {
             isInfluenceMode = false;
             UIManager.instance.SetTileInfluencePopUp(null);
