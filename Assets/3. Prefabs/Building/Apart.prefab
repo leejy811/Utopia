@@ -81,11 +81,11 @@ MonoBehaviour:
     cur: 100
   commercialCSAT:
     max: 200
-    min: 175
+    min: 100
     cur: 0
   cultureCSAT:
     max: 200
-    min: 175
+    min: 100
     cur: 0
   serviceCSAT:
     max: 100
