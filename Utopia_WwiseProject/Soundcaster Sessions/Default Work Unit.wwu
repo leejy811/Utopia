@@ -14,30 +14,54 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="APT_event_THIEF_001" ID="{6E820553-B9ED-40C4-B2F8-F261B4AF952E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Play_testing" ID="{2B595B72-8A90-4F2C-8115-50D7C0AB7A77}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="APT_event_NOISY_001" ID="{D9544F62-A249-4DAC-AF37-0102E3C99A91}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ATP_event_ELEVATOR_001_v2" ID="{07106594-59EC-45CF-A02F-6B3CD516C22C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_ForestAmbience" ID="{3102994D-9723-447C-9B5C-80CE8AFEB234}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="BGMsequnce" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<ObjectRef Name="APT_event_FIRE_001" ID="{2528D30B-ECB7-4764-9A81-87510C0615EF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BGMsequnce1" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="APT_event_SEWERSMELL_001" ID="{D28F0B6F-3D4E-4BBD-AF69-58A8980754BD}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="3" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
+							<GameParameterRef Name="INDEX" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
+							<Value>1.39737178025668E-311</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>1</Value>
+							<Value>7.43393085787452</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>58.1841432225064</Value>
+							<Value>54.7441052631579</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="HA0to20" ID="{36019319-6D32-467D-A6EE-7B583F1A165A}"/>
+						<CurrentStateRef Name="None" ID="{2FADD133-FCE6-4172-999B-D956C15786AB}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

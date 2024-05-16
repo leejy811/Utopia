@@ -1,0 +1,14 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1994810337	Play_BGMsequnce1			\Default Work Unit\Play_BGMsequnce1	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	848835168	ZOOM			\Default Work Unit\ZOOM	
+	1427264549	HAPPY			\Default Work Unit\HAPPY	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	1000201217	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\New Silence\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	159506193	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM2_5C4D602B.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM2		15360208
+	394814525	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM		7680096
+

@@ -14,6 +14,12 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
+				<GameParameter Name="INDEX" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="15"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -1,5 +1,4 @@
 Event	ID	Name			Wwise Object Path	Notes
-	314683120	Play_BGMsequnce			\Default Work Unit\Play_BGMsequnce	
 	880454473	Play_Select_Button			\Default Work Unit\Play_Select_Button	
 	1020223172	Play_Wind			\Default Work Unit\Play_Wind	
 	1073654463	Play_Slot_rimshot			\Default Work Unit\Play_Slot_rimshot	
@@ -15,24 +14,20 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	848835168	ZOOM			\Default Work Unit\ZOOM	
 	1427264549	HAPPY			\Default Work Unit\HAPPY	
 
-Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	1000201217	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce\New Silence\Silence	
-
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	32765491	shs_oat_ambience_construction_work_1_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_1_jackhammer_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_1_jackhammer		1918432
-	65709662	xylophone	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\xylophone_40887594.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\xylophone		452380
-	81639684	marimbaC#	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\marimbaC#_FCCA26EC.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\marimbaC#		333656
-	95965161	Select_Button	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Select_Button		257408
-	159506193	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM2_5C4D602B.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce\BGM2		15360208
-	181388217	shs_oat_ambience_construction_work_5_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_5_jackhammer_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_5_jackhammer		5199960
-	336403806	105guitarriffCmaj	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\105guitarriffCmaj_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\105guitarriffCmaj		3510952
-	337361210	buildingsound	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\utopia sound design2_0E31C2CE.wem		\Actor-Mixer Hierarchy\Default Work Unit\buildingsound		78548
-	367849771	Construction_S08IN_354	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Construction_S08IN.354_6DC157CB.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\Construction_S08IN_354		23062672
-	394814525	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce\BGM		7680096
-	583359231	airplane	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\airplane_6BF23048.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Blend Container\airplane		2562680
-	742924674	Wind	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ESM_Wind_Loop_Distant_Air_Steady_1_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\Wind		9024160
-	779451324	Slot_rimshot	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SO_BA_rim_chin_upbounce_F1EB82C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		13792
-	824445506	ForestAmbience	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\utopia sound design_37F8CF45.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\ForestAmbience		38527784
-	987196180	singsingsingmybird	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\singsingsingmybird_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\singsingsingmybird\singsingsingmybird\singsingsingmybird		34003324
-	1034700149	Construction_S08IN_355	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Construction_S08IN.355_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\Construction_S08IN_355		19846240
+	32765491	shs_oat_ambience_construction_work_1_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_1_jackhammer_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_1_jackhammer		271306
+	65709662	xylophone	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\xylophone_797B5584.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\xylophone		46446
+	81639684	marimbaC#	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\marimbaC#_292D3C5C.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\marimbaC#		29386
+	181388217	shs_oat_ambience_construction_work_5_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_5_jackhammer_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_5_jackhammer		497487
+	314776306	Select_Button	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Building_click_002_6D585517.wem		\Actor-Mixer Hierarchy\Default Work Unit\Select_Button		1014
+	336403806	105guitarriffCmaj	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\105guitarriffCmaj_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\105guitarriffCmaj		322021
+	367849771	Construction_S08IN_354	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Construction_S08IN.354_5292D4B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\Construction_S08IN_354		1666750
+	394814525	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM		792242
+	583359231	airplane	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\airplane_AD430AB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Blend Container\airplane		165969
+	742924674	Wind	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ESM_Wind_Loop_Distant_Air_Steady_1_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\Wind		632610
+	779451324	Slot_rimshot	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SO_BA_rim_chin_upbounce_8C239BD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		1951
+	824445506	ForestAmbience	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\utopia sound design_D7FFE3E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\ForestAmbience		3219744
+	832635833	buildingsound	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Build_001_3D7C98B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\buildingsound		6065
+	987196180	singsingsingmybird	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\singsingsingmybird_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\singsingsingmybird\singsingsingmybird\singsingsingmybird		2294477
+	1034700149	Construction_S08IN_355	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Construction_S08IN.355_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\Construction_S08IN_355		2226574
 

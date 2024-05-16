@@ -9,6 +9,42 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{D85A64D2-B837-5924-0DF5-8627FB3A261F}">
+			<ShortName>BGM</ShortName>
+			<Path>BGM.bnk</Path>
+			<Media>
+				<File Id="159506193" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM2.wav</ShortName>
+					<CachePath>SFX/BGM2_3C2E2B1B.wem</CachePath>
+				</File>
+				<File Id="394814525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM.wav</ShortName>
+					<CachePath>SFX/BGM_2C9019F0.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="1000201217" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="1994810337" Name="Play_BGMsequnce1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="159506193"/>
+						<MediaRef Id="394814525"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1000201217"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+			</GameParameters>
+		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3F9F8132-4DCB-5C76-8F4C-FE27D2A355DA}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -37,100 +73,214 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4798B337-9AE5-16E8-3AE6-B9C0DB0D4B96}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8CC83A04-7BBF-FBA6-F057-29ECCACAA2F9}">
+			<ShortName>UI</ShortName>
+			<Path>UI.bnk</Path>
+			<Media>
+				<File Id="77654906" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_BLACKOUT_001.wav</ShortName>
+					<CachePath>SFX/APT_event_BLACKOUT_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="107642226" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DESOLATE_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="119271698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tile_Buy_001(short).wav</ShortName>
+					<CachePath>SFX/Tile_Buy_001(short)_8E324C96.wem</CachePath>
+				</File>
+				<File Id="148182739" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_FIRE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_FIRE_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="175516682" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Turn_Move_Clock_001.wav</ShortName>
+					<CachePath>SFX/Turn_Move_Clock_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="255281743" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pay_001.wav</ShortName>
+					<CachePath>SFX/Pay_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="256641271" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Building_click_003.wav</ShortName>
+					<CachePath>SFX/Building_click_003_912821E8.wem</CachePath>
+				</File>
+				<File Id="264846884" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DISEASE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DISEASE_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="288539458" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ATP_event_ELEVATOR_001_v2.wav</ShortName>
+					<CachePath>SFX/ATP_event_ELEVATOR_001_v2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="368940272" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_THIEF_001.wav</ShortName>
+					<CachePath>SFX/APT_event_THIEF_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="546900594" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
+					<CachePath>SFX/APT_event_SEWERSMELL_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="942761984" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Demolition_001_v1.wav</ShortName>
+					<CachePath>SFX/Demolition_001_v1_8E324C96.wem</CachePath>
+				</File>
+				<File Id="991450525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mouse_001_v1.wav</ShortName>
+					<CachePath>SFX/Mouse_001_v1_8602117B.wem</CachePath>
+				</File>
+				<File Id="1037936340" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_NOISY_001.wav</ShortName>
+					<CachePath>SFX/APT_event_NOISY_001_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3631016450" Name="Play_APT_event_BLACKOUT_001" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
+					<MediaRefs>
+						<MediaRef Id="77654906"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2247640914" Name="Play_APT_event_DESOLATE_001" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
+					<MediaRefs>
+						<MediaRef Id="107642226"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3286873849" Name="Play_APT_event_DISEASE_001" DurationType="OneShot" DurationMin="5.000021" DurationMax="5.000021">
+					<MediaRefs>
+						<MediaRef Id="264846884"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4292701801" Name="Play_APT_event_FIRE_001" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
+					<MediaRefs>
+						<MediaRef Id="148182739"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3907339813" Name="Play_APT_event_NOISY_001" DurationType="OneShot" DurationMin="5.2591043" DurationMax="5.2591043">
+					<MediaRefs>
+						<MediaRef Id="1037936340"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="767732750" Name="Play_APT_event_SEWERSMELL_001" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
+					<MediaRefs>
+						<MediaRef Id="546900594"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1871429987" Name="Play_APT_event_THIEF_001" DurationType="OneShot" DurationMin="5.368854" DurationMax="5.368854">
+					<MediaRefs>
+						<MediaRef Id="368940272"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1466792758" Name="Play_ATP_event_ELEVATOR_001_v2" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
+					<MediaRefs>
+						<MediaRef Id="288539458"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1278673985" Name="Play_Building_click_003" DurationType="OneShot" DurationMin="0.049125" DurationMax="0.049125">
+					<MediaRefs>
+						<MediaRef Id="256641271"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="669897392" Name="Play_Demolition_001_v1" DurationType="OneShot" DurationMin="0.7253125" DurationMax="0.7253125">
+					<MediaRefs>
+						<MediaRef Id="942761984"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3906795593" Name="Play_Mouse_001_v1" DurationType="OneShot" DurationMin="0.098" DurationMax="0.098">
+					<MediaRefs>
+						<MediaRef Id="991450525"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2025304052" Name="Play_Pay_001" DurationType="OneShot" DurationMin="0.992875" DurationMax="0.992875">
+					<MediaRefs>
+						<MediaRef Id="255281743"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3972534815" Name="Play_Tile_Buy_001" DurationType="OneShot" DurationMin="0.992875" DurationMax="0.992875">
+					<MediaRefs>
+						<MediaRef Id="119271698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2475783214" Name="Play_Turn_Move_Clock_001" DurationType="OneShot" DurationMin="2.4492707" DurationMax="2.4492707">
+					<MediaRefs>
+						<MediaRef Id="175516682"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{EDF72EBE-EA0E-9E75-8C6A-E87BEF620E4A}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="32765491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>shs_oat_ambience_construction_work_1_jackhammer.wav</ShortName>
-					<CachePath>SFX/shs_oat_ambience_construction_work_1_jackhammer_11A93380.wem</CachePath>
+					<CachePath>SFX/shs_oat_ambience_construction_work_1_jackhammer_2C9019F0.wem</CachePath>
 				</File>
 				<File Id="65709662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>xylophone.wav</ShortName>
-					<CachePath>SFX/xylophone_40887594.wem</CachePath>
+					<CachePath>SFX/xylophone_797B5584.wem</CachePath>
 				</File>
 				<File Id="81639684" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>marimbaC#.wav</ShortName>
-					<CachePath>SFX/marimbaC#_FCCA26EC.wem</CachePath>
-				</File>
-				<File Id="95965161" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button.wav</ShortName>
-					<CachePath>SFX/ESM_Game_Notification_81_Coin_Blip_Select_Tap_Button_0F6AD46F.wem</CachePath>
-				</File>
-				<File Id="159506193" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM2.wav</ShortName>
-					<CachePath>SFX/BGM2_5C4D602B.wem</CachePath>
+					<CachePath>SFX/marimbaC#_292D3C5C.wem</CachePath>
 				</File>
 				<File Id="181388217" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>shs_oat_ambience_construction_work_5_jackhammer.wav</ShortName>
-					<CachePath>SFX/shs_oat_ambience_construction_work_5_jackhammer_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/shs_oat_ambience_construction_work_5_jackhammer_56CEF360.wem</CachePath>
+				</File>
+				<File Id="314776306" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Building_click_002.wav</ShortName>
+					<CachePath>SFX/Building_click_002_6D585517.wem</CachePath>
 				</File>
 				<File Id="336403806" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>105guitarriffCmaj.wav</ShortName>
-					<CachePath>SFX/105guitarriffCmaj_818F3B66.wem</CachePath>
-				</File>
-				<File Id="337361210" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>utopia sound design2.wav</ShortName>
-					<CachePath>SFX/utopia sound design2_0E31C2CE.wem</CachePath>
+					<CachePath>SFX/105guitarriffCmaj_8E324C96.wem</CachePath>
 				</File>
 				<File Id="367849771" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Construction_S08IN.354.wav</ShortName>
-					<CachePath>SFX/Construction_S08IN.354_6DC157CB.wem</CachePath>
+					<CachePath>SFX/Construction_S08IN.354_5292D4B6.wem</CachePath>
 				</File>
 				<File Id="394814525" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGM.wav</ShortName>
-					<CachePath>SFX/BGM_11A93380.wem</CachePath>
+					<CachePath>SFX/BGM_2C9019F0.wem</CachePath>
 				</File>
 				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>airplane.wav</ShortName>
-					<CachePath>SFX/airplane_6BF23048.wem</CachePath>
+					<CachePath>SFX/airplane_AD430AB8.wem</CachePath>
 				</File>
 				<File Id="742924674" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ESM_Wind_Loop_Distant_Air_Steady_1.wav</ShortName>
-					<CachePath>SFX/ESM_Wind_Loop_Distant_Air_Steady_1_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/ESM_Wind_Loop_Distant_Air_Steady_1_56CEF360.wem</CachePath>
 				</File>
 				<File Id="779451324" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SO_BA_rim_chin_upbounce.wav</ShortName>
-					<CachePath>SFX/SO_BA_rim_chin_upbounce_F1EB82C2.wem</CachePath>
+					<CachePath>SFX/SO_BA_rim_chin_upbounce_8C239BD2.wem</CachePath>
 				</File>
 				<File Id="824445506" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>utopia sound design.wav</ShortName>
-					<CachePath>SFX/utopia sound design_37F8CF45.wem</CachePath>
+					<CachePath>SFX/utopia sound design_D7FFE3E4.wem</CachePath>
+				</File>
+				<File Id="832635833" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Build_001.wav</ShortName>
+					<CachePath>SFX/Build_001_3D7C98B4.wem</CachePath>
 				</File>
 				<File Id="987196180" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>singsingsingmybird.wav</ShortName>
-					<CachePath>SFX/singsingsingmybird_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/singsingsingmybird_56CEF360.wem</CachePath>
 				</File>
 				<File Id="1034700149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Construction_S08IN.355.wav</ShortName>
-					<CachePath>SFX/Construction_S08IN.355_FBC78EF0.wem</CachePath>
+					<CachePath>SFX/Construction_S08IN.355_56CEF360.wem</CachePath>
 				</File>
 			</Media>
-			<Plugins>
-				<Custom>
-					<Plugin Id="1000201217" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
-				</Custom>
-			</Plugins>
 			<Events>
 				<Event Id="3126765036" Name="Play_BGM" DurationType="OneShot" DurationMin="120" DurationMax="120">
 					<MediaRefs>
 						<MediaRef Id="394814525"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="314683120" Name="Play_BGMsequnce" DurationType="Infinite">
+				<Event Id="2611274067" Name="Play_buildingsound" DurationType="OneShot" DurationMin="0.7253125" DurationMax="0.7253125">
 					<MediaRefs>
-						<MediaRef Id="159506193"/>
-						<MediaRef Id="394814525"/>
-					</MediaRefs>
-					<PluginRefs>
-						<Custom>
-							<PluginRef Id="1000201217"/>
-						</Custom>
-					</PluginRefs>
-				</Event>
-				<Event Id="2611274067" Name="Play_buildingsound" DurationType="OneShot" DurationMin="0.44473922" DurationMax="0.44473922">
-					<MediaRefs>
-						<MediaRef Id="337361210"/>
+						<MediaRef Id="832635833"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1598463209" Name="Play_construction" DurationType="Infinite">
@@ -146,9 +296,9 @@
 						<MediaRef Id="824445506"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="880454473" Name="Play_Select_Button" DurationType="OneShot" DurationMin="1.458322" DurationMax="1.458322">
+				<Event Id="880454473" Name="Play_Select_Button" DurationType="OneShot" DurationMin="0.06489583" DurationMax="0.06489583">
 					<MediaRefs>
-						<MediaRef Id="95965161"/>
+						<MediaRef Id="314776306"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2446290240" Name="Play_singsingsingmybird" DurationType="OneShot" DurationMin="177.10014" DurationMax="177.10014">
@@ -182,5 +332,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{70CC60B0-6D81-E675-4B26-497591BFA51F}</FileHash>
+	<FileHash>{E13C6B75-748D-260F-D27A-01BD48F6998B}</FileHash>
 </SoundBanksInfo>

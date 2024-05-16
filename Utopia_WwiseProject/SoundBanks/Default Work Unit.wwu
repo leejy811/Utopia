@@ -5,7 +5,6 @@
 			<ChildrenList>
 				<SoundBank Name="Main" ID="{BC39723B-58CF-4097-9D33-6B79C2E2756F}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Play_BGMrandom" ID="{67A8BC46-A675-4194-BC06-F8CD5F3882E9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_construction" ID="{CC072FF5-B2A1-4331-9BA4-5051290AAC45}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ForestAmbience" ID="{3102994D-9723-447C-9B5C-80CE8AFEB234}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_rimshot" ID="{7E2A8A70-AF09-4661-89A2-CA94201918A9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -15,8 +14,34 @@
 						<ObjectRef Name="Play_BGM" ID="{8B0F5FF7-678D-4AA6-A1A4-9A7F337EC94D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_construction" ID="{775510B2-D9E2-4D3B-A21A-0BBE2B7AD426}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_buildingsound" ID="{8CAD0E1A-F3FF-4E37-BA9A-45792A2331CA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_BGMsequnce" ID="{5FF01B66-4F03-4E43-9F05-BE98CF74D7AA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_testing" ID="{2B595B72-8A90-4F2C-8115-50D7C0AB7A77}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="BGM" ID="{941229E8-321E-451D-B340-BC49D9DD62BA}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_BGMsequnce1" ID="{6033EB3E-4EAD-4E3B-A021-E67119659552}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="UI" ID="{B6A50146-A474-49A9-A6CF-87ED355DCC56}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Building_click_003" ID="{99643F0C-92A0-4187-8A9D-7FC153EC194A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Pay_001" ID="{0D38955D-9DAC-41CC-BD61-35BFD685FDCC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_NOISY_001" ID="{265B44B6-C34E-422F-AF1D-909DDEC7836F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Turn_Move_Clock_001" ID="{5D94B0CF-AB13-4288-88B5-77767D4E02D3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_DESOLATE_001" ID="{854928DD-5A55-445E-90E4-0E3B13EBB748}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_DISEASE_001" ID="{C343BEF2-6FFE-4934-999B-83C3CC0C4550}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_SEWERSMELL_001" ID="{B9727DF3-0A86-4A05-8C6D-ED3326E2A2EF}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Tile_Buy_001" ID="{D834CA88-42E9-4A63-BC67-B4CAC3D77A7E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Mouse_001_v1" ID="{DED507F7-C0E5-4B03-86F3-C661A1B8DA9C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Demolition_001_v1" ID="{D0677CB7-675F-4B3F-9F6A-640801369617}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_FIRE_001" ID="{4922DDDF-6DD4-4BCF-99EC-3309E4BDC98C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ATP_event_ELEVATOR_001_v2" ID="{711F16CA-6E28-4C73-83AC-C550E33CEC4E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_THIEF_001" ID="{DA201AFB-CA5B-4CF6-8A19-B4C493A5B469}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_BLACKOUT_001" ID="{0E087B9F-DD87-4FC1-9644-E885ED0B9402}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

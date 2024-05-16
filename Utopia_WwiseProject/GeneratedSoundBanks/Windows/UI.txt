@@ -1,0 +1,32 @@
+Event	ID	Name			Wwise Object Path	Notes
+	669897392	Play_Demolition_001_v1			\Default Work Unit\UI\Play_Demolition_001_v1	
+	767732750	Play_APT_event_SEWERSMELL_001			\Default Work Unit\Condition\Play_APT_event_SEWERSMELL_001	
+	1278673985	Play_Building_click_003			\Default Work Unit\UI\Play_Building_click_003	
+	1466792758	Play_ATP_event_ELEVATOR_001_v2			\Default Work Unit\Condition\Play_ATP_event_ELEVATOR_001_v2	
+	1871429987	Play_APT_event_THIEF_001			\Default Work Unit\Condition\Play_APT_event_THIEF_001	
+	2025304052	Play_Pay_001			\Default Work Unit\UI\Play_Pay_001	
+	2247640914	Play_APT_event_DESOLATE_001			\Default Work Unit\Condition\Play_APT_event_DESOLATE_001	
+	2475783214	Play_Turn_Move_Clock_001			\Default Work Unit\UI\Play_Turn_Move_Clock_001	
+	3286873849	Play_APT_event_DISEASE_001			\Default Work Unit\Condition\Play_APT_event_DISEASE_001	
+	3631016450	Play_APT_event_BLACKOUT_001			\Default Work Unit\Condition\Play_APT_event_BLACKOUT_001	
+	3906795593	Play_Mouse_001_v1			\Default Work Unit\UI\Play_Mouse_001_v1	
+	3907339813	Play_APT_event_NOISY_001			\Default Work Unit\Condition\Play_APT_event_NOISY_001	
+	3972534815	Play_Tile_Buy_001			\Default Work Unit\UI\Play_Tile_Buy_001	
+	4292701801	Play_APT_event_FIRE_001			\Default Work Unit\Condition\Play_APT_event_FIRE_001	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	77654906	APT_event_BLACKOUT_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_BLACKOUT_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_BLACKOUT_001		82694
+	107642226	APT_event_DESOLATE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_DESOLATE_001		89357
+	119271698	Tile_Buy_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Tile_Buy_001(short)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Tile_Buy_001		10354
+	148182739	APT_event_FIRE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_FIRE_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_FIRE_001		106649
+	175516682	Turn_Move_Clock_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Turn_Move_Clock_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Turn_Move_Clock_001		37703
+	255281743	Pay_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Pay_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pay_001		9113
+	256641271	Building_click_003	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Building_click_003_912821E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Building_click_003		1133
+	264846884	APT_event_DISEASE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DISEASE_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_DISEASE_001		72571
+	288539458	ATP_event_ELEVATOR_001_v2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ATP_event_ELEVATOR_001_v2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\ATP_event_ELEVATOR_001_v2		87886
+	368940272	APT_event_THIEF_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_THIEF_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_THIEF_001		66098
+	546900594	APT_event_SEWERSMELL_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_SEWERSMELL_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_SEWERSMELL_001		92934
+	942761984	Demolition_001_v1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Demolition_001_v1_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Demolition_001_v1		8442
+	991450525	Mouse_001_v1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mouse_001_v1_8602117B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Mouse_001_v1		1094
+	1037936340	APT_event_NOISY_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_NOISY_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_NOISY_001		60380
+

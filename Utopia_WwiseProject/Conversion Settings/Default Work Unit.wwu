@@ -49,7 +49,7 @@
 							<ConversionPlugin Name="" ID="{00900ABD-0D28-425A-8DBC-78443DEB0E0D}" PluginName="PCM" CompanyID="0" PluginID="1"/>
 						</ConversionPluginInfo>
 						<ConversionPluginInfo Platform="Windows">
-							<ConversionPlugin Name="" ID="{9F78E267-00F2-4A3F-AA33-8B814B15FEED}" PluginName="PCM" CompanyID="0" PluginID="1"/>
+							<ConversionPlugin Name="" ID="{08B46B7A-B130-45FD-BD1B-020B2C20854E}" PluginName="Vorbis" CompanyID="0" PluginID="4"/>
 						</ConversionPluginInfo>
 					</ConversionPluginInfoList>
 				</Conversion>

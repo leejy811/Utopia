@@ -1582,7 +1582,6 @@ MonoBehaviour:
   - {fileID: 6249387795973439619, guid: 47d7658836a323e4c8fc60fff2e53d5c, type: 3}
   - {fileID: 6249387795973439619, guid: 23f48cf7a5747ae46b7b411e1e721d31, type: 3}
   buildingCount: 0000000000000000000000000000000000000000000000000000000000000000
-  isHighlightMode: 0
 --- !u!4 &32394688
 Transform:
   m_ObjectHideFlags: 0
@@ -5058,8 +5057,8 @@ MonoBehaviour:
   - {fileID: 709138156}
   - {fileID: 1771856606}
   - {fileID: 1504232077}
-  buildingButton: []
-  buildingButtonImage: []
+  Button: []
+  ButtonImage: []
   lockSprite: {fileID: 0}
 --- !u!1 &119735912
 GameObject:
@@ -6034,10 +6033,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f29b803c71d1ba4d845dbc0b7395b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventImages:
-  - {fileID: 1948105537}
-  - {fileID: 1118199059}
-  - {fileID: 210921114}
+  eventNameText: []
+  eventEffectText: []
+  lightImage: []
+  slots: []
+  spinSpeed: 0
+  distanceMultiplier: 0
+  returnPositionMultiplier: 0
+  initPosY: 0
+  state: 0
 --- !u!1 &139222763
 GameObject:
   m_ObjectHideFlags: 0
@@ -6681,9 +6685,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
-  index: 2
-  xPos: 100
 --- !u!1 &148445705
 GameObject:
   m_ObjectHideFlags: 0
@@ -6989,8 +6990,8 @@ MonoBehaviour:
   - {fileID: 301966572}
   - {fileID: 1240111932}
   - {fileID: 2035724538}
-  buildingButton: []
-  buildingButtonImage: []
+  Button: []
+  ButtonImage: []
   lockSprite: {fileID: 0}
 --- !u!1 &152403290
 GameObject:
@@ -7230,9 +7231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  index: 6
-  xPos: 120
 --- !u!1 &154921785
 GameObject:
   m_ObjectHideFlags: 0
@@ -9171,9 +9169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 4
-  index: 0
-  xPos: 0
 --- !u!1 &199034433
 GameObject:
   m_ObjectHideFlags: 3
@@ -14531,9 +14526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
-  index: 0
-  xPos: 20
 --- !u!1 &328199319
 GameObject:
   m_ObjectHideFlags: 0
@@ -18486,46 +18478,13 @@ MonoBehaviour:
   buildingNameText: {fileID: 1060550545}
   buildingInfoText: {fileID: 783441215}
   happinessText: {fileID: 1100000686}
-  happinessStringText: {fileID: 1363125132}
-  influenceText: {fileID: 0}
-  utilityText: {fileID: 0}
-  userText: {fileID: 0}
-  residentText: {fileID: 1926080354}
-  castText:
-  - {fileID: 1669236258}
-  - {fileID: 681727805}
-  - {fileID: 1321627647}
-  optionButtons:
-  - {fileID: 435245924}
-  - {fileID: 242108747}
-  - {fileID: 711600522}
-  - {fileID: 1588886171}
-  optionToggles:
-  - {fileID: 2047012837}
-  - {fileID: 780235520}
-  - {fileID: 1882802627}
-  - {fileID: 1299129952}
   eventUIInfos:
-  - iconImage: {fileID: 101295054}
-    nameText: {fileID: 484395967}
-    dayText: {fileID: 887549715}
-    solutionUIInfos:
-    - nameText: {fileID: 328199321}
-      costText: {fileID: 1963431467}
-      probText: {fileID: 1284481893}
-    - nameText: {fileID: 1814867585}
-      costText: {fileID: 1610443926}
-      probText: {fileID: 556920036}
-  - iconImage: {fileID: 1315538984}
-    nameText: {fileID: 2078704600}
-    dayText: {fileID: 1210545447}
-    solutionUIInfos:
-    - nameText: {fileID: 560860164}
-      costText: {fileID: 2034077526}
-      probText: {fileID: 893551850}
-    - nameText: {fileID: 803876932}
-      costText: {fileID: 1998737841}
-      probText: {fileID: 1808089378}
+  - {fileID: 0}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &412655077
 GameObject:
   m_ObjectHideFlags: 0
@@ -20053,9 +20012,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  index: 4
-  xPos: 40
 --- !u!1 &435245922
 GameObject:
   m_ObjectHideFlags: 0
@@ -21029,15 +20985,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 716998862}
+  inputManager: {fileID: 0}
   dayText: {fileID: 943031970}
   moneyText: {fileID: 1179240491}
   happinessText: {fileID: 1905618873}
   cityResidentText: {fileID: 1010069933}
-  buildingInfos:
-  - {fileID: 1192012446}
-  - {fileID: 1650670044}
-  - {fileID: 1418515995}
-  - {fileID: 1735732390}
+  NewsMessage: {fileID: 0}
+  NewsMessage2: {fileID: 0}
   buildingIntros:
   - {fileID: 1410386093}
   - {fileID: 1863828147}
@@ -21045,35 +20999,27 @@ MonoBehaviour:
   - {fileID: 789094725}
   - {fileID: 1021666755}
   - {fileID: 716319088}
-  buildingLists:
-  - {fileID: 118880487}
-  - {fileID: 1796680122}
-  - {fileID: 1349709282}
-  - {fileID: 150540647}
-  tileInfo: {fileID: 704522814}
+  infos: []
+  lists: []
   tileInfluenceInfo: {fileID: 831506003}
-  tileListPopUp: {fileID: 468175054}
   statistic: {fileID: 487858035}
-  cityLevel: {fileID: 1537518761}
+  cityLevelPanel: {fileID: 0}
+  cityLevels: []
+  cityLevelUpPanel: {fileID: 0}
+  cityLevelUps: []
   eventRoulette: {fileID: 138726818}
   errorMessagePrefab: {fileID: 7183340173170725446, guid: 72f127f452117b54fa7807abec62933f, type: 3}
   happinessMessagePrefab: {fileID: 4705107201506718318, guid: b120aa420eda4e24096a9ce292ecba7e, type: 3}
   costInfo: {fileID: 1544417250}
   eventNotify: {fileID: 1399707713}
-  buttons:
-  - {fileID: 776225494}
-  - {fileID: 891856523}
-  - {fileID: 182086556}
-  - {fileID: 2000803059}
-  - {fileID: 2077049788}
-  - {fileID: 310388639}
-  - {fileID: 1261439749}
-  - {fileID: 1201214436}
-  - {fileID: 1235991150}
-  - {fileID: 1026458740}
-  - {fileID: 45353409}
-  - {fileID: 259052518}
-  isButtonLock: 0
+  construct: {fileID: 0}
+  etcFunc: {fileID: 0}
+  lockButtons: []
+  mouseOvers: []
+  NewsHappiness: 0
+  imageRectTransform: {fileID: 0}
+  textComponent: {fileID: 0}
+  animationDuration: 0.5
 --- !u!4 &455419183
 Transform:
   m_ObjectHideFlags: 0
@@ -21868,25 +21814,12 @@ MonoBehaviour:
   buildingNameText: {fileID: 695384440}
   buildingInfoText: {fileID: 1004412296}
   happinessText: {fileID: 592850200}
-  happinessStringText: {fileID: 1177789574}
-  influenceText: {fileID: 659401267}
-  utilityText: {fileID: 1642595019}
-  userText: {fileID: 1181445852}
-  residentText: {fileID: 0}
-  castText: []
-  optionButtons: []
-  optionToggles: []
   eventUIInfos:
-  - iconImage: {fileID: 417060612}
-    nameText: {fileID: 639639696}
-    dayText: {fileID: 1529175329}
-    solutionUIInfos:
-    - nameText: {fileID: 1530382221}
-      costText: {fileID: 228610784}
-      probText: {fileID: 379808301}
-    - nameText: {fileID: 770163876}
-      costText: {fileID: 412655079}
-      probText: {fileID: 586246211}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &474505932
 GameObject:
   m_ObjectHideFlags: 0
@@ -22713,6 +22646,10 @@ MonoBehaviour:
     moneyText: {fileID: 812526354}
     ratioText: {fileID: 952513554}
     ratioSlider: {fileID: 455508504}
+  bonusTaxBar:
+    moneyText: {fileID: 0}
+    ratioText: {fileID: 0}
+    ratioSlider: {fileID: 0}
   serviceSpendBar:
     moneyText: {fileID: 1302098435}
     ratioText: {fileID: 1027589494}
@@ -22721,19 +22658,17 @@ MonoBehaviour:
     moneyText: {fileID: 1673837059}
     ratioText: {fileID: 1864690114}
     ratioSlider: {fileID: 1821827570}
-  etcCostBar:
-    moneyText: {fileID: 1488234351}
-    ratioText: {fileID: 1411488410}
-    ratioSlider: {fileID: 1430261112}
+  residentialBonusBar:
+    moneyText: {fileID: 0}
+    ratioText: {fileID: 0}
+    ratioSlider: {fileID: 0}
+  serviceBonusBar:
+    moneyText: {fileID: 0}
+    ratioText: {fileID: 0}
+    ratioSlider: {fileID: 0}
   totalCostText: {fileID: 638318940}
-  happinessComparison:
-    resultText: {fileID: 233071180}
-    yesterdayText: {fileID: 858571503}
-    todayText: {fileID: 533975076}
-  residentComparison:
-    resultText: {fileID: 1713661385}
-    yesterdayText: {fileID: 1624347893}
-    todayText: {fileID: 556141934}
+  happinessText: {fileID: 0}
+  residentText: {fileID: 0}
 --- !u!1 &491340736
 GameObject:
   m_ObjectHideFlags: 0
@@ -26069,6 +26004,7 @@ MonoBehaviour:
   eventProb: 1
   events:
   - eventName: "\uC9D1\uC5D0 \uBB3C\uC774 \uC548\uB098\uC640\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 3ec4feab67571874686cc764af22f77f, type: 3}
     eventIndex: 0
     type: 0
@@ -26087,6 +26023,7 @@ MonoBehaviour:
     effectValue: 010000000300000005000000
     effectJackpotValue: 040000000a00000010000000
   - eventName: "\uD558\uC218\uAD6C\uC5D0\uC11C \uB0C4\uC0C8\uB098\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 574538540cf7a7c48854aeef0087e8e5, type: 3}
     eventIndex: 1
     type: 0
@@ -26105,6 +26042,7 @@ MonoBehaviour:
     effectValue: 010000000300000005000000
     effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC9D1\uC5D0 \uC804\uAE30\uAC00 \uC548\uB4E4\uC5B4\uC640\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 31a6061301232c949b33e4a253aa05cb, type: 3}
     eventIndex: 2
     type: 0
@@ -26123,6 +26061,7 @@ MonoBehaviour:
     effectValue: 010000000300000005000000
     effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC774\uC6C3\uB4E4\uC774 \uC2DC\uB044\uB7EC\uC6CC\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 4cca3031a745b514d8444175c86e74f9, type: 3}
     eventIndex: 3
     type: 0
@@ -26142,6 +26081,7 @@ MonoBehaviour:
     effectJackpotValue: 040000000a00000010000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBB3C\uAC74\uC744 \uC0B4 \uACF3\uC774
       \uC5C6\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 36d7e36461108c24f8380a6ebac145e2, type: 3}
     eventIndex: 4
     type: 0
@@ -26160,6 +26100,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC74C\uC2DD\uC810\uC774 \uC5C6\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 5
     type: 0
@@ -26178,6 +26119,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC601\uD654\uAD00\uC774 \uC5C6\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: fc7e3638a385eeb408576a8bab747b4b, type: 3}
     eventIndex: 6
     type: 0
@@ -26196,6 +26138,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBBF8\uC220\uAD00\uC774 \uC5C6\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5e84bd72e18de1d41a89b9f49f1ccebb, type: 3}
     eventIndex: 7
     type: 0
@@ -26214,6 +26157,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uAC70\uB9AC\uAC00 \uBB34\uC11C\uC6CC\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 71204e6f62efead4d83b09b468210523, type: 3}
     eventIndex: 8
     type: 0
@@ -26232,6 +26176,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uD654\uC7AC\uAC00 \uBC1C\uC0DD\uD588\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 4f94b5b8b82eb744ea821e5e99b0a873, type: 3}
     eventIndex: 9
     type: 0
@@ -26250,6 +26195,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uBCD1\uC5D0 \uAC78\uB838\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 8be40f3a31e26c64bac203e0e5837b4e, type: 3}
     eventIndex: 10
     type: 0
@@ -26268,6 +26214,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uAC70\uB9AC\uAC00 \uC0AD\uB9C9\uD574\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: bab9c7a3d772d0f49ac99fd8dba4880d, type: 3}
     eventIndex: 11
     type: 0
@@ -26286,6 +26233,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC5D8\uB9AC\uBCA0\uC774\uD130\uAC00 \uACE0\uC7A5\uB0AC\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 71338e6ee788d0c41bb77d3aaed9381e, type: 3}
     eventIndex: 12
     type: 0
@@ -26304,6 +26252,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uB3C4\uB451\uC774 \uB4E4\uC5C8\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 16df50db958fc4b4e873c2063c5ca0f3, type: 3}
     eventIndex: 13
     type: 0
@@ -26322,6 +26271,7 @@ MonoBehaviour:
     effectValue: 010000000200000003000000
     effectJackpotValue: 04000000070000000a000000
   - eventName: "\uC0C1\uD488\uAC00\uACA9\uC774 \uC62C\uB790\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 2be1bf446da23524185bba8c452cea40, type: 3}
     eventIndex: 14
     type: 1
@@ -26334,6 +26284,7 @@ MonoBehaviour:
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uC0C1\uD488\uAC00\uACA9\uC774 \uB0B4\uB838\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 2be1bf446da23524185bba8c452cea40, type: 3}
     eventIndex: 15
     type: 1
@@ -26346,6 +26297,7 @@ MonoBehaviour:
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
   - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uC62C\uB790\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: ab2e1e7e7cccd104aa70cdbe50fe68d5, type: 3}
     eventIndex: 16
     type: 1
@@ -26358,6 +26310,7 @@ MonoBehaviour:
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uC785\uC7A5\uB8CC\uAC00 \uB0B4\uB838\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: bad46331ebd05c74cb929944df5fa0f4, type: 3}
     eventIndex: 17
     type: 1
@@ -26370,6 +26323,7 @@ MonoBehaviour:
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
   - eventName: "\uC77C\uC790\uB9AC\uAC00 \uB9CE\uC544\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 510d45d535d1a1042a69fd5d90698d05, type: 3}
     eventIndex: 18
     type: 1
@@ -26382,6 +26336,7 @@ MonoBehaviour:
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uC77C\uC790\uB9AC\uAC00 \uC5C6\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 59c5e1ef2587ed34889fd3031b4bebb2, type: 3}
     eventIndex: 19
     type: 1
@@ -26394,6 +26349,7 @@ MonoBehaviour:
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
   - eventName: "\uBB3C\uAC00\uAC00 \uB0B4\uB838\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 061b07b766137fc45a01f46900600446, type: 3}
     eventIndex: 20
     type: 1
@@ -26406,6 +26362,7 @@ MonoBehaviour:
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uBB3C\uAC00\uAC00 \uC62C\uB790\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
     eventIndex: 21
     type: 1
@@ -26418,6 +26375,7 @@ MonoBehaviour:
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
   - eventName: "\uBB38\uD654\uC0DD\uD65C\uC774 \uC720\uD589\uD574\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
     eventIndex: 21
     type: 1
@@ -26430,6 +26388,7 @@ MonoBehaviour:
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uBB38\uD654\uC0DD\uD65C\uC744 \uC548\uD574\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
     eventIndex: 21
     type: 1
@@ -26442,6 +26401,7 @@ MonoBehaviour:
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
   - eventName: "\uACF5\uAE30\uC5C5\uC774 \uC720\uD589\uD574\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
     eventIndex: 21
     type: 1
@@ -26454,6 +26414,7 @@ MonoBehaviour:
     effectValue: 190000001900000019000000
     effectJackpotValue: 640000006400000064000000
   - eventName: "\uC0AC\uAE30\uC5C5\uC774 \uC720\uD589\uD574\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 50a9dbd100a25d14d804feadb75b1993, type: 3}
     eventIndex: 21
     type: 1
@@ -26466,6 +26427,7 @@ MonoBehaviour:
     effectValue: e7ffffffe7ffffffe7ffffff
     effectJackpotValue: 9cffffff9cffffff9cffffff
   - eventName: "\uD0C0\uC77C \uBE44\uC6A9\uC774 \uC62C\uB790\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 22
     type: 2
@@ -26478,6 +26440,7 @@ MonoBehaviour:
     effectValue: 32000000
     effectJackpotValue: c8000000
   - eventName: "\uD0C0\uC77C \uBE44\uC6A9\uC774 \uB0B4\uB838\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 23
     type: 2
@@ -26490,6 +26453,7 @@ MonoBehaviour:
     effectValue: f6ffffff
     effectJackpotValue: ceffffff
   - eventName: "\uAC74\uC124 \uBE44\uC6A9\uC774 \uC62C\uB790\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 24
     type: 2
@@ -26502,6 +26466,7 @@ MonoBehaviour:
     effectValue: 32000000
     effectJackpotValue: c8000000
   - eventName: "\uAC74\uC124 \uBE44\uC6A9\uC774 \uB0B4\uB838\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 25
     type: 2
@@ -26514,6 +26479,7 @@ MonoBehaviour:
     effectValue: f6ffffff
     effectJackpotValue: ceffffff
   - eventName: "\uC9D1\uC774 \uC88B\uC544\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 26
     type: 2
@@ -26526,6 +26492,7 @@ MonoBehaviour:
     effectValue: 0a000000
     effectJackpotValue: 32000000
   - eventName: "\uC9D1\uC774 \uB098\uBE60\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 27
     type: 2
@@ -26538,6 +26505,7 @@ MonoBehaviour:
     effectValue: f6ffffff
     effectJackpotValue: ceffffff
   - eventName: "\uC0C1\uD488\uC774 \uC798 \uD314\uB824\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 28
     type: 2
@@ -26550,6 +26518,7 @@ MonoBehaviour:
     effectValue: 0a000000
     effectJackpotValue: 32000000
   - eventName: "\uC0C1\uD488\uC774 \uC548 \uD314\uB824\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 29
     type: 2
@@ -26562,6 +26531,7 @@ MonoBehaviour:
     effectValue: f6ffffff
     effectJackpotValue: ceffffff
   - eventName: "\uBB38\uD654 \uC0DD\uD65C\uC774 \uD65C\uBC1C\uD574\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 30
     type: 2
@@ -26574,6 +26544,7 @@ MonoBehaviour:
     effectValue: 0a000000
     effectJackpotValue: 32000000
   - eventName: "\uBB38\uD654 \uC0DD\uD65C\uC744 \uC548\uD574\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 31
     type: 2
@@ -26586,6 +26557,7 @@ MonoBehaviour:
     effectValue: f6ffffff
     effectJackpotValue: ceffffff
   - eventName: "\uC790\uC6D0\uBD09\uC0AC\uC790\uAC00 \uB9CE\uC544\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 32
     type: 2
@@ -26598,6 +26570,7 @@ MonoBehaviour:
     effectValue: 0a000000
     effectJackpotValue: 32000000
   - eventName: "\uC790\uC6D0\uBD09\uC0AC\uC790\uAC00 \uC801\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 33
     type: 2
@@ -26610,6 +26583,7 @@ MonoBehaviour:
     effectValue: f6ffffff
     effectJackpotValue: ceffffff
   - eventName: "\uD22C\uC790\uC5D0 \uC131\uACF5\uD588\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 33
     type: 2
@@ -26622,6 +26596,7 @@ MonoBehaviour:
     effectValue: 32000000
     effectJackpotValue: c8000000
   - eventName: "\uD22C\uC790\uC5D0 \uC2E4\uD328\uD588\uC5B4\uC694"
+    eventEffectComment: 
     eventIcon: {fileID: 21300000, guid: 5c3116d386cd434408faf7b005bee74d, type: 3}
     eventIndex: 33
     type: 2
@@ -27140,6 +27115,9 @@ MonoBehaviour:
   slot1Distance: 1
   slot2Distance: 2
   slot3Distance: 6
+  slot1Rand: 0
+  slot2Rand: 0
+  slot3Rand: 0
 --- !u!114 &558158233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29563,9 +29541,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 3
-  index: 9
-  xPos: 20
 --- !u!1 &592641021
 GameObject:
   m_ObjectHideFlags: 0
@@ -34380,6 +34355,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1a10d56c8e2e9d4eb1b57874e6c1f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttons: []
+  alpha1Buttons: []
+  alpha3Buttons: []
 --- !u!1 &698610578
 GameObject:
   m_ObjectHideFlags: 0
@@ -34672,8 +34650,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f6274d7dd26984bad2e07d81ad448b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileNameText: {fileID: 339672725}
-  tileTypeText: {fileID: 1902885769}
+  nameText: {fileID: 0}
+  typeText: {fileID: 0}
   tileCostText: {fileID: 1999184113}
   tileCostPerDayText: {fileID: 1478793529}
 --- !u!1 &705507993
@@ -35403,35 +35381,13 @@ MonoBehaviour:
   buildingNameText: {fileID: 1474718646}
   buildingInfoText: {fileID: 1990321462}
   happinessText: {fileID: 450324004}
-  happinessStringText: {fileID: 148445707}
-  influenceText: {fileID: 1836260175}
-  utilityText: {fileID: 578949719}
-  userText: {fileID: 1452368653}
-  residentText: {fileID: 0}
-  castText: []
-  optionButtons: []
-  optionToggles: []
   eventUIInfos:
-  - iconImage: {fileID: 1692760941}
-    nameText: {fileID: 1275534354}
-    dayText: {fileID: 533376068}
-    solutionUIInfos:
-    - nameText: {fileID: 815082689}
-      costText: {fileID: 401064591}
-      probText: {fileID: 1558205825}
-    - nameText: {fileID: 2074213450}
-      costText: {fileID: 1327336320}
-      probText: {fileID: 1054265666}
-  - iconImage: {fileID: 1730732358}
-    nameText: {fileID: 1598507763}
-    dayText: {fileID: 369006725}
-    solutionUIInfos:
-    - nameText: {fileID: 1315629086}
-      costText: {fileID: 1108404845}
-      probText: {fileID: 1365196707}
-    - nameText: {fileID: 2036723051}
-      costText: {fileID: 289542444}
-      probText: {fileID: 1897661077}
+  - {fileID: 0}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &716998859
 GameObject:
   m_ObjectHideFlags: 0
@@ -36026,9 +35982,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
-  index: 1
-  xPos: 60
 --- !u!1 &739746204
 GameObject:
   m_ObjectHideFlags: 0
@@ -38299,15 +38252,11 @@ MonoBehaviour:
   buildingNameText: {fileID: 166072455}
   buildingInfoText: {fileID: 185570472}
   happinessText: {fileID: 1476832766}
-  happinessStringText: {fileID: 1997482721}
-  influenceText: {fileID: 1107899419}
-  utilityText: {fileID: 1891971313}
-  userText: {fileID: 323116400}
-  residentText: {fileID: 0}
-  castText: []
-  optionButtons: []
-  optionToggles: []
   eventUIInfos: []
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &790371759
 GameObject:
   m_ObjectHideFlags: 0
@@ -40581,9 +40530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 4
-  index: 0
-  xPos: 0
 --- !u!1 &821603568
 GameObject:
   m_ObjectHideFlags: 0
@@ -44933,9 +44879,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 2
-  index: 7
-  xPos: 40
 --- !u!1 &902579511
 GameObject:
   m_ObjectHideFlags: 0
@@ -50532,25 +50475,12 @@ MonoBehaviour:
   buildingNameText: {fileID: 1801913089}
   buildingInfoText: {fileID: 1940171203}
   happinessText: {fileID: 1252675110}
-  happinessStringText: {fileID: 994801059}
-  influenceText: {fileID: 559558450}
-  utilityText: {fileID: 1520984108}
-  userText: {fileID: 816277893}
-  residentText: {fileID: 0}
-  castText: []
-  optionButtons: []
-  optionToggles: []
   eventUIInfos:
-  - iconImage: {fileID: 1910594820}
-    nameText: {fileID: 1425523273}
-    dayText: {fileID: 2063251966}
-    solutionUIInfos:
-    - nameText: {fileID: 1101774756}
-      costText: {fileID: 993528752}
-      probText: {fileID: 1590566747}
-    - nameText: {fileID: 119735914}
-      costText: {fileID: 841161065}
-      probText: {fileID: 1372748470}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &1021901273
 GameObject:
   m_ObjectHideFlags: 0
@@ -51934,46 +51864,13 @@ MonoBehaviour:
   buildingNameText: {fileID: 526188090}
   buildingInfoText: {fileID: 1291808164}
   happinessText: {fileID: 661297144}
-  happinessStringText: {fileID: 559217695}
-  influenceText: {fileID: 0}
-  utilityText: {fileID: 0}
-  userText: {fileID: 0}
-  residentText: {fileID: 317676942}
-  castText:
-  - {fileID: 48304619}
-  - {fileID: 895341977}
-  - {fileID: 1314029266}
-  optionButtons:
-  - {fileID: 1914173994}
-  - {fileID: 1752246031}
-  - {fileID: 1521515866}
-  - {fileID: 1217373807}
-  optionToggles:
-  - {fileID: 983260127}
-  - {fileID: 1180944204}
-  - {fileID: 1317440793}
-  - {fileID: 1867510976}
   eventUIInfos:
-  - iconImage: {fileID: 776153374}
-    nameText: {fileID: 1258688093}
-    dayText: {fileID: 1293644498}
-    solutionUIInfos:
-    - nameText: {fileID: 1758813613}
-      costText: {fileID: 2117020314}
-      probText: {fileID: 182036176}
-    - nameText: {fileID: 1987467422}
-      costText: {fileID: 793775322}
-      probText: {fileID: 712119392}
-  - iconImage: {fileID: 154921787}
-    nameText: {fileID: 1896834730}
-    dayText: {fileID: 984348104}
-    solutionUIInfos:
-    - nameText: {fileID: 1403129809}
-      costText: {fileID: 1518330636}
-      probText: {fileID: 321311128}
-    - nameText: {fileID: 1212630604}
-      costText: {fileID: 368381697}
-      probText: {fileID: 129449065}
+  - {fileID: 0}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &1050931973
 GameObject:
   m_ObjectHideFlags: 0
@@ -55239,9 +55136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  index: 5
-  xPos: 80
 --- !u!1 &1111139971
 GameObject:
   m_ObjectHideFlags: 0
@@ -58473,9 +58367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 4
-  index: 0
-  xPos: 0
 --- !u!1 &1181445850
 GameObject:
   m_ObjectHideFlags: 0
@@ -58933,23 +58824,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7712ff5a8e2ce664f8f8ff929e66f5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingNameText: {fileID: 1718553260}
-  buildingTypeText: {fileID: 1423186043}
+  nameText: {fileID: 0}
+  typeText: {fileID: 0}
   buildingGradeText: {fileID: 958661750}
   buildingCostText: {fileID: 933194160}
-  residentText: {fileID: 210223562}
-  influenceText: {fileID: 0}
-  costPerDayText: {fileID: 0}
-  optionButtons:
-  - {fileID: 1335352595}
-  - {fileID: 1316844016}
-  - {fileID: 527421976}
-  - {fileID: 134862358}
-  optionToggles:
-  - {fileID: 1543190338}
-  - {fileID: 693068835}
-  - {fileID: 1156122035}
-  - {fileID: 1593052817}
 --- !u!1 &1196745344
 GameObject:
   m_ObjectHideFlags: 0
@@ -62070,9 +61948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 3
-  index: 11
-  xPos: 100
 --- !u!1 &1257696294
 GameObject:
   m_ObjectHideFlags: 0
@@ -62084,6 +61959,7 @@ GameObject:
   - component: {fileID: 1257696296}
   - component: {fileID: 1257696295}
   - component: {fileID: 1257696297}
+  - component: {fileID: 1257696298}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -62149,6 +62025,31 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 98bf69ee45d68b94c96ddf799010023e, type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
+--- !u!114 &1257696298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257696294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c173e90c2a3b87949972492bc68a4706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4dcb0e55be9ff2a43aeaa929fc313259, type: 2}
   decodeBank: 0
   overrideLoadSetting: 0
   loadAsynchronous: 0
@@ -67081,8 +66982,8 @@ MonoBehaviour:
   costText:
   - {fileID: 1973826457}
   - {fileID: 2105153091}
-  buildingButton: []
-  buildingButtonImage: []
+  Button: []
+  ButtonImage: []
   lockSprite: {fileID: 0}
 --- !u!1 &1353367432
 GameObject:
@@ -68500,7 +68401,6 @@ MonoBehaviour:
   - {r: 0.5764706, g: 0.7686275, b: 0.5254902, a: 0}
   isColorMode: 0
   isInfluenceMode: 0
-  isAddtionalMode: 0
   width: 32
   height: 32
   startPoint: {x: 0, y: 0}
@@ -69319,26 +69219,11 @@ MonoBehaviour:
   buildingNameText: {fileID: 16329469}
   buildingInfoText: {fileID: 1094395312}
   happinessText: {fileID: 130062480}
-  happinessStringText: {fileID: 879572989}
-  influenceText: {fileID: 0}
-  utilityText: {fileID: 0}
-  userText: {fileID: 0}
-  residentText: {fileID: 673115798}
-  castText:
-  - {fileID: 1510703375}
-  - {fileID: 334286715}
-  - {fileID: 199400960}
-  optionButtons:
-  - {fileID: 535937996}
-  - {fileID: 1019526928}
-  - {fileID: 1495289475}
-  - {fileID: 206086616}
-  optionToggles:
-  - {fileID: 461568692}
-  - {fileID: 1525831862}
-  - {fileID: 2043650252}
-  - {fileID: 1339891412}
   eventUIInfos: []
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &1411488408
 GameObject:
   m_ObjectHideFlags: 0
@@ -69910,15 +69795,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7712ff5a8e2ce664f8f8ff929e66f5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingNameText: {fileID: 24446292}
-  buildingTypeText: {fileID: 274645677}
+  nameText: {fileID: 0}
+  typeText: {fileID: 0}
   buildingGradeText: {fileID: 2752311}
   buildingCostText: {fileID: 1171287585}
-  residentText: {fileID: 0}
-  influenceText: {fileID: 1201688469}
-  costPerDayText: {fileID: 0}
-  optionButtons: []
-  optionToggles: []
 --- !u!1 &1422070700
 GameObject:
   m_ObjectHideFlags: 0
@@ -71185,36 +71065,12 @@ MonoBehaviour:
   buildingNameText: {fileID: 659424412}
   buildingInfoText: {fileID: 556514533}
   happinessText: {fileID: 245318480}
-  happinessStringText: {fileID: 1581260306}
-  influenceText: {fileID: 0}
-  utilityText: {fileID: 0}
-  userText: {fileID: 0}
-  residentText: {fileID: 417623336}
-  castText:
-  - {fileID: 1728316096}
-  - {fileID: 276342449}
-  - {fileID: 317979566}
-  optionButtons:
-  - {fileID: 517204592}
-  - {fileID: 1936233965}
-  - {fileID: 1520459533}
-  - {fileID: 537333934}
-  optionToggles:
-  - {fileID: 1227673279}
-  - {fileID: 902579513}
-  - {fileID: 1153580664}
-  - {fileID: 1934260293}
   eventUIInfos:
-  - iconImage: {fileID: 1109829029}
-    nameText: {fileID: 1786584733}
-    dayText: {fileID: 1293894685}
-    solutionUIInfos:
-    - nameText: {fileID: 619752862}
-      costText: {fileID: 90122666}
-      probText: {fileID: 1341563073}
-    - nameText: {fileID: 1766972033}
-      costText: {fileID: 2079163630}
-      probText: {fileID: 1121715170}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &1447276458
 GameObject:
   m_ObjectHideFlags: 0
@@ -76450,7 +76306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5cd27bca6510d45ac655b7746cb1e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityLevelText: {fileID: 679655403}
+  cityType: 0
   residentialConditionText: {fileID: 864815293}
   residentialConditionSlider: {fileID: 898800136}
   happinessConditionText: {fileID: 62085564}
@@ -77865,35 +77721,13 @@ MonoBehaviour:
   buildingNameText: {fileID: 1775601449}
   buildingInfoText: {fileID: 1178140589}
   happinessText: {fileID: 546437755}
-  happinessStringText: {fileID: 1112287997}
-  influenceText: {fileID: 992781019}
-  utilityText: {fileID: 442503457}
-  userText: {fileID: 1495051094}
-  residentText: {fileID: 0}
-  castText: []
-  optionButtons: []
-  optionToggles: []
   eventUIInfos:
-  - iconImage: {fileID: 977499593}
-    nameText: {fileID: 575422056}
-    dayText: {fileID: 15457425}
-    solutionUIInfos:
-    - nameText: {fileID: 1876331616}
-      costText: {fileID: 377135840}
-      probText: {fileID: 131462459}
-    - nameText: {fileID: 681789629}
-      costText: {fileID: 812406179}
-      probText: {fileID: 162549478}
-  - iconImage: {fileID: 1463146794}
-    nameText: {fileID: 998012508}
-    dayText: {fileID: 1021901275}
-    solutionUIInfos:
-    - nameText: {fileID: 1850417273}
-      costText: {fileID: 1209419211}
-      probText: {fileID: 1485706262}
-    - nameText: {fileID: 379054373}
-      costText: {fileID: 2034777334}
-      probText: {fileID: 1241699194}
+  - {fileID: 0}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &1581082309
 GameObject:
   m_ObjectHideFlags: 0
@@ -80588,9 +80422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 2
-  index: 8
-  xPos: 80
 --- !u!1 &1640315685
 GameObject:
   m_ObjectHideFlags: 0
@@ -80971,9 +80802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 3
-  index: 10
-  xPos: 60
 --- !u!1 &1642394374
 GameObject:
   m_ObjectHideFlags: 0
@@ -81571,15 +81399,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7712ff5a8e2ce664f8f8ff929e66f5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingNameText: {fileID: 1639354067}
-  buildingTypeText: {fileID: 1724665030}
+  nameText: {fileID: 0}
+  typeText: {fileID: 0}
   buildingGradeText: {fileID: 1949717792}
   buildingCostText: {fileID: 1640315687}
-  residentText: {fileID: 0}
-  influenceText: {fileID: 1778218649}
-  costPerDayText: {fileID: 0}
-  optionButtons: []
-  optionToggles: []
 --- !u!1 &1656026148
 GameObject:
   m_ObjectHideFlags: 0
@@ -85159,15 +84982,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7712ff5a8e2ce664f8f8ff929e66f5dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildingNameText: {fileID: 831911179}
-  buildingTypeText: {fileID: 788834892}
+  nameText: {fileID: 0}
+  typeText: {fileID: 0}
   buildingGradeText: {fileID: 1021306878}
   buildingCostText: {fileID: 1585674659}
-  residentText: {fileID: 0}
-  influenceText: {fileID: 349769727}
-  costPerDayText: {fileID: 1702227125}
-  optionButtons: []
-  optionToggles: []
 --- !u!1 &1735852642
 GameObject:
   m_ObjectHideFlags: 0
@@ -86368,9 +86186,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49aaec252610f684f9fbc851327ee535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 1
-  index: 3
-  xPos: 0
 --- !u!1 &1766972031
 GameObject:
   m_ObjectHideFlags: 0
@@ -88485,8 +88300,8 @@ MonoBehaviour:
   - {fileID: 141313405}
   - {fileID: 673753170}
   - {fileID: 938926917}
-  buildingButton: []
-  buildingButtonImage: []
+  Button: []
+  ButtonImage: []
   lockSprite: {fileID: 0}
 --- !u!1 &1798949770
 GameObject:
@@ -91148,36 +90963,12 @@ MonoBehaviour:
   buildingNameText: {fileID: 1730311406}
   buildingInfoText: {fileID: 769894650}
   happinessText: {fileID: 215823874}
-  happinessStringText: {fileID: 931741283}
-  influenceText: {fileID: 0}
-  utilityText: {fileID: 0}
-  userText: {fileID: 0}
-  residentText: {fileID: 2018315933}
-  castText:
-  - {fileID: 1834860009}
-  - {fileID: 1245555243}
-  - {fileID: 777971512}
-  optionButtons:
-  - {fileID: 2037566794}
-  - {fileID: 1408192585}
-  - {fileID: 481029132}
-  - {fileID: 852367926}
-  optionToggles:
-  - {fileID: 1334407719}
-  - {fileID: 2110728044}
-  - {fileID: 1718139843}
-  - {fileID: 1878372414}
   eventUIInfos:
-  - iconImage: {fileID: 1532781474}
-    nameText: {fileID: 25887399}
-    dayText: {fileID: 1624815482}
-    solutionUIInfos:
-    - nameText: {fileID: 1392101266}
-      costText: {fileID: 1347337083}
-      probText: {fileID: 439093270}
-    - nameText: {fileID: 524830487}
-      costText: {fileID: 1929600989}
-      probText: {fileID: 1538071665}
+  - {fileID: 0}
+  eventTexts: []
+  boundaryString: []
+  sliderValue: []
+  sliderColor: []
 --- !u!1 &1864690112
 GameObject:
   m_ObjectHideFlags: 0
@@ -98440,6 +98231,7 @@ MonoBehaviour:
   moveSpeed: 5
   rotationSpeed: 90
   zoomSpeed: 5
+  smoothZoomSpeed: 2
   minX: -40
   maxX: 40
   minZ: -40
