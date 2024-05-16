@@ -9,6 +9,7 @@ public class IconNameMouseOver : UIMouseOver, IObserver
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
+        base.OnPointerEnter(eventData);
         iconName.gameObject.SetActive(true);
     }
 

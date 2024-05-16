@@ -12,6 +12,7 @@ public class BuildingInfoMouseOver : UIMouseOver
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
+        base.OnPointerEnter(eventData);
         UIManager.instance.SetInfoPopUp((int)buttonType, index);
     }
 
