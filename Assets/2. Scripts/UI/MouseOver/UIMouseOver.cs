@@ -9,7 +9,8 @@ public class UIMouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
-        AkSoundEngine.PostEvent(soundName, gameObject);
+        if (soundName.Length > 0)
+            AkSoundEngine.PostEvent(soundName, gameObject);
     }
 
     public virtual void OnPointerExit(PointerEventData eventData)
