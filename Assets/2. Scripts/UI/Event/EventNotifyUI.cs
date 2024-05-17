@@ -69,8 +69,12 @@ public class EventNotifyUI : MonoBehaviour, IObserver
             ShopManager.instance.ChangeState(BuyState.EventCheck);
             gameObject.SetActive(true);
             Init();
+            AkSoundEngine.SetRTPCValue("BOOL", 2);
         }
         else
+        {
+            AkSoundEngine.SetRTPCValue("BOOL", 1);
             gameObject.SetActive(false);
+        }
     }
 }
