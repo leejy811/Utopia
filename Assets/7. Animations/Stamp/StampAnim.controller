@@ -17,6 +17,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Money
     m_EventTreshold: 10000
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoStamp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -5925891559700603314}
   m_Solo: 0
@@ -42,6 +45,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Happiness
     m_EventTreshold: 39
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoStamp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 8446412951951801395}
   m_Solo: 0
@@ -70,6 +76,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Happiness
     m_EventTreshold: 49
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoStamp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2791970826035481185}
   m_Solo: 0
@@ -174,6 +183,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Money
     m_EventTreshold: 30000
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoStamp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -532407892211694783}
   m_Solo: 0
@@ -280,6 +292,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Happiness
     m_EventTreshold: 69
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoStamp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3472868847980035672}
   m_Solo: 0
@@ -334,6 +349,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Money
     m_EventTreshold: 10000
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoStamp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 5036313785594295930}
   m_Solo: 0
@@ -365,6 +383,12 @@ AnimatorController:
     m_Controller: {fileID: 0}
   - m_Name: Money
     m_Type: 3
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: DoStamp
+    m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
@@ -428,7 +452,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 3c92c3806665e4e4fbfb50e4c4dc9343, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -445,6 +469,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 3
     m_ConditionEvent: Happiness
     m_EventTreshold: 69
+  - m_ConditionMode: 1
+    m_ConditionEvent: DoStamp
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3266119121772277884}
   m_Solo: 0

@@ -785,7 +785,17 @@ public class UIManager : MonoBehaviour, ISubject
         if (CityLevelManager.instance.levelIdx == -1) return;
 
         if (statistic.gameObject.activeSelf)
-            OnClickCloseStatistic();
+        {
+            if (statistic.doStamp)
+            {
+                OnClickCloseStatistic();
+                statistic.doStamp = false;
+                return;
+            }
+
+            statistic.gameObject.GetComponentInChildren<Animator>().SetTrigger("DoStamp");
+            statistic.doStamp = true;
+        }
         else if (eventRoulette.gameObject.activeSelf)
         {
             if (eventRoulette.state == RouletteState.End)
