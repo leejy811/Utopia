@@ -114,6 +114,10 @@ public class StatisticUI : MonoBehaviour, IObserver
         happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%(" + Mathf.Abs((int)RoutineManager.instance.cityHappinessDifference).ToString() + "% " + (RoutineManager.instance.cityHappinessDifference > 0 ? "¡ı∞°" : "±Ëº“") + ")";
         residentText.text = ResidentialBuilding.cityResident.ToString() + "∏Ì(" + Mathf.Abs(ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident).ToString() + "∏Ì " + ((ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident) > 0 ? "¡ı∞°" : "±Ëº“") + ")";
 
+        Animator anim = gameObject.GetComponentInChildren<Animator>();
+        anim.SetInteger("Happiness", (int)RoutineManager.instance.cityHappiness);
+        anim.SetInteger("Money", total);
+
         //happinessComparison.SetValue((int)RoutineManager.instance.cityHappiness, (int)(RoutineManager.instance.cityHappiness - RoutineManager.instance.cityHappinessDifference), true);
         //residentComparison.SetValue(ResidentialBuilding.yesterDayResident, ResidentialBuilding.cityResident, false);
     }
