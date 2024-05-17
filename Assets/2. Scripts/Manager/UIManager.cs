@@ -125,6 +125,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     IEnumerator HappinessBasedNews()
     {
+        imageRectTransform.gameObject.SetActive(true);
         if (previousHappiness > 20 && NewsHappiness <= 20)
         {
 
@@ -164,7 +165,8 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() => 
+            { imageRectTransform.gameObject.SetActive(false); });
 
         }
         else if (previousHappiness < 20 && NewsHappiness >= 20)
@@ -205,7 +207,8 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            { imageRectTransform.gameObject.SetActive(false); });
 
         }
         else if (previousHappiness > 40 && NewsHappiness <= 40)
@@ -246,7 +249,8 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            { imageRectTransform.gameObject.SetActive(false); });
 
         }
         else if (previousHappiness < 40 && NewsHappiness >= 40)
@@ -286,7 +290,8 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            { imageRectTransform.gameObject.SetActive(false); });
 
 
         }
@@ -328,7 +333,8 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            { imageRectTransform.gameObject.SetActive(false); });
 
         }
         else if (previousHappiness < 60 && NewsHappiness >= 60)
@@ -369,7 +375,8 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            { imageRectTransform.gameObject.SetActive(false); });
 
         }
         else if (previousHappiness > 80 && NewsHappiness <= 80)
@@ -409,7 +416,8 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            { imageRectTransform.gameObject.SetActive(false); });
         }
         else if (previousHappiness < 80 && NewsHappiness >= 80)
         {
@@ -448,8 +456,11 @@ public class UIManager : MonoBehaviour, ISubject
 
             newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
 
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            { imageRectTransform.gameObject.SetActive(false); });
         }
+        else
+            imageRectTransform.gameObject.SetActive(false);
     }
 
     Vector2 CalculateTextSize(string text)
