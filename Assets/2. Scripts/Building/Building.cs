@@ -17,9 +17,9 @@ public enum BoundaryType { Less = -1, Include, More }
 [Serializable]
 public struct BoundaryValue 
 { 
-    public int max, min, cur; 
+    public float max, min, cur; 
     
-    public BoundaryValue(int max, int min, int cur)
+    public BoundaryValue(float max, float min, float cur)
     {
         this.max = max;
         this.min = min;
@@ -62,13 +62,13 @@ public class Building : MonoBehaviour
 
     private void Start()
     {
-        int power = type == BuildingType.Residential ? values[ValueType.Resident].cur : influencePower;
+        int power = type == BuildingType.Residential ? (int)values[ValueType.Resident].cur : influencePower;
         ApplyInfluenceToTile(power, true, true);
     }
 
     protected void OnDestroy()
     {
-        int power = type == BuildingType.Residential ? values[ValueType.Resident].cur : influencePower;
+        int power = type == BuildingType.Residential ? (int)values[ValueType.Resident].cur : influencePower;
 
         foreach(Event curEvent in curEvents)
         {
@@ -254,8 +254,8 @@ public class Building : MonoBehaviour
         }
 
         BoundaryValue value = values[type];
-        float percent = enable ? (int)((100.0f + amount) / 100.0f) : (int)(100.0f / (100.0f + amount));
-        value.cur = (int)(value.cur * percent);
+        float percent = enable ? ((100.0f + amount) / 100.0f) : (100.0f / (100.0f + amount));
+        value.cur = value.cur * percent;
         values[type] = value;
 
         //if((value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Include)

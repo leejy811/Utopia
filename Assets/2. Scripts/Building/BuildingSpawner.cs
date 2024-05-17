@@ -131,7 +131,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         foreach (Building building in buildings)
         {
             if (building.values.ContainsKey(ValueType.Resident))
-                resident[3 - building.grade] += building.values[ValueType.Resident].cur;
+                resident[3 - building.grade] += (int)building.values[ValueType.Resident].cur;
         }
 
         return resident;

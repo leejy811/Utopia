@@ -20,7 +20,7 @@ public class UtilityBuildingIntroUI : BuildingIntroUI
     {
         base.SetValue(building);
 
-        influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString() + "(+" + building.additionalInfluencePower.ToString() + ")";
+        influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString() + "(" + GetSignString(building.additionalInfluencePower, "+") + ")";
         valueTypeText.text = valueTypeString[(int)building.type - 1];
         SetSlider(utilitySlider, building.values[ValueType.utility]);
         SetSlider(userSlider, building.values[ValueType.user]);

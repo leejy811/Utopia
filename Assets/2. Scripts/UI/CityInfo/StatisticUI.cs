@@ -88,7 +88,7 @@ public class StatisticUI : MonoBehaviour, IObserver
     public TextMeshProUGUI happinessText;
     public TextMeshProUGUI residentText;
 
-    string[] levelString = { "빌리지", "타운", "시티", "유토피아" };
+    string[] levelString = { "촌락", "타운", "시티", "유토피아" };
 
     public void SetValue()
     {

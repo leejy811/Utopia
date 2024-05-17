@@ -92,9 +92,9 @@ public class BuildingIntroUI : MonoBehaviour
 
     protected void SetSlider(ValueSlider slider, BoundaryValue value)
     {
-        slider.minText.text = value.min.ToString();
-        slider.maxText.text = value.max.ToString();
-        slider.curText.text = value.cur.ToString();
+        slider.minText.text = ((int)value.min).ToString();
+        slider.maxText.text = ((int)value.max).ToString();
+        slider.curText.text = ((int)value.cur).ToString();
 
         int type = (int)value.CheckBoundary() + 1;
         slider.stringText.text = boundaryString[type];

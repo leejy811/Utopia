@@ -45,7 +45,7 @@ public class RoutineManager : MonoBehaviour
             total += building.CalculateIncome() + building.CalculateBonus();
         }
 
-        total += (int)(Mathf.Abs(total) * EventManager.instance.GetFinalIncomeEventValue());
+        total = (int)(Mathf.Abs(total) * EventManager.instance.GetFinalIncomeEventValue());
         
         ShopManager.instance.GetMoney(total);
     }

@@ -26,8 +26,8 @@ public class ResidentialBuilding : Building
         values[ValueType.CultureCSAT] = cultureCSAT;
         values[ValueType.ServiceCSAT] = serviceCSAT;
 
-        influencePower = residentCnt.cur;
-        cityResident += residentCnt.cur;
+        influencePower = (int)residentCnt.cur;
+        cityResident += (int)residentCnt.cur;
         UIManager.instance.SetCityResident();
         CityLevelManager.instance.UpdateCityType();
     }
@@ -35,7 +35,7 @@ public class ResidentialBuilding : Building
     private new void OnDestroy()
     {
         base.OnDestroy();
-        cityResident -= residentCnt.cur;
+        cityResident -= (int)residentCnt.cur;
         UIManager.instance.SetCityResident();
     }
 
@@ -69,7 +69,7 @@ public class ResidentialBuilding : Building
             int value = (int)(values[ValueType.Resident].max * -0.1f);
 
             if (values[ValueType.Resident].cur + value < 0)
-                value = -values[ValueType.Resident].cur;
+                value = (int)-values[ValueType.Resident].cur;
 
             BoundaryValue resident = values[ValueType.Resident];
             resident.cur += value;
