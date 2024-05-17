@@ -61,6 +61,9 @@ public class BuildingIntroUI : MonoBehaviour
 
             eventTexts[i].gameObject.SetActive(true);
             eventTexts[i].text = "사회현상 발생으로 인해 " + building.curEvents[i].GetEventToString();
+
+            //To Do 이벤트 인덱스 한개만 할당? 두개 할당?
+            AkSoundEngine.SetRTPCValue("INDEX" + (i + 1), building.curEvents[i].eventIndex);
         }
 
         if(building.GetEventProblemCount() == 2)
