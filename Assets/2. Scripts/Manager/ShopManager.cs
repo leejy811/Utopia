@@ -16,6 +16,7 @@ public class ShopManager : MonoBehaviour, IObserver
     public int Money { get { return money; } set { money = value; UIManager.instance.Setmoney(); } }
 
     public GameObject[] buildingPrefabs;
+    public GameObject[] tilePrefabs;
 
     private GameObject curPickObject;
     private int curPickIndex;
@@ -70,6 +71,14 @@ public class ShopManager : MonoBehaviour, IObserver
             Grid.instance.SetTileColorMode();
         }
 
+        if (buyState == BuyState.BuildTile)
+            Destroy(curPickObject);
+        else if (state == BuyState.BuildTile)
+        {
+            curPickObject = Instantiate(tilePrefabs[curPickIndex], transform);
+            Grid.instance.SetTileColorMode();
+        }
+
         if (buyState == BuyState.SolveBuilding)
             SetSolveEvent();
         else if (state == BuyState.SolveBuilding)
@@ -109,6 +118,11 @@ public class ShopManager : MonoBehaviour, IObserver
             Destroy(curPickObject);
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
         }
+        else if (buyState == BuyState.BuildTile)
+        {
+            Destroy(curPickObject);
+            curPickObject = Instantiate(tilePrefabs[curPickIndex], transform);
+        }
         else if (buyState == BuyState.SolveBuilding)
         {
             SetSolveEvent();
@@ -126,7 +140,7 @@ public class ShopManager : MonoBehaviour, IObserver
         Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyBuilding) return;
-        if (!tile.CheckBuilding()) return;
+        if (!tile.CheckBuildingWithErrorMsg()) return;
         if (!PayMoney(cost)) return;
 
         spawnTrans.rotation = curPickObject.transform.rotation;
@@ -147,7 +161,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public void BuyTile()
     {
-        int cost = CalculateCost(Grid.instance.tileCost * curPickTiles.Count);
+        int cost = CalculateCost(Grid.instance.tileCost[0] * curPickTiles.Count);
 
         if (buyState != BuyState.BuyTile) return;
         if (cost == 0) return;
@@ -168,6 +182,18 @@ public class ShopManager : MonoBehaviour, IObserver
 
         curPickTiles.Clear();
         AkSoundEngine.PostEvent("Play_Tile_Buy_001", gameObject);
+    }
+
+    public void BuildTile(Transform spawnTrans)
+    {
+        int cost = CalculateCost(Grid.instance.tileCost[curPickIndex + 1]);
+        Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
+
+        if (buyState != BuyState.BuildTile) return;
+        if (!tile.CheckBuildingWithErrorMsg()) return;
+        if (!PayMoney(cost)) return;
+
+        Grid.instance.PlaceTile(curPickIndex, spawnTrans);
     }
 
     public void AddTile(Transform tile)
@@ -230,13 +256,18 @@ public class ShopManager : MonoBehaviour, IObserver
             curPickObject.GetComponent<FollowMouse>().tile = tile.gameObject;
             SetObjectColor(curPickObject, Color.white);
 
-            int cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
-            UIManager.instance.SetCostPopUp(cost, tile.transform.position);
+            int cost = 0;
+            if (buyState == BuyState.BuyBuilding)
+                cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+            else if (buyState == BuyState.BuildTile)
+                cost = Grid.instance.tileCost[curPickIndex + 1];
+            UIManager.instance.SetCostPopUp(tile.transform, cost);
         }
         else
         {
             SetObjectColor(curPickObject, Color.red);
             curPickObject.GetComponent<FollowMouse>().tile = null;
+            UIManager.instance.SetCostPopUp();
         }
     }
 

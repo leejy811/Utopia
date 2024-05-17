@@ -9,17 +9,13 @@ public class TileInfoUI : InfoUI
     public TextMeshProUGUI tileCostText;
     public TextMeshProUGUI tileCostPerDayText;
 
-    string[] typeString = { "도로", "조경" };
+    string[] nameString = { "도로", "물", "숲" };
 
     public override void SetValue(int index)
     {
         gameObject.SetActive(!gameObject.activeSelf);
-
-        //ToDo 타일 건설 완료 후 tile Gameobject 연결
-
-        //nameText.text = tile.tileName;
-        //typeText.text = typeString[(int)tile.type];
-        //tileCostText.text = tile.cost.ToString();
-        //tileCostPerDayText.text = tile.costPerDay.ToString();
+        nameText.text = nameString[index];
+        tileCostText.text = Grid.instance.tileCost[index + 1].ToString();
+        tileCostPerDayText.text = Grid.instance.tileCostPerDay[index].ToString();
     }
 }

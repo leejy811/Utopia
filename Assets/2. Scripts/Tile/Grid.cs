@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +11,8 @@ public class Grid : MonoBehaviour, IObserver
 
     public GameObject tilePrefab;
     public Tile[ , ] tiles;
-    public int tileCost;
+    public int[] tileCost;
+    public int[] tileCostPerDay;
 
     public Color[] tileColors;
     public Color[] tilePurchaseColors;
@@ -18,8 +20,8 @@ public class Grid : MonoBehaviour, IObserver
     public bool isColorMode;
     public bool isInfluenceMode;
 
-    [SerializeField] private int width;
-    [SerializeField] private int height;
+    public int width;
+    public int height;
     [SerializeField] private Vector2Int startPoint;
     [SerializeField] private Vector2Int startTileSize;
     [SerializeField] private Vector3 cameraOffset;
@@ -61,6 +63,8 @@ public class Grid : MonoBehaviour, IObserver
                     tiles[i, j].SetTilePurchased(true);
                 else
                     tiles[i, j].SetTilePurchased(false);
+
+                tiles[i, j].tilePos = new Vector2(i, j);
             }
         }
 
@@ -127,5 +131,56 @@ public class Grid : MonoBehaviour, IObserver
             isColorMode = false;
             SetTileColorMode(false);
         }
+    }
+
+    public void PlaceTile(int index, Transform spawnTrans)
+    {
+        Vector3Int pos = new Vector3Int((int)spawnTrans.position.x, (int)spawnTrans.position.y, (int)spawnTrans.position.z);
+        tiles[pos.x, pos.z].ChangeTileModel(index);
+
+        for (int i = pos.x - 1; i <= pos.x + 1; i++)
+        {
+            for (int j = pos.z - 1; j <= pos.z + 1; j++)
+            {
+                if (i == pos.x && j == pos.z) continue;
+                tiles[i, j].ReplaceTile();
+            }
+        }
+    }
+
+    public bool[] GetRoadInformation(Transform trans)
+    {
+        bool[] isRoad = new bool[4];
+
+        Vector3Int pos = new Vector3Int((int)trans.position.x, (int)trans.position.y, (int)trans.position.z);
+        isRoad[0] = pos.z + 1 < height ? tiles[pos.x, pos.z + 1].type == TileType.Road : false;
+        isRoad[1] = pos.x + 1 < width ? tiles[pos.x + 1, pos.z].type == TileType.Road : false;
+        isRoad[2] = pos.z - 1 >= 0 ? tiles[pos.x, pos.z - 1].type == TileType.Road : false;
+        isRoad[3] = pos.x - 1 >= 0 ? tiles[pos.x - 1, pos.z].type == TileType.Road : false;
+
+        return isRoad;
+    }
+
+    public bool[] GetWaterInformation(Transform trans)
+    {
+        bool[] isWater = new bool[8];
+
+        Vector3Int pos = new Vector3Int((int)trans.position.x, (int)trans.position.y, (int)trans.position.z);
+
+        int k = 0;
+        for(int i = pos.x - 1;i <= pos.x + 1; i++)
+        {
+            for (int j = pos.z - 1; j <= pos.z + 1; j++)
+            {
+                if (i == pos.x && j == pos.z) continue;
+                if (i < height && j < width && i >= 0 && j >= 0)
+                    isWater[k] = tiles[i, j].type == TileType.Water;
+                else
+                    isWater[k] = false; 
+                k++;
+            }
+        }
+
+        return isWater;
     }
 }

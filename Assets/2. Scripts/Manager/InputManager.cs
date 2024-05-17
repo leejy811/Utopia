@@ -49,6 +49,7 @@ public class InputManager : MonoBehaviour, IObserver
                         ShopManager.instance.BuyBuilding(hit.transform);
                         break;
                     case BuyState.BuildTile:
+                        ShopManager.instance.BuildTile(hit.transform);
                         break;
                 }
             }
@@ -99,13 +100,12 @@ public class InputManager : MonoBehaviour, IObserver
                 }
                 switch (state)
                 {
+                    case BuyState.BuildTile:
                     case BuyState.BuyBuilding:
                         ShopManager.instance.CheckBuyBuilding(hit.transform);
                         break;
                     case BuyState.BuyTile:
                         ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.green, Color.red);
-                        break;
-                    case BuyState.BuildTile:
                         break;
                 }
             }

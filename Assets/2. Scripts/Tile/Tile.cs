@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public enum TileType { Ground = -1, Road, Decoration }
+public enum TileType { Ground = -1, Road, Water, Forest }
 
 public class Tile : MonoBehaviour
 {
@@ -12,12 +12,15 @@ public class Tile : MonoBehaviour
 
     public string tileName;
     public TileType type;
+    public Vector2 tilePos;
     public bool isPurchased;
-    public int cost { get; private set; }
-    public int costPerDay { get; private set; }
+
     public int[] influenceValues;
     public int[] subInfluenceValues;
     public GameObject building;
+
+    public GameObject[] tileModels;
+    public GameObject targetTile;
 
     private void Awake()
     {
@@ -28,6 +31,19 @@ public class Tile : MonoBehaviour
     public bool CheckBuilding()
     {
         return type == TileType.Ground && isPurchased && building == null;
+    }
+
+    public bool CheckBuildingWithErrorMsg()
+    {
+        if (type == TileType.Ground && isPurchased && building == null)
+        {
+            return true;
+        }
+        else
+        {
+            UIManager.instance.SetErrorPopUp("해당 위치에는 건설할 수 없습니다.", transform.position);
+            return false;
+        }
     }
 
     public bool CheckPurchased()
@@ -82,20 +98,18 @@ public class Tile : MonoBehaviour
 
     public void SetTileColor(Color color)
     {
-        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer renderer in renderers)
-        {
-            renderer.material.color = color;
-        }
+        if (!targetTile.activeSelf) return;
+
+        MeshRenderer renderer = targetTile.GetComponent<MeshRenderer>();
+        renderer.material.color = color;
     }
 
     public void SetTileColor(bool isPurchased)
     {
-        MeshRenderer[] renderers = GetComponentsInChildren<MeshRenderer>();
-        foreach (MeshRenderer renderer in renderers)
-        {
-            renderer.material.color = Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)];
-        }
+        if (!targetTile.activeSelf) return;
+
+        MeshRenderer renderer = targetTile.GetComponent<MeshRenderer>();
+        renderer.material.color = Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)];
     }
 
     public void Coloring(bool isOn)
@@ -105,5 +119,56 @@ public class Tile : MonoBehaviour
 
         SetTileColor(color);
         building.ChangeViewState((ViewStateType)(Convert.ToInt32(!isOn) * 2));
+    }
+
+    public void ChangeTileModel(int index)
+    {
+        for(int i = 0;i < tileModels.Length; i++)
+        {
+            if (i == index + 1)
+                tileModels[i].SetActive(true);
+            else
+                tileModels[i].SetActive(false);
+        }
+
+        type = (TileType)index;
+        ApplyHappinessToBuilding(type != TileType.Ground);
+        ReplaceTile();
+    }
+
+    public void ReplaceTile()
+    {
+        if (type == TileType.Road)
+            gameObject.GetComponentInChildren<RoadPlacement>().PlaceRoad(transform);
+        else if (type == TileType.Water)
+        {
+            gameObject.GetComponentInChildren<WaterPlacement>().PlaceWater(transform);
+        }
+    }
+
+    public int CaculateIncome()
+    {
+        int res = 0;
+
+        if (type != TileType.Ground)
+            res = Grid.instance.tileCostPerDay[(int)type];
+
+        income += res;
+        return res;
+    }
+
+    private void ApplyHappinessToBuilding(bool isAdd)
+    {
+        int influenceSize = 2;
+        int sign = isAdd ? 1 : -1;
+        Vector3 size = new Vector3(influenceSize * 2 - 1, 3, influenceSize * 2 - 1);
+
+        Collider[] hits = Physics.OverlapBox(transform.position, size * 0.5f, Quaternion.identity, LayerMask.GetMask("Building"));
+
+        foreach (Collider hit in hits)
+        {
+            Building building = hit.transform.gameObject.GetComponent<Building>();
+            building.SetHappiness(2 * sign);
+        }
     }
 }

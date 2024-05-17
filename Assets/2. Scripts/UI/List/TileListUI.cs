@@ -16,6 +16,9 @@ public class TileListUI : ListUI
             }
         }
 
-        //ToDo Tile 건설 구현 후 작성
+        for(int i = 0;i < costText.Length; i++)
+        {
+            costText[i].text = Grid.instance.tileCost[i + 1].ToString("C");
+        }
     }
 }

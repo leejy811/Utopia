@@ -32,6 +32,7 @@ public class RoutineManager : MonoBehaviour
         day = day.AddDays(1);
 
         Building.InitStaticCalcValue();
+        Tile.income = 0;
         CalculateIncome();
         UpdateHappiness();
     }
@@ -43,6 +44,14 @@ public class RoutineManager : MonoBehaviour
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
             total += building.CalculateIncome() + building.CalculateBonus();
+        }
+
+        for(int i = 0;i < Grid.instance.width;i++)
+        {
+            for (int j = 0; j < Grid.instance.height; j++)
+            {
+                total += Grid.instance.tiles[i, j].CaculateIncome();
+            }
         }
 
         total = (int)(Mathf.Abs(total) * EventManager.instance.GetFinalIncomeEventValue());

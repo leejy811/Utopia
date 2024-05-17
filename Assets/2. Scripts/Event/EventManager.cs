@@ -240,4 +240,15 @@ public class EventManager : MonoBehaviour
         }
         return res;
     }
+
+    public float GetBuildCostEventValue()
+    {
+        float res = 1.0f;
+        foreach (Event globalEvent in globalEvents)
+        {
+            if (globalEvent.valueType == ValueType.Cost && globalEvent.targetIndex == (int)BuyState.BuyBuilding)
+                res += globalEvent.GetEffectValue(0) / 100.0f;
+        }
+        return res;
+    }
 }

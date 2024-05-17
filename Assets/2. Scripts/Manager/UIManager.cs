@@ -461,14 +461,6 @@ public class UIManager : MonoBehaviour, ISubject
             imageRectTransform.gameObject.SetActive(false);
     }
 
-    Vector2 CalculateTextSize(string text)
-    {
-        // �ӽ÷� �ؽ�Ʈ�� ����
-        textComponent.text = text;
-        // ������ ũ�⸦ ��ȯ (�� ���ÿ����� �����ϰ� ���� ũ�⸸ ����)
-        return new Vector2(textComponent.preferredWidth + 20, imageRectTransform.sizeDelta.y);
-    }
-
     #endregion
 
 
@@ -613,9 +605,14 @@ public class UIManager : MonoBehaviour, ISubject
         message.SetUI(massage, position);
     }
 
-    public void SetCostPopUp(int cost, Vector3 position)
+    public void SetCostPopUp(Transform transform = null, int cost = 0)
     {
-        //costInfo.OnUI(cost, position);
+        if (transform == null)
+        {
+            costInfo.gameObject.SetActive(false);
+        }
+        else
+            costInfo.OnUI(cost, transform.position);
     }
 
     public void SetCityLevelPopUp(bool active)
@@ -839,6 +836,7 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(cityLevelUpPanel);
         addObserver(eventNotify);
 
+        addObserver(costInfo);
         addObserver(construct);
         addObserver(etcFunc);
 

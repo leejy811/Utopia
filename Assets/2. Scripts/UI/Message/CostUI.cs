@@ -3,30 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CostUI : MonoBehaviour
+public class CostUI : MonoBehaviour, IObserver
 {
     [Header("Cost")]
     public TextMeshProUGUI costText;
 
     public void SetValue(int cost)
     {
-        costText.text = cost.ToString() + "원";
+        float percent = EventManager.instance.GetBuildCostEventValue();
 
-        //To Do 사회현상 전역 이벤트로 인한 건설 비용상승 추가
-        /*
-         * if(비용 상승중)
-         * {
-         *      costText.text = "<s>" + cost.ToString() + "</s> <sprite=?>" + (cost * 비용 상승량).ToString() + "원";
-         * }
-         * else
-         * {
-         *      costText.text = cost.ToString() + "원";
-         * }
-         */
+        costText.text = "건설 비용 : ";
+
+        if (percent != 1.0)
+            costText.text += "<s>" + cost.ToString() + "</s> <sprite=7>" + (cost * percent).ToString() + "원";
+        else
+            costText.text += cost.ToString() + "원";
     }
 
     public void OnUI(int cost, Vector3 pos)
     {
+        gameObject.SetActive(true);
+
         SetValue(cost);
 
         Canvas canvas = GetComponentInParent<Canvas>();
@@ -40,5 +37,10 @@ public class CostUI : MonoBehaviour
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
 
         rectSelf.localPosition = localPos;
+    }
+
+    public void Notify(EventState state)
+    {
+        gameObject.SetActive(false);
     }
 }
