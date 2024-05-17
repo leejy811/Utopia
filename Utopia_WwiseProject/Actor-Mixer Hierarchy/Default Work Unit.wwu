@@ -943,12 +943,12 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>-200</YPos>
+																				<YPos>-0</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>5.05263</XPos>
-																				<YPos>-0.43287</YPos>
+																				<XPos>5.0347</XPos>
+																				<YPos>-0.05438</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -1079,12 +1079,12 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>-200</YPos>
+																				<YPos>-0.22368</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>4.99737</XPos>
-																				<YPos>-0.38643</YPos>
+																				<XPos>4.97944</XPos>
+																				<YPos>-0.15857</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -1222,12 +1222,12 @@
 																		<PointList>
 																			<Point>
 																				<XPos>1</XPos>
-																				<YPos>-200</YPos>
+																				<YPos>-0.29954</YPos>
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>4.99737</XPos>
-																				<YPos>-0.38642999999999</YPos>
+																				<XPos>5.0153</XPos>
+																				<YPos>-0.15857</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -1320,6 +1320,103 @@
 									</Reference>
 									<Reference>
 										<ObjectRef Name="BGM3" ID="{0C1BBD8A-85DC-4069-B4A5-DB84D7E1DD1F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+									</Reference>
+								</ObjectList>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{0234C1D5-7A6D-482C-9773-56174DED2275}" ShortID="911110289">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{2309FFF5-8901-4AAF-85F7-B5C3C5430EF2}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.45710627400768</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.4968</XPos>
+																		<YPos>-8.57948</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.999</XPos>
+																		<YPos>-8.82767</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>-8.82767</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{7A5A8D4D-45F6-4E85-9FA1-CE34FC1D197F}" ShortID="1059750751">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{BB0BCC4C-DC12-44A7-86D1-5A8037DBC6EB}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.45710627400768</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.4968</XPos>
+																		<YPos>-8.57948</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>-8.82767</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
 									</Reference>
 								</ObjectList>
 							</ObjectLists>
@@ -1707,6 +1804,11 @@
 						<Sound Name="APT_event_FIRE_001" ID="{2528D30B-ECB7-4764-9A81-87510C0615EF}" ShortID="591313166">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -1881,6 +1983,11 @@
 						<Sound Name="APT_event_BLACKOUT_001" ID="{1DDAB8B7-01B0-4DDA-B541-39B1EAE5A459}" ShortID="460568146">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2055,6 +2162,11 @@
 						<Sound Name="APT_event_DESOLATE_001" ID="{536A3EDA-2461-481D-A310-2D0772FCC332}" ShortID="487513357">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2229,6 +2341,11 @@
 						<Sound Name="APT_event_DISEASE_001" ID="{8736E499-5846-481D-A8FF-61606E6A4A59}" ShortID="835860202">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2403,6 +2520,11 @@
 						<Sound Name="APT_event_NOISY_001" ID="{D9544F62-A249-4DAC-AF37-0102E3C99A91}" ShortID="41134450">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2577,6 +2699,11 @@
 						<Sound Name="APT_event_THIEF_001" ID="{6E820553-B9ED-40C4-B2F8-F261B4AF952E}" ShortID="931617404">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2751,6 +2878,11 @@
 						<Sound Name="ATP_event_ELEVATOR_001_v2" ID="{07106594-59EC-45CF-A02F-6B3CD516C22C}" ShortID="268697198">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2923,6 +3055,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_SEWERSMELL_001" ID="{66369F7B-3A72-4078-908D-D5BCFA15B3F9}" ShortID="106892378">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -2934,14 +3073,12 @@
 							<ChildrenList>
 								<AudioFileSource Name="APT_event_SEWERSMELL_001" ID="{AC49DB52-1949-484A-8883-266BF325C25E}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0650629522431259"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0487972141823452"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>APT_event_SEWERSMELL_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="476423553"/>
+										<MediaID ID="42211082"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -3105,6 +3242,11 @@
 						<Sound Name="APT_event_BLACKOUT_01" ID="{859D8A15-A72E-414A-AB45-5FB818E9E484}" ShortID="577940667">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3234,6 +3376,11 @@
 						<Sound Name="APT_event_DESOLATE_01" ID="{573A27D2-6E1C-4371-BB4B-0E0031CAB031}" ShortID="807140186">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3363,6 +3510,11 @@
 						<Sound Name="APT_event_DISEASE_01" ID="{985CCF1D-FB53-46E2-BD03-607CD0F27025}" ShortID="323107868">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3492,6 +3644,11 @@
 						<Sound Name="APT_event_FIRE_01" ID="{05127E7A-747E-47B6-AE2C-896F75FC1D1B}" ShortID="778395461">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3621,6 +3778,11 @@
 						<Sound Name="APT_event_NOISY_01" ID="{6ADDD836-9DC1-4791-800E-BED499A6D7F5}" ShortID="811287965">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3750,6 +3912,11 @@
 						<Sound Name="APT_event_SEWERSMELL_01" ID="{C980C0A4-0640-46BC-977E-E6B809DDC25E}" ShortID="33698301">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -3879,6 +4046,11 @@
 						<Sound Name="APT_event_THIEF_01" ID="{3CE90CC1-3F05-4D98-9D22-50873B038A09}" ShortID="175852678">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4008,6 +4180,11 @@
 						<Sound Name="ATP_event_ELEVATOR_01_v2" ID="{5560CB62-8809-441C-A612-A040900F7B1D}" ShortID="250428262">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4141,6 +4318,11 @@
 						<Sound Name="APT_event_BLACKOUT_001_1" ID="{873A59D9-C791-4DFA-B2FE-6DB846B2B1AC}" ShortID="361168632">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4315,6 +4497,11 @@
 						<Sound Name="APT_event_DESOLATE_001_1" ID="{C82765E0-6BD6-4F47-AF5E-146B4406FDBE}" ShortID="585789243">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4489,6 +4676,11 @@
 						<Sound Name="APT_event_DISEASE_001_1" ID="{DB8403C6-0CBA-4C66-867D-F47F07330DC4}" ShortID="519096895">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4663,6 +4855,11 @@
 						<Sound Name="APT_event_FIRE_001_1" ID="{E6035560-519C-4E0A-80D7-7ED18402C65C}" ShortID="257030241">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4837,6 +5034,11 @@
 						<Sound Name="APT_event_NOISY_001_1" ID="{95554B39-D902-4F9B-BF1D-86AC77B8A1F8}" ShortID="865317745">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -5009,6 +5211,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_SEWERSMELL_001_1" ID="{9A4F9C1A-A6EA-4B32-8F19-E8E2398F8BDB}" ShortID="214034072">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -5020,14 +5229,12 @@
 							<ChildrenList>
 								<AudioFileSource Name="APT_event_SEWERSMELL_001" ID="{618BE919-1B9F-4097-BFDF-B7406005FE94}">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0650629522431259"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0487972141823452"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>APT_event_SEWERSMELL_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="476423553"/>
+										<MediaID ID="42211082"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -5187,6 +5394,11 @@
 						<Sound Name="APT_event_THIEF_001_1" ID="{4F6A7310-CD36-4820-AD17-090B8839AFD6}" ShortID="848561045">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -5361,6 +5573,11 @@
 						<Sound Name="ATP_event_ELEVATOR_001_v2_1" ID="{39466CA5-837F-44DE-BED5-C33D858E28BA}" ShortID="514718016">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -5410,7 +5627,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>12.96826</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -5539,6 +5756,11 @@
 						<Sound Name="APT_event_BLACKOUT_01-1" ID="{16C03ACC-0DB8-46E6-958D-78470FD27F11}" ShortID="399948604">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -5668,6 +5890,11 @@
 						<Sound Name="APT_event_DESOLATE_01-1" ID="{E37322ED-689C-4E08-8C70-4250B652E3DC}" ShortID="937277">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -5797,6 +6024,11 @@
 						<Sound Name="APT_event_DISEASE_01-1" ID="{2D39D8AB-6D7B-4F7B-86BA-E09FBA408A76}" ShortID="742650833">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -5926,6 +6158,11 @@
 						<Sound Name="APT_event_FIRE_01-1" ID="{98F47F64-4CDB-45DF-A5B2-9322C49F9149}" ShortID="300455144">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -6055,6 +6292,11 @@
 						<Sound Name="APT_event_NOISY_01-1" ID="{0EA9B32C-78E5-42B3-9491-FDDDD0DD9D61}" ShortID="662378610">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -6184,6 +6426,11 @@
 						<Sound Name="APT_event_SEWERSMELL_01-1" ID="{D8BFC37E-548F-4712-A150-1729CF1C2CFC}" ShortID="810527917">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -6313,6 +6560,11 @@
 						<Sound Name="APT_event_THIEF_01-1" ID="{E4E67698-8289-4A7D-A096-59DE5FBECBC2}" ShortID="312950244">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -6442,6 +6694,11 @@
 						<Sound Name="ATP_event_ELEVATOR_01_v2-1" ID="{2EE4B286-8710-4160-B41E-E20840315A35}" ShortID="675922694">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -6536,7 +6793,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>12.94366</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>

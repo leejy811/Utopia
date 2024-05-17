@@ -13,6 +13,8 @@ Event	ID	Name			Wwise Object Path	Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	848835168	ZOOM			\Default Work Unit\ZOOM	
 	1427264549	HAPPY			\Default Work Unit\HAPPY	
+	1584507803	CLICK			\Default Work Unit\CLICK	
+	1761501017	BOOL			\Default Work Unit\BOOL	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	32765491	shs_oat_ambience_construction_work_1_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\shs_oat_ambience_construction_work_1_jackhammer_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_1_jackhammer		1918432

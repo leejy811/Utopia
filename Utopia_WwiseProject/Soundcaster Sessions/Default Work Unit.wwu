@@ -45,7 +45,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>2</Value>
+							<Value>1.6786171574904</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
@@ -53,7 +53,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>1.21419213251954</Value>
+							<Value>9.60727791997153</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
@@ -61,11 +61,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
-							<Value>2</Value>
+							<Value>1.76</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>7.2</Value>
+							<Value>8.7595390524968</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>

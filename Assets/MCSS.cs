@@ -55,12 +55,12 @@ public class MCSS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (BuildingSpawner.instance.buildings.Count >= 3 && isConstruction)
+        if (BuildingSpawner.instance.buildings.Count >= 1 && isConstruction)
         {
             isConstruction = false;
             AkSoundEngine.PostEvent("Stop_construction", gameObject);
         } 
-        else if (BuildingSpawner.instance.buildings.Count < 3 && !isConstruction)
+        else if (BuildingSpawner.instance.buildings.Count < 1&& !isConstruction)
         {
             isConstruction = true;
             AkSoundEngine.PostEvent("Play_construction", gameObject);

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{3F64B976-2543-1345-24B6-EE1E628B4846}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{C8BBEFB5-708C-FA71-1FF7-F932028F0DCA}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -48,6 +48,8 @@
 			<GameParameters>
 				<GameParameter Id="848835168" Name="ZOOM"/>
 				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
 			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{089B0DC2-F21C-AA04-99E6-B69DF5ACDEE2}">
@@ -83,10 +85,14 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{E4DA2B83-2BDF-925F-21A2-117080BC9D14}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{939E2113-16D7-58A9-1E88-BFCACE8201FE}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
+				<File Id="42211082" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
+					<CachePath>SFX/APT_event_SEWERSMELL_001_8E324C96.wem</CachePath>
+				</File>
 				<File Id="119271698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tile_Buy_001(short).wav</ShortName>
 					<CachePath>SFX/Tile_Buy_001(short)_8E324C96.wem</CachePath>
@@ -118,10 +124,6 @@
 				<File Id="433461852" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DESOLATE_001_56CEF360.wem</CachePath>
-				</File>
-				<File Id="476423553" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
-					<CachePath>SFX/APT_event_SEWERSMELL_001_17C4D16C.wem</CachePath>
 				</File>
 				<File Id="546900594" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
@@ -251,12 +253,12 @@
 				</Event>
 				<Event Id="767732750" Name="Play_APT_event_SEWERSMELL_001" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
 					<MediaRefs>
-						<MediaRef Id="476423553"/>
+						<MediaRef Id="42211082"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1106490366" Name="Play_APT_event_SEWERSMELL_001_1" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
 					<MediaRefs>
-						<MediaRef Id="476423553"/>
+						<MediaRef Id="42211082"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1812137508" Name="Play_APT_event_SEWERSMELL_01" DurationType="Infinite">
@@ -348,7 +350,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2FFA73B2-8D3E-D04B-DAAC-16392C17A5AD}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{1A648A34-0C7C-0B64-9F55-4F221087FEC5}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -470,8 +472,10 @@
 			<GameParameters>
 				<GameParameter Id="848835168" Name="ZOOM"/>
 				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{503FDC28-4056-2A96-7F5D-B41C2440C161}</FileHash>
+	<FileHash>{E7181A8B-0F15-16F5-81C8-9D6AC8B9734C}</FileHash>
 </SoundBanksInfo>
