@@ -14,13 +14,21 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_001 = 3631016450U;
+        static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_01 = 1044076768U;
         static const AkUniqueID PLAY_APT_EVENT_DESOLATE_001 = 2247640914U;
+        static const AkUniqueID PLAY_APT_EVENT_DESOLATE_01 = 261981424U;
         static const AkUniqueID PLAY_APT_EVENT_DISEASE_001 = 3286873849U;
+        static const AkUniqueID PLAY_APT_EVENT_DISEASE_01 = 2096024345U;
         static const AkUniqueID PLAY_APT_EVENT_FIRE_001 = 4292701801U;
+        static const AkUniqueID PLAY_APT_EVENT_FIRE_01 = 838938441U;
         static const AkUniqueID PLAY_APT_EVENT_NOISY_001 = 3907339813U;
+        static const AkUniqueID PLAY_APT_EVENT_NOISY_01 = 3248406045U;
         static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_001 = 767732750U;
+        static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_01 = 1812137508U;
         static const AkUniqueID PLAY_APT_EVENT_THIEF_001 = 1871429987U;
+        static const AkUniqueID PLAY_APT_EVENT_THIEF_01 = 1894765735U;
         static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_001_V2 = 1466792758U;
+        static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_01_V2 = 305082626U;
         static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_BGMSEQUNCE1 = 1994810337U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;
@@ -60,7 +68,12 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BOOL = 1761501017U;
+        static const AkUniqueID CLICK = 1584507803U;
+        static const AkUniqueID DIST = 2212414277U;
         static const AkUniqueID HAPPY = 1427264549U;
+        static const AkUniqueID INDEX1 = 187723092U;
+        static const AkUniqueID INDEX2 = 187723095U;
         static const AkUniqueID ZOOM = 848835168U;
     } // namespace GAME_PARAMETERS
 

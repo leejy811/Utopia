@@ -14,10 +14,6 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="APT_event_THIEF_001" ID="{6E820553-B9ED-40C4-B2F8-F261B4AF952E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="0" Y="2"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Play_testing" ID="{2B595B72-8A90-4F2C-8115-50D7C0AB7A77}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="1" Y="0"/>
 						</Module>
@@ -38,6 +34,10 @@
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="APT_event_THIEF_001" ID="{6E820553-B9ED-40C4-B2F8-F261B4AF952E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="BGMsequnce1" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="3" Y="0"/>
 						</Module>
@@ -48,12 +48,24 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
-							<GameParameterRef Name="INDEX" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>1.39737178025668E-311</Value>
+							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
+							<Value>1.51663528578371E-311</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
+							<Value>0.873111395646604</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
+							<Value>19.0140845070423</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
+							<Value>2</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>7.43393085787452</Value>
+							<Value>7.2</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>

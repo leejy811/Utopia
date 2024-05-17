@@ -10,5 +10,6 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	159506193	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM2_3C2E2B1B.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM2		1235109
+	348594287	BGM3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM3_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM3		510731
 	394814525	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM		792242
 

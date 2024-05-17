@@ -9,13 +9,17 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{D85A64D2-B837-5924-0DF5-8627FB3A261F}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{3F64B976-2543-1345-24B6-EE1E628B4846}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
 				<File Id="159506193" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGM2.wav</ShortName>
 					<CachePath>SFX/BGM2_3C2E2B1B.wem</CachePath>
+				</File>
+				<File Id="348594287" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM3.wav</ShortName>
+					<CachePath>SFX/BGM3_56CEF360.wem</CachePath>
 				</File>
 				<File Id="394814525" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGM.wav</ShortName>
@@ -31,6 +35,7 @@
 				<Event Id="1994810337" Name="Play_BGMsequnce1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="159506193"/>
+						<MediaRef Id="348594287"/>
 						<MediaRef Id="394814525"/>
 					</MediaRefs>
 					<PluginRefs>
@@ -45,7 +50,7 @@
 				<GameParameter Id="1427264549" Name="HAPPY"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3F9F8132-4DCB-5C76-8F4C-FE27D2A355DA}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{089B0DC2-F21C-AA04-99E6-B69DF5ACDEE2}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -58,8 +63,13 @@
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="187723092" Name="INDEX1"/>
+				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
 				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1427264549" Name="HAPPY">
@@ -73,7 +83,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8CC83A04-7BBF-FBA6-F057-29ECCACAA2F9}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{7FA7A9E2-EB86-DA18-644E-E41BF726B9E5}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -97,6 +107,14 @@
 					<ShortName>Turn_Move_Clock_001.wav</ShortName>
 					<CachePath>SFX/Turn_Move_Clock_001_8E324C96.wem</CachePath>
 				</File>
+				<File Id="204877032" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_BLACKOUT_001.wav</ShortName>
+					<CachePath>SFX/APT_event_BLACKOUT_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="228042333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_FIRE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_FIRE_001_56CEF360.wem</CachePath>
+				</File>
 				<File Id="255281743" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Pay_001.wav</ShortName>
 					<CachePath>SFX/Pay_001_8E324C96.wem</CachePath>
@@ -113,13 +131,33 @@
 					<ShortName>ATP_event_ELEVATOR_001_v2.wav</ShortName>
 					<CachePath>SFX/ATP_event_ELEVATOR_001_v2_8E324C96.wem</CachePath>
 				</File>
+				<File Id="323079966" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DISEASE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DISEASE_001_56CEF360.wem</CachePath>
+				</File>
 				<File Id="368940272" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_THIEF_001.wav</ShortName>
 					<CachePath>SFX/APT_event_THIEF_001_8E324C96.wem</CachePath>
 				</File>
+				<File Id="433461852" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DESOLATE_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="476423553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
+					<CachePath>SFX/APT_event_SEWERSMELL_001_17C4D16C.wem</CachePath>
+				</File>
 				<File Id="546900594" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
 					<CachePath>SFX/APT_event_SEWERSMELL_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_THIEF_001.wav</ShortName>
+					<CachePath>SFX/APT_event_THIEF_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="781588675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ATP_event_ELEVATOR_001_v2.wav</ShortName>
+					<CachePath>SFX/ATP_event_ELEVATOR_001_v2_56CEF360.wem</CachePath>
 				</File>
 				<File Id="942761984" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Demolition_001_v1.wav</ShortName>
@@ -133,44 +171,88 @@
 					<ShortName>APT_event_NOISY_001.wav</ShortName>
 					<CachePath>SFX/APT_event_NOISY_001_8E324C96.wem</CachePath>
 				</File>
+				<File Id="1058891980" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_NOISY_001.wav</ShortName>
+					<CachePath>SFX/APT_event_NOISY_001_56CEF360.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
-				<Event Id="3631016450" Name="Play_APT_event_BLACKOUT_001" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
+				<Event Id="3631016450" Name="Play_APT_event_BLACKOUT_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204877032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1044076768" Name="Play_APT_event_BLACKOUT_01" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
 					<MediaRefs>
 						<MediaRef Id="77654906"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2247640914" Name="Play_APT_event_DESOLATE_001" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
+				<Event Id="2247640914" Name="Play_APT_event_DESOLATE_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="261981424" Name="Play_APT_event_DESOLATE_01" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
 					<MediaRefs>
 						<MediaRef Id="107642226"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3286873849" Name="Play_APT_event_DISEASE_001" DurationType="OneShot" DurationMin="5.000021" DurationMax="5.000021">
+				<Event Id="3286873849" Name="Play_APT_event_DISEASE_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2096024345" Name="Play_APT_event_DISEASE_01" DurationType="OneShot" DurationMin="5.000021" DurationMax="5.000021">
 					<MediaRefs>
 						<MediaRef Id="264846884"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="4292701801" Name="Play_APT_event_FIRE_001" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
+				<Event Id="4292701801" Name="Play_APT_event_FIRE_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="838938441" Name="Play_APT_event_FIRE_01" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
 					<MediaRefs>
 						<MediaRef Id="148182739"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3907339813" Name="Play_APT_event_NOISY_001" DurationType="OneShot" DurationMin="5.2591043" DurationMax="5.2591043">
+				<Event Id="3907339813" Name="Play_APT_event_NOISY_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1058891980"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3248406045" Name="Play_APT_event_NOISY_01" DurationType="OneShot" DurationMin="5.2591043" DurationMax="5.2591043">
 					<MediaRefs>
 						<MediaRef Id="1037936340"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="767732750" Name="Play_APT_event_SEWERSMELL_001" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
 					<MediaRefs>
+						<MediaRef Id="476423553"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1812137508" Name="Play_APT_event_SEWERSMELL_01" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
+					<MediaRefs>
 						<MediaRef Id="546900594"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1871429987" Name="Play_APT_event_THIEF_001" DurationType="OneShot" DurationMin="5.368854" DurationMax="5.368854">
+				<Event Id="1871429987" Name="Play_APT_event_THIEF_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1894765735" Name="Play_APT_event_THIEF_01" DurationType="OneShot" DurationMin="5.368854" DurationMax="5.368854">
 					<MediaRefs>
 						<MediaRef Id="368940272"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1466792758" Name="Play_ATP_event_ELEVATOR_001_v2" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
+				<Event Id="1466792758" Name="Play_ATP_event_ELEVATOR_001_v2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="781588675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="305082626" Name="Play_ATP_event_ELEVATOR_01_v2" DurationType="OneShot" DurationMin="5.6088123" DurationMax="5.6088123">
 					<MediaRefs>
 						<MediaRef Id="288539458"/>
 					</MediaRefs>
@@ -206,8 +288,15 @@
 					</MediaRefs>
 				</Event>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="187723092" Name="INDEX1"/>
+				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="2212414277" Name="DIST"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{EDF72EBE-EA0E-9E75-8C6A-E87BEF620E4A}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{2FFA73B2-8D3E-D04B-DAAC-16392C17A5AD}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -332,5 +421,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E13C6B75-748D-260F-D27A-01BD48F6998B}</FileHash>
+	<FileHash>{2C92C5B2-092D-9626-3D8F-52F5F9CDEC24}</FileHash>
 </SoundBanksInfo>

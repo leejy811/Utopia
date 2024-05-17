@@ -290,6 +290,98 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="Condition2" ID="{4276E201-1B42-4C2B-A3FA-506CC6B10A01}" ShortID="106590694">
+					<ChildrenList>
+						<Event Name="Play_APT_event_SEWERSMELL_01" ID="{4C30D963-6251-452E-B0AB-70C68A4BE453}">
+							<ChildrenList>
+								<Action Name="" ID="{2F2192FB-79B1-4BB3-84E9-C2A76F638FE6}" ShortID="76605362">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="APT_event_SEWERSMELL_01" ID="{C980C0A4-0640-46BC-977E-E6B809DDC25E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_APT_event_THIEF_01" ID="{D4333103-697A-4230-8F22-CF517117DD00}">
+							<ChildrenList>
+								<Action Name="" ID="{B927E508-59F4-41A2-A3C9-FD546B06231B}" ShortID="515880209">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="APT_event_THIEF_01" ID="{3CE90CC1-3F05-4D98-9D22-50873B038A09}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_APT_event_BLACKOUT_01" ID="{0DE783FA-8D9D-4C9F-9F47-17D7CE6963E5}">
+							<ChildrenList>
+								<Action Name="" ID="{BD07FD57-7FBB-4A0A-AE29-46977764E344}" ShortID="167153350">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="APT_event_BLACKOUT_01" ID="{859D8A15-A72E-414A-AB45-5FB818E9E484}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_APT_event_NOISY_01" ID="{B4C7B08B-E1FA-4460-B1DF-6013D99936E3}">
+							<ChildrenList>
+								<Action Name="" ID="{40002C2F-C5DE-4536-8407-208A6CF0AE7A}" ShortID="876343993">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="APT_event_NOISY_01" ID="{6ADDD836-9DC1-4791-800E-BED499A6D7F5}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_ATP_event_ELEVATOR_01_v2" ID="{5F57381E-569B-44D1-87CF-0E7E667A29A3}">
+							<ChildrenList>
+								<Action Name="" ID="{8F91F0F2-1614-4DB1-9AC9-DB44C00F06DD}" ShortID="833333781">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="ATP_event_ELEVATOR_01_v2" ID="{5560CB62-8809-441C-A612-A040900F7B1D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_APT_event_DESOLATE_01" ID="{B6D7F097-8738-4B42-A1B1-6EC3B0CEFEB6}">
+							<ChildrenList>
+								<Action Name="" ID="{D17EBB49-480C-4F1F-AC07-F70743D2B32C}" ShortID="732380314">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="APT_event_DESOLATE_01" ID="{573A27D2-6E1C-4371-BB4B-0E0031CAB031}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_APT_event_FIRE_01" ID="{3B76F9D2-2ACA-4789-BD1F-0080231B93FA}">
+							<ChildrenList>
+								<Action Name="" ID="{79FF46BA-0253-4450-9D1E-A6CD24E141F7}" ShortID="1024117283">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="APT_event_FIRE_01" ID="{05127E7A-747E-47B6-AE2C-896F75FC1D1B}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_APT_event_DISEASE_01" ID="{6C10D351-D04F-4481-A640-F17183A3FCA2}">
+							<ChildrenList>
+								<Action Name="" ID="{FA5A60E6-540B-4D3A-A276-DB5F55A45B8E}" ShortID="632662989">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="APT_event_DISEASE_01" ID="{985CCF1D-FB53-46E2-BD03-607CD0F27025}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
