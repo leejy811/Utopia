@@ -48,7 +48,7 @@ public class UtilityBuildingIntroUI : BuildingIntroUI
         if(building.UpdateHappiness(true) == 0 && building.CalculateBonus(true) == 0)
         {
             paramHappinessText.gameObject.SetActive(true);
-            paramHappinessText.text = "평범한 일상 진행중";
+            paramHappinessText.text = "없음";
         }
     }
 

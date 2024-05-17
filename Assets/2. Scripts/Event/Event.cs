@@ -104,11 +104,11 @@ public struct Event
         string[] valueString = { "상품가격", "입장료", "취업률" };
 
         if (valueType == ValueType.utility)
-            res += valueString[targetIndex - 1];
+            res += (duplication != 3 ? "<color=#FFAB40>" : "") + valueString[targetIndex - 1];
         else if (valueType == ValueType.Influence)
-            res += "영향력";
+            res += (duplication != 3 ? "<color=#FFAB40>" : "") + "영향력";
         else
-            res += "행복도";
+            res += (duplication != 3 ? "<color=#FF0000>" : "") + "행복도";
 
         if (duplication == 3)
             res += " <color=#FF0000>대폭</color>";
