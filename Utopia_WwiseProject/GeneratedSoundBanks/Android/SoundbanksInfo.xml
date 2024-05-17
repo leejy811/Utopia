@@ -83,7 +83,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{2797E0C6-12A6-059F-17A1-881544C10D99}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{4AF69681-6711-EE1E-F25D-E2B991DE70F4}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -154,7 +154,17 @@
 						<MediaRef Id="204877032"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="523596106" Name="Play_APT_event_BLACKOUT_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204877032"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1044076768" Name="Play_APT_event_BLACKOUT_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204877032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="527616348" Name="Play_APT_event_BLACKOUT_01_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="204877032"/>
 					</MediaRefs>
@@ -164,7 +174,17 @@
 						<MediaRef Id="433461852"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="846636250" Name="Play_APT_event_DESOLATE_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="261981424" Name="Play_APT_event_DESOLATE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3788865580" Name="Play_APT_event_DESOLATE_01_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="433461852"/>
 					</MediaRefs>
@@ -174,7 +194,17 @@
 						<MediaRef Id="323079966"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3372231965" Name="Play_APT_event_DISEASE_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2096024345" Name="Play_APT_event_DISEASE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4293701245" Name="Play_APT_event_DISEASE_01_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="323079966"/>
 					</MediaRefs>
@@ -184,7 +214,17 @@
 						<MediaRef Id="228042333"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3024223309" Name="Play_APT_event_FIRE_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="838938441" Name="Play_APT_event_FIRE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="278321261" Name="Play_APT_event_FIRE_01_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="228042333"/>
 					</MediaRefs>
@@ -194,7 +234,17 @@
 						<MediaRef Id="1058891980"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4106328849" Name="Play_APT_event_NOISY_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1058891980"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3248406045" Name="Play_APT_event_NOISY_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1058891980"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="737168217" Name="Play_APT_event_NOISY_01_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="1058891980"/>
 					</MediaRefs>
@@ -204,7 +254,17 @@
 						<MediaRef Id="476423553"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1106490366" Name="Play_APT_event_SEWERSMELL_001_1" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
+					<MediaRefs>
+						<MediaRef Id="476423553"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1812137508" Name="Play_APT_event_SEWERSMELL_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="546900594"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1769151672" Name="Play_APT_event_SEWERSMELL_01_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="546900594"/>
 					</MediaRefs>
@@ -214,7 +274,17 @@
 						<MediaRef Id="648936715"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1010891971" Name="Play_APT_event_THIEF_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1894765735" Name="Play_APT_event_THIEF_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3858991871" Name="Play_APT_event_THIEF_01_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="648936715"/>
 					</MediaRefs>
@@ -224,7 +294,17 @@
 						<MediaRef Id="781588675"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1577833558" Name="Play_ATP_event_ELEVATOR_001_v2_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="781588675"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="305082626" Name="Play_ATP_event_ELEVATOR_01_v2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="781588675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4089090122" Name="Play_ATP_event_ELEVATOR_01_v2_1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="781588675"/>
 					</MediaRefs>
@@ -393,5 +473,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{4170797B-010A-63C0-177A-B934419149A6}</FileHash>
+	<FileHash>{4EC9D81E-7D9C-C54C-178C-68C25EB981D8}</FileHash>
 </SoundBanksInfo>

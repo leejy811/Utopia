@@ -1,26 +1,42 @@
 Event	ID	Name			Wwise Object Path	Notes
 	261981424	Play_APT_event_DESOLATE_01			\Default Work Unit\Condition2\Play_APT_event_DESOLATE_01	
+	278321261	Play_APT_event_FIRE_01_1			\Default Work Unit\condition2-1\Play_APT_event_FIRE_01_1	
 	305082626	Play_ATP_event_ELEVATOR_01_v2			\Default Work Unit\Condition2\Play_ATP_event_ELEVATOR_01_v2	
+	523596106	Play_APT_event_BLACKOUT_001_1			\Default Work Unit\conditionindex2\Play_APT_event_BLACKOUT_001_1	
+	527616348	Play_APT_event_BLACKOUT_01_1			\Default Work Unit\condition2-1\Play_APT_event_BLACKOUT_01_1	
 	669897392	Play_Demolition_001_v1			\Default Work Unit\UI\Play_Demolition_001_v1	
-	767732750	Play_APT_event_SEWERSMELL_001			\Default Work Unit\Condition\Play_APT_event_SEWERSMELL_001	
+	737168217	Play_APT_event_NOISY_01_1			\Default Work Unit\condition2-1\Play_APT_event_NOISY_01_1	
+	767732750	Play_APT_event_SEWERSMELL_001			\Default Work Unit\Conditionindex1\Play_APT_event_SEWERSMELL_001	
 	838938441	Play_APT_event_FIRE_01			\Default Work Unit\Condition2\Play_APT_event_FIRE_01	
+	846636250	Play_APT_event_DESOLATE_001_1			\Default Work Unit\conditionindex2\Play_APT_event_DESOLATE_001_1	
+	1010891971	Play_APT_event_THIEF_001_1			\Default Work Unit\conditionindex2\Play_APT_event_THIEF_001_1	
 	1044076768	Play_APT_event_BLACKOUT_01			\Default Work Unit\Condition2\Play_APT_event_BLACKOUT_01	
+	1106490366	Play_APT_event_SEWERSMELL_001_1			\Default Work Unit\conditionindex2\Play_APT_event_SEWERSMELL_001_1	
 	1278673985	Play_Building_click_003			\Default Work Unit\UI\Play_Building_click_003	
-	1466792758	Play_ATP_event_ELEVATOR_001_v2			\Default Work Unit\Condition\Play_ATP_event_ELEVATOR_001_v2	
+	1466792758	Play_ATP_event_ELEVATOR_001_v2			\Default Work Unit\Conditionindex1\Play_ATP_event_ELEVATOR_001_v2	
+	1577833558	Play_ATP_event_ELEVATOR_001_v2_1			\Default Work Unit\conditionindex2\Play_ATP_event_ELEVATOR_001_v2_1	
+	1769151672	Play_APT_event_SEWERSMELL_01_1			\Default Work Unit\condition2-1\Play_APT_event_SEWERSMELL_01_1	
 	1812137508	Play_APT_event_SEWERSMELL_01			\Default Work Unit\Condition2\Play_APT_event_SEWERSMELL_01	
-	1871429987	Play_APT_event_THIEF_001			\Default Work Unit\Condition\Play_APT_event_THIEF_001	
+	1871429987	Play_APT_event_THIEF_001			\Default Work Unit\Conditionindex1\Play_APT_event_THIEF_001	
 	1894765735	Play_APT_event_THIEF_01			\Default Work Unit\Condition2\Play_APT_event_THIEF_01	
 	2025304052	Play_Pay_001			\Default Work Unit\UI\Play_Pay_001	
 	2096024345	Play_APT_event_DISEASE_01			\Default Work Unit\Condition2\Play_APT_event_DISEASE_01	
-	2247640914	Play_APT_event_DESOLATE_001			\Default Work Unit\Condition\Play_APT_event_DESOLATE_001	
+	2247640914	Play_APT_event_DESOLATE_001			\Default Work Unit\Conditionindex1\Play_APT_event_DESOLATE_001	
 	2475783214	Play_Turn_Move_Clock_001			\Default Work Unit\UI\Play_Turn_Move_Clock_001	
+	3024223309	Play_APT_event_FIRE_001_1			\Default Work Unit\conditionindex2\Play_APT_event_FIRE_001_1	
 	3248406045	Play_APT_event_NOISY_01			\Default Work Unit\Condition2\Play_APT_event_NOISY_01	
-	3286873849	Play_APT_event_DISEASE_001			\Default Work Unit\Condition\Play_APT_event_DISEASE_001	
-	3631016450	Play_APT_event_BLACKOUT_001			\Default Work Unit\Condition\Play_APT_event_BLACKOUT_001	
+	3286873849	Play_APT_event_DISEASE_001			\Default Work Unit\Conditionindex1\Play_APT_event_DISEASE_001	
+	3372231965	Play_APT_event_DISEASE_001_1			\Default Work Unit\conditionindex2\Play_APT_event_DISEASE_001_1	
+	3631016450	Play_APT_event_BLACKOUT_001			\Default Work Unit\Conditionindex1\Play_APT_event_BLACKOUT_001	
+	3788865580	Play_APT_event_DESOLATE_01_1			\Default Work Unit\condition2-1\Play_APT_event_DESOLATE_01_1	
+	3858991871	Play_APT_event_THIEF_01_1			\Default Work Unit\condition2-1\Play_APT_event_THIEF_01_1	
 	3906795593	Play_Mouse_001_v1			\Default Work Unit\UI\Play_Mouse_001_v1	
-	3907339813	Play_APT_event_NOISY_001			\Default Work Unit\Condition\Play_APT_event_NOISY_001	
+	3907339813	Play_APT_event_NOISY_001			\Default Work Unit\Conditionindex1\Play_APT_event_NOISY_001	
 	3972534815	Play_Tile_Buy_001			\Default Work Unit\UI\Play_Tile_Buy_001	
-	4292701801	Play_APT_event_FIRE_001			\Default Work Unit\Condition\Play_APT_event_FIRE_001	
+	4089090122	Play_ATP_event_ELEVATOR_01_v2_1			\Default Work Unit\condition2-1\Play_ATP_event_ELEVATOR_01_v2_1	
+	4106328849	Play_APT_event_NOISY_001_1			\Default Work Unit\conditionindex2\Play_APT_event_NOISY_001_1	
+	4292701801	Play_APT_event_FIRE_001			\Default Work Unit\Conditionindex1\Play_APT_event_FIRE_001	
+	4293701245	Play_APT_event_DISEASE_01_1			\Default Work Unit\condition2-1\Play_APT_event_DISEASE_01_1	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	187723092	INDEX1			\Default Work Unit\INDEX1	
@@ -32,17 +48,17 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	119271698	Tile_Buy_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Tile_Buy_001(short)_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Tile_Buy_001		95412
 	175516682	Turn_Move_Clock_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Turn_Move_Clock_001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Turn_Move_Clock_001		470356
-	204877032	APT_event_BLACKOUT_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_BLACKOUT_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_BLACKOUT_001		1076988
+	204877032	APT_event_BLACKOUT_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_BLACKOUT_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_BLACKOUT_001		1076988
 	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_FIRE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_FIRE_01		1079100
 	255281743	Pay_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Pay_001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pay_001		95412
 	256641271	Building_click_003	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Building_click_003_979594D8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Building_click_003		4812
-	323079966	APT_event_DISEASE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_DISEASE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_DISEASE_001		960100
+	323079966	APT_event_DISEASE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_DISEASE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_DISEASE_001		960100
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_DESOLATE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_DESOLATE_01		1076988
-	476423553	APT_event_SEWERSMELL_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_SEWERSMELL_001_FCC36D9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\APT_event_SEWERSMELL_001		1079100
+	476423553	APT_event_SEWERSMELL_001_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_SEWERSMELL_001_FCC36D9C.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\APT_event_SEWERSMELL_001_1		1079100
 	546900594	APT_event_SEWERSMELL_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_SEWERSMELL_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_SEWERSMELL_01		1079100
 	648936715	APT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_THIEF_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_THIEF_01		1030916
-	781588675	ATP_event_ELEVATOR_001_v2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\ATP_event_ELEVATOR_001_v2_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition\ATP_event_ELEVATOR_001_v2		1076988
+	781588675	ATP_event_ELEVATOR_001_v2_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\ATP_event_ELEVATOR_001_v2_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\ATP_event_ELEVATOR_001_v2_1		1076988
 	942761984	Demolition_001_v1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Demolition_001_v1_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Demolition_001_v1		69726
 	991450525	Mouse_001_v1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Mouse_001_v1_927ACF2B.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Mouse_001_v1		9504
-	1058891980	APT_event_NOISY_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_NOISY_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_NOISY_01		1009844
+	1058891980	APT_event_NOISY_001_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_NOISY_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\APT_event_NOISY_001_1		1009844
 

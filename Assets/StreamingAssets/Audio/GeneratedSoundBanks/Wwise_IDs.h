@@ -14,21 +14,37 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_001 = 3631016450U;
+        static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_001_1 = 523596106U;
         static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_01 = 1044076768U;
+        static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_01_1 = 527616348U;
         static const AkUniqueID PLAY_APT_EVENT_DESOLATE_001 = 2247640914U;
+        static const AkUniqueID PLAY_APT_EVENT_DESOLATE_001_1 = 846636250U;
         static const AkUniqueID PLAY_APT_EVENT_DESOLATE_01 = 261981424U;
+        static const AkUniqueID PLAY_APT_EVENT_DESOLATE_01_1 = 3788865580U;
         static const AkUniqueID PLAY_APT_EVENT_DISEASE_001 = 3286873849U;
+        static const AkUniqueID PLAY_APT_EVENT_DISEASE_001_1 = 3372231965U;
         static const AkUniqueID PLAY_APT_EVENT_DISEASE_01 = 2096024345U;
+        static const AkUniqueID PLAY_APT_EVENT_DISEASE_01_1 = 4293701245U;
         static const AkUniqueID PLAY_APT_EVENT_FIRE_001 = 4292701801U;
+        static const AkUniqueID PLAY_APT_EVENT_FIRE_001_1 = 3024223309U;
         static const AkUniqueID PLAY_APT_EVENT_FIRE_01 = 838938441U;
+        static const AkUniqueID PLAY_APT_EVENT_FIRE_01_1 = 278321261U;
         static const AkUniqueID PLAY_APT_EVENT_NOISY_001 = 3907339813U;
+        static const AkUniqueID PLAY_APT_EVENT_NOISY_001_1 = 4106328849U;
         static const AkUniqueID PLAY_APT_EVENT_NOISY_01 = 3248406045U;
+        static const AkUniqueID PLAY_APT_EVENT_NOISY_01_1 = 737168217U;
         static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_001 = 767732750U;
+        static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_001_1 = 1106490366U;
         static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_01 = 1812137508U;
+        static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_01_1 = 1769151672U;
         static const AkUniqueID PLAY_APT_EVENT_THIEF_001 = 1871429987U;
+        static const AkUniqueID PLAY_APT_EVENT_THIEF_001_1 = 1010891971U;
         static const AkUniqueID PLAY_APT_EVENT_THIEF_01 = 1894765735U;
+        static const AkUniqueID PLAY_APT_EVENT_THIEF_01_1 = 3858991871U;
         static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_001_V2 = 1466792758U;
+        static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_001_V2_1 = 1577833558U;
         static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_01_V2 = 305082626U;
+        static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_01_V2_1 = 4089090122U;
         static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_BGMSEQUNCE1 = 1994810337U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;
