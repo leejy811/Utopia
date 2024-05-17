@@ -53,15 +53,15 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
-							<Value>2.2663252240717</Value>
+							<Value>11.2740076824584</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>2.01819079708438</Value>
+							<Value>1.21419213251954</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
-							<Value>5.37772087067862</Value>
+							<Value>0.957548510176672</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
