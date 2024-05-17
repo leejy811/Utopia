@@ -61,10 +61,15 @@ public class BuildingIntroUI : MonoBehaviour
 
             eventTexts[i].gameObject.SetActive(true);
             eventTexts[i].text = "사회현상 발생으로 인해 " + building.curEvents[i].GetEventToString();
-            AkSoundEngine.SetRTPCValue("INDEX" + (i + 1), building.curEvents[i].eventIndex);
         }
 
-        if(building.GetEventProblemCount() == 2)
+        float id1 = building.curEvents.Count == 0 ? -1f : building.curEvents[0].eventIndex + 0.5f;
+        float id2 = building.curEvents.Count == 2 ? building.curEvents[1].eventIndex + 0.5f : -1f;
+
+        AkSoundEngine.SetRTPCValue("INDEX1", id1);
+        AkSoundEngine.SetRTPCValue("INDEX2", id2);
+
+        if (building.GetEventProblemCount() == 2)
             eventTexts[1].gameObject.SetActive(false);
     }
 
