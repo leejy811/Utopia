@@ -3533,6 +3533,9 @@
 				<Folder Name="condition2" ID="{ACD5E92D-53BA-445F-A9D3-B94E8BEB6B33}" ShortID="448992594">
 					<ChildrenList>
 						<Sound Name="APT_event_BLACKOUT_01" ID="{859D8A15-A72E-414A-AB45-5FB818E9E484}" ShortID="577940667">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -3546,7 +3549,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_BLACKOUT_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="77654906"/>
+										<MediaID ID="204877032"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -3714,6 +3717,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_DESOLATE_01" ID="{573A27D2-6E1C-4371-BB4B-0E0031CAB031}" ShortID="807140186">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -3727,7 +3733,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_DESOLATE_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="107642226"/>
+										<MediaID ID="433461852"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -3895,6 +3901,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_DISEASE_01" ID="{985CCF1D-FB53-46E2-BD03-607CD0F27025}" ShortID="323107868">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -3908,7 +3917,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_DISEASE_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="264846884"/>
+										<MediaID ID="323079966"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -4076,6 +4085,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_FIRE_01" ID="{05127E7A-747E-47B6-AE2C-896F75FC1D1B}" ShortID="778395461">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -4089,7 +4101,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_FIRE_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="148182739"/>
+										<MediaID ID="228042333"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -4257,6 +4269,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_NOISY_01" ID="{6ADDD836-9DC1-4791-800E-BED499A6D7F5}" ShortID="811287965">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -4270,7 +4285,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_NOISY_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="1037936340"/>
+										<MediaID ID="1058891980"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -4438,6 +4453,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_SEWERSMELL_01" ID="{C980C0A4-0640-46BC-977E-E6B809DDC25E}" ShortID="33698301">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -4619,6 +4637,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="APT_event_THIEF_01" ID="{3CE90CC1-3F05-4D98-9D22-50873B038A09}" ShortID="175852678">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -4632,7 +4653,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_THIEF_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="368940272"/>
+										<MediaID ID="648936715"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -4800,6 +4821,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="ATP_event_ELEVATOR_01_v2" ID="{5560CB62-8809-441C-A612-A040900F7B1D}" ShortID="250428262">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -4813,7 +4837,7 @@
 									<Language>SFX</Language>
 									<AudioFile>ATP_event_ELEVATOR_001_v2.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="288539458"/>
+										<MediaID ID="781588675"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
