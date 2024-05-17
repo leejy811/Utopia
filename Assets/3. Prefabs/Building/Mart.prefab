@@ -80,9 +80,9 @@ MonoBehaviour:
     min: 540
     cur: 0
   utilityValue:
-    max: 100
-    min: 50
-    cur: 70
+    max: 60
+    min: 30
+    cur: 50
 --- !u!1001 &1938427413157039273
 PrefabInstance:
   m_ObjectHideFlags: 0

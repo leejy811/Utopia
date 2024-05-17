@@ -128,10 +128,8 @@ public class UIManager : MonoBehaviour, ISubject
         imageRectTransform.gameObject.SetActive(true);
         if (previousHappiness > 20 && NewsHappiness <= 20)
         {
-
-
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "ÀÌ µµ½Ã°¡ Çàº¹ÇÏ´Ù´Â ´À³¦À» ¾Ë±î¿ä?";
+            NewsMessage2.text = "ì´ê²Œ ë„ì‹œëƒ";
 
             Canvas.ForceUpdateCanvases();
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -140,26 +138,26 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "ÀÌ µµ½Ã°¡ Çàº¹ÇÏ´Ù´Â ´À³¦À» ¾Ë±î¿ä?";
+                NewsMessage.text = "ì´ê²Œ ë„ì‹œëƒ";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "ÀÌ °÷µµ ´Ù¸¥ °÷ÀÌ¶û ´Ù¸¦°Ô ¾ø±¸³ª...";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "ÀÌ °÷µµ ´Ù¸¥ °÷ÀÌ¶û ´Ù¸¦°Ô ¾ø±¸³ª...";
-            yield return new WaitForSeconds(2);
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ì´ ê³³ë„ ë‹¤ë¥¸ ê³³ì´ë‘ ë‹¤ë¥¼ê²Œ ì—†êµ¬ë‚˜...";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ì´ ê³³ë„ ë‹¤ë¥¸ ê³³ì´ë‘ ë‹¤ë¥¼ê²Œ ì—†êµ¬ë‚˜...";
+            // yield return new WaitForSeconds(2);
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -173,7 +171,7 @@ public class UIManager : MonoBehaviour, ISubject
         {
 
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "°³°°ÀÌ ºÎÈ°¤»¤»";
+            NewsMessage2.text = "ì‹œì¥ë‹˜ ì˜ ì¢€ í•´ë´ìš”...";
 
             Canvas.ForceUpdateCanvases();
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -182,26 +180,26 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "°³°°ÀÌ ºÎÈ°¤»¤»";
+                NewsMessage.text = "ì‹œì¥ë‹˜ ì˜ ì¢€ í•´ë´ìš”...";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "ÀÌ °÷µµ ´Ù¸¥ °÷ÀÌ¶û ´Ù¸¦°Ô ¾ø±¸³ª...¶ó°í ÇÒ»·.";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "ÀÌ °÷µµ ´Ù¸¥ °÷ÀÌ¶û ´Ù¸¦°Ô ¾ø±¸³ª...¶ó°í ÇÒ»·.";
-            yield return new WaitForSeconds(2);
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ì´ ê³³ë„ ë‹¤ë¥¸ ê³³ì´ë‘ ë‹¤ë¥¼ê²Œ ì—†êµ¬ë‚˜...ë¼ê³  í• ë»”";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ì´ ê³³ë„ ë‹¤ë¥¸ ê³³ì´ë‘ ë‹¤ë¥¼ê²Œ ì—†êµ¬ë‚˜...ë¼ê³  í• ë»”";
+            // yield return new WaitForSeconds(2);
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -214,7 +212,7 @@ public class UIManager : MonoBehaviour, ISubject
         else if (previousHappiness > 40 && NewsHappiness <= 40)
         {
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "¼ú ÇÑÀÜ ¸¶¼Ì½À´Ï´Ù...";
+            NewsMessage2.text = "ì‹œì¥ë‹˜ ì €í¬ê°€ ë­˜ ë„ì™€ë“œë ¤ì•¼ ë ê¹Œìš”?";
 
             Canvas.ForceUpdateCanvases(); 
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -223,27 +221,27 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "¼ú ÇÑÀÜ ¸¶¼Ì½À´Ï´Ù...";
+                NewsMessage.text = "ì‹œì¥ë‹˜ ì €í¬ê°€ ë­˜ ë„ì™€ë“œë ¤ì•¼ ë ê¹Œìš”?";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "¿ì¸® ½ÃÀå Æ²´Ï ¾Ğ¼ö";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "¿ì¸® ½ÃÀå Æ²´Ï ¾Ğ¼ö";
-            yield return new WaitForSeconds(2);
-
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ìš°ë¦¬ ì‹œì¥ í‹€ë‹ˆ ì••ìˆ˜";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ìš°ë¦¬ ì‹œì¥ í‹€ë‹ˆ ì••ìˆ˜";
+            // yield return new WaitForSeconds(2);
+            //
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -256,7 +254,7 @@ public class UIManager : MonoBehaviour, ISubject
         else if (previousHappiness < 40 && NewsHappiness >= 40)
         {
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "¼úÀº ¸¶¼ÌÁö¸¸ À½ÁÖ À½ÀüÀº ÇÏÁö ¾Ê¾Ò´Ù.";
+            NewsMessage2.text = "ë‹¤í–‰íˆ ë„ì‹œê°€ ì ì  ì¢‹ì•„ì§€ê³  ìˆì–´";
 
             Canvas.ForceUpdateCanvases();
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -265,26 +263,26 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "¼úÀº ¸¶¼ÌÁö¸¸ À½ÁÖ À½ÀüÀº ÇÏÁö ¾Ê¾Ò´Ù.";
+                NewsMessage.text = "ë‹¤í–‰íˆ ë„ì‹œê°€ ì ì  ì¢‹ì•„ì§€ê³  ìˆì–´";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "½ÃÀå´Ô ÀÓÇÃ¶õÆ® ½É¾îµå¸±°Ô¿ä";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "½ÃÀå´Ô ÀÓÇÃ¶õÆ® ½É¾îµå¸±°Ô¿ä";
-            yield return new WaitForSeconds(2);
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ì‹œì¥ë‹˜ ì„í”Œë€íŠ¸ ì‹¬ì–´ë“œë¦¬ê²Œìš”";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ì‹œì¥ë‹˜ ì„í”Œë€íŠ¸ ì‹¬ì–´ë“œë¦¬ê²Œìš”";
+            // yield return new WaitForSeconds(2);
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -299,7 +297,7 @@ public class UIManager : MonoBehaviour, ISubject
         {
 
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "½ÃÀå¾Æ ½Ã¹ÎÀ» ¼ÓÀÎ°Å´Ï?";
+            NewsMessage2.text = "ìš”ì¦˜ ë„ì‹œ ìš´ì˜ì´ ì¢€ ì´ìƒí•˜ì§€ ì•Šì•„?";
 
             Canvas.ForceUpdateCanvases();
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -308,26 +306,26 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "½ÃÀå¾Æ ½Ã¹ÎÀ» ¼ÓÀÎ°Å´Ï?";
+                NewsMessage.text = "ìš”ì¦˜ ë„ì‹œ ìš´ì˜ì´ ì¢€ ì´ìƒí•˜ì§€ ì•Šì•„?";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "ÃëÁ÷ÀÌ ÀßµÇ´Â »çÈ¸¸¦ ¸¸µé´ø°¡";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "ÃëÁ÷ÀÌ ÀßµÇ´Â »çÈ¸¸¦ ¸¸µé´ø°¡";
-            yield return new WaitForSeconds(2);
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ì·¨ì§ì´ ì˜ë˜ëŠ” ì‚¬íšŒë¥¼ ë§Œë“¤ë˜ê°€";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ì·¨ì§ì´ ì˜ë˜ëŠ” ì‚¬íšŒë¥¼ ë§Œë“¤ë˜ê°€";
+            // yield return new WaitForSeconds(2);
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -341,7 +339,7 @@ public class UIManager : MonoBehaviour, ISubject
         {
 
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "ÀÌ°Å º¸°í ¿ì¸® ½ÃÀå´Ô »Ì±â·Î Çß´Ù.";
+            NewsMessage2.text = "ì‹œì¥ë‹˜ ë¯¿ê³  ìˆì—ˆìŠµë‹ˆë‹¤! ìš”ì¦˜ ë„ì‹œê°€ ë„ˆë¬´ ì¢‹ì•„ìš”!";
 
             Canvas.ForceUpdateCanvases();
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -350,26 +348,26 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "ÀÌ°Å º¸°í ¿ì¸® ½ÃÀå´Ô »Ì±â·Î Çß´Ù.";
+                NewsMessage.text = "ì‹œì¥ë‹˜ ë¯¿ê³  ìˆì—ˆìŠµë‹ˆë‹¤! ìš”ì¦˜ ë„ì‹œê°€ ë„ˆë¬´ ì¢‹ì•„ìš”!";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "Áö±İºÎÅÍ ½ÃÀå´Ô°ú ³ª´Â ÇÑ ¸öÀ¸·Î °£ÁÖÇÑ´Ù";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "Áö±İºÎÅÍ ½ÃÀå´Ô°ú ³ª´Â ÇÑ ¸öÀ¸·Î °£ÁÖÇÑ´Ù";
-            yield return new WaitForSeconds(2);
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ì§€ê¸ˆë¶€í„° ì‹œì¥ë‹˜ê³¼ ë‚˜ëŠ” í•œ ëª¸ìœ¼ë¡œ ê°„ì£¼í•œë‹¤.";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ì§€ê¸ˆë¶€í„° ì‹œì¥ë‹˜ê³¼ ë‚˜ëŠ” í•œ ëª¸ìœ¼ë¡œ ê°„ì£¼í•œë‹¤.";
+            // yield return new WaitForSeconds(2);
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -382,7 +380,7 @@ public class UIManager : MonoBehaviour, ISubject
         else if (previousHappiness > 80 && NewsHappiness <= 80)
         {
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "ÀÌ°÷ÀÌ À¯ÅäÇÇ¾Æ¶ó´Â°Ç Á¤°èÀÇ ÇĞ¼³";
+            NewsMessage2.text = "ì¡°ê¸ˆë§Œ ë”...í™”ì´íŒ…ì…ë‹ˆë‹¤!";
 
             Canvas.ForceUpdateCanvases();
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -391,26 +389,26 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "ÀÌ°÷ÀÌ À¯ÅäÇÇ¾Æ¶ó´Â°Ç Á¤°èÀÇ ÇĞ¼³";
+                NewsMessage.text = "ì¡°ê¸ˆë§Œ ë”...í™”ì´íŒ…ì…ë‹ˆë‹¤!";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "¹¹ Á¶±İ ¾Æ½¬¿î°ÅÁö~";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "¹¹ Á¶±İ ¾Æ½¬¿î°ÅÁö~";
-            yield return new WaitForSeconds(2);
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ë­ ì¡°ê¸ˆ ì•„ì‰¬ìš´ê±°ì§€~";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ë­ ì¡°ê¸ˆ ì•„ì‰¬ìš´ê±°ì§€~";
+            // yield return new WaitForSeconds(2);
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -422,7 +420,7 @@ public class UIManager : MonoBehaviour, ISubject
         else if (previousHappiness < 80 && NewsHappiness >= 80)
         {
             previousHappiness = NewsHappiness;
-            NewsMessage2.text = "ÀÌ°÷ÀÌ À¯ÅäÇÇ¾Æ¶ó´Â°Ô ÇĞ°èÀÇ Á¤¼³";
+            NewsMessage2.text = "ì´ê³³ì´ ìœ í† í”¼ì•„ë¼ëŠ”ê²Œ í•™ê³„ì˜ ì •ì„¤";
 
             Canvas.ForceUpdateCanvases();
             float preferredWidth = NewsMessage2.preferredWidth;
@@ -431,26 +429,26 @@ public class UIManager : MonoBehaviour, ISubject
 
             imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
             {
-                NewsMessage.text = "ÀÌ°÷ÀÌ À¯ÅäÇÇ¾Æ¶ó´Â°Ô ÇĞ°èÀÇ Á¤¼³";
+                NewsMessage.text = "ì´ê³³ì´ ìœ í† í”¼ì•„ë¼ëŠ”ê²Œ í•™ê³„ì˜ ì •ì„¤";
             });
             yield return new WaitForSeconds(2);
 
 
             NewsMessage.text = " ";
-            NewsMessage2.text = "µµ½Ã ¿ª»ç»ó ÃÖ°í...GOAT";
-
-            yield return new WaitForSeconds(1);
-            Canvas.ForceUpdateCanvases();
-
-            preferredWidth = NewsMessage2.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration);
-
-            NewsMessage.text = "µµ½Ã ¿ª»ç»ó ÃÖ°í...GOAT";
-            yield return new WaitForSeconds(2);
-            NewsMessage.text = " ";
+            // NewsMessage2.text = "ë„ì‹œ ì—­ì‚¬ìƒ ìµœê³ ...GOAT";
+            //
+            // yield return new WaitForSeconds(1);
+            // Canvas.ForceUpdateCanvases();
+            //
+            // preferredWidth = NewsMessage2.preferredWidth;
+            //
+            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
+            //
+            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
+            //
+            // NewsMessage.text = "ë„ì‹œ ì—­ì‚¬ìƒ ìµœê³ ...GOAT";
+            // yield return new WaitForSeconds(2);
+            // NewsMessage.text = " ";
 
             preferredWidth = NewsMessage.preferredWidth;
 
@@ -465,9 +463,9 @@ public class UIManager : MonoBehaviour, ISubject
 
     Vector2 CalculateTextSize(string text)
     {
-        // ÀÓ½Ã·Î ÅØ½ºÆ®¸¦ ¼³Á¤
+        // ï¿½Ó½Ã·ï¿½ ï¿½Ø½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         textComponent.text = text;
-        // ÀûÀıÇÑ Å©±â¸¦ ¹İÈ¯ (ÀÌ ¿¹½Ã¿¡¼­´Â °£´ÜÇÏ°Ô °¡·Î Å©±â¸¸ Á¶Á¤)
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å©ï¿½â¸¦ ï¿½ï¿½È¯ (ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ Å©ï¿½â¸¸ ï¿½ï¿½ï¿½ï¿½)
         return new Vector2(textComponent.preferredWidth + 20, imageRectTransform.sizeDelta.y);
     }
 
