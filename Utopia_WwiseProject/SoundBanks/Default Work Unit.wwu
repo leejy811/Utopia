@@ -30,6 +30,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_APT_event_FIRE_001_1" ID="{4B79ED64-BEA3-405C-B05C-5B78162D8829}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Building_click_003" ID="{99643F0C-92A0-4187-8A9D-7FC153EC194A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_SEWERSMELL_001" ID="{8877B2F3-38B3-41A3-9FF1-710C1BA39027}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Pay_001" ID="{0D38955D-9DAC-41CC-BD61-35BFD685FDCC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_SEWERSMELL_01_1" ID="{A4824685-8641-420E-921E-E2725F7A9391}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_NOISY_001_1" ID="{4521348D-56E6-422A-910F-E1F8DBA1527A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -50,7 +51,6 @@
 						<ObjectRef Name="Play_APT_event_DISEASE_001" ID="{C343BEF2-6FFE-4934-999B-83C3CC0C4550}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_DESOLATE_001_1" ID="{6D758148-9642-49C0-BC95-56E70C6674BF}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_BLACKOUT_01_1" ID="{F13766DF-9306-49DD-80D1-BE57314ECAE9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_SEWERSMELL_001" ID="{B9727DF3-0A86-4A05-8C6D-ED3326E2A2EF}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Tile_Buy_001" ID="{D834CA88-42E9-4A63-BC67-B4CAC3D77A7E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Mouse_001_v1" ID="{DED507F7-C0E5-4B03-86F3-C661A1B8DA9C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Demolition_001_v1" ID="{D0677CB7-675F-4B3F-9F6A-640801369617}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>

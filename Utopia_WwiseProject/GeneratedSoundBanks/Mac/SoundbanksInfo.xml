@@ -83,7 +83,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{D085878D-778B-2F83-072D-BFFA54F530E4}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{5D63840A-D755-ECE7-6B08-35A3B556DC6D}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -473,5 +473,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{919A2FEA-6EDF-CDBB-2418-92956CEB0378}</FileHash>
+	<FileHash>{1A395766-C145-ED8D-B70A-12E65F80760B}</FileHash>
 </SoundBanksInfo>

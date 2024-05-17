@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584856862240330062
+    m_lastTime: -8584856834885281636
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -122,7 +122,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584856862240533815
+    m_lastTime: -8584856834885504838
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -593,7 +593,7 @@ MonoBehaviour:
       maxDuration: -1
       minDuration: -1
     - name: Play_APT_event_SEWERSMELL_001
-      guid: f37d72b9860a054a8c6ded3326e2a2ef
+      guid: f3b27788b338a3419ff1710c1ba39027
       id: 767732750
       PathAndIcons:
       - ElementName: Events
@@ -607,7 +607,7 @@ MonoBehaviour:
         guid: af01d76c749d1544a819d213a7b2e96c
       - ElementName: Play_APT_event_SEWERSMELL_001
         ObjectType: 3
-        guid: f37d72b9860a054a8c6ded3326e2a2ef
+        guid: f3b27788b338a3419ff1710c1ba39027
       Path: Events\Default Work Unit\Conditionindex1\Play_APT_event_SEWERSMELL_001
       maxAttenuation: 0
       maxDuration: 5.6198125

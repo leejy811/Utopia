@@ -277,12 +277,12 @@
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="Play_APT_event_SEWERSMELL_001" ID="{B9727DF3-0A86-4A05-8C6D-ED3326E2A2EF}">
+						<Event Name="Play_APT_event_SEWERSMELL_001" ID="{8877B2F3-38B3-41A3-9FF1-710C1BA39027}">
 							<ChildrenList>
-								<Action Name="" ID="{4B7B7877-A110-4F64-89A6-8BC9E09BD227}" ShortID="105879996">
+								<Action Name="" ID="{5EBEA177-FD3B-47A6-89D9-74F347A65269}" ShortID="1045029765">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="APT_event_SEWERSMELL_001" ID="{D28F0B6F-3D4E-4BBD-AF69-58A8980754BD}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+											<ObjectRef Name="APT_event_SEWERSMELL_001" ID="{66369F7B-3A72-4078-908D-D5BCFA15B3F9}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

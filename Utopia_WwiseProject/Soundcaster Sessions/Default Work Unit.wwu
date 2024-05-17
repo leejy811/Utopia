@@ -41,10 +41,6 @@
 							<ObjectRef Name="BGMsequnce1" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="3" Y="0"/>
 						</Module>
-						<Module>
-							<ObjectRef Name="APT_event_SEWERSMELL_001" ID="{D28F0B6F-3D4E-4BBD-AF69-58A8980754BD}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="3" Y="1"/>
-						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>

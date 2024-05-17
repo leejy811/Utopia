@@ -2574,182 +2574,6 @@
 								<ActiveSource Name="APT_event_NOISY_001" ID="{8AB4C5FA-ADA8-4AF5-91DA-FB57F5A7A023}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
-						<Sound Name="APT_event_SEWERSMELL_001" ID="{D28F0B6F-3D4E-4BBD-AF69-58A8980754BD}" ShortID="168370894">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="APT_event_SEWERSMELL_001" ID="{C3B87221-4756-4416-BF97-D7BFB2215310}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0650629522431259"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0487972141823452"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>APT_event_SEWERSMELL_001.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="476423553"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ObjectLists>
-								<ObjectList Name="RTPC">
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{4A9E8AB5-AB12-4E27-871C-6FAF850F38D6}" ShortID="624454843">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{BD1204CA-D790-4B7E-BFDF-5392D95A329D}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.97951</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>0.98051</XPos>
-																		<YPos>-0.01187</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.86299</XPos>
-																		<YPos>0.01105</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.86399</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>15</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{489BF111-548D-4569-B563-5D44F336C304}" ShortID="23142491">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{D1E793BE-D95A-4A02-B74C-4A190651CA59}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-0.0726899999999944</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>8.57875</XPos>
-																		<YPos>-4.95252</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>10.06037</XPos>
-																		<YPos>-31.96851</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{7422C1BD-653D-41FA-AB0C-6B84A90252A6}" ShortID="906249434">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{C33DAE66-9F5F-4E5E-8C8E-3BACDAEF867D}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>1</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.49296</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>1.49396</XPos>
-																		<YPos>0</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>2</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-								</ObjectList>
-							</ObjectLists>
-							<ActiveSourceList>
-								<ActiveSource Name="APT_event_SEWERSMELL_001" ID="{C3B87221-4756-4416-BF97-D7BFB2215310}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
 						<Sound Name="APT_event_THIEF_001" ID="{6E820553-B9ED-40C4-B2F8-F261B4AF952E}" ShortID="931617404">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
@@ -3096,6 +2920,182 @@
 							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="ATP_event_ELEVATOR_001_v2" ID="{47D97558-0653-4298-8C00-6918F9702DFF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="APT_event_SEWERSMELL_001" ID="{66369F7B-3A72-4078-908D-D5BCFA15B3F9}" ShortID="106892378">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="APT_event_SEWERSMELL_001" ID="{AC49DB52-1949-484A-8883-266BF325C25E}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0650629522431259"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0487972141823452"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>APT_event_SEWERSMELL_001.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="476423553"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{73EDD384-5133-41D3-9384-602E67B260D8}" ShortID="1064573857">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{4E2728A4-4D21-4562-B525-04C91AA9D2D9}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.97951</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>0.98051</XPos>
+																		<YPos>-0.01187</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.86299</XPos>
+																		<YPos>0.01105</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.86399</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>15</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{84692CCA-F5D9-454C-A5A2-3552EE764561}" ShortID="726394993">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{9B032959-3BC0-4070-ADD9-8F0EBBA6E101}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-0.0726899999999944</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>8.57875</XPos>
+																		<YPos>-4.95252</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>10.06037</XPos>
+																		<YPos>-31.96851</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{779571D8-DF18-472A-974A-70C7A4C7CCB8}" ShortID="993424813">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{39B7D2EA-2AEC-4DEB-8826-74839A21E1EF}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.49296</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.49396</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>0</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+							<ActiveSourceList>
+								<ActiveSource Name="APT_event_SEWERSMELL_001" ID="{AC49DB52-1949-484A-8883-266BF325C25E}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
