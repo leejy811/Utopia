@@ -62,6 +62,7 @@ public class EventRouletteUI : MonoBehaviour
 
     public void OnButtonClick()
     {
+        gameObject.GetComponentInChildren<Animator>().SetTrigger("DoLever");
         ProcessButtonClick();
     }
 
