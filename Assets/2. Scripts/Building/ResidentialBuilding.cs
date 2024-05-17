@@ -94,8 +94,6 @@ public class ResidentialBuilding : Building
             res -= 100;
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
             res -= 50;
-        if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 10;
 
         bonusCost += res;
         return res;

@@ -24,8 +24,6 @@ public class CinemachineCameraController : MonoBehaviour
     private bool isUsingOriginalTarget = true;
     public float publicOrthographicSize;
 
-    public GameObject realCamera;
-
 
     void Start()
     {
@@ -47,7 +45,6 @@ public class CinemachineCameraController : MonoBehaviour
         PitchCamera();
         UpdateCameraSettings();
         AkSoundEngine.SetRTPCValue("ZOOM", publicOrthographicSize);
-        AkSoundEngine.SetRTPCValue("DIST", ShopManager.instance.GetDistToTarget(realCamera.transform));
     }
 
     void MoveCamera()
@@ -144,7 +141,6 @@ public class CinemachineCameraController : MonoBehaviour
             targetOrthographicSize = Mathf.Clamp(targetOrthographicSize, 1f, 25f);
 
             virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(virtualCamera.m_Lens.OrthographicSize, targetOrthographicSize, Time.deltaTime * smoothZoomSpeed);
-            realCamera.transform.localPosition = new Vector3(0, 0, 15 - virtualCamera.m_Lens.OrthographicSize);
 
             UpdateMoveSpeed();
         }

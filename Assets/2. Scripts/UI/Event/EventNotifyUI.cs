@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EventNotifyUI : MonoBehaviour, IObserver
@@ -67,12 +69,8 @@ public class EventNotifyUI : MonoBehaviour, IObserver
             ShopManager.instance.ChangeState(BuyState.EventCheck);
             gameObject.SetActive(true);
             Init();
-            AkSoundEngine.SetRTPCValue("BOOL", 2);
         }
         else
-        {
             gameObject.SetActive(false);
-            AkSoundEngine.SetRTPCValue("BOOL", 1);
-        }
     }
 }

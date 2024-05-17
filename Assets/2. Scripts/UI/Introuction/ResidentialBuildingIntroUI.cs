@@ -67,7 +67,6 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
             block.disabledColor = block.normalColor;
             optionButtons[index].colors = block;
             optionToggles[index].colors = block;
-            optionButtons[index].interactable = true;
         }
     }
 

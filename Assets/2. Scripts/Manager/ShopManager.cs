@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, SolveBuilding, EventCheck }
 
@@ -287,13 +286,9 @@ public class ShopManager : MonoBehaviour, IObserver
         {
             curPickObject = pickObject;
             UIManager.instance.SetBuildingIntroPopUp(pickObject.GetComponent<Building>());
-            AkSoundEngine.SetRTPCValue("CLICK", 2);
         }
         else
-        {
             UIManager.instance.SetBuildingIntroPopUp();
-            AkSoundEngine.SetRTPCValue("CLICK", 1);
-        }
     }
 
     private int CalculateCost(int cost)
@@ -315,16 +310,5 @@ public class ShopManager : MonoBehaviour, IObserver
         {
             ChangeState(BuyState.None);
         }
-    }
-
-    public float GetDistToTarget(Transform transform)
-    {
-        if (buyState == BuyState.SolveBuilding)
-        {
-            float dist = Vector3.Distance(transform.position, curPickObject.transform.position);
-            return dist;
-        }
-        else
-            return 0.0f;
     }
 }
