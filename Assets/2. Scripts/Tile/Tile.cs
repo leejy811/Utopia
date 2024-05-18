@@ -151,7 +151,7 @@ public class Tile : MonoBehaviour
         int res = 0;
 
         if (type != TileType.Ground)
-            res = Grid.instance.tileCostPerDay[(int)type];
+            res -= Grid.instance.tileCostPerDay[(int)type];
 
         income += res;
         return res;

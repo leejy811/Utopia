@@ -110,7 +110,7 @@ public class StatisticUI : MonoBehaviour, IObserver
         residentialBonusBar.SetValue(totalSpend, ResidentialBuilding.bonusCost);
         serviceBonusBar.SetValue(totalSpend, ServiceBuilding.bonusCost);
 
-        int total = (int)(Mathf.Abs(totalTax + totalSpend) * EventManager.instance.GetFinalIncomeEventValue());
+        int total = (int)((totalTax + totalSpend) * EventManager.instance.GetFinalIncomeEventValue());
         totalCostText.text = totalTax.ToString() + " " + GetSignString(totalSpend, "-") + " = " + (totalTax + totalSpend).ToString() + " * " + EventManager.instance.GetFinalIncomeEventValue().ToString() + " = " + total.ToString();
         happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%(" + Mathf.Abs((int)RoutineManager.instance.cityHappinessDifference).ToString() + "% " + (RoutineManager.instance.cityHappinessDifference > 0 ? "증가" : "김소") + ")";
         residentText.text = ResidentialBuilding.cityResident.ToString() + "명(" + Mathf.Abs(ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident).ToString() + "명 " + ((ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident) > 0 ? "증가" : "김소") + ")";
