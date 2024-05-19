@@ -21,49 +21,6 @@ public struct StatisticBar
     }
 }
 
-[System.Serializable]
-public struct ComprisonUI
-{
-    public TextMeshProUGUI resultText;
-    public TextMeshProUGUI yesterdayText;
-    public TextMeshProUGUI todayText;
-
-    public void SetValue(int yesterday, int today, bool isHappiness)
-    {
-        resultText.text = today.ToString();
-        yesterdayText.text = yesterday.ToString();
-        todayText.text = yesterday.ToString() + " " + GetSignString(today - yesterday, "-") + "=" + today.ToString();
-
-        if (isHappiness)
-        {
-            resultText.text += "%";
-            yesterdayText.text += "%";
-            todayText.text += "%";
-        }
-        else
-        {
-            resultText.text += "Έν";
-            yesterdayText.text += "Έν";
-            todayText.text += "Έν";
-        }
-
-        if (yesterday > today)
-            resultText.text += "<sprite=5>";
-        else if(yesterday < today)
-            resultText.text += "<sprite=6>";
-    }
-
-    public string GetSignString(int data, string zeroSign)
-    {
-        if (data > 0)
-            return "+ " + data.ToString();
-        else if (data < 0)
-            return "- " + Mathf.Abs(data).ToString();
-        else
-            return zeroSign + " " + data.ToString();
-    }
-}
-
 public class StatisticUI : MonoBehaviour, IObserver
 {
     [Header("Top Text")]
@@ -118,9 +75,6 @@ public class StatisticUI : MonoBehaviour, IObserver
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.SetInteger("Happiness", (int)RoutineManager.instance.cityHappiness);
         anim.SetInteger("Money", total);
-
-        //happinessComparison.SetValue((int)RoutineManager.instance.cityHappiness, (int)(RoutineManager.instance.cityHappiness - RoutineManager.instance.cityHappinessDifference), true);
-        //residentComparison.SetValue(ResidentialBuilding.yesterDayResident, ResidentialBuilding.cityResident, false);
     }
 
     private string GetSignString(int data, string zeroSign)

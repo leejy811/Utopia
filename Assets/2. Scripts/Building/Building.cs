@@ -311,6 +311,8 @@ public class Building : MonoBehaviour
         CultureBuilding.bonusIncome = 0;
 
         ServiceBuilding.income = 0;
+        ServiceBuilding.bonusCost = 0;
+        ServiceBuilding.bonusIncome = 0;
     }
 
     protected float GetIncomeEvent()
