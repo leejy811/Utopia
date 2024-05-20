@@ -136,4 +136,9 @@ public class EventRouletteUI : MonoBehaviour
 
         state = RouletteState.Start;
     }
+
+    private void OnDisable()
+    {
+        InputManager.canInput = true;
+    }
 }

@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour, IObserver
 {
+    public static bool canInput = false;
+
     public Button[] buttons;
 
     public Button[] alpha1Buttons;
@@ -24,6 +26,13 @@ public class InputManager : MonoBehaviour, IObserver
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            UIManager.instance.OnClickSpaceBar();
+        }
+
+        if (!canInput) return;
+
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
         BuyState state = ShopManager.instance.buyState;
@@ -39,6 +48,7 @@ public class InputManager : MonoBehaviour, IObserver
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")) &&
                 (state == BuyState.None || state == BuyState.SolveBuilding))
             {
+                if (hit.transform.gameObject.GetComponent<Building>().viewState == ViewStateType.Transparent) return;
                 ShopManager.instance.ChangeState(BuyState.SolveBuilding, 0, hit.transform.gameObject);
             }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
@@ -173,10 +183,6 @@ public class InputManager : MonoBehaviour, IObserver
                 InvokeButton(alpha1Buttons[idx]);
             else if (onAlpha3)
                 InvokeButton(alpha3Buttons[idx]);
-        }
-        else if (Input.GetKeyDown(KeyCode.Space))
-        {
-            UIManager.instance.OnClickSpaceBar();
         }
     }
 

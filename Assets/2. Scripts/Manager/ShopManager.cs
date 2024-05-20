@@ -273,6 +273,8 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public void SetObjectColor(GameObject obj, Color color)
     {
+        if (obj == null) return;
+
         if (obj.tag == "Tile")
         {
             if (obj.GetComponent<Tile>().CheckPurchased())

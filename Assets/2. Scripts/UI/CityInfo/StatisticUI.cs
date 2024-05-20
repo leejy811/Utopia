@@ -69,8 +69,8 @@ public class StatisticUI : MonoBehaviour, IObserver
 
         int total = (int)((totalTax + totalSpend) * EventManager.instance.GetFinalIncomeEventValue());
         totalCostText.text = totalTax.ToString() + " " + GetSignString(totalSpend, "-") + " = " + (totalTax + totalSpend).ToString() + " * " + EventManager.instance.GetFinalIncomeEventValue().ToString() + " = " + total.ToString();
-        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%(" + Mathf.Abs((int)RoutineManager.instance.cityHappinessDifference).ToString() + "% " + (RoutineManager.instance.cityHappinessDifference > 0 ? "증가" : "김소") + ")";
-        residentText.text = ResidentialBuilding.cityResident.ToString() + "명(" + Mathf.Abs(ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident).ToString() + "명 " + ((ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident) > 0 ? "증가" : "김소") + ")";
+        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%(" + Mathf.Abs((int)RoutineManager.instance.cityHappinessDifference).ToString() + "% " + (RoutineManager.instance.cityHappinessDifference > 0 ? "증가" : "감소") + ")";
+        residentText.text = ResidentialBuilding.cityResident.ToString() + "명(" + Mathf.Abs(ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident).ToString() + "명 " + ((ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident) > 0 ? "증가" : "감소") + ")";
 
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.SetInteger("Happiness", (int)RoutineManager.instance.cityHappiness);
@@ -94,6 +94,7 @@ public class StatisticUI : MonoBehaviour, IObserver
         {
             gameObject.SetActive(true);
             SetValue();
+            InputManager.canInput = false;
         }
     }
 }

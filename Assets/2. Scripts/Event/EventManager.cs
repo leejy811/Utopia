@@ -43,8 +43,11 @@ public class EventManager : MonoBehaviour
 
     public void CheckEvents()
     {
-        if (BuildingSpawner.instance.buildings.Count < eventCondition) return;
-        if (Random.Range(0.0f, 1.0f) > eventProb) return;
+        if (BuildingSpawner.instance.buildings.Count < eventCondition || Random.Range(0.0f, 1.0f) > eventProb)
+        {
+            InputManager.canInput = true;
+            return;
+        }
 
         List<List<Building>> buildings = new List<List<Building>>();
 

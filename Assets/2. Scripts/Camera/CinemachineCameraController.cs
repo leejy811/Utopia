@@ -37,6 +37,8 @@ public class CinemachineCameraController : MonoBehaviour
 
     void Update()
     {
+        if (!InputManager.canInput) return;
+
         if (virtualCamera.Priority == 20)
         {
             MoveCamera();

@@ -6,7 +6,7 @@ using DG.Tweening;
 public class BottomBlackUIAnimation : MonoBehaviour
 {
     public float moveDistance = -400f;  
-    public float duration = 3f;  
+    public float duration = 3f;
 
     void Start()
     {
@@ -21,6 +21,9 @@ public class BottomBlackUIAnimation : MonoBehaviour
         RectTransform rectTransform = GetComponent<RectTransform>();
 
 
-        rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + moveDistance, duration).SetEase(Ease.InOutQuad);
+        rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + moveDistance, duration).SetEase(Ease.InOutQuad).OnComplete(() =>
+        {
+            InputManager.canInput = true;
+        });
     }
 }

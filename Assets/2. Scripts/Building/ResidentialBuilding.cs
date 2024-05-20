@@ -148,7 +148,7 @@ public class ResidentialBuilding : Building
         return 0;
     }
 
-    public override void ApplyInfluence(int value, BuildingType type)
+    public override void ApplyInfluence(int value, BuildingType type, bool isInit = false)
     {
         if (!values.ContainsKey((ValueType)type)) return;
 
@@ -156,7 +156,10 @@ public class ResidentialBuilding : Building
         cast.cur += value;
         values[(ValueType)type] = cast;
 
-        int amount = UpdateHappiness(true, (int)type);
-        UIManager.instance.SetHappinessPopUp(amount, transform.position);
+        if (!isInit)
+        {
+            int amount = UpdateHappiness(true, (int)type);
+            UIManager.instance.SetHappinessPopUp(amount, transform.position);
+        }
     }
 }

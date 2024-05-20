@@ -89,11 +89,11 @@ public class Tile : MonoBehaviour
         {
             for (int i = 1;i < influenceValues.Length;i++)
             {
-                buildCom.ApplyInfluence(influenceValues[i], (BuildingType)i);
+                buildCom.ApplyInfluence(influenceValues[i], (BuildingType)i, true);
             }
         }
         else
-            buildCom.ApplyInfluence(influenceValues[(int)BuildingType.Residential], 0);
+            buildCom.ApplyInfluence(influenceValues[(int)BuildingType.Residential], 0, true);
     }
 
     public void SetTileColor(Color color)
