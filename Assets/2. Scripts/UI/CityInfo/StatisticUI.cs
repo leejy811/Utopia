@@ -15,7 +15,7 @@ public struct StatisticBar
     {
         float ratio = total == 0 ? 0 : value / (float)total;
 
-        moneyText.text = value.ToString() + "¿ø";
+        moneyText.text = value.ToString() + "ì›";
         ratioText.text = ((int)(ratio * 100)).ToString() + "%";
         ratioSlider.value = ratio;
     }
@@ -46,7 +46,7 @@ public class StatisticUI : MonoBehaviour, IObserver
     public TextMeshProUGUI residentText;
 
     public bool doStamp;
-    string[] levelString = { "ÃÌ¶ô", "Å¸¿î", "½ÃÆ¼", "À¯ÅäÇÇ¾Æ" };
+    string[] levelString = { "ì´Œë½", "íƒ€ìš´", "ì‹œí‹°", "ìœ í† í”¼ì•„" };
 
     public void SetValue()
     {
@@ -54,8 +54,8 @@ public class StatisticUI : MonoBehaviour, IObserver
         int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + Tile.income;
 
         cityLevelText.text = levelString[CityLevelManager.instance.levelIdx];
-        totalTaxText.text = GetSignString(totalTax, "+") + "¿ø";
-        totalSpendText.text = GetSignString(totalSpend, "-") + "¿ø";
+        totalTaxText.text = GetSignString(totalTax, "+") + "ì›";
+        totalSpendText.text = GetSignString(totalSpend, "-") + "ì›";
 
         residentialTaxBar.SetValue(totalTax, ResidentialBuilding.income);
         commercialTaxBar.SetValue(totalTax, CommercialBuilding.income);
@@ -68,9 +68,10 @@ public class StatisticUI : MonoBehaviour, IObserver
         serviceBonusBar.SetValue(totalSpend, ServiceBuilding.bonusCost);
 
         int total = (int)((totalTax + totalSpend) * EventManager.instance.GetFinalIncomeEventValue());
-        totalCostText.text = totalTax.ToString() + " " + GetSignString(totalSpend, "-") + " = " + (totalTax + totalSpend).ToString() + " * " + EventManager.instance.GetFinalIncomeEventValue().ToString() + " = " + total.ToString();
-        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%(" + Mathf.Abs((int)RoutineManager.instance.cityHappinessDifference).ToString() + "% " + (RoutineManager.instance.cityHappinessDifference > 0 ? "Áõ°¡" : "°¨¼Ò") + ")";
-        residentText.text = ResidentialBuilding.cityResident.ToString() + "¸í(" + Mathf.Abs(ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident).ToString() + "¸í " + ((ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident) > 0 ? "Áõ°¡" : "°¨¼Ò") + ")";
+        if (EventManager.instance.GetFinalIncomeEventValue().Equals(1)) totalCostText.text = (totalTax + totalSpend).ToString();
+        else totalCostText.text = (totalTax + totalSpend).ToString() + " * " + EventManager.instance.GetFinalIncomeEventValue().ToString() + " = " + total.ToString();
+        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%<size=8>(" + Mathf.Abs((int)RoutineManager.instance.cityHappinessDifference).ToString() + "% " + (RoutineManager.instance.cityHappinessDifference > 0 ? "ì¦ê°€" : "ê°ì†Œ") + ")</size>";
+        residentText.text = ResidentialBuilding.cityResident.ToString() + "ëª…<size=8>(" + Mathf.Abs(ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident).ToString() + "ëª… " + ((ResidentialBuilding.cityResident - ResidentialBuilding.yesterDayResident) > 0 ? "ì¦ê°€" : "ê°ì†Œ") + ")</size>";
 
         Animator anim = gameObject.GetComponentInChildren<Animator>();
         anim.SetInteger("Happiness", (int)RoutineManager.instance.cityHappiness);
