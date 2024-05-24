@@ -21,32 +21,36 @@ public class MoveObject : MonoBehaviour
         {
             NextButton.interactable = false;
         }
-        else
-        {
-            NextButton.interactable = true; 
-        }
 
         if (objectToMove.transform.localPosition.x >= -1040)
         {
             PrevButton.interactable = false;
-        }
-        else
-        {
-            PrevButton.interactable = true;
         }
 
     }
 
     public void StartNextMoving()
     {
-        StartCoroutine(MoveOverTime(-1000,1f)); 
+        StartCoroutine(DisableButtonsTemporarily());
+        StartCoroutine(MoveOverTime(-1000, 1f));
     }
 
     public void StartPrevMoving()
     {
-
-        StartCoroutine(MoveOverTime(1000, 1f)); 
+        StartCoroutine(DisableButtonsTemporarily());
+        StartCoroutine(MoveOverTime(1000, 1f));
     }
+
+
+    IEnumerator DisableButtonsTemporarily()
+    {
+        NextButton.interactable = false;
+        PrevButton.interactable = false;
+        yield return new WaitForSeconds(1f);
+        NextButton.interactable = true;
+        PrevButton.interactable = true;
+    }
+
 
     IEnumerator MoveOverTime(float targetX, float duration)
     {
@@ -63,6 +67,7 @@ public class MoveObject : MonoBehaviour
         }
 
         objectToMove.transform.localPosition = endPosition;
+
 
     }
 }
