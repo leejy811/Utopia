@@ -52,6 +52,9 @@ public class EventManager : MonoBehaviour
             e.eventIndex = i;
             events[i] = e;
         }
+
+        curJackpotDay = 0;
+        jackpotDay = Random.Range(7, 15);
     }
 
     public void CheckEvents()
@@ -131,11 +134,25 @@ public class EventManager : MonoBehaviour
         if(possibleEvents.Count == 0) return;
 
         List<Event> ranEvents = new List<Event>();
+        curJackpotDay++;
 
-        for(int i = 0;i < 3; i++)
+        if (curJackpotDay == jackpotDay)
         {
             int ranidx = Random.Range(0, possibleEvents.Count);
             ranEvents.Add(possibleEvents[ranidx]);
+            ranEvents.Add(possibleEvents[ranidx]);
+            ranEvents.Add(possibleEvents[ranidx]);
+
+            curJackpotDay = 0;
+            jackpotDay = Random.Range(7, 15);
+        }
+        else
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                int ranidx = Random.Range(0, possibleEvents.Count);
+                ranEvents.Add(possibleEvents[ranidx]);
+            }
         }
 
         UIManager.instance.SetRoulettePopUp(true, ranEvents.ToArray());
