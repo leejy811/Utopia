@@ -5,6 +5,7 @@ using UnityEngine;
 
 public enum EventType { Problem, Event, Global }
 public enum ConditionType { Option, Influence, Exist, None }
+public enum RewardType { Penalty, neutrality, Reward }
 
 [Serializable]
 public struct EventSolution 
@@ -21,6 +22,7 @@ public struct Event
     public Sprite eventIcon;
     public int eventIndex;
     public EventType type;
+    public RewardType rewardType;
     public ConditionType conditionType;
     public ValueType valueType;
     public int targetIndex;

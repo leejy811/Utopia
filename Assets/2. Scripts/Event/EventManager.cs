@@ -7,8 +7,12 @@ public class EventManager : MonoBehaviour
 {
     static public EventManager instance;
 
+    [Header("Jackpot")]
+    public int curJackpotDay;
+    public int jackpotDay;
+
     [Header("Value")]
-    public int eventCondition;
+    public int[] eventCondition;
     [Range(0.0f, 1.0f)] public float eventProb;
 
     [Header("Event List")]
@@ -43,7 +47,11 @@ public class EventManager : MonoBehaviour
 
     public void CheckEvents()
     {
-        if (BuildingSpawner.instance.buildings.Count < eventCondition || Random.Range(0.0f, 1.0f) > eventProb)
+        if (BuildingSpawner.instance.buildingTypeCount[0] < eventCondition[0]
+            || BuildingSpawner.instance.buildingTypeCount[1] < eventCondition[1]
+            || BuildingSpawner.instance.buildingTypeCount[2] < eventCondition[2]
+            || BuildingSpawner.instance.buildingTypeCount[3] < eventCondition[3]
+            || Random.Range(0.0f, 1.0f) > eventProb)
         {
             InputManager.canInput = true;
             return;

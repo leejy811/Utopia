@@ -12,6 +12,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public GameObject[] buildingPrefabs;
 
     public int[] buildingCount;
+    public int[] buildingTypeCount;
 
     private void Awake()
     {
@@ -36,6 +37,8 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
         buildingCount[index]++;
         building.count = buildingCount[index];
+
+        buildingTypeCount[(int)building.type]++;
 
         RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
         CityLevelManager.instance.UpdateCityType();
