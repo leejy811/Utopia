@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[System.Serializable]
+public struct EventInfo
+{
+    public int[] eventCount;
+    [Range(0.0f, 1.0f)] public float eventProb;
+}
+
 public class EventManager : MonoBehaviour
 {
     static public EventManager instance;
@@ -13,7 +20,7 @@ public class EventManager : MonoBehaviour
 
     [Header("Value")]
     public int[] eventCondition;
-    [Range(0.0f, 1.0f)] public float eventProb;
+    public EventInfo[] eventInfos;
 
     [Header("Event List")]
     public List<List<Building>> targetBuildings = new List<List<Building>>();
@@ -51,7 +58,7 @@ public class EventManager : MonoBehaviour
             || BuildingSpawner.instance.buildingTypeCount[1] < eventCondition[1]
             || BuildingSpawner.instance.buildingTypeCount[2] < eventCondition[2]
             || BuildingSpawner.instance.buildingTypeCount[3] < eventCondition[3]
-            || Random.Range(0.0f, 1.0f) > eventProb)
+            || Random.Range(0.0f, 1.0f) > eventInfos[(int)RoutineManager.instance.todayResult].eventProb)
         {
             InputManager.canInput = true;
             return;

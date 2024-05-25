@@ -47,10 +47,6 @@ public class CityLevelManager : MonoBehaviour
     {
         levelIdx++;
         ShopManager.instance.GetMoney(level[levelIdx].moneyReward);
-
-        if (levelIdx == level.Length)
-            EventManager.instance.eventProb = 0.5f;
-
         UIManager.instance.SetCityLevelUpPopUp(levelIdx);
     }
 

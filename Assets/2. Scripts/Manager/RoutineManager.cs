@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum ResultType { Worst, Bad, Soso, Good, Best, Perfect }
+
 public class RoutineManager : MonoBehaviour
 {
     public static RoutineManager instance;
@@ -10,6 +12,7 @@ public class RoutineManager : MonoBehaviour
     public DateTime day;
     public float cityHappiness;
     public float cityHappinessDifference;
+    public ResultType todayResult;
 
     private void Awake()
     {
@@ -77,6 +80,21 @@ public class RoutineManager : MonoBehaviour
         }
         else
             cityHappiness = 0;
+
+        int happiness = (int)cityHappiness;
+
+        if (happiness < 30)
+            todayResult = ResultType.Worst;
+        else if (happiness >= 30 && happiness < 40)
+            todayResult = ResultType.Bad;
+        else if (happiness >= 40 && happiness < 55)
+            todayResult = ResultType.Soso;
+        else if (happiness >= 55 && happiness < 65)
+            todayResult = ResultType.Good;
+        else if (happiness >= 65 && happiness < 70)
+            todayResult = ResultType.Best;
+        else if (happiness >= 70)
+            todayResult = ResultType.Perfect;
     }
 
     public void SetCityHappiness(int happiness, int sign)
