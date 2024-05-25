@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.UIElements;
+using static Cinemachine.CinemachineBrain;
 
 [System.Serializable]
 public struct EventInfo
@@ -86,6 +88,35 @@ public class EventManager : MonoBehaviour
                             possibleEvents.Add(events[i]);
                     }
                 }
+            }
+        }
+
+        List<List<Event>> rewardTypeEvent = new List<List<Event>>
+        {
+            new List<Event>(),
+            new List<Event>(),
+            new List<Event>()
+        };
+
+        for (int i = 0; i < possibleEvents.Count; i++)
+        {
+            rewardTypeEvent[(int)possibleEvents[i].rewardType].Add(possibleEvents[i]);
+        }
+
+        for (int i = 0;i < rewardTypeEvent.Count; i++)
+        {
+            List<int> indexs = new List<int>();
+            int range = rewardTypeEvent[i].Count - eventInfos[(int)RoutineManager.instance.todayResult].eventCount[i];
+
+            for (int j = 0; j < range; j++)
+            {
+                int ranIdx = Random.Range(0, rewardTypeEvent[i].Count);
+                while (indexs.Contains(ranIdx))
+                {
+                    ranIdx = Random.Range(0, rewardTypeEvent[i].Count);
+                }
+                indexs.Add(ranIdx);
+                possibleEvents.Remove(rewardTypeEvent[i][ranIdx]);
             }
         }
 

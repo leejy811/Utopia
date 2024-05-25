@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum EventType { Problem, Event, Global }
 public enum ConditionType { Option, Influence, Exist, None }
-public enum RewardType { Penalty, neutrality, Reward }
+public enum RewardType { Penalty = 0, neutrality, Reward }
 
 [Serializable]
 public struct EventSolution 
