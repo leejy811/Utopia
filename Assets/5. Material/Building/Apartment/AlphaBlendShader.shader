@@ -43,8 +43,7 @@ Shader "Custom/AlphaBlendShader"
         void surf(Input IN, inout SurfaceOutput o)
         {
             fixed4 c = tex2D(_MainTex, IN.uv_MainTex);
-            o.Albedo = c.rgb;
-            o.Emission = _Color.rgb;
+            o.Albedo = c.rgb * _Color.rgb;
             o.Alpha = _Color.a;
         }
         ENDCG
