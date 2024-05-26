@@ -108,357 +108,163 @@ public class UIManager : MonoBehaviour, ISubject
 
     void Update()
     {
-        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+        lastCityHappiness = RoutineManager.instance.cityHappiness;
+        int[] happiness = BuildingSpawner.instance.GetBuildingsHappiness();
+        lastBuildingHappiness[(int)BuildingType.Residential] = happiness[(int)BuildingType.Residential];
+        lastBuildingHappiness[(int)BuildingType.Commercial] = happiness[(int)BuildingType.Commercial];
+        lastBuildingHappiness[(int)BuildingType.Culture] = happiness[(int)BuildingType.Culture];
+        lastBuildingHappiness[(int)BuildingType.Service] = happiness[(in ...
+        lastCityMoney = ShopManager.instance.Money;
+        lastTotalTax = CalculateTotalTax();
+        lastTotalSpend = CalculateTotalSpend();
+        lastBuildingTypeCount = BuildingSpawner.instance.buildingTypeCount;
+        lastDay = RoutineManager.instance.day;
 
-        if (NewsHappiness != 0 && UpdateNews == false)
-        {
-            previousHappiness = NewsHappiness;
-            UpdateNews = true;
-        }
+        CheckCityHappiness();
+        CheckBuildingHappiness();
+        CheckCityMoney();
+        CheckTotalTax();
+        CheckTotalSpend();
+        CheckBuildingCounts();
+        CheckDayChange();
+    }
 
-        if (previousHappiness != NewsHappiness && UpdateNews == true)
+    public Text[] messageTexts;
+    private Queue<string> messageQueue = new Queue<string>();
+    private float messageDuration = 5.0f;
+
+    private float lastCityHappiness;
+    private int[] lastBuildingHappiness = new int[4];
+    private int lastCityMoney;
+    private int lastTotalTax;
+    private int lastTotalSpend;
+    private int[] lastBuildingTypeCount = new int[4];
+    private DateTime lastDay;
+
+    void CheckCityHappiness()
+    {
+        float currentHappiness = RoutineManager.instance.cityHappiness;
+        if (currentHappiness != lastCityHappiness)
         {
-            StartCoroutine(HappinessBasedNews());
+            AddMessage($"City happiness changed: {currentHappiness}");
+            lastCityHappiness = currentHappiness;
         }
     }
 
-
-    IEnumerator HappinessBasedNews()
+    void CheckBuildingHappiness()
     {
-        imageRectTransform.gameObject.SetActive(true);
-        if (previousHappiness > 20 && NewsHappiness <= 20)
+        int[] happiness = BuildingSpawner.instance.GetBuildingsHappiness();
+        for (int i = 0; i < lastBuildingHappiness.Length; i++)
         {
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "이게 도시냐";
-
-            Canvas.ForceUpdateCanvases();
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            if (happiness[i] != lastBuildingHappiness[i])
             {
-                NewsMessage.text = "이게 도시냐";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "이 곳도 다른 곳이랑 다를게 없구나...";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...";
-            // yield return new WaitForSeconds(2);
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() => 
-            { imageRectTransform.gameObject.SetActive(false); });
-
+                BuildingType type = (BuildingType)i;
+                AddMessage($"{type} building happiness changed: {happiness[i]}");
+                lastBuildingHappiness[i] = happiness[i];
+            }
         }
-        else if (previousHappiness < 20 && NewsHappiness >= 20)
+    }
+
+    void CheckCityMoney()
+    {
+        int currentMoney = ShopManager.instance.Money;
+        if (currentMoney != lastCityMoney)
         {
-
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "시장님 잘 좀 해봐요...";
-
-            Canvas.ForceUpdateCanvases();
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            {
-                NewsMessage.text = "시장님 잘 좀 해봐요...";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "이 곳도 다른 곳이랑 다를게 없구나...라고 할뻔";
-            // yield return new WaitForSeconds(2);
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            { imageRectTransform.gameObject.SetActive(false); });
-
+            AddMessage($"City money changed: {currentMoney}");
+            lastCityMoney = currentMoney;
         }
-        else if (previousHappiness > 40 && NewsHappiness <= 40)
+    }
+
+    void CheckTotalTax()
+    {
+        int currentTotalTax = CalculateTotalTax();
+        if (currentTotalTax != lastTotalTax)
         {
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "시장님 저희가 뭘 도와드려야 될까요?";
-
-            Canvas.ForceUpdateCanvases(); 
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y); 
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            {
-                NewsMessage.text = "시장님 저희가 뭘 도와드려야 될까요?";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "우리 시장 틀니 압수";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "우리 시장 틀니 압수";
-            // yield return new WaitForSeconds(2);
-            //
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            { imageRectTransform.gameObject.SetActive(false); });
-
+            AddMessage($"Total daily tax income changed: {currentTotalTax}");
+            lastTotalTax = currentTotalTax;
         }
-        else if (previousHappiness < 40 && NewsHappiness >= 40)
+    }
+
+    void CheckTotalSpend()
+    {
+        int currentTotalSpend = CalculateTotalSpend();
+        if (currentTotalSpend != lastTotalSpend)
         {
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "다행히 도시가 점점 좋아지고 있어";
-
-            Canvas.ForceUpdateCanvases();
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            {
-                NewsMessage.text = "다행히 도시가 점점 좋아지고 있어";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "시장님 임플란트 심어드리게요";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "시장님 임플란트 심어드리게요";
-            // yield return new WaitForSeconds(2);
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            { imageRectTransform.gameObject.SetActive(false); });
-
-
+            AddMessage($"Total daily spend changed: {currentTotalSpend}");
+            lastTotalSpend = currentTotalSpend;
         }
-        else if (previousHappiness > 60 && NewsHappiness <= 60)
+    }
+
+    void CheckBuildingCounts()
+    {
+        int[] buildingCounts = BuildingSpawner.instance.buildingTypeCount;
+        for (int i = 0; i < lastBuildingTypeCount.Length; i++)
         {
-
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "요즘 도시 운영이 좀 이상하지 않아?";
-
-            Canvas.ForceUpdateCanvases();
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            if (buildingCounts[i] != lastBuildingTypeCount[i])
             {
-                NewsMessage.text = "요즘 도시 운영이 좀 이상하지 않아?";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "취직이 잘되는 사회를 만들던가";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "취직이 잘되는 사회를 만들던가";
-            // yield return new WaitForSeconds(2);
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            { imageRectTransform.gameObject.SetActive(false); });
-
+                BuildingType type = (BuildingType)i;
+                AddMessage($"{type} buildings count changed: {buildingCounts[i]}");
+                lastBuildingTypeCount[i] = buildingCounts[i];
+            }
         }
-        else if (previousHappiness < 60 && NewsHappiness >= 60)
+    }
+
+    void CheckDayChange()
+    {
+        DateTime currentDay = RoutineManager.instance.day;
+        if (currentDay != lastDay)
         {
-
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "시장님 믿고 있었습니다! 요즘 도시가 너무 좋아요!";
-
-            Canvas.ForceUpdateCanvases();
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            {
-                NewsMessage.text = "시장님 믿고 있었습니다! 요즘 도시가 너무 좋아요!";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "지금부터 시장님과 나는 한 몸으로 간주한다.";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "지금부터 시장님과 나는 한 몸으로 간주한다.";
-            // yield return new WaitForSeconds(2);
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            { imageRectTransform.gameObject.SetActive(false); });
-
+            AddMessage($"Day changed: {currentDay.ToShortDateString()}");
+            lastDay = currentDay;
         }
-        else if (previousHappiness > 80 && NewsHappiness <= 80)
+    }
+
+    void AddMessage(string message)
+    {
+        if (messageQueue.Count >= messageTexts.Length)
         {
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "조금만 더...화이팅입니다!";
-
-            Canvas.ForceUpdateCanvases();
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            {
-                NewsMessage.text = "조금만 더...화이팅입니다!";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "뭐 조금 아쉬운거지~";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "뭐 조금 아쉬운거지~";
-            // yield return new WaitForSeconds(2);
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            { imageRectTransform.gameObject.SetActive(false); });
+            messageQueue.Dequeue();
         }
-        else if (previousHappiness < 80 && NewsHappiness >= 80)
+        messageQueue.Enqueue(message);
+        UpdateMessages();
+        StartCoroutine(RemoveOldestMessage());
+    }
+
+    private void UpdateMessages()
+    {
+        int i = 0;
+        foreach (string msg in messageQueue)
         {
-            previousHappiness = NewsHappiness;
-            NewsMessage2.text = "이곳이 유토피아라는게 학계의 정설";
-
-            Canvas.ForceUpdateCanvases();
-            float preferredWidth = NewsMessage2.preferredWidth;
-
-            Vector2 newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
+            if (i < messageTexts.Length)
             {
-                NewsMessage.text = "이곳이 유토피아라는게 학계의 정설";
-            });
-            yield return new WaitForSeconds(2);
-
-
-            NewsMessage.text = " ";
-            // NewsMessage2.text = "도시 역사상 최고...GOAT";
-            //
-            // yield return new WaitForSeconds(1);
-            // Canvas.ForceUpdateCanvases();
-            //
-            // preferredWidth = NewsMessage2.preferredWidth;
-            //
-            // newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-            //
-            // imageRectTransform.DOSizeDelta(newSize, animationDuration);
-            //
-            // NewsMessage.text = "도시 역사상 최고...GOAT";
-            // yield return new WaitForSeconds(2);
-            // NewsMessage.text = " ";
-
-            preferredWidth = NewsMessage.preferredWidth;
-
-            newSize = new Vector2(preferredWidth + 20, imageRectTransform.sizeDelta.y);
-
-            imageRectTransform.DOSizeDelta(newSize, animationDuration).OnComplete(() =>
-            { imageRectTransform.gameObject.SetActive(false); });
+                messageTexts[i].text = msg;
+                i++;
+            }
         }
-        else
-            imageRectTransform.gameObject.SetActive(false);
+        for (; i < messageTexts.Length; i++)
+        {
+            messageTexts[i].text = "";
+        }
+    }
+
+    IEnumerator RemoveOldestMessage()
+    {
+        yield return new WaitForSeconds(messageDuration);
+        if (messageQueue.Count > 0)
+        {
+            messageQueue.Dequeue();
+            UpdateMessages();
+        }
+    }
+
+    int CalculateTotalTax()
+    {
+        return ResidentialBuilding.income + CommercialBuilding.income + CultureBuilding.income + CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome;
+    }
+
+    int CalculateTotalSpend()
+    {
+        return ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + Tile.income;
     }
 
     #endregion
