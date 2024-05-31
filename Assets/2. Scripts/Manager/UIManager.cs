@@ -113,7 +113,7 @@ public class UIManager : MonoBehaviour, ISubject
         lastBuildingHappiness[(int)BuildingType.Residential] = happiness[(int)BuildingType.Residential];
         lastBuildingHappiness[(int)BuildingType.Commercial] = happiness[(int)BuildingType.Commercial];
         lastBuildingHappiness[(int)BuildingType.Culture] = happiness[(int)BuildingType.Culture];
-        lastBuildingHappiness[(int)BuildingType.Service] = happiness[(in ...
+        //lastBuildingHappiness[(int)BuildingType.Service] = happiness[(in ...
         lastCityMoney = ShopManager.instance.Money;
         lastTotalTax = CalculateTotalTax();
         lastTotalSpend = CalculateTotalSpend();

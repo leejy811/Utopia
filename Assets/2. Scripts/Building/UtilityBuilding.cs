@@ -38,7 +38,7 @@ public class UtilityBuilding : Building
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                income += 500;
+                income += 50;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 income += 0;
             else
@@ -49,18 +49,24 @@ public class UtilityBuilding : Building
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 income += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                cost -= 0;
+                cost -= 200;
             else
-                cost -= 300;
+                cost -= 100;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                income += 200;
-            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                cost -= 0;
-            else
                 income += 0;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+            {
+                if (type == BuildingType.Commercial) cost -= 0;
+                else if (type == BuildingType.Culture) cost -= -0;
+            }
+            else
+            {
+                if (type == BuildingType.Commercial) cost -= 0;
+                else if (type == BuildingType.Culture) cost -= -0;
+            }
         }
 
         if (type == BuildingType.Commercial)
@@ -84,29 +90,33 @@ public class UtilityBuilding : Building
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 3;
-            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += 1;
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
+                changeAmount += -1;
             else
-                changeAmount += 2;
+                changeAmount += 1;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += -2;
-            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -1;
-            else
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -3;
+            else
+                changeAmount += -2;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 2;
+                changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -2;
             else
-                changeAmount += 0;
+            {
+                if (type == BuildingType.Commercial) changeAmount = -1;
+                else if (type == BuildingType.Culture) changeAmount = -1;
+            }
+            //changeAmount += 0;
         }
 
         if (isExpect)

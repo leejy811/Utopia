@@ -64,18 +64,18 @@ public class ResidentialBuilding : Building
 
     public override int CalculateIncome()
     {
-        if (happinessRate < 40)
+        if (happinessRate < 30)
         {
             int value = (int)(values[ValueType.Resident].max * -0.1f);
-
+        
             if (values[ValueType.Resident].cur + value < 0)
                 value = (int)-values[ValueType.Resident].cur;
-
+        
             BoundaryValue resident = values[ValueType.Resident];
             resident.cur += value;
             cityResident += value;
             values[ValueType.Resident] = resident;
-
+        
             ApplyInfluenceToTile(value, false);
         }
 
@@ -91,11 +91,11 @@ public class ResidentialBuilding : Building
         int res = 0;
 
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 100;
-        if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
             res -= 50;
+        if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
+            res -= 25;
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 10;
+            res -= 0;
 
         bonusCost += res;
         return res;
@@ -111,21 +111,21 @@ public class ResidentialBuilding : Building
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
             commercialAmount += 0;
         else if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.Less)
-            commercialAmount += -2;
+            commercialAmount += -3;
         else
             commercialAmount += 1;
 
         //cultureCSAT
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            cultureAmount += 0;
+            cultureAmount += -3;
         else if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.Less)
-            cultureAmount += -2;
+            cultureAmount += -3;
         else
             cultureAmount += 1;
 
         //serviceCSAT
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            serviceAmount += 0;
+            serviceAmount += -1;
         else if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.Less)
             serviceAmount += -3;
         else

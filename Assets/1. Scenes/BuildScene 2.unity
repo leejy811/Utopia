@@ -8313,8 +8313,8 @@ RectTransform:
   m_GameObject: {fileID: 121153965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99009895, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 12.120002, z: 1.2120001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1130032815}
   - {fileID: 1657251215}
@@ -8324,7 +8324,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -231.00288, y: 483.98016}
+  m_AnchoredPosition: {x: -222.19987, y: 548.99976}
   m_SizeDelta: {x: 93.3, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &121153967
@@ -25750,8 +25750,8 @@ RectTransform:
   m_GameObject: {fileID: 381108239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.7999999, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 0.9599999, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1071457159}
   - {fileID: 841780455}
@@ -25760,7 +25760,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -173.90004, y: -159.47997}
+  m_AnchoredPosition: {x: -144.8, y: -167.6}
   m_SizeDelta: {x: 270.1, y: 344}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &381108241
@@ -26313,7 +26313,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.2499999, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1141817012}
   - {fileID: 2009397030}
@@ -30527,6 +30527,7 @@ MonoBehaviour:
   imageRectTransform: {fileID: 1716514331}
   textComponent: {fileID: 0}
   animationDuration: 0.5
+  messageTexts: []
 --- !u!4 &455419183
 Transform:
   m_ObjectHideFlags: 0
@@ -37205,15 +37206,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curJackpotDay: 0
   jackpotDay: 0
-  eventCondition: 03000000030000000300000003000000
+  eventCondition: 03000000020000000100000002000000
   eventInfos:
   - eventCount: 010000000200000004000000
     eventProb: 0.8
-  - eventCount: 010000000300000003000000
+  - eventCount: 020000000100000004000000
     eventProb: 0.7
   - eventCount: 020000000200000003000000
     eventProb: 0.7
-  - eventCount: 020000000200000003000000
+  - eventCount: 020000000300000002000000
     eventProb: 0.7
   - eventCount: 030000000200000002000000
     eventProb: 0.6
@@ -37239,8 +37240,8 @@ MonoBehaviour:
     - name: "\uC218\uB3C4\uAD00 \uAD50\uCCB4"
       cost: 250
       prob: 50
-    effectValue: 010000000300000005000000
-    effectJackpotValue: 040000000a00000010000000
+    effectValue: 030000000600000009000000
+    effectJackpotValue: 0a000000140000001e000000
   - eventName: "\uD558\uC218\uAD6C\uC5D0\uC11C \uB0C4\uC0C8\uB098\uC694"
     eventEffectComment: "\uD558\uC218 \uC2DC\uC124\uC774 \uC5C6\uB294 \uC8FC\uAC70
       \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37260,8 +37261,8 @@ MonoBehaviour:
     - name: "\uB6AB\uC5B4\uBEE5 \uC0AC\uC6A9"
       cost: 150
       prob: 30
-    effectValue: 010000000300000005000000
-    effectJackpotValue: 040000000a00000010000000
+    effectValue: 030000000600000009000000
+    effectJackpotValue: 0a000000140000001e000000
   - eventName: "\uC9D1\uC5D0 \uC804\uAE30\uAC00 \uC548\uB4E4\uC5B4\uC640\uC694"
     eventEffectComment: "\uC804\uAE30 \uC2DC\uC124\uC774 \uC5C6\uB294 \uC8FC\uAC70
       \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37281,8 +37282,8 @@ MonoBehaviour:
     - name: "\uD615\uAD11\uB4F1 \uAD50\uCCB4"
       cost: 250
       prob: 50
-    effectValue: 010000000300000005000000
-    effectJackpotValue: 040000000a00000010000000
+    effectValue: 030000000600000009000000
+    effectJackpotValue: 0a000000140000001e000000
   - eventName: "\uC774\uC6C3\uB4E4\uC774 \uC2DC\uB044\uB7EC\uC6CC\uC694"
     eventEffectComment: "\uBC29\uC74C \uC2DC\uC124\uC774 \uC5C6\uB294 \uC8FC\uAC70
       \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37302,8 +37303,8 @@ MonoBehaviour:
     - name: "\uADC0\uB9C8\uAC1C \uAD6C\uB9E4"
       cost: 50
       prob: 25
-    effectValue: 010000000300000005000000
-    effectJackpotValue: 040000000a00000010000000
+    effectValue: 030000000600000009000000
+    effectJackpotValue: 0a000000140000001e000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBB3C\uAC74\uC744 \uC0B4 \uACF3\uC774
       \uC5C6\uC5B4\uC694"
     eventEffectComment: "\uC7A1\uD654 \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
@@ -37324,8 +37325,8 @@ MonoBehaviour:
     - name: "\uCC28 \uD0C0\uACE0 \uC1FC\uD551"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC74C\uC2DD\uC810\uC774 \uC5C6\uC5B4\uC694"
     eventEffectComment: "\uC74C\uC2DD \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37345,8 +37346,8 @@ MonoBehaviour:
     - name: "\uC9D1 \uBC25 \uBA39\uAE30"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC601\uD654\uAD00\uC774 \uC5C6\uC5B4\uC694"
     eventEffectComment: "\uC601\uD654 \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37366,8 +37367,8 @@ MonoBehaviour:
     - name: "\uBA3C \uC601\uD654\uAD00 \uAC00\uAE30"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uBBF8\uC220\uAD00\uC774 \uC5C6\uC5B4\uC694"
     eventEffectComment: "\uBBF8\uC220 \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37387,8 +37388,8 @@ MonoBehaviour:
     - name: "\uBA3C \uBBF8\uC220\uAD00 \uAC00\uAE30"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uC9D1 \uADFC\uCC98\uC5D0 \uC6B4\uB3D9\uD560 \uACF3 \uC5C6\uC5B4\uC694"
     eventEffectComment: "\uC6B4\uB3D9 \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37408,8 +37409,8 @@ MonoBehaviour:
     - name: "\uBA3C \uD5EC\uC2A4\uC7A5 \uAC00\uAE30"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uBD88\uC774 \uB0AC\uC5B4\uC694"
     eventEffectComment: "\uC18C\uBC29 \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37429,8 +37430,8 @@ MonoBehaviour:
     - name: "119\uC5D0 \uC804\uD654"
       cost: 50
       prob: 20
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uC544\uD30C\uC694"
     eventEffectComment: "\uC758\uB8CC \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37450,8 +37451,8 @@ MonoBehaviour:
     - name: "\uC0C1\uBE44\uC57D \uBA39\uAE30"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uB3D9\uB124\uAC00 \uC0AD\uB9C9\uD574\uC694"
     eventEffectComment: "\uC5EC\uAC00 \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37471,8 +37472,8 @@ MonoBehaviour:
     - name: "\uD638\uC2E0\uC6A9\uD488 \uCC59\uAE30\uAE30"
       cost: 50
       prob: 20
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uBC94\uC8C4\uAC00 \uC77C\uC5B4\uB0AC\uC5B4\uC694"
     eventEffectComment: "\uACBD\uCC30 \uC601\uD5A5\uAD8C\uC744 \uBC97\uC5B4\uB09C
       \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
@@ -37492,8 +37493,8 @@ MonoBehaviour:
     - name: "\uB3C4\uC5B4\uB77D \uBCC0\uACBD\uD558\uAE30"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uC5D8\uB9AC\uBCA0\uC774\uD130\uAC00 \uACE0\uC7A5\uB0AC\uC5B4\uC694"
     eventEffectComment: "\uC8FC\uAC70 \uAC74\uBB3C \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 127460b39b896f942bab85bed5433758, type: 3}
@@ -37512,8 +37513,8 @@ MonoBehaviour:
     - name: "\uC790\uCCB4 \uC218\uB9AC\uD558\uAE30"
       cost: 50
       prob: 20
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uAC70\uB9AC\uAC00 \uBB34\uC11C\uC6CC\uC694"
     eventEffectComment: "\uAC74\uBB3C \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: d9f401ebdad74054681795705961514d, type: 3}
@@ -37532,8 +37533,8 @@ MonoBehaviour:
     - name: "\uBA3C \uACF5\uC6D0 \uAC00\uAE30"
       cost: 100
       prob: 40
-    effectValue: 010000000200000003000000
-    effectJackpotValue: 04000000070000000a000000
+    effectValue: 020000000300000004000000
+    effectJackpotValue: 070000000a0000000f000000
   - eventName: "\uC0C1\uD488\uAC00\uACA9\uC774 \uC62C\uB790\uC5B4\uC694"
     eventEffectComment: "\uC0C1\uC5C5 \uAC74\uBB3C \uC0C1\uD488 \uAC00\uACA9 \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: cedc565df6373ea45b58f828914293c0, type: 3}
@@ -37904,6 +37905,46 @@ MonoBehaviour:
     solutions: []
     effectValue: ceffffff
     effectJackpotValue: 38ffffff
+  - eventName: "\uB354\uC6CC\uC694"
+    eventEffectComment: "\uAC74\uBB3C \uD589\uBCF5\uB3C4 \uAC10\uC18C"
+    eventIcon: {fileID: 21300000, guid: 7b4ae6f4dc70b7045b4461c0f46cf24f, type: 3}
+    eventIndex: 40
+    type: 0
+    rewardType: 0
+    conditionType: 3
+    valueType: 0
+    targetIndex: 0
+    duplication: 0
+    curDay: 0
+    solutions:
+    - name: "\uC5D0\uC5B4\uCEE8 \uD2C0\uAE30"
+      cost: 300
+      prob: 80
+    - name: "\uC120\uD48D\uAE30 \uD2C0\uAE30"
+      cost: 50
+      prob: 20
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
+  - eventName: "\uCD94\uC6CC\uC694"
+    eventEffectComment: "\uAC74\uBB3C \uD589\uBCF5\uB3C4 \uAC10\uC18C"
+    eventIcon: {fileID: 21300000, guid: 3a0951236ca19d84ebad3950a65bd067, type: 3}
+    eventIndex: 41
+    type: 0
+    rewardType: 0
+    conditionType: 3
+    valueType: 0
+    targetIndex: 0
+    duplication: 0
+    curDay: 0
+    solutions:
+    - name: "\uBCF4\uC77C\uB7EC \uD2C0\uAE30"
+      cost: 300
+      prob: 80
+    - name: "\uC637 \uAEF4\uC785\uAE30"
+      cost: 50
+      prob: 20
+    effectValue: 010000000200000003000000
+    effectJackpotValue: 04000000070000000a000000
   possibleEvents: []
   globalEvents: []
   eventBuildings: []
@@ -42660,8 +42701,8 @@ RectTransform:
   m_GameObject: {fileID: 634139657}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99009895, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 12.120001, z: 1.2120001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 331690043}
   - {fileID: 326412659}
@@ -42673,7 +42714,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 84.4, y: 183}
+  m_AnchoredPosition: {x: 98.8, y: 183}
   m_SizeDelta: {x: 140, y: 35}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &634139662
@@ -61003,8 +61044,8 @@ RectTransform:
   m_GameObject: {fileID: 916037683}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99009895, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 12.120001, z: 1.2120001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1783356872}
   - {fileID: 885169645}
@@ -61014,7 +61055,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 79.3, y: 434}
+  m_AnchoredPosition: {x: 92.1, y: 490}
   m_SizeDelta: {x: 130, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &916037688
@@ -73415,7 +73456,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1071855189
 RectTransform:
   m_ObjectHideFlags: 0
@@ -95695,8 +95736,8 @@ RectTransform:
   m_GameObject: {fileID: 1437241313}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.79999995, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 0.96, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 661695849}
   - {fileID: 1244089667}
@@ -95705,7 +95746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: -178.20003, y: 1.0000101}
+  m_AnchoredPosition: {x: -149.9, y: 23.6}
   m_SizeDelta: {x: 261.45, y: 398.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1437241315
@@ -98941,8 +98982,8 @@ RectTransform:
   m_GameObject: {fileID: 1473522389}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2040403193}
   - {fileID: 323936091}
@@ -98951,8 +98992,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 147.3, y: -0.0024299622}
-  m_SizeDelta: {x: 270.1, y: 398.7}
+  m_AnchoredPosition: {x: 165.8, y: -15}
+  m_SizeDelta: {x: 270.09998, y: 398.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1473522391
 MonoBehaviour:
@@ -104274,8 +104315,8 @@ RectTransform:
   - {fileID: 916037685}
   - {fileID: 634139658}
   - {fileID: 121153966}
-  - {fileID: 1754942086}
   - {fileID: 1841331626}
+  - {fileID: 1754942086}
   - {fileID: 1961055437}
   m_Father: {fileID: 1529702611}
   m_RootOrder: 2
@@ -116436,18 +116477,18 @@ MonoBehaviour:
   - type: 0
     residentCondition: 100
     happinessCondition: 50
-    moneyReward: 3000
+    moneyReward: 2500
   - type: 1
     residentCondition: 2000
-    happinessCondition: 60
+    happinessCondition: 55
     moneyReward: 6000
   - type: 2
-    residentCondition: 15000
-    happinessCondition: 70
+    residentCondition: 8000
+    happinessCondition: 60
     moneyReward: 10000
   - type: 3
-    residentCondition: 100000
-    happinessCondition: 80
+    residentCondition: 20000
+    happinessCondition: 70
     moneyReward: 100000
 --- !u!4 &1744008805
 Transform:
@@ -117291,18 +117332,18 @@ RectTransform:
   m_GameObject: {fileID: 1754942085}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99009895, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 12.120002, z: 1.2120001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1280181552}
   - {fileID: 1447976216}
   - {fileID: 1372650182}
   m_Father: {fileID: 1560231790}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -43.90301, y: 457.9803}
+  m_AnchoredPosition: {x: -35.1, y: 515}
   m_SizeDelta: {x: 130, y: 55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754942087
@@ -121749,7 +121790,7 @@ RectTransform:
   m_GameObject: {fileID: 1818988477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1617411804}
@@ -123106,18 +123147,18 @@ RectTransform:
   m_GameObject: {fileID: 1841331625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99009895, y: 10, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 12.120002, z: 1.2120001}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1740016378}
   - {fileID: 1138292810}
   - {fileID: 1795815532}
   m_Father: {fileID: 1560231790}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -162.3, y: 370.98035}
+  m_AnchoredPosition: {x: -153.497, y: 411.99994}
   m_SizeDelta: {x: 90, y: 37.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841331627
@@ -127741,7 +127782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -39.5, y: 0}
+  m_AnchoredPosition: {x: -39.5, y: -18}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1919000785
@@ -132047,7 +132088,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.25, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1977482051}
   - {fileID: 1071855189}
@@ -134097,7 +134138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2039232422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -136737,7 +136778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.78431374}
+  m_Color: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -141122,7 +141163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2131625160
 RectTransform:
   m_ObjectHideFlags: 0
@@ -141489,8 +141530,8 @@ RectTransform:
   m_GameObject: {fileID: 2136399398}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1287747215}
   - {fileID: 1451380363}
@@ -141499,7 +141540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 142.69708, y: -0.0024299622}
+  m_AnchoredPosition: {x: 160.5, y: -15}
   m_SizeDelta: {x: 261.45, y: 398.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136399400

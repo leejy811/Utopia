@@ -32,7 +32,7 @@ public class ShopManager : MonoBehaviour, IObserver
         }
 
         instance = this;
-        Money = 3000;
+        Money = 100;
     }
 
     public void GetMoney(int amount)
@@ -45,7 +45,7 @@ public class ShopManager : MonoBehaviour, IObserver
         if (Money - amount < 0)
         {
             Vector3 pos = curPickObject == null ? Vector3.zero : curPickObject.transform.position;
-            UIManager.instance.SetErrorPopUp("!! µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.", pos);
+            UIManager.instance.SetErrorPopUp("!! ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.", pos);
             return false;
         }
 
@@ -194,6 +194,7 @@ public class ShopManager : MonoBehaviour, IObserver
         if (!PayMoney(cost)) return;
 
         Grid.instance.PlaceTile(curPickIndex, spawnTrans);
+        
     }
 
     public void AddTile(Transform tile)

@@ -34,11 +34,11 @@ public class ServiceBuilding : UtilityBuilding
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                cost -= 100;
+                cost -= 200;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 cost -= 0;
             else
-                cost -= 50;
+                cost -= 100;
         }
         else
         {
@@ -63,7 +63,7 @@ public class ServiceBuilding : UtilityBuilding
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 3;
+                changeAmount += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -2;
             else
@@ -72,20 +72,20 @@ public class ServiceBuilding : UtilityBuilding
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 0;
-            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += 2;
-            else
+            else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += 0;
+            else
+                changeAmount += 1;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 0;
+                changeAmount += 3;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -1;
             else
-                changeAmount += 2;
+                changeAmount += 0;
         }
 
         if (isExpect)
