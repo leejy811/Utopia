@@ -30523,6 +30523,7 @@ MonoBehaviour:
   - {fileID: 974781696}
   - {fileID: 866196074}
   - {fileID: 1007200747}
+  postProcessVolume: {fileID: 0}
   NewsHappiness: 0
   imageRectTransform: {fileID: 1716514331}
   textComponent: {fileID: 0}
