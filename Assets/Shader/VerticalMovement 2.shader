@@ -1,4 +1,4 @@
-Shader "Custom/VerticalMovement1"
+Shader "Custom/VerticalMovement"
 {
     Properties
     {
@@ -45,7 +45,7 @@ Shader "Custom/VerticalMovement1"
                     float period = 3.14159265359;
                     float t = _Time.y * _Speed;
 
-                    float t_mod = frac(t / period) * period;
+                    float t_mod = frac((t + period / 3) / period) * period;
                     float offset = frac(t_mod / _Amplitude) * _Amplitude;
 
                     v.vertex.z += offset;

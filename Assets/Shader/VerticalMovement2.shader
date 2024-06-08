@@ -1,4 +1,4 @@
-Shader "Custom/VerticalMovement"
+Shader "Custom/VerticalMovement2"
 {
     Properties
     {
@@ -8,11 +8,12 @@ Shader "Custom/VerticalMovement"
     }
         SubShader
         {
-            Tags { "RenderType" = "Opaque" }
+            Tags { "RenderType" = "Transparent" }
             LOD 200
 
             ZWrite On
             ZTest LEqual
+            Blend SrcAlpha OneMinusSrcAlpha
 
             Pass
             {
@@ -35,21 +36,30 @@ Shader "Custom/VerticalMovement"
                 {
                     float2 uv : TEXCOORD0;
                     float4 vertex : SV_POSITION;
+                    float offset : TEXCOORD1;
                 };
 
                 v2f vert(appdata v)
                 {
                     v2f o;
-                    float offset = sin(_Time.y * _Speed) * _Amplitude;
+                    float period = 3.14159265359;
+                    float t = _Time.y * _Speed;
+
+                    float t_mod = frac((t + 2*period/3) / period) * period;
+                    float offset = frac(t_mod / _Amplitude) * _Amplitude;
+
                     v.vertex.z += offset;
                     o.vertex = UnityObjectToClipPos(v.vertex);
                     o.uv = v.uv;
+                    o.offset = offset;
                     return o;
                 }
 
                 fixed4 frag(v2f i) : SV_Target
                 {
-                    return fixed4(1.0, 0.0, 0.0, 1.0);
+                    float alpha = 1.0 - clamp(i.offset / _Amplitude, 0.0, 1.0);
+
+                    return fixed4(1.0, 0.0, 0.0, alpha);
                 }
                 ENDCG
             }

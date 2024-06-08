@@ -71,44 +71,10 @@ public class UIManager : MonoBehaviour, ISubject
 
     #endregion
 
-    #region PostProcessing
 
 
-    public PostProcessVolume postProcessVolume;
-    private ColorGrading colorGrading;
 
-    /*
-    void Start()//사용 예시
-    {
-        postProcessVolume.profile.TryGetSettings(out colorGrading);
-    }
-    */
 
-    public void ActivateColorGrading()
-    {
-        StartCoroutine(ChangeColorFilter());
-    }
-
-    private IEnumerator ChangeColorFilter()
-    {
-        colorGrading.active = true;
-
-        Color startColor = new Color(25 / 255f, 25 / 255f, 25 / 255f);
-        Color targetColor = new Color(150 / 255f, 150 / 255f, 150 / 255f);
-        float duration = 0.5f;
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            colorGrading.colorFilter.value = Color.Lerp(startColor, targetColor, elapsedTime / duration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
-        }
-
-        colorGrading.colorFilter.value = targetColor;
-    }
-
-    #endregion
 
     private Building targetBuilding;
     private List<IObserver> observers = new List<IObserver>();
