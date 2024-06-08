@@ -38,7 +38,10 @@ public class UtilityBuilding : Building
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                income += 50;
+            {
+                if (type == BuildingType.Commercial) income += 100;
+                else if (type == BuildingType.Culture) income += 100;
+            }
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 income += 0;
             else
@@ -49,9 +52,9 @@ public class UtilityBuilding : Building
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 income += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                cost -= 200;
+                cost -= 0;
             else
-                cost -= 100;
+                cost -= 0;
         }
         else
         {
@@ -92,18 +95,18 @@ public class UtilityBuilding : Building
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += -1;
+                changeAmount += 0;
             else
                 changeAmount += 1;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += -1;
+                changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += -3;
-            else
                 changeAmount += -2;
+            else
+                changeAmount += 0;
         }
         else
         {
@@ -113,8 +116,8 @@ public class UtilityBuilding : Building
                 changeAmount += -2;
             else
             {
-                if (type == BuildingType.Commercial) changeAmount = -1;
-                else if (type == BuildingType.Culture) changeAmount = -1;
+                if (type == BuildingType.Commercial) changeAmount = 0;
+                else if (type == BuildingType.Culture) changeAmount = 0;
             }
             //changeAmount += 0;
         }
