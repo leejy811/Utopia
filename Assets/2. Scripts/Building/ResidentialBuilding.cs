@@ -64,20 +64,20 @@ public class ResidentialBuilding : Building
 
     public override int CalculateIncome()
     {
-        if (happinessRate < 30)
-        {
-            int value = (int)(values[ValueType.Resident].max * -0.1f);
-        
-            if (values[ValueType.Resident].cur + value < 0)
-                value = (int)-values[ValueType.Resident].cur;
-        
-            BoundaryValue resident = values[ValueType.Resident];
-            resident.cur += value;
-            cityResident += value;
-            values[ValueType.Resident] = resident;
-        
-            ApplyInfluenceToTile(value, false);
-        }
+        // if (happinessRate < 30)
+        // {
+        //     int value = (int)(values[ValueType.Resident].max * -0.1f);
+        //
+        //     if (values[ValueType.Resident].cur + value < 0)
+        //         value = (int)-values[ValueType.Resident].cur;
+        //
+        //     BoundaryValue resident = values[ValueType.Resident];
+        //     resident.cur += value;
+        //     cityResident += value;
+        //     values[ValueType.Resident] = resident;
+        //
+        //     ApplyInfluenceToTile(value, false);
+        // }
 
         float res = values[ValueType.Resident].cur * (happinessRate / 100.0f) * (4 - grade);
         res += res * GetIncomeEvent();
@@ -93,7 +93,7 @@ public class ResidentialBuilding : Building
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
             res -= 50;
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 25;
+            res -= 50;
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
             res -= 0;
 
@@ -109,25 +109,25 @@ public class ResidentialBuilding : Building
 
         //commercialCSAT
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            commercialAmount += 0;
+            commercialAmount += 2;
         else if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.Less)
-            commercialAmount += -3;
+            commercialAmount += -1;
         else
             commercialAmount += 1;
 
         //cultureCSAT
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            cultureAmount += -3;
+            cultureAmount += 2;
         else if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.Less)
-            cultureAmount += -3;
+            cultureAmount += -1;
         else
             cultureAmount += 1;
 
         //serviceCSAT
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            serviceAmount += -1;
+            serviceAmount += 2;
         else if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.Less)
-            serviceAmount += -3;
+            serviceAmount += -1;
         else
             serviceAmount += 1;
 
