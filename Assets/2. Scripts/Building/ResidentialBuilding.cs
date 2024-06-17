@@ -91,9 +91,9 @@ public class ResidentialBuilding : Building
         int res = 0;
 
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 50;
+            res -= 25;
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 50;
+            res -= 25;
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
             res -= 0;
 

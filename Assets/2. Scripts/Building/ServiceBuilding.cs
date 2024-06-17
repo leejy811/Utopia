@@ -34,11 +34,11 @@ public class ServiceBuilding : UtilityBuilding
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                cost -= 100;
+                cost -= 50;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 cost -= 0;
             else
-                cost -= 50;
+                cost -= 25;
         }
         else
         {
@@ -67,7 +67,7 @@ public class ServiceBuilding : UtilityBuilding
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -1;
             else
-                changeAmount += 0;
+                changeAmount += -2;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
@@ -81,7 +81,7 @@ public class ServiceBuilding : UtilityBuilding
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 0;
+                changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -1;
             else
