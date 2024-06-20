@@ -151,6 +151,8 @@ public class RoutineManager : MonoBehaviour
             cityHappiness = 0;
 
         ResidentialBuilding.yesterDayResident = ResidentialBuilding.cityResident;
+
+        AkSoundEngine.SetRTPCValue("HAPPY", cityHappiness);
     }
 
     public void SetCityHappiness(int happiness, int sign)
