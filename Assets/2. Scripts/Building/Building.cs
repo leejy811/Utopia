@@ -201,6 +201,7 @@ public class Building : MonoBehaviour
         if (GetEventProblemCount() == 1 && curEvents[index].type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, false);
         curEvents.Remove(curEvents[index]);
+        AkSoundEngine.PostEvent("Play_UI_solve_001", gameObject);
     }
 
     public int GetEventProblemCount()

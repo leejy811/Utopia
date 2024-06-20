@@ -16,10 +16,13 @@ public class DebtUI : UIElement
         int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
 
         if (state == EventState.Receipt)
+        {
             gameObject.GetComponentInChildren<Animator>().SetInteger("DayOfWeek", dayOfWeek);
-        else
+            AkSoundEngine.PostEvent("Play_stamp", gameObject);
+        }
+         else
             curDay = curDay.AddDays(8 - dayOfWeek);
-
+        AkSoundEngine.PostEvent("Play_UI_papersound_001", gameObject);
         moneyText.text = debtMoney.ToString("C");
         dayText.text = curDay.ToString("yyyy년 MM월 dd일") + " 00시";
     }

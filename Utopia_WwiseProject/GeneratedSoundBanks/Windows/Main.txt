@@ -1,4 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
+	486934152	Play_ATP_event_water_outagev2			\Default Work Unit\Play_ATP_event_water_outagev2	
+	486934153	Play_ATP_event_water_outagev3			\Default Work Unit\Play_ATP_event_water_outagev3	
+	486934155	Play_ATP_event_water_outagev1			\Default Work Unit\Play_ATP_event_water_outagev1	
+	486934158	Play_ATP_event_water_outagev4			\Default Work Unit\Play_ATP_event_water_outagev4	
+	602794457	Play_ATP_event_scary_2_noHeel_v4			\Default Work Unit\Play_ATP_event_scary_2_noHeel_v4	
+	602794460	Play_ATP_event_scary_2_noHeel_v1			\Default Work Unit\Play_ATP_event_scary_2_noHeel_v1	
+	602794462	Play_ATP_event_scary_2_noHeel_v3			\Default Work Unit\Play_ATP_event_scary_2_noHeel_v3	
+	602794463	Play_ATP_event_scary_2_noHeel_v2			\Default Work Unit\Play_ATP_event_scary_2_noHeel_v2	
 	880454473	Play_Select_Button			\Default Work Unit\Play_Select_Button	
 	1020223172	Play_Wind			\Default Work Unit\Play_Wind	
 	1073654463	Play_Slot_rimshot			\Default Work Unit\Play_Slot_rimshot	
@@ -11,13 +19,17 @@ Event	ID	Name			Wwise Object Path	Notes
 	3493507479	Stop_construction			\Default Work Unit\Stop_construction	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	187723092	INDEX1			\Default Work Unit\INDEX1	
+	187723095	INDEX2			\Default Work Unit\INDEX2	
 	848835168	ZOOM			\Default Work Unit\ZOOM	
 	1427264549	HAPPY			\Default Work Unit\HAPPY	
 	1584507803	CLICK			\Default Work Unit\CLICK	
 	1761501017	BOOL			\Default Work Unit\BOOL	
+	2212414277	DIST			\Default Work Unit\DIST	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	32765491	shs_oat_ambience_construction_work_1_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_1_jackhammer_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_1_jackhammer		271306
+	57723684	ATP_event_scary_2(noHeel)v2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\scary_2(noHeel)_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2_1\ATP_event_scary_2(noHeel)v2		72003
 	65709662	xylophone	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\xylophone_797B5584.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\xylophone		46446
 	81639684	marimbaC#	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\marimbaC#_292D3C5C.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\marimbaC#		29386
 	181388217	shs_oat_ambience_construction_work_5_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_5_jackhammer_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_5_jackhammer		497487
@@ -30,6 +42,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	779451324	Slot_rimshot	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SO_BA_rim_chin_upbounce_8C239BD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		1951
 	824445506	ForestAmbience	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\utopia sound design_D7FFE3E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\ForestAmbience		3219744
 	832635833	buildingsound	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Build_001_3D7C98B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\buildingsound		6065
+	967811573	ATP_event_water_outagev1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\water_outage_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\ATP_event_water_outagev1		105317
 	987196180	singsingsingmybird	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\singsingsingmybird_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\singsingsingmybird\singsingsingmybird\singsingsingmybird		2294477
 	1034700149	Construction_S08IN_355	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Construction_S08IN.355_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\Construction_S08IN_355		2226574
 

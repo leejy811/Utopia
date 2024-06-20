@@ -41,19 +41,23 @@
 							<ObjectRef Name="BGMsequnce1" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="3" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="BGM4" ID="{6AF6144E-1EA1-4F74-B01C-2D8AC5AB755D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="3" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1.6786171574904</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
-							<Value>11.2740076824584</Value>
+							<Value>0.291187374530455</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>9.60727791997153</Value>
+							<Value>0.2670401452118</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
@@ -61,15 +65,15 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
-							<Value>1.76</Value>
+							<Value>1.65756722151088</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>8.7595390524968</Value>
+							<Value>3.12076440460947</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>54.7441052631579</Value>
+							<Value>15.8308436477451</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">

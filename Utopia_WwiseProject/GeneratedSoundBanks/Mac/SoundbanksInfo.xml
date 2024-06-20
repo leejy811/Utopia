@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{75C23E20-4EB7-537C-FB36-40DE895BBE0B}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{341B32BA-8D73-712F-962C-8AD07EFAE7D7}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -25,6 +25,10 @@
 					<ShortName>BGM.wav</ShortName>
 					<CachePath>SFX/BGM_11A93380.wem</CachePath>
 				</File>
+				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3131.wav</ShortName>
+					<CachePath>SFX/3131_FBC78EF0.wem</CachePath>
+				</File>
 			</Media>
 			<Plugins>
 				<Custom>
@@ -32,6 +36,11 @@
 				</Custom>
 			</Plugins>
 			<Events>
+				<Event Id="1325347504" Name="Play_BGM4" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="839951050"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1994810337" Name="Play_BGMsequnce1" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="159506193"/>
@@ -52,7 +61,7 @@
 				<GameParameter Id="1761501017" Name="BOOL"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{ADD72ADE-06C6-BB80-9A46-F464288544D2}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4CFA0AA7-1BC2-A818-C3A8-FA11F6ED84D1}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -85,13 +94,25 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{648FF346-757C-472C-DB17-D2E017E3CF48}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B3BA43AA-CBBB-81B7-BAED-95D2BFF0D2EE}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
+				<File Id="37938370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Day-Night.wav</ShortName>
+					<CachePath>SFX/Day-Night_818F3B66.wem</CachePath>
+				</File>
 				<File Id="42211082" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
 					<CachePath>SFX/APT_event_SEWERSMELL_001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="43538208" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_solve_001.wav</ShortName>
+					<CachePath>SFX/UI_solve_001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="115031296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Night-Dawn.wav</ShortName>
+					<CachePath>SFX/Night-Dawn_818F3B66.wem</CachePath>
 				</File>
 				<File Id="119271698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tile_Buy_001(short).wav</ShortName>
@@ -121,6 +142,10 @@
 					<ShortName>APT_event_DISEASE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DISEASE_001_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="361543517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stamp.wav</ShortName>
+					<CachePath>SFX/stamp_4840DD5A.wem</CachePath>
+				</File>
 				<File Id="433461852" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DESOLATE_001_FBC78EF0.wem</CachePath>
@@ -137,6 +162,10 @@
 					<ShortName>ATP_event_ELEVATOR_001_v2.wav</ShortName>
 					<CachePath>SFX/ATP_event_ELEVATOR_001_v2_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="865553987" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>protest_002.wav</ShortName>
+					<CachePath>SFX/protest_002_E6AF7396.wem</CachePath>
+				</File>
 				<File Id="942761984" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Demolition_001_v1.wav</ShortName>
 					<CachePath>SFX/Demolition_001_v1_818F3B66.wem</CachePath>
@@ -144,6 +173,10 @@
 				<File Id="991450525" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Mouse_001_v1.wav</ShortName>
 					<CachePath>SFX/Mouse_001_v1_927ACF2B.wem</CachePath>
+				</File>
+				<File Id="1013754079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_papersound_001.wav</ShortName>
+					<CachePath>SFX/UI_papersound_001_818F3B66.wem</CachePath>
 				</File>
 				<File Id="1058891980" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_NOISY_001.wav</ShortName>
@@ -316,6 +349,11 @@
 						<MediaRef Id="256641271"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="2687999423" Name="Play_Day_Night" DurationType="OneShot" DurationMin="2.7866666" DurationMax="2.7866666">
+					<MediaRefs>
+						<MediaRef Id="37938370"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="669897392" Name="Play_Demolition_001_v1" DurationType="OneShot" DurationMin="0.7253125" DurationMax="0.7253125">
 					<MediaRefs>
 						<MediaRef Id="942761984"/>
@@ -326,9 +364,24 @@
 						<MediaRef Id="991450525"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3836024861" Name="Play_Night_Dawn" DurationType="OneShot" DurationMin="2.7866666" DurationMax="2.7866666">
+					<MediaRefs>
+						<MediaRef Id="115031296"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2025304052" Name="Play_Pay_001" DurationType="OneShot" DurationMin="0.992875" DurationMax="0.992875">
 					<MediaRefs>
 						<MediaRef Id="255281743"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1749625636" Name="Play_protest_002" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="865553987"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2683666007" Name="Play_stamp" DurationType="OneShot" DurationMin="0.62745833" DurationMax="0.62745833">
+					<MediaRefs>
+						<MediaRef Id="361543517"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3972534815" Name="Play_Tile_Buy_001" DurationType="OneShot" DurationMin="0.992875" DurationMax="0.992875">
@@ -341,22 +394,38 @@
 						<MediaRef Id="175516682"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="424395900" Name="Play_UI_papersound_001" DurationType="OneShot" DurationMin="0.41116667" DurationMax="0.41116667">
+					<MediaRefs>
+						<MediaRef Id="1013754079"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1520262876" Name="Play_UI_solve_001" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
+					<MediaRefs>
+						<MediaRef Id="43538208"/>
+					</MediaRefs>
+				</Event>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9CD1E8A1-9EB9-5BBC-199D-6DC2F559A816}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3B6262FB-057D-5A16-61D2-85E3BB7E1DA9}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
 				<File Id="32765491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>shs_oat_ambience_construction_work_1_jackhammer.wav</ShortName>
 					<CachePath>SFX/shs_oat_ambience_construction_work_1_jackhammer_11A93380.wem</CachePath>
+				</File>
+				<File Id="57723684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>scary_2(noHeel).wav</ShortName>
+					<CachePath>SFX/scary_2(noHeel)_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="65709662" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>xylophone.wav</ShortName>
@@ -406,6 +475,10 @@
 					<ShortName>Build_001.wav</ShortName>
 					<CachePath>SFX/Build_001_7D1A1C64.wem</CachePath>
 				</File>
+				<File Id="967811573" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>water_outage.wav</ShortName>
+					<CachePath>SFX/water_outage_FBC78EF0.wem</CachePath>
+				</File>
 				<File Id="987196180" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>singsingsingmybird.wav</ShortName>
 					<CachePath>SFX/singsingsingmybird_FBC78EF0.wem</CachePath>
@@ -416,6 +489,46 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="602794460" Name="Play_ATP_event_scary_2_noHeel_v1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="602794463" Name="Play_ATP_event_scary_2_noHeel_v2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="602794462" Name="Play_ATP_event_scary_2_noHeel_v3" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="602794457" Name="Play_ATP_event_scary_2_noHeel_v4" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934155" Name="Play_ATP_event_water_outagev1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934152" Name="Play_ATP_event_water_outagev2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934153" Name="Play_ATP_event_water_outagev3" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934158" Name="Play_ATP_event_water_outagev4" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3126765036" Name="Play_BGM" DurationType="OneShot" DurationMin="120" DurationMax="120">
 					<MediaRefs>
 						<MediaRef Id="394814525"/>
@@ -470,12 +583,15 @@
 				<Event Id="3493507479" Name="Stop_construction" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="187723092" Name="INDEX1"/>
+				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
 				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{450018A5-5F31-7396-2541-3F8E4D05C378}</FileHash>
+	<FileHash>{D39BEAB5-24A3-606B-9F8D-E06978EDBA31}</FileHash>
 </SoundBanksInfo>
