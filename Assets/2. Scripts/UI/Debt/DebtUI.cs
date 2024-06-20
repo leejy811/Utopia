@@ -20,8 +20,8 @@ public class DebtUI : UIElement
         else
             curDay = curDay.AddDays(8 - dayOfWeek);
 
-        moneyText.text = "»óÈ¯ ¿ä±¸¾× : " + debtMoney.ToString("C");
-        dayText.text = "º¯Á¦ÀÏ : " + curDay.ToString("yyyy³â MM¿ù ddÀÏ");
+        moneyText.text = "ì±„ë¬´ê¸ˆ : " + debtMoney.ToString("C");
+        dayText.text = "ì§€ê¸‰ê¸°ì¼ : " + curDay.ToString("yyyyë…„ MMì›” ddì¼") + " 00ì‹œ";
     }
 
     protected void OnEnable()

@@ -32,7 +32,7 @@ public class ShopManager : MonoBehaviour, IObserver
         }
 
         instance = this;
-        Money = 10000;
+        Money = 500;
     }
 
     public void GetMoney(int amount)

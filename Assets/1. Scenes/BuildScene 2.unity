@@ -37206,7 +37206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   curJackpotDay: 0
   jackpotDay: 0
-  eventCondition: 03000000020000000100000002000000
+  eventCondition: 2c010000e80300006400000064000000
   eventInfos:
   - eventCount: 010000000200000004000000
     eventProb: 0.8
