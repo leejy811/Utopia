@@ -24,6 +24,8 @@ public class BottomBlackUIAnimation : MonoBehaviour
         rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + moveDistance, duration).SetEase(Ease.InOutQuad).OnComplete(() =>
         {
             InputManager.canInput = true;
+            UIManager.instance.notifyObserver(EventState.CityLevelUp);
+            UIManager.instance.SetCityLevelUp();
         });
     }
 }
