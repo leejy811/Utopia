@@ -12,12 +12,12 @@ public class CostUI : MonoBehaviour, IObserver
     {
         float percent = EventManager.instance.GetBuildCostEventValue();
 
-        costText.text = "∞«º≥ ∫ÒøÎ : ";
+        costText.text = "Í±¥ÏÑ§ ÎπÑÏö© : ";
 
         if (percent != 1.0)
-            costText.text += "<s>" + cost.ToString() + "</s> <sprite=7>" + (cost * percent).ToString() + "ø¯";
+            costText.text += "<s>" + cost.ToString() + "</s> <sprite=7>" + (cost * percent).ToString() + "Ïõê";
         else
-            costText.text += cost.ToString() + "ø¯";
+            costText.text += cost.ToString() + "Ïõê";
     }
 
     public void OnUI(int cost, Vector3 pos)
@@ -36,7 +36,7 @@ public class CostUI : MonoBehaviour, IObserver
         var localPos = Vector2.zero;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
 
-        rectSelf.localPosition = localPos + new Vector2(0, -7);
+        rectSelf.localPosition = localPos + new Vector2(0, -15);
     }
 
     public void Notify(EventState state)
