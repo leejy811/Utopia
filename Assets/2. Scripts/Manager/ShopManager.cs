@@ -256,6 +256,7 @@ public class ShopManager : MonoBehaviour, IObserver
         if (tile.CheckBuilding())
         {
             curPickObject.GetComponent<FollowMouse>().tile = tile.gameObject;
+            curPickObject.GetComponent<FollowMouse>().SetRedLineSize(curPickIndex);
             SetObjectColor(curPickObject, Color.white);
 
             int cost = 0;
