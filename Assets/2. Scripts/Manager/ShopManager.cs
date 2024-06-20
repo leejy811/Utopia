@@ -45,7 +45,7 @@ public class ShopManager : MonoBehaviour, IObserver
         if (Money - amount < 0)
         {
             Vector3 pos = curPickObject == null ? Vector3.zero : curPickObject.transform.position;
-            UIManager.instance.SetErrorPopUp("!! ���� �����մϴ�.", pos);
+            UIManager.instance.SetErrorPopUp("!! 돈이 부족합니다.", pos);
             return false;
         }
 

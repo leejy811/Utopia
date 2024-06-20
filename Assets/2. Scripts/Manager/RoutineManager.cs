@@ -79,18 +79,17 @@ public class RoutineManager : MonoBehaviour
 
     private void CalculateDept(int weekOfYear)
     {
-        debt = debtsOfWeek[weekOfYear];
-
         if (!isPay)
         {
             SetCreditRating(1);
             weekResult = ResultType.Worst;
             UIManager.instance.notifyObserver(EventState.LateReceipt);
+            debt = debtsOfWeek[weekOfYear];
             return;
         }
 
+        debt = debtsOfWeek[weekOfYear];
         isPay = false;
-        CityLevelManager.instance.UpdateCityType(weekOfYear);
 
         UIManager.instance.OnClickDeptDocButton();
     }
@@ -204,6 +203,9 @@ public class RoutineManager : MonoBehaviour
         }
 
         isPay = true;
+
+        int weekOfYear = (day.DayOfYear / 7) + 1 + (creditRating * -1) + ((day.Year - 2024) * 52);
+        CityLevelManager.instance.UpdateCityType(weekOfYear);
     }
 
     private void RewardToPrePay()

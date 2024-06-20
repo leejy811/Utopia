@@ -20,8 +20,8 @@ public class DebtUI : UIElement
         else
             curDay = curDay.AddDays(8 - dayOfWeek);
 
-        moneyText.text = "채무금 : " + debtMoney.ToString("C");
-        dayText.text = "지급기일 : " + curDay.ToString("yyyy년 MM월 dd일") + " 00시";
+        moneyText.text = debtMoney.ToString("C");
+        dayText.text = curDay.ToString("yyyy년 MM월 dd일") + " 00시";
     }
 
     protected void OnEnable()

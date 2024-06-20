@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum EventState { None, EventNotify, CityLevelUp, SlotMachine,
                         Construct, EtcFunc, EventIcon, TileColor, LockButton, DebtDoc,
-                        Receipt, Reminder, LateReceipt }
+                        Receipt, Reminder, LateReceipt, CityLevel }
 
 public interface IObserver
 {

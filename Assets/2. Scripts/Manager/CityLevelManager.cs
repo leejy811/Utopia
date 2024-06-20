@@ -48,7 +48,8 @@ public class CityLevelManager : MonoBehaviour
     {
         levelIdx++;
         Grid.instance.PurchaseTile(level[levelIdx].tileSize);
-        //ToDo 레벨업 연출 및 UI
+        UIManager.instance.notifyObserver(EventState.CityLevelUp);
+        UIManager.instance.SetCityLevelUp();
     }
 
     public bool CheckBuildingLevel(Building building)

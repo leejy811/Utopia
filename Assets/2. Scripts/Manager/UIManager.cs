@@ -33,6 +33,10 @@ public class UIManager : MonoBehaviour, ISubject
     public InfoUI[] infos;
     public ListUI[] lists;
 
+    [Header("CityLevel")]
+    public UIElement cityLevelPanel;
+    public GameObject[] cityLevels;
+
     [Header("CityLevelUp")]
     public UIElement cityLevelUpPanel;
     public GameObject[] cityLevelUps;
@@ -435,6 +439,30 @@ public class UIManager : MonoBehaviour, ISubject
         ShopManager.instance.ChangeState(BuyState.None);
     }
 
+    public void SetCityLevel()
+    {
+        int idx = CityLevelManager.instance.levelIdx;
+        for (int i = 0;i < CityLevelManager.instance.level.Length; i++)
+        {
+            if (i <= idx)
+                cityLevels[i].SetActive(true);
+            else
+                cityLevels[i].SetActive(false);
+        }
+    }
+
+    public void SetCityLevelUp()
+    {
+        int idx = CityLevelManager.instance.levelIdx;
+        for (int i = 0; i < CityLevelManager.instance.level.Length; i++)
+        {
+            if (i == idx)
+                cityLevelUps[i].SetActive(true);
+            else
+                cityLevelUps[i].SetActive(false);
+        }
+    }
+
     #endregion
 
     #region OnClick
@@ -562,6 +590,12 @@ public class UIManager : MonoBehaviour, ISubject
             notifyObserver(EventState.DebtDoc);
     }
 
+    public void OnClickCityLevelButton()
+    {
+        notifyObserver(EventState.CityLevel);
+        SetCityLevel();
+    }
+
     public void OnClickSpaceBar()
     {
         if (eventRoulette.gameObject.activeSelf)
@@ -608,6 +642,7 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(BuildingSpawner.instance);
 
         addObserver(cityLevelUpPanel);
+        addObserver(cityLevelPanel);
         addObserver(eventNotify);
         addObserver(eventRoulette);
 
