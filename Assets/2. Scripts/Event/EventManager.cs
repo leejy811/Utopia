@@ -141,7 +141,10 @@ public class EventManager : MonoBehaviour
     {
         if(possibleEvents.Count == 0) return;
 
-        cost = costMultiplier * rollTimes + initialCost;
+        if (rollTimes <= 3)
+            cost = initialCost;
+        else
+            cost = costMultiplier * rollTimes + initialCost;
 
         List<Event> ranEvents = new List<Event>();
         List<int> ranIdx = new List<int>();
