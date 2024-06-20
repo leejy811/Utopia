@@ -18,7 +18,6 @@ public class Grid : MonoBehaviour, IObserver
     public Color[] tilePurchaseColors;
 
     public bool isColorMode;
-    public bool isInfluenceMode;
 
     public int width;
     public int height;
@@ -47,10 +46,14 @@ public class Grid : MonoBehaviour, IObserver
 
     private void SetTile()
     {
+        width = CityLevelManager.instance.level[3].tileSize.x;
+        height = CityLevelManager.instance.level[3].tileSize.y;
+
         if (width % 2 != 0) width++;
         if (height % 2 != 0) height++;
 
         tiles = new Tile[width, height];
+        startTileSize = CityLevelManager.instance.level[0].tileSize;
 
         for (int i = 0; i < width; i++)
         {
@@ -77,6 +80,17 @@ public class Grid : MonoBehaviour, IObserver
         camera.transform.position = ((Vector3Int)startPoint) + cameraOffset;
     }
 
+    public void PurchaseTile(Vector2Int purchaseSize)
+    {
+        for (int i = (width / 2) - (purchaseSize.x / 2); i < (width / 2) + (purchaseSize.x / 2); i++)
+        {
+            for (int j = (height / 2) - (purchaseSize.y / 2); j < (height / 2) + (purchaseSize.y / 2); j++)
+            {
+                tiles[i, j].SetTilePurchased(true);
+            }
+        }
+    }
+
     public void SetTileColorMode(bool isOn)
     {
         for (int i = 0; i < width; i++)
@@ -97,30 +111,8 @@ public class Grid : MonoBehaviour, IObserver
         SetTileColorMode(isColorMode);
     }
 
-    public void SetTileInfluenceMode(bool isOn)
-    {
-        if (!isOn)
-        {
-            UIManager.instance.SetTileInfluencePopUp(null);
-        }
-    }
-
-    public void NotifyTileInfluence(Transform tileTransform)
-    {
-        Tile tile = tiles[(int)tileTransform.position.x, (int)tileTransform.position.z];
-        UIManager.instance.SetTileInfluencePopUp(tile);
-    }
-
     public void Notify(EventState state)
     {
-        if (state == EventState.TileInfluence && !isInfluenceMode)
-            isInfluenceMode = true;
-        else if(state != EventState.TileColor)
-        {
-            isInfluenceMode = false;
-            UIManager.instance.SetTileInfluencePopUp(null);
-        }
-
         if (state == EventState.TileColor && !isColorMode)
         {
             isColorMode = true;

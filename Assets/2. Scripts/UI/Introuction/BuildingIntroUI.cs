@@ -50,7 +50,7 @@ public class BuildingIntroUI : MonoBehaviour
         SetInitState();
 
         buildingNameText.text = building.buildingName + building.count;
-        buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType] + "/" + building.grade + "µî±Þ";
+        buildingInfoText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType];
         happinessText.text = "<sprite=" + Mathf.Min(building.happinessRate / 20, 4) + "> " + building.happinessRate + "(" + GetSignString(building.happinessDifference, "+") + ")%";
 
         for (int i = 0;i < building.curEvents.Count; i++)

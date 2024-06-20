@@ -31,6 +31,13 @@ public class EventManager : MonoBehaviour
     public List<Event> globalEvents;
     public List<Building> eventBuildings;
 
+    [Header("Cost")]
+    public int initialCost;
+    public int costMultiplier;
+
+    private int rollTimes;
+    private int cost;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -56,19 +63,22 @@ public class EventManager : MonoBehaviour
         curJackpotDay = 0;
         jackpotDay = Random.Range(7, 15);
     }
-
-    public void CheckEvents()
+    
+    public bool CheckEventCondition()
     {
         if (BuildingSpawner.instance.buildingTypeCount[0] < eventCondition[0]
             || BuildingSpawner.instance.buildingTypeCount[1] < eventCondition[1]
             || BuildingSpawner.instance.buildingTypeCount[2] < eventCondition[2]
-            || BuildingSpawner.instance.buildingTypeCount[3] < eventCondition[3]
-            || Random.Range(0.0f, 1.0f) > eventInfos[(int)RoutineManager.instance.todayResult].eventProb)
+            || BuildingSpawner.instance.buildingTypeCount[3] < eventCondition[3])
         {
-            InputManager.canInput = true;
-            return;
+            return false;
         }
+        else
+            return true;
+    }
 
+    public void CheckEvents()
+    {
         List<List<Building>> buildings = new List<List<Building>>();
 
         for (int i = 0; i < events.Count; i++)
@@ -109,7 +119,7 @@ public class EventManager : MonoBehaviour
         for (int i = 0;i < rewardTypeEvent.Count; i++)
         {
             List<int> indexs = new List<int>();
-            int range = rewardTypeEvent[i].Count - eventInfos[(int)RoutineManager.instance.todayResult].eventCount[i];
+            int range = rewardTypeEvent[i].Count - eventInfos[(int)RoutineManager.instance.weekResult].eventCount[i];
 
             for (int j = 0; j < range; j++)
             {
@@ -125,23 +135,26 @@ public class EventManager : MonoBehaviour
 
         targetBuildings = buildings;
         globalEvents.Clear();
-
-        RandomRoulette();
     }
 
     public void RandomRoulette()
     {
         if(possibleEvents.Count == 0) return;
 
+        cost = costMultiplier * rollTimes + initialCost;
+
         List<Event> ranEvents = new List<Event>();
+        List<int> ranIdx = new List<int>();
         curJackpotDay++;
 
         if (curJackpotDay == jackpotDay)
         {
-            int ranidx = Random.Range(0, possibleEvents.Count);
-            ranEvents.Add(possibleEvents[ranidx]);
-            ranEvents.Add(possibleEvents[ranidx]);
-            ranEvents.Add(possibleEvents[ranidx]);
+            ranIdx.Add(Random.Range(0, possibleEvents.Count));
+            ranIdx.Add(ranIdx[0]);
+            ranIdx.Add(ranIdx[0]);
+            ranEvents.Add(possibleEvents[ranIdx[0]]);
+            ranEvents.Add(possibleEvents[ranIdx[0]]);
+            ranEvents.Add(possibleEvents[ranIdx[0]]);
 
             curJackpotDay = 0;
             jackpotDay = Random.Range(7, 15);
@@ -150,12 +163,12 @@ public class EventManager : MonoBehaviour
         {
             for (int i = 0; i < 3; i++)
             {
-                int ranidx = Random.Range(0, possibleEvents.Count);
-                ranEvents.Add(possibleEvents[ranidx]);
+                ranIdx.Add(Random.Range(0, possibleEvents.Count));
+                ranEvents.Add(possibleEvents[ranIdx[i]]);
             }
         }
 
-        UIManager.instance.SetRoulettePopUp(true, ranEvents.ToArray());
+        UIManager.instance.SetRoulettePopUp(ranIdx.ToArray());
 
         Event e;
         if (ranEvents[0] == ranEvents[1] && ranEvents[1] == ranEvents[2])
@@ -262,6 +275,10 @@ public class EventManager : MonoBehaviour
         {
             eventBuildings.RemoveAt(removeIdx[i] - i);
         }
+
+        //Cost Update
+        cost = initialCost;
+        rollTimes = 0;
     }
 
     public void SetEventBuildings(Building building, bool isAdd)

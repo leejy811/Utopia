@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour, ISubject
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI happinessText;
     public TextMeshProUGUI cityResidentText;
+    public TextMeshProUGUI debtText;
     public TextMeshProUGUI NewsMessage;
     public TextMeshProUGUI NewsMessage2;
 
@@ -31,16 +32,6 @@ public class UIManager : MonoBehaviour, ISubject
     public BuildingIntroUI[] buildingIntros;
     public InfoUI[] infos;
     public ListUI[] lists;
-
-    [Header("Tile")]
-    public TileInfluenceUI tileInfluenceInfo;
-
-    [Header("Statistic")]
-    public StatisticUI statistic;
-
-    [Header("CityLevel")]
-    public UIElement cityLevelPanel;
-    public CityLevelUI[] cityLevels;
 
     [Header("CityLevelUp")]
     public UIElement cityLevelUpPanel;
@@ -69,15 +60,19 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("MouseOver")]
     public IconNameMouseOver[] mouseOvers;
 
+    [Header("Debt")]
+    public DebtUI debtDoc;
+    public DebtUI receipt;
+    public DebtUI reminder;
+    public TextMeshProUGUI creditRatingText;
+    public Slider debtSlider;
+    public UIElement lateReceipt;
+
     #endregion
-
-
-
-
-
 
     private Building targetBuilding;
     private List<IObserver> observers = new List<IObserver>();
+    private string[] weekStr = { "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일" };
 
     public int NewsHappiness;
     private int previousHappiness;
@@ -105,32 +100,32 @@ public class UIManager : MonoBehaviour, ISubject
         previousHappiness = NewsHappiness;
 
         InitObserver();
-        notifyObserver(EventState.LockButton);
+        //notifyObserver(EventState.LockButton);
     }
 
     #region NewsMessage
 
     void Update()
     {
-        lastCityHappiness = RoutineManager.instance.cityHappiness;
-        int[] happiness = BuildingSpawner.instance.GetBuildingsHappiness();
-        lastBuildingHappiness[(int)BuildingType.Residential] = happiness[(int)BuildingType.Residential];
-        lastBuildingHappiness[(int)BuildingType.Commercial] = happiness[(int)BuildingType.Commercial];
-        lastBuildingHappiness[(int)BuildingType.Culture] = happiness[(int)BuildingType.Culture];
-        //lastBuildingHappiness[(int)BuildingType.Service] = happiness[(in ...
-        lastCityMoney = ShopManager.instance.Money;
-        lastTotalTax = CalculateTotalTax();
-        lastTotalSpend = CalculateTotalSpend();
-        lastBuildingTypeCount = BuildingSpawner.instance.buildingTypeCount;
-        lastDay = RoutineManager.instance.day;
+        //lastCityHappiness = RoutineManager.instance.cityHappiness;
+        //int[] happiness = BuildingSpawner.instance.GetBuildingsHappiness();
+        //lastBuildingHappiness[(int)BuildingType.Residential] = happiness[(int)BuildingType.Residential];
+        //lastBuildingHappiness[(int)BuildingType.Commercial] = happiness[(int)BuildingType.Commercial];
+        //lastBuildingHappiness[(int)BuildingType.Culture] = happiness[(int)BuildingType.Culture];
+        ////lastBuildingHappiness[(int)BuildingType.Service] = happiness[(in ...
+        //lastCityMoney = ShopManager.instance.Money;
+        //lastTotalTax = CalculateTotalTax();
+        //lastTotalSpend = CalculateTotalSpend();
+        //lastBuildingTypeCount = BuildingSpawner.instance.buildingTypeCount;
+        //lastDay = RoutineManager.instance.day;
 
-        CheckCityHappiness();
-        CheckBuildingHappiness();
-        CheckCityMoney();
-        CheckTotalTax();
-        CheckTotalSpend();
-        CheckBuildingCounts();
-        CheckDayChange();
+        //CheckCityHappiness();
+        //CheckBuildingHappiness();
+        //CheckCityMoney();
+        //CheckTotalTax();
+        //CheckTotalSpend();
+        //CheckBuildingCounts();
+        //CheckDayChange();
     }
 
     public Text[] messageTexts;
@@ -286,10 +281,12 @@ public class UIManager : MonoBehaviour, ISubject
     public void UpdateDailyInfo()
     {
         DateTime curDay = RoutineManager.instance.day;
-        dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd");
+        dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + " " + weekStr[(int)curDay.DayOfWeek];
         SetHappiness();
         Setmoney();
         SetCityResident();
+        SetDebt();
+        SetCreditRating();
     }
 
     public void SetHappiness()
@@ -305,6 +302,24 @@ public class UIManager : MonoBehaviour, ISubject
     public void SetCityResident()
     {
         cityResidentText.text = GetCommaText(ResidentialBuilding.cityResident);
+    }
+
+    public void SetDebt()
+    {
+        debtText.text = GetCommaText(RoutineManager.instance.debt);
+    }
+
+    public void SetDebtSlider(int dayOfWeek)
+    {
+        debtSlider.value = dayOfWeek / 7.0f - 0.05f;
+        ColorBlock colorBlock = debtSlider.colors;
+        colorBlock.disabledColor = dayOfWeek < 4 ? Color.green : new Color(1, 0.5f, 0);
+        debtSlider.colors = colorBlock;
+    }
+
+    public void SetCreditRating()
+    {
+        creditRatingText.text = RoutineManager.instance.creditRating.ToString();
     }
 
     public void SetBuildingIntroValue()
@@ -323,21 +338,13 @@ public class UIManager : MonoBehaviour, ISubject
         lists[index].SetValue(index);
     }
 
-    public void SetTileInfluenceValue(Tile tile)
-    {
-        tileInfluenceInfo.SetValue(tile);
-    }
-
     #endregion
 
     #region PopUp
 
-    public void SetRoulettePopUp(bool active, Event[] ranEvents = null)
+    public void SetRoulettePopUp(int[] ranEvents)
     {
-        eventRoulette.gameObject.SetActive(active);
-
-        if (active)
-            eventRoulette.SetEvent(ranEvents);
+        eventRoulette.SetRandomEvent(ranEvents);
     }
 
     public void SetInfoPopUp(int typeIndex, int index)
@@ -382,23 +389,6 @@ public class UIManager : MonoBehaviour, ISubject
             eventNotify.Init();
     }
 
-    public void SetTileInfluencePopUp(Tile tile = null)
-    {
-        if (tile == null)
-            tileInfluenceInfo.gameObject.SetActive(false);
-        else
-        {
-            tileInfluenceInfo.gameObject.SetActive(true);
-            tileInfluenceInfo.SetValue(tile);
-        }
-    }
-
-    public void SetStatisticPopUp(bool active)
-    {
-        statistic.gameObject.SetActive(active);
-        statistic.SetValue();
-    }
-
     public void SetErrorPopUp(string massage, Vector3 position)
     {
         TemporayUI message = Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
@@ -421,19 +411,6 @@ public class UIManager : MonoBehaviour, ISubject
         }
         else
             costInfo.OnUI(cost, transform.position);
-    }
-
-    public void SetCityLevelPopUp(bool active)
-    {
-        cityLevelPanel.gameObject.SetActive(active);
-
-        if (active)
-        {
-            foreach(CityLevelUI cityLevel in cityLevels)
-            {
-                cityLevel.SetValue();
-            }
-        }
     }
 
     public void SetCityLevelUpPopUp(int index = 0)
@@ -527,20 +504,10 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (eventRoulette.gameObject.activeSelf) return;
 
+        notifyObserver(EventState.None);
         RoutineManager.instance.DailyUpdate();
-        notifyObserver(EventState.Statistic);
-    }
 
-    public void OnClickCloseStatistic()
-    {
-        SetStatisticPopUp(false);
-        RoutineManager.instance.UpdateAfterStat();
         UpdateDailyInfo();
-    }
-
-    public void OnClickCloseEventRoulette()
-    {
-        SetRoulettePopUp(false);
     }
 
     public void OnClickSolveEvent(int index)
@@ -551,16 +518,6 @@ public class UIManager : MonoBehaviour, ISubject
     public void OnClickTileColorMode()
     {
         notifyObserver(EventState.TileColor);
-    }
-
-    public void OnClickTileInfluenceMode()
-    {
-        notifyObserver(EventState.TileInfluence);
-    }
-
-    public void OnClickCityLevelMode()
-    {
-        notifyObserver(EventState.CityLevel);
     }
 
     public void OnClickEventHighLight()
@@ -585,31 +542,31 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEventRoulette()
     {
+        EventManager.instance.RandomRoulette();
         eventRoulette.OnButtonClick();
+    }
+
+    public void OnClickSlotMachineButton()
+    {
+        if (EventManager.instance.CheckEventCondition())
+        {
+            EventManager.instance.CheckEvents();
+            eventRoulette.SetPossibleEvent(EventManager.instance.possibleEvents.ToArray());
+            notifyObserver(EventState.SlotMachine);
+        }
+    }
+
+    public void OnClickDeptDocButton()
+    {
+        if (RoutineManager.instance.debt != 0)
+            notifyObserver(EventState.DebtDoc);
     }
 
     public void OnClickSpaceBar()
     {
-        if (CityLevelManager.instance.levelIdx == -1) return;
-
-        if (statistic.gameObject.activeSelf)
+        if (eventRoulette.gameObject.activeSelf)
         {
-            if (statistic.doStamp)
-            {
-                OnClickCloseStatistic();
-                statistic.doStamp = false;
-                return;
-            }
-
-            statistic.gameObject.GetComponentInChildren<Animator>().SetTrigger("DoStamp");
-            statistic.doStamp = true;
-        }
-        else if (eventRoulette.gameObject.activeSelf)
-        {
-            if (eventRoulette.state == RouletteState.End)
-                OnClickCloseEventRoulette();
-            else if (eventRoulette.state == RouletteState.Start)
-                OnClickEventRoulette();
+            OnClickEventRoulette();
         }
         else
             OnClickNextDay();
@@ -649,20 +606,19 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(ShopManager.instance);
         addObserver(Grid.instance);
         addObserver(BuildingSpawner.instance);
-        addObserver(statistic);
 
-        addObserver(cityLevelPanel);
         addObserver(cityLevelUpPanel);
         addObserver(eventNotify);
+        addObserver(eventRoulette);
 
         addObserver(costInfo);
         addObserver(construct);
         addObserver(etcFunc);
 
-        foreach(CityLevelUI cityLevel in cityLevels)
-        {
-            addObserver(cityLevel);
-        }
+        addObserver(debtDoc);
+        addObserver(receipt);
+        addObserver(reminder);
+        addObserver(lateReceipt);
 
         foreach (UILockButton lockButton in lockButtons)
         {

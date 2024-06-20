@@ -12,7 +12,13 @@ public class RoutineManager : MonoBehaviour
     public DateTime day;
     public float cityHappiness;
     public float cityHappinessDifference;
-    public ResultType todayResult;
+    public ResultType weekResult;
+    public int[] debtsOfWeek;
+    public int debt;
+    public int creditRating;
+    public int maxCreditRating;
+
+    public bool isPay;
 
     private void Awake()
     {
@@ -27,7 +33,8 @@ public class RoutineManager : MonoBehaviour
 
     private void Start()
     {
-        day = new DateTime(2024, 1, 1);
+        day = new DateTime(2023, 12, 31);
+        isPay = true;
     }
 
     public void DailyUpdate()
@@ -38,6 +45,58 @@ public class RoutineManager : MonoBehaviour
         Tile.income = 0;
         CalculateIncome();
         UpdateHappiness();
+        EventManager.instance.EffectUpdate();
+
+        ApplyDept();
+    }
+
+    private void ApplyDept()
+    {
+        DayOfWeek dayOfWeek = day.DayOfWeek;
+
+        switch (dayOfWeek)
+        {
+            case DayOfWeek.Monday:
+                CalculateDept();
+                break;
+            case DayOfWeek.Thursday:
+                if (!isPay)
+                    UIManager.instance.notifyObserver(EventState.Reminder);
+                break;
+        }
+
+        int week = dayOfWeek == DayOfWeek.Sunday ? 7 : (int)dayOfWeek;
+        UIManager.instance.SetDebtSlider(week);
+    }
+
+    private void CalculateDept()
+    {
+        int weekOfYear = (day.DayOfYear / 7) + (creditRating * -1) + ((day.Year - 2024) * 52);
+        debt = debtsOfWeek[weekOfYear];
+
+        if (!isPay)
+        {
+            SetCreditRating(1);
+            weekResult = ResultType.Worst;
+            UIManager.instance.notifyObserver(EventState.LateReceipt);
+            return;
+        }
+
+        isPay = false;
+        CityLevelManager.instance.UpdateCityType(weekOfYear);
+
+        UIManager.instance.OnClickDeptDocButton();
+    }
+
+    private void SetCreditRating(int value)
+    {
+        creditRating += value;
+        UIManager.instance.SetCreditRating();
+
+        if(creditRating > maxCreditRating)
+        {
+            Application.Quit();
+        }
     }
 
     private void CalculateIncome()
@@ -81,20 +140,7 @@ public class RoutineManager : MonoBehaviour
         else
             cityHappiness = 0;
 
-        int happiness = (int)cityHappiness;
-
-        if (happiness < 30)
-            todayResult = ResultType.Worst;
-        else if (happiness >= 30 && happiness < 40)
-            todayResult = ResultType.Bad;
-        else if (happiness >= 40 && happiness < 55)
-            todayResult = ResultType.Soso;
-        else if (happiness >= 55 && happiness < 65)
-            todayResult = ResultType.Good;
-        else if (happiness >= 65 && happiness < 70)
-            todayResult = ResultType.Best;
-        else if (happiness >= 70)
-            todayResult = ResultType.Perfect;
+        ResidentialBuilding.yesterDayResident = ResidentialBuilding.cityResident;
     }
 
     public void SetCityHappiness(int happiness, int sign)
@@ -106,11 +152,56 @@ public class RoutineManager : MonoBehaviour
         AkSoundEngine.SetRTPCValue("HAPPY", cityHappiness);
     }
 
-    public void UpdateAfterStat()
+    public void PayDept()
     {
-        ResidentialBuilding.yesterDayResident = ResidentialBuilding.cityResident;
+        DayOfWeek dayOfWeek = day.DayOfWeek;
+        int dayOfWeekToInt = dayOfWeek == DayOfWeek.Sunday ? 7 : (int)dayOfWeek;
+        int money = ShopManager.instance.Money;
 
-        EventManager.instance.CheckEvents();
-        EventManager.instance.EffectUpdate();
+        if (isPay) return;
+        if (money < debt) return;
+
+        UIManager.instance.notifyObserver(EventState.Receipt);
+        ShopManager.instance.PayMoney(debt);
+        debt = 0;
+        UIManager.instance.SetDebt();
+
+        if (dayOfWeekToInt < (int)DayOfWeek.Thursday)
+        {
+            RewardToPrePay();
+        }
+
+        switch(dayOfWeek)
+        {
+            case DayOfWeek.Monday:
+                weekResult = ResultType.Perfect;
+                break;
+            case DayOfWeek.Tuesday:
+                weekResult = ResultType.Best;
+                break;
+            case DayOfWeek.Wednesday:
+                weekResult = ResultType.Good;
+                break;
+            case DayOfWeek.Thursday:
+            case DayOfWeek.Friday:
+            case DayOfWeek.Saturday:
+                weekResult = ResultType.Soso;
+                break;
+            case DayOfWeek.Sunday:
+                weekResult = ResultType.Bad;
+                break;
+        }
+
+        isPay = true;
+    }
+
+    private void RewardToPrePay()
+    {
+        int rewardHappiness = 5;
+
+        foreach (Building building in BuildingSpawner.instance.buildings)
+        {
+            building.SetHappiness(rewardHappiness);
+        }
     }
 }

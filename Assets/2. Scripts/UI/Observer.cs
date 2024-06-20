@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum EventState { None, EventNotify, CityLevel, CityLevelUp, Statistic, 
-                        Construct, EtcFunc, EventIcon, TileInfluence, TileColor, LockButton }
+public enum EventState { None, EventNotify, CityLevelUp, SlotMachine,
+                        Construct, EtcFunc, EventIcon, TileColor, LockButton, DebtDoc,
+                        Receipt, Reminder, LateReceipt }
 
 public interface IObserver
 {

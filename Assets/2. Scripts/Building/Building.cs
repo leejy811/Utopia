@@ -177,9 +177,6 @@ public class Building : MonoBehaviour
             return;
         }
 
-        if(amount > 0)
-            CityLevelManager.instance.UpdateCityType();
-
         happinessRate += amount;
     }
 

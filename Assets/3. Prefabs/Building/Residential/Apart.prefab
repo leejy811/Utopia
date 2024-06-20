@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildingName: "\uC544\uD30C\uD2B8"
   count: 0
-  grade: 3
+  grade: 0
   type: 0
   subType: 0
   viewState: 0

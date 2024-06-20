@@ -41,7 +41,6 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         buildingTypeCount[(int)building.type]++;
 
         RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
-        CityLevelManager.instance.UpdateCityType();
 
         switch (building.type)
         {

@@ -5,10 +5,11 @@ Shader "Custom/VerticalMovement1"
         _MainTex("Texture", 2D) = "white" {}
         _Speed("Speed", Range(0, 10)) = 1.0
         _Amplitude("Amplitude", Range(0, 1)) = 0.1
+        _Color("Color", Color) = (1,1,1,1)
     }
         SubShader
         {
-            Tags { "RenderType" = "Transparent" }
+            Tags { "RenderType" = "Opaque" }
             LOD 200
 
             ZWrite On

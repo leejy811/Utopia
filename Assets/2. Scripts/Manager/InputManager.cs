@@ -26,11 +26,6 @@ public class InputManager : MonoBehaviour, IObserver
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            UIManager.instance.OnClickSpaceBar();
-        }
-
         if (!canInput) return;
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -100,14 +95,14 @@ public class InputManager : MonoBehaviour, IObserver
             else
                 UIManager.instance.notifyObserver(EventState.TileColor);
         }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            UIManager.instance.OnClickSpaceBar();
+        }
         else
         {
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
             {
-                if (Grid.instance.isInfluenceMode)
-                {
-                    Grid.instance.NotifyTileInfluence(hit.transform);
-                }
                 switch (state)
                 {
                     case BuyState.BuildTile:
@@ -121,8 +116,6 @@ public class InputManager : MonoBehaviour, IObserver
             }
             else if (state == BuyState.BuyTile)
                 ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
-            else if (Grid.instance.isInfluenceMode)
-                UIManager.instance.SetTileInfluencePopUp(null);
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
             {

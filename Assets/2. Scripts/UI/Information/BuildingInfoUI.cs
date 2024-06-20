@@ -7,7 +7,6 @@ using TMPro;
 public class BuildingInfoUI : InfoUI
 {
     [Header("Building")]
-    public TextMeshProUGUI buildingGradeText;
     public TextMeshProUGUI buildingCostText;
 
     protected Building building;
@@ -25,7 +24,6 @@ public class BuildingInfoUI : InfoUI
 
         nameText.text = building.buildingName;
         typeText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType];
-        buildingGradeText.text = building.grade + "µî±Þ";
         buildingCostText.text = building.cost.ToString();
     }
 }

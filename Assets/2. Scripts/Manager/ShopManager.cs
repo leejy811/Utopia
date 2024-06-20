@@ -32,7 +32,7 @@ public class ShopManager : MonoBehaviour, IObserver
         }
 
         instance = this;
-        Money = 100;
+        Money = 10000;
     }
 
     public void GetMoney(int amount)
@@ -68,6 +68,7 @@ public class ShopManager : MonoBehaviour, IObserver
         else if(state == BuyState.BuyBuilding)
         {
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
+            curPickObject.GetComponent<FollowMouse>().SetRedLineSize(curPickIndex);
             Grid.instance.SetTileColorMode();
         }
 

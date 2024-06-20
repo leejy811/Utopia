@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: VerticalMovementMat 2
-  m_Shader: {fileID: 4800000, guid: 54927d9f9b0acc04e82bbdc07f1458b7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 3afde711819f1c64197283e3e69650a4, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4

@@ -6,7 +6,7 @@ using TMPro;
 
 public class BuildingListUI : ListUI
 {
-    int[] buildingCount = { 0, 3, 7, 10 };
+    int[] buildingCount = { 0, 2, 5, 7 };
 
     public override void SetValue(int type)
     {
@@ -19,8 +19,6 @@ public class BuildingListUI : ListUI
                     Building building = BuildingSpawner.instance.buildingPrefabs[buildingCount[i] + j].GetComponent<Building>();
 
                     costText[j].text = building.cost.ToString("C");
-
-                    if (buildingCount[i] + j == 0) continue;
 
                     bool checkGrade = CityLevelManager.instance.CheckBuildingLevel(building);
                     ButtonImage[j].sprite = !checkGrade ? lockSprite : building.buildingIcon;

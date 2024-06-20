@@ -8,9 +8,8 @@ public enum CityType { Village = 0, Town, City, Utopia }
 public struct CityLevel
 {
     public CityType type;
-    public int residentCondition;
-    public int happinessCondition;
-    public int moneyReward;
+    public int debtWeek;
+    public Vector2Int tileSize;
 }
 
 public class CityLevelManager : MonoBehaviour
@@ -31,28 +30,29 @@ public class CityLevelManager : MonoBehaviour
         instance = this;
     }
 
-    public void UpdateCityType()
+    public void UpdateCityType(int week)
     {
         if(levelIdx == level.Length - 1)
             return;
 
-        if (ResidentialBuilding.cityResident >= level[levelIdx + 1].residentCondition &&
-            RoutineManager.instance.cityHappiness >= level[levelIdx + 1].happinessCondition)
+        for (int i = 0;i <= levelIdx;i++)
         {
-            LevelUp();
+            week -= level[i].debtWeek;
         }
+
+        if (week >= level[levelIdx + 1].debtWeek)
+            LevelUp();
     }
 
     private void LevelUp()
     {
         levelIdx++;
-        ShopManager.instance.GetMoney(level[levelIdx].moneyReward);
-        UIManager.instance.SetCityLevelUpPopUp(levelIdx);
+        Grid.instance.PurchaseTile(level[levelIdx].tileSize);
+        //ToDo 레벨업 연출 및 UI
     }
 
     public bool CheckBuildingLevel(Building building)
     {
-        int levelCondition = 3 - levelIdx;
-        return building.grade >= levelCondition;
+        return building.grade <= levelIdx;
     }
 }

@@ -9,12 +9,18 @@ public class Slot : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < images.Length - 1; i++)
+        for (int i = 0; i < images.Length; i++)
         {
-            images[i].sprite = EventManager.instance.events[i].eventIcon;
             images[i].transform.localPosition += Vector3.up * -100 * i;
         }
-        images[40].sprite = EventManager.instance.events[0].eventIcon;
-        images[40].transform.localPosition += Vector3.up * -100 * 40;
+    }
+
+    public void SetSlot(Event[] events)
+    {
+        for (int i = 0; i < images.Length - 1; i++)
+        {
+            images[i].sprite = events[i].eventIcon;
+        }
+        images[images.Length - 1].sprite = events[0].eventIcon;
     }
 }
