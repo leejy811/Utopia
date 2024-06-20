@@ -570,6 +570,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEventRoulette()
     {
+        if (!EventManager.instance.PayRoulleteCost()) return;
         EventManager.instance.RandomRoulette();
         eventRoulette.OnButtonClick();
     }

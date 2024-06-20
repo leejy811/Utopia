@@ -137,16 +137,20 @@ public class EventManager : MonoBehaviour
         globalEvents.Clear();
     }
 
-    public void RandomRoulette()
+    public bool PayRoulleteCost()
     {
-        if(possibleEvents.Count == 0) return;
-
         if (rollTimes <= 3)
             cost = initialCost;
         else
             cost = costMultiplier * rollTimes + initialCost;
 
-        ShopManager.instance.PayMoney(cost);
+        if (!ShopManager.instance.PayMoney(cost)) return false;
+        else return true;
+    }
+
+    public void RandomRoulette()
+    {
+        if(possibleEvents.Count == 0) return;
 
         List<Event> ranEvents = new List<Event>();
         List<int> ranIdx = new List<int>();
