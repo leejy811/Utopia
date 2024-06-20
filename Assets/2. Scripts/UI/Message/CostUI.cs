@@ -36,7 +36,7 @@ public class CostUI : MonoBehaviour, IObserver
         var localPos = Vector2.zero;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
 
-        rectSelf.localPosition = localPos;
+        rectSelf.localPosition = localPos + new Vector2(0, -7);
     }
 
     public void Notify(EventState state)
