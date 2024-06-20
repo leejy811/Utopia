@@ -146,6 +146,8 @@ public class EventManager : MonoBehaviour
         else
             cost = costMultiplier * rollTimes + initialCost;
 
+        ShopManager.instance.PayMoney(cost);
+
         List<Event> ranEvents = new List<Event>();
         List<int> ranIdx = new List<int>();
         curJackpotDay++;
