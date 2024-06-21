@@ -94,17 +94,13 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B3BA43AA-CBBB-81B7-BAED-95D2BFF0D2EE}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{BF2A8AAD-E0B7-32CD-6501-3EE09715622C}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
 				<File Id="37938370" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Day-Night.wav</ShortName>
 					<CachePath>SFX/Day-Night_818F3B66.wem</CachePath>
-				</File>
-				<File Id="42211082" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
-					<CachePath>SFX/APT_event_SEWERSMELL_001_818F3B66.wem</CachePath>
 				</File>
 				<File Id="43538208" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>UI_solve_001.wav</ShortName>
@@ -149,6 +145,10 @@
 				<File Id="433461852" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DESOLATE_001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="476423553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
+					<CachePath>SFX/APT_event_SEWERSMELL_001_11A93380.wem</CachePath>
 				</File>
 				<File Id="546900594" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
@@ -284,14 +284,14 @@
 						<MediaRef Id="1058891980"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="767732750" Name="Play_APT_event_SEWERSMELL_001" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
+				<Event Id="767732750" Name="Play_APT_event_SEWERSMELL_001" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="42211082"/>
+						<MediaRef Id="476423553"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1106490366" Name="Play_APT_event_SEWERSMELL_001_1" DurationType="OneShot" DurationMin="5.6198125" DurationMax="5.6198125">
+				<Event Id="1106490366" Name="Play_APT_event_SEWERSMELL_001_1" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="42211082"/>
+						<MediaRef Id="476423553"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1812137508" Name="Play_APT_event_SEWERSMELL_01" DurationType="Infinite">
@@ -415,7 +415,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{3B6262FB-057D-5A16-61D2-85E3BB7E1DA9}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{188C9B9F-DDD0-57F0-C39E-43DAD20ED1A1}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -450,10 +450,6 @@
 				<File Id="367849771" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Construction_S08IN.354.wav</ShortName>
 					<CachePath>SFX/Construction_S08IN.354_61B47146.wem</CachePath>
-				</File>
-				<File Id="394814525" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM.wav</ShortName>
-					<CachePath>SFX/BGM_11A93380.wem</CachePath>
 				</File>
 				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>airplane.wav</ShortName>
@@ -529,11 +525,6 @@
 						<MediaRef Id="967811573"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3126765036" Name="Play_BGM" DurationType="OneShot" DurationMin="120" DurationMax="120">
-					<MediaRefs>
-						<MediaRef Id="394814525"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="2611274067" Name="Play_buildingsound" DurationType="OneShot" DurationMin="0.7253125" DurationMax="0.7253125">
 					<MediaRefs>
 						<MediaRef Id="832635833"/>
@@ -593,5 +584,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D39BEAB5-24A3-606B-9F8D-E06978EDBA31}</FileHash>
+	<FileHash>{D42AE9F1-5976-DC4E-B79D-18DC980E5A06}</FileHash>
 </SoundBanksInfo>

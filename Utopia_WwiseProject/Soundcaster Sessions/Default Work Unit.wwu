@@ -49,15 +49,15 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1</Value>
+							<Value>1.5044814340589</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
-							<Value>0.291187374530455</Value>
+							<Value>1.41794793791074</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>0.2670401452118</Value>
+							<Value>1.70109904405943</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>

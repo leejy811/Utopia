@@ -14,7 +14,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2149296550	Play_testing			\Default Work Unit\Play_testing	
 	2446290240	Play_singsingsingmybird			\Default Work Unit\Play_singsingsingmybird	
 	2611274067	Play_buildingsound			\Default Work Unit\Play_buildingsound	
-	3126765036	Play_BGM			\Default Work Unit\Play_BGM	
 	3149538809	Play_ForestAmbience			\Default Work Unit\Play_ForestAmbience	
 	3493507479	Stop_construction			\Default Work Unit\Stop_construction	
 
@@ -36,7 +35,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	314776306	Select_Button	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Building_click_002_E8EFD727.wem		\Actor-Mixer Hierarchy\Default Work Unit\Select_Button		6326
 	336403806	105guitarriffCmaj	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\105guitarriffCmaj_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\105guitarriffCmaj		3510952
 	367849771	Construction_S08IN_354	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Construction_S08IN.354_61B47146.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\Construction_S08IN_354		23062672
-	394814525	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BGM_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM		7680096
 	583359231	airplane	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\airplane_6BF23048.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Blend Container\airplane		2562680
 	742924674	Wind	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\ESM_Wind_Loop_Distant_Air_Steady_1_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\Wind		9024160
 	779451324	Slot_rimshot	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SO_BA_rim_chin_upbounce_F1EB82C2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		13792

@@ -53,7 +53,6 @@ namespace AK
         static const AkUniqueID PLAY_ATP_EVENT_WATER_OUTAGEV2 = 486934152U;
         static const AkUniqueID PLAY_ATP_EVENT_WATER_OUTAGEV3 = 486934153U;
         static const AkUniqueID PLAY_ATP_EVENT_WATER_OUTAGEV4 = 486934158U;
-        static const AkUniqueID PLAY_BGM = 3126765036U;
         static const AkUniqueID PLAY_BGM4 = 1325347504U;
         static const AkUniqueID PLAY_BGMSEQUNCE1 = 1994810337U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;

@@ -55,7 +55,6 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	37938370	Day-Night	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Day-Night_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Day-Night		22073
-	42211082	APT_event_SEWERSMELL_001_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_SEWERSMELL_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\APT_event_SEWERSMELL_001_1		92934
 	43538208	UI_solve_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\UI_solve_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_solve_001		10176
 	115031296	Night-Dawn	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Night-Dawn_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Night-Dawn		24776
 	119271698	Tile_Buy_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Tile_Buy_001(short)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Tile_Buy_001		10354
@@ -67,6 +66,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	323079966	APT_event_DISEASE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DISEASE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_DISEASE_001		72571
 	361543517	stamp	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\stamp_004775AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\stamp		4802
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_DESOLATE_01		89357
+	476423553	APT_event_SEWERSMELL_001_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_SEWERSMELL_001_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\APT_event_SEWERSMELL_001_1		92934
 	546900594	APT_event_SEWERSMELL_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_SEWERSMELL_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_SEWERSMELL_01		92934
 	648936715	APT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_THIEF_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_THIEF_01		66098
 	781588675	ATP_event_ELEVATOR_001_v2_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ATP_event_ELEVATOR_001_v2_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\ATP_event_ELEVATOR_001_v2_1		87886

@@ -3049,12 +3049,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>37.00061</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>38.00035</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -3228,7 +3228,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>3.0005</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -3586,7 +3586,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>9.9953</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -3620,6 +3620,7 @@
 						</Sound>
 						<Sound Name="APT_event_SEWERSMELL_001" ID="{66369F7B-3A72-4078-908D-D5BCFA15B3F9}" ShortID="106892378">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-3</Value>
@@ -3642,7 +3643,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_SEWERSMELL_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="42211082"/>
+										<MediaID ID="476423553"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -4521,12 +4522,12 @@
 																	</Point>
 																	<Point>
 																		<XPos>37.00061</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
 																		<XPos>38.00035</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -4789,7 +4790,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>3.0005</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -5191,7 +5192,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>9.9953</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -5995,7 +5996,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>38.99507</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -6174,7 +6175,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>8.98889</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -6382,6 +6383,7 @@
 						</Sound>
 						<Sound Name="APT_event_SEWERSMELL_001_1" ID="{9A4F9C1A-A6EA-4B32-8F19-E8E2398F8BDB}" ShortID="214034072">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-3</Value>
@@ -6404,7 +6406,7 @@
 									<Language>SFX</Language>
 									<AudioFile>APT_event_SEWERSMELL_001.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="42211082"/>
+										<MediaID ID="476423553"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
@@ -6887,7 +6889,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>10.00348</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -7061,7 +7063,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>11.00115</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -7651,7 +7653,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>38.99507</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -7785,7 +7787,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>8.98889</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -8316,7 +8318,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>10.00348</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
@@ -8400,7 +8402,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>11.00115</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>

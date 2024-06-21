@@ -18,7 +18,6 @@
 						<ObjectRef Name="Play_Wind" ID="{06C3253B-8B70-484F-A5A9-22C238D68BE3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Select_Button" ID="{9B36C684-91CF-48E7-B6E9-C8192BE67E41}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ATP_event_water_outagev1" ID="{DDF30C46-B3DA-4A6B-B392-6E17CC35EC99}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_BGM" ID="{8B0F5FF7-678D-4AA6-A1A4-9A7F337EC94D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_construction" ID="{775510B2-D9E2-4D3B-A21A-0BBE2B7AD426}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_buildingsound" ID="{8CAD0E1A-F3FF-4E37-BA9A-45792A2331CA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ATP_event_water_outagev3" ID="{FE91AA32-4CD8-4E8E-A0D0-503532A5E314}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
