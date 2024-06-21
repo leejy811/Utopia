@@ -94,7 +94,7 @@ public class RoutineManager : MonoBehaviour
 
     private int GetWeekOfYear()
     {
-        int weekOfYear = (day.DayOfYear / 7) + (creditRating * -1) + ((day.Year - 2024) * 52);
+        int weekOfYear = ((day.DayOfYear - 1) / 7) + (creditRating * -1) + ((day.Year - 2024) * 52);
         return weekOfYear;
     }
 
@@ -210,8 +210,7 @@ public class RoutineManager : MonoBehaviour
 
         isPay = true;
 
-        int weekOfYear = (day.DayOfYear / 7) + 1 + (creditRating * -1) + ((day.Year - 2024) * 52);
-        CityLevelManager.instance.UpdateCityType(weekOfYear);
+        CityLevelManager.instance.UpdateCityType(GetWeekOfYear() + 1);
     }
 
     private void RewardToPrePay()
