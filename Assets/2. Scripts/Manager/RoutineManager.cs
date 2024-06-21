@@ -52,9 +52,7 @@ public class RoutineManager : MonoBehaviour
 
     private void ApplyDept()
     {
-        int weekOfYear = (day.DayOfYear / 7) + (creditRating * -1) + ((day.Year - 2024) * 52);
-
-        if (weekOfYear >= debtsOfWeek.Length) 
+        if (GetWeekOfYear() >= debtsOfWeek.Length) 
         {
             UIManager.instance.SetDebtSlider(0);
             return;
@@ -65,7 +63,7 @@ public class RoutineManager : MonoBehaviour
         switch (dayOfWeek)
         {
             case DayOfWeek.Monday:
-                CalculateDept(weekOfYear);
+                CalculateDept();
                 break;
             case DayOfWeek.Thursday:
                 if (!isPay)
@@ -77,21 +75,27 @@ public class RoutineManager : MonoBehaviour
         UIManager.instance.SetDebtSlider(week);
     }
 
-    private void CalculateDept(int weekOfYear)
+    private void CalculateDept()
     {
         if (!isPay)
         {
             SetCreditRating(1);
             weekResult = ResultType.Worst;
             UIManager.instance.notifyObserver(EventState.LateReceipt);
-            debt = debtsOfWeek[weekOfYear];
+            debt = debtsOfWeek[GetWeekOfYear()];
             return;
         }
 
-        debt = debtsOfWeek[weekOfYear];
+        debt = debtsOfWeek[GetWeekOfYear()];
         isPay = false;
 
         UIManager.instance.OnClickDeptDocButton();
+    }
+
+    private int GetWeekOfYear()
+    {
+        int weekOfYear = (day.DayOfYear / 7) + (creditRating * -1) + ((day.Year - 2024) * 52);
+        return weekOfYear;
     }
 
     private void SetCreditRating(int value)
