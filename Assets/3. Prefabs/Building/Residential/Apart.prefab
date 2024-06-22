@@ -73,22 +73,22 @@ MonoBehaviour:
   influenceSize: 1
   curEvents: []
   cost: 100
-  buildingIcon: {fileID: 21300000, guid: 2e25cef2fe8990641b94385e7c03f838, type: 3}
+  buildingIcon: {fileID: 21300000, guid: 4671da3345ac3334dbba7e80410a4e64, type: 3}
   existFacility: 00000000
   residentCnt:
     max: 100
     min: 0
     cur: 100
   commercialCSAT:
-    max: 200
+    max: 100
     min: 50
     cur: 0
   cultureCSAT:
-    max: 200
+    max: 100
     min: 50
     cur: 0
   serviceCSAT:
-    max: 300
+    max: 100
     min: 50
     cur: 0
 --- !u!1001 &4723676413235935081

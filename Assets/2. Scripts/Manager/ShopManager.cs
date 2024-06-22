@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, SolveBuilding, EventCheck }
@@ -135,9 +136,21 @@ public class ShopManager : MonoBehaviour, IObserver
         }
     }
 
+    public float CalculateBuildingCostWeight()
+    {
+        float coefficient = 0.5f;
+        float baseValue = 1.08f;
+        
+        return coefficient * (Mathf.Pow(baseValue, (BuildingSpawner.instance.buildingCount[curPickIndex]))-1);
+    }
+
     public void BuyBuilding(Transform spawnTrans)
     {
-        int cost = CalculateCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost);
+        float costWeight = CalculateBuildingCostWeight();
+        int originalCost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+        int cost = CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
+        
+        //int cost = CalculateCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost * costWeight);
         Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyBuilding) return;
@@ -261,7 +274,13 @@ public class ShopManager : MonoBehaviour, IObserver
 
             int cost = 0;
             if (buyState == BuyState.BuyBuilding)
-                cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+            {
+                float costWeight = CalculateBuildingCostWeight();
+                int originalCost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+                cost = CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
+                
+                //cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
+            }
             else if (buyState == BuyState.BuildTile)
                 cost = Grid.instance.tileCost[curPickIndex + 1];
             UIManager.instance.SetCostPopUp(tile.transform, cost);

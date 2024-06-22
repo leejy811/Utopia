@@ -34,16 +34,16 @@ public class ServiceBuilding : UtilityBuilding
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                cost -= 50;
+                cost -= 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 cost -= 0;
             else
-                cost -= 25;
+                cost -= 0;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                cost -= 50;
+                cost -= 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 cost -= 0;
             else
@@ -63,29 +63,29 @@ public class ServiceBuilding : UtilityBuilding
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 0;
+                changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += -1;
+                changeAmount += -3;
             else
-                changeAmount += -2;
+                changeAmount += -1;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 2;
+                changeAmount += -3;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 0;
+                changeAmount += -1;
             else
                 changeAmount += 1;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 1;
+                changeAmount += -3;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -1;
             else
-                changeAmount += 0;
+                changeAmount += 1;
         }
 
         if (isExpect)

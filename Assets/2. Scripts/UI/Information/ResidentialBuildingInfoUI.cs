@@ -17,7 +17,7 @@ public class ResidentialBuildingInfoUI : BuildingInfoUI
 
         ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
 
-        residentText.text = residentialBuilding.residentCnt.max.ToString() + "/" + residentialBuilding.residentCnt.max.ToString();
+        residentText.text = residentialBuilding.residentCnt.max.ToString(); // + "/" + residentialBuilding.residentCnt.max.ToString();
 
         for (int i = 0; i < residentialBuilding.existFacility.Length; i++)
         {

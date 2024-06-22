@@ -76,7 +76,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     private Building targetBuilding;
     private List<IObserver> observers = new List<IObserver>();
-    private string[] weekStr = { "ÀÏ¿äÀÏ", "¿ù¿äÀÏ", "È­¿äÀÏ", "¼ö¿äÀÏ", "¸ñ¿äÀÏ", "±İ¿äÀÏ", "Åä¿äÀÏ" };
+    private string[] weekStr = { "ì¼ìš”ì¼", "ì›”ìš”ì¼", "í™”ìš”ì¼", "ìˆ˜ìš”ì¼", "ëª©ìš”ì¼", "ê¸ˆìš”ì¼", "í† ìš”ì¼" };
 
     public int NewsHappiness;
     private int previousHappiness;

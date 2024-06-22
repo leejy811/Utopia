@@ -73,10 +73,10 @@ MonoBehaviour:
   influenceSize: 1
   curEvents: []
   cost: 100
-  buildingIcon: {fileID: 21300000, guid: ef630ffe923dd0749ac06c2c2f3a90c7, type: 3}
+  buildingIcon: {fileID: 21300000, guid: 290c4ad7345057c47801123fc6a04417, type: 3}
   costPerDay: 50
   userCnt:
-    max: 190
+    max: 200
     min: 100
     cur: 0
   utilityValue:
