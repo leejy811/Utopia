@@ -90,12 +90,18 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         else if (ranIdx[0] == ranIdx[2])
         {
             isDuplicate[0] = true;
-            isDuplicate[2] = true;
+            isDuplicate[1] = true;
+            int temp = ranIdx[2];
+            ranIdx[2] = ranIdx[1];
+            ranIdx[1] = temp;
         }
         else if (ranIdx[1] == ranIdx[2])
         {
+            isDuplicate[0] = true;
             isDuplicate[1] = true;
-            isDuplicate[2] = true;
+            int temp = ranIdx[2];
+            ranIdx[2] = ranIdx[0];
+            ranIdx[0] = temp;
         }
     }
 

@@ -22,12 +22,14 @@ public class FollowMouse : MonoBehaviour
         if (tile != null)
         {
             transform.position = tile.transform.position;
-            redLine.SetActive(true);
+            if (redLine != null)
+                redLine.SetActive(true);
         }
         else
         {
             SetPosition();
-            redLine.SetActive(false);
+            if (redLine != null)
+                redLine.SetActive(false);
         }
     }
 
@@ -41,6 +43,7 @@ public class FollowMouse : MonoBehaviour
 
     public void SetRedLineSize(int index)
     {
+        if (redLine == null) return;
         float size = BuildingSpawner.instance.buildingPrefabs[index].GetComponent<Building>().influenceSize;
         redLine.transform.localScale = new Vector3(size * 2 + 1, 1, size * 2 + 1);
     }

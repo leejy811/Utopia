@@ -36,6 +36,12 @@ public class InputManager : MonoBehaviour, IObserver
         {
             if (IsPointerOverUIObject(Input.mousePosition)) return;
 
+            if (UIManager.instance.eventRoulette.gameObject.activeSelf)
+            {
+                UIManager.instance.OnClickEventRoulette();
+                return;
+            }
+
             if (state == BuyState.SellBuilding)
             {
                 ShopManager.instance.SellBuilding();

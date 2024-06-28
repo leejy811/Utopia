@@ -550,12 +550,21 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEventHighLight()
     {
+        if (BuildingSpawner.instance.GetEventBuildingCount() <= 0)
+        {
+            SetErrorPopUp("문제가 발생한 건물이 없습니다.", transform.position);
+            return;
+        }
         notifyObserver(EventState.EventIcon);
     }
 
     public void OnClickEventNotify()
     {
-        if (BuildingSpawner.instance.GetEventBuildingCount() <= 0) return;
+        if (BuildingSpawner.instance.GetEventBuildingCount() <= 0) 
+        {
+            SetErrorPopUp("문제가 발생한 건물이 없습니다.", transform.position);
+            return;
+        }
 
         notifyObserver(EventState.EventNotify);
     }
@@ -570,6 +579,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEventRoulette()
     {
+        if (eventRoulette.state == RouletteState.While) return;
         if (!EventManager.instance.PayRoulleteCost()) return;
         EventManager.instance.RandomRoulette();
         eventRoulette.OnButtonClick();
@@ -605,6 +615,11 @@ public class UIManager : MonoBehaviour, ISubject
         }
         else
             OnClickNextDay();
+    }
+
+    public void OnClickCloseButton()
+    {
+        notifyObserver(EventState.None);
     }
 
     #endregion

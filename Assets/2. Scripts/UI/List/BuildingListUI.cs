@@ -23,6 +23,7 @@ public class BuildingListUI : ListUI
                     bool checkGrade = CityLevelManager.instance.CheckBuildingLevel(building);
                     ButtonImage[j].sprite = !checkGrade ? lockSprite : building.buildingIcon;
                     Button[j].interactable = checkGrade;
+                    ButtonImage[j].transform.localScale = Vector3.one * (!checkGrade ? 0.6f : 0.8f);
                 }
                 break;
             }

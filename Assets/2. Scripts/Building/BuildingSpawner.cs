@@ -72,6 +72,8 @@ public class BuildingSpawner : MonoBehaviour, IObserver
                 break;
             }
         }
+
+        buildingTypeCount[(int)building.GetComponent<Building>().type]--;
     }
 
     public void ChangeViewState(ViewStateType stateType)
