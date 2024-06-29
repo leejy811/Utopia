@@ -12,10 +12,10 @@ public class InputManager : MonoBehaviour, IObserver
     public Button[] buttons;
 
     public Button[] alpha1Buttons;
-    public Button[] alpha3Buttons;
+    public Button[] alpha2Buttons;
 
     bool onAlpha1 = false;
-    bool onAlpha3 = false;
+    bool onAlpha2 = false;
 
     Camera mainCamera;
 
@@ -65,25 +65,6 @@ public class InputManager : MonoBehaviour, IObserver
                 }
             }
         }
-        else if (Input.GetMouseButton(0))
-        {
-            if (IsPointerOverUIObject(Input.mousePosition)) return;
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))
-            {
-                if (state == BuyState.BuyTile)
-                {
-                    ShopManager.instance.AddTile(hit.transform);
-                }
-            }
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            if (state == BuyState.BuyTile)
-            {
-                ShopManager.instance.BuyTile();
-            }
-        }
         else if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
         {
             UIManager.instance.notifyObserver(EventState.None);
@@ -115,13 +96,8 @@ public class InputManager : MonoBehaviour, IObserver
                     case BuyState.BuyBuilding:
                         ShopManager.instance.CheckBuyBuilding(hit.transform);
                         break;
-                    case BuyState.BuyTile:
-                        ShopManager.instance.SetTargetObject(hit.transform.gameObject, Color.green, Color.red);
-                        break;
                 }
             }
-            else if (state == BuyState.BuyTile)
-                ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
 
             if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Building")))
             {
@@ -142,8 +118,8 @@ public class InputManager : MonoBehaviour, IObserver
             int idx = NumKeyCodeToInt(KeyCode.Alpha1);
             if (onAlpha1)
                 InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha3)
-                InvokeButton(alpha3Buttons[idx]);
+            else if (onAlpha2)
+                InvokeButton(alpha2Buttons[idx]);
             else
                 InvokeButton(buttons[idx]);
         }
@@ -152,8 +128,8 @@ public class InputManager : MonoBehaviour, IObserver
             int idx = NumKeyCodeToInt(KeyCode.Alpha2);
             if (onAlpha1)
                 InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha3)
-                InvokeButton(alpha3Buttons[idx]);
+            else if (onAlpha2)
+                InvokeButton(alpha2Buttons[idx]);
             else
                 InvokeButton(buttons[idx]);
         }
@@ -162,8 +138,8 @@ public class InputManager : MonoBehaviour, IObserver
             int idx = NumKeyCodeToInt(KeyCode.Alpha3);
             if (onAlpha1)
                 InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha3)
-                InvokeButton(alpha3Buttons[idx]);
+            else if (onAlpha2)
+                InvokeButton(alpha2Buttons[idx]);
             else
                 InvokeButton(buttons[idx]);
         }
@@ -172,16 +148,18 @@ public class InputManager : MonoBehaviour, IObserver
             int idx = NumKeyCodeToInt(KeyCode.Alpha4);
             if (onAlpha1)
                 InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha3)
-                InvokeButton(alpha3Buttons[idx]);
+            else if (onAlpha2)
+                InvokeButton(alpha2Buttons[idx]);
+            else
+                InvokeButton(buttons[idx]);
         }
         else if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             int idx = NumKeyCodeToInt(KeyCode.Alpha5);
             if (onAlpha1)
                 InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha3)
-                InvokeButton(alpha3Buttons[idx]);
+            else if (onAlpha2)
+                InvokeButton(alpha2Buttons[idx]);
         }
     }
 
@@ -207,7 +185,6 @@ public class InputManager : MonoBehaviour, IObserver
     {
         if (button.interactable)
         {
-            button.Select();
             button.onClick.Invoke();
         }
     }
@@ -219,9 +196,9 @@ public class InputManager : MonoBehaviour, IObserver
         else
             onAlpha1 = false;
 
-        if (state == EventState.EtcFunc && !onAlpha3)
-            onAlpha3 = true;
+        if (state == EventState.EtcFunc && !onAlpha2)
+            onAlpha2 = true;
         else
-            onAlpha3 = false;
+            onAlpha2 = false;
     }
 }
