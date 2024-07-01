@@ -35,19 +35,6 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         for (int i = 0; i < residentialBuilding.existFacility.Length; i++)
         {
             SetOptionBuy(residentialBuilding, i);
-
-            if (residentialBuilding.CheckFacility((OptionType)i))
-            {
-                optionTexts[i].gameObject.SetActive(true);
-                optionTexts[i].text = GetOptionString(i);
-                cnt++;
-            }
-        }
-
-        if(cnt == 0)
-        {
-            optionTexts[0].gameObject.SetActive(true);
-            optionTexts[0].text = "¾øÀ½";
         }
     }
 

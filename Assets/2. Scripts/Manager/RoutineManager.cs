@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ public class RoutineManager : MonoBehaviour
 
     public bool isPay;
 
+    public Light mainLight;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -39,15 +42,25 @@ public class RoutineManager : MonoBehaviour
 
     public void DailyUpdate()
     {
-        day = day.AddDays(1);
+        InputManager.canInput = false;
 
-        Building.InitStaticCalcValue();
-        Tile.income = 0;
-        CalculateIncome();
-        UpdateHappiness();
-        EventManager.instance.EffectUpdate();
+        Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
+        mainLight.gameObject.transform.DOLocalRotate(new Vector3(angle.x + 360, angle.y, angle.z), 3, RotateMode.FastBeyond360).OnComplete(() =>
+        {
+            day = day.AddDays(1);
 
-        ApplyDept();
+            Building.InitStaticCalcValue();
+            Tile.income = 0;
+            CalculateIncome();
+            UpdateHappiness();
+            EventManager.instance.EffectUpdate();
+
+            ApplyDept();
+
+            UIManager.instance.UpdateDailyInfo();
+            InputManager.canInput = true;
+        }
+        );
     }
 
     private void ApplyDept()

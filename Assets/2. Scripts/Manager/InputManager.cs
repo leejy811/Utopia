@@ -173,7 +173,14 @@ public class InputManager : MonoBehaviour, IObserver
 
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
 
-        return results.Count > 0;
+        int count = results.Count;
+        foreach (RaycastResult res in results)
+        {
+            if (res.gameObject.tag == "CanOverUI")
+                count--;
+        }
+
+        return count > 0;
     }
 
     private int NumKeyCodeToInt(KeyCode code)

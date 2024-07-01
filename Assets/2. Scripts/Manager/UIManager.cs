@@ -542,8 +542,6 @@ public class UIManager : MonoBehaviour, ISubject
 
         notifyObserver(EventState.None);
         RoutineManager.instance.DailyUpdate();
-
-        UpdateDailyInfo();
     }
 
     public void OnClickSolveEvent(int index)
