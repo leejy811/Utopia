@@ -47,6 +47,7 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Message")]
     public GameObject errorMessagePrefab;
     public GameObject happinessMessagePrefab;
+    public GameObject incomeMessagePrefab;
 
     [Header("Cost")]
     public CostUI costInfo;
@@ -396,6 +397,13 @@ public class UIManager : MonoBehaviour, ISubject
     public void SetErrorPopUp(string massage, Vector3 position)
     {
         TemporayUI message = Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
+        message.SetUI(massage, position);
+    }
+
+    public void SetIncomePopUp(int income, Vector3 position)
+    {
+        string massage = (income > 0 ? "<color=green>+" : "<color=red>-") + GetCommaText(income) + "</color>";
+        TemporayUI message = Instantiate(incomeMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(massage, position);
     }
 

@@ -37,14 +37,15 @@ public class TemporayUI : MonoBehaviour
 
     IEnumerator TempUpdate()
     {
-        while (panel.color.a > 0)
+        while (text.color.a > 0)
         {
             transform.localPosition += Vector3.up * speed * 20 * Time.fixedDeltaTime;
-            panel.color -= Color.black * speed * Time.fixedDeltaTime;
             text.color -= Color.black * speed * Time.fixedDeltaTime;
+
+            if (panel != null)
+                panel.color -= Color.black * speed * Time.fixedDeltaTime;
             yield return new WaitForFixedUpdate();
         }
-
         Destroy(gameObject);
     }
 }

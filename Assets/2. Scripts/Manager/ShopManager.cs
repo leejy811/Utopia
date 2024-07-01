@@ -22,8 +22,6 @@ public class ShopManager : MonoBehaviour, IObserver
     private GameObject curPickObject;
     private int curPickIndex;
 
-    public List<Vector2Int> curPickTiles = new List<Vector2Int>();
-
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -86,12 +84,10 @@ public class ShopManager : MonoBehaviour, IObserver
         else if (state == BuyState.SolveBuilding)
             SetSolveEvent(pickObject);
 
-        if (buyState == BuyState.SolveBuilding && state == BuyState.BuyTile)
+        if (buyState == BuyState.SolveBuilding)
             curPickObject = null;
 
-        if(buyState == BuyState.BuyTile)
-            SetTargetObject(null, Color.green, Color.red);
-        else if (buyState == BuyState.SellBuilding)
+        if (buyState == BuyState.SellBuilding)
             SetTargetObject(null, Color.red, Color.white);
 
         switch (state)
@@ -102,7 +98,6 @@ public class ShopManager : MonoBehaviour, IObserver
                 BuildingSpawner.instance.ChangeViewState(ViewStateType.Opaque);
                 break;
             case BuyState.BuyBuilding:
-            case BuyState.BuyTile:
             case BuyState.BuildTile:
                 BuildingSpawner.instance.ChangeViewState(ViewStateType.Transparent);
                 break;
@@ -130,7 +125,7 @@ public class ShopManager : MonoBehaviour, IObserver
             SetSolveEvent();
             SetSolveEvent(pickObject);
         }
-        else if (buyState == BuyState.SellBuilding || buyState == BuyState.BuyTile)
+        else if (buyState == BuyState.SellBuilding)
         {
             ChangeState(BuyState.None);
         }
@@ -173,31 +168,6 @@ public class ShopManager : MonoBehaviour, IObserver
         AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
     }
 
-    public void BuyTile()
-    {
-        int cost = CalculateCost(Grid.instance.tileCost[0] * curPickTiles.Count);
-
-        if (buyState != BuyState.BuyTile) return;
-        if (cost == 0) return;
-        if (!PayMoney(cost))
-        {
-            foreach (Vector2Int pos in curPickTiles)
-            {
-                Grid.instance.tiles[pos.x, pos.y].SetTileColor(false);
-            }
-            curPickTiles.Clear();
-            return;
-        }
-
-        foreach(Vector2Int pos in curPickTiles)
-        {
-            Grid.instance.tiles[pos.x, pos.y].SetTilePurchased(true);
-        }
-
-        curPickTiles.Clear();
-        AkSoundEngine.PostEvent("Play_Tile_Buy_001", gameObject);
-    }
-
     public void BuildTile(Transform spawnTrans)
     {
         int cost = CalculateCost(Grid.instance.tileCost[curPickIndex + 1]);
@@ -209,20 +179,6 @@ public class ShopManager : MonoBehaviour, IObserver
 
         Grid.instance.PlaceTile(curPickIndex, spawnTrans);
         
-    }
-
-    public void AddTile(Transform tile)
-    {
-        Vector2Int pos = new Vector2Int((int)tile.position.x, (int)tile.position.z);
-
-        if (!curPickTiles.Contains(pos))
-        {
-            if (Grid.instance.tiles[pos.x, pos.y].CheckPurchased())
-            {
-                curPickTiles.Add(pos);
-                Grid.instance.tiles[pos.x, pos.y].SetTileColor(true);
-            }
-        }
     }
 
     public bool BuyOption(OptionType type)
