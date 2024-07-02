@@ -22,6 +22,9 @@ public class RoutineManager : MonoBehaviour
     public bool isPay;
 
     public Light mainLight;
+    public float lightUpdateDuration;
+    public float lightDailyDuration;
+    public float defalutAngleX;
 
     private void Awake()
     {
@@ -45,7 +48,7 @@ public class RoutineManager : MonoBehaviour
         InputManager.canInput = false;
 
         Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
-        mainLight.gameObject.transform.DOLocalRotate(new Vector3(angle.x + 360, angle.y, angle.z), 3, RotateMode.FastBeyond360).OnComplete(() =>
+        mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, angle.y, angle.z), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
         {
             day = day.AddDays(1);
 
@@ -59,6 +62,8 @@ public class RoutineManager : MonoBehaviour
 
             UIManager.instance.UpdateDailyInfo();
             InputManager.canInput = true;
+
+            //mainLight.gameObject.transform.DOLocalRotate(new Vector3(angle.x + 180, angle.y, angle.z), lightDailyDuration, RotateMode.FastBeyond360);
         }
         );
     }

@@ -377,7 +377,7 @@ public class UIManager : MonoBehaviour, ISubject
                 if (i == idx)
                 {
                     buildingIntros[i].gameObject.SetActive(true);
-                    buildingIntros[i].SetValue(building);
+                    buildingIntros[i].OnUI(building);
 
                 }
                 else

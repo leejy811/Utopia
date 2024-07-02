@@ -73,9 +73,17 @@ public class BuildingIntroUI : MonoBehaviour
             eventTexts[1].gameObject.SetActive(false);
     }
 
-    public void OnUI(Building building, Vector3 pos)
+    public void OnUI(Building building)
     {
-        transform.localPosition = pos;
+        //Canvas canvas = GetComponentInParent<Canvas>();
+        //Camera uiCamera = canvas.worldCamera;
+        //RectTransform rectParent = canvas.GetComponent<RectTransform>();
+        //RectTransform rectSelf = GetComponent<RectTransform>();
+
+        //var localPos = Vector2.zero;
+        //RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, Input.mousePosition, uiCamera, out localPos);
+
+        //rectSelf.localPosition = localPos;
         SetValue(building);
     }
 

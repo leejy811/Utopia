@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -34,6 +35,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         spawnTrans.gameObject.GetComponent<Tile>().ApplyInfluenceToBuilding();
         spawnTrans.gameObject.GetComponent<Tile>().Coloring(Grid.instance.isColorMode);
         building.SetPosition(spawnTrans.position);
+        CityLevelManager.instance.frames.Enqueue(new FrameInfo(index, new Vector2Int((int)spawnTrans.position.x, (int)spawnTrans.position.z), spawnTrans.rotation, true));
 
         buildingCount[index]++;
         building.count = buildingCount[index];
@@ -74,6 +76,8 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         }
 
         buildingTypeCount[(int)building.GetComponent<Building>().type]--;
+
+        CityLevelManager.instance.frames.Enqueue(new FrameInfo(0, new Vector2Int((int)building.transform.position.x, (int)building.transform.position.z), building.transform.rotation, false));
     }
 
     public void ChangeViewState(ViewStateType stateType)

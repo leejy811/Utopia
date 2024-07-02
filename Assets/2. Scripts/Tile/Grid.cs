@@ -9,8 +9,10 @@ public class Grid : MonoBehaviour, IObserver
 {
     static public Grid instance;
 
+    [Header("Tile")]
     public GameObject tilePrefab;
     public Tile[ , ] tiles;
+    public Tile[ , ] levelUpTiles;
     public int[] tileCost;
     public int[] tileCostPerDay;
 
@@ -22,6 +24,7 @@ public class Grid : MonoBehaviour, IObserver
     public int width;
     public int height;
     [SerializeField] private Vector2Int startPoint;
+    public Vector2Int levelUPStartPoint;
     [SerializeField] private Vector2Int startTileSize;
     [SerializeField] private Vector3 cameraOffset;
 
@@ -53,25 +56,32 @@ public class Grid : MonoBehaviour, IObserver
         if (height % 2 != 0) height++;
 
         tiles = new Tile[width, height];
+        levelUpTiles = new Tile[width, height];
         startTileSize = CityLevelManager.instance.level[0].tileSize;
 
         for (int i = 0; i < width; i++)
         {
             for (int j = 0; j < height; j++)
             {
-                GameObject tile = Instantiate(tilePrefab, new Vector3(startPoint.x + i, 0, startPoint.y + j), tilePrefab.transform.rotation, transform);
-                tiles[i, j] = tile.GetComponent<Tile>();
-                if (i >= (width / 2) - (startTileSize.x / 2) && i < (width / 2) + (startTileSize.x / 2) &&
-                    j >= (height / 2) - (startTileSize.y / 2) && j < (height / 2) + (startTileSize.y / 2))
-                    tiles[i, j].SetTilePurchased(true);
-                else
-                    tiles[i, j].SetTilePurchased(false);
-
-                tiles[i, j].tilePos = new Vector2(i, j);
+                CreateTile(tiles, startPoint, i, j);
+                CreateTile(levelUpTiles, levelUPStartPoint, i, j);
             }
         }
 
         isSetTile = true;
+    }
+
+    private void CreateTile(Tile[,] inputTiles, Vector2Int startPos, int i, int j)
+    {
+        GameObject tile = Instantiate(tilePrefab, new Vector3(startPos.x + i, 0, startPos.y + j), tilePrefab.transform.rotation, transform);
+        inputTiles[i, j] = tile.GetComponent<Tile>();
+        if (i >= (width / 2) - (startTileSize.x / 2) && i < (width / 2) + (startTileSize.x / 2) &&
+            j >= (height / 2) - (startTileSize.y / 2) && j < (height / 2) + (startTileSize.y / 2))
+            inputTiles[i, j].SetTilePurchased(true);
+        else
+            inputTiles[i, j].SetTilePurchased(false);
+
+        inputTiles[i, j].tilePos = new Vector2(i, j);
     }
 
     private void SetCamera()
@@ -87,6 +97,7 @@ public class Grid : MonoBehaviour, IObserver
             for (int j = (height / 2) - (purchaseSize.y / 2); j < (height / 2) + (purchaseSize.y / 2); j++)
             {
                 tiles[i, j].SetTilePurchased(true);
+                levelUpTiles[i, j].SetTilePurchased(true);
             }
         }
     }

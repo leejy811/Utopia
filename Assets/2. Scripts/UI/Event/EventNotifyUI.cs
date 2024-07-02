@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class EventNotifyUI : MonoBehaviour, IObserver
@@ -9,6 +10,7 @@ public class EventNotifyUI : MonoBehaviour, IObserver
 
     [Header("Event List")]
     public int curIndex;
+    public TextMeshProUGUI[] listTexts;
 
     [Header("Camera")]
     public CameraPriorityController cameraPriorityController;
@@ -28,6 +30,11 @@ public class EventNotifyUI : MonoBehaviour, IObserver
         }
 
         buildingIntros[idx].SetValue(building);
+
+        foreach (TextMeshProUGUI text in listTexts)
+        {
+            text.text = (curIndex + 1).ToString() + "/" + EventManager.instance.eventBuildings.Count.ToString();
+        }
     }
 
     public void NextBuilding(bool isRight)

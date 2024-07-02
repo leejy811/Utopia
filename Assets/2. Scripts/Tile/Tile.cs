@@ -56,7 +56,6 @@ public class Tile : MonoBehaviour
         SetTileColor(isPurchased);
 
         this.isPurchased = isPurchased;
-        
     }
 
     public void SetInfluenceValue(BuildingType type, int value)
