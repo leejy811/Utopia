@@ -23,8 +23,10 @@ public class RoutineManager : MonoBehaviour
 
     public Light mainLight;
     public float lightUpdateDuration;
-    public float lightDailyDuration;
+    public float lightDailySpeed;
     public float defalutAngleX;
+
+    private Coroutine lightCoroutine;
 
     private void Awake()
     {
@@ -47,8 +49,12 @@ public class RoutineManager : MonoBehaviour
     {
         InputManager.canInput = false;
 
+        if (lightCoroutine != null)
+            StopCoroutine(lightCoroutine);
         Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
-        mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, angle.y, angle.z), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
+
+        Debug.Log(angle);
+        mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
         {
             day = day.AddDays(1);
 
@@ -63,9 +69,18 @@ public class RoutineManager : MonoBehaviour
             UIManager.instance.UpdateDailyInfo();
             InputManager.canInput = true;
 
-            //mainLight.gameObject.transform.DOLocalRotate(new Vector3(angle.x + 180, angle.y, angle.z), lightDailyDuration, RotateMode.FastBeyond360);
+            lightCoroutine = StartCoroutine(DailyLight());
         }
         );
+    }
+
+    IEnumerator DailyLight()
+    {
+        while(mainLight.gameObject.transform.localEulerAngles.x > 5)
+        {
+            mainLight.gameObject.transform.Rotate(Vector3.right * Time.fixedDeltaTime * lightDailySpeed);
+            yield return new WaitForFixedUpdate();
+        }
     }
 
     private void ApplyDept()
