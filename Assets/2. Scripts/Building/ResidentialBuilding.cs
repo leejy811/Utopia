@@ -63,20 +63,20 @@ public class ResidentialBuilding : Building
 
     public override int CalculateIncome()
     {
-        // if (happinessRate < 30)
-        // {
-        //     int value = (int)(values[ValueType.Resident].max * -0.1f);
-        //
-        //     if (values[ValueType.Resident].cur + value < 0)
-        //         value = (int)-values[ValueType.Resident].cur;
-        //
-        //     BoundaryValue resident = values[ValueType.Resident];
-        //     resident.cur += value;
-        //     cityResident += value;
-        //     values[ValueType.Resident] = resident;
-        //
-        //     ApplyInfluenceToTile(value, false);
-        // }
+        if (happinessRate < 30)
+        {
+            int value = (int)(values[ValueType.Resident].max * -0.1f);
+        
+            if (values[ValueType.Resident].cur + value < 0)
+                value = (int)-values[ValueType.Resident].cur;
+        
+            BoundaryValue resident = values[ValueType.Resident];
+            resident.cur += value;
+            cityResident += value;
+            values[ValueType.Resident] = resident;
+        
+            ApplyInfluenceToTile(value, false);
+        }
 
         float res = values[ValueType.Resident].cur * (happinessRate / 100.0f);
         res += res * GetIncomeEvent();
