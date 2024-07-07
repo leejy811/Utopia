@@ -37,6 +37,8 @@ public class CityLevelManager : MonoBehaviour
     public CityLevel[] level;
     public Queue<FrameInfo> frames = new Queue<FrameInfo>();
 
+    public CinemachineCameraController_4 cameraController;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -77,7 +79,10 @@ public class CityLevelManager : MonoBehaviour
 
     IEnumerator PlayTimeLapse()
     {
-        while(frames.Count > 0)
+        cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
+
+        yield return new WaitForSeconds(2.0f);
+        while (frames.Count > 0)
         {
             FrameInfo curFrame = frames.Dequeue();
 
@@ -96,6 +101,9 @@ public class CityLevelManager : MonoBehaviour
 
             yield return new WaitForSeconds(0.5f);
         }
+
+        cameraController.StopCoroutine(cameraController.rotateOnCoroutine);
+        cameraController.StartCoroutine(cameraController.RotateCameraOff());
 
         LevelUp();
     }

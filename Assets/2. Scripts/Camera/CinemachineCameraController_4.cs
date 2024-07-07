@@ -8,61 +8,44 @@ public class CinemachineCameraController_4 : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera_2;
     public float rotationSpeed = 90.0f;
 
+    public Coroutine rotateOnCoroutine;
+
     Vector3 Position_1 = new Vector3(6f, 9.4f, 6f);
     Vector3 Position_2 = new Vector3(1006f, 9.4f, 6f);
-    bool pressH = false;
-    bool pressH_2 = false;
 
-    void Update()
+    public IEnumerator SetCameraPrioritiesWithDelay()
     {
+        virtualCamera_2.Priority = 100;
+        yield return new WaitForSeconds(2.0f);
+        virtualCamera_2.transform.position = Position_2;
+        rotateOnCoroutine = StartCoroutine(RotateCameraOn());
+    }
 
-
-
-        if (Input.GetKeyDown(KeyCode.H) && pressH == false)
-        {
-            StartCoroutine(SetCameraPrioritiesWithDelay());
-        }
-
-
-
-        else if (Input.GetKeyDown(KeyCode.H) && pressH == true)
-        {
-            pressH = false;
-        }
-        if (pressH == true)
+    public IEnumerator RotateCameraOn()
+    {
+        while (true)
         {
             RotateCamera();
+            yield return new WaitForFixedUpdate();
         }
-        else if (pressH == false && virtualCamera_2.Priority == 100)
+    }
+
+    public IEnumerator RotateCameraOff()
+    {
+        while (true)
         {
             RotateCamera_2();
             float currentYRotation = virtualCamera_2.transform.eulerAngles.y;
             if (IsNearTargetAngle(currentYRotation, 45))
             {
                 virtualCamera_2.transform.position = Position_1;
+                break;
             }
+            yield return new WaitForFixedUpdate();
         }
 
-
-
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            virtualCamera_2.Priority = 10;
-        }
-
-
-
+        virtualCamera_2.Priority = 10;
     }
-
-    IEnumerator SetCameraPrioritiesWithDelay()
-    {
-        virtualCamera_2.Priority = 100;
-        yield return new WaitForSeconds(2.0f);
-        virtualCamera_2.transform.position = Position_2;
-        pressH = true;
-    }
-
-
 
     void RotateCamera()
     {

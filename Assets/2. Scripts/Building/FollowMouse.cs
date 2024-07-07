@@ -36,8 +36,7 @@ public class FollowMouse : MonoBehaviour
     void SetPosition()
     {
         mousePos = Input.mousePosition;
-        
-        mousePos = main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, main.nearClipPlane + 2));
+        mousePos = main.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, -main.transform.position.z));
         transform.position = mousePos;
     }
 
