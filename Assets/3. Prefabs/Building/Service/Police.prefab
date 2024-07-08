@@ -74,7 +74,7 @@ MonoBehaviour:
   curEvents: []
   cost: 100
   buildingIcon: {fileID: 21300000, guid: f6aac7d047e13914cbc7d203425642da, type: 3}
-  costPerDay: 50
+  costPerDay: 40
   userCnt:
     max: 300
     min: 100
