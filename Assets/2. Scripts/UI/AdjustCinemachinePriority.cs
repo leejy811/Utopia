@@ -7,17 +7,19 @@ public class AdjustCinemachinePriority : MonoBehaviour
 {
     public CinemachineVirtualCamera virtualCamera;  
     public int initialPriority = 30;              
-    public int targetPriority = 3;             
-
+    public int targetPriority = 3;
+    private void Awake()
+    {
+        
+    }
     void Start()
     {
         StartCoroutine(DelayedAction());
-
     }
 
     IEnumerator DelayedAction()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         virtualCamera.Priority = initialPriority;
 
