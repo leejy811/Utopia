@@ -21,7 +21,7 @@ public class textSceneManage : MonoBehaviour
 
 
     public float fillSeconds = 2f;
-    public float fallSeconds = 3.0f;
+    public float fallSeconds = 1.3f;
 
 
     public float sizecontrollSeconds = 0.3f;
@@ -38,28 +38,53 @@ public class textSceneManage : MonoBehaviour
         if (knobImage != null)
         {
             RectTransform rectTransform = knobImage.GetComponent<RectTransform>();
-            yield return rectTransform.DOLocalMoveY(rectTransform.localPosition.y - 350, fallSeconds).WaitForCompletion();
-            yield return new WaitForSeconds(0.1f);
+            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 350, fallSeconds));
+
+            yield return new WaitForSeconds(1f);
         }
         else
         {
             Debug.LogWarning("π∫∞°∞° π∫∞°¿”");
         }
-        
+
         yield return StartCoroutine(FillToAmount(secondNum / 100f));
     }
+
+    IEnumerator MoveToYPosition(RectTransform rectTransform, float targetY, float duration)
+    {
+        Vector3 startPosition = rectTransform.localPosition;
+        Vector3 endPosition = new Vector3(startPosition.x, targetY, startPosition.z);
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float linearT = elapsedTime / duration;
+            rectTransform.localPosition = Vector3.Lerp(startPosition, endPosition, linearT);
+            yield return null;
+        }
+
+        rectTransform.localPosition = endPosition;
+    }
+
 
     IEnumerator FillToAmount(float targetAmount)
     {
         float startAmount = knobImage.fillAmount;
         float elapsedTime = 0f;
+        float totalChange = targetAmount - startAmount;
+
         while (elapsedTime < fillSeconds)
         {
             elapsedTime += Time.deltaTime;
-            knobImage.fillAmount = Mathf.Lerp(startAmount, targetAmount, elapsedTime / fillSeconds);
+            float linearT = elapsedTime / fillSeconds;
+            knobImage.fillAmount = startAmount + totalChange * linearT;
             yield return null;
         }
+
+        knobImage.fillAmount = targetAmount;
     }
+
 
     public IEnumerator MoveTextDown(int startNumber, int endNumber)
     {
@@ -67,8 +92,8 @@ public class textSceneManage : MonoBehaviour
         {
             RectTransform rectTransform = MovetextObject.GetComponent<RectTransform>();
             MovetextObject.text = startNumber.ToString();
-            yield return rectTransform.DOLocalMoveY(rectTransform.localPosition.y - 350, fallSeconds).WaitForCompletion();
-            yield return new WaitForSeconds(0.1f);
+            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 350, fallSeconds));
+            yield return new WaitForSeconds(1f);
             MovetextObject.text = endNumber.ToString();
         }
         else
@@ -163,13 +188,52 @@ public class textSceneManage : MonoBehaviour
     }
 
 
+    public Graphic targetGraphic;
+    public GameObject targetObject;
+
+    public float fadeInDuration = 1.0f;
+    public float visibleDuration = 2.0f;
+    public float fadeOutDuration = 1.0f;
+
+    IEnumerator FadeInOut(Graphic targetGraphic, GameObject targetObject)
+    {
+        targetObject.SetActive(true);
+
+        yield return Fade(targetGraphic, 0f, 0f);
+
+        yield return Fade(targetGraphic, 1f, fadeInDuration);
+
+        yield return new WaitForSeconds(visibleDuration);
+
+        yield return Fade(targetGraphic, 0f, fadeOutDuration);
+
+        targetObject.SetActive(false);
+    }
+
+    IEnumerator Fade(Graphic targetGraphic, float targetAlpha, float duration)
+    {
+        float startAlpha = targetGraphic.color.a;
+        float time = 0;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            float alpha = Mathf.Lerp(startAlpha, targetAlpha, time / duration);
+            targetGraphic.color = new Color(targetGraphic.color.r, targetGraphic.color.g, targetGraphic.color.b, alpha);
+            yield return null;
+        }
+        targetGraphic.color = new Color(targetGraphic.color.r, targetGraphic.color.g, targetGraphic.color.b, targetAlpha);
+    }
+
+
     void Start()
     {
         StartCoroutine(MoveTextDown(10, 20));
         StartCoroutine(BlinkText());
-        StartCoroutine(ActivateTextObject(ActivatetextObject));
-
         StartCoroutine(FillKnob(70, 40));
+
+        StartCoroutine(ActivateTextObject(ActivatetextObject));
         StartCoroutine(ActivateButtonObject(sceneButton));
+        StartCoroutine(FadeInOut(targetGraphic, targetObject));
     }
 }
