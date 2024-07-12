@@ -102,11 +102,11 @@ public class UtilityBuilding : Building
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 1;
+                changeAmount += 2;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += -2;
             else
-                changeAmount = 0;
+                changeAmount = 1;
         }
 
         if (isExpect)

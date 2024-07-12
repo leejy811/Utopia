@@ -88,7 +88,7 @@ MonoBehaviour:
     min: 50
     cur: 0
   serviceCSAT:
-    max: 100
+    max: 200
     min: 50
     cur: 0
 --- !u!1001 &4723676413235935081

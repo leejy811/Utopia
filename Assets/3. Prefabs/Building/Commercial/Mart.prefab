@@ -76,12 +76,12 @@ MonoBehaviour:
   buildingIcon: {fileID: 21300000, guid: ba3733eb1f9cb8f4b966d209ca78b7df, type: 3}
   costPerDay: 300
   userCnt:
-    max: 790
+    max: 1200
     min: 500
     cur: 0
   utilityValue:
     max: 60
-    min: 30
+    min: 40
     cur: 50
 --- !u!1001 &1938427413157039273
 PrefabInstance:

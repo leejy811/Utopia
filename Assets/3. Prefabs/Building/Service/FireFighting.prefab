@@ -76,8 +76,8 @@ MonoBehaviour:
   buildingIcon: {fileID: 21300000, guid: 2c4fdb0a15861f143b620ab553b19b71, type: 3}
   costPerDay: 20
   userCnt:
-    max: 200
-    min: 100
+    max: 800
+    min: 300
     cur: 0
   utilityValue:
     max: 60
