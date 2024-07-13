@@ -17,8 +17,9 @@ public class textSceneManage : MonoBehaviour
 
     public Button sceneButton;
 
-    public float activateSeconds=5.3f;
+    public float numberChangeSpeed = 0.1f;
 
+    public float activateSeconds=5.3f;
 
     public float fillSeconds = 2f;
     public float fallSeconds = 1.3f;
@@ -92,15 +93,35 @@ public class textSceneManage : MonoBehaviour
         {
             RectTransform rectTransform = MovetextObject.GetComponent<RectTransform>();
             MovetextObject.text = startNumber.ToString();
-            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 350, fallSeconds));
-            yield return new WaitForSeconds(1f);
-            MovetextObject.text = endNumber.ToString();
+            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 275, fallSeconds));
+            yield return StartCoroutine(MoveTextOverTime(startNumber, endNumber, numberChangeSpeed));
         }
         else
         {
             Debug.LogWarning("π∫∞°∞° π∫∞°¿”");
         }
     }
+
+    private IEnumerator MoveTextOverTime(int startNumber, int endNumber, float changeSpeed)
+    {
+        if (startNumber < endNumber)
+        {
+            for (int i = startNumber; i <= endNumber; i++)
+            {
+                MovetextObject.text = i.ToString();
+                yield return new WaitForSeconds(changeSpeed);
+            }
+        }
+        else
+        {
+            for (int i = startNumber; i >= endNumber; i--)
+            {
+                MovetextObject.text = i.ToString();
+                yield return new WaitForSeconds(changeSpeed);
+            }
+        }
+    }
+
 
     public IEnumerator BlinkText()
     {
