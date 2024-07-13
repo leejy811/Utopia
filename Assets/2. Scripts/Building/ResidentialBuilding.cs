@@ -46,6 +46,7 @@ public class ResidentialBuilding : Building
     public void BuyFacility(OptionType type)
     {
         existFacility[(int)type] = true;
+        residentCnt.max += 100;
         SolveEventToOption(type);
     }
 
@@ -75,6 +76,20 @@ public class ResidentialBuilding : Building
             cityResident += value;
             values[ValueType.Resident] = resident;
         
+            ApplyInfluenceToTile(value, false);
+        }
+        else if (happinessRate > 80)
+        {
+            int value = (int)(values[ValueType.Resident].max * 0.1f);
+
+            if (values[ValueType.Resident].cur + value > values[ValueType.Resident].max)
+                value = (int)(values[ValueType.Resident].max - values[ValueType.Resident].cur);
+
+            BoundaryValue resident = values[ValueType.Resident];
+            resident.cur += value;
+            cityResident += value;
+            values[ValueType.Resident] = resident;
+
             ApplyInfluenceToTile(value, false);
         }
 
