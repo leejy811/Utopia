@@ -53,7 +53,6 @@ public class RoutineManager : MonoBehaviour
             StopCoroutine(lightCoroutine);
         Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
 
-        Debug.Log(angle);
         mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
         {
             day = day.AddDays(1);
@@ -63,6 +62,7 @@ public class RoutineManager : MonoBehaviour
             CalculateIncome();
             UpdateHappiness();
             EventManager.instance.EffectUpdate();
+            EventManager.instance.CostUpdate();
 
             ApplyDept();
 
@@ -114,8 +114,8 @@ public class RoutineManager : MonoBehaviour
         {
             SetCreditRating(1);
             weekResult = ResultType.Worst;
+            debt = (int)(debtsOfWeek[GetWeekOfYear()] * 1.5f);
             UIManager.instance.notifyObserver(EventState.LateReceipt);
-            debt = debtsOfWeek[GetWeekOfYear()];
             return;
         }
 

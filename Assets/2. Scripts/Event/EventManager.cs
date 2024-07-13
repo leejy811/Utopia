@@ -284,8 +284,10 @@ public class EventManager : MonoBehaviour
         {
             eventBuildings.RemoveAt(removeIdx[i] - i);
         }
+    }
 
-        //Cost Update
+    public void CostUpdate()
+    {
         cost = initialCost;
         rollTimes = 0;
     }
