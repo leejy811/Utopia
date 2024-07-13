@@ -39,7 +39,7 @@ public class textSceneManage : MonoBehaviour
         if (knobImage != null)
         {
             RectTransform rectTransform = knobImage.GetComponent<RectTransform>();
-            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 350, fallSeconds));
+            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 275, fallSeconds));
 
             yield return new WaitForSeconds(1f);
         }
