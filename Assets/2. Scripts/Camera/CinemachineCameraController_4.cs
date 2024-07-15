@@ -7,14 +7,17 @@ public class CinemachineCameraController_4 : MonoBehaviour
     public CinemachineVirtualCamera virtualCamera;
     public CinemachineVirtualCamera virtualCamera_2;
     public float rotationSpeed = 90.0f;
+    public float[] zoomSizes;
 
     public Coroutine rotateOnCoroutine;
 
-    Vector3 Position_1 = new Vector3(6f, 9.4f, 6f);
-    Vector3 Position_2 = new Vector3(1006f, 9.4f, 6f);
+    Vector3 Position_1 = new Vector3(6.2f, 6.2f, 6.2f);
+    Vector3 Position_2 = new Vector3(1006.2f, 6.2f, 6.2f);
 
     public IEnumerator SetCameraPrioritiesWithDelay()
     {
+        virtualCamera_2.transform.position = Position_1;
+        virtualCamera_2.m_Lens.OrthographicSize = zoomSizes[CityLevelManager.instance.levelIdx];
         virtualCamera_2.Priority = 100;
         yield return new WaitForSeconds(2.0f);
         virtualCamera_2.transform.position = Position_2;

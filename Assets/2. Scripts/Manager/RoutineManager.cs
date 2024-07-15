@@ -83,6 +83,14 @@ public class RoutineManager : MonoBehaviour
         }
     }
 
+    public void OnOffDailyLight(bool isOn)
+    {
+        if (isOn)
+            lightCoroutine = StartCoroutine(DailyLight());
+        else
+            StopCoroutine(lightCoroutine);
+    }
+
     private void ApplyDept()
     {
         if (GetWeekOfYear() >= debtsOfWeek.Length) 

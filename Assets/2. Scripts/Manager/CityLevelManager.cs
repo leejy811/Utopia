@@ -80,6 +80,10 @@ public class CityLevelManager : MonoBehaviour
 
     IEnumerator PlayTimeLapse()
     {
+        UIManager.instance.notifyObserver(EventState.None);
+        InputManager.canInput = false;
+        RoutineManager.instance.OnOffDailyLight(false);
+
         cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
         StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.5f));
@@ -117,6 +121,8 @@ public class CityLevelManager : MonoBehaviour
 
     public IEnumerator StopTimeLapse()
     {
+        yield return new WaitForSeconds(2.0f);
+
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
 
         yield return new WaitForSeconds(2.0f);
@@ -126,6 +132,9 @@ public class CityLevelManager : MonoBehaviour
         UIManager.instance.MovePanelAnim(2f, false);
 
         yield return new WaitForSeconds(2.0f);
+
+        InputManager.canInput = true;
+        RoutineManager.instance.OnOffDailyLight(true);
         LevelUp();
     }
 }
