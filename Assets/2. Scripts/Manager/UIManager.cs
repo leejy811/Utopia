@@ -83,9 +83,12 @@ public class UIManager : MonoBehaviour, ISubject
     private List<IObserver> observers = new List<IObserver>();
     private string[] weekStr = { "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일" };
 
-    public int NewsHappiness;
-    private int previousHappiness;
-    private bool UpdateNews = false;
+    //public int NewsHappiness;
+    //private int previousHappiness;
+    //private bool UpdateNews = false;
+    //public RectTransform imageRectTransform;
+    //public TextMeshProUGUI textComponent;
+    //public float animationDuration = 0.5f;
 
     private void Awake()
     {
@@ -97,23 +100,20 @@ public class UIManager : MonoBehaviour, ISubject
 
         instance = this;
     }
-    public RectTransform imageRectTransform;
-    public TextMeshProUGUI textComponent;
-    public float animationDuration = 0.5f;
 
     private void Start()
     {
         DOTween.SetTweensCapacity(500, 50);
         UpdateDailyInfo();
-        NewsHappiness = (int)RoutineManager.instance.cityHappiness;
-        previousHappiness = NewsHappiness;
-
         InitObserver();
-        //notifyObserver(EventState.LockButton);
+        notifyObserver(EventState.LockButton);
+
+        //NewsHappiness = (int)RoutineManager.instance.cityHappiness;
+        //previousHappiness = NewsHappiness;
     }
 
     #region NewsMessage
-
+    /*
     void Update()
     {
         //lastCityHappiness = RoutineManager.instance.cityHappiness;
@@ -274,7 +274,7 @@ public class UIManager : MonoBehaviour, ISubject
     {
         return ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + Tile.income;
     }
-
+    */
     #endregion
 
     #region SetValue

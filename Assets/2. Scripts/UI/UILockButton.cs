@@ -13,6 +13,9 @@ public class UILockButton : MonoBehaviour, IObserver
     public Sprite lockSprite;
     public Sprite buttonSprite;
 
+    [Header("TargetLevel")]
+    public int targetLevel;
+
     private void Awake()
     {
         button = gameObject.GetComponent<Button>();
@@ -25,7 +28,7 @@ public class UILockButton : MonoBehaviour, IObserver
             buttonImage.sprite = lockSprite;
             button.interactable = false;
         }
-        else if(state == EventState.CityLevelUp)
+        else if(state == EventState.CityLevelUp && CityLevelManager.instance.levelIdx == targetLevel)
         {
             buttonImage.sprite = buttonSprite;
             button.interactable = true;
