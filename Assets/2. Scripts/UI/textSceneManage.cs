@@ -32,6 +32,15 @@ public class textSceneManage : MonoBehaviour
     public int blinkCount = 10;
 
 
+    // 주석 미표기 함수는 내부 함수, 사용 X
+
+
+    /// <summary>
+    ///  신용점수 그래프 및 숫자표기
+    /// </summary>
+    /// <param name="firstNum"></시작 숫자(신용점수)>
+    /// <param name="secondNum"></끝나는 숫자(신용점수)>
+    /// <returns></returns>
     IEnumerator FillKnob(float firstNum, float secondNum)
     {
         knobImage.fillAmount = firstNum / 100f;
@@ -39,6 +48,7 @@ public class textSceneManage : MonoBehaviour
         if (knobImage != null)
         {
             RectTransform rectTransform = knobImage.GetComponent<RectTransform>();
+            StartCoroutine(MoveTextDown((int)firstNum, (int)secondNum));
             yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 275, fallSeconds));
 
             yield return new WaitForSeconds(0f);
@@ -50,6 +60,108 @@ public class textSceneManage : MonoBehaviour
 
         yield return StartCoroutine(FillToAmount(secondNum / 100f));
     }
+
+    /// <summary>
+    ///  신용점수 변경 후 텍스트 생성 함수
+    /// </summary>
+    public IEnumerator ActivateTextObject(TextMeshProUGUI ActivatetextObject)
+    {
+        ActivatetextObject.text = " asdasda";//표시할 텍스트
+        ActivatetextObject.fontSize = 1f;
+
+
+        yield return new WaitForSeconds(activateSeconds);
+        if (ActivatetextObject != null)
+        {
+            ActivatetextObject.gameObject.SetActive(true);
+            Sequence sequence = DOTween.Sequence();
+            sequence.Join(DOTween.To(() => ActivatetextObject.fontSize, x => ActivatetextObject.fontSize = x, 36f, sizecontrollSeconds));
+        }
+        else
+        {
+            Debug.LogWarning("뭔가가 뭔가임");
+        }
+    }
+
+    /// <summary>
+    ///  신용점수 변경 후 버튼 생성 함수
+    /// </summary>
+    public IEnumerator ActivateButtonObject(Button sceneButton)
+    {
+        yield return new WaitForSeconds(activateSeconds);
+        if (sceneButton != null)
+        {
+            sceneButton.transform.localScale = Vector3.zero;
+            sceneButton.gameObject.SetActive(true);
+            sceneButton.transform.DOScale(Vector3.one, sizecontrollSeconds);
+        }
+        else
+        {
+            Debug.LogWarning("뭔가가 뭔가임");
+        }
+    }
+
+    /// <summary>
+    ///  텍스트 생성 후 텍스트 set active false
+    /// </summary>
+    public IEnumerator DeactivateTextObject(TextMeshProUGUI DeactivatetextObject)
+    {
+        yield return new WaitForSeconds(0f);
+
+        if (DeactivatetextObject != null)
+        {
+            DeactivatetextObject.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("뭔가가 뭔가임");
+        }
+    }
+
+    /// <summary>
+    ///  버튼 생성 후 버튼 set active false
+    /// </summary>
+    public IEnumerator DeactivateButtonObject(Button sceneButton)
+    {
+        yield return new WaitForSeconds(0f);
+
+        if (sceneButton != null)
+        {
+            sceneButton.gameObject.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("뭔가가 뭔가임");
+        }
+    }
+
+    /// <summary>
+    ///  모든 UI에 적용되는 페이드 인 페이드 아웃 함수 (하얀색 사각형에 적용된 함수)
+    /// </summary>
+    IEnumerator FadeInOut(Graphic targetGraphic, GameObject targetObject)
+    {
+        targetObject.SetActive(true);
+
+        yield return Fade(targetGraphic, 0f, 0f);
+
+        yield return Fade(targetGraphic, 1f, fadeInDuration);
+
+        yield return new WaitForSeconds(visibleDuration);
+
+        yield return Fade(targetGraphic, 0f, fadeOutDuration);
+
+        targetObject.SetActive(false);
+    }
+
+    /// <summary>
+    ///  로비씬 이동 버튼 함수
+    /// </summary>
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+
 
     IEnumerator MoveToYPosition(RectTransform rectTransform, float targetY, float duration)
     {
@@ -68,7 +180,6 @@ public class textSceneManage : MonoBehaviour
         rectTransform.localPosition = endPosition;
     }
 
-
     IEnumerator FillToAmount(float targetAmount)
     {
         float startAmount = knobImage.fillAmount;
@@ -85,7 +196,6 @@ public class textSceneManage : MonoBehaviour
 
         knobImage.fillAmount = targetAmount;
     }
-
 
     public IEnumerator MoveTextDown(int startNumber, int endNumber)
     {
@@ -125,7 +235,6 @@ public class textSceneManage : MonoBehaviour
         MovetextObject.text = endNumber.ToString();
     }
 
-
     public IEnumerator BlinkText()
     {
         if (BlinktextObject != null)
@@ -143,96 +252,12 @@ public class textSceneManage : MonoBehaviour
         }
     }
 
-    public IEnumerator ActivateTextObject(TextMeshProUGUI ActivatetextObject)
-    {
-        ActivatetextObject.text = " asdasda";
-        ActivatetextObject.fontSize = 1f;
-
-
-        yield return new WaitForSeconds(activateSeconds);
-        if (ActivatetextObject != null)
-        {
-            ActivatetextObject.gameObject.SetActive(true);
-            Sequence sequence = DOTween.Sequence();
-            sequence.Join(DOTween.To(() => ActivatetextObject.fontSize, x => ActivatetextObject.fontSize = x, 36f, sizecontrollSeconds));
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
-    }
-
-    public IEnumerator DeactivateTextObject(TextMeshProUGUI DeactivatetextObject)
-    {
-        yield return new WaitForSeconds(6f);
-
-        if (DeactivatetextObject != null)
-        {
-            DeactivatetextObject.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
-    }
-
-
-    public IEnumerator ActivateButtonObject(Button sceneButton)
-    {
-        yield return new WaitForSeconds(activateSeconds);
-        if (sceneButton != null)
-        {
-            sceneButton.transform.localScale = Vector3.zero;
-            sceneButton.gameObject.SetActive(true);
-            sceneButton.transform.DOScale(Vector3.one, sizecontrollSeconds);
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
-    }
-
-    public IEnumerator DeactivateButtonObject(Button sceneButton)
-    {
-        yield return new WaitForSeconds(6f);
-
-        if (sceneButton != null)
-        {
-            sceneButton.gameObject.SetActive(false);
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
-    }
-
-    public void ChangeScene()
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-
-
     public Graphic targetGraphic;
     public GameObject targetObject;
 
     public float fadeInDuration = 1.0f;
     public float visibleDuration = 2.0f;
     public float fadeOutDuration = 1.0f;
-
-    IEnumerator FadeInOut(Graphic targetGraphic, GameObject targetObject)
-    {
-        targetObject.SetActive(true);
-
-        yield return Fade(targetGraphic, 0f, 0f);
-
-        yield return Fade(targetGraphic, 1f, fadeInDuration);
-
-        yield return new WaitForSeconds(visibleDuration);
-
-        yield return Fade(targetGraphic, 0f, fadeOutDuration);
-
-        targetObject.SetActive(false);
-    }
 
     IEnumerator Fade(Graphic targetGraphic, float targetAlpha, float duration)
     {
@@ -252,12 +277,11 @@ public class textSceneManage : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(MoveTextDown(10, 20));
-        StartCoroutine(BlinkText());
         StartCoroutine(FillKnob(70, 40));
 
         StartCoroutine(ActivateTextObject(ActivatetextObject));
         StartCoroutine(ActivateButtonObject(sceneButton));
+
         StartCoroutine(FadeInOut(targetGraphic, targetObject));
     }
 }
