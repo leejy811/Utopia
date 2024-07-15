@@ -132,6 +132,7 @@ public class RoutineManager : MonoBehaviour
         debt = debtsOfWeek[GetWeekOfYear()];
         isPay = false;
 
+        UIManager.instance.SetDebtInfo();
         UIManager.instance.OnClickDeptDocButton();
     }
 
@@ -207,7 +208,6 @@ public class RoutineManager : MonoBehaviour
         int count = BuildingSpawner.instance.buildings.Count;
 
         cityHappiness = count + sign == 0 ? 0 : ((cityHappiness * count) + happiness) / (count + sign);
-        UIManager.instance.SetHappiness();
         AkSoundEngine.SetRTPCValue("HAPPY", cityHappiness);
     }
 

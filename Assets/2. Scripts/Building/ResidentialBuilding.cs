@@ -28,14 +28,12 @@ public class ResidentialBuilding : Building
 
         influencePower = (int)residentCnt.cur;
         cityResident += (int)residentCnt.cur;
-        UIManager.instance.SetCityResident();
     }
 
     private new void OnDestroy()
     {
         base.OnDestroy();
         cityResident -= (int)residentCnt.cur;
-        UIManager.instance.SetCityResident();
     }
 
     public bool CheckFacility(OptionType type)

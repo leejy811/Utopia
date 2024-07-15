@@ -22,11 +22,8 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Info")]
     public TextMeshProUGUI dayText;
     public TextMeshProUGUI moneyText;
-    public TextMeshProUGUI happinessText;
-    public TextMeshProUGUI cityResidentText;
+    public TextMeshProUGUI debtInfoText;
     public TextMeshProUGUI debtText;
-    public TextMeshProUGUI NewsMessage;
-    public TextMeshProUGUI NewsMessage2;
 
     [Header("Building")]
     public BuildingIntroUI[] buildingIntros;
@@ -47,7 +44,6 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Message")]
     public GameObject errorMessagePrefab;
     public GameObject happinessMessagePrefab;
-    public GameObject incomeMessagePrefab;
 
     [Header("Cost")]
     public CostUI costInfo;
@@ -68,7 +64,6 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Debt")]
     public DebtUI debtDoc;
     public DebtUI receipt;
-    public DebtUI reminder;
     public TextMeshProUGUI creditRatingText;
     public Slider debtSlider;
     public UIElement lateReceipt;
@@ -82,6 +77,7 @@ public class UIManager : MonoBehaviour, ISubject
     private Building targetBuilding;
     private List<IObserver> observers = new List<IObserver>();
     private string[] weekStr = { "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일" };
+    private string[] weekShortStr = { "일", "월", "화", "수", "목", "금", "토" };
 
     //public int NewsHappiness;
     //private int previousHappiness;
@@ -105,6 +101,7 @@ public class UIManager : MonoBehaviour, ISubject
     {
         DOTween.SetTweensCapacity(500, 50);
         UpdateDailyInfo();
+        SetDebtInfo();
         InitObserver();
         notifyObserver(EventState.LockButton);
 
@@ -291,16 +288,9 @@ public class UIManager : MonoBehaviour, ISubject
     {
         DateTime curDay = RoutineManager.instance.day;
         dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + " " + weekStr[(int)curDay.DayOfWeek];
-        SetHappiness();
         Setmoney();
-        SetCityResident();
         SetDebt();
         SetCreditRating();
-    }
-
-    public void SetHappiness()
-    {
-        happinessText.text = ((int)RoutineManager.instance.cityHappiness).ToString() + "%";
     }
 
     public void Setmoney()
@@ -308,9 +298,10 @@ public class UIManager : MonoBehaviour, ISubject
         moneyText.text = GetCommaText(ShopManager.instance.Money);
     }
 
-    public void SetCityResident()
+    public void SetDebtInfo()
     {
-        cityResidentText.text = GetCommaText(ResidentialBuilding.cityResident);
+        DateTime curDay = RoutineManager.instance.day.AddDays(7);
+        debtInfoText.text = "상환 날짜 : " + curDay.ToString("yyyy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + "(" + weekShortStr[(int)curDay.DayOfWeek] + ")";
     }
 
     public void SetDebt()
@@ -401,13 +392,6 @@ public class UIManager : MonoBehaviour, ISubject
     public void SetErrorPopUp(string massage, Vector3 position)
     {
         TemporayUI message = Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
-        message.SetUI(massage, position);
-    }
-
-    public void SetIncomePopUp(int income, Vector3 position)
-    {
-        string massage = (income > 0 ? "<color=green>+" : "<color=red>-") + GetCommaText(income) + "</color>";
-        TemporayUI message = Instantiate(incomeMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(massage, position);
     }
 
@@ -687,7 +671,6 @@ public class UIManager : MonoBehaviour, ISubject
 
         addObserver(debtDoc);
         addObserver(receipt);
-        addObserver(reminder);
         addObserver(lateReceipt);
 
         foreach (UILockButton lockButton in lockButtons)

@@ -12,7 +12,6 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
     public ValueSlider[] castSlider;
     public Button[] optionButtons;
     public Toggle[] optionToggles;
-    public TextMeshProUGUI[] optionTexts;
     public TextMeshProUGUI[] castTexts;
 
     string[] optionString = { "수도", "하수", "전력", "방음" };
@@ -58,12 +57,6 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         }
     }
 
-    private string GetOptionString(int type)
-    {
-        string res = optionString[type] + "옵션 설치로 인해 <color=#00FF00>특정 사회현상 발생 차단</color>";
-        return res;
-    }
-
     protected string GetCastString(Building building, int boundaryIdx, int type)
     {
         string res = "";
@@ -76,15 +69,5 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
 
         res += boundaryString[boundaryIdx] + "한 " + typeString[type] + " 만족도로 인해 " + castEffectString + " 예정</color>";
         return res;
-    }
-
-    protected override void SetInitState()
-    {
-        base.SetInitState();
-
-        foreach (TextMeshProUGUI text in optionTexts)
-        {
-            text.gameObject.SetActive(false);
-        }
     }
 }
