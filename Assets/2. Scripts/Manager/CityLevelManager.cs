@@ -86,7 +86,7 @@ public class CityLevelManager : MonoBehaviour
 
         cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
-        StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.5f));
+        StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.45f));
         UIManager.instance.MovePanelAnim(2f, true);
 
         yield return new WaitForSeconds(2.0f);
@@ -112,7 +112,7 @@ public class CityLevelManager : MonoBehaviour
                 Destroy(Grid.instance.levelUpTiles[curFrame.position.x, curFrame.position.y].building);
             }
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.2f);
         }
 
         cameraController.StopCoroutine(cameraController.rotateOnCoroutine);

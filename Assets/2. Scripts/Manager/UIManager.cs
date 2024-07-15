@@ -640,7 +640,7 @@ public class UIManager : MonoBehaviour, ISubject
     public void MovePanelAnim(float second, bool isUp)
     {
         float sign = isUp ? 1 : -1;
-        topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 50f * sign, second);
+        topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 36f * sign, second);
         bottomPanel.transform.DOLocalMoveY(bottomPanel.transform.localPosition.y + -50f * sign, second);
     }
 
