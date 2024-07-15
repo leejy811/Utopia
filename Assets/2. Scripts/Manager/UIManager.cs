@@ -465,6 +465,8 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void SetCityLevelUp()
     {
+        InputManager.canInput = false;
+
         int idx = CityLevelManager.instance.levelIdx;
         for (int i = 0; i < CityLevelManager.instance.level.Length; i++)
         {

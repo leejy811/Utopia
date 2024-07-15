@@ -41,8 +41,9 @@ public class RoutineManager : MonoBehaviour
 
     private void Start()
     {
-        day = new DateTime(2023, 12, 31);
-        isPay = true;
+        day = new DateTime(2024, 1, 1);
+        debt = debtsOfWeek[GetWeekOfYear()];
+        isPay = false;
     }
 
     public void DailyUpdate()

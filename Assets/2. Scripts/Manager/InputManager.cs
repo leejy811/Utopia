@@ -208,4 +208,9 @@ public class InputManager : MonoBehaviour, IObserver
         else
             onAlpha2 = false;
     }
+
+    public void ToggleInput()
+    {
+        canInput = !canInput;
+    }
 }
