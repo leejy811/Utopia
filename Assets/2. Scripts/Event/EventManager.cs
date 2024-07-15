@@ -66,13 +66,13 @@ public class EventManager : MonoBehaviour
     
     public bool CheckEventCondition()
     {
-        if (BuildingSpawner.instance.buildingTypeCount[0] < eventCondition[0]
+        if (CityLevelManager.instance.levelIdx > 0)
+            return false;
+        else if (BuildingSpawner.instance.buildingTypeCount[0] < eventCondition[0]
             || BuildingSpawner.instance.buildingTypeCount[1] < eventCondition[1]
             || BuildingSpawner.instance.buildingTypeCount[2] < eventCondition[2]
             || BuildingSpawner.instance.buildingTypeCount[3] < eventCondition[3])
-        {
             return false;
-        }
         else
             return true;
     }
