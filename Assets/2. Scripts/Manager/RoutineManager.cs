@@ -44,6 +44,7 @@ public class RoutineManager : MonoBehaviour
         day = new DateTime(2024, 1, 1);
         debt = debtsOfWeek[GetWeekOfYear()];
         isPay = false;
+        lightCoroutine = StartCoroutine(DailyLight());
     }
 
     public void DailyUpdate()
@@ -88,7 +89,7 @@ public class RoutineManager : MonoBehaviour
     {
         if (isOn)
             lightCoroutine = StartCoroutine(DailyLight());
-        else
+        else if (lightCoroutine != null)
             StopCoroutine(lightCoroutine);
     }
 
