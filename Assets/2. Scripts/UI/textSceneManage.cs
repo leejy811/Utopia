@@ -41,7 +41,7 @@ public class textSceneManage : MonoBehaviour
             RectTransform rectTransform = knobImage.GetComponent<RectTransform>();
             yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 275, fallSeconds));
 
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0f);
         }
         else
         {
@@ -94,7 +94,8 @@ public class textSceneManage : MonoBehaviour
             RectTransform rectTransform = MovetextObject.GetComponent<RectTransform>();
             MovetextObject.text = startNumber.ToString();
             yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 275, fallSeconds));
-            yield return StartCoroutine(MoveTextOverTime(startNumber, endNumber, numberChangeSpeed));
+            yield return new WaitForSeconds(0f);
+            yield return StartCoroutine(MoveTextOverTime(startNumber, endNumber, fillSeconds));
         }
         else
         {
@@ -102,24 +103,26 @@ public class textSceneManage : MonoBehaviour
         }
     }
 
-    private IEnumerator MoveTextOverTime(int startNumber, int endNumber, float changeSpeed)
+    private IEnumerator MoveTextOverTime(int startNumber, int endNumber, float changeSeconds)
     {
-        if (startNumber < endNumber)
+        float elapsedTime = 0;
+        float duration = changeSeconds;
+        int currentNumber = startNumber;
+        int direction = (endNumber > startNumber) ? 1 : -1;
+        int totalSteps = Mathf.Abs(endNumber - startNumber);
+
+        while (elapsedTime < duration)
         {
-            for (int i = startNumber; i <= endNumber; i++)
-            {
-                MovetextObject.text = i.ToString();
-                yield return new WaitForSeconds(changeSpeed);
-            }
+            float t = elapsedTime / duration;
+            currentNumber = startNumber + Mathf.RoundToInt(t * totalSteps) * direction;
+            MovetextObject.text = currentNumber.ToString();
+
+            yield return null;
+
+            elapsedTime += Time.deltaTime;
         }
-        else
-        {
-            for (int i = startNumber; i >= endNumber; i--)
-            {
-                MovetextObject.text = i.ToString();
-                yield return new WaitForSeconds(changeSpeed);
-            }
-        }
+
+        MovetextObject.text = endNumber.ToString();
     }
 
 
