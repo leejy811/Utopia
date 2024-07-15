@@ -125,7 +125,7 @@ public class RoutineManager : MonoBehaviour
         UIManager.instance.OnClickDeptDocButton();
     }
 
-    private int GetWeekOfYear()
+    public int GetWeekOfYear()
     {
         int weekOfYear = ((day.DayOfYear - 1) / 7) + (creditRating * -1) + ((day.Year - 2024) * 52);
         return weekOfYear;
@@ -208,10 +208,9 @@ public class RoutineManager : MonoBehaviour
         int money = ShopManager.instance.Money;
 
         if (isPay) return;
-        if (money < debt) return;
+        if (!ShopManager.instance.PayMoney(debt)) return;
 
         UIManager.instance.notifyObserver(EventState.Receipt);
-        ShopManager.instance.PayMoney(debt);
         debt = 0;
         UIManager.instance.SetDebt();
 
@@ -242,8 +241,6 @@ public class RoutineManager : MonoBehaviour
         }
 
         isPay = true;
-
-        CityLevelManager.instance.UpdateCityType(GetWeekOfYear() + 1);
     }
 
     private void RewardToPrePay()

@@ -31,4 +31,13 @@ public class DebtUI : UIElement
     {
         SetValue();
     }
+
+    protected void OnDisable()
+    {
+        if (state == EventState.Receipt)
+        {
+            int week = RoutineManager.instance.GetWeekOfYear() + 1;
+            CityLevelManager.instance.UpdateCityType(week);
+        }
+    }
 }

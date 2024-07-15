@@ -45,6 +45,8 @@ public class CinemachineCameraController_4 : MonoBehaviour
         }
 
         virtualCamera_2.Priority = 10;
+
+        StartCoroutine(CityLevelManager.instance.StopTimeLapse());
     }
 
     void RotateCamera()

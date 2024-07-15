@@ -73,6 +73,10 @@ public class UIManager : MonoBehaviour, ISubject
     public Slider debtSlider;
     public UIElement lateReceipt;
 
+    [Header("Panel")]
+    public GameObject topPanel;
+    public GameObject bottomPanel;
+
     #endregion
 
     private Building targetBuilding;
@@ -630,6 +634,13 @@ public class UIManager : MonoBehaviour, ISubject
 
     #endregion
 
+
+    public void MovePanelAnim(float second, bool isUp)
+    {
+        float sign = isUp ? 1 : -1;
+        topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 50f * sign, second);
+        bottomPanel.transform.DOLocalMoveY(bottomPanel.transform.localPosition.y + -50f * sign, second);
+    }
 
     private int GetBuildingIndex()
     {

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum CityType { Village = 0, Town, City, Utopia }
 
@@ -80,8 +81,16 @@ public class CityLevelManager : MonoBehaviour
     IEnumerator PlayTimeLapse()
     {
         cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
+        StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.5f));
+        UIManager.instance.MovePanelAnim(2f, true);
 
         yield return new WaitForSeconds(2.0f);
+
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, false));
+
+        yield return new WaitForSeconds(2.0f);
+
         while (frames.Count > 0)
         {
             FrameInfo curFrame = frames.Dequeue();
@@ -104,7 +113,19 @@ public class CityLevelManager : MonoBehaviour
 
         cameraController.StopCoroutine(cameraController.rotateOnCoroutine);
         cameraController.StartCoroutine(cameraController.RotateCameraOff());
+    }
 
+    public IEnumerator StopTimeLapse()
+    {
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
+
+        yield return new WaitForSeconds(2.0f);
+
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, false));
+        StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.0f));
+        UIManager.instance.MovePanelAnim(2f, false);
+
+        yield return new WaitForSeconds(2.0f);
         LevelUp();
     }
 }

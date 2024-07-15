@@ -19,10 +19,10 @@ public class ResidentialBuildingInfoUI : BuildingInfoUI
 
         residentText.text = residentialBuilding.residentCnt.max.ToString(); // + "/" + residentialBuilding.residentCnt.max.ToString();
 
-        for (int i = 0; i < residentialBuilding.existFacility.Length; i++)
-        {
-            SetOptionBuy(residentialBuilding, i);
-        }
+        //for (int i = 0; i < residentialBuilding.existFacility.Length; i++)
+        //{
+        //    SetOptionBuy(residentialBuilding, i);
+        //}
     }
 
     public void SetOptionBuy(ResidentialBuilding residentialBuilding, int index)
