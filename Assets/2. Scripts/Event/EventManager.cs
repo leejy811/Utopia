@@ -31,11 +31,6 @@ public class EventManager : MonoBehaviour
     public List<Event> globalEvents;
     public List<Building> eventBuildings;
 
-    [Header("Cost")]
-    public int initialCost;
-    public int costMultiplier;
-
-    private int rollTimes;
     private int cost;
 
     private void Awake()
@@ -66,9 +61,7 @@ public class EventManager : MonoBehaviour
     
     public bool CheckEventCondition()
     {
-        if (CityLevelManager.instance.levelIdx > 0)
-            return false;
-        else if (BuildingSpawner.instance.buildingTypeCount[0] < eventCondition[0]
+        if (BuildingSpawner.instance.buildingTypeCount[0] < eventCondition[0]
             || BuildingSpawner.instance.buildingTypeCount[1] < eventCondition[1]
             || BuildingSpawner.instance.buildingTypeCount[2] < eventCondition[2]
             || BuildingSpawner.instance.buildingTypeCount[3] < eventCondition[3])
@@ -139,13 +132,22 @@ public class EventManager : MonoBehaviour
 
     public bool PayRoulleteCost()
     {
-        if (rollTimes <= 3)
-            cost = initialCost;
-        else
-            cost = costMultiplier * rollTimes + initialCost;
-
         if (!ShopManager.instance.PayMoney(cost)) return false;
         else return true;
+    }
+
+    public void EventCostUpdate(int totalIncome)
+    {
+        if (totalIncome > 0)
+        {
+            totalIncome = Mathf.FloorToInt(totalIncome / 400.0f);
+            cost = Mathf.Max(totalIncome * 100, 100);
+        }
+        else
+        {
+            int money = Mathf.FloorToInt(ShopManager.instance.Money / 800.0f);
+            cost = Mathf.Max(money * 100, 100);
+        }
     }
 
     public void RandomRoulette()
@@ -284,12 +286,6 @@ public class EventManager : MonoBehaviour
         {
             eventBuildings.RemoveAt(removeIdx[i] - i);
         }
-    }
-
-    public void CostUpdate()
-    {
-        cost = initialCost;
-        rollTimes = 0;
     }
 
     public void SetEventBuildings(Building building, bool isAdd)

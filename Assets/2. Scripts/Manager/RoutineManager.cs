@@ -57,6 +57,7 @@ public class RoutineManager : MonoBehaviour
 
         mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
         {
+            InputManager.canInput = true;
             day = day.AddDays(1);
 
             Building.InitStaticCalcValue();
@@ -64,12 +65,10 @@ public class RoutineManager : MonoBehaviour
             CalculateIncome();
             UpdateHappiness();
             EventManager.instance.EffectUpdate();
-            EventManager.instance.CostUpdate();
 
             ApplyDept();
 
             UIManager.instance.UpdateDailyInfo();
-            InputManager.canInput = true;
 
             lightCoroutine = StartCoroutine(DailyLight());
         }
@@ -123,9 +122,17 @@ public class RoutineManager : MonoBehaviour
         if (!isPay)
         {
             SetCreditRating(1);
-            weekResult = ResultType.Worst;
-            debt = (int)(debtsOfWeek[GetWeekOfYear()] * 1.5f);
-            UIManager.instance.notifyObserver(EventState.CreditScore);
+            InputManager.canInput = false;
+            if (creditRating >= maxCreditRating)
+            {
+                UIManager.instance.notifyObserver(EventState.GameOver);
+            }
+            else
+            {
+                weekResult = ResultType.Worst;
+                debt = (int)(debtsOfWeek[GetWeekOfYear()] * 1.5f);
+                UIManager.instance.notifyObserver(EventState.CreditScore);
+            }
             return;
         }
 
@@ -146,11 +153,6 @@ public class RoutineManager : MonoBehaviour
     {
         creditRating += value;
         UIManager.instance.SetCreditRating();
-
-        if(creditRating > maxCreditRating)
-        {
-            UIManager.instance.notifyObserver(EventState.GameOver);
-        }
     }
 
     private void CalculateIncome()
@@ -173,6 +175,7 @@ public class RoutineManager : MonoBehaviour
         total = (int)(total * EventManager.instance.GetFinalIncomeEventValue());
         
         ShopManager.instance.GetMoney(total);
+        EventManager.instance.EventCostUpdate(total);
     }
 
     private void UpdateHappiness()

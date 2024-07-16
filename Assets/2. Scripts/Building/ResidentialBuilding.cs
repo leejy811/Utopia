@@ -44,7 +44,9 @@ public class ResidentialBuilding : Building
     public void BuyFacility(OptionType type)
     {
         existFacility[(int)type] = true;
-        residentCnt.max += 100;
+        BoundaryValue resident = values[ValueType.Resident];
+        resident.max += 100;
+        values[ValueType.Resident] = resident;
         SolveEventToOption(type);
     }
 

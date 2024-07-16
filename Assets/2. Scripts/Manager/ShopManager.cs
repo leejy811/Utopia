@@ -178,7 +178,6 @@ public class ShopManager : MonoBehaviour, IObserver
         if (!PayMoney(cost)) return;
 
         Grid.instance.PlaceTile(curPickIndex, spawnTrans);
-        
     }
 
     public bool BuyOption(OptionType type)
@@ -191,7 +190,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState != BuyState.SolveBuilding && buyState != BuyState.EventCheck) return false;
         if (building.CheckFacility(type)) return false;
-        if (!PayMoney(500)) return false;
+        if (!PayMoney(250)) return false;
 
         building.BuyFacility(type);
 
@@ -234,8 +233,6 @@ public class ShopManager : MonoBehaviour, IObserver
                 float costWeight = CalculateBuildingCostWeight();
                 int originalCost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
                 cost = CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
-                
-                //cost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
             }
             else if (buyState == BuyState.BuildTile)
                 cost = Grid.instance.tileCost[curPickIndex + 1];

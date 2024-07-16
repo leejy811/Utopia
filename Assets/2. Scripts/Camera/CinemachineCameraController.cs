@@ -142,7 +142,7 @@ public class CinemachineCameraController : MonoBehaviour
         {
             float zoomChange = Input.GetAxis("Mouse ScrollWheel") * zoomSpeed;
             targetOrthographicSize -= zoomChange;
-            targetOrthographicSize = Mathf.Clamp(targetOrthographicSize, 1f, 25f);
+            targetOrthographicSize = Mathf.Clamp(targetOrthographicSize, 1f, 18.5f);
 
             virtualCamera.m_Lens.OrthographicSize = Mathf.Lerp(virtualCamera.m_Lens.OrthographicSize, targetOrthographicSize, Time.deltaTime * smoothZoomSpeed);
 

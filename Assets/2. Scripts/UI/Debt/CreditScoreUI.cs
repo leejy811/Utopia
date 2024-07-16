@@ -23,6 +23,7 @@ public class CreditScoreUI : MonoBehaviour, IObserver
 
     [Header("Credit Score")]
     public int[] creditScore;
+    public Gradient scoreColor;
 
     // 주석 미표기 함수는 내부 함수, 사용 X
 
@@ -60,7 +61,6 @@ public class CreditScoreUI : MonoBehaviour, IObserver
     {
         ActivatetextObject.text = text;//표시할 텍스트
         ActivatetextObject.fontSize = 1f;
-
 
         yield return new WaitForSeconds(activateSeconds);
         if (ActivatetextObject != null)
@@ -121,6 +121,8 @@ public class CreditScoreUI : MonoBehaviour, IObserver
             elapsedTime += Time.deltaTime;
             float linearT = elapsedTime / fillSeconds;
             knobImage.fillAmount = startAmount + totalChange * linearT;
+            knobImage.color = scoreColor.Evaluate(knobImage.fillAmount);
+            MovetextObject.color = knobImage.color;
             yield return null;
         }
 
@@ -165,6 +167,12 @@ public class CreditScoreUI : MonoBehaviour, IObserver
         MovetextObject.text = endNumber.ToString();
     }
 
+    IEnumerator UnLockInput()
+    {
+        yield return new WaitForSeconds(activateSeconds + sizecontrollSeconds);
+        InputManager.canInput = true;
+    }
+
     public void Notify(EventState state)
     {
         if (state == EventState.CreditScore)
@@ -176,6 +184,7 @@ public class CreditScoreUI : MonoBehaviour, IObserver
 
             StartCoroutine(FillKnob(creditScore[creditRating - 1], creditScore[creditRating]));
             StartCoroutine(ActivateTextObject(ActivatetextObject, text));
+            StartCoroutine(UnLockInput());
         }
         else if (state == EventState.GameOver)
         {
@@ -189,6 +198,8 @@ public class CreditScoreUI : MonoBehaviour, IObserver
         }
         else
         {
+            knobImage.transform.localPosition = new Vector3(0, 366, 0);
+            MovetextObject.transform.localPosition = new Vector3(0, 366, 0);
             ActivatetextObject.gameObject.SetActive(false);
             sceneButton.gameObject.SetActive(false);
             gameObject.SetActive(false);
