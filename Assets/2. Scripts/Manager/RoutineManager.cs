@@ -125,7 +125,7 @@ public class RoutineManager : MonoBehaviour
             SetCreditRating(1);
             weekResult = ResultType.Worst;
             debt = (int)(debtsOfWeek[GetWeekOfYear()] * 1.5f);
-            UIManager.instance.notifyObserver(EventState.LateReceipt);
+            UIManager.instance.notifyObserver(EventState.CreditScore);
             return;
         }
 
@@ -149,11 +149,7 @@ public class RoutineManager : MonoBehaviour
 
         if(creditRating > maxCreditRating)
         {
-            #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                Application.Quit();
-            #endif
+            UIManager.instance.notifyObserver(EventState.GameOver);
         }
     }
 

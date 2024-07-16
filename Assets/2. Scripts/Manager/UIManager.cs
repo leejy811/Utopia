@@ -67,6 +67,7 @@ public class UIManager : MonoBehaviour, ISubject
     public TextMeshProUGUI creditRatingText;
     public Slider debtSlider;
     public UIElement lateReceipt;
+    public CreditScoreUI creditScore;
 
     [Header("Panel")]
     public GameObject topPanel;
@@ -672,6 +673,7 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(debtDoc);
         addObserver(receipt);
         addObserver(lateReceipt);
+        addObserver(creditScore);
 
         foreach (UILockButton lockButton in lockButtons)
         {

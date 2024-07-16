@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class textSceneManage : MonoBehaviour
+public class textSceneManage : MonoBehaviour, IObserver
 {
     public TextMeshProUGUI MovetextObject;
 
@@ -161,8 +161,6 @@ public class textSceneManage : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-
-
     IEnumerator MoveToYPosition(RectTransform rectTransform, float targetY, float duration)
     {
         Vector3 startPosition = rectTransform.localPosition;
@@ -283,5 +281,23 @@ public class textSceneManage : MonoBehaviour
         StartCoroutine(ActivateButtonObject(sceneButton));
 
         StartCoroutine(FadeInOut(targetGraphic, targetObject));
+    }
+
+    public void Notify(EventState state)
+    {
+        if (state == EventState.CreditScore)
+        {
+
+        }
+        else if (state == EventState.GameOver)
+        {
+            StartCoroutine(DeactivateTextObject(ActivatetextObject));
+            StartCoroutine(DeactivateButtonObject(sceneButton));
+
+        }
+        else
+        {
+
+        }
     }
 }
