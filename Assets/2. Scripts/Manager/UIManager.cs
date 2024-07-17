@@ -302,7 +302,7 @@ public class UIManager : MonoBehaviour, ISubject
     public void SetDebtInfo()
     {
         DateTime curDay = RoutineManager.instance.day.AddDays(7);
-        debtInfoText.text = "상환 날짜 : " + curDay.ToString("yyyy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + "(" + weekShortStr[(int)curDay.DayOfWeek] + ")";
+        debtInfoText.text = "납부 날짜 : " + curDay.ToString("yyyy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + "(" + weekShortStr[(int)curDay.DayOfWeek] + ")";
     }
 
     public void SetDebt()
