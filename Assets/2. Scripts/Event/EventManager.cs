@@ -31,7 +31,7 @@ public class EventManager : MonoBehaviour
     public List<Event> globalEvents;
     public List<Building> eventBuildings;
 
-    private int cost;
+    public int cost { get; private set; }
 
     private void Awake()
     {

@@ -20,6 +20,7 @@ public struct Event
     public string eventName;
     public string eventEffectComment;
     public Sprite eventIcon;
+    public Texture eventTexture;
     public int eventIndex;
     public EventType type;
     public RewardType rewardType;

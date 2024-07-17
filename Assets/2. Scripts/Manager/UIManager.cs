@@ -576,7 +576,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEventRoulette()
     {
-        if (eventRoulette.state == RouletteState.While) return;
+        if (eventRoulette.state == RouletteState.While || eventRoulette.state == RouletteState.Before) return;
         if (!EventManager.instance.PayRoulleteCost()) return;
         EventManager.instance.RandomRoulette();
         eventRoulette.OnButtonClick();
@@ -602,16 +602,6 @@ public class UIManager : MonoBehaviour, ISubject
     {
         notifyObserver(EventState.CityLevel);
         SetCityLevel();
-    }
-
-    public void OnClickSpaceBar()
-    {
-        if (eventRoulette.gameObject.activeSelf)
-        {
-            OnClickEventRoulette();
-        }
-        else
-            OnClickNextDay();
     }
 
     public void OnClickCloseButton()

@@ -26,6 +26,8 @@ public class InputManager : MonoBehaviour, IObserver
 
     void Update()
     {
+        if (UIManager.instance.eventRoulette.gameObject.activeSelf)
+            GetSlotMachineInput();
         if (!canInput) return;
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -35,12 +37,6 @@ public class InputManager : MonoBehaviour, IObserver
         if (Input.GetMouseButtonDown(0))
         {
             if (IsPointerOverUIObject(Input.mousePosition)) return;
-
-            if (UIManager.instance.eventRoulette.gameObject.activeSelf)
-            {
-                UIManager.instance.OnClickEventRoulette();
-                return;
-            }
 
             if (state == BuyState.SellBuilding)
             {
@@ -84,7 +80,7 @@ public class InputManager : MonoBehaviour, IObserver
         }
         else if (Input.GetKeyDown(KeyCode.Space))
         {
-            UIManager.instance.OnClickSpaceBar();
+            UIManager.instance.OnClickNextDay();
         }
         else
         {
@@ -160,6 +156,19 @@ public class InputManager : MonoBehaviour, IObserver
                 InvokeButton(alpha1Buttons[idx]);
             else if (onAlpha2)
                 InvokeButton(alpha2Buttons[idx]);
+        }
+    }
+
+    private void GetSlotMachineInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            UIManager.instance.OnClickEventRoulette();
+        }
+        else if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)))
+        {
+            if (UIManager.instance.eventRoulette.state != RouletteState.While && UIManager.instance.eventRoulette.state != RouletteState.Before)
+                UIManager.instance.notifyObserver(EventState.None);
         }
     }
 
