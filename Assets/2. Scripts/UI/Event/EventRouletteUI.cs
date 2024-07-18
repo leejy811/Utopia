@@ -260,12 +260,15 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         costText.text = GetCommaText(EventManager.instance.cost);
 
         AkSoundEngine.PostEvent("Play_Slot_Spwan_01", gameObject);
+        AkSoundEngine.SetRTPCValue("CLICK", 2);
     }
 
     private void OnDisable()
     {
         InputManager.canInput = true;
         RoutineManager.instance.OnOffDailyLight(true);
+        AkSoundEngine.SetRTPCValue("CLICK", 1);
+        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
     private string GetCommaText(int data)
