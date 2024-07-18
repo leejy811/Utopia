@@ -83,6 +83,8 @@ public class CityLevelManager : MonoBehaviour
         UIManager.instance.notifyObserver(EventState.None);
         InputManager.canInput = false;
         RoutineManager.instance.OnOffDailyLight(false);
+        AkSoundEngine.SetRTPCValue("TIMELAP", 2);
+        AkSoundEngine.PostEvent("Play_TImeLapsBGM", gameObject);
 
         cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
@@ -142,5 +144,7 @@ public class CityLevelManager : MonoBehaviour
         InputManager.canInput = true;
         RoutineManager.instance.OnOffDailyLight(true);
         LevelUp();
+        AkSoundEngine.SetRTPCValue("TIMELAP", 1);
+        AkSoundEngine.PostEvent("Stop_TImeLapsBGM", gameObject);
     }
 }
