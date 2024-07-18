@@ -100,7 +100,7 @@
 				<GameParameter Id="1761501017" Name="BOOL"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{B8308D67-05E0-6E74-FF55-6AFA1B455AEA}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{310EC5CD-14EE-7810-252D-87635167D81A}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -111,6 +111,10 @@
 				<File Id="444873937" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Effect_Spwan_01.wav</ShortName>
 					<CachePath>SFX/Slot_Effect_Spwan_01_C28BA518.wem</CachePath>
+				</File>
+				<File Id="488455765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SlotMachine_enter_001.wav</ShortName>
+					<CachePath>SFX/SlotMachine_enter_001_818F3B66.wem</CachePath>
 				</File>
 				<File Id="594404784" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Spwan_01.wav</ShortName>
@@ -155,11 +159,17 @@
 						<MediaRef Id="749327532"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1031511574" Name="Play_SlotMachine_enter_001" DurationType="OneShot" DurationMin="0.93572915" DurationMax="0.93572915">
+					<MediaRefs>
+						<MediaRef Id="488455765"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2214109306" Name="Play_Slotmashin_Jackpot_Ani_01" DurationType="OneShot" DurationMin="19.781166" DurationMax="19.781166">
 					<MediaRefs>
 						<MediaRef Id="439018999"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3035396721" Name="Stop_Slot_Drrrrrr_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
@@ -785,5 +795,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B8B8D5B1-BA44-D8DA-6B12-EE72D00D99E4}</FileHash>
+	<FileHash>{E5A13C36-2A75-6728-4C4D-B9EF6491C543}</FileHash>
 </SoundBanksInfo>

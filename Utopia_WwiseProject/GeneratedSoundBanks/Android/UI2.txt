@@ -1,8 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	725934356	Play_Slot_Effect_Spwan_01			\Default Work Unit\Play_Slot_Effect_Spwan_01	
+	1031511574	Play_SlotMachine_enter_001			\Default Work Unit\Play_SlotMachine_enter_001	
 	1042317409	Play_Slot_Rever_01			\Default Work Unit\Play_Slot_Rever_01	
 	1571046380	Stop_Slotmashin_Jackpot_Ani_01			\Default Work Unit\Stop_Slotmashin_Jackpot_Ani_01	
 	2214109306	Play_Slotmashin_Jackpot_Ani_01			\Default Work Unit\Play_Slotmashin_Jackpot_Ani_01	
+	3035396721	Stop_Slot_Drrrrrr_01			\Default Work Unit\Stop_Slot_Drrrrrr_01	
 	3371155409	Play_Slot_Stop_01			\Default Work Unit\Play_Slot_Stop_01	
 	3452595303	Play_Slot_Drrrrrr_01			\Default Work Unit\Play_Slot_Drrrrrr_01	
 	3803209012	Play_Slot_Spwan_01			\Default Work Unit\Play_Slot_Spwan_01	
@@ -10,6 +12,7 @@ Event	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	439018999	Slotmashin_Jackpot_Ani_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Slotmashin_Jackpot_Ani_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slotmashin_Jackpot_Ani_01		3798080
 	444873937	Slot_Effect_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Slot_Effect_Spwan_01_C28BA518.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Effect_Spwan_01		62172
+	488455765	SlotMachine_enter_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SlotMachine_enter_001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\SlotMachine_enter_001		89926
 	594404784	Slot_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Slot_Spwan_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Spwan_01		180412
 	749327532	Slot_Stop_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Slot_Stop_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Stop_01		16452
 	809211139	Slot_Drrrrrr_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Slot_Drrrrrr_01_D4609F6D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Drrrrrr_01		766084

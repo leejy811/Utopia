@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584803004975067349
+    m_lastTime: -8584802979335244172
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -136,7 +136,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584803001258613137
+    m_lastTime: -8584802979335328531
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1799,6 +1799,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Slot_Drrrrrr_01
+      guid: 121a9767894bb945a42f14209fde0e34
+      id: 3035396721
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_Slot_Drrrrrr_01
+        ObjectType: 3
+        guid: 121a9767894bb945a42f14209fde0e34
+      Path: Events\Default Work Unit\Stop_Slot_Drrrrrr_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Slotmashin_Jackpot_Ani_01
       guid: 010940931a8efe4680b105eae31e6c0e
       id: 1571046380
@@ -2086,7 +2103,7 @@ MonoBehaviour:
     m_lastTime: -8584821681076739805
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000003e0000003f00000040000000ec000000ed000000ce010000cf010000
+  ExpandedWaapiItemIds: 0500000006000000070000003e0000003f000000400000004100000042000000ec000000ed000000ce010000cf010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

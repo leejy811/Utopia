@@ -98,6 +98,7 @@ namespace AK
         static const AkUniqueID STOP_CONSTRUCTION = 3493507479U;
         static const AkUniqueID STOP_FORESTAMBIENCEINLOBBY = 2778003230U;
         static const AkUniqueID STOP_LOBBY = 3639729344U;
+        static const AkUniqueID STOP_SLOT_DRRRRRR_01 = 3035396721U;
         static const AkUniqueID STOP_SLOTMASHIN_JACKPOT_ANI_01 = 1571046380U;
     } // namespace EVENTS
 

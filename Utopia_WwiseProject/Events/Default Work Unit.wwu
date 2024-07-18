@@ -1004,6 +1004,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_Slot_Drrrrrr_01" ID="{67971A12-4B89-45B9-A42F-14209FDE0E34}">
+					<ChildrenList>
+						<Action Name="" ID="{A36AF5EC-E196-41F8-8035-13F84002B75F}" ShortID="1062101167">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slot_Drrrrrr_01" ID="{53D2C8E5-3CEA-481D-A337-CAD8B6B41031}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
