@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584802979335244172
+    m_lastTime: -8584802953615262450
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -82,6 +82,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: e82912941e321d45b340bc49d9dd62ba
       Path: SoundBanks\Default Work Unit\BGM
+    - name: BGM2
+      guid: c875f0dbcd5c1b4c9afa873540846577
+      id: 1189781957
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a3314ea6034880469012d6b012acb40a
+      - ElementName: BGM2
+        ObjectType: 7
+        guid: c875f0dbcd5c1b4c9afa873540846577
+      Path: SoundBanks\Default Work Unit\BGM2
     - name: Main
       guid: 3b7239bccf5897409d336b79c2e2756f
       id: 3161908922
@@ -136,7 +150,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584802979335328531
+    m_lastTime: -8584802953615758445
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1468,8 +1482,8 @@ MonoBehaviour:
         guid: 0988c9710d304f478bb9a49af57f7d98
       Path: Events\Default Work Unit\Play_singsingsingmybird
       maxAttenuation: 0
-      maxDuration: 177.10014
-      minDuration: 177.10014
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Slot_Drrrrrr_01
       guid: 5ec76ed9c5029f47af8e4c87cfd32851
       id: 3452595303
@@ -1677,6 +1691,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.992875
       minDuration: 0.992875
+    - name: Play_TImeLapsBGM
+      guid: 98654b8f321d614999a7610b440024d7
+      id: 318309431
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TImeLapsBGM
+        ObjectType: 3
+        guid: 98654b8f321d614999a7610b440024d7
+      Path: Events\Default Work Unit\Play_TImeLapsBGM
+      maxAttenuation: 0
+      maxDuration: 120.048
+      minDuration: 120.048
     - name: Play_Turn_Move_Clock_001
       guid: cfb0945d13ab884288b577767d4e02d3
       id: 2475783214
@@ -1833,6 +1864,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_TImeLapsBGM
+      guid: 07e3244c5f20da4f894d90d01338e8b1
+      id: 1305109677
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_TImeLapsBGM
+        ObjectType: 3
+        guid: 07e3244c5f20da4f894d90d01338e8b1
+      Path: Events\Default Work Unit\Stop_TImeLapsBGM
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: UI
       guid: d7b0821bdee22b49b8b736e0816a3653
       id: 1551306167
@@ -1862,7 +1910,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584821681210354163
+    m_lastTime: -8584802953615346765
     List:
     - name: BOOL
       guid: b972b7cd27001549bc02afd17da6dc7d
@@ -1948,6 +1996,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: f1300da40ed4b440bec7cd5462971c4a
       Path: Game Parameters\Default Work Unit\INDEX2
+    - name: TIMELAP
+      guid: 5e235a81faa3a948b8b5800f68bf3307
+      id: 3842075637
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: TIMELAP
+        ObjectType: 13
+        guid: 5e235a81faa3a948b8b5800f68bf3307
+      Path: Game Parameters\Default Work Unit\TIMELAP
     - name: ZOOM
       guid: d89a3f682cb49749a4a0fc50453698a0
       id: 848835168
@@ -2103,7 +2165,7 @@ MonoBehaviour:
     m_lastTime: -8584821681076739805
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000003e0000003f000000400000004100000042000000ec000000ed000000ce010000cf010000
+  ExpandedWaapiItemIds: 05000000060000003e0000003f00000041000000420000004f00000050000000ec000000ed0000002601000027010000ce010000cf0100000c0200000d020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

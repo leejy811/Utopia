@@ -1018,6 +1018,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_TImeLapsBGM" ID="{8F4B6598-1D32-4961-99A7-610B440024D7}">
+					<ChildrenList>
+						<Action Name="" ID="{650D12F6-FF66-47CE-BE47-79D367D9C675}" ShortID="423305360">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TImeLapsBGM" ID="{5099CBCC-F9A5-4F7F-80F8-413B3CAFA122}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_TImeLapsBGM" ID="{4C24E307-205F-4FDA-894D-90D01338E8B1}">
+					<ChildrenList>
+						<Action Name="" ID="{5645D7BF-535A-4FCB-94FD-0590428D7F28}" ShortID="83660908">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TImeLapsBGM" ID="{5099CBCC-F9A5-4F7F-80F8-413B3CAFA122}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

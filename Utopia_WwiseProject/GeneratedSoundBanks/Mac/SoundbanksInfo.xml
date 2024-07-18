@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{2F5D606B-5BE0-00A5-26C8-5B199A53EEEC}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{1C2E172A-ED9D-8C9E-FBBC-C72BF50AD6B5}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -98,6 +98,7 @@
 				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{310EC5CD-14EE-7810-252D-87635167D81A}">
@@ -173,7 +174,28 @@
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{4CFA0AA7-1BC2-A818-C3A8-FA11F6ED84D1}">
+		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{CB866096-B576-C150-DCCB-A2704E0FE302}">
+			<ShortName>BGM2</ShortName>
+			<Path>BGM2.bnk</Path>
+			<Media>
+				<File Id="846080429" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TImeLapsBGM.wav</ShortName>
+					<CachePath>SFX/TImeLapsBGM_A60013F6.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="318309431" Name="Play_TImeLapsBGM" DurationType="OneShot" DurationMin="120.048" DurationMax="120.048">
+					<MediaRefs>
+						<MediaRef Id="846080429"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2D1EA0D8-0FDE-BFA6-B7C2-C55C2A8767B9}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -193,6 +215,7 @@
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="1427264549" Name="HAPPY">
@@ -626,7 +649,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{188C9B9F-DDD0-57F0-C39E-43DAD20ED1A1}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{054B809C-6083-AAD9-11AD-582B08068DF3}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -685,10 +708,6 @@
 				<File Id="967811573" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>water_outage.wav</ShortName>
 					<CachePath>SFX/water_outage_FBC78EF0.wem</CachePath>
-				</File>
-				<File Id="987196180" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>singsingsingmybird.wav</ShortName>
-					<CachePath>SFX/singsingsingmybird_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="1034700149" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Construction_S08IN.355.wav</ShortName>
@@ -759,11 +778,7 @@
 						<MediaRef Id="314776306"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2446290240" Name="Play_singsingsingmybird" DurationType="OneShot" DurationMin="177.10014" DurationMax="177.10014">
-					<MediaRefs>
-						<MediaRef Id="987196180"/>
-					</MediaRefs>
-				</Event>
+				<Event Id="2446290240" Name="Play_singsingsingmybird" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1073654463" Name="Play_Slot_rimshot" DurationType="OneShot" DurationMin="4.0776334" DurationMax="4.0776334">
 					<MediaRefs>
 						<MediaRef Id="779451324"/>
@@ -795,5 +810,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E5A13C36-2A75-6728-4C4D-B9EF6491C543}</FileHash>
+	<FileHash>{5BF7041C-FFF2-AF9E-5047-DD3BC2F95E34}</FileHash>
 </SoundBanksInfo>

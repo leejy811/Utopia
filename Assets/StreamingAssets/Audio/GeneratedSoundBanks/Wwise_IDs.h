@@ -91,6 +91,7 @@ namespace AK
         static const AkUniqueID PLAY_STAMP = 2683666007U;
         static const AkUniqueID PLAY_TESTING = 2149296550U;
         static const AkUniqueID PLAY_TILE_BUY_001 = 3972534815U;
+        static const AkUniqueID PLAY_TIMELAPSBGM = 318309431U;
         static const AkUniqueID PLAY_TURN_MOVE_CLOCK_001 = 2475783214U;
         static const AkUniqueID PLAY_UI_PAPERSOUND_001 = 424395900U;
         static const AkUniqueID PLAY_UI_SOLVE_001 = 1520262876U;
@@ -100,6 +101,7 @@ namespace AK
         static const AkUniqueID STOP_LOBBY = 3639729344U;
         static const AkUniqueID STOP_SLOT_DRRRRRR_01 = 3035396721U;
         static const AkUniqueID STOP_SLOTMASHIN_JACKPOT_ANI_01 = 1571046380U;
+        static const AkUniqueID STOP_TIMELAPSBGM = 1305109677U;
     } // namespace EVENTS
 
     namespace STATES
@@ -128,6 +130,7 @@ namespace AK
         static const AkUniqueID HAPPY = 1427264549U;
         static const AkUniqueID INDEX1 = 187723092U;
         static const AkUniqueID INDEX2 = 187723095U;
+        static const AkUniqueID TIMELAP = 3842075637U;
         static const AkUniqueID ZOOM = 848835168U;
     } // namespace GAME_PARAMETERS
 
@@ -135,6 +138,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID BGM = 412724365U;
+        static const AkUniqueID BGM2 = 1189781957U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID UI = 1551306167U;
         static const AkUniqueID UI2 = 1181390631U;

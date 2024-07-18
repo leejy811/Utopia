@@ -41,6 +41,13 @@
 						<Property Name="Max" Type="Real64" Value="40"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="2"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
