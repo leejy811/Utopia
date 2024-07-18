@@ -25,7 +25,6 @@ public class EventRouletteUI : MonoBehaviour, IObserver
     public Material[] redLightMats;
 
     [Header("Object")]
-    //public GameObject costPanel;
     public GameObject slotMachine;
     public GameObject lever;
     public GameObject[] slots;
@@ -83,11 +82,13 @@ public class EventRouletteUI : MonoBehaviour, IObserver
             yield return new WaitForSeconds(oneSlotSecond);
         }
 
+        AkSoundEngine.PostEvent("Play_Slot_Stop_01", gameObject);
         slotResults[idx].SetValue(possibleEvents[ranIdx[idx]], resultOnSecond);
         isEndSlot[idx] = true;
 
         if (idx == slots.Length - 1)
         {
+            AkSoundEngine.PostEvent("Stop_Slot_Drrrrrr_01", gameObject);
             EventManager.instance.EffectUpdate();
 
             for (int i = 0; i < isDuplicate.Length; i++)
@@ -117,7 +118,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
             jackpotLights[i].gameObject.SetActive(true);
         }
 
-        //���� ��鸲 �ִϸ��̼�
+        AkSoundEngine.PostEvent("Play_Slotmashin_Jackpot_Ani_01", gameObject);
 
         while (jackpotLights[0].gameObject.activeSelf)
         {
@@ -150,6 +151,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         PlayLeverAnim();
         state = RouletteState.While;
 
+        AkSoundEngine.PostEvent("Play_Slot_Drrrrrr_01", gameObject);
         for (int i = 0; i < slots.Length; i++)
         {
             StartCoroutine(SpinSlot(i));
@@ -166,6 +168,8 @@ public class EventRouletteUI : MonoBehaviour, IObserver
             }
             )
             .SetEase(Ease.InOutSine);
+
+        AkSoundEngine.PostEvent("Play_Slot_Rever_01", gameObject);
     }
 
     private IEnumerator ReStartSlot()
@@ -173,6 +177,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         state = RouletteState.While;
         InitSlot();
 
+        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
         for (int i = slotResults.Length - 1; i >= 0; i--)
         {
             slotResults[i].ResetPosition(resultOffSecond);
@@ -250,16 +255,11 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         RoutineManager.instance.OnOffDailyLight(false);
         state = RouletteState.Before;
         slotMachine.transform.localPosition = new Vector3(530, slotMachine.transform.localPosition.y, slotMachine.transform.localPosition.z);
-        //costPanel.transform.localPosition = new Vector3(600, costPanel.transform.localPosition.y, costPanel.transform.localPosition.z);
-        slotMachine.transform.DOLocalMoveX(220, slotmachineOnSecond)
-            .OnComplete(() =>
-            {
-                state = RouletteState.Start;
-                //costPanel.transform.DOLocalMoveX(200, slotmachineOnSecond)
-                        //.OnComplete(() => { state = RouletteState.Start; }); 
-            });
+        slotMachine.transform.DOLocalMoveX(220, slotmachineOnSecond).OnComplete(() =>{ state = RouletteState.Start; });
         InitSlot();
         costText.text = GetCommaText(EventManager.instance.cost);
+
+        AkSoundEngine.PostEvent("Play_Slot_Spwan_01", gameObject);
     }
 
     private void OnDisable()

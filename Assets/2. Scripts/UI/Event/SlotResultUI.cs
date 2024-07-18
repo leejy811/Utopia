@@ -18,6 +18,7 @@ public class SlotResultUI : MonoBehaviour
         eventDescriptText.text = result.eventEffectComment;
 
         transform.DOLocalMoveX(0, 1f);
+        AkSoundEngine.PostEvent("Play_Slot_Effect_Spwan_01", gameObject);
     }
 
     public void ResetPosition(float second)
