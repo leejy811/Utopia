@@ -6,25 +6,26 @@ using UnityEngine;
 
 public class DebtUI : UIElement
 {
+    [Header("UIComponent")]
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI dayText;
 
+    protected DateTime curDay;
+    protected int debtMoney;
+    protected int dayOfWeek;
+
     protected virtual void SetValue()
     {
-        int debtMoney = RoutineManager.instance.debt;
-        DateTime curDay = RoutineManager.instance.day;
-        int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
-
-        if (state == EventState.Receipt)
-        {
-            gameObject.GetComponentInChildren<Animator>().SetInteger("DayOfWeek", dayOfWeek);
-            AkSoundEngine.PostEvent("Play_stamp", gameObject);
-        }
-         else
-            curDay = curDay.AddDays(8 - dayOfWeek);
-        AkSoundEngine.PostEvent("Play_UI_papersound_001", gameObject);
+        CalculateValue();
         moneyText.text = debtMoney.ToString("C");
         dayText.text = curDay.ToString("yyyy년 MM월 dd일") + " 00시";
+    }
+
+    protected virtual void CalculateValue()
+    {
+        debtMoney = RoutineManager.instance.debt;
+        curDay = RoutineManager.instance.day;
+        dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
     }
 
     protected void OnEnable()

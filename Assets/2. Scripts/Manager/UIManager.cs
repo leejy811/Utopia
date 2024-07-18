@@ -35,8 +35,7 @@ public class UIManager : MonoBehaviour, ISubject
     public GameObject[] cityLevels;
 
     [Header("CityLevelUp")]
-    public UIElement cityLevelUpPanel;
-    public GameObject[] cityLevelUps;
+    public CityLevelUpUI cityLevelUp;
 
     [Header("Roulette")]
     public EventRouletteUI eventRoulette;
@@ -62,11 +61,10 @@ public class UIManager : MonoBehaviour, ISubject
     public IconNameMouseOver[] mouseOvers;
 
     [Header("Debt")]
-    public DebtUI debtDoc;
-    public DebtUI receipt;
+    public PleaseMoneyUI debtDoc;
+    public ReceiptUI receipt;
     public TextMeshProUGUI creditRatingText;
     public Slider debtSlider;
-    public UIElement lateReceipt;
     public CreditScoreUI creditScore;
 
     [Header("Panel")]
@@ -414,18 +412,6 @@ public class UIManager : MonoBehaviour, ISubject
             costInfo.OnUI(cost, transform.position);
     }
 
-    public void SetCityLevelUpPopUp(int index = 0)
-    {
-        notifyObserver(EventState.CityLevelUp);
-        for (int i = 0; i < cityLevelUps.Length; i++)
-        {
-            if (i == index)
-                cityLevelUps[i].SetActive(true);
-            else
-                cityLevelUps[i].SetActive(false);
-        }
-    }
-
     public void SetAllPopUp()
     {
         if (ShopManager.instance.buyState == BuyState.BuyTile)
@@ -445,20 +431,6 @@ public class UIManager : MonoBehaviour, ISubject
                 cityLevels[i].SetActive(true);
             else
                 cityLevels[i].SetActive(false);
-        }
-    }
-
-    public void SetCityLevelUp()
-    {
-        InputManager.canInput = false;
-
-        int idx = CityLevelManager.instance.levelIdx;
-        for (int i = 0; i < CityLevelManager.instance.level.Length; i++)
-        {
-            if (i == idx)
-                cityLevelUps[i].SetActive(true);
-            else
-                cityLevelUps[i].SetActive(false);
         }
     }
 
@@ -651,7 +623,7 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(Grid.instance);
         addObserver(BuildingSpawner.instance);
 
-        addObserver(cityLevelUpPanel);
+        addObserver(cityLevelUp);
         addObserver(cityLevelPanel);
         addObserver(eventNotify);
         addObserver(eventRoulette);
@@ -662,7 +634,6 @@ public class UIManager : MonoBehaviour, ISubject
 
         addObserver(debtDoc);
         addObserver(receipt);
-        addObserver(lateReceipt);
         addObserver(creditScore);
 
         foreach (UILockButton lockButton in lockButtons)

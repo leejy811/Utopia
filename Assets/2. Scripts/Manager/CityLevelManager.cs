@@ -70,7 +70,6 @@ public class CityLevelManager : MonoBehaviour
         levelIdx++;
         Grid.instance.PurchaseTile(level[levelIdx].tileSize);
         UIManager.instance.notifyObserver(EventState.CityLevelUp);
-        UIManager.instance.SetCityLevelUp();
     }
 
     public bool CheckBuildingLevel(Building building)
@@ -141,7 +140,6 @@ public class CityLevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(2.0f);
 
-        InputManager.canInput = true;
         RoutineManager.instance.OnOffDailyLight(true);
         LevelUp();
         AkSoundEngine.SetRTPCValue("TIMELAP", 1);

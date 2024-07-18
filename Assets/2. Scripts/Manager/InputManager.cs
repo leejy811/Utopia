@@ -28,6 +28,7 @@ public class InputManager : MonoBehaviour, IObserver
     {
         if (UIManager.instance.eventRoulette.gameObject.activeSelf)
             GetSlotMachineInput();
+
         if (!canInput) return;
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -218,8 +219,8 @@ public class InputManager : MonoBehaviour, IObserver
             onAlpha2 = false;
     }
 
-    public void ToggleInput()
+    public void SetCanInput(bool canInput)
     {
-        canInput = !canInput;
+        InputManager.canInput = canInput;
     }
 }
