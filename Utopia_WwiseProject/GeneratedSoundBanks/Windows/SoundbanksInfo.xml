@@ -174,7 +174,7 @@
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{F3AF5D7C-AB39-475E-89D3-7CD42E90304A}">
+		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{097E0A2B-4400-68BC-E427-FB7207DF6F51}">
 			<ShortName>BGM2</ShortName>
 			<Path>BGM2.bnk</Path>
 			<Media>
@@ -191,9 +191,6 @@
 				</Event>
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
-			<GameParameters>
-				<GameParameter Id="3842075637" Name="TIMELAP"/>
-			</GameParameters>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{142DDCE7-2611-0B08-B729-9E2F8C73050D}">
 			<ShortName>Init</ShortName>
@@ -810,5 +807,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{916537AC-1B90-F4AF-810C-A8C7D6E5F1CE}</FileHash>
+	<FileHash>{D0E10207-5B4E-906B-E809-B15C41B3A392}</FileHash>
 </SoundBanksInfo>

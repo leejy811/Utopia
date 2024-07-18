@@ -2,9 +2,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	318309431	Play_TImeLapsBGM			\Default Work Unit\Play_TImeLapsBGM	
 	1305109677	Stop_TImeLapsBGM			\Default Work Unit\Stop_TImeLapsBGM	
 
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
-
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	846080429	TImeLapsBGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\TImeLapsBGM_A60013F6.wem		\Actor-Mixer Hierarchy\Default Work Unit\TImeLapsBGM		23049312
 
