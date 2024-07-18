@@ -65,6 +65,7 @@ public class UIManager : MonoBehaviour, ISubject
     public ReceiptUI receipt;
     public CreditScoreUI creditScore;
     public CreditScorePanel creditScorePanel;
+    public DDayUI[] ddays;
 
     [Header("Panel")]
     public GameObject topPanel;
@@ -292,6 +293,7 @@ public class UIManager : MonoBehaviour, ISubject
         dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + " " + weekStr[(int)curDay.DayOfWeek];
         Setmoney();
         SetDebt();
+        SetDDay(curDay);
     }
 
     public void Setmoney()
@@ -302,12 +304,25 @@ public class UIManager : MonoBehaviour, ISubject
     public void SetDebtInfo()
     {
         DateTime curDay = RoutineManager.instance.day.AddDays(7);
-        debtInfoText.text = "납부 날짜 : " + curDay.ToString("yyyy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + "(" + weekShortStr[(int)curDay.DayOfWeek] + ")";
+        if (RoutineManager.instance.debt != 0)
+            debtInfoText.text = "납부 날짜 : " + curDay.ToString("yyyy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + "(" + weekShortStr[(int)curDay.DayOfWeek] + ")";
+        else
+            debtInfoText.text = "납부 완료";
     }
 
     public void SetDebt()
     {
-        debtText.text = GetCommaText(RoutineManager.instance.debt);
+        debtText.text = GetCommaText(RoutineManager.instance.debt) + "원";
+    }
+
+    public void SetDDay(DateTime curDay)
+    {
+        int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
+
+        if(dayOfWeek >= 5 && !RoutineManager.instance.isPay)
+        {
+            ddays[dayOfWeek - 5].gameObject.SetActive(true);
+        }
     }
 
     public void SetCreditScorePanel()
@@ -555,6 +570,10 @@ public class UIManager : MonoBehaviour, ISubject
             EventManager.instance.CheckEvents();
             eventRoulette.SetPossibleEvent(EventManager.instance.possibleEvents.ToArray());
             notifyObserver(EventState.SlotMachine);
+        }
+        else
+        {
+            SetErrorPopUp("도시 규모가 작아 슬롯머신을 작동할 수 없습니다.", transform.position);
         }
     }
 

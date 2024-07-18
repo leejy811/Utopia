@@ -50,6 +50,7 @@ public class InputManager : MonoBehaviour, IObserver
                 (state == BuyState.None || state == BuyState.SolveBuilding))
             {
                 if (hit.transform.gameObject.GetComponent<Building>().viewState == ViewStateType.Transparent) return;
+                UIManager.instance.notifyObserver(EventState.None);
                 ShopManager.instance.ChangeState(BuyState.SolveBuilding, 0, hit.transform.gameObject);
             }
             else if (Physics.Raycast(ray, out hit, Mathf.Infinity, LayerMask.GetMask("Tile")))

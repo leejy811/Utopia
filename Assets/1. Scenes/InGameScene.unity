@@ -5559,6 +5559,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca3e140867a3124fbe2fb425a36b195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextButton: {fileID: 185136225}
+  prevButton: {fileID: 186741475}
   closeButton: {fileID: 1784654498}
   mails:
   - {fileID: 1834330071}
@@ -5658,6 +5660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca3e140867a3124fbe2fb425a36b195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextButton: {fileID: 235321418}
+  prevButton: {fileID: 1621764724}
   closeButton: {fileID: 2032207417}
   mails:
   - {fileID: 1559055631}
@@ -7424,7 +7428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=\"red\">\uB0A9\uBD80 \uB0A0\uC9DC  2024/04/07/\uC77C</color>"
+  m_text: "\uB0A9\uBD80 \uB0A0\uC9DC  2024/04/07/\uC77C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
   m_sharedMaterial: {fileID: 4479025330240497328, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
@@ -7433,8 +7437,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4283782655
+  m_fontColor: {r: 1, g: 0.33333334, b: 0.33333334, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -28263,6 +28267,10 @@ MonoBehaviour:
   receipt: {fileID: 906769783}
   creditScore: {fileID: 977555191}
   creditScorePanel: {fileID: 605935532}
+  ddays:
+  - {fileID: 1196466560}
+  - {fileID: 1589879029}
+  - {fileID: 1035114580}
   topPanel: {fileID: 724619303}
   bottomPanel: {fileID: 123496427}
   menu: {fileID: 1671088171}
@@ -42516,7 +42524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &685857335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42696,7 +42704,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4fa29d9e2506d40896ac0176184db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundName: 
+  soundName: Play_Mouse_001_v1
   detail: {fileID: 1579957405}
 --- !u!1 &697167549
 GameObject:
@@ -59789,7 +59797,7 @@ GameObject:
   - component: {fileID: 1035114576}
   - component: {fileID: 1035114579}
   - component: {fileID: 1035114578}
-  - component: {fileID: 1035114577}
+  - component: {fileID: 1035114580}
   m_Layer: 5
   m_Name: Dday1Panel
   m_TagString: Untagged
@@ -59807,7 +59815,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 12.120004, z: 1.2119999}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 11752086}
   - {fileID: 941371151}
@@ -59816,21 +59824,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -344}
+  m_AnchoredPosition: {x: -90, y: -120}
   m_SizeDelta: {x: 71.9, y: 18.4}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1035114577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035114575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d427bbbc5fa184fbb7ac3430467dbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1035114578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59869,6 +59865,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1035114575}
   m_CullTransparentMesh: 1
+--- !u!114 &1035114580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035114575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ca193d7b9ebf4ca0f0d9beca6db3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1035114578}
+  title: {fileID: 11752087}
+  data: {fileID: 941371152}
 --- !u!1 &1035597991
 GameObject:
   m_ObjectHideFlags: 0
@@ -65043,6 +65054,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca3e140867a3124fbe2fb425a36b195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextButton: {fileID: 1591321013}
+  prevButton: {fileID: 44944843}
   closeButton: {fileID: 511440927}
   mails:
   - {fileID: 1217399203}
@@ -68491,7 +68504,7 @@ GameObject:
   - component: {fileID: 1196466556}
   - component: {fileID: 1196466559}
   - component: {fileID: 1196466558}
-  - component: {fileID: 1196466557}
+  - component: {fileID: 1196466560}
   m_Layer: 5
   m_Name: Dday3Panel
   m_TagString: Untagged
@@ -68518,21 +68531,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -344.00586}
+  m_AnchoredPosition: {x: -90, y: -120}
   m_SizeDelta: {x: 71.9, y: 18.4}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1196466557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196466555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d427bbbc5fa184fbb7ac3430467dbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1196466558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68571,6 +68572,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196466555}
   m_CullTransparentMesh: 1
+--- !u!114 &1196466560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196466555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ca193d7b9ebf4ca0f0d9beca6db3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1196466558}
+  title: {fileID: 1890655242}
+  data: {fileID: 1998203785}
 --- !u!1 &1197419350
 GameObject:
   m_ObjectHideFlags: 0
@@ -91676,7 +91692,7 @@ GameObject:
   - component: {fileID: 1589879025}
   - component: {fileID: 1589879028}
   - component: {fileID: 1589879027}
-  - component: {fileID: 1589879026}
+  - component: {fileID: 1589879029}
   m_Layer: 5
   m_Name: Dday2Panel
   m_TagString: Untagged
@@ -91703,21 +91719,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -90, y: -343.9958}
+  m_AnchoredPosition: {x: -90, y: -120}
   m_SizeDelta: {x: 71.9, y: 18.4}
   m_Pivot: {x: 1, y: 0}
---- !u!114 &1589879026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589879024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0d427bbbc5fa184fbb7ac3430467dbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1589879027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91756,6 +91760,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589879024}
   m_CullTransparentMesh: 1
+--- !u!114 &1589879029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589879024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7ca193d7b9ebf4ca0f0d9beca6db3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 1589879027}
+  title: {fileID: 1157522690}
+  data: {fileID: 490954235}
 --- !u!1 &1591321011
 GameObject:
   m_ObjectHideFlags: 0
@@ -101414,7 +101433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4fa29d9e2506d40896ac0176184db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundName: 
+  soundName: Play_Mouse_001_v1
   detail: {fileID: 1681138835}
 --- !u!1 &1754667134
 GameObject:
@@ -102400,7 +102419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4fa29d9e2506d40896ac0176184db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundName: 
+  soundName: Play_Mouse_001_v1
   detail: {fileID: 256430022}
 --- !u!1 &1770632838
 GameObject:
@@ -112603,6 +112622,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca3e140867a3124fbe2fb425a36b195, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextButton: {fileID: 1882148619}
+  prevButton: {fileID: 255947103}
   closeButton: {fileID: 538984035}
   mails:
   - {fileID: 734616273}
@@ -115694,7 +115715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4fa29d9e2506d40896ac0176184db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundName: 
+  soundName: Play_Mouse_001_v1
   detail: {fileID: 256430022}
 --- !u!1 &1945115517
 GameObject:
@@ -124971,7 +124992,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d4fa29d9e2506d40896ac0176184db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundName: 
+  soundName: Play_Mouse_001_v1
   detail: {fileID: 476904894}
 --- !u!114 &2106786118
 MonoBehaviour:

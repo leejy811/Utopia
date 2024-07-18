@@ -216,6 +216,7 @@ public class RoutineManager : MonoBehaviour
         UIManager.instance.notifyObserver(EventState.Receipt);
         debt = 0;
         UIManager.instance.SetDebt();
+        UIManager.instance.SetDebtInfo();
 
         if (dayOfWeekToInt < (int)DayOfWeek.Thursday)
         {

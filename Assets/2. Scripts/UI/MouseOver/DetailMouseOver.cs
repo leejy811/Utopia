@@ -9,6 +9,7 @@ public class DetailMouseOver : UIMouseOver
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
+        base.OnPointerEnter(eventData);
         detail.gameObject.SetActive(true);
         detail.SetValue();
     }

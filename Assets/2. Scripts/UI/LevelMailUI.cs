@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class LevelMailUI : MonoBehaviour
 {
+    public Button nextButton;
+    public Button prevButton;
     public Button closeButton;
     public Transform[] mails;
     public float mailMoveSecond;
@@ -20,13 +22,36 @@ public class LevelMailUI : MonoBehaviour
 
         mails[curMailIdx].SetAsLastSibling();
 
-        if(curMailIdx == mails.Length - 1) 
+        nextButton.gameObject.SetActive(true);
+        prevButton.gameObject.SetActive(true);
+
+        if (curMailIdx == mails.Length - 1)
+        {
+            nextButton.gameObject.SetActive(false);
             closeButton.gameObject.SetActive(true);
+        }
+        else if (curMailIdx == 0)
+        {
+            prevButton.gameObject.SetActive(false);
+        }
     }
 
     private void OnEnable()
     {
         transform.localPosition = new Vector3(transform.localPosition.x, 500.0f, transform.localPosition.z);
         transform.DOLocalMoveY(0f, mailMoveSecond);
+        InitButton();
+    }
+
+    private void InitButton()
+    {
+        prevButton.gameObject.SetActive(false);
+        closeButton.gameObject.SetActive(false);
+
+        if (mails.Length == 1 ) 
+        {
+            nextButton.gameObject.SetActive(false);
+            closeButton.gameObject.SetActive(true);
+        }
     }
 }
