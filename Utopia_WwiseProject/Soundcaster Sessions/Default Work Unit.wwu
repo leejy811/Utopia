@@ -6,50 +6,26 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{494451DF-E80F-4DFC-8F14-A9338BC51E0C}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Wind" ID="{06C3253B-8B70-484F-A5A9-22C238D68BE3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<ObjectRef Name="Play_Lobby" ID="{D2E399D5-DFD7-4E3C-A415-7D5E0B9AB7E5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="construction" ID="{15A5693D-6B15-487C-8325-1EBEEF376D76}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_testing" ID="{2B595B72-8A90-4F2C-8115-50D7C0AB7A77}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<ObjectRef Name="Play_ForestAmbienceInLobby" ID="{60A85E52-F783-40E3-9D76-85C36BE2B300}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="APT_event_NOISY_001" ID="{D9544F62-A249-4DAC-AF37-0102E3C99A91}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="ATP_event_ELEVATOR_001_v2" ID="{07106594-59EC-45CF-A02F-6B3CD516C22C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="1" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_ForestAmbience" ID="{3102994D-9723-447C-9B5C-80CE8AFEB234}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<ObjectRef Name="Stop_Lobby" ID="{55918D1D-84E7-40B2-B884-80815932C6CC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="APT_event_FIRE_001" ID="{2528D30B-ECB7-4764-9A81-87510C0615EF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="APT_event_THIEF_001" ID="{6E820553-B9ED-40C4-B2F8-F261B4AF952E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="2" Y="2"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="BGMsequnce1" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<ObjectRef Name="Stop_ForestAmbienceInLobby" ID="{4039E80C-4910-48DE-9968-D7600F9D172C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="3" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="BGM4" ID="{6AF6144E-1EA1-4F74-B01C-2D8AC5AB755D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="3" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1.5044814340589</Value>
+							<Value>1.36363636363636</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
@@ -61,24 +37,39 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
-							<Value>0.957548510176672</Value>
+							<Value>39</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
-							<Value>1.65756722151088</Value>
+							<Value>1.37843790012804</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>3.12076440460947</Value>
+							<Value>1.61453356890459</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>15.8308436477451</Value>
+							<Value>8.95170789163723</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="None" ID="{2FADD133-FCE6-4172-999B-D956C15786AB}"/>
 					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_01" ID="{FB2EABCA-D33C-44C2-BD4A-B7CD1B02DFD7}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="ForestAmbienceInLobby" ID="{0DB7E4BB-BE3D-4A87-9185-20CF3EA63232}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Lobby" ID="{1767CBA6-779B-4513-A2AC-355E5D2CF6FF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

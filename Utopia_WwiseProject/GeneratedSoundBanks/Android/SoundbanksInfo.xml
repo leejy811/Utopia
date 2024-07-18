@@ -9,10 +9,14 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{341B32BA-8D73-712F-962C-8AD07EFAE7D7}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{2F5D606B-5BE0-00A5-26C8-5B199A53EEEC}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
+				<File Id="135050005" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lobby_BGM.wav</ShortName>
+					<CachePath>SFX/Lobby_BGM_818F3B66.wem</CachePath>
+				</File>
 				<File Id="159506193" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGM2.wav</ShortName>
 					<CachePath>SFX/BGM2_5C4D602B.wem</CachePath>
@@ -25,6 +29,14 @@
 					<ShortName>BGM.wav</ShortName>
 					<CachePath>SFX/BGM_11A93380.wem</CachePath>
 				</File>
+				<File Id="475494921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM5.wav</ShortName>
+					<CachePath>SFX/BGM5_A17065B2.wem</CachePath>
+				</File>
+				<File Id="824445506" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>utopia sound design.wav</ShortName>
+					<CachePath>SFX/utopia sound design_7B736DF4.wem</CachePath>
+				</File>
 				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3131.wav</ShortName>
 					<CachePath>SFX/3131_FBC78EF0.wem</CachePath>
@@ -32,6 +44,7 @@
 			</Media>
 			<Plugins>
 				<Custom>
+					<Plugin Id="225323522" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 					<Plugin Id="1000201217" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
 				</Custom>
 			</Plugins>
@@ -39,6 +52,11 @@
 				<Event Id="1325347504" Name="Play_BGM4" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="839951050"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1325347505" Name="Play_BGM5" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="475494921"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1994810337" Name="Play_BGMsequnce1" DurationType="Infinite">
@@ -53,6 +71,27 @@
 						</Custom>
 					</PluginRefs>
 				</Event>
+				<Event Id="2968224064" Name="Play_ForestAmbienceInLobby" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="824445506"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2111096682" Name="Play_Lobby" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="135050005"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="225323522"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2778003230" Name="Stop_ForestAmbienceInLobby" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="824445506"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3639729344" Name="Stop_Lobby" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="848835168" Name="ZOOM"/>
@@ -60,6 +99,69 @@
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{B8308D67-05E0-6E74-FF55-6AFA1B455AEA}">
+			<ShortName>UI2</ShortName>
+			<Path>UI2.bnk</Path>
+			<Media>
+				<File Id="439018999" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slotmashin_Jackpot_Ani_01.wav</ShortName>
+					<CachePath>SFX/Slotmashin_Jackpot_Ani_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="444873937" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Effect_Spwan_01.wav</ShortName>
+					<CachePath>SFX/Slot_Effect_Spwan_01_C28BA518.wem</CachePath>
+				</File>
+				<File Id="594404784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Spwan_01.wav</ShortName>
+					<CachePath>SFX/Slot_Spwan_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="749327532" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Stop_01.wav</ShortName>
+					<CachePath>SFX/Slot_Stop_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="809211139" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Drrrrrr_01.wav</ShortName>
+					<CachePath>SFX/Slot_Drrrrrr_01_D4609F6D.wem</CachePath>
+				</File>
+				<File Id="925625941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Rever_01.wav</ShortName>
+					<CachePath>SFX/Slot_Rever_01_93F42A0D.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3452595303" Name="Play_Slot_Drrrrrr_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="809211139"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="725934356" Name="Play_Slot_Effect_Spwan_01" DurationType="OneShot" DurationMin="0.32329836" DurationMax="0.32329836">
+					<MediaRefs>
+						<MediaRef Id="444873937"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1042317409" Name="Play_Slot_Rever_01" DurationType="OneShot" DurationMin="0.3293589" DurationMax="0.3293589">
+					<MediaRefs>
+						<MediaRef Id="925625941"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3803209012" Name="Play_Slot_Spwan_01" DurationType="OneShot" DurationMin="0.93914586" DurationMax="0.93914586">
+					<MediaRefs>
+						<MediaRef Id="594404784"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3371155409" Name="Play_Slot_Stop_01" DurationType="OneShot" DurationMin="0.0851875" DurationMax="0.0851875">
+					<MediaRefs>
+						<MediaRef Id="749327532"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2214109306" Name="Play_Slotmashin_Jackpot_Ani_01" DurationType="OneShot" DurationMin="19.781166" DurationMax="19.781166">
+					<MediaRefs>
+						<MediaRef Id="439018999"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
 		</SoundBank>
 		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{DDF01D4E-F11E-FC9B-810E-60514B61C11D}">
 			<ShortName>Init</ShortName>
@@ -94,7 +196,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{BF2A8AAD-E0B7-32CD-6501-3EE09715622C}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{2EEB57B3-115E-F463-063B-5BF14D4C146B}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -106,6 +208,14 @@
 					<ShortName>UI_solve_001.wav</ShortName>
 					<CachePath>SFX/UI_solve_001_818F3B66.wem</CachePath>
 				</File>
+				<File Id="46416667" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mail_enter_001.wav</ShortName>
+					<CachePath>SFX/Mail_enter_001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="97953192" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GraphFallDown.wav</ShortName>
+					<CachePath>SFX/GraphFallDown_818F3B66.wem</CachePath>
+				</File>
 				<File Id="115031296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Night-Dawn.wav</ShortName>
 					<CachePath>SFX/Night-Dawn_818F3B66.wem</CachePath>
@@ -113,6 +223,14 @@
 				<File Id="119271698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Tile_Buy_001(short).wav</ShortName>
 					<CachePath>SFX/Tile_Buy_001(short)_818F3B66.wem</CachePath>
+				</File>
+				<File Id="121382095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jackpot_01.wav</ShortName>
+					<CachePath>SFX/Jackpot_01_818F3B66.wem</CachePath>
+				</File>
+				<File Id="165481767" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Graph_fall_001.wav</ShortName>
+					<CachePath>SFX/Graph_fall_001_818F3B66.wem</CachePath>
 				</File>
 				<File Id="175516682" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Turn_Move_Clock_001.wav</ShortName>
@@ -134,9 +252,17 @@
 					<ShortName>Building_click_003.wav</ShortName>
 					<CachePath>SFX/Building_click_003_979594D8.wem</CachePath>
 				</File>
+				<File Id="265951174" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D-Day_popup_001.wav</ShortName>
+					<CachePath>SFX/D-Day_popup_001_818F3B66.wem</CachePath>
+				</File>
 				<File Id="323079966" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DISEASE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DISEASE_001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="327294676" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mail_take_001.wav</ShortName>
+					<CachePath>SFX/Mail_take_001_818F3B66.wem</CachePath>
 				</File>
 				<File Id="361543517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stamp.wav</ShortName>
@@ -150,9 +276,17 @@
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
 					<CachePath>SFX/APT_event_SEWERSMELL_001_11A93380.wem</CachePath>
 				</File>
+				<File Id="488455765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SlotMachine_enter_001.wav</ShortName>
+					<CachePath>SFX/SlotMachine_enter_001_818F3B66.wem</CachePath>
+				</File>
 				<File Id="546900594" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
 					<CachePath>SFX/APT_event_SEWERSMELL_001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="637537002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SomethingWrong_01.wav</ShortName>
+					<CachePath>SFX/SomethingWrong_01_818F3B66.wem</CachePath>
 				</File>
 				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_THIEF_001.wav</ShortName>
@@ -162,9 +296,21 @@
 					<ShortName>ATP_event_ELEVATOR_001_v2.wav</ShortName>
 					<CachePath>SFX/ATP_event_ELEVATOR_001_v2_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="822705564" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mail_open_001.wav</ShortName>
+					<CachePath>SFX/Mail_open_001_818F3B66.wem</CachePath>
+				</File>
 				<File Id="865553987" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>protest_002.wav</ShortName>
 					<CachePath>SFX/protest_002_E6AF7396.wem</CachePath>
+				</File>
+				<File Id="899727040" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lever_001.wav</ShortName>
+					<CachePath>SFX/Lever_001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="901484845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Graph_fall_002.wav</ShortName>
+					<CachePath>SFX/Graph_fall_002_818F3B66.wem</CachePath>
 				</File>
 				<File Id="942761984" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Demolition_001_v1.wav</ShortName>
@@ -349,6 +495,11 @@
 						<MediaRef Id="256641271"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1518229334" Name="Play_D_Day_popup_001" DurationType="OneShot" DurationMin="0.3501875" DurationMax="0.3501875">
+					<MediaRefs>
+						<MediaRef Id="265951174"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="2687999423" Name="Play_Day_Night" DurationType="OneShot" DurationMin="2.7866666" DurationMax="2.7866666">
 					<MediaRefs>
 						<MediaRef Id="37938370"/>
@@ -357,6 +508,46 @@
 				<Event Id="669897392" Name="Play_Demolition_001_v1" DurationType="OneShot" DurationMin="0.7253125" DurationMax="0.7253125">
 					<MediaRefs>
 						<MediaRef Id="942761984"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1882539238" Name="Play_Graph_fall_001" DurationType="OneShot" DurationMin="0.2626875" DurationMax="0.2626875">
+					<MediaRefs>
+						<MediaRef Id="165481767"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1882539237" Name="Play_Graph_fall_002" DurationType="OneShot" DurationMin="0.2626875" DurationMax="0.2626875">
+					<MediaRefs>
+						<MediaRef Id="901484845"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="171395709" Name="Play_GraphFallDown" DurationType="OneShot" DurationMin="3.4862916" DurationMax="3.4862916">
+					<MediaRefs>
+						<MediaRef Id="97953192"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="263615490" Name="Play_Jackpot_01" DurationType="OneShot" DurationMin="19.499855" DurationMax="19.499855">
+					<MediaRefs>
+						<MediaRef Id="121382095"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3789420082" Name="Play_Lever_001" DurationType="OneShot" DurationMin="0.5254167" DurationMax="0.5254167">
+					<MediaRefs>
+						<MediaRef Id="899727040"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3897542940" Name="Play_Mail_enter_001" DurationType="OneShot" DurationMin="0.9781042" DurationMax="0.9781042">
+					<MediaRefs>
+						<MediaRef Id="46416667"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1751715434" Name="Play_Mail_open_001" DurationType="OneShot" DurationMin="0.32891667" DurationMax="0.32891667">
+					<MediaRefs>
+						<MediaRef Id="822705564"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="226547375" Name="Play_Mail_take_001" DurationType="OneShot" DurationMin="0.5802917" DurationMax="0.5802917">
+					<MediaRefs>
+						<MediaRef Id="327294676"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3906795593" Name="Play_Mouse_001_v1" DurationType="OneShot" DurationMin="0.098" DurationMax="0.098">
@@ -377,6 +568,16 @@
 				<Event Id="1749625636" Name="Play_protest_002" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="865553987"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1031511574" Name="Play_SlotMachine_enter_001" DurationType="OneShot" DurationMin="0.93572915" DurationMax="0.93572915">
+					<MediaRefs>
+						<MediaRef Id="488455765"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3676035621" Name="Play_SomethingWrong_01" DurationType="OneShot" DurationMin="5.141354" DurationMax="5.141354">
+					<MediaRefs>
+						<MediaRef Id="637537002"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2683666007" Name="Play_stamp" DurationType="OneShot" DurationMin="0.62745833" DurationMax="0.62745833">
@@ -584,5 +785,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E698BFFE-4780-6024-21F8-05233BB04913}</FileHash>
+	<FileHash>{E24CAD31-DEBA-9632-D086-B1D3CA29BBDC}</FileHash>
 </SoundBanksInfo>

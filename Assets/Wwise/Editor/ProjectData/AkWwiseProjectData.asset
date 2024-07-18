@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584821681077741972
+    m_lastTime: -8584803004975067349
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -110,6 +110,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 4601a5b674a4a949a6cf87ed355dcc56
       Path: SoundBanks\Default Work Unit\UI
+    - name: UI2
+      guid: 5a7acb63bca8ad4e85ead1b6bcb95aab
+      id: 1181390631
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a3314ea6034880469012d6b012acb40a
+      - ElementName: UI2
+        ObjectType: 7
+        guid: 5a7acb63bca8ad4e85ead1b6bcb95aab
+      Path: SoundBanks\Default Work Unit\UI2
   EventWwu:
   - PhysicalPath: Events\Default Work Unit.wwu
     PathAndIcons:
@@ -122,7 +136,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584821681210364139
+    m_lastTime: -8584803001258613137
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1002,6 +1016,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_BGM5
+      guid: 76258b728991304a9f3ae6823904934c
+      id: 1325347505
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_BGM5
+        ObjectType: 3
+        guid: 76258b728991304a9f3ae6823904934c
+      Path: Events\Default Work Unit\Play_BGM5
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_BGMsequnce1
       guid: 3eeb3360ad4e3b4ea021e67119659552
       id: 1994810337
@@ -1073,6 +1104,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_D_Day_popup_001
+      guid: 6c8d2d70ced7a345b251d10d7454b271
+      id: 1518229334
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_D_Day_popup_001
+        ObjectType: 3
+        guid: 6c8d2d70ced7a345b251d10d7454b271
+      Path: Events\Default Work Unit\Play_D_Day_popup_001
+      maxAttenuation: 0
+      maxDuration: 0.3501875
+      minDuration: 0.3501875
     - name: Play_Day_Night
       guid: 93c274af3c74394caafffb07034743b5
       id: 2687999423
@@ -1124,6 +1172,193 @@ MonoBehaviour:
         ObjectType: 3
         guid: 4d99023123977c449b5c80ce8afeb234
       Path: Events\Default Work Unit\Play_ForestAmbience
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_ForestAmbienceInLobby
+      guid: 525ea86083f7e3409d7685c36be2b300
+      id: 2968224064
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_ForestAmbienceInLobby
+        ObjectType: 3
+        guid: 525ea86083f7e3409d7685c36be2b300
+      Path: Events\Default Work Unit\Play_ForestAmbienceInLobby
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Graph_fall_001
+      guid: e71614efa462e0458d081548d8f586af
+      id: 1882539238
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Graph_fall_001
+        ObjectType: 3
+        guid: e71614efa462e0458d081548d8f586af
+      Path: Events\Default Work Unit\Play_Graph_fall_001
+      maxAttenuation: 0
+      maxDuration: 0.2626875
+      minDuration: 0.2626875
+    - name: Play_Graph_fall_002
+      guid: 7efaeaefb1f75e45bb4add47bf00f810
+      id: 1882539237
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Graph_fall_002
+        ObjectType: 3
+        guid: 7efaeaefb1f75e45bb4add47bf00f810
+      Path: Events\Default Work Unit\Play_Graph_fall_002
+      maxAttenuation: 0
+      maxDuration: 0.2626875
+      minDuration: 0.2626875
+    - name: Play_GraphFallDown
+      guid: e30bd985062c884f9e3f7b19d34c7942
+      id: 171395709
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_GraphFallDown
+        ObjectType: 3
+        guid: e30bd985062c884f9e3f7b19d34c7942
+      Path: Events\Default Work Unit\Play_GraphFallDown
+      maxAttenuation: 0
+      maxDuration: 3.4862916
+      minDuration: 3.4862916
+    - name: Play_Jackpot_01
+      guid: 9423861b23ebdf4480578a288367cf6a
+      id: 263615490
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Jackpot_01
+        ObjectType: 3
+        guid: 9423861b23ebdf4480578a288367cf6a
+      Path: Events\Default Work Unit\Play_Jackpot_01
+      maxAttenuation: 0
+      maxDuration: 19.499855
+      minDuration: 19.499855
+    - name: Play_Lever_001
+      guid: c619ca1550fdbb468de8a9fc9d04af5b
+      id: 3789420082
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Lever_001
+        ObjectType: 3
+        guid: c619ca1550fdbb468de8a9fc9d04af5b
+      Path: Events\Default Work Unit\Play_Lever_001
+      maxAttenuation: 0
+      maxDuration: 0.5254167
+      minDuration: 0.5254167
+    - name: Play_Lobby
+      guid: d599e3d2d7df3c4ea4157d5e0b9ab7e5
+      id: 2111096682
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Lobby
+        ObjectType: 3
+        guid: d599e3d2d7df3c4ea4157d5e0b9ab7e5
+      Path: Events\Default Work Unit\Play_Lobby
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Mail_enter_001
+      guid: 55c6dfa0fab9e64ebbf794ac0ea60aed
+      id: 3897542940
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Mail_enter_001
+        ObjectType: 3
+        guid: 55c6dfa0fab9e64ebbf794ac0ea60aed
+      Path: Events\Default Work Unit\Play_Mail_enter_001
+      maxAttenuation: 0
+      maxDuration: 0.9781042
+      minDuration: 0.9781042
+    - name: Play_Mail_open_001
+      guid: aed318c42e41d84687604c247723d1b6
+      id: 1751715434
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Mail_open_001
+        ObjectType: 3
+        guid: aed318c42e41d84687604c247723d1b6
+      Path: Events\Default Work Unit\Play_Mail_open_001
+      maxAttenuation: 0
+      maxDuration: 0.32891667
+      minDuration: 0.32891667
+    - name: Play_Mail_take_001
+      guid: 67e43914cf333446b80fe4ae722c1ee0
+      id: 226547375
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Mail_take_001
+        ObjectType: 3
+        guid: 67e43914cf333446b80fe4ae722c1ee0
+      Path: Events\Default Work Unit\Play_Mail_take_001
+      maxAttenuation: 0
+      maxDuration: 0.5802917
+      minDuration: 0.5802917
+    - name: Play_Mail_take_002
+      guid: 6de370690ce067488dfe5faa38500a0d
+      id: 226547372
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Mail_take_002
+        ObjectType: 3
+        guid: 6de370690ce067488dfe5faa38500a0d
+      Path: Events\Default Work Unit\Play_Mail_take_002
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1235,6 +1470,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 177.10014
       minDuration: 177.10014
+    - name: Play_Slot_Drrrrrr_01
+      guid: 5ec76ed9c5029f47af8e4c87cfd32851
+      id: 3452595303
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Slot_Drrrrrr_01
+        ObjectType: 3
+        guid: 5ec76ed9c5029f47af8e4c87cfd32851
+      Path: Events\Default Work Unit\Play_Slot_Drrrrrr_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Slot_Effect_Spwan_01
+      guid: 005bd351787de9469c6a41c069fc3746
+      id: 725934356
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Slot_Effect_Spwan_01
+        ObjectType: 3
+        guid: 005bd351787de9469c6a41c069fc3746
+      Path: Events\Default Work Unit\Play_Slot_Effect_Spwan_01
+      maxAttenuation: 0
+      maxDuration: 0.32329836
+      minDuration: 0.32329836
+    - name: Play_Slot_Rever_01
+      guid: 3268da01928cd04ca9a63f8482d87a19
+      id: 1042317409
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Slot_Rever_01
+        ObjectType: 3
+        guid: 3268da01928cd04ca9a63f8482d87a19
+      Path: Events\Default Work Unit\Play_Slot_Rever_01
+      maxAttenuation: 0
+      maxDuration: 0.3293589
+      minDuration: 0.3293589
     - name: Play_Slot_rimshot
       guid: 708a2a7e09af614689a2ca94201918a9
       id: 1073654463
@@ -1252,6 +1538,91 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 4.0776334
       minDuration: 4.0776334
+    - name: Play_Slot_Spwan_01
+      guid: 876d71707895364bbecbd3ae94194338
+      id: 3803209012
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Slot_Spwan_01
+        ObjectType: 3
+        guid: 876d71707895364bbecbd3ae94194338
+      Path: Events\Default Work Unit\Play_Slot_Spwan_01
+      maxAttenuation: 0
+      maxDuration: 0.93914586
+      minDuration: 0.93914586
+    - name: Play_Slot_Stop_01
+      guid: f9965ca73ac8fb4489d3323b688d0c69
+      id: 3371155409
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Slot_Stop_01
+        ObjectType: 3
+        guid: f9965ca73ac8fb4489d3323b688d0c69
+      Path: Events\Default Work Unit\Play_Slot_Stop_01
+      maxAttenuation: 0
+      maxDuration: 0.0851875
+      minDuration: 0.0851875
+    - name: Play_SlotMachine_enter_001
+      guid: 1ca15062400e1148b5e1b70106aeb267
+      id: 1031511574
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_SlotMachine_enter_001
+        ObjectType: 3
+        guid: 1ca15062400e1148b5e1b70106aeb267
+      Path: Events\Default Work Unit\Play_SlotMachine_enter_001
+      maxAttenuation: 0
+      maxDuration: 0.93572915
+      minDuration: 0.93572915
+    - name: Play_Slotmashin_Jackpot_Ani_01
+      guid: ba1f93d6518aae4da40ee35591d67749
+      id: 2214109306
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Slotmashin_Jackpot_Ani_01
+        ObjectType: 3
+        guid: ba1f93d6518aae4da40ee35591d67749
+      Path: Events\Default Work Unit\Play_Slotmashin_Jackpot_Ani_01
+      maxAttenuation: 0
+      maxDuration: 19.781166
+      minDuration: 19.781166
+    - name: Play_SomethingWrong_01
+      guid: c783402483514d40a6a53313d37b89de
+      id: 3676035621
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_SomethingWrong_01
+        ObjectType: 3
+        guid: c783402483514d40a6a53313d37b89de
+      Path: Events\Default Work Unit\Play_SomethingWrong_01
+      maxAttenuation: 0
+      maxDuration: 5.141354
+      minDuration: 5.141354
     - name: Play_stamp
       guid: cef81a4ceb52044f9ef55dfda1f79409
       id: 2683666007
@@ -1391,6 +1762,57 @@ MonoBehaviour:
         ObjectType: 3
         guid: f52f07cca1b231439ba45051290aac45
       Path: Events\Default Work Unit\Stop_construction
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_ForestAmbienceInLobby
+      guid: 0ce839401049de489968d7600f9d172c
+      id: 2778003230
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_ForestAmbienceInLobby
+        ObjectType: 3
+        guid: 0ce839401049de489968d7600f9d172c
+      Path: Events\Default Work Unit\Stop_ForestAmbienceInLobby
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Lobby
+      guid: 1d8d9155e784b240b88480815932c6cc
+      id: 3639729344
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_Lobby
+        ObjectType: 3
+        guid: 1d8d9155e784b240b88480815932c6cc
+      Path: Events\Default Work Unit\Stop_Lobby
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Slotmashin_Jackpot_Ani_01
+      guid: 010940931a8efe4680b105eae31e6c0e
+      id: 1571046380
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_Slotmashin_Jackpot_Ani_01
+        ObjectType: 3
+        guid: 010940931a8efe4680b105eae31e6c0e
+      Path: Events\Default Work Unit\Stop_Slotmashin_Jackpot_Ani_01
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -1664,7 +2086,7 @@ MonoBehaviour:
     m_lastTime: -8584821681076739805
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000070000003e0000003f00000040000000ec000000ed000000ce010000cf010000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

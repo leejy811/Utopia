@@ -15,6 +15,7 @@ public class MCSS : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Wind", gameObject);
         AkSoundEngine.PostEvent("Play_ATP_event_scary_2_noHeel_v1", gameObject);
         AkSoundEngine.PostEvent("Play_protest_002", gameObject);
+        AkSoundEngine.PostEvent("Play_BGM5", gameObject);
 
         AkSoundEngine.PostEvent("Play_ATP_event_water_outagev1", gameObject);
         AkSoundEngine.PostEvent("Play_ATP_event_water_outagev2", gameObject);

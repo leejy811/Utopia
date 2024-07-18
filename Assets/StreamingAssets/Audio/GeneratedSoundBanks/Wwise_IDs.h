@@ -54,20 +54,40 @@ namespace AK
         static const AkUniqueID PLAY_ATP_EVENT_WATER_OUTAGEV3 = 486934153U;
         static const AkUniqueID PLAY_ATP_EVENT_WATER_OUTAGEV4 = 486934158U;
         static const AkUniqueID PLAY_BGM4 = 1325347504U;
+        static const AkUniqueID PLAY_BGM5 = 1325347505U;
         static const AkUniqueID PLAY_BGMSEQUNCE1 = 1994810337U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;
         static const AkUniqueID PLAY_BUILDINGSOUND = 2611274067U;
         static const AkUniqueID PLAY_CONSTRUCTION = 1598463209U;
+        static const AkUniqueID PLAY_D_DAY_POPUP_001 = 1518229334U;
         static const AkUniqueID PLAY_DAY_NIGHT = 2687999423U;
         static const AkUniqueID PLAY_DEMOLITION_001_V1 = 669897392U;
         static const AkUniqueID PLAY_FORESTAMBIENCE = 3149538809U;
+        static const AkUniqueID PLAY_FORESTAMBIENCEINLOBBY = 2968224064U;
+        static const AkUniqueID PLAY_GRAPH_FALL_001 = 1882539238U;
+        static const AkUniqueID PLAY_GRAPH_FALL_002 = 1882539237U;
+        static const AkUniqueID PLAY_GRAPHFALLDOWN = 171395709U;
+        static const AkUniqueID PLAY_JACKPOT_01 = 263615490U;
+        static const AkUniqueID PLAY_LEVER_001 = 3789420082U;
+        static const AkUniqueID PLAY_LOBBY = 2111096682U;
+        static const AkUniqueID PLAY_MAIL_ENTER_001 = 3897542940U;
+        static const AkUniqueID PLAY_MAIL_OPEN_001 = 1751715434U;
+        static const AkUniqueID PLAY_MAIL_TAKE_001 = 226547375U;
         static const AkUniqueID PLAY_MOUSE_001_V1 = 3906795593U;
         static const AkUniqueID PLAY_NIGHT_DAWN = 3836024861U;
         static const AkUniqueID PLAY_PAY_001 = 2025304052U;
         static const AkUniqueID PLAY_PROTEST_002 = 1749625636U;
         static const AkUniqueID PLAY_SELECT_BUTTON = 880454473U;
         static const AkUniqueID PLAY_SINGSINGSINGMYBIRD = 2446290240U;
+        static const AkUniqueID PLAY_SLOT_DRRRRRR_01 = 3452595303U;
+        static const AkUniqueID PLAY_SLOT_EFFECT_SPWAN_01 = 725934356U;
+        static const AkUniqueID PLAY_SLOT_REVER_01 = 1042317409U;
         static const AkUniqueID PLAY_SLOT_RIMSHOT = 1073654463U;
+        static const AkUniqueID PLAY_SLOT_SPWAN_01 = 3803209012U;
+        static const AkUniqueID PLAY_SLOT_STOP_01 = 3371155409U;
+        static const AkUniqueID PLAY_SLOTMACHINE_ENTER_001 = 1031511574U;
+        static const AkUniqueID PLAY_SLOTMASHIN_JACKPOT_ANI_01 = 2214109306U;
+        static const AkUniqueID PLAY_SOMETHINGWRONG_01 = 3676035621U;
         static const AkUniqueID PLAY_STAMP = 2683666007U;
         static const AkUniqueID PLAY_TESTING = 2149296550U;
         static const AkUniqueID PLAY_TILE_BUY_001 = 3972534815U;
@@ -76,6 +96,9 @@ namespace AK
         static const AkUniqueID PLAY_UI_SOLVE_001 = 1520262876U;
         static const AkUniqueID PLAY_WIND = 1020223172U;
         static const AkUniqueID STOP_CONSTRUCTION = 3493507479U;
+        static const AkUniqueID STOP_FORESTAMBIENCEINLOBBY = 2778003230U;
+        static const AkUniqueID STOP_LOBBY = 3639729344U;
+        static const AkUniqueID STOP_SLOTMASHIN_JACKPOT_ANI_01 = 1571046380U;
     } // namespace EVENTS
 
     namespace STATES
@@ -113,6 +136,7 @@ namespace AK
         static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID MAIN = 3161908922U;
         static const AkUniqueID UI = 1551306167U;
+        static const AkUniqueID UI2 = 1181390631U;
     } // namespace BANKS
 
     namespace BUSSES

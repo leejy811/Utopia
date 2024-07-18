@@ -25,7 +25,7 @@ public class FadeToBlack : MonoBehaviour
     private IEnumerator FadeOut()
     {
         float currentTime = 0.0f;
-
+        
         while (currentTime < fadeDuration)
         {
             currentTime += Time.deltaTime;
@@ -38,7 +38,8 @@ public class FadeToBlack : MonoBehaviour
         colorGrading.postExposure.value = -10;
         uiCanvasGroup.alpha = 0;
 
-
+        AkSoundEngine.PostEvent("Stop_ForestAmbienceInLobby", Camera.main.gameObject);
+        AkSoundEngine.PostEvent("Stop_Lobby", Camera.main.gameObject);
         SceneManager.LoadScene(nextSceneName);
     }
 }

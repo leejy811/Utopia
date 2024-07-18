@@ -1,6 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1325347504	Play_BGM4			\Default Work Unit\Play_BGM4	
+	1325347505	Play_BGM5			\Default Work Unit\Play_BGM5	
 	1994810337	Play_BGMsequnce1			\Default Work Unit\Play_BGMsequnce1	
+	2111096682	Play_Lobby			\Default Work Unit\Play_Lobby	
+	2778003230	Stop_ForestAmbienceInLobby			\Default Work Unit\Stop_ForestAmbienceInLobby	
+	2968224064	Play_ForestAmbienceInLobby			\Default Work Unit\Play_ForestAmbienceInLobby	
+	3639729344	Stop_Lobby			\Default Work Unit\Stop_Lobby	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	848835168	ZOOM			\Default Work Unit\ZOOM	
@@ -9,11 +14,15 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1761501017	BOOL			\Default Work Unit\BOOL	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	225323522	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Lobby\New Silence\Silence	
 	1000201217	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\New Silence\Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	135050005	Lobby_BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Lobby_BGM_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lobby\Lobby_BGM		18432096
 	159506193	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM2_5C4D602B.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM2		15360208
 	348594287	BGM3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM3_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM3		6144660
 	394814525	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM		7680096
+	475494921	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM5_A17065B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGM5		18432144
+	824445506	ForestAmbienceInLobby	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\utopia sound design_7B736DF4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ForestAmbienceInLobby		38527784
 	839951050	BGM4	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\3131_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGM4		12289040
 
