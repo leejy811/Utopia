@@ -141,10 +141,8 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public void BuyBuilding(Transform spawnTrans)
     {
-        float costWeight = CalculateBuildingCostWeight();
-        int originalCost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
-        int cost = CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
-        
+        int cost = CalculateBuildingCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>());
+
         //int cost = CalculateCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost * costWeight);
         Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
@@ -230,9 +228,7 @@ public class ShopManager : MonoBehaviour, IObserver
             int cost = 0;
             if (buyState == BuyState.BuyBuilding)
             {
-                float costWeight = CalculateBuildingCostWeight();
-                int originalCost = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost;
-                cost = CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
+                cost = CalculateBuildingCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>());
             }
             else if (buyState == BuyState.BuildTile)
                 cost = Grid.instance.tileCost[curPickIndex + 1];
@@ -307,13 +303,20 @@ public class ShopManager : MonoBehaviour, IObserver
     {
         foreach (Event globalEvent in EventManager.instance.globalEvents)
         {
-            if(globalEvent.valueType == ValueType.Cost && globalEvent.targetIndex == (int)buyState)
+            if (globalEvent.valueType == ValueType.Cost && globalEvent.targetIndex == (int)buyState)
             {
                 cost += (int)(cost * (globalEvent.GetEffectValue(0) / 100.0f));
             }
         }
 
         return cost;
+    }
+
+    public int CalculateBuildingCost(Building building)
+    {
+        float costWeight = CalculateBuildingCostWeight();
+        int originalCost = building.cost;
+        return CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
     }
 
     public void Notify(EventState state)
