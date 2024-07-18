@@ -80,7 +80,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	256641271	Building_click_003	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Building_click_003_912821E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Building_click_003		1133
 	265951174	D-Day_popup_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\D-Day_popup_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\D-Day_popup_001		4215
 	323079966	APT_event_DISEASE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DISEASE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_DISEASE_001		72571
-	327294676	Mail_take_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mail_take_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_take_001		8807
+	327294676	Mail_take_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mail_take_001_0FED1B09.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_take_001		8769
 	361543517	stamp	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\stamp_004775AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\stamp		4802
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_DESOLATE_01		89357
 	476423553	APT_event_SEWERSMELL_001_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_SEWERSMELL_001_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\APT_event_SEWERSMELL_001_1		92934

@@ -174,13 +174,13 @@
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{097E0A2B-4400-68BC-E427-FB7207DF6F51}">
+		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{55A72430-C541-E524-58DA-EC6E5DEAFFEB}">
 			<ShortName>BGM2</ShortName>
 			<Path>BGM2.bnk</Path>
 			<Media>
 				<File Id="846080429" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>TImeLapsBGM.wav</ShortName>
-					<CachePath>SFX/TImeLapsBGM_9B80FBE6.wem</CachePath>
+					<CachePath>SFX/TImeLapsBGM_41299533.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -226,7 +226,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{F4F4747C-B158-0E16-B4BE-D1A1E93DD59A}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{8A1A2B86-B107-86B8-AB56-0F3FA3CDB680}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -292,7 +292,7 @@
 				</File>
 				<File Id="327294676" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Mail_take_001.wav</ShortName>
-					<CachePath>SFX/Mail_take_001_8E324C96.wem</CachePath>
+					<CachePath>SFX/Mail_take_001_0FED1B09.wem</CachePath>
 				</File>
 				<File Id="361543517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stamp.wav</ShortName>
@@ -807,5 +807,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{D0E10207-5B4E-906B-E809-B15C41B3A392}</FileHash>
+	<FileHash>{69257385-B008-AAD2-FCFC-FB99098DBB07}</FileHash>
 </SoundBanksInfo>

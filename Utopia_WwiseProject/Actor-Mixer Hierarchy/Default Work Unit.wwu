@@ -9182,6 +9182,11 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Mail_take_001" ID="{8985B594-2CD8-4A29-91F2-8F3E7B8FE328}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0109172093584178"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0285527013989387"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Mail_take_001.wav</AudioFile>
 									<MediaIDList>

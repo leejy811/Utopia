@@ -6,12 +6,20 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{494451DF-E80F-4DFC-8F14-A9338BC51E0C}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Lobby" ID="{D2E399D5-DFD7-4E3C-A415-7D5E0B9AB7E5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<ObjectRef Name="Play_Pay_001" ID="{0D38955D-9DAC-41CC-BD61-35BFD685FDCC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_UI_solve_001" ID="{9E0A7543-B841-4594-A6BD-983964B23928}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_ForestAmbienceInLobby" ID="{60A85E52-F783-40E3-9D76-85C36BE2B300}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Lobby" ID="{D2E399D5-DFD7-4E3C-A415-7D5E0B9AB7E5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Stop_Lobby" ID="{55918D1D-84E7-40B2-B884-80815932C6CC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
