@@ -22,11 +22,11 @@ public class SlotResultUI : MonoBehaviour
 
     public void ResetPosition(float second)
     {
-        transform.DOLocalMoveX(-500, second);
+        transform.DOLocalMoveX(-665, second);
     }
 
     private void OnDisable()
     {
-        transform.localPosition = new Vector3(-500, transform.localPosition.y, transform.localPosition.z);
+        transform.localPosition = new Vector3(-665, transform.localPosition.y, transform.localPosition.z);
     }
 }

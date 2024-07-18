@@ -25,7 +25,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
     public Material[] redLightMats;
 
     [Header("Object")]
-    public GameObject costPanel;
+    //public GameObject costPanel;
     public GameObject slotMachine;
     public GameObject lever;
     public GameObject[] slots;
@@ -117,7 +117,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
             jackpotLights[i].gameObject.SetActive(true);
         }
 
-        //ÀèÆÌ Èçµé¸² ¾Ö´Ï¸ÞÀÌ¼Ç
+        //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½é¸² ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½
 
         while (jackpotLights[0].gameObject.activeSelf)
         {
@@ -250,12 +250,13 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         RoutineManager.instance.OnOffDailyLight(false);
         state = RouletteState.Before;
         slotMachine.transform.localPosition = new Vector3(530, slotMachine.transform.localPosition.y, slotMachine.transform.localPosition.z);
-        costPanel.transform.localPosition = new Vector3(600, costPanel.transform.localPosition.y, costPanel.transform.localPosition.z);
+        //costPanel.transform.localPosition = new Vector3(600, costPanel.transform.localPosition.y, costPanel.transform.localPosition.z);
         slotMachine.transform.DOLocalMoveX(220, slotmachineOnSecond)
-            .OnComplete(() => 
+            .OnComplete(() =>
             {
-                costPanel.transform.DOLocalMoveX(200, slotmachineOnSecond)
-                        .OnComplete(() => { state = RouletteState.Start; }); 
+                state = RouletteState.Start;
+                //costPanel.transform.DOLocalMoveX(200, slotmachineOnSecond)
+                        //.OnComplete(() => { state = RouletteState.Start; }); 
             });
         InitSlot();
         costText.text = GetCommaText(EventManager.instance.cost);
