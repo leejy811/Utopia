@@ -27,6 +27,7 @@ public class RoutineManager : MonoBehaviour
     public float defalutAngleX;
 
     private Coroutine lightCoroutine;
+    private int totalIncome;
 
     private void Awake()
     {
@@ -94,12 +95,6 @@ public class RoutineManager : MonoBehaviour
 
     private void ApplyDept()
     {
-        if (GetWeekOfYear() >= debtsOfWeek.Length) 
-        {
-            UIManager.instance.SetDebtSlider(0);
-            return;
-        }
-
         DayOfWeek dayOfWeek = day.DayOfWeek;
 
         switch (dayOfWeek)
@@ -114,7 +109,6 @@ public class RoutineManager : MonoBehaviour
         }
 
         int week = dayOfWeek == DayOfWeek.Sunday ? 7 : (int)dayOfWeek;
-        UIManager.instance.SetDebtSlider(week);
     }
 
     private void CalculateDept()
@@ -130,7 +124,7 @@ public class RoutineManager : MonoBehaviour
             else
             {
                 weekResult = ResultType.Worst;
-                debt = (int)(debtsOfWeek[GetWeekOfYear()] * 1.5f);
+                debt = debtsOfWeek[GetWeekOfYear()] + Mathf.Max(totalIncome * 4, 0);
                 UIManager.instance.notifyObserver(EventState.CreditScore);
             }
             return;
@@ -152,7 +146,7 @@ public class RoutineManager : MonoBehaviour
     private void SetCreditRating(int value)
     {
         creditRating += value;
-        UIManager.instance.SetCreditRating();
+        UIManager.instance.SetCreditScorePanel();
     }
 
     private void CalculateIncome()
@@ -173,7 +167,7 @@ public class RoutineManager : MonoBehaviour
         }
 
         total = (int)(total * EventManager.instance.GetFinalIncomeEventValue());
-        
+        totalIncome = total;
         ShopManager.instance.GetMoney(total);
         EventManager.instance.EventCostUpdate(total);
     }

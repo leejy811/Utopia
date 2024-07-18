@@ -29,6 +29,9 @@ public class InputManager : MonoBehaviour, IObserver
         if (UIManager.instance.eventRoulette.gameObject.activeSelf)
             GetSlotMachineInput();
 
+        if (UIManager.instance.menu.gameObject.activeSelf || UIManager.instance.setting.gameObject.activeSelf)
+            GetMenuInput();
+
         if (!canInput) return;
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -62,10 +65,16 @@ public class InputManager : MonoBehaviour, IObserver
                 }
             }
         }
-        else if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+        else if (Input.GetMouseButtonDown(1))
         {
             UIManager.instance.notifyObserver(EventState.None);
             ShopManager.instance.ChangeState(BuyState.None);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIManager.instance.notifyObserver(EventState.Menu);
+            ShopManager.instance.ChangeState(BuyState.None);
+            canInput = false;
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
@@ -166,10 +175,21 @@ public class InputManager : MonoBehaviour, IObserver
         {
             UIManager.instance.OnClickEventRoulette();
         }
-        else if ((Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape)))
+        else if (UIManager.instance.eventRoulette.state != RouletteState.While && UIManager.instance.eventRoulette.state != RouletteState.Before)
         {
-            if (UIManager.instance.eventRoulette.state != RouletteState.While && UIManager.instance.eventRoulette.state != RouletteState.Before)
+            if (Input.GetMouseButtonDown(1))
                 UIManager.instance.notifyObserver(EventState.None);
+            else if (Input.GetKeyDown(KeyCode.Escape))
+                UIManager.instance.notifyObserver(EventState.Menu);
+        }
+    }
+
+    private void GetMenuInput()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            UIManager.instance.notifyObserver(EventState.None);
+            canInput = true;
         }
     }
 

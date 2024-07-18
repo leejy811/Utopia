@@ -63,13 +63,16 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Debt")]
     public PleaseMoneyUI debtDoc;
     public ReceiptUI receipt;
-    public TextMeshProUGUI creditRatingText;
-    public Slider debtSlider;
     public CreditScoreUI creditScore;
+    public CreditScorePanel creditScorePanel;
 
     [Header("Panel")]
     public GameObject topPanel;
     public GameObject bottomPanel;
+
+    [Header("Menu")]
+    public UIElement menu;
+    public UIElement setting;
 
     #endregion
 
@@ -289,7 +292,6 @@ public class UIManager : MonoBehaviour, ISubject
         dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + " " + weekStr[(int)curDay.DayOfWeek];
         Setmoney();
         SetDebt();
-        SetCreditRating();
     }
 
     public void Setmoney()
@@ -308,17 +310,9 @@ public class UIManager : MonoBehaviour, ISubject
         debtText.text = GetCommaText(RoutineManager.instance.debt);
     }
 
-    public void SetDebtSlider(int dayOfWeek)
+    public void SetCreditScorePanel()
     {
-        debtSlider.value = dayOfWeek / 7.0f - 0.05f;
-        ColorBlock colorBlock = debtSlider.colors;
-        colorBlock.disabledColor = dayOfWeek < 4 ? Color.green : new Color(1, 0.5f, 0);
-        debtSlider.colors = colorBlock;
-    }
-
-    public void SetCreditRating()
-    {
-        creditRatingText.text = RoutineManager.instance.creditRating.ToString();
+        creditScorePanel.SetValue();
     }
 
     public void SetBuildingIntroValue()
@@ -581,6 +575,11 @@ public class UIManager : MonoBehaviour, ISubject
         notifyObserver(EventState.None);
     }
 
+    public void OnClickSettingButton()
+    {
+        notifyObserver(EventState.Setting);
+    }
+
     #endregion
 
 
@@ -635,6 +634,9 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(debtDoc);
         addObserver(receipt);
         addObserver(creditScore);
+
+        addObserver(menu);
+        addObserver(setting);
 
         foreach (UILockButton lockButton in lockButtons)
         {
