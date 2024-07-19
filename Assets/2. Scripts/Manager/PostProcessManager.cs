@@ -34,10 +34,14 @@ public class PostProcessManager : MonoBehaviour
 
     private void Update()
     {
+        if (isFade) return;
+
         float angleX = RoutineManager.instance.mainLight.transform.localEulerAngles.x;
 
-        if (angleX > 0.0f && angleX < 90.0f && !isFade)
-            colorGrading.colorFilter.value = Color.white * (((angleX / 90.0f) * 0.9f) + 0.1f);
+        if (angleX > 0.0f && angleX < 45.0f)
+            colorGrading.colorFilter.value = Color.white * (((angleX / 45.0f) * 0.7f) + 0.3f);
+        else if (angleX >= 45.0f && angleX < 90.0f)
+            colorGrading.colorFilter.value = Color.white;
     }
 
     public IEnumerator FadeInOut(float second, bool isIn)
