@@ -48,6 +48,10 @@
 							<Value>39</Value>
 						</RTPCValue>
 						<RTPCValue>
+							<GameParameterRef Name="OPTION" ID="{975BA635-9C2A-463E-AE0A-4BE629293298}"/>
+							<Value>70</Value>
+						</RTPCValue>
+						<RTPCValue>
 							<GameParameterRef Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}"/>
 							<Value>1.27400768245839</Value>
 						</RTPCValue>

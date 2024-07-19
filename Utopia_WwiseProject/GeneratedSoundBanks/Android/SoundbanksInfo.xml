@@ -192,7 +192,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{45168E7E-0792-F802-187D-748EA8CD27C3}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8E903555-4403-148C-024E-DC1A6066991C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -207,6 +207,7 @@
 			<GameParameters>
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="731737678" Name="OPTION"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
 				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
@@ -226,7 +227,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{2EEB57B3-115E-F463-063B-5BF14D4C146B}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{F5EBBADF-88D7-EC6F-5697-A5AEC7D0F7E3}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -292,7 +293,7 @@
 				</File>
 				<File Id="327294676" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Mail_take_001.wav</ShortName>
-					<CachePath>SFX/Mail_take_001_818F3B66.wem</CachePath>
+					<CachePath>SFX/Mail_take_001_B52F8706.wem</CachePath>
 				</File>
 				<File Id="361543517" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>stamp.wav</ShortName>
@@ -807,5 +808,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{5585A408-4203-4FCF-42C6-FBD590C4F692}</FileHash>
+	<FileHash>{D0B8688F-C0CD-027C-CCA3-37D8564C75FA}</FileHash>
 </SoundBanksInfo>

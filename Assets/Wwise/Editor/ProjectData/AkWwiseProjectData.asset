@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 24e07c87093835479306e84d8ee884e1
     GuidInternal: 
-    m_lastTime: -8584821681171873010
+    m_lastTime: -8584802294843121445
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -1910,7 +1910,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584802953615346765
+    m_lastTime: -8584802294842947842
     List:
     - name: BOOL
       guid: b972b7cd27001549bc02afd17da6dc7d
@@ -1996,6 +1996,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: f1300da40ed4b440bec7cd5462971c4a
       Path: Game Parameters\Default Work Unit\INDEX2
+    - name: OPTION
+      guid: 35a65b972a9c3e46ae0a4be629293298
+      id: 731737678
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: OPTION
+        ObjectType: 13
+        guid: 35a65b972a9c3e46ae0a4be629293298
+      Path: Game Parameters\Default Work Unit\OPTION
     - name: TIMELAP
       guid: 5e235a81faa3a948b8b5800f68bf3307
       id: 3842075637
@@ -2165,7 +2179,7 @@ MonoBehaviour:
     m_lastTime: -8584821681076739805
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0500000006000000070000003e0000003f000000410000004200000045000000460000004f00000050000000ec000000ed0000002601000027010000ce010000cf0100000c0200000d020000
+  ExpandedWaapiItemIds: 05000000060000003e0000003f0000004200000045000000460000004f000000500000005200000053000000ec000000ed0000002601000027010000ce010000cf0100000c0200000d020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
