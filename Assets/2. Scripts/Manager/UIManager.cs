@@ -406,6 +406,8 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void SetHappinessPopUp(int amount, Vector3 position)
     {
+        if (eventRoulette.gameObject.activeSelf) return;
+
         string massage = amount < 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>";
 
         TemporayUI message = Instantiate(happinessMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
