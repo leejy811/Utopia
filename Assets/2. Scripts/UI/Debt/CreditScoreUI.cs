@@ -65,6 +65,7 @@ public class CreditScoreUI : MonoBehaviour, IObserver
         float elapsedTime = 0f;
         float totalChange = targetAmount - startAmount;
 
+        AkSoundEngine.PostEvent("Play_GraphFallDown", gameObject);
         while (elapsedTime < fillSeconds)
         {
             elapsedTime += Time.deltaTime;
