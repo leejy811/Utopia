@@ -12,6 +12,8 @@ public class PostProcessManager : MonoBehaviour
     private ColorGrading colorGrading;
     private Vignette vignette;
 
+    private float brightness;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -29,11 +31,13 @@ public class PostProcessManager : MonoBehaviour
         postProcess.profile.TryGetSettings(out vignette);
     }
 
-    public IEnumerator FadeInOut(float second, bool isIn)
+    public IEnumerator FadeInOut(float second, float value, bool isIn)
     {
-        Color targetColor = isIn ? Color.black : Color.white;
+        Color targetColor = isIn ? Color.white * value : Color.white * brightness;
         float curTime = 0;
         float t = 0;
+        brightness = colorGrading.colorFilter.value.grayscale;
+
         while (t < 1f)
         {
             curTime += Time.fixedDeltaTime;

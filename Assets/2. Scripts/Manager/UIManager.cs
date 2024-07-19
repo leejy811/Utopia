@@ -517,6 +517,7 @@ public class UIManager : MonoBehaviour, ISubject
 
         notifyObserver(EventState.None);
         RoutineManager.instance.DailyUpdate();
+        AkSoundEngine.PostEvent("Play_Turn_Move_Clock_001", gameObject);
     }
 
     public void OnClickSolveEvent(int index)

@@ -56,6 +56,7 @@ public class RoutineManager : MonoBehaviour
             StopCoroutine(lightCoroutine);
         Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
 
+        StartCoroutine(ColorGradingUpdate());
         mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
         {
             InputManager.canInput = true;
@@ -83,6 +84,15 @@ public class RoutineManager : MonoBehaviour
             mainLight.gameObject.transform.Rotate(Vector3.right * Time.fixedDeltaTime * lightDailySpeed);
             yield return new WaitForFixedUpdate();
         }
+    }
+
+    IEnumerator ColorGradingUpdate()
+    {
+        StartCoroutine(PostProcessManager.instance.FadeInOut(lightUpdateDuration / 2.0f, 0.1f, true));
+
+        yield return new WaitForSeconds(lightUpdateDuration / 2.0f);
+
+        StartCoroutine(PostProcessManager.instance.FadeInOut(lightUpdateDuration / 2.0f, 0.1f, false));
     }
 
     public void OnOffDailyLight(bool isOn)

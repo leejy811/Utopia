@@ -37,7 +37,7 @@ public class TimeLapseCamera : MonoBehaviour
     public void RotateCameraOff()
     {
         virtualCamera.transform.position -= new Vector3(1000, 0, 0);
-        virtualCamera.Priority = 10;
+        virtualCamera.Priority = 1;
     }
 
     void RotateCamera()
