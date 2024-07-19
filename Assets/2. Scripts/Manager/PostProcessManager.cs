@@ -13,6 +13,7 @@ public class PostProcessManager : MonoBehaviour
     private Vignette vignette;
 
     private float brightness;
+    private bool isFade;
 
     private void Awake()
     {
@@ -31,12 +32,21 @@ public class PostProcessManager : MonoBehaviour
         postProcess.profile.TryGetSettings(out vignette);
     }
 
-    public IEnumerator FadeInOut(float second, float value, bool isIn)
+    private void Update()
     {
-        Color targetColor = isIn ? Color.white * value : Color.white * brightness;
+        float angleX = RoutineManager.instance.mainLight.transform.localEulerAngles.x;
+
+        if (angleX > 0.0f && angleX < 90.0f && !isFade)
+            colorGrading.colorFilter.value = Color.white * (((angleX / 90.0f) * 0.9f) + 0.1f);
+    }
+
+    public IEnumerator FadeInOut(float second, bool isIn)
+    {
+        Color targetColor = isIn ? Color.black : Color.white * brightness;
         float curTime = 0;
         float t = 0;
         brightness = colorGrading.colorFilter.value.grayscale;
+        if(isIn) isFade = true;
 
         while (t < 1f)
         {
@@ -45,6 +55,8 @@ public class PostProcessManager : MonoBehaviour
             colorGrading.colorFilter.Interp(colorGrading.colorFilter.value, targetColor, t);
             yield return new WaitForFixedUpdate();
         }
+
+        if (!isIn) isFade = false;
     }
 
     public IEnumerator VignetteInOut(float second, float targetValue)
@@ -56,6 +68,21 @@ public class PostProcessManager : MonoBehaviour
             curTime += Time.fixedDeltaTime;
             t = curTime / second;
             vignette.intensity.Interp(vignette.intensity, targetValue, t);
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    public IEnumerator FadeUpdate(float second, float value)
+    {
+        Color targetColor = Color.white * value;
+        float curTime = 0;
+        float t = 0;
+
+        while (t < 1f)
+        {
+            curTime += Time.fixedDeltaTime;
+            t = curTime / second;
+            colorGrading.colorFilter.Interp(colorGrading.colorFilter.value, targetColor, t);
             yield return new WaitForFixedUpdate();
         }
     }

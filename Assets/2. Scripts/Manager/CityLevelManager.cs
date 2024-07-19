@@ -86,13 +86,13 @@ public class CityLevelManager : MonoBehaviour
         AkSoundEngine.PostEvent("Play_TImeLapsBGM", gameObject);
 
         cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
-        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, 0.0f, true));
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
         StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.45f));
         UIManager.instance.MovePanelAnim(2f, true);
 
         yield return new WaitForSeconds(2.0f);
 
-        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, 0.0f, false));
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, false));
 
         yield return new WaitForSeconds(2.0f);
 
@@ -130,14 +130,14 @@ public class CityLevelManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
 
-        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, 0.0f, true));
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
 
         yield return new WaitForSeconds(2.0f);
 
         AkSoundEngine.SetRTPCValue("TIMELAP", 1);
         AkSoundEngine.PostEvent("Stop_TImeLapsBGM", gameObject);
 
-        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, 0.0f, false));
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, false));
         StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.0f));
         UIManager.instance.MovePanelAnim(2f, false);
 
