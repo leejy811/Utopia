@@ -401,6 +401,7 @@ public class UIManager : MonoBehaviour, ISubject
     {
         TemporayUI message = Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(massage, position);
+        AkSoundEngine.PostEvent("Play_Deny_01", gameObject);
     }
 
     public void SetHappinessPopUp(int amount, Vector3 position)
