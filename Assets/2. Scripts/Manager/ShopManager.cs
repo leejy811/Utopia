@@ -190,7 +190,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState != BuyState.SolveBuilding && buyState != BuyState.EventCheck) return false;
         if (building.CheckFacility(type)) return false;
-        if (!PayMoney(250)) return false;
+        if (!PayMoney(150)) return false;
 
         building.BuyFacility(type);
 
