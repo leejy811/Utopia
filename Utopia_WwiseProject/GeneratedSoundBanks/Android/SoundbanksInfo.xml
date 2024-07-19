@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{1C2E172A-ED9D-8C9E-FBBC-C72BF50AD6B5}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{F2EEA2A5-E329-F08F-5120-C0C09C40EFEF}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -101,7 +101,7 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{F650A004-E4E3-9AFF-30B7-792802D1446C}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{297EA67A-0E94-BB6A-10BE-C3283A23A908}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -121,6 +121,10 @@
 					<ShortName>Slot_Spwan_01.wav</ShortName>
 					<CachePath>SFX/Slot_Spwan_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="650016289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MUI DENY SMALL Short Fast Click.wav</ShortName>
+					<CachePath>SFX/MUI DENY SMALL Short Fast Click_4D064DA1.wem</CachePath>
+				</File>
 				<File Id="748782326" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02.wav</ShortName>
 					<CachePath>SFX/PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02_FABA368C.wem</CachePath>
@@ -133,19 +137,15 @@
 					<ShortName>Slot_Drrrrrr_01.wav</ShortName>
 					<CachePath>SFX/Slot_Drrrrrr_01_D4609F6D.wem</CachePath>
 				</File>
-				<File Id="877076168" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>vth2_vnyl_perc_fx_denied.wav</ShortName>
-					<CachePath>SFX/vth2_vnyl_perc_fx_denied_818F3B66.wem</CachePath>
-				</File>
 				<File Id="925625941" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Rever_01.wav</ShortName>
 					<CachePath>SFX/Slot_Rever_01_93F42A0D.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
-				<Event Id="904270530" Name="Play_Deny_01" DurationType="OneShot" DurationMin="0.48517492" DurationMax="0.48517492">
+				<Event Id="904270530" Name="Play_Deny_01" DurationType="OneShot" DurationMin="0.27504364" DurationMax="0.27504364">
 					<MediaRefs>
-						<MediaRef Id="877076168"/>
+						<MediaRef Id="650016289"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="904270529" Name="Play_Deny_02" DurationType="OneShot" DurationMin="0.43383914" DurationMax="0.43383914">
@@ -192,7 +192,7 @@
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{AF23794F-B66B-643D-97FE-E8DA6FA54FD5}">
+		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{2FF5A4DA-A666-0A3A-CFD4-5620D54B63D8}">
 			<ShortName>BGM2</ShortName>
 			<Path>BGM2.bnk</Path>
 			<Media>
@@ -210,7 +210,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{8E903555-4403-148C-024E-DC1A6066991C}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{04745471-C4C9-024F-4DF5-185F2BAE798A}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -665,7 +665,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{054B809C-6083-AAD9-11AD-582B08068DF3}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{40AF8B0A-31A2-0CE5-9428-90C3F9250FA4}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -823,8 +823,9 @@
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B10F3DED-CFBD-7D16-D4FC-2C307E065B43}</FileHash>
+	<FileHash>{E62BACC5-2531-EDF8-60D0-1554CF4786A2}</FileHash>
 </SoundBanksInfo>

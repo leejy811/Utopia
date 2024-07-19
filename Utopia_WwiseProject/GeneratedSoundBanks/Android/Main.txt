@@ -25,6 +25,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1584507803	CLICK			\Default Work Unit\CLICK	
 	1761501017	BOOL			\Default Work Unit\BOOL	
 	2212414277	DIST			\Default Work Unit\DIST	
+	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	32765491	shs_oat_ambience_construction_work_1_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\shs_oat_ambience_construction_work_1_jackhammer_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_1_jackhammer		1918432

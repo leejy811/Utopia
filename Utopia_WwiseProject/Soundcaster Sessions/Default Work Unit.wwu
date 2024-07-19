@@ -26,18 +26,30 @@
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Deny_01" ID="{9268F87C-049D-4974-A2E3-BC0801A21CCB}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<ObjectRef Name="Play_TImeLapsBGM" ID="{8F4B6598-1D32-4961-99A7-610B440024D7}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Stop_ForestAmbienceInLobby" ID="{4039E80C-4910-48DE-9968-D7600F9D172C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
 							<Position X="3" Y="0"/>
 						</Module>
+						<Module>
+							<ObjectRef Name="Stop_TImeLapsBGM" ID="{4C24E307-205F-4FDA-894D-90D01338E8B1}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_BGM" ID="{8B0F5FF7-678D-4AA6-A1A4-9A7F337EC94D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_BGM4" ID="{849790AB-77ED-4977-8E30-D33F7F1D663A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<Position X="5" Y="1"/>
+						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1.25224071702945</Value>
+							<Value>1.21895006402049</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
@@ -57,7 +69,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}"/>
-							<Value>1.27400768245839</Value>
+							<Value>1.2</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
@@ -69,7 +81,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>0.116880746950933</Value>
+							<Value>53.694</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">

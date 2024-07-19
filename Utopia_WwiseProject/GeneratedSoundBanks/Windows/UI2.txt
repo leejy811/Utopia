@@ -16,9 +16,9 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	444873937	Slot_Effect_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Effect_Spwan_01_7EE5D2A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Effect_Spwan_01		6108
 	488455765	SlotMachine_enter_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SlotMachine_enter_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\SlotMachine_enter_001		6689
 	594404784	Slot_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Spwan_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Spwan_01		13895
+	650016289	Deny_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\MUI DENY SMALL Short Fast Click_167EAF51.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Deny_01		2518
 	748782326	Deny_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02_C28DB17C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Deny_02		6389
 	749327532	Slot_Stop_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Stop_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Stop_01		1504
 	809211139	Slot_Drrrrrr_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Drrrrrr_01_5FFF549D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Drrrrrr_01		115339
-	877076168	Deny_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\vth2_vnyl_perc_fx_denied_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Deny_01		9768
 	925625941	Slot_Rever_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Rever_01_58381DFD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Rever_01		7782
 

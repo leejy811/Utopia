@@ -66,6 +66,23 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="buildingsound" ID="{3502F2A5-7402-41C9-86C9-0863459EEC6D}" ShortID="755163049">
+					<PropertyList>
+						<Property Name="MaxSoundPerInstance" Type="int16">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+						<Property Name="UseMaxSoundPerInstance" Type="bool">
+							<ValueList>
+								<Value>True</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -855,6 +872,51 @@
 											</RTPC>
 										</Local>
 									</Reference>
+									<Reference>
+										<Local>
+											<RTPC Name="" ID="{A09F2602-A605-4E69-AB27-1B52A52B09B3}" ShortID="860516400">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{E0A80AF2-EF60-42AB-A835-5B4653DFCC3D}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>1</XPos>
+																		<YPos>0</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.50092</XPos>
+																		<YPos>0</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>1.50192</XPos>
+																		<YPos>-199.99999</YPos>
+																		<Flags>0</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>2</XPos>
+																		<YPos>-200</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</Local>
+									</Reference>
 								</ObjectList>
 							</ObjectLists>
 							<ActiveSourceList>
@@ -866,13 +928,13 @@
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
-								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="5">
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{CE488F82-C93D-4737-A700-09504EC5FBE4}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="10"/>
+													<Property Name="Max" Type="Real64" Value="1"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -998,13 +1060,13 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>40.22593</XPos>
+																				<XPos>39.99903</XPos>
 																				<YPos>-200</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>40.35851</XPos>
-																				<YPos>-0.07562</YPos>
+																				<XPos>40.00003</XPos>
+																				<YPos>0.00743</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -1108,7 +1170,7 @@
 											</Reference>
 											<Reference>
 												<Local>
-													<RTPC Name="" ID="{C90B14A0-6C94-4A43-96A0-043F1D786C0C}" ShortID="726320791">
+													<RTPC Name="" ID="{18191181-8F8F-4190-A50D-6F102165648F}" ShortID="566592769">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
@@ -1118,7 +1180,7 @@
 															</Reference>
 															<Reference Name="Curve">
 																<Custom>
-																	<Curve Name="" ID="{C9748E4B-1671-4D5E-9B67-FF364805D554}">
+																	<Curve Name="" ID="{658E0E49-6B1B-4D5E-B8C3-03D48085CCD4}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="3"/>
 																		</PropertyList>
@@ -1129,13 +1191,13 @@
 																				<Flags>5</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>40.13766</XPos>
+																				<XPos>39.99903</XPos>
 																				<YPos>-200</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
-																				<XPos>40.13866</XPos>
-																				<YPos>-0.22931</YPos>
+																				<XPos>40.00003</XPos>
+																				<YPos>0.00742999999999938</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -1169,8 +1231,7 @@
 									<ChildrenList>
 										<SourcePlugin Name="Silence" ID="{6A510D6F-9076-4A39-8505-F8CC51ADB012}" ShortID="1000201217" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
 											<PropertyList>
-												<Property Name="Length" Type="Real32" Value="2"/>
-												<Property Name="LengthMax" Type="Real32" Value="10"/>
+												<Property Name="Length" Type="Real32" Value="0.5"/>
 											</PropertyList>
 											<Language>SFX</Language>
 										</SourcePlugin>
@@ -1256,7 +1317,7 @@
 											</Reference>
 											<Reference>
 												<Local>
-													<RTPC Name="" ID="{CFDF3065-3213-425F-9907-6448990E18B5}" ShortID="605491683">
+													<RTPC Name="" ID="{8E3D892B-5768-4C5A-B582-29CFBBAB491D}" ShortID="624993685">
 														<PropertyList>
 															<Property Name="PropertyName" Type="string" Value="Volume"/>
 														</PropertyList>
@@ -1266,7 +1327,7 @@
 															</Reference>
 															<Reference Name="Curve">
 																<Custom>
-																	<Curve Name="" ID="{0519BCD0-238C-44FA-8A13-9D08CA9221FA}">
+																	<Curve Name="" ID="{D2BC2D38-41A7-4416-A412-A88F4320CF24}">
 																		<PropertyList>
 																			<Property Name="Flags" Type="int32" Value="3"/>
 																		</PropertyList>
@@ -1283,7 +1344,7 @@
 																			</Point>
 																			<Point>
 																				<XPos>40.2667</XPos>
-																				<YPos>-0.22931</YPos>
+																				<YPos>-0.229309999999998</YPos>
 																				<Flags>0</Flags>
 																			</Point>
 																			<Point>
@@ -9624,7 +9685,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -9637,16 +9698,21 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="vth2_vnyl_perc_fx_denied" ID="{BD772094-B8F8-4C09-A400-733D3CBCCD36}">
+								<AudioFileSource Name="MUI DENY SMALL Short Fast Click" ID="{228CB6EC-0AF0-47E4-BFAD-1A6E6039789A}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.156942188253739"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.388225413048724"/>
+									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>vth2_vnyl_perc_fx_denied.wav</AudioFile>
+									<AudioFile>MUI DENY SMALL Short Fast Click.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="877076168"/>
+										<MediaID ID="650016289"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="vth2_vnyl_perc_fx_denied" ID="{BD772094-B8F8-4C09-A400-733D3CBCCD36}" Platform="Linked"/>
+								<ActiveSource Name="MUI DENY SMALL Short Fast Click" ID="{228CB6EC-0AF0-47E4-BFAD-1A6E6039789A}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Deny_02" ID="{9D471009-1EE7-463F-9AB7-061B8E1AB987}" ShortID="927082357">

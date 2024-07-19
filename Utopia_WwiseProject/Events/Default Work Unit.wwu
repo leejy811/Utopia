@@ -83,6 +83,9 @@
 				<Event Name="Play_BGM" ID="{8B0F5FF7-678D-4AA6-A1A4-9A7F337EC94D}">
 					<ChildrenList>
 						<Action Name="" ID="{C564B8D3-E03D-4B81-B259-E4335AD7EDA6}" ShortID="505225691">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BGM" ID="{8D70AA5C-DE1F-4267-88EC-A079CA151328}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
@@ -723,6 +726,9 @@
 				<Event Name="Play_BGM4" ID="{849790AB-77ED-4977-8E30-D33F7F1D663A}">
 					<ChildrenList>
 						<Action Name="" ID="{F3317C96-8728-4705-A33A-0B906CD7A78D}" ShortID="335529326">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BGM4" ID="{6AF6144E-1EA1-4F74-B01C-2D8AC5AB755D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
@@ -734,6 +740,9 @@
 				<Event Name="Play_BGM5" ID="{728B2576-9189-4A30-9F3A-E6823904934C}">
 					<ChildrenList>
 						<Action Name="" ID="{5A2EEB54-F6F0-47B9-AC50-A28CCAF191E0}" ShortID="105416076">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BGM5" ID="{B9C15F7B-44A2-44AA-96C0-3554495B81F3}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
@@ -981,6 +990,7 @@
 						<Action Name="" ID="{87E7806D-6BC6-4AF6-98CA-D93C9A6ABC6B}" ShortID="201188666">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -1034,6 +1044,7 @@
 						<Action Name="" ID="{5645D7BF-535A-4FCB-94FD-0590428D7F28}" ShortID="83660908">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">

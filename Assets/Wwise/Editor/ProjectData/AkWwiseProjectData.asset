@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584802953615262450
+    m_lastTime: -8584802266099777228
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -150,7 +150,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584802953615758445
+    m_lastTime: -8584802181351455253
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1172,6 +1172,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.7253125
       minDuration: 0.7253125
+    - name: Play_Deny_01
+      guid: 2f952aaee5117b45984af16885a753aa
+      id: 904270530
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Deny_01
+        ObjectType: 3
+        guid: 2f952aaee5117b45984af16885a753aa
+      Path: Events\Default Work Unit\Play_Deny_01
+      maxAttenuation: 0
+      maxDuration: 0.27504364
+      minDuration: 0.27504364
+    - name: Play_Deny_02
+      guid: 9c6f06012351014a99bb563c66f94685
+      id: 904270529
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Deny_02
+        ObjectType: 3
+        guid: 9c6f06012351014a99bb563c66f94685
+      Path: Events\Default Work Unit\Play_Deny_02
+      maxAttenuation: 0
+      maxDuration: 0.43383914
+      minDuration: 0.43383914
     - name: Play_ForestAmbience
       guid: 4d99023123977c449b5c80ce8afeb234
       id: 3149538809
@@ -1910,7 +1944,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584802294842947842
+    m_lastTime: -8584802203582409274
     List:
     - name: BOOL
       guid: b972b7cd27001549bc02afd17da6dc7d
@@ -2179,7 +2213,7 @@ MonoBehaviour:
     m_lastTime: -8584821681076739805
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000003e0000003f0000004200000045000000460000004f000000500000005200000053000000ec000000ed0000002601000027010000ce010000cf0100000c0200000d020000
+  ExpandedWaapiItemIds: 05000000060000003e0000003f0000004200000045000000460000004f000000500000005200000053000000ec000000ed00000026010000270100003501000036010000ce010000cf0100000c0200000d020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
