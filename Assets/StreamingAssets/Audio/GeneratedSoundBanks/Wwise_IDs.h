@@ -62,6 +62,8 @@ namespace AK
         static const AkUniqueID PLAY_D_DAY_POPUP_001 = 1518229334U;
         static const AkUniqueID PLAY_DAY_NIGHT = 2687999423U;
         static const AkUniqueID PLAY_DEMOLITION_001_V1 = 669897392U;
+        static const AkUniqueID PLAY_DENY_01 = 904270530U;
+        static const AkUniqueID PLAY_DENY_02 = 904270529U;
         static const AkUniqueID PLAY_FORESTAMBIENCE = 3149538809U;
         static const AkUniqueID PLAY_FORESTAMBIENCEINLOBBY = 2968224064U;
         static const AkUniqueID PLAY_GRAPH_FALL_001 = 1882539238U;
