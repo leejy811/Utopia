@@ -10,7 +10,6 @@ public class BuildingListUI : ListUI
 
     public override void SetValue(int type)
     {
-        Debug.Log(type);
         for(int i = 0;i < System.Enum.GetValues(typeof(BuildingType)).Length; i++)
         {
             if (type == i)
@@ -18,8 +17,6 @@ public class BuildingListUI : ListUI
                 for(int j = 0;j < costText.Length;j++)
                 {
                     Building building = BuildingSpawner.instance.buildingPrefabs[buildingCount[i] + j].GetComponent<Building>();
-
-                    Debug.Log(building);
                     costText[j].text = ShopManager.instance.CalculateBuildingCost(building, buildingCount[i] + j).ToString("C");
 
                     bool checkGrade = CityLevelManager.instance.CheckBuildingLevel(building);

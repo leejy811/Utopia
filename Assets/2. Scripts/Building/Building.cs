@@ -120,6 +120,8 @@ public class Building : MonoBehaviour
 
         if (newEvent.type == EventType.Event)
             ApplyEventEffect(newEvent.GetEffectValue(newEvent.curDay), newEvent.valueType, true);
+        else if (newEvent.type == EventType.Problem)
+            ApplyEventProblem(newEvent, false);
 
         if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, true);
@@ -140,10 +142,12 @@ public class Building : MonoBehaviour
             Event curevent = curEvents[i];
             curevent.curDay++;
 
-            if(curevent.curDay > curevent.effectValue.Count)
+            if (curevent.curDay >= curevent.effectValue.Count)
             {
                 if (curevent.type == EventType.Event)
-                    ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 2), curevent.valueType, false);
+                {
+                    ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 1), curevent.valueType, false);
+                }
                 removeIdx.Add(i);
                 continue;
             }
@@ -252,23 +256,12 @@ public class Building : MonoBehaviour
         float percent = enable ? ((100.0f + amount) / 100.0f) : (100.0f / (100.0f + amount));
         value.cur = value.cur * percent;
         values[type] = value;
-
-        //if((value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Include)
-        //    || (value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.Less))
-        //    ApplyInfluenceToTile((int)(influencePower * 0.5f));
-        //else if ((value.CheckBoundary() == BoundaryType.Include && values[type].CheckBoundary() == BoundaryType.More)
-        //    || (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.Include))
-        //    ApplyInfluenceToTile((int)(influencePower * -0.5f));
-        //else if(value.CheckBoundary() == BoundaryType.More && values[type].CheckBoundary() == BoundaryType.Less)
-        //    ApplyInfluenceToTile(influencePower);
-        //else if (value.CheckBoundary() == BoundaryType.Less && values[type].CheckBoundary() == BoundaryType.More)
-        //    ApplyInfluenceToTile(-influencePower);
     }
 
     public void ApplyEventProblem(Event curevent, bool isAdd)
     {
         int sign = isAdd ? 1 : -1;
-        int value = curevent.GetEffectValue(curevent.curDay - 1) * sign;
+        int value = curevent.GetEffectValue(curevent.curDay) * sign;
         SetHappiness(value);
         RoutineManager.instance.SetCityHappiness(value, 0);
     }

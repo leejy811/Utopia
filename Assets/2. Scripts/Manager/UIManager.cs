@@ -560,7 +560,6 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (eventRoulette.state == RouletteState.While || eventRoulette.state == RouletteState.Before) return;
         if (!EventManager.instance.PayRoulleteCost()) return;
-        EventManager.instance.RandomRoulette();
         eventRoulette.OnButtonClick();
     }
 
@@ -568,8 +567,6 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (EventManager.instance.CheckEventCondition())
         {
-            EventManager.instance.CheckEvents();
-            eventRoulette.SetPossibleEvent(EventManager.instance.possibleEvents.ToArray());
             notifyObserver(EventState.SlotMachine);
         }
         else

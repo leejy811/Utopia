@@ -126,6 +126,8 @@ public class EventManager : MonoBehaviour
             }
         }
 
+        UIManager.instance.eventRoulette.SetPossibleEvent(possibleEvents.ToArray());
+
         targetBuildings = buildings;
         globalEvents.Clear();
     }

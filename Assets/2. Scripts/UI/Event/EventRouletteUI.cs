@@ -89,7 +89,6 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         if (idx == slots.Length - 1)
         {
             AkSoundEngine.PostEvent("Stop_Slot_Drrrrrr_01", gameObject);
-            EventManager.instance.EffectUpdate();
 
             for (int i = 0; i < isDuplicate.Length; i++)
             {
@@ -148,6 +147,8 @@ public class EventRouletteUI : MonoBehaviour, IObserver
 
     private void StartSlot()
     {
+        EventManager.instance.RandomRoulette();
+
         PlayLeverAnim();
         state = RouletteState.While;
 
@@ -184,6 +185,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
             yield return new WaitForSeconds(resultOffSecond / 2.0f);
         }
 
+        EventManager.instance.CheckEvents();
         StartSlot();
     }
 
@@ -235,6 +237,14 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         possibleEvents = events;
     }
 
+    public void SetNullEvnet()
+    {
+        for (int i = 0; i < slotMats.Length; i++)
+        {
+            slotMats[i].mainTexture = null;
+        }
+    }
+
     private void InitSlot()
     {
         for (int i = 0; i < slots.Length; i++)
@@ -259,6 +269,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         InitSlot();
         costText.text = GetCommaText(EventManager.instance.cost);
 
+        EventManager.instance.CheckEvents();
         AkSoundEngine.PostEvent("Play_Slot_Spwan_01", gameObject);
         AkSoundEngine.SetRTPCValue("CLICK", 2);
     }
