@@ -301,7 +301,7 @@ public class EventManager : MonoBehaviour
                 if (ReferenceEquals(eventBuildings[i], building))
                 {
                     ShopManager.instance.SetObjectColor(eventBuildings[i].gameObject, Color.white);
-
+                    
                     if (UIManager.instance.eventNotify.gameObject.activeSelf)
                     {
                         if (eventBuildings.Count == 1)

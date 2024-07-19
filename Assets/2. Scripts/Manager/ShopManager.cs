@@ -214,8 +214,13 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState == BuyState.SolveBuilding)
             UIManager.instance.SetBuildingIntroPopUp(building);
-        else if(buyState == BuyState.EventCheck && building.GetEventProblemCount() != 0)
-            UIManager.instance.SetEventNotifyValue(building);
+        else if (buyState == BuyState.EventCheck)
+        {
+            if (building.GetEventProblemCount() != 0)
+                UIManager.instance.SetEventNotifyValue(building);
+            else if (EventManager.instance.eventBuildings.Count != 0)
+                UIManager.instance.SetEventNotifyValue(EventManager.instance.eventBuildings[UIManager.instance.eventNotify.curIndex]);
+        }
     }
 
     public void CheckBuyBuilding(Transform tileTrans)
