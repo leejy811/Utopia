@@ -56,10 +56,10 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         float rotateAngle = 360.0f * prevRotateNum;
         if (slotIdx[idx] > 3)
             rotateAngle *= -1;
-        slots[idx].transform.DOLocalRotate(slots[idx].transform.localEulerAngles + Vector3.right * rotateAngle, rotateSecond, RotateMode.FastBeyond360)
+        slots[idx].transform.DOLocalRotate(slots[idx].transform.localEulerAngles + Vector3.right * rotateAngle * (idx + 1), rotateSecond * (idx + 1), RotateMode.FastBeyond360)
             .SetEase(Ease.Linear);
 
-        yield return new WaitForSeconds(rotateSecond);
+        yield return new WaitForSeconds(rotateSecond * (idx + 1));
 
         while (true)
         {
