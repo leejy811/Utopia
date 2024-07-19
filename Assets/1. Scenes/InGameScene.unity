@@ -34541,7 +34541,7 @@ GameObject:
   - component: {fileID: 551505989}
   - component: {fileID: 551505992}
   - component: {fileID: 551505991}
-  - component: {fileID: 551505990}
+  - component: {fileID: 551505993}
   m_Layer: 5
   m_Name: PleaseMoney
   m_TagString: Untagged
@@ -34570,21 +34570,6 @@ RectTransform:
   m_AnchoredPosition: {x: 17, y: 200}
   m_SizeDelta: {x: 220, y: 400}
   m_Pivot: {x: 0.5, y: 1}
---- !u!114 &551505990
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551505988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8124600336dcca3448cac30e5fad42ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 9
-  moneyText: {fileID: 367157425}
-  dayText: {fileID: 44282908}
 --- !u!114 &551505991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34623,6 +34608,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551505988}
   m_CullTransparentMesh: 1
+--- !u!114 &551505993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551505988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7939316882967dd48aeca2e7a4e3ab91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 9
+  moneyText: {fileID: 367157425}
+  dayText: {fileID: 44282908}
+  mailAnim: {fileID: 0}
+  mailAnimSecond: 0
+  uiMoveSecond: 0
+  playMailAnim: 0
 --- !u!1 &551599138
 GameObject:
   m_ObjectHideFlags: 0
@@ -57153,10 +57157,13 @@ MonoBehaviour:
   MovetextObject: {fileID: 1099685350}
   ActivatetextObject: {fileID: 359463681}
   knobImage: {fileID: 1728269513}
-  sceneButton: {fileID: 1169270424}
+  quitButton: {fileID: 1169270424}
+  helpImage: {fileID: 1257574733}
+  helpText: {fileID: 1232287174}
   numberChangeSpeed: 0.1
   activateSeconds: 3
   fillSeconds: 1.8
+  waitSeconds: 1
   fallSeconds: 0.3
   sizecontrollSeconds: 0.4
   creditScore: 64000000460000001e00000000000000
@@ -67126,6 +67133,7 @@ GameObject:
   - component: {fileID: 1169270426}
   - component: {fileID: 1169270425}
   - component: {fileID: 1169270424}
+  - component: {fileID: 1169270427}
   m_Layer: 5
   m_Name: GoLobbyBtn
   m_TagString: CanOverUI
@@ -67198,9 +67206,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 408462063}
-        m_TargetAssemblyTypeName: UI0710, Assembly-CSharp
-        m_MethodName: ChangeScene
+      - m_Target: {fileID: 1169270427}
+        m_TargetAssemblyTypeName: LobbyQuit, Assembly-CSharp
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -67248,6 +67256,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1169270422}
   m_CullTransparentMesh: 1
+--- !u!114 &1169270427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169270422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14ad8da126098e409a4e052df44bbd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1169548031
 GameObject:
   m_ObjectHideFlags: 0
@@ -89784,6 +89804,7 @@ MonoBehaviour:
   mailAnim: {fileID: 685857336}
   mailAnimSecond: 1
   uiMoveSecond: 1
+  playMailAnim: 1
 --- !u!1 &1565803193
 GameObject:
   m_ObjectHideFlags: 0
@@ -111411,18 +111432,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 479000928}
-        m_TargetAssemblyTypeName: BottonSound, Assembly-CSharp
-        m_MethodName: Click
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Play_Pay_001
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1876277519

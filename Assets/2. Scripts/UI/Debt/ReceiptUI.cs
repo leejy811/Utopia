@@ -12,4 +12,10 @@ public class ReceiptUI : DebtUI
         AkSoundEngine.PostEvent("Play_stamp", gameObject);
         AkSoundEngine.PostEvent("Play_UI_papersound_001", gameObject);
     }
+
+    private void OnDisable()
+    {
+        int week = RoutineManager.instance.GetWeekOfYear() + 1;
+        CityLevelManager.instance.UpdateCityType(week);
+    }
 }

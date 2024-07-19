@@ -9,11 +9,13 @@ public class PleaseMoneyUI : DebtUI
     public Animator mailAnim;
     public float mailAnimSecond;
     public float uiMoveSecond;
+    public bool playMailAnim;
 
     protected override void SetValue()
     {
         base.SetValue();
-        StartCoroutine(PlayMailAnim());
+        if (playMailAnim)
+            StartCoroutine(PlayMailAnim());
     }
 
     protected override void CalculateValue()

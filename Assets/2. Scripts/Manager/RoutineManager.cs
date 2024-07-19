@@ -213,6 +213,8 @@ public class RoutineManager : MonoBehaviour
         if (isPay) return;
         if (!ShopManager.instance.PayMoney(debt)) return;
 
+        AkSoundEngine.PostEvent("Play_Pay_001", gameObject);
+
         UIManager.instance.notifyObserver(EventState.Receipt);
         debt = 0;
         UIManager.instance.SetDebt();

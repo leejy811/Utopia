@@ -128,6 +128,9 @@ public class CityLevelManager : MonoBehaviour
 
     public IEnumerator StopTimeLapse()
     {
+        AkSoundEngine.SetRTPCValue("TIMELAP", 1);
+        AkSoundEngine.PostEvent("Stop_TImeLapsBGM", gameObject);
+
         yield return new WaitForSeconds(2.0f);
 
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
@@ -142,7 +145,5 @@ public class CityLevelManager : MonoBehaviour
 
         RoutineManager.instance.OnOffDailyLight(true);
         LevelUp();
-        AkSoundEngine.SetRTPCValue("TIMELAP", 1);
-        AkSoundEngine.PostEvent("Stop_TImeLapsBGM", gameObject);
     }
 }

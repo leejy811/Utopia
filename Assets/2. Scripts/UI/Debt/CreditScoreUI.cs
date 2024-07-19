@@ -12,12 +12,15 @@ public class CreditScoreUI : MonoBehaviour, IObserver
     public TextMeshProUGUI MovetextObject;
     public TextMeshProUGUI ActivatetextObject;
     public Image knobImage;
-    public Button sceneButton;
+    public Button quitButton;
+    public Image helpImage;
+    public TextMeshProUGUI helpText;
 
     [Header("Speed Parameter")]
     public float numberChangeSpeed = 0.1f;
     public float activateSeconds = 5.3f;
     public float fillSeconds = 2f;
+    public float waitSeconds = 1f;
     public float fallSeconds = 1.3f;
     public float sizecontrollSeconds = 0.3f;
 
@@ -25,89 +28,35 @@ public class CreditScoreUI : MonoBehaviour, IObserver
     public int[] creditScore;
     public Gradient scoreColor;
 
-    // 주석 미표기 함수는 내부 함수, 사용 X
-
-
-    /// <summary>
-    ///  신용점수 그래프 및 숫자표기
-    /// </summary>
-    /// <param name="firstNum"></시작 숫자(신용점수)>
-    /// <param name="secondNum"></끝나는 숫자(신용점수)>
-    /// <returns></returns>
     IEnumerator FillKnob(float firstNum, float secondNum)
     {
         knobImage.fillAmount = firstNum / 100f;
 
-        if (knobImage != null)
-        {
-            RectTransform rectTransform = knobImage.GetComponent<RectTransform>();
-            StartCoroutine(MoveTextDown((int)firstNum, (int)secondNum));
-            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 275, fallSeconds));
+        StartCoroutine(MoveTextDown((int)firstNum, (int)secondNum));
 
-            yield return new WaitForSeconds(0f);
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
+        knobImage.transform.localPosition = new Vector3(knobImage.transform.localPosition.x, 500.0f, knobImage.transform.localPosition.z);
+        knobImage.transform.DOLocalMoveY(0.0f, fallSeconds);
+        yield return new WaitForSeconds(fallSeconds + waitSeconds);
 
         yield return StartCoroutine(FillToAmount(secondNum / 100f));
     }
 
-    /// <summary>
-    ///  신용점수 변경 후 텍스트 생성 함수
-    /// </summary>
     public IEnumerator ActivateTextObject(TextMeshProUGUI ActivatetextObject, string text)
     {
         ActivatetextObject.text = text;//표시할 텍스트
-        ActivatetextObject.fontSize = 1f;
 
         yield return new WaitForSeconds(activateSeconds);
-        if (ActivatetextObject != null)
-        {
-            ActivatetextObject.gameObject.SetActive(true);
-            Sequence sequence = DOTween.Sequence();
-            sequence.Join(DOTween.To(() => ActivatetextObject.fontSize, x => ActivatetextObject.fontSize = x, 15f, sizecontrollSeconds));
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
+        ActivatetextObject.gameObject.SetActive(true);
+        ActivatetextObject.color -= new Color(0, 0, 0, 1);
+        ActivatetextObject.DOFade(1.0f, sizecontrollSeconds);
     }
 
-    /// <summary>
-    ///  신용점수 변경 후 버튼 생성 함수
-    /// </summary>
-    public IEnumerator ActivateButtonObject(Button sceneButton)
+    public IEnumerator ActivateGraphicObject(Graphic targetGraphic)
     {
         yield return new WaitForSeconds(activateSeconds);
-        if (sceneButton != null)
-        {
-            sceneButton.transform.localScale = Vector3.zero;
-            sceneButton.gameObject.SetActive(true);
-            sceneButton.transform.DOScale(Vector3.one, sizecontrollSeconds);
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
-    }
-
-    IEnumerator MoveToYPosition(RectTransform rectTransform, float targetY, float duration)
-    {
-        Vector3 startPosition = rectTransform.localPosition;
-        Vector3 endPosition = new Vector3(startPosition.x, targetY, startPosition.z);
-        float elapsedTime = 0f;
-
-        while (elapsedTime < duration)
-        {
-            elapsedTime += Time.deltaTime;
-            float linearT = elapsedTime / duration;
-            rectTransform.localPosition = Vector3.Lerp(startPosition, endPosition, linearT);
-            yield return null;
-        }
-
-        rectTransform.localPosition = endPosition;
+        targetGraphic.color -= new Color(0, 0, 0, 1);
+        targetGraphic.gameObject.SetActive(true);
+        targetGraphic.DOFade(1.0f, sizecontrollSeconds);
     }
 
     IEnumerator FillToAmount(float targetAmount)
@@ -131,18 +80,9 @@ public class CreditScoreUI : MonoBehaviour, IObserver
 
     public IEnumerator MoveTextDown(int startNumber, int endNumber)
     {
-        if (MovetextObject != null)
-        {
-            RectTransform rectTransform = MovetextObject.GetComponent<RectTransform>();
-            MovetextObject.text = startNumber.ToString();
-            yield return StartCoroutine(MoveToYPosition(rectTransform, rectTransform.localPosition.y - 275, fallSeconds));
-            yield return new WaitForSeconds(0f);
-            yield return StartCoroutine(MoveTextOverTime(startNumber, endNumber, fillSeconds));
-        }
-        else
-        {
-            Debug.LogWarning("뭔가가 뭔가임");
-        }
+        MovetextObject.text = startNumber.ToString();
+        yield return new WaitForSeconds(fallSeconds + waitSeconds);
+        StartCoroutine(MoveTextOverTime(startNumber, endNumber, fillSeconds));
     }
 
     private IEnumerator MoveTextOverTime(int startNumber, int endNumber, float changeSeconds)
@@ -178,30 +118,34 @@ public class CreditScoreUI : MonoBehaviour, IObserver
         if (state == EventState.CreditScore)
         {
             gameObject.SetActive(true);
-            sceneButton.gameObject.SetActive(false);
-            string text = "할부금을 지불하지 않아 신용 점수가 하락하였습니다.\n\n 최대한 빠르게 대금을 지불하세요.";
+            quitButton.gameObject.SetActive(false);
+            string text = "할부금을 납부하지 않아 신용 점수가 하락하였습니다.\n\n 최대한 빠르게 할부금을 납부하세요.";
             int creditRating = RoutineManager.instance.creditRating;
 
             StartCoroutine(FillKnob(creditScore[creditRating - 1], creditScore[creditRating]));
             StartCoroutine(ActivateTextObject(ActivatetextObject, text));
+            StartCoroutine(ActivateTextObject(helpText, "닫기"));
+            StartCoroutine(ActivateGraphicObject(helpImage));
             StartCoroutine(UnLockInput());
         }
         else if (state == EventState.GameOver)
         {
             gameObject.SetActive(true);
+            helpImage.gameObject.SetActive(false);
+            helpText.gameObject.SetActive(false);
             string text = "도시가 파산하였습니다.";
             int creditRating = RoutineManager.instance.creditRating;
 
             StartCoroutine(FillKnob(creditScore[creditRating - 1], creditScore[creditRating]));
             StartCoroutine(ActivateTextObject(ActivatetextObject, text));
-            StartCoroutine(ActivateButtonObject(sceneButton));
+            StartCoroutine(ActivateGraphicObject(quitButton.targetGraphic));
         }
         else
         {
-            knobImage.transform.localPosition = new Vector3(0, 366, 0);
-            MovetextObject.transform.localPosition = new Vector3(0, 366, 0);
             ActivatetextObject.gameObject.SetActive(false);
-            sceneButton.gameObject.SetActive(false);
+            quitButton.gameObject.SetActive(false);
+            helpImage.gameObject.SetActive(false);
+            helpText.gameObject.SetActive(false);
             gameObject.SetActive(false);
         }
     }

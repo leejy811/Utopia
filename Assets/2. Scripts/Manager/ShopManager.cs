@@ -131,19 +131,19 @@ public class ShopManager : MonoBehaviour, IObserver
         }
     }
 
-    public float CalculateBuildingCostWeight()
+    public float CalculateBuildingCostWeight(int index)
     {
         float coefficient = 0.5f;
         float baseValue = 1.08f;
         
-        return coefficient * (Mathf.Pow(baseValue, (BuildingSpawner.instance.buildingCount[curPickIndex]))-1);
+        return coefficient * (Mathf.Pow(baseValue, (BuildingSpawner.instance.buildingCount[index]))-1);
     }
 
     public void BuyBuilding(Transform spawnTrans)
     {
-        int cost = CalculateBuildingCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>());
+        Building building = BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>();
+        int cost = CalculateBuildingCost(building, curPickIndex);
 
-        //int cost = CalculateCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>().cost * costWeight);
         Tile tile = spawnTrans.gameObject.GetComponent<Tile>();
 
         if (buyState != BuyState.BuyBuilding) return;
@@ -152,6 +152,8 @@ public class ShopManager : MonoBehaviour, IObserver
 
         spawnTrans.rotation = curPickObject.transform.rotation;
         BuildingSpawner.instance.PlaceBuilding(curPickIndex, spawnTrans);
+
+        UIManager.instance.SetBuildingListValue((int)building.type);
     }
 
     public void SellBuilding()
@@ -228,7 +230,7 @@ public class ShopManager : MonoBehaviour, IObserver
             int cost = 0;
             if (buyState == BuyState.BuyBuilding)
             {
-                cost = CalculateBuildingCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>());
+                cost = CalculateBuildingCost(BuildingSpawner.instance.buildingPrefabs[curPickIndex].GetComponent<Building>(), curPickIndex);
             }
             else if (buyState == BuyState.BuildTile)
                 cost = Grid.instance.tileCost[curPickIndex + 1];
@@ -312,9 +314,9 @@ public class ShopManager : MonoBehaviour, IObserver
         return cost;
     }
 
-    public int CalculateBuildingCost(Building building)
+    public int CalculateBuildingCost(Building building, int index)
     {
-        float costWeight = CalculateBuildingCostWeight();
+        float costWeight = CalculateBuildingCostWeight(index);
         int originalCost = building.cost;
         return CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
     }
