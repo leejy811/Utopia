@@ -22,6 +22,7 @@ public class InputManager : MonoBehaviour, IObserver
     void Start()
     {
         mainCamera = Camera.main;
+        SetCanInput(false);
     }
 
     void Update()
@@ -75,7 +76,7 @@ public class InputManager : MonoBehaviour, IObserver
         {
             UIManager.instance.notifyObserver(EventState.Menu);
             ShopManager.instance.ChangeState(BuyState.None);
-            canInput = false;
+            SetCanInput(false);
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
@@ -190,7 +191,7 @@ public class InputManager : MonoBehaviour, IObserver
         if (Input.GetMouseButtonDown(1))
         {
             UIManager.instance.notifyObserver(EventState.None);
-            canInput = true;
+            SetCanInput(true);
         }
     }
 
@@ -240,8 +241,9 @@ public class InputManager : MonoBehaviour, IObserver
             onAlpha2 = false;
     }
 
-    public void SetCanInput(bool canInput)
+    public static void SetCanInput(bool canInput)
     {
         InputManager.canInput = canInput;
+        UIManager.instance.inputPanel.SetActive(!canInput);
     }
 }

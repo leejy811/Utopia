@@ -50,7 +50,7 @@ public class RoutineManager : MonoBehaviour
 
     public void DailyUpdate()
     {
-        InputManager.canInput = false;
+        InputManager.SetCanInput(false);
 
         if (lightCoroutine != null)
             StopCoroutine(lightCoroutine);
@@ -58,7 +58,7 @@ public class RoutineManager : MonoBehaviour
 
         mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
         {
-            InputManager.canInput = true;
+            InputManager.SetCanInput(true);
             day = day.AddDays(1);
 
             Building.InitStaticCalcValue();
@@ -116,7 +116,7 @@ public class RoutineManager : MonoBehaviour
         if (!isPay)
         {
             SetCreditRating(1);
-            InputManager.canInput = false;
+            InputManager.SetCanInput(false);
             if (creditRating >= maxCreditRating)
             {
                 UIManager.instance.notifyObserver(EventState.GameOver);

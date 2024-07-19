@@ -111,7 +111,7 @@ public class CreditScoreUI : MonoBehaviour, IObserver
     IEnumerator UnLockInput()
     {
         yield return new WaitForSeconds(activateSeconds + sizecontrollSeconds);
-        InputManager.canInput = true;
+        InputManager.SetCanInput(true);
     }
 
     public void Notify(EventState state)

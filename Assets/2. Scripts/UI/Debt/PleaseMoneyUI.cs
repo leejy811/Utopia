@@ -26,7 +26,7 @@ public class PleaseMoneyUI : DebtUI
 
     IEnumerator PlayMailAnim()
     {
-        InputManager.canInput = false;
+        InputManager.SetCanInput(false);
         transform.localPosition = new Vector3(transform.localPosition.x, 500.0f, transform.localPosition.z);
 
         mailAnim.gameObject.SetActive(true);
@@ -36,6 +36,6 @@ public class PleaseMoneyUI : DebtUI
         yield return new WaitForSeconds(mailAnimSecond);
         mailAnim.gameObject.SetActive(false);
 
-        transform.DOLocalMoveY(0f, uiMoveSecond).OnComplete(() => { InputManager.canInput = true; });
+        transform.DOLocalMoveY(0f, uiMoveSecond).OnComplete(() => { InputManager.SetCanInput(true); });
     }
 }

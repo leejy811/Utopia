@@ -261,7 +261,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
 
     public void OnEnable()
     {
-        InputManager.canInput = false;
+        InputManager.SetCanInput(false);
         RoutineManager.instance.OnOffDailyLight(false);
         state = RouletteState.Before;
         slotMachine.transform.localPosition = new Vector3(530, slotMachine.transform.localPosition.y, slotMachine.transform.localPosition.z);
@@ -272,11 +272,13 @@ public class EventRouletteUI : MonoBehaviour, IObserver
         EventManager.instance.CheckEvents();
         AkSoundEngine.PostEvent("Play_Slot_Spwan_01", gameObject);
         AkSoundEngine.SetRTPCValue("CLICK", 2);
+        AkSoundEngine.SetRTPCValue("INDEX1", -1);
+        AkSoundEngine.SetRTPCValue("INDEX2", -1);
     }
 
     private void OnDisable()
     {
-        InputManager.canInput = true;
+        InputManager.SetCanInput(true);
         RoutineManager.instance.OnOffDailyLight(true);
         AkSoundEngine.SetRTPCValue("CLICK", 1);
         AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);

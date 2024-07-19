@@ -70,6 +70,7 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Panel")]
     public GameObject topPanel;
     public GameObject bottomPanel;
+    public GameObject inputPanel;
 
     [Header("Menu")]
     public UIElement menu;

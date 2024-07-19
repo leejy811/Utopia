@@ -80,7 +80,7 @@ public class CityLevelManager : MonoBehaviour
     IEnumerator PlayTimeLapse()
     {
         UIManager.instance.notifyObserver(EventState.None);
-        InputManager.canInput = false;
+        InputManager.SetCanInput(false);
         RoutineManager.instance.OnOffDailyLight(false);
         AkSoundEngine.SetRTPCValue("TIMELAP", 2);
         AkSoundEngine.PostEvent("Play_TImeLapsBGM", gameObject);
