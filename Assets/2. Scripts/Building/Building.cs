@@ -52,6 +52,7 @@ public class Building : MonoBehaviour
     public int influencePower;
     public int additionalInfluencePower;
     public int influenceSize;
+    public GameObject influenceObject;
 
     public List<Event> curEvents;
     public int cost;
@@ -264,6 +265,12 @@ public class Building : MonoBehaviour
         int value = curevent.GetEffectValue(curevent.curDay) * sign;
         SetHappiness(value);
         RoutineManager.instance.SetCityHappiness(value, 0);
+    }
+
+    public void SetActiveInfluenceObject(bool active)
+    {
+        influenceObject.transform.localScale = new Vector3(influenceSize * 2 + 1, 1, influenceSize * 2 + 1);
+        influenceObject.SetActive(active);
     }
 
     public virtual int CalculateIncome()

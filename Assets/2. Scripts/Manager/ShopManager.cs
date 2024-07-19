@@ -292,10 +292,12 @@ public class ShopManager : MonoBehaviour, IObserver
         {
             curPickObject = pickObject;
             UIManager.instance.SetBuildingIntroPopUp(pickObject.GetComponent<Building>());
+            pickObject.GetComponent<Building>().SetActiveInfluenceObject(true);
             AkSoundEngine.SetRTPCValue("CLICK", 2);
         }
         else
         {
+            curPickObject.GetComponent<Building>().SetActiveInfluenceObject(false);
             UIManager.instance.SetBuildingIntroPopUp();
             AkSoundEngine.SetRTPCValue("CLICK", 1);
         }
