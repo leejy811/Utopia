@@ -1043,6 +1043,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Deny_01" ID="{AE2A952F-11E5-457B-984A-F16885A753AA}">
+					<ChildrenList>
+						<Action Name="" ID="{0709C19F-29C1-411E-8C78-971EB42D89E9}" ShortID="383298336">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Deny_01" ID="{9268F87C-049D-4974-A2E3-BC0801A21CCB}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Deny_02" ID="{01066F9C-5123-4A01-99BB-563C66F94685}">
+					<ChildrenList>
+						<Action Name="" ID="{E547EAA6-0911-471F-9CDE-43DF7A9FB6B7}" ShortID="321716402">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Deny_02" ID="{9D471009-1EE7-463F-9AB7-061B8E1AB987}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

@@ -101,7 +101,7 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{E1EED7D7-EC0E-5D53-1CAC-A1189A9BE945}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{2576BB46-C8D1-AC9E-C4FA-6DA509DB5233}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -121,6 +121,10 @@
 					<ShortName>Slot_Spwan_01.wav</ShortName>
 					<CachePath>SFX/Slot_Spwan_01_8E324C96.wem</CachePath>
 				</File>
+				<File Id="748782326" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02.wav</ShortName>
+					<CachePath>SFX/PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02_C28DB17C.wem</CachePath>
+				</File>
 				<File Id="749327532" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Stop_01.wav</ShortName>
 					<CachePath>SFX/Slot_Stop_01_8E324C96.wem</CachePath>
@@ -129,12 +133,26 @@
 					<ShortName>Slot_Drrrrrr_01.wav</ShortName>
 					<CachePath>SFX/Slot_Drrrrrr_01_5FFF549D.wem</CachePath>
 				</File>
+				<File Id="877076168" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>vth2_vnyl_perc_fx_denied.wav</ShortName>
+					<CachePath>SFX/vth2_vnyl_perc_fx_denied_8E324C96.wem</CachePath>
+				</File>
 				<File Id="925625941" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Rever_01.wav</ShortName>
 					<CachePath>SFX/Slot_Rever_01_58381DFD.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
+				<Event Id="904270530" Name="Play_Deny_01" DurationType="OneShot" DurationMin="0.48517492" DurationMax="0.48517492">
+					<MediaRefs>
+						<MediaRef Id="877076168"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="904270529" Name="Play_Deny_02" DurationType="OneShot" DurationMin="0.43383914" DurationMax="0.43383914">
+					<MediaRefs>
+						<MediaRef Id="748782326"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3452595303" Name="Play_Slot_Drrrrrr_01" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="809211139"/>
@@ -808,5 +826,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CF294DC4-3D4B-B270-75D0-6ACCA235C770}</FileHash>
+	<FileHash>{E287F548-A2A9-2424-4A01-B5CC42EB4438}</FileHash>
 </SoundBanksInfo>
