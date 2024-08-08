@@ -18,6 +18,7 @@ public class RoutineManager : MonoBehaviour
     public int debt;
     public int creditRating;
     public int maxCreditRating;
+    public float bonusRatio;
 
     public bool isPay;
 
@@ -155,7 +156,7 @@ public class RoutineManager : MonoBehaviour
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
-            total += building.CalculateIncome() + building.CalculateBonus();
+            total += building.CalculateIncome() + (int)(building.CalculateBonus() * day.DayOfYear * bonusRatio);
         }
 
         for(int i = 0;i < Grid.instance.width;i++)

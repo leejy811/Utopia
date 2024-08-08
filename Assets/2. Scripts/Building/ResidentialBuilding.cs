@@ -44,9 +44,6 @@ public class ResidentialBuilding : Building
     public void BuyFacility(OptionType type)
     {
         existFacility[(int)type] = true;
-        BoundaryValue resident = values[ValueType.Resident];
-        resident.max += 100;
-        values[ValueType.Resident] = resident;
         SolveEventToOption(type);
     }
 
@@ -96,6 +93,14 @@ public class ResidentialBuilding : Building
         float res = values[ValueType.Resident].cur * (happinessRate / 100.0f);
         res += res * GetIncomeEvent();
         res = happinessRate >= 80 ? ((int)(res * 1.5f)) : (int)res;
+
+        float addOption = 0;
+        for(int i = 0; i < existFacility.Length; i++)
+        {
+            addOption += existFacility[i] ? res * 0.1f : 0.0f;
+        }
+        res += addOption;
+
         income += (int)res;
         return (int)res;
     }

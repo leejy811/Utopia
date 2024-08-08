@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
 
 public enum BuildingType { Residential = 0, Commercial, Culture, Service }
-public enum BuildingSubType { Apartment = 0, Store, Cinema, Police, Restaurant, Gallery, Fire, Park, Hospital, Stadium }
+public enum BuildingSubType { Apartment = 0, Store, Cinema, Police, Restaurant, Gallery, Fire, Park, Hospital, Entertainment }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
 public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility, Influence, Tax, Cost, FinalIncome }
 public enum BoundaryType { Less = -1, Include, More }
@@ -28,9 +28,9 @@ public struct BoundaryValue
 
     public BoundaryType CheckBoundary()
     {
-        if (cur > max)
+        if (cur >= max)
             return BoundaryType.More;
-        else if (cur < min)
+        else if (cur <= min)
             return BoundaryType.Less;
         else
             return BoundaryType.Include;

@@ -13,7 +13,7 @@ public class SoundChange : MonoBehaviour
     {
         soundSlider = gameObject.GetComponent<Slider>();
     }
-
+    
     public void ChangeSound()
     {
         AkSoundEngine.SetRTPCValue("OPTION", soundSlider.value * 100.0f);

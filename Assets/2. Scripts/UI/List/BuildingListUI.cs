@@ -6,7 +6,7 @@ using TMPro;
 
 public class BuildingListUI : ListUI
 {
-    int[] buildingCount = { 0, 2, 5, 7 };
+    int[] buildingCount = { 0, 2, 5, 8 };
 
     public override void SetValue(int type)
     {

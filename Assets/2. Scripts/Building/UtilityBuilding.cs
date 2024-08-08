@@ -12,6 +12,17 @@ public class UtilityBuilding : Building
 
     private void Awake()
     {
+        int random = Random.Range(0, 3);
+        float value = 0.0f;
+        if(random == 0)
+            value = utilityValue.min;
+        else if(random == 1)
+            value = utilityValue.cur;
+        else if(random == 2)
+            value = utilityValue.max;
+
+        utilityValue.cur = value;
+
         values[ValueType.user] = userCnt;
         values[ValueType.utility] = utilityValue;
     }

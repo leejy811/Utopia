@@ -49,8 +49,9 @@ public class Grid : MonoBehaviour, IObserver
 
     private void SetTile()
     {
-        width = CityLevelManager.instance.level[3].tileSize.x;
-        height = CityLevelManager.instance.level[3].tileSize.y;
+        int maxLevelIdx = CityLevelManager.instance.level.Length - 1;
+        width = CityLevelManager.instance.level[maxLevelIdx].tileSize.x;
+        height = CityLevelManager.instance.level[maxLevelIdx].tileSize.y;
 
         if (width % 2 != 0) width++;
         if (height % 2 != 0) height++;
