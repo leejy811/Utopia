@@ -33421,22 +33421,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e0cc911bfcf264797125ecf53db702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curJackpotDay: 0
-  jackpotDay: 0
-  eventCondition: 03000000030000000300000003000000
-  eventInfos:
-  - eventCount: 020000000300000002000000
-    eventProb: 1
-  - eventCount: 020000000200000003000000
-    eventProb: 1
-  - eventCount: 010000000300000003000000
-    eventProb: 1
-  - eventCount: 010000000300000003000000
-    eventProb: 1
-  - eventCount: 010000000200000004000000
-    eventProb: 1
-  - eventCount: 010000000200000004000000
-    eventProb: 1
+  curCountDay: 0
+  preCountDay: 0
+  randomCount: {x: 1, y: 4}
+  eventCount: 
+  eventApplyRatio: 1
+  eventBuildings: []
   events:
   - eventName: "\uC9D1\uC5D0 \uBB3C\uC774 \uC548\uB098\uC640\uC694"
     eventEffectComment: "\uC218\uB3C4 \uC2DC\uC124\uC774 \uC5C6\uB294 \uC8FC\uAC70
@@ -34108,7 +34098,7 @@ MonoBehaviour:
     effectJackpotValue: 0a000000
   possibleEvents: []
   globalEvents: []
-  eventBuildings: []
+  curEvents: []
 --- !u!4 &555182732
 Transform:
   m_ObjectHideFlags: 0

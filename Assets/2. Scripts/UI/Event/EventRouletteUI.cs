@@ -147,7 +147,7 @@ public class EventRouletteUI : MonoBehaviour, IObserver
 
     private void StartSlot()
     {
-        EventManager.instance.RandomRoulette();
+        EventManager.instance.RandomRoulette(3);
 
         PlayLeverAnim();
         state = RouletteState.While;

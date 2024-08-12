@@ -63,11 +63,13 @@ public class RoutineManager : MonoBehaviour
             day = day.AddDays(1);
 
             Building.InitStaticCalcValue();
+
             Tile.income = 0;
             CalculateIncome();
             UpdateHappiness();
+            EventManager.instance.CheckEvents();
+            EventManager.instance.RandomRoulette(1);
             EventManager.instance.EffectUpdate();
-
             ApplyDept();
 
             UIManager.instance.UpdateDailyInfo();

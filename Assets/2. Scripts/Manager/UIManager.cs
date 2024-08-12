@@ -620,7 +620,10 @@ public class UIManager : MonoBehaviour, ISubject
     #region Observer
     public void addObserver(IObserver observer)
     {
-        observers.Add(observer);
+        if (observer != null)
+            observers.Add(observer);
+        else
+            Debug.LogError("Null Observer : " + observer.ToString());
     }
 
     public void removeObserver(IObserver observer)
