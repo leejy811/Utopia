@@ -69,17 +69,17 @@ MonoBehaviour:
   happinessRate: 50
   happinessDifference: 0
   position: {x: 0, y: 0}
-  influencePower: 50
+  influencePower: 200
   additionalInfluencePower: 0
-  influenceSize: 1
+  influenceSize: 3
   influenceObject: {fileID: 877148467899691272}
   curEvents: []
-  cost: 100
+  cost: 400
   buildingIcon: {fileID: 21300000, guid: f6aac7d047e13914cbc7d203425642da, type: 3}
-  costPerDay: 40
+  costPerDay: 10
   userCnt:
-    max: 400
-    min: 100
+    max: 1600
+    min: 700
     cur: 0
   utilityValue:
     max: 60

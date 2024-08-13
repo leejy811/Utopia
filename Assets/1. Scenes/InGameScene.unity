@@ -98021,10 +98021,13 @@ MonoBehaviour:
     tileSize: {x: 6, y: 6}
   - type: 1
     debtWeek: 2
-    tileSize: {x: 16, y: 16}
+    tileSize: {x: 18, y: 18}
   - type: 2
     debtWeek: 5
-    tileSize: {x: 24, y: 24}
+    tileSize: {x: 32, y: 32}
+  - type: 3
+    debtWeek: 5
+    tileSize: {x: 32, y: 32}
   cameraController: {fileID: 2084905414}
 --- !u!4 &1744008805
 Transform:

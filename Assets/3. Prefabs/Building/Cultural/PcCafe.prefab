@@ -69,21 +69,21 @@ MonoBehaviour:
   happinessRate: 50
   happinessDifference: 0
   position: {x: 0, y: 0}
-  influencePower: 400
+  influencePower: 100
   additionalInfluencePower: 0
-  influenceSize: 3
+  influenceSize: 2
   influenceObject: {fileID: 6080172490550152855}
   curEvents: []
-  cost: 1000
+  cost: 200
   buildingIcon: {fileID: 21300000, guid: 0cf29b4c59fa06849b15bba9561b402d, type: 3}
-  costPerDay: 600
+  costPerDay: 100
   userCnt:
-    max: 1490
-    min: 1100
+    max: 700
+    min: 300
     cur: 0
   utilityValue:
     max: 60
-    min: 25
+    min: 40
     cur: 50
 --- !u!1001 &1740573439356409621
 PrefabInstance:
