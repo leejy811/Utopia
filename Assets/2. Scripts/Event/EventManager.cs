@@ -208,7 +208,7 @@ public class EventManager : MonoBehaviour
 
     public void RandomRoulette(int eventNum)
     {
-        //if (!CheckEventCondition()) return;
+        if (!CheckEventCondition()) return;
 
         List<Event> ranEvents = new List<Event>();
         List<int> ranIdx = new List<int>();

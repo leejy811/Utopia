@@ -140496,4 +140496,4 @@ MonoBehaviour:
   buttonImage: {fileID: 522375979}
   lockSprite: {fileID: 21300000, guid: b9dd245ab3863b84a98aec567e8b38ab, type: 3}
   buttonSprite: {fileID: 21300000, guid: 04095e8e71be1144baf36374752c709b, type: 3}
-  targetLevel: 1
+  targetLevel: 1000
