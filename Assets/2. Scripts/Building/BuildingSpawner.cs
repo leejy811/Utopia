@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BuildingSpawner : MonoBehaviour, IObserver
 {
@@ -14,6 +15,9 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
     public int[] buildingCount;
     public int[] buildingTypeCount;
+    public int[] randomParameter;
+    public int[,] buildingGradeCount;
+    public int buildingRemoveCount;
 
     private void Awake()
     {
@@ -24,13 +28,30 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         }
 
         instance = this;
+    }
 
+    private void Start()
+    {
         buildingCount = new int[buildingPrefabs.Length];
+        randomParameter = new int[buildingPrefabs.Length];
+        for (int i = 0; i < randomParameter.Length; i++)
+        {
+            randomParameter[i] = Random.Range(-1, 2);
+        }
+
+        buildingGradeCount = new int[System.Enum.GetValues(typeof(BuildingType)).Length, CityLevelManager.instance.level.Length - 1];
     }
 
     public void PlaceBuilding(int index, Transform spawnTrans)
     {
         Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), spawnTrans.rotation, transform).GetComponent<Building>();
+
+        if (building.type != BuildingType.Residential)
+        {
+            (building as UtilityBuilding).SetParameter(randomParameter[index]);
+            randomParameter[index] = Random.Range(-1, 2);
+        }
+
         spawnTrans.gameObject.GetComponent<Tile>().building = building.gameObject;
         spawnTrans.gameObject.GetComponent<Tile>().ApplyInfluenceToBuilding();
         spawnTrans.gameObject.GetComponent<Tile>().Coloring(Grid.instance.isColorMode);
@@ -41,6 +62,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         building.count = buildingCount[index];
 
         buildingTypeCount[(int)building.type]++;
+        buildingGradeCount[(int)building.type, building.grade]++;
 
         RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
 
@@ -75,7 +97,10 @@ public class BuildingSpawner : MonoBehaviour, IObserver
             }
         }
 
-        buildingTypeCount[(int)building.GetComponent<Building>().type]--;
+        Building buildingComp = building.GetComponent<Building>();
+        buildingTypeCount[(int)buildingComp.type]--;
+        buildingGradeCount[(int)buildingComp.type, buildingComp.grade]--;
+        buildingRemoveCount++;
 
         CityLevelManager.instance.frames.Enqueue(new FrameInfo(0, new Vector2Int((int)building.transform.position.x, (int)building.transform.position.z), building.transform.rotation, false));
     }

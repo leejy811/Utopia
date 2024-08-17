@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class CreditScoreUI : MonoBehaviour, IObserver
@@ -25,7 +26,6 @@ public class CreditScoreUI : MonoBehaviour, IObserver
     public float sizecontrollSeconds = 0.3f;
 
     [Header("Credit Score")]
-    public int[] creditScore;
     public Gradient scoreColor;
 
     IEnumerator FillKnob(float firstNum, float secondNum)
@@ -121,9 +121,9 @@ public class CreditScoreUI : MonoBehaviour, IObserver
             gameObject.SetActive(true);
             quitButton.gameObject.SetActive(false);
             string text = "할부금을 납부하지 않아 신용 점수가 하락하였습니다.\n\n 최대한 빠르게 할부금을 납부하세요.";
-            int creditRating = RoutineManager.instance.creditRating;
+            int score = RoutineManager.instance.creditRating;
 
-            StartCoroutine(FillKnob(creditScore[creditRating - 1], creditScore[creditRating]));
+            StartCoroutine(FillKnob(score + 25, score));
             StartCoroutine(ActivateTextObject(ActivatetextObject, text));
             StartCoroutine(ActivateTextObject(helpText, "닫기"));
             StartCoroutine(ActivateGraphicObject(helpImage));
@@ -135,9 +135,9 @@ public class CreditScoreUI : MonoBehaviour, IObserver
             helpImage.gameObject.SetActive(false);
             helpText.gameObject.SetActive(false);
             string text = "도시가 파산하였습니다.";
-            int creditRating = RoutineManager.instance.creditRating;
+            int score = RoutineManager.instance.creditRating;
 
-            StartCoroutine(FillKnob(creditScore[creditRating - 1], creditScore[creditRating]));
+            StartCoroutine(FillKnob(score + 25, score));
             StartCoroutine(ActivateTextObject(ActivatetextObject, text));
             StartCoroutine(ActivateGraphicObject(quitButton.targetGraphic));
         }

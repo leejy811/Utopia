@@ -7,15 +7,21 @@ public class UtilityBuildingInfoUI : BuildingInfoUI
 {
     [Header("Special")]
     public TextMeshProUGUI influenceText;
-    public TextMeshProUGUI costPerDayText;
+    public TextMeshProUGUI userCntText;
+    public TextMeshProUGUI randomParameterText;
+
+    private string[] parameterString = { "낮음", "보통", "높음" };
 
     public override void SetValue(int index)
     {
         base.SetValue(index);
+        UtilityBuilding utilityBuilding = building as UtilityBuilding;
 
         influenceText.text = building.influencePower.ToString();
+        userCntText.text = utilityBuilding.userCnt.min.ToString() + " ~ " + utilityBuilding.userCnt.max.ToString();
 
-        if (building.type == BuildingType.Service)
-            costPerDayText.text = (building as ServiceBuilding).costPerDay.ToString();
+        int sign = BuildingSpawner.instance.randomParameter[index];
+        int parameter = (int)utilityBuilding.GetRandomParameter(sign);
+        randomParameterText.text = parameter.ToString() + "(" + parameterString[sign + 1] + ")";
     }
 }

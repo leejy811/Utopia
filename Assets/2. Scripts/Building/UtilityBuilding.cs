@@ -10,21 +10,18 @@ public class UtilityBuilding : Building
     public BoundaryValue userCnt;
     public BoundaryValue utilityValue;
 
-    private void Awake()
+    public void SetParameter(int sign)
     {
-        int random = Random.Range(0, 3);
-        float value = 0.0f;
-        if(random == 0)
-            value = utilityValue.min;
-        else if(random == 1)
-            value = utilityValue.cur;
-        else if(random == 2)
-            value = utilityValue.max;
-
-        utilityValue.cur = value;
+        float value = utilityValue.cur;
+        utilityValue.cur = GetRandomParameter(sign);
 
         values[ValueType.user] = userCnt;
         values[ValueType.utility] = utilityValue;
+    }
+
+    public float GetRandomParameter(int sign)
+    {
+        return utilityValue.cur + (utilityValue.cur * 0.25f * sign);
     }
 
     public override int CalculateIncome()

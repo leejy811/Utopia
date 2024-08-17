@@ -17,7 +17,6 @@ public class RoutineManager : MonoBehaviour
     public int[] debtsOfWeek;
     public int debt;
     public int creditRating;
-    public int maxCreditRating;
     public float bonusRatio;
 
     public bool isPay;
@@ -27,8 +26,10 @@ public class RoutineManager : MonoBehaviour
     public float lightDailySpeed;
     public float defalutAngleX;
 
+    public float playTime;
     private Coroutine lightCoroutine;
     private int totalIncome;
+    private int payFailTime;
 
     private void Awake()
     {
@@ -47,6 +48,12 @@ public class RoutineManager : MonoBehaviour
         debt = debtsOfWeek[GetWeekOfYear()];
         isPay = false;
         lightCoroutine = StartCoroutine(DailyLight());
+        playTime = 0.0f;
+    }
+
+    private void FixedUpdate()
+    {
+        playTime += Time.fixedDeltaTime;
     }
 
     public void DailyUpdate()
@@ -105,10 +112,6 @@ public class RoutineManager : MonoBehaviour
             case DayOfWeek.Monday:
                 CalculateDept();
                 break;
-            case DayOfWeek.Thursday:
-                if (!isPay)
-                    UIManager.instance.notifyObserver(EventState.Reminder);
-                break;
         }
 
         int week = dayOfWeek == DayOfWeek.Sunday ? 7 : (int)dayOfWeek;
@@ -118,9 +121,10 @@ public class RoutineManager : MonoBehaviour
     {
         if (!isPay)
         {
-            SetCreditRating(1);
+            SetCreditRating(-25);
+            payFailTime++;
             InputManager.SetCanInput(false);
-            if (creditRating >= maxCreditRating)
+            if (creditRating <= 0)
             {
                 UIManager.instance.notifyObserver(EventState.GameOver);
             }
@@ -142,13 +146,13 @@ public class RoutineManager : MonoBehaviour
 
     public int GetWeekOfYear()
     {
-        int weekOfYear = ((day.DayOfYear - 1) / 7) + (creditRating * -1) + ((day.Year - 2024) * 52);
+        int weekOfYear = ((day.DayOfYear - 1) / 7) + (payFailTime * -1) + ((day.Year - 2024) * 52);
         return weekOfYear;
     }
 
     private void SetCreditRating(int value)
     {
-        creditRating += value;
+        creditRating = Mathf.Min(creditRating + value, 100);
         UIManager.instance.SetCreditScorePanel();
     }
 
@@ -217,16 +221,12 @@ public class RoutineManager : MonoBehaviour
         if (!ShopManager.instance.PayMoney(debt)) return;
 
         AkSoundEngine.PostEvent("Play_Pay_001", gameObject);
+        RewardToPay();
 
-        UIManager.instance.notifyObserver(EventState.Receipt);
         debt = 0;
+        isPay = true;
         UIManager.instance.SetDebt();
         UIManager.instance.SetDebtInfo();
-
-        if (dayOfWeekToInt < (int)DayOfWeek.Thursday)
-        {
-            RewardToPrePay();
-        }
 
         switch(dayOfWeek)
         {
@@ -248,17 +248,19 @@ public class RoutineManager : MonoBehaviour
                 weekResult = ResultType.Bad;
                 break;
         }
-
-        isPay = true;
     }
 
-    private void RewardToPrePay()
+    private void RewardToPay()
     {
-        int rewardHappiness = 5;
-
-        foreach (Building building in BuildingSpawner.instance.buildings)
+        if (creditRating >= 100)
         {
-            building.SetHappiness(rewardHappiness);
+            ShopManager.instance.GetMoney((int)(debt * 0.2f));
+            UIManager.instance.notifyObserver(EventState.Payback);
+        }
+        else
+        {
+            UIManager.instance.notifyObserver(EventState.HealCredit);
+            SetCreditRating(10);
         }
     }
 }

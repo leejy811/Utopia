@@ -25,7 +25,6 @@ public class DebtUI : UIElement
     {
         debtMoney = RoutineManager.instance.debt;
         curDay = RoutineManager.instance.day;
-        dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
     }
 
     protected void OnEnable()

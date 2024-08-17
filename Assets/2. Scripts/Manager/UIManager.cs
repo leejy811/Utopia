@@ -21,9 +21,12 @@ public class UIManager : MonoBehaviour, ISubject
 
     [Header("Info")]
     public TextMeshProUGUI dayText;
-    public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI debtDayText;
+    public TextMeshProUGUI dayOfWeekText;
     public TextMeshProUGUI debtInfoText;
     public TextMeshProUGUI debtText;
+    public TextMeshProUGUI moneyText;
+    public EventInfoUI eventInfo;
 
     [Header("Building")]
     public BuildingIntroUI[] buildingIntros;
@@ -36,6 +39,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     [Header("CityLevelUp")]
     public CityLevelUpUI cityLevelUp;
+    public GameClearUI gameClear;
 
     [Header("Roulette")]
     public EventRouletteUI eventRoulette;
@@ -43,6 +47,7 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Message")]
     public GameObject errorMessagePrefab;
     public GameObject happinessMessagePrefab;
+    public GameObject eventMessagePrefab;
 
     [Header("Cost")]
     public CostUI costInfo;
@@ -62,7 +67,8 @@ public class UIManager : MonoBehaviour, ISubject
 
     [Header("Debt")]
     public PleaseMoneyUI debtDoc;
-    public ReceiptUI receipt;
+    public PaybackUI payback;
+    public HealCreditUI healCredit;
     public CreditScoreUI creditScore;
     public CreditScorePanel creditScorePanel;
     public DDayUI[] ddays;
@@ -105,7 +111,7 @@ public class UIManager : MonoBehaviour, ISubject
     {
         DOTween.SetTweensCapacity(500, 50);
         UpdateDailyInfo();
-        SetDebtInfo();
+        SetCreditScorePanel();
         InitObserver();
         notifyObserver(EventState.LockButton);
 
@@ -291,24 +297,34 @@ public class UIManager : MonoBehaviour, ISubject
     public void UpdateDailyInfo()
     {
         DateTime curDay = RoutineManager.instance.day;
-        dayText.text = curDay.ToString("yy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + " " + weekStr[(int)curDay.DayOfWeek];
+        dayText.text = curDay.ToString("yyyy/MM/dd");
+        dayOfWeekText.text = weekStr[(int)curDay.DayOfWeek];
         Setmoney();
         SetDebt();
+        SetDebtInfo();
         SetDDay(curDay);
     }
 
     public void Setmoney()
     {
-        moneyText.text = GetCommaText(ShopManager.instance.Money);
+        moneyText.text = GetCommaText(ShopManager.instance.Money) + "원";
     }
 
     public void SetDebtInfo()
     {
-        DateTime curDay = RoutineManager.instance.day.AddDays(7);
+        DateTime curDay = RoutineManager.instance.day;
+        int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
         if (RoutineManager.instance.debt != 0)
-            debtInfoText.text = "납부 날짜 : " + curDay.ToString("yyyy") + "/" + curDay.ToString("MM") + "/" + curDay.ToString("dd") + "(" + weekShortStr[(int)curDay.DayOfWeek] + ")";
+            debtDayText.text = "<size=80>D-" + (7 - dayOfWeek).ToString() + "</size>";
         else
-            debtInfoText.text = "납부 완료";
+            debtDayText.text = "<size=50>납부 완료</size>";
+
+        int maxWeek = CityLevelManager.instance.level[CityLevelManager.instance.levelIdx + 1].debtWeek - CityLevelManager.instance.level[CityLevelManager.instance.levelIdx].debtWeek;
+        int curWeek = RoutineManager.instance.GetWeekOfYear() - CityLevelManager.instance.level[CityLevelManager.instance.levelIdx].debtWeek;
+        if (RoutineManager.instance.isPay)
+            curWeek++;
+
+        debtInfoText.text = curWeek.ToString() + " / " + maxWeek.ToString();
     }
 
     public void SetDebt()
@@ -345,6 +361,11 @@ public class UIManager : MonoBehaviour, ISubject
     public void SetBuildingListValue(int index)
     {
         lists[index].SetValue(index);
+    }
+
+    public void SetEventInfo(Event[] curEvents)
+    {
+        eventInfo.SetValue(curEvents);
     }
 
     #endregion
@@ -398,10 +419,10 @@ public class UIManager : MonoBehaviour, ISubject
             eventNotify.Init();
     }
 
-    public void SetErrorPopUp(string massage, Vector3 position)
+    public void SetErrorPopUp(string[] str, Vector3 position)
     {
         TemporayUI message = Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
-        message.SetUI(massage, position);
+        message.SetUI(str, position);
         AkSoundEngine.PostEvent("Play_Deny_01", gameObject);
     }
 
@@ -409,10 +430,16 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (eventRoulette.gameObject.activeSelf) return;
 
-        string massage = amount < 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>";
+        string[] str = { amount < 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>" };
 
         TemporayUI message = Instantiate(happinessMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
-        message.SetUI(massage, position);
+        message.SetUI(str, position);
+    }
+
+    public void SetEventTempPopUp(Event curEvent, Vector3 position)
+    {
+        TemporayUI message = Instantiate(eventMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
+        message.SetUI(curEvent, position);
     }
 
     public void SetCostPopUp(Transform transform = null, int cost = 0)
@@ -535,7 +562,8 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (BuildingSpawner.instance.GetEventBuildingCount() <= 0)
         {
-            SetErrorPopUp("문제가 발생한 건물이 없습니다.", transform.position);
+            string[] str = { "문제가 발생한 건물이 없습니다." };
+            SetErrorPopUp(str, transform.position);
             return;
         }
         notifyObserver(EventState.EventIcon);
@@ -545,7 +573,8 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (BuildingSpawner.instance.GetEventBuildingCount() <= 0) 
         {
-            SetErrorPopUp("문제가 발생한 건물이 없습니다.", transform.position);
+            string[] str = { "문제가 발생한 건물이 없습니다." };
+            SetErrorPopUp(str, transform.position);
             return;
         }
 
@@ -575,7 +604,8 @@ public class UIManager : MonoBehaviour, ISubject
         }
         else
         {
-            SetErrorPopUp("도시 규모가 작아 슬롯머신을 작동할 수 없습니다.", transform.position);
+            string[] str = { "도시 규모가 작아 슬롯머신을 작동할 수 없습니다." };
+            SetErrorPopUp(str, transform.position);
         }
     }
 
@@ -607,7 +637,7 @@ public class UIManager : MonoBehaviour, ISubject
     public void MovePanelAnim(float second, bool isUp)
     {
         float sign = isUp ? 1 : -1;
-        topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 36f * sign, second);
+        topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 85f * sign, second);
         bottomPanel.transform.DOLocalMoveY(bottomPanel.transform.localPosition.y + -50f * sign, second);
     }
 
@@ -646,6 +676,7 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(Grid.instance);
         addObserver(BuildingSpawner.instance);
 
+        addObserver(gameClear);
         addObserver(cityLevelUp);
         addObserver(cityLevelPanel);
         addObserver(eventNotify);
@@ -656,7 +687,8 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(etcFunc);
 
         addObserver(debtDoc);
-        addObserver(receipt);
+        addObserver(payback);
+        addObserver(healCredit);
         addObserver(creditScore);
 
         addObserver(menu);

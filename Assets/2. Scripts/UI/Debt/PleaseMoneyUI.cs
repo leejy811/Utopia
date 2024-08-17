@@ -21,7 +21,7 @@ public class PleaseMoneyUI : DebtUI
     protected override void CalculateValue()
     {
         base.CalculateValue();
-        curDay = curDay.AddDays(8 - dayOfWeek);
+        curDay = curDay.AddDays(7 - dayOfWeek);
     }
 
     IEnumerator PlayMailAnim()

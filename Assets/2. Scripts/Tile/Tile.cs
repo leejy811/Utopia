@@ -41,7 +41,8 @@ public class Tile : MonoBehaviour
         }
         else
         {
-            UIManager.instance.SetErrorPopUp("해당 위치에는 건설할 수 없습니다.", transform.position);
+            string[] str = { "해당 위치에는 건설할 수 없습니다." };
+            UIManager.instance.SetErrorPopUp(str, transform.position);
             return false;
         }
     }

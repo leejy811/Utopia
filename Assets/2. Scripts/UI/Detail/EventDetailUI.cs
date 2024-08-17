@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class DetailUI : MonoBehaviour
+public class EventDetailUI : DetailUI
 {
-    public virtual void SetValue()
-    {
-
-    }
+    public TextMeshProUGUI eventDescriptionText;
 }

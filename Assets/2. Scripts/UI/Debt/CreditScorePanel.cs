@@ -9,16 +9,15 @@ public class CreditScorePanel : MonoBehaviour
     public Image graphImage;
     public TextMeshProUGUI scoreText;
     public Gradient scoreColor;
-    public int[] creditScore;
 
     public void SetValue()
     {
         int creditRating = RoutineManager.instance.creditRating;
-        float ratio = creditScore[creditRating] / 100.0f;
+        float ratio = creditRating / 100.0f;
         Color color = scoreColor.Evaluate(ratio);
         graphImage.color = color;
         graphImage.fillAmount = ratio;
         scoreText.color = color;
-        scoreText.text = creditScore[creditRating].ToString();
+        scoreText.text = creditRating.ToString();
     }
 }

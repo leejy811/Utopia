@@ -208,7 +208,7 @@ public class EventManager : MonoBehaviour
 
     public void RandomRoulette(int eventNum)
     {
-        if (!CheckEventCondition()) return;
+        //if (!CheckEventCondition()) return;
 
         List<Event> ranEvents = new List<Event>();
         List<int> ranIdx = new List<int>();
@@ -253,6 +253,7 @@ public class EventManager : MonoBehaviour
         foreach (Event ranEvent in ranEvents)
         {
             curEvents.Add(ranEvent);
+            UIManager.instance.SetEventTempPopUp(ranEvent, transform.position);
 
             if (ranEvent.type == EventType.Global)
             {
@@ -297,6 +298,8 @@ public class EventManager : MonoBehaviour
 
         globalEvents = EventDayUpdate(globalEvents);
         curEvents = EventDayUpdate(curEvents);
+
+        UIManager.instance.SetEventInfo(curEvents.ToArray());
     }
 
     private List<Event> EventDayUpdate(List<Event> events)

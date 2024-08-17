@@ -25,7 +25,7 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         for (int i = 0; i < 3; i++)
         {
             ValueType type = (ValueType)(i + 1);
-            SetSlider(castSlider[i], building.values[type]);
+            SetSlider(castSlider[i], building.values[type], (int)building.values[type].CheckBoundary() + 1);
             castTexts[i].text = GetCastString(building, (int)building.values[type].CheckBoundary() + 1, (int)type);
         }
 

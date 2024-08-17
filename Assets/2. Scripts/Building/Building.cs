@@ -28,9 +28,9 @@ public struct BoundaryValue
 
     public BoundaryType CheckBoundary()
     {
-        if (cur >= max)
+        if (cur > max)
             return BoundaryType.More;
-        else if (cur <= min)
+        else if (cur < min)
             return BoundaryType.Less;
         else
             return BoundaryType.Include;

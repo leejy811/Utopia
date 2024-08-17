@@ -69,7 +69,12 @@ public class CityLevelManager : MonoBehaviour
     {
         levelIdx++;
         Grid.instance.PurchaseTile(level[levelIdx].tileSize);
-        UIManager.instance.notifyObserver(EventState.CityLevelUp);
+        UIManager.instance.SetDebtInfo();
+
+        if (levelIdx == level.Length - 1)
+            UIManager.instance.notifyObserver(EventState.GameClear);
+        else
+            UIManager.instance.notifyObserver(EventState.CityLevelUp);
     }
 
     public bool CheckBuildingLevel(Building building)

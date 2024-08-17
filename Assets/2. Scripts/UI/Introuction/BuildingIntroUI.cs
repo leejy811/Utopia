@@ -89,7 +89,7 @@ public class BuildingIntroUI : MonoBehaviour
             return zeroSign + " " + data.ToString();
     }
 
-    protected void SetSlider(ValueSlider slider, BoundaryValue value)
+    protected void SetSlider(ValueSlider slider, BoundaryValue value, int idx)
     {
         slider.minText.text = ((int)value.min).ToString();
         slider.maxText.text = ((int)value.max).ToString();
@@ -100,7 +100,7 @@ public class BuildingIntroUI : MonoBehaviour
         slider.slider.value = sliderValue[type];
 
         ColorBlock colorBlock = slider.slider.colors;
-        colorBlock.disabledColor = sliderColor[type];
+        colorBlock.disabledColor = sliderColor[idx];
         slider.slider.colors = colorBlock;
     }
 

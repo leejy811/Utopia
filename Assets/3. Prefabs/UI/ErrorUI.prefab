@@ -90,9 +90,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab04c6a52803014cb44b9eb3756a67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 7183340173170725445}
-  text: {fileID: 7183340174020302351}
-  speed: 1
+  images:
+  - {fileID: 7183340173170725445}
+  texts:
+  - {fileID: 7183340174020302351}
+  fadeInTime: 0
+  waitTime: 0
+  fadeOutTime: 1
   isFixed: 1
 --- !u!1 &7183340174020302337
 GameObject:
@@ -226,7 +230,7 @@ MonoBehaviour:
   m_margin: {x: -29.889252, y: 0, z: 0.47874832, w: 22.40974}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7183340174397660257
