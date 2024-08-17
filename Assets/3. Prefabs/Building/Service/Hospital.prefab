@@ -71,7 +71,7 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   influencePower: 200
   additionalInfluencePower: 0
-  influenceSize: 3
+  influenceSize: 1
   influenceObject: {fileID: 877148467899691272}
   curEvents: []
   cost: 400

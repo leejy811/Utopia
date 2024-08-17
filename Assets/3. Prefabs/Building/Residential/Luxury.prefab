@@ -66,12 +66,12 @@ MonoBehaviour:
   type: 0
   subType: 0
   viewState: 0
-  happinessRate: 52
+  happinessRate: 50
   happinessDifference: 0
   position: {x: 0, y: 0}
   influencePower: 0
   additionalInfluencePower: 0
-  influenceSize: 2
+  influenceSize: 1
   influenceObject: {fileID: 956682493108996371}
   curEvents: []
   cost: 200
