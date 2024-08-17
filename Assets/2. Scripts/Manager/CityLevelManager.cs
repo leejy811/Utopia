@@ -56,7 +56,7 @@ public class CityLevelManager : MonoBehaviour
         if(levelIdx == level.Length - 1)
             return;
 
-        for (int i = 0;i <= levelIdx;i++)
+        for (int i = 0; i <= levelIdx; i++)
         {
             week -= level[i].debtWeek;
         }
@@ -80,6 +80,18 @@ public class CityLevelManager : MonoBehaviour
     public bool CheckBuildingLevel(Building building)
     {
         return building.grade <= levelIdx;
+    }
+
+    public int GetPrefixSumWeek()
+    {
+        int sum = 0;
+
+        for(int i = 0;i <= levelIdx;i++)
+        {
+            sum += level[i].debtWeek;
+        }
+
+        return sum;
     }
 
     IEnumerator PlayTimeLapse()

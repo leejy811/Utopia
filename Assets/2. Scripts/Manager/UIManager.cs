@@ -312,6 +312,8 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void SetDebtInfo()
     {
+        if (CityLevelManager.instance.levelIdx == CityLevelManager.instance.level.Length - 1) return;
+
         DateTime curDay = RoutineManager.instance.day;
         int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
         if (RoutineManager.instance.debt != 0)
@@ -319,8 +321,8 @@ public class UIManager : MonoBehaviour, ISubject
         else
             debtDayText.text = "<size=50>납부 완료</size>";
 
-        int maxWeek = CityLevelManager.instance.level[CityLevelManager.instance.levelIdx + 1].debtWeek - CityLevelManager.instance.level[CityLevelManager.instance.levelIdx].debtWeek;
-        int curWeek = RoutineManager.instance.GetWeekOfYear() - CityLevelManager.instance.level[CityLevelManager.instance.levelIdx].debtWeek;
+        int maxWeek = CityLevelManager.instance.level[CityLevelManager.instance.levelIdx + 1].debtWeek;
+        int curWeek = RoutineManager.instance.GetWeekOfYear() - CityLevelManager.instance.GetPrefixSumWeek();
         if (RoutineManager.instance.isPay)
             curWeek++;
 
