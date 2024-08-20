@@ -68,7 +68,7 @@ public class UtilityBuilding : Building
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 cost -= 0;
             else
-                cost -= 5;
+                income += 5;
         }
 
         if (type == BuildingType.Commercial)
@@ -114,7 +114,7 @@ public class UtilityBuilding : Building
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += 0;
             else
-                changeAmount = 1;
+                changeAmount += 1;
         }
 
         if (isExpect)
