@@ -12,6 +12,7 @@ public class CreditScoreBar : MonoBehaviour
 
     [Header("value")]
     public Gradient scoreColor;
+    public float waitSecond;
     public float fillSecond;
 
     public void SetScore(int startScore, int endScore)
@@ -22,24 +23,31 @@ public class CreditScoreBar : MonoBehaviour
 
     IEnumerator FillKnob(int firstNum, int secondNum)
     {
-        scoreImage.fillAmount = firstNum / 100.0f;
+        SetScoreImage(firstNum / 100.0f);
 
         float startAmount = scoreImage.fillAmount;
         float endAmount = secondNum / 100.0f;
         float elapsedTime = 0f;
         float totalChange = endAmount - startAmount;
 
+        yield return new WaitForSeconds(waitSecond);
+
         while (elapsedTime < fillSecond)
         {
             elapsedTime += Time.deltaTime;
             float linearT = elapsedTime / fillSecond;
-            scoreImage.fillAmount = startAmount + totalChange * linearT;
-            scoreImage.color = scoreColor.Evaluate(scoreImage.fillAmount);
-            scoreText.color = scoreImage.color;
+            SetScoreImage(startAmount + totalChange * linearT);
             yield return null;
         }
 
         scoreImage.fillAmount = endAmount;
+    }
+
+    private void SetScoreImage(float amount)
+    {
+        scoreImage.fillAmount = amount;
+        scoreImage.color = scoreColor.Evaluate(scoreImage.fillAmount);
+        scoreText.color = scoreImage.color;
     }
 
     private IEnumerator MoveTextOverTime(int startNumber, int endNumber)
@@ -48,6 +56,9 @@ public class CreditScoreBar : MonoBehaviour
         int currentNumber = startNumber;
         int direction = (endNumber > startNumber) ? 1 : -1;
         int totalSteps = Mathf.Abs(endNumber - startNumber);
+        scoreText.text = currentNumber.ToString();
+
+        yield return new WaitForSeconds(waitSecond);
 
         while (elapsedTime < fillSecond)
         {

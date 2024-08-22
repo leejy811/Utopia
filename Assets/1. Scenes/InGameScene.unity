@@ -45736,6 +45736,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+  waitSecond: 0
   fillSecond: 0
 --- !u!1 &651285897
 GameObject:
@@ -57340,6 +57341,7 @@ MonoBehaviour:
     m_Mode: 0
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
+  waitSecond: 1
   fillSecond: 1
 --- !u!1 &866943033
 GameObject:
@@ -57377,7 +57379,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 5.5, y: 0}
-  m_SizeDelta: {x: 240, y: 17.54}
+  m_SizeDelta: {x: 260, y: 17.54}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &866943035
 MonoBehaviour:
@@ -57400,8 +57402,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uD589\uBCF5\uB3C4\uAC00 \uB192\uC744\uC218\uB85D \uB9CE\uC740 \uC138\uAE08\uC744
-    \uB0A9\uBD80\uD569\uB2C8\uB2E4.\\n\n\uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4\uAC00
-    \uB0AE\uC73C\uBA74 \uC8FC\uBBFC\uC774 \uAC10\uC18C\uD569\uB2C8\uB2E4."
+    \uB0A9\uBD80\uD569\uB2C8\uB2E4.\\n\n\uC8FC\uAC70 \uAC74\uBB3C\uC758 \uACBD\uC6B0
+    \uD589\uBCF5\uB3C4\uAC00 \uB0AE\uC73C\uBA74 \uC8FC\uBBFC\uC774 \uAC10\uC18C\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
   m_sharedMaterial: {fileID: 4479025330240497328, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
@@ -62963,7 +62965,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 29.91681, y: 10.799999}
-  m_SizeDelta: {x: 130, y: 40}
+  m_SizeDelta: {x: 135, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &971077364
 MonoBehaviour:
@@ -64406,9 +64408,9 @@ MonoBehaviour:
   - 0.56
   - 0.9
   sliderColor:
-  - {r: 0.81568635, g: 0, b: 0, a: 1}
-  - {r: 0.37254903, g: 0.81568635, b: 0, a: 1}
-  - {r: 0.81568635, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.7176471, b: 0, a: 1}
   residentText: {fileID: 1378139237}
   castSlider:
   - minText: {fileID: 397043201}
@@ -99270,7 +99272,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 32.458466, y: 13.200001}
-  m_SizeDelta: {x: 130, y: 40}
+  m_SizeDelta: {x: 135, y: 40}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1550069399
 MonoBehaviour:
@@ -115905,9 +115907,9 @@ MonoBehaviour:
   - 0.56
   - 0.9
   sliderColor:
-  - {r: 0.81568635, g: 0, b: 0, a: 1}
-  - {r: 0.37254903, g: 0.81568635, b: 0, a: 1}
-  - {r: 0.81568635, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0.7176471, b: 0, a: 1}
   residentText: {fileID: 1615613179}
   castSlider:
   - minText: {fileID: 331458761}
@@ -121933,7 +121935,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 5.5, y: 0}
-  m_SizeDelta: {x: 240, y: 17.536}
+  m_SizeDelta: {x: 260, y: 17.536}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1850016988
 MonoBehaviour:
@@ -121956,8 +121958,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\uD589\uBCF5\uB3C4\uAC00 \uB192\uC744\uC218\uB85D \uB9CE\uC740 \uC138\uAE08\uC744
-    \uB0A9\uBD80\uD569\uB2C8\uB2E4.\\n\n\uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4\uAC00
-    \uB0AE\uC73C\uBA74 \uC8FC\uBBFC\uC774 \uAC10\uC18C\uD569\uB2C8\uB2E4."
+    \uB0A9\uBD80\uD569\uB2C8\uB2E4.\\n\n\uC8FC\uAC70 \uAC74\uBB3C\uC758 \uACBD\uC6B0
+    \uD589\uBCF5\uB3C4\uAC00 \uB0AE\uC73C\uBA74 \uC8FC\uBBFC\uC774 \uAC10\uC18C\uD569\uB2C8\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
   m_sharedMaterial: {fileID: 4479025330240497328, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
