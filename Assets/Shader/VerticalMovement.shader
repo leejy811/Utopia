@@ -6,6 +6,7 @@ Shader "Custom/VerticalMovement1"
         _Speed("Speed", Range(0, 10)) = 1.0
         _Amplitude("Amplitude", Range(0, 1)) = 0.1
         _Color("Color", Color) = (1,1,1,1)
+        _LineColor("Color", Color) = (1,1,1,1)
     }
         SubShader
         {
@@ -26,6 +27,7 @@ Shader "Custom/VerticalMovement1"
                 sampler2D _MainTex;
                 float _Speed;
                 float _Amplitude;
+                fixed4 _LineColor;
 
                 struct appdata
                 {
@@ -60,7 +62,7 @@ Shader "Custom/VerticalMovement1"
                 {
                     float alpha = 1.0 - clamp(i.offset / _Amplitude, 0.0, 1.0);
 
-                    return fixed4(1.0, 0.0, 0.0, alpha);
+                    return fixed4(_LineColor.rgb, alpha);
                 }
                 ENDCG
             }

@@ -39,7 +39,6 @@ public class BuildingIntroUI : MonoBehaviour
 
     [Header("Slider Info")]
     public string[] boundaryString;
-    [Range(0.0f, 1.0f)] public float[] sliderValue;
     public Color[] sliderColor;
 
     protected string[] typeString = { "주거", "상업", "문화", "서비스" };
@@ -97,11 +96,35 @@ public class BuildingIntroUI : MonoBehaviour
 
         int type = (int)value.CheckBoundary() + 1;
         slider.stringText.text = boundaryString[type];
-        slider.slider.value = sliderValue[type];
+        slider.slider.value = GetSliderValue(value);
 
         ColorBlock colorBlock = slider.slider.colors;
         colorBlock.disabledColor = sliderColor[idx];
         slider.slider.colors = colorBlock;
+    }
+
+    protected float GetSliderValue(BoundaryValue value)
+    {
+        float bias = ((float)value.CheckBoundary() + 1) * (1.0f / 3.0f);
+        float res = bias;
+
+        switch(value.CheckBoundary())
+        {
+            case BoundaryType.Less:
+                res += (value.cur / value.min) / 3.0f;
+                break;
+            case BoundaryType.Include:
+                res += (value.cur - value.min) / (value.max - value.min) / 3.0f;
+                break;
+            case BoundaryType.More:
+                res += (value.cur - value.max) / value.min / 3.0f;
+                break;
+        }
+
+        if (res > 0.99f)
+            res = 0.99f;
+
+        return res;
     }
 
     protected void OnDisable()
