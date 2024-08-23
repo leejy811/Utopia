@@ -107060,8 +107060,8 @@ MonoBehaviour:
   - "\uB192\uC74C"
   sliderColor:
   - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.7176471, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
   influenceText: {fileID: 76285888}
   valueTypeText: {fileID: 1508091321}
   utilitySlider:
@@ -135986,8 +135986,8 @@ MonoBehaviour:
   - "\uB192\uC74C"
   sliderColor:
   - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
   - {r: 1, g: 0.59607846, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
   influenceText: {fileID: 1624475257}
   valueTypeText: {fileID: 1455439540}
   utilitySlider:
