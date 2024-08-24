@@ -183,6 +183,13 @@ public class EventManager : MonoBehaviour
         List<Event> temp = new List<Event>();
         int idx = 0;
 
+        for (int i = 0; i < ranEvents.Count; i++)
+        {
+            Event e = ranEvents[i];
+            e.duplication = 1;
+            ranEvents[i] = e;
+        }
+
         for (int i = 0;i < ranEvents.Count; i++)
         {
             if (temp.Contains(ranEvents[idx]))
@@ -298,8 +305,6 @@ public class EventManager : MonoBehaviour
 
         globalEvents = EventDayUpdate(globalEvents);
         curEvents = EventDayUpdate(curEvents);
-
-        UIManager.instance.SetEventInfo(curEvents.ToArray());
     }
 
     private List<Event> EventDayUpdate(List<Event> events)

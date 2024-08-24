@@ -74,9 +74,10 @@ public class RoutineManager : MonoBehaviour
             Tile.income = 0;
             CalculateIncome();
             UpdateHappiness();
+            EventManager.instance.EffectUpdate();
             EventManager.instance.CheckEvents();
             EventManager.instance.RandomRoulette(1);
-            EventManager.instance.EffectUpdate();
+            UIManager.instance.SetEventInfo(EventManager.instance.curEvents.ToArray());
             ApplyDept();
 
             UIManager.instance.UpdateDailyInfo();
