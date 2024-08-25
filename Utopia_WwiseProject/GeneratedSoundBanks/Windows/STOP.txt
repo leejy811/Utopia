@@ -1,0 +1,7 @@
+Event	ID	Name			Wwise Object Path	Notes
+	788884573	Stop			\Default Work Unit\Stop	
+	1752511481	Stop_01			\Default Work Unit\Stop_01	
+	1752511482	Stop_02			\Default Work Unit\Stop_02	
+	1752511483	Stop_03			\Default Work Unit\Stop_03	
+	1752511484	Stop_04			\Default Work Unit\Stop_04	
+

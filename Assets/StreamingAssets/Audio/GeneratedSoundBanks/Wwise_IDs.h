@@ -80,7 +80,6 @@ namespace AK
         static const AkUniqueID PLAY_PAY_001 = 2025304052U;
         static const AkUniqueID PLAY_PROTEST_002 = 1749625636U;
         static const AkUniqueID PLAY_SELECT_BUTTON = 880454473U;
-        static const AkUniqueID PLAY_SINGSINGSINGMYBIRD = 2446290240U;
         static const AkUniqueID PLAY_SLOT_DRRRRRR_01 = 3452595303U;
         static const AkUniqueID PLAY_SLOT_EFFECT_SPWAN_01 = 725934356U;
         static const AkUniqueID PLAY_SLOT_REVER_01 = 1042317409U;
@@ -98,6 +97,11 @@ namespace AK
         static const AkUniqueID PLAY_UI_PAPERSOUND_001 = 424395900U;
         static const AkUniqueID PLAY_UI_SOLVE_001 = 1520262876U;
         static const AkUniqueID PLAY_WIND = 1020223172U;
+        static const AkUniqueID STOP = 788884573U;
+        static const AkUniqueID STOP_01 = 1752511481U;
+        static const AkUniqueID STOP_02 = 1752511482U;
+        static const AkUniqueID STOP_03 = 1752511483U;
+        static const AkUniqueID STOP_04 = 1752511484U;
         static const AkUniqueID STOP_CONSTRUCTION = 3493507479U;
         static const AkUniqueID STOP_FORESTAMBIENCEINLOBBY = 2778003230U;
         static const AkUniqueID STOP_LOBBY = 3639729344U;
@@ -126,6 +130,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BGM_VOL = 1622127507U;
         static const AkUniqueID BOOL = 1761501017U;
         static const AkUniqueID CLICK = 1584507803U;
         static const AkUniqueID DIST = 2212414277U;
@@ -133,6 +138,7 @@ namespace AK
         static const AkUniqueID INDEX1 = 187723092U;
         static const AkUniqueID INDEX2 = 187723095U;
         static const AkUniqueID OPTION = 731737678U;
+        static const AkUniqueID SFX_VOL = 42448320U;
         static const AkUniqueID TIMELAP = 3842075637U;
         static const AkUniqueID ZOOM = 848835168U;
     } // namespace GAME_PARAMETERS
@@ -143,13 +149,16 @@ namespace AK
         static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID BGM2 = 1189781957U;
         static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID STOP = 788884573U;
         static const AkUniqueID UI = 1551306167U;
         static const AkUniqueID UI2 = 1181390631U;
     } // namespace BANKS
 
     namespace BUSSES
     {
+        static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

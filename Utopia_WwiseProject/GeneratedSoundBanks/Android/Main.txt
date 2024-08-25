@@ -12,7 +12,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	1073654463	Play_Slot_rimshot			\Default Work Unit\Play_Slot_rimshot	
 	1598463209	Play_construction			\Default Work Unit\Play_construction	
 	2149296550	Play_testing			\Default Work Unit\Play_testing	
-	2446290240	Play_singsingsingmybird			\Default Work Unit\Play_singsingsingmybird	
 	2611274067	Play_buildingsound			\Default Work Unit\Play_buildingsound	
 	3149538809	Play_ForestAmbience			\Default Work Unit\Play_ForestAmbience	
 	3493507479	Stop_construction			\Default Work Unit\Stop_construction	

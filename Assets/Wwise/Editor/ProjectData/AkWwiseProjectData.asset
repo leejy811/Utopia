@@ -38,8 +38,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 24e07c87093835479306e84d8ee884e1
     GuidInternal: 
-    m_lastTime: -8584800632631901925
+    m_lastTime: -8584770252037802514
     List:
+    - name: BGM
+      guid: 5ad6101f779a2d419574cd87b45b520c
+      id: 412724365
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24e07c87093835479306e84d8ee884e1
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: BGM
+        ObjectType: 2
+        guid: 5ad6101f779a2d419574cd87b45b520c
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\BGM
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -54,6 +71,23 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: SFX
+      guid: 196dac6043b2304ea4c9b4abd102f5a1
+      id: 393239870
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 24e07c87093835479306e84d8ee884e1
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: SFX
+        ObjectType: 2
+        guid: 196dac6043b2304ea4c9b4abd102f5a1
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\SFX
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -66,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584800632552596885
+    m_lastTime: -8584770250267561470
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -110,6 +144,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 3b7239bccf5897409d336b79c2e2756f
       Path: SoundBanks\Default Work Unit\Main
+    - name: STOP
+      guid: 284c591f53045a42ac3adab8ed5cd86d
+      id: 788884573
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a3314ea6034880469012d6b012acb40a
+      - ElementName: STOP
+        ObjectType: 7
+        guid: 284c591f53045a42ac3adab8ed5cd86d
+      Path: SoundBanks\Default Work Unit\STOP
     - name: UI
       guid: 4601a5b674a4a949a6cf87ed355dcc56
       id: 1551306167
@@ -150,7 +198,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584800632674805163
+    m_lastTime: -8584770252037976095
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1516,8 +1564,8 @@ MonoBehaviour:
         guid: 0988c9710d304f478bb9a49af57f7d98
       Path: Events\Default Work Unit\Play_singsingsingmybird
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Slot_Drrrrrr_01
       guid: 5ec76ed9c5029f47af8e4c87cfd32851
       id: 3452595303
@@ -1813,6 +1861,91 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Stop
+      guid: 5e55c42cf4b50244afd0942e33832ee7
+      id: 788884573
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop
+        ObjectType: 3
+        guid: 5e55c42cf4b50244afd0942e33832ee7
+      Path: Events\Default Work Unit\Stop
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_01
+      guid: e7b24b1e620d304abd7b4c056c6a17a7
+      id: 1752511481
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_01
+        ObjectType: 3
+        guid: e7b24b1e620d304abd7b4c056c6a17a7
+      Path: Events\Default Work Unit\Stop_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_02
+      guid: f81e68dc8cc73b409bca5bf1258bbec6
+      id: 1752511482
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_02
+        ObjectType: 3
+        guid: f81e68dc8cc73b409bca5bf1258bbec6
+      Path: Events\Default Work Unit\Stop_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_03
+      guid: 6e9bf9a45f68c540b450e902b7ea2014
+      id: 1752511483
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_03
+        ObjectType: 3
+        guid: 6e9bf9a45f68c540b450e902b7ea2014
+      Path: Events\Default Work Unit\Stop_03
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_04
+      guid: 2fe7812c738a104e862c253cac2019cb
+      id: 1752511484
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_04
+        ObjectType: 3
+        guid: 2fe7812c738a104e862c253cac2019cb
+      Path: Events\Default Work Unit\Stop_04
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_construction
       guid: f52f07cca1b231439ba45051290aac45
       id: 3493507479
@@ -1944,8 +2077,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584800632674795192
+    m_lastTime: -8584770252037614040
     List:
+    - name: BGM_VOL
+      guid: 17e4ff598f446d498dddd6e9b337a6de
+      id: 1622127507
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: BGM_VOL
+        ObjectType: 13
+        guid: 17e4ff598f446d498dddd6e9b337a6de
+      Path: Game Parameters\Default Work Unit\BGM_VOL
     - name: BOOL
       guid: b972b7cd27001549bc02afd17da6dc7d
       id: 1761501017
@@ -2044,6 +2191,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 35a65b972a9c3e46ae0a4be629293298
       Path: Game Parameters\Default Work Unit\OPTION
+    - name: SFX_VOL
+      guid: dc3a07ef63841548a1e449769140bd78
+      id: 42448320
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: SFX_VOL
+        ObjectType: 13
+        guid: dc3a07ef63841548a1e449769140bd78
+      Path: Game Parameters\Default Work Unit\SFX_VOL
     - name: TIMELAP
       guid: 5e235a81faa3a948b8b5800f68bf3307
       id: 3842075637
@@ -2213,7 +2374,7 @@ MonoBehaviour:
     m_lastTime: -8584800632546760059
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000003e0000003f0000004200000045000000460000004f000000500000005200000053000000ec000000ed00000026010000270100003501000036010000ce010000cf0100000c0200000d020000
+  ExpandedWaapiItemIds: 05000000060000003e0000003f00000045000000460000004c0000004d0000004f000000500000005200000053000000ec000000ed00000026010000270100003501000036010000ce010000cf0100000c0200000d020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

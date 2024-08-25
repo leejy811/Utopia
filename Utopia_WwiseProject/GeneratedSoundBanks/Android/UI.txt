@@ -14,7 +14,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	838938441	Play_APT_event_FIRE_01			\Default Work Unit\Condition2\Play_APT_event_FIRE_01	
 	846636250	Play_APT_event_DESOLATE_001_1			\Default Work Unit\conditionindex2\Play_APT_event_DESOLATE_001_1	
 	1010891971	Play_APT_event_THIEF_001_1			\Default Work Unit\conditionindex2\Play_APT_event_THIEF_001_1	
-	1031511574	Play_SlotMachine_enter_001			\Default Work Unit\Play_SlotMachine_enter_001	
 	1044076768	Play_APT_event_BLACKOUT_01			\Default Work Unit\Condition2\Play_APT_event_BLACKOUT_01	
 	1106490366	Play_APT_event_SEWERSMELL_001_1			\Default Work Unit\conditionindex2\Play_APT_event_SEWERSMELL_001_1	
 	1278673985	Play_Building_click_003			\Default Work Unit\UI\Play_Building_click_003	
@@ -84,7 +83,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	361543517	stamp	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\stamp_4840DD5A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\stamp		60332
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_DESOLATE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_DESOLATE_01		1076988
 	476423553	APT_event_SEWERSMELL_001_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_SEWERSMELL_001_11A93380.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\APT_event_SEWERSMELL_001_1		1079100
-	488455765	SlotMachine_enter_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SlotMachine_enter_001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\SlotMachine_enter_001		89926
 	546900594	APT_event_SEWERSMELL_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_SEWERSMELL_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_SEWERSMELL_01		1079100
 	637537002	SomethingWrong_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SomethingWrong_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\SomethingWrong_01		987236
 	648936715	APT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_THIEF_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_THIEF_01		1030916

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{F2EEA2A5-E329-F08F-5120-C0C09C40EFEF}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{DE6F97B9-DE7D-3F74-A64B-46611E5D46B9}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -101,7 +101,18 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{297EA67A-0E94-BB6A-10BE-C3283A23A908}">
+		<SoundBank Id="788884573" Type="User" Language="SFX" Hash="{D85F1D4C-3022-516B-8D6F-6B667E36396F}">
+			<ShortName>STOP</ShortName>
+			<Path>STOP.bnk</Path>
+			<Events>
+				<Event Id="788884573" Name="Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1752511481" Name="Stop_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1752511482" Name="Stop_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1752511483" Name="Stop_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1752511484" Name="Stop_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{FC0DB0B1-AE32-0ECC-692C-C9DF8623818F}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -192,7 +203,7 @@
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{2FF5A4DA-A666-0A3A-CFD4-5620D54B63D8}">
+		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{D8644B73-1F04-1E73-868F-5F5751D64510}">
 			<ShortName>BGM2</ShortName>
 			<Path>BGM2.bnk</Path>
 			<Media>
@@ -210,7 +221,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{2444715E-1943-2A2E-636D-F68E4C9BF5BC}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{76518095-E0E3-BF2C-DCBA-AECA90177E0F}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -220,15 +231,19 @@
 				</AudioDevices>
 			</Plugins>
 			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="412724365" Name="BGM"/>
 				<Bus Id="3803692087" Name="Master Audio Bus"/>
 			</Busses>
 			<GameParameters>
+				<GameParameter Id="42448320" Name="SFX_VOL"/>
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="731737678" Name="OPTION"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
 				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1622127507" Name="BGM_VOL"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
@@ -245,7 +260,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{F5EBBADF-88D7-EC6F-5697-A5AEC7D0F7E3}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{9F6DD794-5D37-D792-E0E8-3142D39766D8}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -324,10 +339,6 @@
 				<File Id="476423553" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
 					<CachePath>SFX/APT_event_SEWERSMELL_001_11A93380.wem</CachePath>
-				</File>
-				<File Id="488455765" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>SlotMachine_enter_001.wav</ShortName>
-					<CachePath>SFX/SlotMachine_enter_001_818F3B66.wem</CachePath>
 				</File>
 				<File Id="546900594" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
@@ -619,11 +630,6 @@
 						<MediaRef Id="865553987"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1031511574" Name="Play_SlotMachine_enter_001" DurationType="OneShot" DurationMin="0.93572915" DurationMax="0.93572915">
-					<MediaRefs>
-						<MediaRef Id="488455765"/>
-					</MediaRefs>
-				</Event>
 				<Event Id="3676035621" Name="Play_SomethingWrong_01" DurationType="OneShot" DurationMin="5.141354" DurationMax="5.141354">
 					<MediaRefs>
 						<MediaRef Id="637537002"/>
@@ -665,7 +671,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{40AF8B0A-31A2-0CE5-9428-90C3F9250FA4}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{259A5284-4745-1A5E-B39F-09491BEA1188}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -794,7 +800,6 @@
 						<MediaRef Id="314776306"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="2446290240" Name="Play_singsingsingmybird" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1073654463" Name="Play_Slot_rimshot" DurationType="OneShot" DurationMin="4.0776334" DurationMax="4.0776334">
 					<MediaRefs>
 						<MediaRef Id="779451324"/>
@@ -827,5 +832,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3B8B1749-735D-4DB7-5BB6-086BE9E680DD}</FileHash>
+	<FileHash>{F1B49DB0-9F33-E914-8087-22FEB7D6F61B}</FileHash>
 </SoundBanksInfo>

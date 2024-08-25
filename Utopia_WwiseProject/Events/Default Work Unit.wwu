@@ -1076,6 +1076,496 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop" ID="{2CC4555E-B5F4-4402-AFD0-942E33832EE7}">
+					<ChildrenList>
+						<Action Name="" ID="{74596758-1991-4B30-A574-9C63655692F0}" ShortID="373613193">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_BLACKOUT_01" ID="{859D8A15-A72E-414A-AB45-5FB818E9E484}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{55796750-F1F8-469D-9099-FBC123F6354A}" ShortID="646198803">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DESOLATE_01" ID="{573A27D2-6E1C-4371-BB4B-0E0031CAB031}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{EF0EC118-6208-4983-9039-9573D39D684A}" ShortID="307219477">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DISEASE_01" ID="{985CCF1D-FB53-46E2-BD03-607CD0F27025}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1FDB7A86-18E1-4D64-86F0-F065C52711D2}" ShortID="356500198">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_FIRE_01" ID="{05127E7A-747E-47B6-AE2C-896F75FC1D1B}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{09C2F42C-1E32-4FEF-B660-072538F650C5}" ShortID="40210495">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_NOISY_01" ID="{6ADDD836-9DC1-4791-800E-BED499A6D7F5}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A484E0FC-C192-4B68-AD4B-B5402BF101F5}" ShortID="487942309">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_SEWERSMELL_01" ID="{C980C0A4-0640-46BC-977E-E6B809DDC25E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D09BB40E-A534-45F3-9773-0A788D271B72}" ShortID="837299542">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_THIEF_01" ID="{3CE90CC1-3F05-4D98-9D22-50873B038A09}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3BE77824-FA44-414C-9828-579765348C0D}" ShortID="285649002">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_ELEVATOR_01_v2" ID="{5560CB62-8809-441C-A612-A040900F7B1D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C174AB19-EAF5-41C2-A620-8EF600A4E0BF}" ShortID="182396383">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_scary_2(noHeel)v1" ID="{B7034D2C-94EF-414B-8C52-EB0A4258CB8F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{4FB443CA-E6C2-4377-9805-48BFD9608D21}" ShortID="327587830">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_water_outagev1" ID="{EBB2FD82-10B5-440D-BF99-707298F239B9}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_01" ID="{1E4BB2E7-0D62-4A30-BD7B-4C056C6A17A7}">
+					<ChildrenList>
+						<Action Name="" ID="{99355963-D3AB-465D-B8F9-7F9A456477C4}" ShortID="1061800119">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_BLACKOUT_01-1" ID="{16C03ACC-0DB8-46E6-958D-78470FD27F11}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{08021559-A04D-4004-91B0-D6932E583E5F}" ShortID="78112868">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DESOLATE_01-1" ID="{E37322ED-689C-4E08-8C70-4250B652E3DC}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2A826323-4793-41C4-98E6-F599D621A560}" ShortID="507667251">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DISEASE_01-1" ID="{2D39D8AB-6D7B-4F7B-86BA-E09FBA408A76}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E919E109-DFA4-4BAC-A823-C9A8C155918C}" ShortID="345471598">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_FIRE_01-1" ID="{98F47F64-4CDB-45DF-A5B2-9322C49F9149}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AF82059D-B69D-427E-B878-8F3A46BCB31A}" ShortID="1044156943">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_NOISY_01-1" ID="{0EA9B32C-78E5-42B3-9491-FDDDD0DD9D61}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{1316C724-4778-4635-ADB9-FC87B7C1E33E}" ShortID="151663082">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_SEWERSMELL_01-1" ID="{D8BFC37E-548F-4712-A150-1729CF1C2CFC}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FA12400F-52D9-4AE9-A076-D6D7696F25AD}" ShortID="12808389">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_THIEF_01-1" ID="{E4E67698-8289-4A7D-A096-59DE5FBECBC2}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{57435D0F-AEED-4B79-9911-68D72A6983A9}" ShortID="518722437">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_ELEVATOR_01_v2-1" ID="{2EE4B286-8710-4160-B41E-E20840315A35}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AF9DF008-8DCD-47CE-B1EE-28851DEFEAF9}" ShortID="895881522">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_scary_2(noHeel)v2" ID="{6A411B5A-C820-43B9-89C9-4CD9A98561D9}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{62D2BF26-4A64-49C3-B276-33CBF42EDE48}" ShortID="717534900">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_water_outagev2" ID="{A23FF61F-1C7D-4E78-A312-AE6BB262BD51}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_02" ID="{DC681EF8-C78C-403B-9BCA-5BF1258BBEC6}">
+					<ChildrenList>
+						<Action Name="" ID="{D715D405-9DFE-44E8-BE43-D8ED61F399BD}" ShortID="85421216">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_BLACKOUT_001" ID="{1DDAB8B7-01B0-4DDA-B541-39B1EAE5A459}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{79A8917E-14B1-46DE-B000-00E1AF7D6A05}" ShortID="343539596">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DESOLATE_001" ID="{536A3EDA-2461-481D-A310-2D0772FCC332}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C623F4D0-BD45-46A1-B65D-E71A36B3FE49}" ShortID="361102728">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DISEASE_001" ID="{8736E499-5846-481D-A8FF-61606E6A4A59}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D3116404-2AAD-4A75-82A0-66E8A63C1D12}" ShortID="385769380">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_FIRE_001" ID="{2528D30B-ECB7-4764-9A81-87510C0615EF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FFB9D970-F5F9-4972-865C-80013B1EE74D}" ShortID="636071777">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_NOISY_001" ID="{D9544F62-A249-4DAC-AF37-0102E3C99A91}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{181576F8-D7E8-4D73-A73B-BA13E0306488}" ShortID="218273886">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_SEWERSMELL_001" ID="{66369F7B-3A72-4078-908D-D5BCFA15B3F9}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A3467450-3DE3-4730-BFF5-7EA115BA7676}" ShortID="916810914">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_THIEF_001" ID="{6E820553-B9ED-40C4-B2F8-F261B4AF952E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8321E58C-5573-43BC-9D1C-3C27BE6AD0D3}" ShortID="355981345">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_ELEVATOR_001_v2" ID="{07106594-59EC-45CF-A02F-6B3CD516C22C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9F5EB895-77A9-4220-89EB-40716265AA24}" ShortID="570219502">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_scary_2(noHeel)v3" ID="{74D018DE-A205-41C3-8810-692D1C9D2BEA}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F922BAEE-D4A4-4B98-91ED-C1974E28EEA3}" ShortID="794563629">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_water_outagev3" ID="{341C5188-714D-44DA-B506-898468A48D4D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_03" ID="{A4F99B6E-685F-40C5-B450-E902B7EA2014}">
+					<ChildrenList>
+						<Action Name="" ID="{1AE00F8F-6042-4807-B417-00C8EC7CDC00}" ShortID="403801001">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_BLACKOUT_001_1" ID="{873A59D9-C791-4DFA-B2FE-6DB846B2B1AC}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{57BF5B95-31DC-4F94-AA2C-74A1B8775148}" ShortID="714437704">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DESOLATE_001_1" ID="{C82765E0-6BD6-4F47-AF5E-146B4406FDBE}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A032F941-54E6-4BE1-AC69-B3BD768FA359}" ShortID="210309092">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_DISEASE_001_1" ID="{DB8403C6-0CBA-4C66-867D-F47F07330DC4}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B012BE7-23C5-40FF-80F0-E27C4FA4F6A1}" ShortID="128457120">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_FIRE_001_1" ID="{E6035560-519C-4E0A-80D7-7ED18402C65C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{482DDA41-E4DB-4090-9079-5B5943E89D91}" ShortID="827198982">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_NOISY_001_1" ID="{95554B39-D902-4F9B-BF1D-86AC77B8A1F8}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6DDF3E4F-D7DD-4AA0-AA4A-385205660D08}" ShortID="453517472">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_SEWERSMELL_001_1" ID="{9A4F9C1A-A6EA-4B32-8F19-E8E2398F8BDB}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8EC00626-D195-4942-9E87-48D20D0FAB9E}" ShortID="59255795">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="APT_event_THIEF_001_1" ID="{4F6A7310-CD36-4820-AD17-090B8839AFD6}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{22E55AE0-79CB-4FB0-B378-FC1B679591A8}" ShortID="639647248">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_ELEVATOR_001_v2_1" ID="{39466CA5-837F-44DE-BED5-C33D858E28BA}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{07DACEE6-8755-460A-9F04-7653E732B77E}" ShortID="107044237">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_scary_2(noHeel)v4" ID="{7E59B039-D3B6-4076-B796-0DA0F354184C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B5CF57C0-1523-47F4-9727-6E626F68ACD2}" ShortID="325382284">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ATP_event_water_outagev4" ID="{A1A72080-7BB8-49AD-AF46-21E166B46083}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_04" ID="{2C81E72F-8A73-4E10-862C-253CAC2019CB}">
+					<ChildrenList>
+						<Action Name="" ID="{D671BC92-718E-41E6-BA3D-65AE2158E21C}" ShortID="941585611">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGMsequnce1" ID="{15264212-B495-45DE-A882-CC5FF818ADF7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D44B9A03-691A-480E-BFF1-B2B9423A868E}" ShortID="734823723">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="testing" ID="{AF1FA326-C145-4FE6-A2D0-69973DBCD741}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{001263D3-5CB0-4BD6-B22F-BA5D3FEBDA7B}" ShortID="1016625460">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM4" ID="{6AF6144E-1EA1-4F74-B01C-2D8AC5AB755D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CAB5D33F-5CC0-47B8-84C9-14B1524AE301}" ShortID="84251620">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BGM5" ID="{B9C15F7B-44A2-44AA-96C0-3554495B81F3}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6CFC219B-0052-4144-B807-E43A041F5392}" ShortID="557463739">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ForestAmbience" ID="{0537576E-F521-4F97-B2B4-2FBAF13ACD8F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{839B7EE5-F87D-489F-B94B-A3CB977E62CF}" ShortID="787503342">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="protest_002" ID="{ADA81993-24A7-4BCD-9103-D640049C7004}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{302BBD6F-2F55-4FBE-BBEF-8229FDD2D50D}" ShortID="1054927454">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Wind" ID="{91F06F63-020A-4CD8-9F20-7C4632F0AD9E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

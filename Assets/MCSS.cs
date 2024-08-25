@@ -78,4 +78,19 @@ public class MCSS : MonoBehaviour
             AkSoundEngine.PostEvent("Play_construction", gameObject);
         }
     }
+    private void OnDestroy()
+    {
+        AkSoundEngine.PostEvent("Stop", gameObject);
+        AkSoundEngine.PostEvent("Stop_01", gameObject);
+        AkSoundEngine.PostEvent("Stop_02", gameObject);
+        AkSoundEngine.PostEvent("Stop_03", gameObject);
+        AkSoundEngine.PostEvent("Stop_04", gameObject);
+    }
+
+
+
+
 }
+
+
+

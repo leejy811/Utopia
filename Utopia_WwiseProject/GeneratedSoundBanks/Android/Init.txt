@@ -9,9 +9,13 @@ State	ID	Name	State Group			Notes
 	3759462269	HA0to20	HAPPY			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	42448320	SFX_VOL			\Default Work Unit\SFX_VOL	
 	731737678	OPTION			\Default Work Unit\OPTION	
+	1622127507	BGM_VOL			\Default Work Unit\BGM_VOL	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	412724365	BGM			\Default Work Unit\Master Audio Bus\BGM	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 
 Audio Devices	ID	Name	Type				Notes
