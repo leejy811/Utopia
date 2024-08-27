@@ -104,22 +104,22 @@ public struct Event
     public string GetEventToString()
     {
         string res = "";
-        string[] valueString = { "»óÇ°°¡°İ", "ÀÔÀå·á", "Ãë¾÷·ü" };
+        string[] valueString = { "ìƒí’ˆê°€ê²©", "ì…ì¥ë£Œ", "ì·¨ì—…ë¥ " };
 
         if (valueType == ValueType.utility)
             res += (duplication != 3 ? "<color=#FFAB40>" : "") + valueString[targetIndex - 1];
         else if (valueType == ValueType.Influence)
-            res += (duplication != 3 ? "<color=#FFAB40>" : "") + "¿µÇâ·Â";
+            res += (duplication != 3 ? "<color=#FFAB40>" : "") + "ì˜í–¥ë ¥";
         else
-            res += (duplication != 3 ? "<color=#FF0000>" : "") + "Çàº¹µµ";
+            res += (duplication != 3 ? "<color=#FF0000>" : "") + "í–‰ë³µë„";
 
         if (duplication == 3)
-            res += " <color=#FF0000>´ëÆø</color>";
+            res += " <color=#FF0000>ëŒ€í­</color>";
 
         if (type == EventType.Problem)
-            res += " °¨¼Ò";
+            res += " ê°ì†Œ";
         else
-            res += GetEffectValue(0) > 0 ? " Áõ°¡" : " °¨¼Ò";
+            res += GetEffectValue(0) > 0 ? " ì¦ê°€" : " ê°ì†Œ";
 
         return res;
     }

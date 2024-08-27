@@ -14,8 +14,8 @@ public class ProblemUIInfo : BuildingEventUIInfo
         for (int j = 0; j < solutionUIInfos.Length; j++)
         {
             solutionUIInfos[j].nameText.text = curEvent.solutions[j].name.ToString();
-            solutionUIInfos[j].costText.text = "(-" + curEvent.solutions[j].cost.ToString() + "¿ø)";
-            solutionUIInfos[j].probText.text = "ÇØ°áÈ®·ü " + curEvent.solutions[j].prob.ToString() + "%";
+            solutionUIInfos[j].costText.text = "(-" + curEvent.solutions[j].cost.ToString() + "ì›)";
+            solutionUIInfos[j].probText.text = "í•´ê²°í™•ë¥  " + curEvent.solutions[j].prob.ToString() + "%";
         }
     }
 }

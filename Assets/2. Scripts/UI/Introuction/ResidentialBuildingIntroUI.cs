@@ -14,7 +14,7 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
     public Toggle[] optionToggles;
     public TextMeshProUGUI[] castTexts;
 
-    string[] optionString = { "¼öµµ", "ÇÏ¼ö", "Àü·Â", "¹æÀ½" };
+    string[] optionString = { "ìˆ˜ë„", "í•˜ìˆ˜", "ì „ë ¥", "ë°©ìŒ" };
 
     public override void SetValue(Building building)
     {
@@ -63,11 +63,11 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         string castEffectString = "";
 
         if (building.UpdateHappiness(true, type) != 0)
-            castEffectString = building.UpdateHappiness(true, type) > 0 ? "<color=#00FF00>Çàº¹µµ Áõ°¡" : "<color=#FF0000>Çàº¹µµ °¨¼Ò";
+            castEffectString = building.UpdateHappiness(true, type) > 0 ? "<color=#00FF00>í–‰ë³µë„ ì¦ê°€" : "<color=#FF0000>í–‰ë³µë„ ê°ì†Œ";
         else if (building.CalculateBonus(true) != 0)
-            castEffectString = "<color=#FF0000>Ãß°¡ ÁöÃâ ¹ß»ı";
+            castEffectString = "<color=#FF0000>ì¶”ê°€ ì§€ì¶œ ë°œìƒ";
 
-        res += boundaryString[boundaryIdx] + "ÇÑ " + typeString[type] + " ¸¸Á·µµ·Î ÀÎÇØ " + castEffectString + " ¿¹Á¤</color>";
+        res += boundaryString[boundaryIdx] + "í•œ " + typeString[type] + " ë§Œì¡±ë„ë¡œ ì¸í•´ " + castEffectString + " ì˜ˆì •</color>";
         return res;
     }
 }

@@ -112,7 +112,7 @@ public class EventManager : MonoBehaviour
             }
         }
 
-        //ToDo : ÅäÅäÇÇ¾Æ Ãß°¡µÇ¸é SelectRewardType ÇÔ¼ö Á¶°Ç ´Ş¾Æ¼­ Ãß°¡
+        //ToDo : í† í† í”¼ì•„ ì¶”ê°€ë˜ë©´ SelectRewardType í•¨ìˆ˜ ì¡°ê±´ ë‹¬ì•„ì„œ ì¶”ê°€
 
         //UIManager.instance.eventRoulette.SetPossibleEvent(possibleEvents.ToArray());
 
@@ -229,7 +229,7 @@ public class EventManager : MonoBehaviour
 
         if (curCountDay == preCountDay)
         {
-            //if (ÅäÅäÇÇ¾Æ ¸ğµå¸é)
+            //if (í† í† í”¼ì•„ ëª¨ë“œë©´)
             //{
             //    ranIdx.Add(Random.Range(0, possibleEvents.Count));
             //    ranIdx.Add(ranIdx[0]);
@@ -243,7 +243,7 @@ public class EventManager : MonoBehaviour
         }
         else
         {
-            //if (ÀÏ¹İ¸ğµå¸é)
+            //if (ì¼ë°˜ëª¨ë“œë©´)
             return;
         }
 
