@@ -189,14 +189,14 @@ public class Building : MonoBehaviour
     {
         int ran = Random.Range(0, 100);
 
-        if (ran < curEvents[index / 2].solutions[index % 2].prob)
+        if (ran < curEvents[index].solutions[0].prob)
         {
-            if (curEvents[index / 2].conditionType == ConditionType.Option && curEvents[index / 2].solutions[index % 2].prob == 100)
+            if (curEvents[index].conditionType == ConditionType.Option && curEvents[index].solutions[0].prob == 100)
             {
-                (this as ResidentialBuilding).BuyFacility((OptionType)curEvents[index / 2].targetIndex);
+                (this as ResidentialBuilding).BuyFacility((OptionType)curEvents[index].targetIndex);
             }
             else
-                SetSolveEvent(index / 2);
+                SetSolveEvent(index);
         }
     }
 

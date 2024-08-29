@@ -48,6 +48,7 @@ public class UIManager : MonoBehaviour, ISubject
     public GameObject errorMessagePrefab;
     public GameObject happinessMessagePrefab;
     public GameObject eventMessagePrefab;
+    public UIElement destroyMessage;
 
     [Header("Cost")]
     public CostUI costInfo;
@@ -111,6 +112,7 @@ public class UIManager : MonoBehaviour, ISubject
     {
         DOTween.SetTweensCapacity(500, 50);
         UpdateDailyInfo();
+        Setmoney();
         SetCreditScorePanel();
         InitObserver();
         notifyObserver(EventState.LockButton);
@@ -299,7 +301,6 @@ public class UIManager : MonoBehaviour, ISubject
         DateTime curDay = RoutineManager.instance.day;
         dayText.text = curDay.ToString("yyyy/MM/dd");
         dayOfWeekText.text = weekStr[(int)curDay.DayOfWeek];
-        Setmoney();
         SetDebt();
         SetDebtInfo();
         SetDDay(curDay);
@@ -310,6 +311,11 @@ public class UIManager : MonoBehaviour, ISubject
         moneyText.text = GetCommaText(ShopManager.instance.Money) + "원";
     }
 
+    public void DailyMoneyUpdate(int prevMoney, int nextMoney, float second)
+    {
+        StartCoroutine(moneyText.gameObject.GetComponent<MoneyTextUI>().CalculateMoney(prevMoney, nextMoney, second));
+    }
+
     public void SetDebtInfo()
     {
         if (CityLevelManager.instance.levelIdx == CityLevelManager.instance.level.Length - 1) return;
@@ -317,9 +323,9 @@ public class UIManager : MonoBehaviour, ISubject
         DateTime curDay = RoutineManager.instance.day;
         int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
         if (RoutineManager.instance.debt != 0)
-            debtDayText.text = "<size=80>D-" + (7 - dayOfWeek).ToString() + "</size>";
+            debtDayText.text = "<size=18>D-" + (7 - dayOfWeek).ToString() + "</size>";
         else
-            debtDayText.text = "<size=50>납부 완료</size>";
+            debtDayText.text = "<size=12>납부 완료</size>";
 
         int maxWeek = CityLevelManager.instance.level[CityLevelManager.instance.levelIdx + 1].debtWeek;
         int curWeek = RoutineManager.instance.GetWeekOfYear() - CityLevelManager.instance.GetPrefixSumWeek();
@@ -695,6 +701,8 @@ public class UIManager : MonoBehaviour, ISubject
 
         addObserver(menu);
         addObserver(setting);
+
+        addObserver(destroyMessage);
 
         foreach (UILockButton lockButton in lockButtons)
         {

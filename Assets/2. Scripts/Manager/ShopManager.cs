@@ -90,8 +90,10 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState == BuyState.SellBuilding)
             SetTargetObject(null, Color.red, Color.white);
+        else if (state == BuyState.SellBuilding)
+            UIManager.instance.notifyObserver(EventState.DestroyBuilding);
 
-        switch (state)
+            switch (state)
         {
             case BuyState.None:
             case BuyState.SellBuilding:
@@ -206,7 +208,7 @@ public class ShopManager : MonoBehaviour, IObserver
         else
             building = EventManager.instance.eventBuildings[UIManager.instance.eventNotify.curIndex];
 
-        int cost = building.curEvents[index / 2].solutions[index % 2].cost;
+        int cost = building.curEvents[index].solutions[0].cost;
 
         if (buyState != BuyState.SolveBuilding && buyState != BuyState.EventCheck) return;
         if (!PayMoney(cost)) return;

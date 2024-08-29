@@ -64,15 +64,16 @@ public class RoutineManager : MonoBehaviour
             StopCoroutine(lightCoroutine);
         Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
 
+        Building.InitStaticCalcValue();
+
+        Tile.income = 0;
+        CalculateIncome();
+
         mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
         {
             InputManager.SetCanInput(true);
             day = day.AddDays(1);
 
-            Building.InitStaticCalcValue();
-
-            Tile.income = 0;
-            CalculateIncome();
             UpdateHappiness();
             EventManager.instance.EffectUpdate();
             EventManager.instance.CheckEvents();
@@ -160,6 +161,7 @@ public class RoutineManager : MonoBehaviour
     private void CalculateIncome()
     {
         int total = 0;
+        int curMoney = ShopManager.instance.Money;
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
@@ -178,6 +180,8 @@ public class RoutineManager : MonoBehaviour
         totalIncome = total;
         ShopManager.instance.GetMoney(total);
         EventManager.instance.EventCostUpdate(total);
+
+        UIManager.instance.DailyMoneyUpdate(curMoney, curMoney + total, lightUpdateDuration);
     }
 
     private void UpdateHappiness()

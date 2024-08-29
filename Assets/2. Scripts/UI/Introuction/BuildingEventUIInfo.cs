@@ -15,6 +15,6 @@ public class BuildingEventUIInfo : MonoBehaviour
     {
         iconImage.sprite = curEvent.eventIcon;
         nameText.text = curEvent.eventName.ToString();
-        dayText.text = "(D-" + (curEvent.effectValue.Count - curEvent.curDay).ToString() + ")";
+        dayText.text = "D-" + (curEvent.effectValue.Count - curEvent.curDay).ToString();
     }
 }

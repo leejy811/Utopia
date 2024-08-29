@@ -15,7 +15,7 @@ public class ProblemUIInfo : BuildingEventUIInfo
         {
             solutionUIInfos[j].nameText.text = curEvent.solutions[j].name.ToString();
             solutionUIInfos[j].costText.text = "(-" + curEvent.solutions[j].cost.ToString() + "원)";
-            solutionUIInfos[j].probText.text = "해결확률 " + curEvent.solutions[j].prob.ToString() + "%";
+            solutionUIInfos[j].probText.text = curEvent.solutions[j].prob.ToString() + "<size=\"7\">%</size>";
         }
     }
 }
