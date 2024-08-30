@@ -24,6 +24,6 @@ public class BuildingInfoUI : InfoUI
 
         nameText.text = building.buildingName;
         typeText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType];
-        buildingCostText.text = ShopManager.instance.CalculateBuildingCost(building, index).ToString();
+        buildingCostText.text = ShopManager.instance.CalculateBuildingCost(building, index).ToString("#,##0") + "¿ø";
     }
 }
