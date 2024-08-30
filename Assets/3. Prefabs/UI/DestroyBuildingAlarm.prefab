@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uCCA0\uAC70\uD558\uACE0 \uC2F6\uC740 \uAC74\uBB3C\uC744 \uD074\uB9AD\uD558\uC138\uC694."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
-  m_sharedMaterial: {fileID: 4479025330240497328, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 54427267dff7b884db924511850c2d43, type: 2}
+  m_sharedMaterial: {fileID: 6645456449502325584, guid: 54427267dff7b884db924511850c2d43, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15
-  m_fontSizeBase: 15
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -162,8 +162,8 @@ RectTransform:
   m_GameObject: {fileID: 8803526751934983720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 719257661175177893}
   m_Father: {fileID: 0}
@@ -203,7 +203,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: c97a6feea770bb7488d011a5e186e1f4, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
