@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public enum PhoneState { Main, Bank, Mail, Credit, Level }
 public enum MailType { Credit, Level }
@@ -78,6 +78,13 @@ public class PhoneUI : MonoBehaviour, IObserver
     {
         GameObject mail = Instantiate(mailPrefabs[(int)type], mailParent);
         mail.transform.SetAsFirstSibling();
+
+        Button button = mail.GetComponent<Button>();
+
+        if (button != null)
+        {
+            button.onClick.AddListener(() => ChangeStateToInt((int)type + 3));
+        }
     }
 
     public void Notify(EventState state)
