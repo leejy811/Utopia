@@ -25,6 +25,7 @@ public class BottomBlackUIAnimation : MonoBehaviour
         {
             UIManager.instance.MovePanelAnim(2f, false);
             UIManager.instance.notifyObserver(EventState.CityLevelUp);
+            InputManager.SetCanInput(true);
         });
     }
 }

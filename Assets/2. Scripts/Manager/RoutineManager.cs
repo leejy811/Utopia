@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ResultType { Worst, Bad, Soso, Good, Best, Perfect }
+public enum ResultType { None, PayFail, PaySuccess, PayBack }
 
 public class RoutineManager : MonoBehaviour
 {
@@ -125,16 +125,16 @@ public class RoutineManager : MonoBehaviour
         {
             SetCreditRating(-25);
             payFailTime++;
-            InputManager.SetCanInput(false);
             if (creditRating <= 0)
             {
                 UIManager.instance.notifyObserver(EventState.GameOver);
             }
             else
             {
-                weekResult = ResultType.Worst;
                 debt = debtsOfWeek[GetWeekOfYear()] + Mathf.Max(totalIncome * 4, 0);
-                UIManager.instance.notifyObserver(EventState.CreditScore);
+                weekResult = ResultType.PayFail;
+                UIManager.instance.notifyObserver(EventState.PayFail);
+                UIManager.instance.phone.AddMail(MailType.Credit);
             }
             return;
         }
@@ -226,33 +226,17 @@ public class RoutineManager : MonoBehaviour
         if (!ShopManager.instance.PayMoney(debt)) return;
 
         AkSoundEngine.PostEvent("Play_Pay_001", gameObject);
+        isPay = true;
         RewardToPay();
+        UIManager.instance.phone.ChaneState(PhoneState.Credit);
+        UIManager.instance.phone.AddMail(MailType.Credit);
 
         debt = 0;
-        isPay = true;
         UIManager.instance.SetDebt();
         UIManager.instance.SetDebtInfo();
 
-        switch(dayOfWeek)
-        {
-            case DayOfWeek.Monday:
-                weekResult = ResultType.Perfect;
-                break;
-            case DayOfWeek.Tuesday:
-                weekResult = ResultType.Best;
-                break;
-            case DayOfWeek.Wednesday:
-                weekResult = ResultType.Good;
-                break;
-            case DayOfWeek.Thursday:
-            case DayOfWeek.Friday:
-            case DayOfWeek.Saturday:
-                weekResult = ResultType.Soso;
-                break;
-            case DayOfWeek.Sunday:
-                weekResult = ResultType.Bad;
-                break;
-        }
+        int week = GetWeekOfYear() + 1;
+        CityLevelManager.instance.UpdateCityType(week);
     }
 
     private void RewardToPay()
@@ -260,12 +244,20 @@ public class RoutineManager : MonoBehaviour
         if (creditRating >= 100)
         {
             ShopManager.instance.GetMoney((int)(debt * 0.2f));
-            UIManager.instance.notifyObserver(EventState.Payback);
+            weekResult = ResultType.PayBack;
         }
         else
         {
-            UIManager.instance.notifyObserver(EventState.HealCredit);
             SetCreditRating(10);
+            weekResult = ResultType.PaySuccess;
         }
+    }
+
+    public DateTime GetPayDay()
+    {
+        int dayOfWeek = day.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)day.DayOfWeek;
+        DateTime payDay = day.AddDays(8 - dayOfWeek);
+
+        return payDay;
     }
 }

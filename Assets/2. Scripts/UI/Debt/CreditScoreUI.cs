@@ -116,7 +116,7 @@ public class CreditScoreUI : MonoBehaviour, IObserver
 
     public void Notify(EventState state)
     {
-        if (state == EventState.CreditScore)
+        if (state == EventState.PayFail)
         {
             gameObject.SetActive(true);
             quitButton.gameObject.SetActive(false);

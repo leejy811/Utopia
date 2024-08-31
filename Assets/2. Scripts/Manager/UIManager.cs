@@ -68,8 +68,6 @@ public class UIManager : MonoBehaviour, ISubject
 
     [Header("Debt")]
     public PleaseMoneyUI debtDoc;
-    public PaybackUI payback;
-    public HealCreditUI healCredit;
     public CreditScoreUI creditScore;
     public CreditScorePanel creditScorePanel;
     public DDayUI[] ddays;
@@ -82,6 +80,9 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Menu")]
     public UIElement menu;
     public UIElement setting;
+
+    [Header("Phone")]
+    public PhoneUI phone;
 
     #endregion
 
@@ -639,6 +640,11 @@ public class UIManager : MonoBehaviour, ISubject
         notifyObserver(EventState.Setting);
     }
 
+    public void OnClickPhoneButton()
+    {
+        notifyObserver(EventState.Phone);
+    }
+
     #endregion
 
 
@@ -685,7 +691,6 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(BuildingSpawner.instance);
 
         addObserver(gameClear);
-        addObserver(cityLevelUp);
         addObserver(cityLevelPanel);
         addObserver(eventNotify);
         addObserver(eventRoulette);
@@ -695,14 +700,12 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(etcFunc);
 
         addObserver(debtDoc);
-        addObserver(payback);
-        addObserver(healCredit);
-        addObserver(creditScore);
 
         addObserver(menu);
         addObserver(setting);
 
         addObserver(destroyMessage);
+        addObserver(phone);
 
         foreach (UILockButton lockButton in lockButtons)
         {
