@@ -23,8 +23,11 @@ public class PhoneUI : MonoBehaviour, IObserver
     public Transform mailParent;
     public GameObject[] mailPrefabs;
 
+    public PanelData prevData;
+
     private Dictionary<EventState, PhoneState> matchState = new Dictionary<EventState, PhoneState>();
     private EventState curState;
+    private bool isTweening;
 
     private void Start()
     {
@@ -35,7 +38,7 @@ public class PhoneUI : MonoBehaviour, IObserver
 
     private void OnEnable()
     {
-        transform.localPosition = new Vector3(550.0f, transform.localPosition.y, transform.localPosition.z);
+        transform.localPosition = new Vector3(transform.localPosition.x, -450.0f, transform.localPosition.z);
         StartCoroutine(InitPhone());
     }
 
@@ -49,10 +52,12 @@ public class PhoneUI : MonoBehaviour, IObserver
 
     IEnumerator InitPhone()
     {
-        transform.DOLocalMoveX(250.0f, moveTime);
+        transform.DOLocalMoveY(0.0f, moveTime).SetEase(Ease.OutBack);
+        InputManager.SetCanInput(false);
 
         yield return new WaitForSeconds(moveTime + waitTime);
 
+        InputManager.SetCanInput(true);
         ChaneState(matchState[curState]);
     }
 
@@ -74,16 +79,41 @@ public class PhoneUI : MonoBehaviour, IObserver
         ChaneState((PhoneState)state);
     }
 
-    public void AddMail(MailType type)
+    public void SetPanelData(PhoneState state, PanelData data)
     {
-        GameObject mail = Instantiate(mailPrefabs[(int)type], mailParent);
-        mail.transform.SetAsFirstSibling();
+        panels[(int)state].GetComponent<PanelUI>().data = data;
+    }
 
-        Button button = mail.GetComponent<Button>();
+    public void ReturnToCurrentData(PhoneState state)
+    {
+        PanelData data = null;
+
+        if (state == PhoneState.Credit)
+        {
+            data = prevData;
+        }
+        else if (state == PhoneState.Level)
+        {
+            data = new LevelPanelData(CityLevelManager.instance.levelIdx);
+        }
+
+        SetPanelData(state, data);
+    }
+
+    public void AddMail(MailType type, PanelData data)
+    {
+        MailUI mail = Instantiate(mailPrefabs[(int)type], mailParent).GetComponent<MailUI>();
+        mail.transform.SetAsFirstSibling();
+        mail.SetValue();
+
+        Button button = mail.gameObject.GetComponent<Button>();
 
         if (button != null)
         {
-            button.onClick.AddListener(() => ChangeStateToInt((int)type + 3));
+            PhoneState state = (PhoneState)type + 3;
+            button.onClick.AddListener(() => SetPanelData((PhoneState)(type + 3), data));
+            button.onClick.AddListener(() => ChaneState((PhoneState)(type + 3)));
+            button.onClick.AddListener(() => ReturnToCurrentData((PhoneState)(type + 3)));
         }
     }
 
@@ -93,14 +123,23 @@ public class PhoneUI : MonoBehaviour, IObserver
 
         if (state == EventState.Phone || state == EventState.PayFail || state == EventState.CityLevelUp)
         {
-            gameObject.SetActive(true);
-
             if (state == EventState.CityLevelUp)
-                AddMail(MailType.Level);
+            {
+                PanelData data = new LevelPanelData(CityLevelManager.instance.levelIdx);
+                SetPanelData(PhoneState.Level, data);
+                AddMail(MailType.Level, data);
+            }
+
+            gameObject.SetActive(true);
         }
-        else
+        else if (!isTweening)
         {
-            gameObject.SetActive(false);
+            isTweening = true;
+            transform.DOLocalMoveY(-450.0f, moveTime).SetEase(Ease.InBack).OnComplete(() => 
+            { 
+                gameObject.SetActive(false);
+                isTweening = false;
+            });
         }
     }
 }

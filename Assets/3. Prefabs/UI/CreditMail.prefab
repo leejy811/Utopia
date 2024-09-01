@@ -333,7 +333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 6.800003, y: -40.75}
+  m_AnchoredPosition: {x: 6.800003, y: -40}
   m_SizeDelta: {x: 159.4, y: 16.3}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &7177877173752208976
@@ -364,8 +364,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC2E0\uC6A9 \uC810\uC218\uAC00 76\uC5D0\uC11C 45\uB85C \uD558\uB77D\uD558\uC600\uC2B5\uB2C8\uB2E4.\n\uB4F1\uAE09\uC774
-    C\uB85C \uD558\uAC15\uD558\uC600\uC2B5\uB2C8\uB2E4."
+  m_text: "\uC2E0\uC6A9 \uC810\uC218\uAC00 76\uC5D0\uC11C 45\uB85C \uD558\uB77D\uD558\uC600\uC2B5\uB2C8\uB2E4.\n2024.01.01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
   m_sharedMaterial: {fileID: 4479025330240497328, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
@@ -404,7 +403,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 50
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

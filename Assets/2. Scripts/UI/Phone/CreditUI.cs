@@ -9,6 +9,8 @@ public class CreditUI : MonoBehaviour
     public TextMeshProUGUI gradeText;
     public TextMeshProUGUI totalMoneyText;
 
+    public CreditPanelData data;
+
     protected string[] grade = { "D", "C", "B", "A", "S" };
 
     protected void OnEnable()
@@ -18,8 +20,8 @@ public class CreditUI : MonoBehaviour
 
     protected virtual void SetValue()
     {
-        totalMoneyText.text = GetCommaText(ShopManager.instance.Money);
-        gradeText.text = grade[Mathf.Min(RoutineManager.instance.creditRating, 99) / 20] + " 등급";
+        totalMoneyText.text = GetCommaText(data.money);
+        gradeText.text = grade[Mathf.Min(data.score, 99) / 20] + " 등급";
     }
 
     protected string GetCommaText(int data)

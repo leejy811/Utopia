@@ -7,12 +7,7 @@ public class MailUI : MonoBehaviour
 {
     public TextMeshProUGUI dataText;
 
-    protected void Start()
-    {
-        SetValue();
-    }
-
-    protected virtual void SetValue()
+    public virtual void SetValue()
     {
 
     }

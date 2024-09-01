@@ -133,8 +133,13 @@ public class RoutineManager : MonoBehaviour
             {
                 debt = debtsOfWeek[GetWeekOfYear()] + Mathf.Max(totalIncome * 4, 0);
                 weekResult = ResultType.PayFail;
+
+                int money = ShopManager.instance.Money;
+                PanelData data = new CreditPanelData(money, creditRating, debt, weekResult, GetPayDay());
+                UIManager.instance.phone.AddMail(MailType.Credit, data);
+                UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
+                UIManager.instance.phone.prevData = data;
                 UIManager.instance.notifyObserver(EventState.PayFail);
-                UIManager.instance.phone.AddMail(MailType.Credit);
             }
             return;
         }
@@ -220,7 +225,6 @@ public class RoutineManager : MonoBehaviour
     {
         DayOfWeek dayOfWeek = day.DayOfWeek;
         int dayOfWeekToInt = dayOfWeek == DayOfWeek.Sunday ? 7 : (int)dayOfWeek;
-        int money = ShopManager.instance.Money;
 
         if (isPay) return;
         if (!ShopManager.instance.PayMoney(debt)) return;
@@ -228,8 +232,14 @@ public class RoutineManager : MonoBehaviour
         AkSoundEngine.PostEvent("Play_Pay_001", gameObject);
         isPay = true;
         RewardToPay();
+
+        int money = ShopManager.instance.Money;
+        PanelData data = new CreditPanelData(money, creditRating, debt, weekResult, day);
+        UIManager.instance.phone.AddMail(MailType.Credit, data);
+        UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
+        UIManager.instance.phone.prevData = data;
         UIManager.instance.phone.ChaneState(PhoneState.Credit);
-        UIManager.instance.phone.AddMail(MailType.Credit);
+       
 
         debt = 0;
         UIManager.instance.SetDebt();

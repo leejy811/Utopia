@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using TMPro;
 using UnityEngine;
 
@@ -12,13 +13,13 @@ public class PayFailUI : CreditUI
     {
         base.SetValue();
 
-        int score = RoutineManager.instance.creditRating;
+        int score = data.score;
         int prevScore = isFail ? score + 25 : score;
         scoreBar.SetScore(prevScore, score);
 
-        int debt = RoutineManager.instance.debt;
+        int debt = data.debt;
         totalMoneyText.text = GetCommaText(debt);
 
-        payDayText.text = RoutineManager.instance.GetPayDay().ToString("yy.MM.dd");
+        payDayText.text = data.day.ToString("yy.MM.dd");
     }
 }

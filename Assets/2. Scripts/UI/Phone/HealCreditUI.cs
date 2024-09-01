@@ -13,18 +13,17 @@ public class HealCreditUI : CreditUI
     {
         base.SetValue();
 
-        int score = RoutineManager.instance.creditRating;
+        int score = data.score;
         scoreBar.SetScore(score - 10, score);
 
-        int curMoney = ShopManager.instance.Money;
-        int week = RoutineManager.instance.GetWeekOfYear();
-        int debt = RoutineManager.instance.debtsOfWeek[week];
+        int curMoney = data.money;
+        int debt = data.debt;
         debtText.text = "-" + GetCommaText(debt);
         curMoneyText.text = GetCommaText(curMoney + debt);
 
         foreach (var dayText in curDayTexts)
         {
-            dayText.text = RoutineManager.instance.day.ToString("yy.MM.dd");
+            dayText.text = data.day.ToString("yy.MM.dd");
         }
     }
 }

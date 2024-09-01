@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LandMailUI : MailUI
 {
-    protected override void SetValue()
+    public override void SetValue()
     {
         dataText.text = RoutineManager.instance.day.ToString("yyyy.MM.dd");
     }

@@ -14,12 +14,11 @@ public class PaybackUI : CreditUI
     {
         base.SetValue();
 
-        int score = RoutineManager.instance.creditRating;
+        int score = data.score;
         scoreBar.SetScore(score, score);
 
-        int curMoney = ShopManager.instance.Money;
-        int week = RoutineManager.instance.GetWeekOfYear();
-        int debt = RoutineManager.instance.debtsOfWeek[week];
+        int curMoney = data.money;
+        int debt = data.debt;
         int paybackMoney = (int)(debt * 0.2f);
         debtText.text = "-" + GetCommaText(debt);
         paybackText.text = "+" + GetCommaText(paybackMoney);
@@ -27,7 +26,7 @@ public class PaybackUI : CreditUI
 
         foreach (var dayText in curDayTexts)
         {
-            dayText.text = RoutineManager.instance.day.ToString("yy.MM.dd");
+            dayText.text = data.day.ToString("yy.MM.dd");
         }
     }
 }
