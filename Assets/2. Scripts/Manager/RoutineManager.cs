@@ -148,7 +148,6 @@ public class RoutineManager : MonoBehaviour
         isPay = false;
 
         UIManager.instance.SetDebtInfo();
-        UIManager.instance.OnClickDeptDocButton();
     }
 
     public int GetWeekOfYear()

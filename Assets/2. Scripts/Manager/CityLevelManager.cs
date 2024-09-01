@@ -96,16 +96,22 @@ public class CityLevelManager : MonoBehaviour
 
     IEnumerator PlayTimeLapse()
     {
-        UIManager.instance.notifyObserver(EventState.None);
         InputManager.SetCanInput(false);
         RoutineManager.instance.OnOffDailyLight(false);
+
+        yield return new WaitForSeconds(2.0f);
+
+        UIManager.instance.notifyObserver(EventState.None);
         AkSoundEngine.SetRTPCValue("TIMELAP", 2);
         AkSoundEngine.PostEvent("Play_TImeLapsBGM", gameObject);
+
+        yield return new WaitForSeconds(0.8f);
 
         cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
         StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.45f));
         UIManager.instance.MovePanelAnim(2f, true);
+
 
         yield return new WaitForSeconds(2.0f);
 
