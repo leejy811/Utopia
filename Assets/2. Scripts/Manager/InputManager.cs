@@ -146,8 +146,6 @@ public class InputManager : MonoBehaviour, IObserver
             int idx = NumKeyCodeToInt(KeyCode.Alpha3);
             if (onAlpha1)
                 InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha2)
-                InvokeButton(alpha2Buttons[idx]);
             else
                 InvokeButton(buttons[idx]);
         }
@@ -156,18 +154,8 @@ public class InputManager : MonoBehaviour, IObserver
             int idx = NumKeyCodeToInt(KeyCode.Alpha4);
             if (onAlpha1)
                 InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha2)
-                InvokeButton(alpha2Buttons[idx]);
             else
                 InvokeButton(buttons[idx]);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            int idx = NumKeyCodeToInt(KeyCode.Alpha5);
-            if (onAlpha1)
-                InvokeButton(alpha1Buttons[idx]);
-            else if (onAlpha2)
-                InvokeButton(alpha2Buttons[idx]);
         }
     }
 

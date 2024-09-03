@@ -35,8 +35,7 @@ public class RequestPayUI : MonoBehaviour
 
         int debt = RoutineManager.instance.debt;
 
-        DateTime curDay = RoutineManager.instance.day;
-        int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
+        DateTime payDay = RoutineManager.instance.GetPayDay();
 
         curMoneyText.text = GetCommaText(curMoney);
         prevMoneyText.text = GetCommaText(curMoney - total);
@@ -44,7 +43,7 @@ public class RequestPayUI : MonoBehaviour
         incomeText.text = "+ " + GetCommaText(totalTax);
 
         balanceText.text = GetCommaText(Mathf.Max(debt - curMoney, 0)) + " 남았어요!";
-        dayText.text = "만기일 : " + curDay.AddDays(8 - dayOfWeek).ToString("yy.MM.dd");
+        dayText.text = "만기일 : " + payDay.ToString("yy.MM.dd");
         debtText.text = GetCommaText(debt);
         moneyText.text = GetCommaText(curMoney);
 

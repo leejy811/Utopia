@@ -67,8 +67,6 @@ public class UIManager : MonoBehaviour, ISubject
     public IconNameMouseOver[] mouseOvers;
 
     [Header("Debt")]
-    public PleaseMoneyUI debtDoc;
-    public CreditScoreUI creditScore;
     public CreditScorePanel creditScorePanel;
     public DDayUI[] ddays;
 
@@ -322,16 +320,15 @@ public class UIManager : MonoBehaviour, ISubject
         if (CityLevelManager.instance.levelIdx == CityLevelManager.instance.level.Length - 1) return;
 
         DateTime curDay = RoutineManager.instance.day;
-        int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
+        DateTime payDay = RoutineManager.instance.GetPayDay();
+        int dDay = payDay.DayOfYear - curDay.DayOfYear - 1;
         if (RoutineManager.instance.debt != 0)
-            debtDayText.text = "<size=18>D-" + (7 - dayOfWeek).ToString() + "</size>";
+            debtDayText.text = "<size=18>D-" + dDay.ToString() + "</size>";
         else
             debtDayText.text = "<size=12>납부 완료</size>";
 
         int maxWeek = CityLevelManager.instance.level[CityLevelManager.instance.levelIdx + 1].debtWeek;
         int curWeek = RoutineManager.instance.GetWeekOfYear() - CityLevelManager.instance.GetPrefixSumWeek();
-        if (RoutineManager.instance.isPay)
-            curWeek++;
 
         debtInfoText.text = curWeek.ToString() + " / " + maxWeek.ToString();
     }
@@ -344,8 +341,11 @@ public class UIManager : MonoBehaviour, ISubject
     public void SetDDay(DateTime curDay)
     {
         int dayOfWeek = curDay.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)curDay.DayOfWeek;
+        DateTime day = RoutineManager.instance.day;
+        DateTime payDay = RoutineManager.instance.GetPayDay();
+        int dDay = payDay.DayOfYear - day.DayOfYear - 1;
 
-        if(dayOfWeek >= 5 && !RoutineManager.instance.isPay)
+        if (dayOfWeek >= 5 && !RoutineManager.instance.isPay && dDay < 7)
         {
             ddays[dayOfWeek - 5].gameObject.SetActive(true);
         }
@@ -698,8 +698,6 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(costInfo);
         addObserver(construct);
         addObserver(etcFunc);
-
-        addObserver(debtDoc);
 
         addObserver(menu);
         addObserver(setting);

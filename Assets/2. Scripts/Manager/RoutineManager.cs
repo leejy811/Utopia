@@ -30,6 +30,7 @@ public class RoutineManager : MonoBehaviour
     private Coroutine lightCoroutine;
     private int totalIncome;
     private int payFailTime;
+    private int paySuccessTime;
 
     private void Awake()
     {
@@ -117,11 +118,20 @@ public class RoutineManager : MonoBehaviour
         }
 
         int week = dayOfWeek == DayOfWeek.Sunday ? 7 : (int)dayOfWeek;
+
+        if (isPay)
+        {
+            isPay = false;
+            debt = debtsOfWeek[GetWeekOfYear()];
+
+            UIManager.instance.SetDebtInfo();
+            UIManager.instance.notifyObserver(EventState.DebtDoc);
+        }
     }
 
     private void CalculateDept()
     {
-        if (!isPay)
+        if (!isPay && day == GetPayDay())
         {
             SetCreditRating(-25);
             payFailTime++;
@@ -152,8 +162,7 @@ public class RoutineManager : MonoBehaviour
 
     public int GetWeekOfYear()
     {
-        int weekOfYear = ((day.DayOfYear - 1) / 7) + (payFailTime * -1) + ((day.Year - 2024) * 52);
-        return weekOfYear;
+        return paySuccessTime;
     }
 
     private void SetCreditRating(int value)
@@ -238,14 +247,13 @@ public class RoutineManager : MonoBehaviour
         UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
         UIManager.instance.phone.prevData = data;
         UIManager.instance.phone.ChaneState(PhoneState.Credit);
-       
 
+        paySuccessTime++;
         debt = 0;
         UIManager.instance.SetDebt();
         UIManager.instance.SetDebtInfo();
 
-        int week = GetWeekOfYear() + 1;
-        CityLevelManager.instance.UpdateCityType(week);
+        CityLevelManager.instance.UpdateCityType(GetWeekOfYear());
     }
 
     private void RewardToPay()
@@ -264,9 +272,10 @@ public class RoutineManager : MonoBehaviour
 
     public DateTime GetPayDay()
     {
-        int dayOfWeek = day.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)day.DayOfWeek;
-        DateTime payDay = day.AddDays(8 - dayOfWeek);
+        //int dayOfWeek = day.DayOfWeek == DayOfWeek.Sunday ? 7 : (int)day.DayOfWeek;
+        //DateTime payDay = day.AddDays(8 - dayOfWeek);
+        DateTime payDay = new DateTime(2024, 1, 1);
 
-        return payDay;
+        return payDay.AddDays(7 * (paySuccessTime + payFailTime + 1));
     }
 }

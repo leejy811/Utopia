@@ -34,6 +34,7 @@ public class PhoneUI : MonoBehaviour, IObserver
         matchState[EventState.Phone] = PhoneState.Main;
         matchState[EventState.PayFail] = PhoneState.Credit;
         matchState[EventState.CityLevelUp] = PhoneState.Level;
+        matchState[EventState.DebtDoc] = PhoneState.Bank;
     }
 
     private void OnEnable()
@@ -121,7 +122,8 @@ public class PhoneUI : MonoBehaviour, IObserver
     {
         curState = state;
 
-        if (state == EventState.Phone || state == EventState.PayFail || state == EventState.CityLevelUp)
+        if (state == EventState.Phone || state == EventState.PayFail || 
+            state == EventState.CityLevelUp || state == EventState.DebtDoc)
         {
             if (state == EventState.CityLevelUp)
             {
