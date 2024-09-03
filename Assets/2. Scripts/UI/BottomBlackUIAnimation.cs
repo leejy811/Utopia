@@ -24,7 +24,8 @@ public class BottomBlackUIAnimation : MonoBehaviour
         rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + moveDistance, duration).SetEase(Ease.InOutQuad).OnComplete(() =>
         {
             UIManager.instance.MovePanelAnim(2f, false);
-            UIManager.instance.notifyObserver(EventState.CityLevelUp);
+            //UIManager.instance.notifyObserver(EventState.CityLevelUp);
+            UIManager.instance.notifyObserver(EventState.GameStart);
         });
     }
 }

@@ -5,7 +5,8 @@ using UnityEngine;
 public enum EventState { None, EventNotify, CityLevelUp, SlotMachine,
                         Construct, EtcFunc, EventIcon, TileColor, LockButton, DebtDoc,
                         PaySuccess, HealCredit, LateReceipt, CityLevel, PayFail, GameOver, 
-                        Menu, Setting, GameClear, Tutorial, DestroyBuilding, Phone }
+                        Menu, Setting, GameClear, Tutorial, DestroyBuilding, Phone,
+                        GameStart, ConstructButton, ConstructBuilding, SocialEffect }
 
 public interface IObserver
 {

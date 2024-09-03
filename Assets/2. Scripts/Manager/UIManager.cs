@@ -82,12 +82,17 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Phone")]
     public PhoneUI phone;
 
+    [Header("Tutorial")]
+    public TutorialUI tutorial;
+
     #endregion
 
     private Building targetBuilding;
     private List<IObserver> observers = new List<IObserver>();
     private string[] weekStr = { "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일" };
     private string[] weekShortStr = { "일", "월", "화", "수", "목", "금", "토" };
+    private bool isFirstButton;
+    private bool isFirstEvent;
 
     //public int NewsHappiness;
     //private int previousHappiness;
@@ -449,6 +454,18 @@ public class UIManager : MonoBehaviour, ISubject
     {
         TemporayUI message = Instantiate(eventMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(curEvent, position);
+
+        float second = message.fadeInTime + message.fadeOutTime + message.waitTime;
+        Invoke("FirstEventTutorial", second);
+    }
+
+    private void FirstEventTutorial()
+    {
+        if (!isFirstEvent)
+        {
+            notifyObserver(EventState.SocialEffect);
+            isFirstEvent = true;
+        }
     }
 
     public void SetCostPopUp(Transform transform = null, int cost = 0)
@@ -489,7 +506,13 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickConstructButton()
     {
-        notifyObserver(EventState.Construct);
+        if (!isFirstButton)
+        {
+            notifyObserver(EventState.ConstructButton);
+            isFirstButton = true;
+        }
+        else
+            notifyObserver(EventState.Construct);
     }
 
     public void OnClickEtcFuncButton()
@@ -704,6 +727,8 @@ public class UIManager : MonoBehaviour, ISubject
 
         addObserver(destroyMessage);
         addObserver(phone);
+        
+        addObserver(tutorial);
 
         foreach (UILockButton lockButton in lockButtons)
         {

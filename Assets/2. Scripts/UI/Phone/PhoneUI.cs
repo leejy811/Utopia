@@ -134,7 +134,7 @@ public class PhoneUI : MonoBehaviour, IObserver
 
             gameObject.SetActive(true);
         }
-        else if (!isTweening)
+        else if (!isTweening && gameObject.activeSelf)
         {
             isTweening = true;
             transform.DOLocalMoveY(-450.0f, moveTime).SetEase(Ease.InBack).OnComplete(() => 

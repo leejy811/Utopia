@@ -19,6 +19,8 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public int[,] buildingGradeCount;
     public int buildingRemoveCount;
 
+    private bool isFirst;
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -44,6 +46,12 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
     public void PlaceBuilding(int index, Transform spawnTrans)
     {
+        if (!isFirst) 
+        {
+            UIManager.instance.notifyObserver(EventState.ConstructBuilding);
+            isFirst = true;
+        }
+
         Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), spawnTrans.rotation, transform).GetComponent<Building>();
 
         if (building.type != BuildingType.Residential)
