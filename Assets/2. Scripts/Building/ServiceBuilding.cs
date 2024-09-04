@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
@@ -50,8 +51,11 @@ public class ServiceBuilding : UtilityBuilding
                 income += 1;
         }
 
-        bonusIncome += income;
-        bonusCost += cost;
+        if (!isExpect)
+        {
+            bonusIncome += income;
+            bonusCost += cost;
+        }
 
         return income + cost;
     }

@@ -39,7 +39,6 @@ public class UIManager : MonoBehaviour, ISubject
 
     [Header("CityLevelUp")]
     public CityLevelUpUI cityLevelUp;
-    public GameClearUI gameClear;
 
     [Header("Roulette")]
     public EventRouletteUI eventRoulette;
@@ -48,7 +47,7 @@ public class UIManager : MonoBehaviour, ISubject
     public GameObject errorMessagePrefab;
     public GameObject happinessMessagePrefab;
     public GameObject eventMessagePrefab;
-    public UIElement destroyMessage;
+    public DestroyBuildingUI destroyMessage;
 
     [Header("Cost")]
     public CostUI costInfo;
@@ -81,6 +80,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     [Header("Phone")]
     public PhoneUI phone;
+    public GamePhoneUI gamePhone;
 
     [Header("Tutorial")]
     public TutorialUI tutorial;
@@ -91,8 +91,6 @@ public class UIManager : MonoBehaviour, ISubject
     private List<IObserver> observers = new List<IObserver>();
     private string[] weekStr = { "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일" };
     private string[] weekShortStr = { "일", "월", "화", "수", "목", "금", "토" };
-    private bool isFirstButton;
-    private bool isFirstEvent;
 
     //public int NewsHappiness;
     //private int previousHappiness;
@@ -120,6 +118,7 @@ public class UIManager : MonoBehaviour, ISubject
         SetCreditScorePanel();
         InitObserver();
         notifyObserver(EventState.LockButton);
+        SetEventInfo(EventManager.instance.curEvents.ToArray());
 
         //NewsHappiness = (int)RoutineManager.instance.cityHappiness;
         //previousHappiness = NewsHappiness;
@@ -455,17 +454,10 @@ public class UIManager : MonoBehaviour, ISubject
         TemporayUI message = Instantiate(eventMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
         message.SetUI(curEvent, position);
 
-        float second = message.fadeInTime + message.fadeOutTime + message.waitTime;
-        Invoke("FirstEventTutorial", second);
-    }
-
-    private void FirstEventTutorial()
-    {
-        if (!isFirstEvent)
-        {
-            notifyObserver(EventState.SocialEffect);
-            isFirstEvent = true;
-        }
+        if (curEvent.rewardType == RewardType.Penalty)
+            AkSoundEngine.PostEvent("Play_POPUP_Negative", gameObject);
+        else if (curEvent.rewardType == RewardType.Reward)
+            AkSoundEngine.PostEvent("Play_POPUP_Positive", gameObject);
     }
 
     public void SetCostPopUp(Transform transform = null, int cost = 0)
@@ -506,13 +498,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickConstructButton()
     {
-        if (!isFirstButton)
-        {
-            notifyObserver(EventState.ConstructButton);
-            isFirstButton = true;
-        }
-        else
-            notifyObserver(EventState.Construct);
+        notifyObserver(EventState.Construct);
     }
 
     public void OnClickEtcFuncButton()
@@ -713,7 +699,6 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(Grid.instance);
         addObserver(BuildingSpawner.instance);
 
-        addObserver(gameClear);
         addObserver(cityLevelPanel);
         addObserver(eventNotify);
         addObserver(eventRoulette);
@@ -727,7 +712,8 @@ public class UIManager : MonoBehaviour, ISubject
 
         addObserver(destroyMessage);
         addObserver(phone);
-        
+        addObserver(gamePhone);
+
         addObserver(tutorial);
 
         foreach (UILockButton lockButton in lockButtons)

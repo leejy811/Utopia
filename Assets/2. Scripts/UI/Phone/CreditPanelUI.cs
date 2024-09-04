@@ -19,9 +19,10 @@ public class CreditPanelUI : PanelUI
 
         for (int i = 0;i < credits.Length; i++)
         {
-            bool active = (int)result == i;
             credits[i].data = creditData;
-            credits[i].gameObject.SetActive(active);
+            credits[i].gameObject.SetActive(false);
         }
+
+        credits[(int)result].gameObject.SetActive(true);
     }
 }

@@ -14,9 +14,9 @@ public class SoundChange : MonoBehaviour
         soundSlider = gameObject.GetComponent<Slider>();
     }
     
-    public void ChangeSound()
+    public void ChangeSound(string valueName)
     {
-        AkSoundEngine.SetRTPCValue("OPTION", soundSlider.value * 100.0f);
+        AkSoundEngine.SetRTPCValue(valueName, soundSlider.value * 100.0f);
         soundText.text = ((int)(soundSlider.value * 100.0f)).ToString();
     }
 }

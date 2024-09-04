@@ -58,8 +58,15 @@ public class PhoneUI : MonoBehaviour, IObserver
 
         yield return new WaitForSeconds(moveTime + waitTime);
 
-        InputManager.SetCanInput(true);
         ChaneState(matchState[curState]);
+
+        if (curState == EventState.CityLevelUp && CityLevelManager.instance.levelIdx == 1)
+        {
+            yield return new WaitForSeconds(1.0f);
+            UIManager.instance.notifyObserver(EventState.None);
+        }
+        else
+            InputManager.SetCanInput(true);
     }
 
     public void ChaneState(PhoneState state)
@@ -115,11 +122,18 @@ public class PhoneUI : MonoBehaviour, IObserver
             button.onClick.AddListener(() => SetPanelData((PhoneState)(type + 3), data));
             button.onClick.AddListener(() => ChaneState((PhoneState)(type + 3)));
             button.onClick.AddListener(() => ReturnToCurrentData((PhoneState)(type + 3)));
+            button.onClick.AddListener(() => PlayButtonClickSound());
         }
+    }
+
+    public void PlayButtonClickSound()
+    {
+        AkSoundEngine.PostEvent("Play_CellPhone_Click", gameObject);
     }
 
     public void Notify(EventState state)
     {
+        EventState prevState = curState;
         curState = state;
 
         if (state == EventState.Phone || state == EventState.PayFail || 
@@ -133,12 +147,22 @@ public class PhoneUI : MonoBehaviour, IObserver
             }
 
             gameObject.SetActive(true);
+
+            if (state != EventState.Phone)
+            {
+                AkSoundEngine.PostEvent("Play_CellPhone_01", gameObject);
+            }
         }
         else if (!isTweening && gameObject.activeSelf)
         {
             isTweening = true;
             transform.DOLocalMoveY(-450.0f, moveTime).SetEase(Ease.InBack).OnComplete(() => 
-            { 
+            {
+                if (prevState == EventState.CityLevelUp && CityLevelManager.instance.levelIdx == 1)
+                {
+                    UIManager.instance.notifyObserver(EventState.SocialEffect);
+                }
+
                 gameObject.SetActive(false);
                 isTweening = false;
             });

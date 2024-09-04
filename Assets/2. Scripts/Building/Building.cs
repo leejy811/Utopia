@@ -296,6 +296,7 @@ public class Building : MonoBehaviour
     {
         ResidentialBuilding.income = 0;
         ResidentialBuilding.bonusCost = 0;
+        ResidentialBuilding.bonusIncome = 0;
 
         CommercialBuilding.income = 0;
         CommercialBuilding.bonusCost = 0;

@@ -21,6 +21,7 @@ public class MoneyTextUI : MonoBehaviour
         moneyText.text = currentNumber.ToString() + "¿ø";
         moneyText.color = Color.yellow;
 
+        AkSoundEngine.PostEvent("Play_Paythepayment_01", gameObject);
         while (elapsedTime < second)
         {
             float t = elapsedTime / second;

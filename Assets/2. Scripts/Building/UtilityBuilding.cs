@@ -71,15 +71,18 @@ public class UtilityBuilding : Building
                 income += 5;
         }
 
-        if (type == BuildingType.Commercial)
+        if (!isExpect)
         {
-            CommercialBuilding.bonusIncome += income;
-            CommercialBuilding.bonusCost += cost;
-        }
-        else if (type == BuildingType.Culture)
-        {
-            CultureBuilding.bonusIncome += income;
-            CultureBuilding.bonusCost += cost;
+            if (type == BuildingType.Commercial)
+            {
+                CommercialBuilding.bonusIncome += income;
+                CommercialBuilding.bonusCost += cost;
+            }
+            else if (type == BuildingType.Culture)
+            {
+                CultureBuilding.bonusIncome += income;
+                CultureBuilding.bonusCost += cost;
+            }
         }
 
         return income + cost;

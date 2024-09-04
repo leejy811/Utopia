@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,7 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
     public Button[] optionButtons;
     public Toggle[] optionToggles;
     public TextMeshProUGUI[] castTexts;
+    public TextMeshProUGUI bonusText;
 
     string[] optionString = { "수도", "하수", "전력", "방음" };
 
@@ -30,10 +32,23 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         }
 
         ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
-        int cnt = 0;
         for (int i = 0; i < residentialBuilding.existFacility.Length; i++)
         {
             SetOptionBuy(residentialBuilding, i);
+        }
+
+        bonusText.text = "만족도로 인해 ";
+        if (building.CalculateBonus(true) != 0)
+        {
+            bonusText.gameObject.SetActive(true);
+            if (building.CalculateBonus(true) > 0)
+                bonusText.text += " <color=#00FF00>추가 소득 발생 예정</color>";
+            else
+                bonusText.text += " <color=#FF0000>추가 지출 발생 예정</color>";
+        }
+        else
+        {
+            bonusText.gameObject.SetActive(false);
         }
     }
 

@@ -29,8 +29,8 @@ public class RequestPayUI : MonoBehaviour
     {
         int curMoney = ShopManager.instance.Money;
 
-        int totalTax = ResidentialBuilding.income + CommercialBuilding.income + CultureBuilding.income + CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome;
-        int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + Tile.income;
+        int totalTax = ResidentialBuilding.income + CommercialBuilding.income + CultureBuilding.income + CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome + ServiceBuilding.bonusIncome + ResidentialBuilding.bonusIncome;
+        int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + CommercialBuilding.bonusCost + CultureBuilding.bonusCost + Tile.income;
         int total = totalTax + totalSpend;
 
         int debt = RoutineManager.instance.debt;
@@ -39,7 +39,7 @@ public class RequestPayUI : MonoBehaviour
 
         curMoneyText.text = GetCommaText(curMoney);
         prevMoneyText.text = GetCommaText(curMoney - total);
-        outcomeText.text = "- " + GetCommaText(totalSpend);
+        outcomeText.text = "- " + GetCommaText(Math.Abs(totalSpend));
         incomeText.text = "+ " + GetCommaText(totalTax);
 
         balanceText.text = GetCommaText(Mathf.Max(debt - curMoney, 0)) + " 남았어요!";

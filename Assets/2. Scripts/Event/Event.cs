@@ -61,7 +61,18 @@ public struct Event
     {
         if (building.type != BuildingType.Residential) return false;
 
-        return !building.CheckInfluence(subType);
+        bool res = false;
+
+        for (int i = 0;i < BuildingSpawner.instance.buildingPrefabs.Length;i++)
+        {
+            Building build = BuildingSpawner.instance.buildingPrefabs[i].GetComponent<Building>();
+            if (build.subType == subType && building.grade >= build.grade)
+            {
+                res = !building.CheckInfluence(subType);
+            }
+        }
+
+        return res;
     }
 
     private bool CheckCondition(BuildingType type, Building building)

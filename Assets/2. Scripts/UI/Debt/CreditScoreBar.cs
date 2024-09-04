@@ -17,6 +17,14 @@ public class CreditScoreBar : MonoBehaviour
 
     public void SetScore(int startScore, int endScore)
     {
+        if (startScore > endScore)
+        {
+            AkSoundEngine.PostEvent("Play_GraphFallDown", gameObject);
+        }
+        else if (startScore < endScore)
+        {
+            AkSoundEngine.PostEvent("Play_GraphUP", gameObject);
+        }
         StartCoroutine(FillKnob(startScore, endScore));
         StartCoroutine(MoveTextOverTime(startScore, endScore));
     }

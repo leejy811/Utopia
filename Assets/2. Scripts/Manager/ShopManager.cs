@@ -131,6 +131,7 @@ public class ShopManager : MonoBehaviour, IObserver
         else if (buyState == BuyState.SellBuilding)
         {
             ChangeState(BuyState.None);
+            UIManager.instance.notifyObserver(EventState.None);
         }
     }
 
@@ -333,7 +334,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public void Notify(EventState state)
     {
-        if (state != EventState.TileColor && state != EventState.EventNotify)
+        if (state != EventState.TileColor && state != EventState.EventNotify && state != EventState.DestroyBuilding)
         {
             ChangeState(BuyState.None);
         }

@@ -46,10 +46,16 @@ public class RoutineManager : MonoBehaviour
     private void Start()
     {
         day = new DateTime(2024, 1, 1);
-        debt = debtsOfWeek[GetWeekOfYear()];
+        UpdateDebt();
         isPay = false;
         lightCoroutine = StartCoroutine(DailyLight());
         playTime = 0.0f;
+
+        weekResult = ResultType.None;
+        int money = ShopManager.instance.Money;
+        PanelData data = new CreditPanelData(money, creditRating, debt, weekResult, GetPayDay());
+        UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
+        UIManager.instance.phone.prevData = data;
     }
 
     private void FixedUpdate()
@@ -108,30 +114,15 @@ public class RoutineManager : MonoBehaviour
 
     private void ApplyDept()
     {
-        DayOfWeek dayOfWeek = day.DayOfWeek;
-
-        switch (dayOfWeek)
-        {
-            case DayOfWeek.Monday:
-                CalculateDept();
-                break;
-        }
-
-        int week = dayOfWeek == DayOfWeek.Sunday ? 7 : (int)dayOfWeek;
-
         if (isPay)
         {
             isPay = false;
-            debt = debtsOfWeek[GetWeekOfYear()];
+            UpdateDebt();
 
             UIManager.instance.SetDebtInfo();
             UIManager.instance.notifyObserver(EventState.DebtDoc);
         }
-    }
-
-    private void CalculateDept()
-    {
-        if (!isPay && day == GetPayDay())
+        else if (day == GetPayDay() && day.DayOfWeek == DayOfWeek.Monday)
         {
             SetCreditRating(-25);
             payFailTime++;
@@ -141,23 +132,20 @@ public class RoutineManager : MonoBehaviour
             }
             else
             {
-                debt = debtsOfWeek[GetWeekOfYear()] + Mathf.Max(totalIncome * 4, 0);
+                UpdateDebt();
                 weekResult = ResultType.PayFail;
 
-                int money = ShopManager.instance.Money;
-                PanelData data = new CreditPanelData(money, creditRating, debt, weekResult, GetPayDay());
-                UIManager.instance.phone.AddMail(MailType.Credit, data);
-                UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
-                UIManager.instance.phone.prevData = data;
+                SetCreditData(GetPayDay());
                 UIManager.instance.notifyObserver(EventState.PayFail);
             }
-            return;
         }
+    }
 
+    private void UpdateDebt()
+    {
         debt = debtsOfWeek[GetWeekOfYear()];
-        isPay = false;
 
-        UIManager.instance.SetDebtInfo();
+        if (payFailTime > 0) debt += Mathf.Max(totalIncome * 4, 0);
     }
 
     public int GetWeekOfYear()
@@ -179,6 +167,7 @@ public class RoutineManager : MonoBehaviour
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
             total += building.CalculateIncome() + (int)(building.CalculateBonus() * day.DayOfYear * bonusRatio);
+            //total += building.CalculateIncome() + building.CalculateBonus();
         }
 
         for(int i = 0;i < Grid.instance.width;i++)
@@ -241,11 +230,7 @@ public class RoutineManager : MonoBehaviour
         isPay = true;
         RewardToPay();
 
-        int money = ShopManager.instance.Money;
-        PanelData data = new CreditPanelData(money, creditRating, debt, weekResult, day);
-        UIManager.instance.phone.AddMail(MailType.Credit, data);
-        UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
-        UIManager.instance.phone.prevData = data;
+        SetCreditData(day);
         UIManager.instance.phone.ChaneState(PhoneState.Credit);
 
         paySuccessTime++;
@@ -254,6 +239,15 @@ public class RoutineManager : MonoBehaviour
         UIManager.instance.SetDebtInfo();
 
         CityLevelManager.instance.UpdateCityType(GetWeekOfYear());
+    }
+
+    private void SetCreditData(DateTime day)
+    {
+        int money = ShopManager.instance.Money;
+        PanelData data = new CreditPanelData(money, creditRating, debt, weekResult, day);
+        UIManager.instance.phone.AddMail(MailType.Credit, data);
+        UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
+        UIManager.instance.phone.prevData = data;
     }
 
     private void RewardToPay()

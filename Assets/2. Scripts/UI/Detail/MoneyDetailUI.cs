@@ -11,8 +11,8 @@ public class MoneyDetailUI : DetailUI
 
     public override void SetValue()
     {
-        int totalTax = ResidentialBuilding.income + CommercialBuilding.income + CultureBuilding.income + CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome;
-        int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + Tile.income;
+        int totalTax = ResidentialBuilding.income + CommercialBuilding.income + CultureBuilding.income + CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome + ServiceBuilding.bonusIncome + ResidentialBuilding.bonusIncome;
+        int totalSpend = ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + CommercialBuilding.bonusCost + CultureBuilding.bonusCost + Tile.income;
         int total = totalTax + totalSpend;
 
         string sign = total >= 0 ? "+" : "-";

@@ -28,7 +28,6 @@ public class TutorialUI : MonoBehaviour, IObserver
 
     [Header("content")]
     public TutorialContent[] gameStart;
-    public TutorialContent[] constructButton;
     public TutorialContent[] constructBuilding;
     public TutorialContent[] socialEffect;
 
@@ -40,7 +39,6 @@ public class TutorialUI : MonoBehaviour, IObserver
     private void Awake()
     {
         content[EventState.GameStart] = gameStart;
-        content[EventState.ConstructButton] = constructButton;
         content[EventState.ConstructBuilding] = constructBuilding;
         content[EventState.SocialEffect] = socialEffect;
     }
@@ -84,9 +82,10 @@ public class TutorialUI : MonoBehaviour, IObserver
 
     public void Notify(EventState state)
     {
-        if (state == EventState.GameStart || state == EventState.ConstructButton ||
+        if (state == EventState.GameStart || 
             state == EventState.ConstructBuilding || state == EventState.SocialEffect)
         {
+            InputManager.SetCanInput(false);
             gameObject.SetActive(true);
             curState = state;
             curIdx = 0;

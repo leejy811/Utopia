@@ -10,6 +10,7 @@ public class ResidentialBuilding : Building
     public static int cityResident;
     public static int yesterDayResident;
     public static int income;
+    public static int bonusIncome;
     public static int bonusCost;
 
     public bool[] existFacility;
@@ -107,17 +108,22 @@ public class ResidentialBuilding : Building
 
     public override int CalculateBonus(bool isExpect = false)
     {
-        int res = 0;
+        int income = 0;
+        int cost = 0;
 
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 10;
+            cost -= 10;
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            res -= 10;
+            cost -= 10;
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            res += 10;
+            income += 10;
 
-        bonusCost += res;
-        return res;
+        if (!isExpect)
+        {
+            bonusCost += cost;
+            bonusIncome += income;
+        }
+        return cost + income;
     }
 
     public override int UpdateHappiness(bool isExpect = false, int valueType = 0)
