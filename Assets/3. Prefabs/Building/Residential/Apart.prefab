@@ -86,7 +86,7 @@ MonoBehaviour:
     min: 150
     cur: 0
   cultureCSAT:
-    max: 200
+    max: 150
     min: 100
     cur: 0
   serviceCSAT:
