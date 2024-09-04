@@ -1566,6 +1566,72 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_CellPhone_01" ID="{B3340955-830A-4E33-B873-27D23A5B20CC}">
+					<ChildrenList>
+						<Action Name="" ID="{B0E6C6E7-FBEA-46B2-B109-348DE48F19C6}" ShortID="452510994">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CellPhone_01" ID="{DC60EC50-A25C-4505-83DD-A2FCFF178724}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_CellPhone_Click" ID="{889A9691-6AA4-4AA4-AD39-6300EB5C75DC}">
+					<ChildrenList>
+						<Action Name="" ID="{155629C7-C23F-4AAA-8FFF-C8FDBB456F22}" ShortID="107569758">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CellPhone_Click" ID="{AF838B1F-3906-48E7-B97C-BB2C67166D39}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_GraphUP" ID="{D66254C2-0B51-4F18-BBFB-2CE78D8CABD3}">
+					<ChildrenList>
+						<Action Name="" ID="{86CA905A-FD23-4182-9C98-3AE6ADC90323}" ShortID="864117389">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="GraphUP" ID="{E584B23F-2F1F-4EC8-AB89-B385707D5C4F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Paythepayment_01" ID="{A63697CC-B743-4CE1-960D-B12EDFDFBF22}">
+					<ChildrenList>
+						<Action Name="" ID="{80B50642-FD3E-4CE4-A61F-3BA47AFFE0C1}" ShortID="386715212">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Paythepayment_01" ID="{D054EAAD-671C-4A48-A5D6-3AE67026CC0D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_POPUP_Negative" ID="{0147A71E-348F-45E4-854C-EDA94D0620FE}">
+					<ChildrenList>
+						<Action Name="" ID="{EAC88981-84DD-489F-8D9F-9DB99F57A82C}" ShortID="375122534">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="POPUP_Negative" ID="{00522A8C-69DE-4356-AF77-A4C0C7387706}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_POPUP_Positive" ID="{C2EA6645-9659-44F5-83CB-638363E40A6D}">
+					<ChildrenList>
+						<Action Name="" ID="{474B884F-2C51-4DB3-9EB2-F1AFC8046122}" ShortID="949607959">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="POPUP_Positive" ID="{882A4969-5E4C-434D-BBB7-1AC9410AE7B0}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

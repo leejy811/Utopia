@@ -49,27 +49,27 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1.22791293213829</Value>
+							<Value>1.79216526858689</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
-							<Value>1.41794793791074</Value>
+							<Value>37.4927142930509</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>1.70109904405943</Value>
+							<Value>28.6182466405064</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
-							<Value>39</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="OPTION" ID="{975BA635-9C2A-463E-AE0A-4BE629293298}"/>
-							<Value>70</Value>
+							<Value>71.04</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SFX_VOL" ID="{EF073ADC-8463-4815-A1E4-49769140BD78}"/>
-							<Value>100</Value>
+							<Value>70</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}"/>
@@ -77,11 +77,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
-							<Value>1.25039692701664</Value>
+							<Value>1.59892523364486</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BGM_VOL" ID="{59FFE417-448F-496D-8DDD-D6E9B337A6DE}"/>
-							<Value>100</Value>
+							<Value>70</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>

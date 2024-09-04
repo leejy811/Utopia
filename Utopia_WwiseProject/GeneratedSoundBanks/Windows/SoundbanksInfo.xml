@@ -112,10 +112,18 @@
 				<Event Id="1752511484" Name="Stop_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{8E024368-2384-AD85-569D-4DB109D32351}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{F012AB00-D448-ACFC-B6DD-6C8C457B71E8}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
+				<File Id="204508889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Paythepayment_01.wav</ShortName>
+					<CachePath>SFX/Paythepayment_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="236384276" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>POPUP_Positive_v2.wav</ShortName>
+					<CachePath>SFX/POPUP_Positive_v2_8E324C96.wem</CachePath>
+				</File>
 				<File Id="439018999" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slotmashin_Jackpot_Ani_01.wav</ShortName>
 					<CachePath>SFX/Slotmashin_Jackpot_Ani_01_8E324C96.wem</CachePath>
@@ -127,6 +135,10 @@
 				<File Id="488455765" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SlotMachine_enter_001.wav</ShortName>
 					<CachePath>SFX/SlotMachine_enter_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="537067420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>POPUP_Negative_v2.wav</ShortName>
+					<CachePath>SFX/POPUP_Negative_v2_8E324C96.wem</CachePath>
 				</File>
 				<File Id="594404784" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Spwan_01.wav</ShortName>
@@ -144,6 +156,10 @@
 					<ShortName>Slot_Stop_01.wav</ShortName>
 					<CachePath>SFX/Slot_Stop_01_8E324C96.wem</CachePath>
 				</File>
+				<File Id="791175701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CellPhone_01.wav</ShortName>
+					<CachePath>SFX/CellPhone_01_8E324C96.wem</CachePath>
+				</File>
 				<File Id="809211139" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Drrrrrr_01.wav</ShortName>
 					<CachePath>SFX/Slot_Drrrrrr_01_5FFF549D.wem</CachePath>
@@ -152,8 +168,26 @@
 					<ShortName>Slot_Rever_01.wav</ShortName>
 					<CachePath>SFX/Slot_Rever_01_58381DFD.wem</CachePath>
 				</File>
+				<File Id="927414738" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GraphUP.wav</ShortName>
+					<CachePath>SFX/GraphUP_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1037521745" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CellPhone_Click.wav</ShortName>
+					<CachePath>SFX/CellPhone_Click_8E324C96.wem</CachePath>
+				</File>
 			</Media>
 			<Events>
+				<Event Id="7328488" Name="Play_CellPhone_01" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
+					<MediaRefs>
+						<MediaRef Id="791175701"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2450428583" Name="Play_CellPhone_Click" DurationType="OneShot" DurationMin="0.8571655" DurationMax="0.8571655">
+					<MediaRefs>
+						<MediaRef Id="1037521745"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="904270530" Name="Play_Deny_01" DurationType="OneShot" DurationMin="0.27504364" DurationMax="0.27504364">
 					<MediaRefs>
 						<MediaRef Id="650016289"/>
@@ -162,6 +196,26 @@
 				<Event Id="904270529" Name="Play_Deny_02" DurationType="OneShot" DurationMin="0.43383914" DurationMax="0.43383914">
 					<MediaRefs>
 						<MediaRef Id="748782326"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3497197729" Name="Play_GraphUP" DurationType="OneShot" DurationMin="3.4862916" DurationMax="3.4862916">
+					<MediaRefs>
+						<MediaRef Id="927414738"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="139162049" Name="Play_Paythepayment_01" DurationType="OneShot" DurationMin="1.2935417" DurationMax="1.2935417">
+					<MediaRefs>
+						<MediaRef Id="204508889"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2774129414" Name="Play_POPUP_Negative" DurationType="OneShot" DurationMin="1.2945417" DurationMax="1.2945417">
+					<MediaRefs>
+						<MediaRef Id="537067420"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3583156534" Name="Play_POPUP_Positive" DurationType="OneShot" DurationMin="1.5687083" DurationMax="1.5687083">
+					<MediaRefs>
+						<MediaRef Id="236384276"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3452595303" Name="Play_Slot_Drrrrrr_01" DurationType="Infinite">
@@ -832,5 +886,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9C1C4D03-A883-221C-8742-DC9637C5D3AF}</FileHash>
+	<FileHash>{9FB33355-0E8B-A5C7-F268-1BC84A2693A8}</FileHash>
 </SoundBanksInfo>

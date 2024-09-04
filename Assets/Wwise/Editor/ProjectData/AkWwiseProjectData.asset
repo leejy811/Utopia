@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584768255610904613
+    m_lastTime: -8584761535464860300
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -198,7 +198,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584768255616408432
+    m_lastTime: -8584761535464766063
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1149,6 +1149,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.7253125
       minDuration: 0.7253125
+    - name: Play_CellPhone_01
+      guid: 550934b30a83334eb87327d23a5b20cc
+      id: 7328488
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_CellPhone_01
+        ObjectType: 3
+        guid: 550934b30a83334eb87327d23a5b20cc
+      Path: Events\Default Work Unit\Play_CellPhone_01
+      maxAttenuation: 0
+      maxDuration: 1.75
+      minDuration: 1.75
+    - name: Play_CellPhone_Click
+      guid: 91969a88a46aa44aad396300eb5c75dc
+      id: 2450428583
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_CellPhone_Click
+        ObjectType: 3
+        guid: 91969a88a46aa44aad396300eb5c75dc
+      Path: Events\Default Work Unit\Play_CellPhone_Click
+      maxAttenuation: 0
+      maxDuration: 0.8571655
+      minDuration: 0.8571655
     - name: Play_construction
       guid: b2105577e2d93b4da21a0bbe2b7ad426
       id: 1598463209
@@ -1339,6 +1373,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.4862916
       minDuration: 3.4862916
+    - name: Play_GraphUP
+      guid: c25462d6510b184fbbfb2ce78d8cabd3
+      id: 3497197729
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_GraphUP
+        ObjectType: 3
+        guid: c25462d6510b184fbbfb2ce78d8cabd3
+      Path: Events\Default Work Unit\Play_GraphUP
+      maxAttenuation: 0
+      maxDuration: 3.4862916
+      minDuration: 3.4862916
     - name: Play_Jackpot_01
       guid: 9423861b23ebdf4480578a288367cf6a
       id: 263615490
@@ -1515,6 +1566,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.992875
       minDuration: 0.992875
+    - name: Play_Paythepayment_01
+      guid: cc9736a643b7e14c960db12edfdfbf22
+      id: 139162049
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Paythepayment_01
+        ObjectType: 3
+        guid: cc9736a643b7e14c960db12edfdfbf22
+      Path: Events\Default Work Unit\Play_Paythepayment_01
+      maxAttenuation: 0
+      maxDuration: 1.2935417
+      minDuration: 1.2935417
+    - name: Play_POPUP_Negative
+      guid: 1ea747018f34e445854ceda94d0620fe
+      id: 2774129414
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_POPUP_Negative
+        ObjectType: 3
+        guid: 1ea747018f34e445854ceda94d0620fe
+      Path: Events\Default Work Unit\Play_POPUP_Negative
+      maxAttenuation: 0
+      maxDuration: 1.2945417
+      minDuration: 1.2945417
+    - name: Play_POPUP_Positive
+      guid: 4566eac25996f54483cb638363e40a6d
+      id: 3583156534
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_POPUP_Positive
+        ObjectType: 3
+        guid: 4566eac25996f54483cb638363e40a6d
+      Path: Events\Default Work Unit\Play_POPUP_Positive
+      maxAttenuation: 0
+      maxDuration: 1.5687083
+      minDuration: 1.5687083
     - name: Play_protest_002
       guid: 25aa8928a341ed46a6f09e07a3b8d3d2
       id: 1749625636
@@ -2077,7 +2179,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584768255616396518
+    m_lastTime: -8584761508199323595
     List:
     - name: BGM_VOL
       guid: 17e4ff598f446d498dddd6e9b337a6de

@@ -58,6 +58,8 @@ namespace AK
         static const AkUniqueID PLAY_BGMSEQUNCE1 = 1994810337U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;
         static const AkUniqueID PLAY_BUILDINGSOUND = 2611274067U;
+        static const AkUniqueID PLAY_CELLPHONE_01 = 7328488U;
+        static const AkUniqueID PLAY_CELLPHONE_CLICK = 2450428583U;
         static const AkUniqueID PLAY_CONSTRUCTION = 1598463209U;
         static const AkUniqueID PLAY_D_DAY_POPUP_001 = 1518229334U;
         static const AkUniqueID PLAY_DAY_NIGHT = 2687999423U;
@@ -69,6 +71,7 @@ namespace AK
         static const AkUniqueID PLAY_GRAPH_FALL_001 = 1882539238U;
         static const AkUniqueID PLAY_GRAPH_FALL_002 = 1882539237U;
         static const AkUniqueID PLAY_GRAPHFALLDOWN = 171395709U;
+        static const AkUniqueID PLAY_GRAPHUP = 3497197729U;
         static const AkUniqueID PLAY_JACKPOT_01 = 263615490U;
         static const AkUniqueID PLAY_LEVER_001 = 3789420082U;
         static const AkUniqueID PLAY_LOBBY = 2111096682U;
@@ -78,6 +81,9 @@ namespace AK
         static const AkUniqueID PLAY_MOUSE_001_V1 = 3906795593U;
         static const AkUniqueID PLAY_NIGHT_DAWN = 3836024861U;
         static const AkUniqueID PLAY_PAY_001 = 2025304052U;
+        static const AkUniqueID PLAY_PAYTHEPAYMENT_01 = 139162049U;
+        static const AkUniqueID PLAY_POPUP_NEGATIVE = 2774129414U;
+        static const AkUniqueID PLAY_POPUP_POSITIVE = 3583156534U;
         static const AkUniqueID PLAY_PROTEST_002 = 1749625636U;
         static const AkUniqueID PLAY_SELECT_BUTTON = 880454473U;
         static const AkUniqueID PLAY_SLOT_DRRRRRR_01 = 3452595303U;

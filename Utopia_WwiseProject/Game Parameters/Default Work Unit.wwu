@@ -55,8 +55,16 @@
 						<Property Name="InitialValue" Type="Real64" Value="70"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="BGM_VOL" ID="{59FFE417-448F-496D-8DDD-D6E9B337A6DE}"/>
-				<GameParameter Name="SFX_VOL" ID="{EF073ADC-8463-4815-A1E4-49769140BD78}"/>
+				<GameParameter Name="BGM_VOL" ID="{59FFE417-448F-496D-8DDD-D6E9B337A6DE}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="70"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SFX_VOL" ID="{EF073ADC-8463-4815-A1E4-49769140BD78}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="70"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
