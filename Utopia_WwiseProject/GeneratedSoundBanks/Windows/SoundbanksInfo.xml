@@ -101,15 +101,29 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="788884573" Type="User" Language="SFX" Hash="{D85F1D4C-3022-516B-8D6F-6B667E36396F}">
+		<SoundBank Id="788884573" Type="User" Language="SFX" Hash="{CEE152ED-4C3B-824D-8745-F05F97C93DAC}">
 			<ShortName>STOP</ShortName>
 			<Path>STOP.bnk</Path>
 			<Events>
-				<Event Id="788884573" Name="Stop" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1752511481" Name="Stop_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1752511482" Name="Stop_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1752511483" Name="Stop_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
-				<Event Id="1752511484" Name="Stop_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2581958095" Name="Stop_APT_event_DISEASE_001" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4284039319" Name="Stop_APT_event_DISEASE_001_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1149006027" Name="Stop_APT_event_DISEASE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2774622587" Name="Stop_APT_event_DISEASE_01_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1705166259" Name="Stop_APT_event_FIRE_001" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="744494099" Name="Stop_APT_event_FIRE_001_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="188489143" Name="Stop_APT_event_FIRE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3695163727" Name="Stop_APT_event_FIRE_01_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2648810501" Name="Stop_APT_event_THIEF_001" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4039119537" Name="Stop_APT_event_THIEF_001_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1525431165" Name="Stop_APT_event_THIEF_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3040325241" Name="Stop_APT_event_THIEF_01_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4016311350" Name="Stop_BGM4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4016311351" Name="Stop_BGM5" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1894363095" Name="Stop_BGMsequnce1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1345079091" Name="Stop_ForestAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3906996890" Name="Stop_protest_002" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3190087908" Name="Stop_testing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
 		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{F012AB00-D448-ACFC-B6DD-6C8C457B71E8}">
@@ -275,7 +289,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{F82FDE58-F495-21B8-60E2-7F724CD9A4E5}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{51BCF2E7-5AED-4142-9418-6542B9BB86B6}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -314,7 +328,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{D010A107-2C80-62B7-9E8E-0EEE7A578289}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{01868B4E-2177-D878-8DB7-156A540E445D}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -886,5 +900,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9FB33355-0E8B-A5C7-F268-1BC84A2693A8}</FileHash>
+	<FileHash>{A7F888BB-A51F-E665-2A6D-CE51DF4A11F9}</FileHash>
 </SoundBanksInfo>

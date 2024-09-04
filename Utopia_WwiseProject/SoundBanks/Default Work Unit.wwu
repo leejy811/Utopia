@@ -131,11 +131,25 @@
 				</SoundBank>
 				<SoundBank Name="STOP" ID="{1F594C28-0453-425A-AC3A-DAB8ED5CD86D}">
 					<ObjectInclusionList>
-						<ObjectRef Name="Stop_02" ID="{DC681EF8-C78C-403B-9BCA-5BF1258BBEC6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_03" ID="{A4F99B6E-685F-40C5-B450-E902B7EA2014}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop" ID="{2CC4555E-B5F4-4402-AFD0-942E33832EE7}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_01" ID="{1E4BB2E7-0D62-4A30-BD7B-4C056C6A17A7}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Stop_04" ID="{2C81E72F-8A73-4E10-862C-253CAC2019CB}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_THIEF_01" ID="{B6309221-331E-4051-AC05-633955827A46}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Wind" ID="{9CA89B3C-7C22-40C7-8B8F-05C976874076}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BGMsequnce1" ID="{06C8744E-B5F2-411C-8801-AE5333A7C028}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BGM4" ID="{E0115185-11B4-41BE-9FD6-57C0F93886E0}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_FIRE_001_1" ID="{D59328F9-88EA-41E6-B35B-9D625C926AB8}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_FIRE_001" ID="{88F9A500-9A45-43BC-A38C-AF1A134546EF}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_THIEF_001_1" ID="{9F968948-D1CA-444C-974C-62F02E38FAB8}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_DISEASE_01_1" ID="{87FF9308-6704-4487-BACD-749413D5E4FC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_DISEASE_01" ID="{32261F7E-FC2D-45E3-BF02-E44853677F2E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_DISEASE_001" ID="{E459027E-0BBD-46E6-B79E-2AE012125422}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_protest_002" ID="{A8C3B1D6-B2CD-4727-A98E-346D1340BC72}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_testing" ID="{18E92925-ECA5-4739-875C-06ABFBB45236}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_DISEASE_001_1" ID="{C62F7F2C-4A9D-4922-A2EC-B14AADD0D79E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_THIEF_01_1" ID="{F50B6E31-F468-4925-8623-1BC8860FE4DC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_THIEF_001" ID="{C56B7A5A-938C-4A30-A694-87A65942078C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_ForestAmbience" ID="{2C4C099D-72CF-4A8E-A2E6-1F63AA227EEC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_FIRE_01" ID="{30ADE8CA-DEF3-4BAA-969F-E393C4A7CFE1}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BGM5" ID="{70BBFF59-3D52-4E78-96C0-96D23AC85E4A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_APT_event_FIRE_01_1" ID="{7693F3A6-8F25-4F4F-A160-1017559C2A27}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

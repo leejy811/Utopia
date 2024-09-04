@@ -103,17 +103,31 @@ namespace AK
         static const AkUniqueID PLAY_UI_PAPERSOUND_001 = 424395900U;
         static const AkUniqueID PLAY_UI_SOLVE_001 = 1520262876U;
         static const AkUniqueID PLAY_WIND = 1020223172U;
-        static const AkUniqueID STOP = 788884573U;
-        static const AkUniqueID STOP_01 = 1752511481U;
-        static const AkUniqueID STOP_02 = 1752511482U;
-        static const AkUniqueID STOP_03 = 1752511483U;
-        static const AkUniqueID STOP_04 = 1752511484U;
+        static const AkUniqueID STOP_APT_EVENT_DISEASE_001 = 2581958095U;
+        static const AkUniqueID STOP_APT_EVENT_DISEASE_001_1 = 4284039319U;
+        static const AkUniqueID STOP_APT_EVENT_DISEASE_01 = 1149006027U;
+        static const AkUniqueID STOP_APT_EVENT_DISEASE_01_1 = 2774622587U;
+        static const AkUniqueID STOP_APT_EVENT_FIRE_001 = 1705166259U;
+        static const AkUniqueID STOP_APT_EVENT_FIRE_001_1 = 744494099U;
+        static const AkUniqueID STOP_APT_EVENT_FIRE_01 = 188489143U;
+        static const AkUniqueID STOP_APT_EVENT_FIRE_01_1 = 3695163727U;
+        static const AkUniqueID STOP_APT_EVENT_THIEF_001 = 2648810501U;
+        static const AkUniqueID STOP_APT_EVENT_THIEF_001_1 = 4039119537U;
+        static const AkUniqueID STOP_APT_EVENT_THIEF_01 = 1525431165U;
+        static const AkUniqueID STOP_APT_EVENT_THIEF_01_1 = 3040325241U;
+        static const AkUniqueID STOP_BGM4 = 4016311350U;
+        static const AkUniqueID STOP_BGM5 = 4016311351U;
+        static const AkUniqueID STOP_BGMSEQUNCE1 = 1894363095U;
         static const AkUniqueID STOP_CONSTRUCTION = 3493507479U;
+        static const AkUniqueID STOP_FORESTAMBIENCE = 1345079091U;
         static const AkUniqueID STOP_FORESTAMBIENCEINLOBBY = 2778003230U;
         static const AkUniqueID STOP_LOBBY = 3639729344U;
+        static const AkUniqueID STOP_PROTEST_002 = 3906996890U;
         static const AkUniqueID STOP_SLOT_DRRRRRR_01 = 3035396721U;
         static const AkUniqueID STOP_SLOTMASHIN_JACKPOT_ANI_01 = 1571046380U;
+        static const AkUniqueID STOP_TESTING = 3190087908U;
         static const AkUniqueID STOP_TIMELAPSBGM = 1305109677U;
+        static const AkUniqueID STOP_WIND = 3173136834U;
     } // namespace EVENTS
 
     namespace STATES

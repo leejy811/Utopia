@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584761535464860300
+    m_lastTime: -8584761473554531357
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -198,7 +198,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584761535464766063
+    m_lastTime: -8584761473554422257
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1963,9 +1963,9 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Stop
-      guid: 5e55c42cf4b50244afd0942e33832ee7
-      id: 788884573
+    - name: Stop_APT_event_DISEASE_001
+      guid: 7e0259e4bd0be646b79e2ae012125422
+      id: 2581958095
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1973,16 +1973,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 874dd2f0584b1b419ce995fd8724009d
-      - ElementName: Stop
+      - ElementName: Stop_APT_event_DISEASE_001
         ObjectType: 3
-        guid: 5e55c42cf4b50244afd0942e33832ee7
-      Path: Events\Default Work Unit\Stop
+        guid: 7e0259e4bd0be646b79e2ae012125422
+      Path: Events\Default Work Unit\Stop_APT_event_DISEASE_001
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_01
-      guid: e7b24b1e620d304abd7b4c056c6a17a7
-      id: 1752511481
+    - name: Stop_APT_event_DISEASE_001_1
+      guid: 2c7f2fc69d4a2249a2ecb14aadd0d79e
+      id: 4284039319
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -1990,16 +1990,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 874dd2f0584b1b419ce995fd8724009d
-      - ElementName: Stop_01
+      - ElementName: Stop_APT_event_DISEASE_001_1
         ObjectType: 3
-        guid: e7b24b1e620d304abd7b4c056c6a17a7
-      Path: Events\Default Work Unit\Stop_01
+        guid: 2c7f2fc69d4a2249a2ecb14aadd0d79e
+      Path: Events\Default Work Unit\Stop_APT_event_DISEASE_001_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_02
-      guid: f81e68dc8cc73b409bca5bf1258bbec6
-      id: 1752511482
+    - name: Stop_APT_event_DISEASE_01
+      guid: 7e1f26322dfce345bf02e44853677f2e
+      id: 1149006027
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -2007,16 +2007,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 874dd2f0584b1b419ce995fd8724009d
-      - ElementName: Stop_02
+      - ElementName: Stop_APT_event_DISEASE_01
         ObjectType: 3
-        guid: f81e68dc8cc73b409bca5bf1258bbec6
-      Path: Events\Default Work Unit\Stop_02
+        guid: 7e1f26322dfce345bf02e44853677f2e
+      Path: Events\Default Work Unit\Stop_APT_event_DISEASE_01
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_03
-      guid: 6e9bf9a45f68c540b450e902b7ea2014
-      id: 1752511483
+    - name: Stop_APT_event_DISEASE_01_1
+      guid: 0893ff8704678744bacd749413d5e4fc
+      id: 2774622587
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -2024,16 +2024,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 874dd2f0584b1b419ce995fd8724009d
-      - ElementName: Stop_03
+      - ElementName: Stop_APT_event_DISEASE_01_1
         ObjectType: 3
-        guid: 6e9bf9a45f68c540b450e902b7ea2014
-      Path: Events\Default Work Unit\Stop_03
+        guid: 0893ff8704678744bacd749413d5e4fc
+      Path: Events\Default Work Unit\Stop_APT_event_DISEASE_01_1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: Stop_04
-      guid: 2fe7812c738a104e862c253cac2019cb
-      id: 1752511484
+    - name: Stop_APT_event_FIRE_001
+      guid: 00a5f988459abc43a38caf1a134546ef
+      id: 1705166259
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -2041,10 +2041,180 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: 874dd2f0584b1b419ce995fd8724009d
-      - ElementName: Stop_04
+      - ElementName: Stop_APT_event_FIRE_001
         ObjectType: 3
-        guid: 2fe7812c738a104e862c253cac2019cb
-      Path: Events\Default Work Unit\Stop_04
+        guid: 00a5f988459abc43a38caf1a134546ef
+      Path: Events\Default Work Unit\Stop_APT_event_FIRE_001
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_APT_event_FIRE_001_1
+      guid: f92893d5ea88e641b35b9d625c926ab8
+      id: 744494099
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_APT_event_FIRE_001_1
+        ObjectType: 3
+        guid: f92893d5ea88e641b35b9d625c926ab8
+      Path: Events\Default Work Unit\Stop_APT_event_FIRE_001_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_APT_event_FIRE_01
+      guid: cae8ad30f3deaa4b969fe393c4a7cfe1
+      id: 188489143
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_APT_event_FIRE_01
+        ObjectType: 3
+        guid: cae8ad30f3deaa4b969fe393c4a7cfe1
+      Path: Events\Default Work Unit\Stop_APT_event_FIRE_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_APT_event_FIRE_01_1
+      guid: a6f39376258f4f4fa1601017559c2a27
+      id: 3695163727
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_APT_event_FIRE_01_1
+        ObjectType: 3
+        guid: a6f39376258f4f4fa1601017559c2a27
+      Path: Events\Default Work Unit\Stop_APT_event_FIRE_01_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_APT_event_THIEF_001
+      guid: 5a7a6bc58c93304aa69487a65942078c
+      id: 2648810501
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_APT_event_THIEF_001
+        ObjectType: 3
+        guid: 5a7a6bc58c93304aa69487a65942078c
+      Path: Events\Default Work Unit\Stop_APT_event_THIEF_001
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_APT_event_THIEF_001_1
+      guid: 4889969fcad14c44974c62f02e38fab8
+      id: 4039119537
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_APT_event_THIEF_001_1
+        ObjectType: 3
+        guid: 4889969fcad14c44974c62f02e38fab8
+      Path: Events\Default Work Unit\Stop_APT_event_THIEF_001_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_APT_event_THIEF_01
+      guid: 219230b61e335140ac05633955827a46
+      id: 1525431165
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_APT_event_THIEF_01
+        ObjectType: 3
+        guid: 219230b61e335140ac05633955827a46
+      Path: Events\Default Work Unit\Stop_APT_event_THIEF_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_APT_event_THIEF_01_1
+      guid: 316e0bf568f4254986231bc8860fe4dc
+      id: 3040325241
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_APT_event_THIEF_01_1
+        ObjectType: 3
+        guid: 316e0bf568f4254986231bc8860fe4dc
+      Path: Events\Default Work Unit\Stop_APT_event_THIEF_01_1
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BGM4
+      guid: 855111e0b411be419fd657c0f93886e0
+      id: 4016311350
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_BGM4
+        ObjectType: 3
+        guid: 855111e0b411be419fd657c0f93886e0
+      Path: Events\Default Work Unit\Stop_BGM4
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BGM5
+      guid: 59ffbb70523d784e96c096d23ac85e4a
+      id: 4016311351
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_BGM5
+        ObjectType: 3
+        guid: 59ffbb70523d784e96c096d23ac85e4a
+      Path: Events\Default Work Unit\Stop_BGM5
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BGMsequnce1
+      guid: 4e74c806f2b51c418801ae5333a7c028
+      id: 1894363095
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_BGMsequnce1
+        ObjectType: 3
+        guid: 4e74c806f2b51c418801ae5333a7c028
+      Path: Events\Default Work Unit\Stop_BGMsequnce1
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2062,6 +2232,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: f52f07cca1b231439ba45051290aac45
       Path: Events\Default Work Unit\Stop_construction
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_ForestAmbience
+      guid: 9d094c2ccf728e4aa2e61f63aa227eec
+      id: 1345079091
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_ForestAmbience
+        ObjectType: 3
+        guid: 9d094c2ccf728e4aa2e61f63aa227eec
+      Path: Events\Default Work Unit\Stop_ForestAmbience
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2099,6 +2286,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_protest_002
+      guid: d6b1c3a8cdb22747a98e346d1340bc72
+      id: 3906996890
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_protest_002
+        ObjectType: 3
+        guid: d6b1c3a8cdb22747a98e346d1340bc72
+      Path: Events\Default Work Unit\Stop_protest_002
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Slot_Drrrrrr_01
       guid: 121a9767894bb945a42f14209fde0e34
       id: 3035396721
@@ -2133,6 +2337,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_testing
+      guid: 2529e918a5ec3947875c06abfbb45236
+      id: 3190087908
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_testing
+        ObjectType: 3
+        guid: 2529e918a5ec3947875c06abfbb45236
+      Path: Events\Default Work Unit\Stop_testing
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TImeLapsBGM
       guid: 07e3244c5f20da4f894d90d01338e8b1
       id: 1305109677
@@ -2147,6 +2368,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 07e3244c5f20da4f894d90d01338e8b1
       Path: Events\Default Work Unit\Stop_TImeLapsBGM
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Wind
+      guid: 3c9ba89c227cc7408b8f05c976874076
+      id: 3173136834
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_Wind
+        ObjectType: 3
+        guid: 3c9ba89c227cc7408b8f05c976874076
+      Path: Events\Default Work Unit\Stop_Wind
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -2476,7 +2714,7 @@ MonoBehaviour:
     m_lastTime: -8584800632546760059
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000003e0000003f00000045000000460000004c0000004d0000004f000000500000005200000053000000ec000000ed00000026010000270100003501000036010000ce010000cf0100000c0200000d020000
+  ExpandedWaapiItemIds: 05000000060000003e0000003f00000045000000460000004c0000004d0000004f0000005000000052000000530000005f00000060000000ec000000ed00000026010000270100003501000036010000ce010000cf0100000c0200000d020000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
