@@ -17,7 +17,6 @@ public class RoutineManager : MonoBehaviour
     public int[] debtsOfWeek;
     public int debt;
     public int creditRating;
-    public float bonusRatio;
 
     public bool isPay;
 
@@ -166,7 +165,6 @@ public class RoutineManager : MonoBehaviour
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
-            //total += building.CalculateIncome() + (int)(building.CalculateBonus() * day.DayOfYear * bonusRatio);
             total += building.CalculateIncome() + building.CalculateBonus();
         }
 
@@ -180,6 +178,7 @@ public class RoutineManager : MonoBehaviour
 
         total = (int)(total * EventManager.instance.GetFinalIncomeEventValue());
         totalIncome = total;
+
         ShopManager.instance.GetMoney(total);
         EventManager.instance.EventCostUpdate(total);
 

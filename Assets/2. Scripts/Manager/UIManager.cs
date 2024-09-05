@@ -661,7 +661,7 @@ public class UIManager : MonoBehaviour, ISubject
     {
         float sign = isUp ? 1 : -1;
         topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 85f * sign, second);
-        bottomPanel.transform.DOLocalMoveY(bottomPanel.transform.localPosition.y + -50f * sign, second);
+        bottomPanel.transform.DOLocalMoveY(bottomPanel.transform.localPosition.y + -55f * sign, second);
     }
 
     private int GetBuildingIndex()

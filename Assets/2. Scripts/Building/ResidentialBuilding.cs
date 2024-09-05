@@ -137,7 +137,7 @@ public class ResidentialBuilding : Building
             }
         }
 
-        return cost + income;
+        return commercialCost + cultureCost + serviceCost;
     }
 
     public override int UpdateHappiness(bool isExpect = false, int valueType = 0)
