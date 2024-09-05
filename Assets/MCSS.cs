@@ -90,12 +90,7 @@ public class MCSS : MonoBehaviour
         //AkSoundEngine.PostEvent("Stop_04", gameObject);
     }
 
-    public void LoadScene()
-    {
-        StartCoroutine(Load());
-    }
-
-    IEnumerator Load()
+    public void StopInGameBGM()
     {
         AkSoundEngine.PostEvent("Stop_BGMsequnce1", gameObject);
         AkSoundEngine.PostEvent("Stop_BGM4", gameObject);
@@ -120,12 +115,7 @@ public class MCSS : MonoBehaviour
         AkSoundEngine.PostEvent("Stop_APT_event_DISEASE_001_1", gameObject);
         AkSoundEngine.PostEvent("Stop_APT_event_FIRE_001_1", gameObject);
         AkSoundEngine.PostEvent("Stop_APT_event_THIEF_001_1", gameObject);
-
-        yield return new WaitForSeconds(1);
-
-        SceneManager.LoadScene("LobbyScene");
     }
-
 }
 
 

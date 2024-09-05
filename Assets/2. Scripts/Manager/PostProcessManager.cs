@@ -1,13 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.SceneManagement;
 
 public class PostProcessManager : MonoBehaviour
 {
     public static PostProcessManager instance;
 
     public PostProcessVolume postProcess;
+    public CanvasGroup canvas;
 
     private ColorGrading colorGrading;
     private Vignette vignette;
@@ -24,6 +27,7 @@ public class PostProcessManager : MonoBehaviour
         }
 
         instance = this;
+        //DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -35,6 +39,8 @@ public class PostProcessManager : MonoBehaviour
     private void Update()
     {
         if (isFade) return;
+
+        if (SceneManager.GetActiveScene().name == "LobbyScene") return;
 
         float angleX = RoutineManager.instance.mainLight.transform.localEulerAngles.x;
 
@@ -57,6 +63,7 @@ public class PostProcessManager : MonoBehaviour
             curTime += Time.fixedDeltaTime;
             t = curTime / second;
             colorGrading.colorFilter.Interp(colorGrading.colorFilter.value, targetColor, t);
+            canvas.alpha = Mathf.Lerp(canvas.alpha, Convert.ToInt32(!isIn), t);
             yield return new WaitForFixedUpdate();
         }
 
