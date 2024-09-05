@@ -17,8 +17,6 @@ public class GamePhoneUI : MonoBehaviour, IObserver
     private void OnEnable()
     {
         transform.localPosition = new Vector3(transform.localPosition.x, -450.0f, transform.localPosition.z);
-        InputManager.SetCanInput(false);
-        RoutineManager.instance.OnOffDailyLight(false);
         AkSoundEngine.PostEvent("Play_CellPhone_01", gameObject);
 
         StartCoroutine(InitPhone());
@@ -41,8 +39,6 @@ public class GamePhoneUI : MonoBehaviour, IObserver
         if(state == EventState.GameClear || state == EventState.GameOver)
         {
             curState = state;
-
-            gameObject.SetActive(true);
         }
     }
 }

@@ -81,6 +81,7 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Phone")]
     public PhoneUI phone;
     public GamePhoneUI gamePhone;
+    public GameFinishUI gameFinish;
 
     [Header("Tutorial")]
     public TutorialUI tutorial;
@@ -713,6 +714,7 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(destroyMessage);
         addObserver(phone);
         addObserver(gamePhone);
+        addObserver(gameFinish);
 
         addObserver(tutorial);
 

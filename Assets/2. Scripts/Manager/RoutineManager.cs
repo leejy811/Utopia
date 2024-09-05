@@ -123,14 +123,14 @@ public class RoutineManager : MonoBehaviour
         }
         else if (day == GetPayDay() && day.DayOfWeek == DayOfWeek.Monday)
         {
-            SetCreditRating(-25);
             payFailTime++;
-            if (creditRating <= 0)
+            if (creditRating - 25 <= 0)
             {
                 UIManager.instance.notifyObserver(EventState.GameOver);
             }
             else
             {
+                SetCreditRating(-25);
                 UpdateDebt();
                 weekResult = ResultType.PayFail;
 

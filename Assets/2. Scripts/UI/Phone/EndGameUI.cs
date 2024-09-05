@@ -27,7 +27,8 @@ public class EndGameUI : MonoBehaviour
         playTimeText.text = SecondToString(RoutineManager.instance.playTime);
 
         int score = RoutineManager.instance.creditRating;
-        creditScore.SetScore(score, score);
+        int endScore = state == EventState.GameOver ? 0 : score;
+        creditScore.SetScore(score, endScore);
 
         int[,] count = BuildingSpawner.instance.buildingGradeCount;
         for (int i = 0;i < buildingCntText.Length;i++)
