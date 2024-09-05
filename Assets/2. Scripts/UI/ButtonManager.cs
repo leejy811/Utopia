@@ -13,9 +13,6 @@ public class ButtonManager : MonoBehaviour
         {
             btn.onClick.AddListener(() => ButtonClicked(btn));
         }
-
-        lastDisabledButton = buttons[0];
-        buttons[0].onClick.Invoke();
     }
 
     void ButtonClicked(Button clickedButton)
@@ -27,5 +24,24 @@ public class ButtonManager : MonoBehaviour
 
         clickedButton.interactable = false;
         lastDisabledButton = clickedButton;
+    }
+
+    private void OnEnable()
+    {
+        lastDisabledButton = buttons[0];
+        buttons[0].onClick.Invoke();
+
+        if (!UIManager.instance.lists[0].gameObject.activeSelf)
+        {
+            buttons[0].onClick.Invoke();
+        }
+
+        foreach (Button btn in buttons)
+        {
+            btn.interactable = true;
+        }
+
+        buttons[0].interactable = false;
+        lastDisabledButton = buttons[0];
     }
 }
