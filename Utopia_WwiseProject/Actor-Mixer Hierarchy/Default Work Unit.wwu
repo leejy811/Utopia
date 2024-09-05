@@ -9808,6 +9808,16 @@
 					<ChildrenList>
 						<Sound Name="Paythepayment_01" ID="{D054EAAD-671C-4A48-A5D6-3AE67026CC0D}" ShortID="538717963">
 							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>
@@ -9957,6 +9967,11 @@
 						</Sound>
 						<Sound Name="Tutorial_Pop_up" ID="{9CA7E255-1F71-48A5-A0AB-28A28D1552EE}" ShortID="561605448">
 							<PropertyList>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-7</Value>

@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{EF70FEB5-233D-00A2-BED8-108859A185F6}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{0E3F6B1D-E4E0-2FD7-877F-E475C5D2F8BF}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -909,5 +909,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1E9743B4-46B6-B078-6A44-13B4EB452ADC}</FileHash>
+	<FileHash>{90D9E27C-FE1F-FB13-87DA-023107FD0A37}</FileHash>
 </SoundBanksInfo>
