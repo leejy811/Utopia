@@ -91,11 +91,15 @@ public class TutorialUI : MonoBehaviour, IObserver
             curIdx = 0;
             pageLength = content[curState].Length;
             SetButton();
+
+            AkSoundEngine.SetRTPCValue("CLICK", 2);
+            AkSoundEngine.PostEvent("Play_Tutorial_Pop_up", gameObject);
         }
         else if (gameObject.activeSelf)
         {
             gameObject.SetActive(false);
             InputManager.SetCanInput(true);
+            AkSoundEngine.SetRTPCValue("CLICK", 1);
 
             if (curState == EventState.GameStart)
                 UIManager.instance.notifyObserver(EventState.CityLevelUp);
