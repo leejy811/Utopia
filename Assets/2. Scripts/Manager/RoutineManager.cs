@@ -166,8 +166,8 @@ public class RoutineManager : MonoBehaviour
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
-            total += building.CalculateIncome() + (int)(building.CalculateBonus() * day.DayOfYear * bonusRatio);
-            //total += building.CalculateIncome() + building.CalculateBonus();
+            //total += building.CalculateIncome() + (int)(building.CalculateBonus() * day.DayOfYear * bonusRatio);
+            total += building.CalculateIncome() + building.CalculateBonus();
         }
 
         for(int i = 0;i < Grid.instance.width;i++)
