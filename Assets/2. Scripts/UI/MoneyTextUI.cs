@@ -18,7 +18,7 @@ public class MoneyTextUI : MonoBehaviour
         int currentNumber = prevMoney;
         int direction = (nextMoney > prevMoney) ? 1 : -1;
         int totalSteps = Mathf.Abs(nextMoney - prevMoney);
-        moneyText.text = currentNumber.ToString() + "원";
+        moneyText.text = string.Format("{0:#,###}", currentNumber) + "원";
         moneyText.color = Color.yellow;
 
         AkSoundEngine.PostEvent("Play_Paythepayment_01", gameObject);
@@ -26,14 +26,14 @@ public class MoneyTextUI : MonoBehaviour
         {
             float t = elapsedTime / second;
             currentNumber = prevMoney + Mathf.RoundToInt(t * totalSteps) * direction;
-            moneyText.text = currentNumber.ToString() + "원";
+            moneyText.text = string.Format("{0:#,###}", currentNumber) + "원";
 
             yield return null;
 
             elapsedTime += Time.deltaTime;
         }
 
-        moneyText.text = nextMoney.ToString() + "원";
+        moneyText.text = string.Format("{0:#,###}", nextMoney) + "원";
         moneyText.color = Color.white;
     }
 }
