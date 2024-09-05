@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DDayUI : MonoBehaviour
 {
     public Image panel;
+    public Image newImage;
     public TextMeshProUGUI title;
     public TextMeshProUGUI data;
 
@@ -21,6 +22,7 @@ public class DDayUI : MonoBehaviour
         data.color -= new Color(0, 0, 0, 1);
 
         panel.DOFade(1.0f, 1f).OnComplete(() => { panel.DOFade(0.0f, 1f); });
+        newImage.DOFade(1.0f, 1f).OnComplete(() => { newImage.DOFade(0.0f, 1f); });
         title.DOFade(1.0f, 1f).OnComplete(() => { title.DOFade(0.0f, 1f); });
         data.DOFade(1.0f, 1f).OnComplete(() => { data.DOFade(0.0f, 1f).OnComplete(() => { gameObject.SetActive(false); }); });
 
