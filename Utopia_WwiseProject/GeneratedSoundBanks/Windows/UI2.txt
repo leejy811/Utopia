@@ -18,7 +18,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3803209012	Play_Slot_Spwan_01			\Default Work Unit\Play_Slot_Spwan_01	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Paythepayment_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		24180
+	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Paythepayment_01_3331AD03.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		23728
 	236384276	POPUP_Positive	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\POPUP_Positive_v2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\POPUP_Positive		16259
 	439018999	Slotmashin_Jackpot_Ani_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slotmashin_Jackpot_Ani_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slotmashin_Jackpot_Ani_01		290794
 	444873937	Slot_Effect_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Effect_Spwan_01_7EE5D2A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Effect_Spwan_01		6108
@@ -31,6 +31,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	791175701	CellPhone_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\CellPhone_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\CellPhone_01		16783
 	809211139	Slot_Drrrrrr_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Drrrrrr_01_5FFF549D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Drrrrrr_01		115339
 	925625941	Slot_Rever_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Rever_01_58381DFD.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Rever_01		7782
-	927414738	GraphUP	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\GraphUP_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\GraphUP		16211
+	927414738	GraphUP	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\GraphUP_38C429E0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\GraphUP		6491
 	1037521745	CellPhone_Click	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\CellPhone_Click_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\CellPhone_Click		6490
 

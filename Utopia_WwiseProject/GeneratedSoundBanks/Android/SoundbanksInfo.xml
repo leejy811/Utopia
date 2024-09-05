@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{A8D9F775-1326-3158-2C71-BC2F284B87BD}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{C1C846B3-E088-9934-3719-E9DFD07B0B91}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -184,7 +184,7 @@
 				</File>
 				<File Id="927414738" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GraphUP.wav</ShortName>
-					<CachePath>SFX/GraphUP_818F3B66.wem</CachePath>
+					<CachePath>SFX/GraphUP_0D1F58E8.wem</CachePath>
 				</File>
 				<File Id="1037521745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CellPhone_Click.wav</ShortName>
@@ -212,7 +212,7 @@
 						<MediaRef Id="748782326"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3497197729" Name="Play_GraphUP" DurationType="OneShot" DurationMin="3.4862916" DurationMax="3.4862916">
+				<Event Id="3497197729" Name="Play_GraphUP" DurationType="OneShot" DurationMin="1.0847362" DurationMax="1.0847362">
 					<MediaRefs>
 						<MediaRef Id="927414738"/>
 					</MediaRefs>
@@ -328,7 +328,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{DF864986-2971-8B74-EE61-CC7C6E6209AC}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{7F1B5CFB-D467-F382-1A10-3A71D25A4465}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -346,7 +346,7 @@
 				</File>
 				<File Id="97953192" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GraphFallDown.wav</ShortName>
-					<CachePath>SFX/GraphFallDown_818F3B66.wem</CachePath>
+					<CachePath>SFX/GraphFallDown_39002228.wem</CachePath>
 				</File>
 				<File Id="115031296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Night-Dawn.wav</ShortName>
@@ -648,7 +648,7 @@
 						<MediaRef Id="901484845"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="171395709" Name="Play_GraphFallDown" DurationType="OneShot" DurationMin="3.4862916" DurationMax="3.4862916">
+				<Event Id="171395709" Name="Play_GraphFallDown" DurationType="OneShot" DurationMin="1.5287212" DurationMax="1.5287212">
 					<MediaRefs>
 						<MediaRef Id="97953192"/>
 					</MediaRefs>
@@ -900,5 +900,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{30B99211-A8D4-1D6D-D769-6D795EA13F49}</FileHash>
+	<FileHash>{DFE27489-153E-4E09-4CFD-AF52B91C0537}</FileHash>
 </SoundBanksInfo>

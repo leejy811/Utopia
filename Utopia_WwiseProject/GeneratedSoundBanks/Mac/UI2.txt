@@ -31,6 +31,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	791175701	CellPhone_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\CellPhone_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\CellPhone_01		336096
 	809211139	Slot_Drrrrrr_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Slot_Drrrrrr_01_D4609F6D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Drrrrrr_01		766084
 	925625941	Slot_Rever_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Slot_Rever_01_93F42A0D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Rever_01		63332
-	927414738	GraphUP	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\GraphUP_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\GraphUP		669464
+	927414738	GraphUP	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\GraphUP_0D1F58E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\GraphUP		208364
 	1037521745	CellPhone_Click	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\CellPhone_Click_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\CellPhone_Click		151300
 

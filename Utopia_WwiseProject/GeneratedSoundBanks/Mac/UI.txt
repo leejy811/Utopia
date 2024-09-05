@@ -67,7 +67,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	37938370	Day-Night	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Day-Night_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Day-Night		267616
 	43538208	UI_solve_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\UI_solve_001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_solve_001		108096
 	46416667	Mail_enter_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Mail_enter_001_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_enter_001		187892
-	97953192	GraphFallDown	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\GraphFallDown_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\GraphFallDown		669464
+	97953192	GraphFallDown	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\GraphFallDown_39002228.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\GraphFallDown		293612
 	115031296	Night-Dawn	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Night-Dawn_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Night-Dawn		267616
 	119271698	Tile_Buy_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Tile_Buy_001(short)_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Tile_Buy_001		95412
 	121382095	Jackpot_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Jackpot_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Jackpot_01		3744068
