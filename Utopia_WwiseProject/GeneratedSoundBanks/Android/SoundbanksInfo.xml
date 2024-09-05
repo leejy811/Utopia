@@ -126,13 +126,13 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{C1C846B3-E088-9934-3719-E9DFD07B0B91}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{258B7B3E-54CD-6DA6-B724-BECF7A1D7404}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
 				<File Id="204508889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Paythepayment_01.wav</ShortName>
-					<CachePath>SFX/Paythepayment_01_818F3B66.wem</CachePath>
+					<CachePath>SFX/Paythepayment_01_00889829.wem</CachePath>
 				</File>
 				<File Id="236384276" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>POPUP_Positive_v2.wav</ShortName>
@@ -184,7 +184,7 @@
 				</File>
 				<File Id="927414738" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GraphUP.wav</ShortName>
-					<CachePath>SFX/GraphUP_0D1F58E8.wem</CachePath>
+					<CachePath>SFX/GraphUP_B9138276.wem</CachePath>
 				</File>
 				<File Id="1037521745" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>CellPhone_Click.wav</ShortName>
@@ -212,7 +212,7 @@
 						<MediaRef Id="748782326"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3497197729" Name="Play_GraphUP" DurationType="OneShot" DurationMin="1.0847362" DurationMax="1.0847362">
+				<Event Id="3497197729" Name="Play_GraphUP" DurationType="OneShot" DurationMin="1.4934043" DurationMax="1.4934043">
 					<MediaRefs>
 						<MediaRef Id="927414738"/>
 					</MediaRefs>
@@ -328,7 +328,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{7F1B5CFB-D467-F382-1A10-3A71D25A4465}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{029C48ED-3839-A6B8-8F9D-FEC6C325068C}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -346,7 +346,7 @@
 				</File>
 				<File Id="97953192" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GraphFallDown.wav</ShortName>
-					<CachePath>SFX/GraphFallDown_39002228.wem</CachePath>
+					<CachePath>SFX/GraphFallDown_DAC7E3DA.wem</CachePath>
 				</File>
 				<File Id="115031296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Night-Dawn.wav</ShortName>
@@ -366,7 +366,7 @@
 				</File>
 				<File Id="175516682" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Turn_Move_Clock_001.wav</ShortName>
-					<CachePath>SFX/Turn_Move_Clock_001_818F3B66.wem</CachePath>
+					<CachePath>SFX/Turn_Move_Clock_001_7802D473.wem</CachePath>
 				</File>
 				<File Id="204877032" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_BLACKOUT_001.wav</ShortName>
@@ -648,7 +648,7 @@
 						<MediaRef Id="901484845"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="171395709" Name="Play_GraphFallDown" DurationType="OneShot" DurationMin="1.5287212" DurationMax="1.5287212">
+				<Event Id="171395709" Name="Play_GraphFallDown" DurationType="OneShot" DurationMin="1.8163024" DurationMax="1.8163024">
 					<MediaRefs>
 						<MediaRef Id="97953192"/>
 					</MediaRefs>
@@ -900,5 +900,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{DFE27489-153E-4E09-4CFD-AF52B91C0537}</FileHash>
+	<FileHash>{120767E1-2BE7-13E2-EF0F-CE691D8F1C36}</FileHash>
 </SoundBanksInfo>

@@ -18,7 +18,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3803209012	Play_Slot_Spwan_01			\Default Work Unit\Play_Slot_Spwan_01	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Paythepayment_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		248456
+	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Paythepayment_01_00889829.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		248456
 	236384276	POPUP_Positive	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\POPUP_Positive_v2_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\POPUP_Positive		150692
 	439018999	Slotmashin_Jackpot_Ani_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Slotmashin_Jackpot_Ani_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slotmashin_Jackpot_Ani_01		3798080
 	444873937	Slot_Effect_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Slot_Effect_Spwan_01_C28BA518.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Effect_Spwan_01		62172
@@ -31,6 +31,6 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	791175701	CellPhone_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\CellPhone_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\CellPhone_01		336096
 	809211139	Slot_Drrrrrr_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Slot_Drrrrrr_01_D4609F6D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Drrrrrr_01		766084
 	925625941	Slot_Rever_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Slot_Rever_01_93F42A0D.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Rever_01		63332
-	927414738	GraphUP	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\GraphUP_0D1F58E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\GraphUP		208364
+	927414738	GraphUP	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\GraphUP_B9138276.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\GraphUP		286828
 	1037521745	CellPhone_Click	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\CellPhone_Click_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\CellPhone_Click		151300
 

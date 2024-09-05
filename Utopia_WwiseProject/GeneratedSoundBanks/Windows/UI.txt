@@ -67,12 +67,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	37938370	Day-Night	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Day-Night_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Day-Night		22073
 	43538208	UI_solve_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\UI_solve_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI_solve_001		10176
 	46416667	Mail_enter_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mail_enter_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_enter_001		19487
-	97953192	GraphFallDown	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\GraphFallDown_770AB0E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\GraphFallDown		7918
+	97953192	GraphFallDown	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\GraphFallDown_52D4454A.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\GraphFallDown		7918
 	115031296	Night-Dawn	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Night-Dawn_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Night-Dawn		24776
 	119271698	Tile_Buy_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Tile_Buy_001(short)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Tile_Buy_001		10354
 	121382095	Jackpot_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Jackpot_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Jackpot_01		304633
 	165481767	Graph_fall_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Graph_fall_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Graph_fall_001		2510
-	175516682	Turn_Move_Clock_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Turn_Move_Clock_001_5102DCC8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Turn_Move_Clock_001		36963
+	175516682	Turn_Move_Clock_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Turn_Move_Clock_001_AFCB1483.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Turn_Move_Clock_001		36963
 	204877032	APT_event_BLACKOUT_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_BLACKOUT_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_BLACKOUT_001		82694
 	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_FIRE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_FIRE_01		106649
 	255281743	Pay_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Pay_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pay_001		9113
