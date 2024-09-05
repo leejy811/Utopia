@@ -86,7 +86,7 @@ public class CityLevelManager : MonoBehaviour
     {
         int sum = 0;
 
-        for(int i = 0;i < levelIdx;i++)
+        for(int i = 0;i <= levelIdx;i++)
         {
             sum += level[i].debtWeek;
         }
