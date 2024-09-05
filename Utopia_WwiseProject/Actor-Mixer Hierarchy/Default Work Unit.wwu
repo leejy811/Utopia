@@ -9957,11 +9957,6 @@
 						</Sound>
 						<Sound Name="Tutorial_Pop_up" ID="{9CA7E255-1F71-48A5-A0AB-28A28D1552EE}" ShortID="561605448">
 							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ValueList>
-										<Value>-380</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-7</Value>
@@ -9977,20 +9972,23 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon" ID="{29C82E45-AAE0-48FB-82C5-945EAEEEC97A}">
+								<AudioFileSource Name="POPUP_Positive_v1" ID="{619D4722-539C-47C8-8A64-430511A08411}">
 									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.13167161119151"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.610683851905451"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.552821997105645"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0408636034732272"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.25996110709117"/>
 									</PropertyList>
 									<Language>SFX</Language>
-									<AudioFile>ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon.wav</AudioFile>
+									<AudioFile>POPUP_Positive_v1.wav</AudioFile>
 									<MediaIDList>
-										<MediaID ID="294869015"/>
+										<MediaID ID="262109454"/>
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
 							<ActiveSourceList>
-								<ActiveSource Name="ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon" ID="{29C82E45-AAE0-48FB-82C5-945EAEEEC97A}" Platform="Linked"/>
+								<ActiveSource Name="POPUP_Positive_v1" ID="{619D4722-539C-47C8-8A64-430511A08411}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>

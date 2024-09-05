@@ -1927,8 +1927,8 @@ MonoBehaviour:
         guid: 33fa616afaaf2648a939b6ae4efe9a63
       Path: Events\Default Work Unit\Play_Tutorial_Pop_up
       maxAttenuation: 0
-      maxDuration: 0.6885119
-      minDuration: 0.6885119
+      maxDuration: 1.2190975
+      minDuration: 1.2190975
     - name: Play_UI_papersound_001
       guid: 3621294fe4585f40a60727f06fbae288
       id: 424395900
@@ -2731,7 +2731,7 @@ MonoBehaviour:
     m_lastTime: -8584897083625962771
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0600000007000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

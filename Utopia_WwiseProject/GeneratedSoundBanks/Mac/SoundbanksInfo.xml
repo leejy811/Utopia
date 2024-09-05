@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{5575EA70-0A55-B629-99A7-1D8315E30932}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{3ED111D2-B0FE-76E1-7377-059C75A15A2D}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -138,9 +138,9 @@
 					<ShortName>POPUP_Positive_v2.wav</ShortName>
 					<CachePath>SFX/POPUP_Positive_v2_818F3B66.wem</CachePath>
 				</File>
-				<File Id="294869015" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon.wav</ShortName>
-					<CachePath>SFX/ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon_237E1C8A.wem</CachePath>
+				<File Id="262109454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>POPUP_Positive_v1.wav</ShortName>
+					<CachePath>SFX/POPUP_Positive_v1_1A2AB54E.wem</CachePath>
 				</File>
 				<File Id="439018999" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slotmashin_Jackpot_Ani_01.wav</ShortName>
@@ -271,9 +271,9 @@
 						<MediaRef Id="439018999"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="946941744" Name="Play_Tutorial_Pop_up" DurationType="OneShot" DurationMin="0.6885119" DurationMax="0.6885119">
+				<Event Id="946941744" Name="Play_Tutorial_Pop_up" DurationType="OneShot" DurationMin="1.2190975" DurationMax="1.2190975">
 					<MediaRefs>
-						<MediaRef Id="294869015"/>
+						<MediaRef Id="262109454"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3035396721" Name="Stop_Slot_Drrrrrr_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -909,5 +909,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{039A4318-D408-4FC9-667E-964FD2FD9232}</FileHash>
+	<FileHash>{BB2C39EC-658C-3E73-D83D-6EEB14E6D177}</FileHash>
 </SoundBanksInfo>

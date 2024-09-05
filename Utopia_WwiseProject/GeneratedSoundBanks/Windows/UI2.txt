@@ -21,7 +21,7 @@ Event	ID	Name			Wwise Object Path	Notes
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Paythepayment_01_ABF879B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		23728
 	236384276	POPUP_Positive	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\POPUP_Positive_v2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\POPUP_Positive		16259
-	294869015	Tutorial_Pop_up	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon_584DBBDA.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Tutorial_Pop_up		9756
+	262109454	Tutorial_Pop_up	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\POPUP_Positive_v1_6581387E.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Tutorial_Pop_up		10828
 	439018999	Slotmashin_Jackpot_Ani_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slotmashin_Jackpot_Ani_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slotmashin_Jackpot_Ani_01		290794
 	444873937	Slot_Effect_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Effect_Spwan_01_7EE5D2A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Effect_Spwan_01		6108
 	488455765	SlotMachine_enter_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SlotMachine_enter_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\SlotMachine_enter_001		6689
