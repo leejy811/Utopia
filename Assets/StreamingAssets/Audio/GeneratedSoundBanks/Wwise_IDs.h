@@ -100,6 +100,7 @@ namespace AK
         static const AkUniqueID PLAY_TILE_BUY_001 = 3972534815U;
         static const AkUniqueID PLAY_TIMELAPSBGM = 318309431U;
         static const AkUniqueID PLAY_TURN_MOVE_CLOCK_001 = 2475783214U;
+        static const AkUniqueID PLAY_TUTORIAL_POP_UP = 946941744U;
         static const AkUniqueID PLAY_UI_PAPERSOUND_001 = 424395900U;
         static const AkUniqueID PLAY_UI_SOLVE_001 = 1520262876U;
         static const AkUniqueID PLAY_WIND = 1020223172U;

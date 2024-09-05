@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{258B7B3E-54CD-6DA6-B724-BECF7A1D7404}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{5575EA70-0A55-B629-99A7-1D8315E30932}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -137,6 +137,10 @@
 				<File Id="236384276" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>POPUP_Positive_v2.wav</ShortName>
 					<CachePath>SFX/POPUP_Positive_v2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="294869015" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon.wav</ShortName>
+					<CachePath>SFX/ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon_237E1C8A.wem</CachePath>
 				</File>
 				<File Id="439018999" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slotmashin_Jackpot_Ani_01.wav</ShortName>
@@ -265,6 +269,11 @@
 				<Event Id="2214109306" Name="Play_Slotmashin_Jackpot_Ani_01" DurationType="OneShot" DurationMin="19.781166" DurationMax="19.781166">
 					<MediaRefs>
 						<MediaRef Id="439018999"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="946941744" Name="Play_Tutorial_Pop_up" DurationType="OneShot" DurationMin="0.6885119" DurationMax="0.6885119">
+					<MediaRefs>
+						<MediaRef Id="294869015"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3035396721" Name="Stop_Slot_Drrrrrr_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -900,5 +909,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{120767E1-2BE7-13E2-EF0F-CE691D8F1C36}</FileHash>
+	<FileHash>{1C65E300-F702-25F1-65DE-200991979049}</FileHash>
 </SoundBanksInfo>

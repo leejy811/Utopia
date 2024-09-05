@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584761473554531357
+    m_lastTime: -8584760613852684867
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -198,7 +198,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584761473554422257
+    m_lastTime: -8584760613852927902
     List:
     - name: Condition2
       guid: 01e27642421b2b4ca3fa506cc6b10a01
@@ -1912,6 +1912,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.4492707
       minDuration: 2.4492707
+    - name: Play_Tutorial_Pop_up
+      guid: 33fa616afaaf2648a939b6ae4efe9a63
+      id: 946941744
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Tutorial_Pop_up
+        ObjectType: 3
+        guid: 33fa616afaaf2648a939b6ae4efe9a63
+      Path: Events\Default Work Unit\Play_Tutorial_Pop_up
+      maxAttenuation: 0
+      maxDuration: 0.6885119
+      minDuration: 0.6885119
     - name: Play_UI_papersound_001
       guid: 3621294fe4585f40a60727f06fbae288
       id: 424395900

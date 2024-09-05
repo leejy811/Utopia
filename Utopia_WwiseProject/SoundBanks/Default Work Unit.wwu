@@ -109,6 +109,7 @@
 						<ObjectRef Name="Stop_Slotmashin_Jackpot_Ani_01" ID="{93400901-8E1A-46FE-80B1-05EAE31E6C0E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_Drrrrrr_01" ID="{D96EC75E-02C5-479F-AF8E-4C87CFD32851}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_SlotMachine_enter_001" ID="{6250A11C-0E40-4811-B5E1-B70106AEB267}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Tutorial_Pop_up" ID="{6A61FA33-AFFA-4826-A939-B6AE4EFE9A63}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Deny_02" ID="{01066F9C-5123-4A01-99BB-563C66F94685}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CellPhone_Click" ID="{889A9691-6AA4-4AA4-AD39-6300EB5C75DC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_Spwan_01" ID="{70716D87-9578-4B36-BECB-D3AE94194338}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>

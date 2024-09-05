@@ -9955,6 +9955,44 @@
 								<ActiveSource Name="GraphUP" ID="{A292C67A-E335-48E7-A7FF-F2C2E47EAED3}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="Tutorial_Pop_up" ID="{9CA7E255-1F71-48A5-A0AB-28A28D1552EE}" ShortID="561605448">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-380</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon" ID="{29C82E45-AAE0-48FB-82C5-945EAEEEC97A}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.552821997105645"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="294869015"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ESM_Cute_water_bubble_Notification_Synth_Electronic_Particle_Cute_Cartoon" ID="{29C82E45-AAE0-48FB-82C5-945EAEEEC97A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
