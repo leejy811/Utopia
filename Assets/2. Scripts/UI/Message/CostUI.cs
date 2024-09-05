@@ -11,11 +11,15 @@ public class CostUI : MonoBehaviour, IObserver
     public void SetValue(int cost)
     {
         float percent = EventManager.instance.GetBuildCostEventValue();
+        if (percent != 0.0f)
+        {
+            percent = 1.0f / percent;
+        }
 
         costText.text = "건설 비용 : ";
 
         if (percent != 1.0)
-            costText.text += "<s>" + cost.ToString() + "</s> <sprite=7>" + (cost * percent).ToString() + "원";
+            costText.text += "<s>" + (cost * percent).ToString() + "</s> <sprite=7>" + cost.ToString() + "원";
         else
             costText.text += cost.ToString() + "원";
     }
