@@ -38,7 +38,7 @@ public class UtilityBuilding : Building
         return res;
     }
 
-    public override int CalculateBonus(bool isExpect = false)
+    public override int CalculateBonus(bool isExpect = false, int valueType = 0)
     {
         int income = 0;
         int cost = 0;

@@ -106,23 +106,37 @@ public class ResidentialBuilding : Building
         return (int)res;
     }
 
-    public override int CalculateBonus(bool isExpect = false)
+    public override int CalculateBonus(bool isExpect = false, int valueType = 0)
     {
-        int income = 0;
-        int cost = 0;
+        int commercialCost = 0;
+        int cultureCost = 0;
+        int serviceCost = 0;
 
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            cost -= 10;
+            commercialCost -= 10;
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            cost -= 10;
+            cultureCost -= 10;
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            income += 10;
+            serviceCost += 10;
 
         if (!isExpect)
         {
-            bonusCost += cost;
-            bonusIncome += income;
+            bonusCost += commercialCost + cultureCost;
+            bonusIncome += serviceCost;
         }
+        else
+        {
+            switch ((ValueType)valueType) 
+            {
+                case ValueType.CommercialCSAT:
+                    return commercialCost;
+                case ValueType.CultureCSAT:
+                    return cultureCost;
+                case ValueType.ServiceCSAT:
+                    return serviceCost;
+            }
+        }
+
         return cost + income;
     }
 

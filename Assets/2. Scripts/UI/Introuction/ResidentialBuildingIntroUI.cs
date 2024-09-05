@@ -14,7 +14,6 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
     public Button[] optionButtons;
     public Toggle[] optionToggles;
     public TextMeshProUGUI[] castTexts;
-    public TextMeshProUGUI bonusText;
 
     string[] optionString = { "수도", "하수", "전력", "방음" };
 
@@ -35,20 +34,6 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         for (int i = 0; i < residentialBuilding.existFacility.Length; i++)
         {
             SetOptionBuy(residentialBuilding, i);
-        }
-
-        bonusText.text = "만족도로 인해 ";
-        if (building.CalculateBonus(true) != 0)
-        {
-            bonusText.gameObject.SetActive(true);
-            if (building.CalculateBonus(true) > 0)
-                bonusText.text += " <color=#00FF00>추가 소득 발생 예정</color>";
-            else
-                bonusText.text += " <color=#FF0000>추가 지출 발생 예정</color>";
-        }
-        else
-        {
-            bonusText.gameObject.SetActive(false);
         }
     }
 
@@ -78,9 +63,12 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         string castEffectString = "";
 
         if (building.UpdateHappiness(true, type) != 0)
-            castEffectString = building.UpdateHappiness(true, type) > 0 ? "<color=#00FF00>행복도 증가" : "<color=#FF0000>행복도 감소";
-        else if (building.CalculateBonus(true) != 0)
-            castEffectString = "<color=#FF0000>추가 지출 발생";
+            castEffectString = building.UpdateHappiness(true, type) > 0 ? "<color=#00FF00>행복도 증가</color>" : "<color=#FF0000>행복도 감소</color>";
+        
+        if (building.CalculateBonus(true, type) > 0)
+            castEffectString += " 및 <color=#00FF00>추가 소득 발생</color>";
+        else if (building.CalculateBonus(true, type) < 0)
+            castEffectString += " 및 <color=#FF0000>추가 지출 발생</color>";
 
         res += boundaryString[boundaryIdx] + "한 " + typeString[type] + " 만족도로 인해 " + castEffectString + " 예정</color>";
         return res;
