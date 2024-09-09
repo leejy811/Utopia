@@ -90,9 +90,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab04c6a52803014cb44b9eb3756a67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 429258330126730010}
-  text: {fileID: 4705107202309765975}
-  speed: 1
+  images: []
+  texts: []
+  fadeInTime: 0
+  waitTime: 0
+  fadeOutTime: 0
   isFixed: 0
 --- !u!1 &4705107202309765973
 GameObject:

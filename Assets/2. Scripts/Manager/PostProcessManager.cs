@@ -2,17 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class PostProcessManager : MonoBehaviour
 {
     public static PostProcessManager instance;
 
-    public PostProcessVolume postProcess;
+    public Volume volume;
     public CanvasGroup canvas;
 
-    private ColorGrading colorGrading;
+    private ColorAdjustments colorGrading;
     private Vignette vignette;
 
     private float brightness;
@@ -32,8 +33,8 @@ public class PostProcessManager : MonoBehaviour
 
     private void Start()
     {
-        postProcess.profile.TryGetSettings(out colorGrading);
-        postProcess.profile.TryGetSettings(out vignette);
+        volume.profile.TryGet(out colorGrading);
+        volume.profile.TryGet(out vignette);
     }
 
     private void Update()
@@ -78,7 +79,7 @@ public class PostProcessManager : MonoBehaviour
         {
             curTime += Time.fixedDeltaTime;
             t = curTime / second;
-            vignette.intensity.Interp(vignette.intensity, targetValue, t);
+            vignette.intensity.Interp(vignette.intensity.value, targetValue, t);
             yield return new WaitForFixedUpdate();
         }
     }
