@@ -328,9 +328,9 @@ public class UIManager : MonoBehaviour, ISubject
         DateTime payDay = RoutineManager.instance.GetPayDay();
         int dDay = payDay.DayOfYear - curDay.DayOfYear - 1;
         if (RoutineManager.instance.debt != 0)
-            debtDayText.text = "<size=18>D-" + dDay.ToString() + "</size>";
+            debtDayText.text = "<size=50>D-" + dDay.ToString() + "</size>";
         else
-            debtDayText.text = "<size=12>납부 완료</size>";
+            debtDayText.text = "<size=25>납부 완료</size>";
 
         int maxWeek = CityLevelManager.instance.level[CityLevelManager.instance.levelIdx + 1].debtWeek;
         int curWeek = RoutineManager.instance.GetWeekOfYear() - CityLevelManager.instance.GetPrefixSumWeek();
@@ -661,8 +661,8 @@ public class UIManager : MonoBehaviour, ISubject
     public void MovePanelAnim(float second, bool isUp)
     {
         float sign = isUp ? 1 : -1;
-        topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 85f * sign, second);
-        bottomPanel.transform.DOLocalMoveY(bottomPanel.transform.localPosition.y + -55f * sign, second);
+        topPanel.transform.DOLocalMoveY(topPanel.transform.localPosition.y + 210.0f * sign, second);
+        bottomPanel.transform.DOLocalMoveY(bottomPanel.transform.localPosition.y + -210.0f * sign, second);
     }
 
     private int GetBuildingIndex()
