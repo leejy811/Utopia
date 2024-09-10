@@ -91,7 +91,7 @@ public class Building : MonoBehaviour
         {
             foreach (Material material in renderer.materials)
             {
-                material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, (float)state / 2.0f);
+                material.color = new Color(renderer.material.color.r, renderer.material.color.g, renderer.material.color.b, ((float)state / 2.0f) + 0.1f);
             }
         }
     }

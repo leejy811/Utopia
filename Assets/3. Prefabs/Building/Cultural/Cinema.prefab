@@ -136,6 +136,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6535387438536963068, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3852341972610935857, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -2450849009015537254, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -148,6 +156,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1dd9f58169f94ac49960f8067138c859, type: 2}
+    - target: {fileID: -164157393541769141, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 742571696440858711, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
       propertyPath: m_Name
       value: Cinema
@@ -156,10 +172,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 37d75638abea5144f8ffc5d83ae69971, type: 2}
+    - target: {fileID: 3483068211074573027, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4123163902568658351, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 63ad51ff844cfe045a57d9846aa58012, type: 2}
+    - target: {fileID: 5361281312315068073, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981722475187972325, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6038550813985070005, guid: 4ec6197efa88f8c41bd8f6ce7381874b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

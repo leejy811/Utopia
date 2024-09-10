@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sesame
       objectReference: {fileID: 0}
+    - target: {fileID: -9215465328280206027, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f83840787f798eb4986128688b2c80b5, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -148,6 +152,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d052aa84d7313bf478122e306e0b687a, type: 2}
+    - target: {fileID: -7557157474651750340, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -7548293527536864574, guid: f83840787f798eb4986128688b2c80b5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -156,13 +164,53 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b49b0a05230ca994baf285414b4c05e5, type: 2}
+    - target: {fileID: -3407210876393138051, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: -3236702035335439135, guid: f83840787f798eb4986128688b2c80b5, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d289abe9a3d38e449870d1381fd680cb, type: 2}
+    - target: {fileID: -219149028638583151, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 168378438785174179, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f83840787f798eb4986128688b2c80b5, type: 3}
       propertyPath: m_Name
       value: burger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3047067734987512591, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404802313712263570, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714331896821149529, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035826660475482780, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076132095216885174, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100576559211829468, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6122250026541284179, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6980677040154996517, guid: f83840787f798eb4986128688b2c80b5, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -172,6 +220,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aaf49b0b61e8c16409e66b82a43755b0, type: 2}
+    - target: {fileID: 8041427988473944864, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9041298075948233806, guid: f83840787f798eb4986128688b2c80b5, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f83840787f798eb4986128688b2c80b5, type: 3}
 --- !u!4 &2345498947287250291 stripped
