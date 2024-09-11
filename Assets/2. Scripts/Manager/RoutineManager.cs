@@ -55,6 +55,7 @@ public class RoutineManager : MonoBehaviour
         PanelData data = new CreditPanelData(money, creditRating, debt, weekResult, GetPayDay());
         UIManager.instance.phone.SetPanelData(PhoneState.Credit, data);
         UIManager.instance.phone.prevData = data;
+        Building.InitStaticCalcValue();
     }
 
     private void FixedUpdate()
