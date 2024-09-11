@@ -23,7 +23,6 @@ public class Tile : MonoBehaviour
     public GameObject[] tileModels;
     public GameObject targetTile;
     public ParticleSystem smokeFX;
-    public ParticleSystem smokeFXLoop;
 
     private void Awake()
     {
@@ -114,15 +113,8 @@ public class Tile : MonoBehaviour
         MeshRenderer renderer = targetTile.GetComponent<MeshRenderer>();
         renderer.material.DOColor(Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)], time);
 
-        if (isPurchased && time != 0.0f)
-            StartCoroutine(PlayLoopFX(time));
-    }
-
-    IEnumerator PlayLoopFX(float time)
-    {
-        smokeFXLoop.Play();
-        yield return new WaitForSeconds(time + 1f);
-        smokeFXLoop.Stop();
+        if (time != 0.0f)
+            smokeFX.Play();
     }
 
     public void Coloring(bool isOn)

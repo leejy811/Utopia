@@ -29,10 +29,10 @@ public class GameFinishUI : MonoBehaviour, IObserver
         {
             if(tile.CheckPurchased()) continue;
 
-            tile.smokeFXLoop.Play();
+            tile.smokeFX.Play();
 
             if (tile.building != null)
-                tile.building.transform.DOMoveY(-1f, gameoverTime);
+                tile.building.transform.DOMoveY(-2.2f, gameoverTime);
         }
 
         CinemachineBasicMultiChannelPerlin noise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
@@ -40,11 +40,6 @@ public class GameFinishUI : MonoBehaviour, IObserver
         noise.m_FrequencyGain = 1.0f;
 
         yield return new WaitForSeconds(gameoverTime);
-
-        foreach (Tile tile in Grid.instance.tiles)
-        {
-            tile.smokeFXLoop.Stop();
-        }
 
         noise.m_AmplitudeGain = 0.0f;
         noise.m_FrequencyGain = 0.0f;
