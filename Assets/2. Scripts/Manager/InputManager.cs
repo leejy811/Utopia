@@ -176,7 +176,7 @@ public class InputManager : MonoBehaviour, IObserver
 
     private void GetMenuInput()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
         {
             UIManager.instance.notifyObserver(EventState.None);
             SetCanInput(true);
