@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -21,6 +22,8 @@ public class Tile : MonoBehaviour
 
     public GameObject[] tileModels;
     public GameObject targetTile;
+    public ParticleSystem smokeFX;
+    public ParticleSystem smokeFXLoop;
 
     private void Awake()
     {
@@ -52,9 +55,9 @@ public class Tile : MonoBehaviour
         return !isPurchased;
     }
 
-    public void SetTilePurchased(bool isPurchased)
+    public void SetTilePurchased(bool isPurchased, float time = 0.0f)
     {
-        SetTileColor(isPurchased);
+        SetTileColor(isPurchased, time);
 
         this.isPurchased = isPurchased;
     }
@@ -104,12 +107,22 @@ public class Tile : MonoBehaviour
         renderer.material.color = color;
     }
 
-    public void SetTileColor(bool isPurchased)
+    public void SetTileColor(bool isPurchased, float time = 0.0f)
     {
         if (!targetTile.activeSelf) return;
 
         MeshRenderer renderer = targetTile.GetComponent<MeshRenderer>();
-        renderer.material.color = Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)];
+        renderer.material.DOColor(Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)], time);
+
+        if (isPurchased && time != 0.0f)
+            StartCoroutine(PlayLoopFX(time));
+    }
+
+    IEnumerator PlayLoopFX(float time)
+    {
+        smokeFXLoop.Play();
+        yield return new WaitForSeconds(time + 1f);
+        smokeFXLoop.Stop();
     }
 
     public void Coloring(bool isOn)

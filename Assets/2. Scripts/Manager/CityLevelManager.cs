@@ -68,7 +68,7 @@ public class CityLevelManager : MonoBehaviour
     private void LevelUp()
     {
         levelIdx++;
-        Grid.instance.PurchaseTile(level[levelIdx].tileSize);
+        Grid.instance.PurchaseTile(level[levelIdx].tileSize, level[levelIdx - 1].tileSize, 3f);
         UIManager.instance.SetDebtInfo();
 
         if (levelIdx == level.Length - 1)

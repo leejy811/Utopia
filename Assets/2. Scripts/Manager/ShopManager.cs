@@ -156,6 +156,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
         spawnTrans.rotation = curPickObject.transform.rotation;
         BuildingSpawner.instance.PlaceBuilding(curPickIndex, spawnTrans);
+        tile.smokeFX.Play(true);
 
         UIManager.instance.SetBuildingListValue((int)building.type);
     }
@@ -166,6 +167,9 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState != BuyState.SellBuilding) return;
 
+        Vector2Int pos = curPickObject.GetComponent<Building>().position;
+        Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
+        
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
         EventManager.instance.SetEventBuildings(curPickObject.GetComponent<Building>(), false);
         Destroy(curPickObject);

@@ -91,14 +91,18 @@ public class Grid : MonoBehaviour, IObserver
         camera.transform.position = ((Vector3Int)startPoint) + cameraOffset;
     }
 
-    public void PurchaseTile(Vector2Int purchaseSize)
+    public void PurchaseTile(Vector2Int purchaseSize, Vector2Int prevSize, float time = 0.0f)
     {
         for (int i = (width / 2) - (purchaseSize.x / 2); i < (width / 2) + (purchaseSize.x / 2); i++)
         {
             for (int j = (height / 2) - (purchaseSize.y / 2); j < (height / 2) + (purchaseSize.y / 2); j++)
             {
-                tiles[i, j].SetTilePurchased(true);
-                levelUpTiles[i, j].SetTilePurchased(true);
+                if (i > (width / 2) - (prevSize.x / 2) && i < (width / 2) + (prevSize.x / 2)
+                    && j > (height / 2) - (prevSize.y / 2) && j < (height / 2) + (prevSize.y / 2))
+                    continue;
+
+                tiles[i, j].SetTilePurchased(true, time);
+                levelUpTiles[i, j].SetTilePurchased(true, time);
             }
         }
     }
