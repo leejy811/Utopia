@@ -13,37 +13,52 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID PLAY_1APT_EVENT_DESOLATE_01 = 4209066311U;
+        static const AkUniqueID PLAY_1APT_EVENT_DISEASE_01 = 3411385584U;
+        static const AkUniqueID PLAY_1APT_EVENT_FIRE_01 = 3929652442U;
+        static const AkUniqueID PLAY_1APT_EVENT_THIEF_01 = 1749607638U;
+        static const AkUniqueID PLAY_1SP_DECREASE_PRICE_01 = 30697391U;
+        static const AkUniqueID PLAY_1SP_DISCOUNT_01 = 3698034714U;
+        static const AkUniqueID PLAY_1SP_FESTIVAL_01 = 1975750249U;
+        static const AkUniqueID PLAY_1SP_FEW_JOBS_01 = 2477356218U;
+        static const AkUniqueID PLAY_1SP_INCREASE_PRICE_01 = 600092703U;
+        static const AkUniqueID PLAY_1SP_LOW_IN_STOCK_01 = 1819511852U;
+        static const AkUniqueID PLAY_1SP_MANY_JOBS_01 = 1686356159U;
+        static const AkUniqueID PLAY_APT_EVENT_BLACKOUT = 3240992450U;
         static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_001 = 3631016450U;
         static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_001_1 = 523596106U;
-        static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_01 = 1044076768U;
         static const AkUniqueID PLAY_APT_EVENT_BLACKOUT_01_1 = 527616348U;
+        static const AkUniqueID PLAY_APT_EVENT_DESOLATE = 2457880402U;
         static const AkUniqueID PLAY_APT_EVENT_DESOLATE_001 = 2247640914U;
         static const AkUniqueID PLAY_APT_EVENT_DESOLATE_001_1 = 846636250U;
         static const AkUniqueID PLAY_APT_EVENT_DESOLATE_01 = 261981424U;
         static const AkUniqueID PLAY_APT_EVENT_DESOLATE_01_1 = 3788865580U;
+        static const AkUniqueID PLAY_APT_EVENT_DISEASE = 343175869U;
         static const AkUniqueID PLAY_APT_EVENT_DISEASE_001 = 3286873849U;
         static const AkUniqueID PLAY_APT_EVENT_DISEASE_001_1 = 3372231965U;
         static const AkUniqueID PLAY_APT_EVENT_DISEASE_01 = 2096024345U;
         static const AkUniqueID PLAY_APT_EVENT_DISEASE_01_1 = 4293701245U;
+        static const AkUniqueID PLAY_APT_EVENT_FIRE = 1838561709U;
         static const AkUniqueID PLAY_APT_EVENT_FIRE_001 = 4292701801U;
         static const AkUniqueID PLAY_APT_EVENT_FIRE_001_1 = 3024223309U;
         static const AkUniqueID PLAY_APT_EVENT_FIRE_01 = 838938441U;
         static const AkUniqueID PLAY_APT_EVENT_FIRE_01_1 = 278321261U;
+        static const AkUniqueID PLAY_APT_EVENT_NOISY = 1267157265U;
         static const AkUniqueID PLAY_APT_EVENT_NOISY_001 = 3907339813U;
         static const AkUniqueID PLAY_APT_EVENT_NOISY_001_1 = 4106328849U;
-        static const AkUniqueID PLAY_APT_EVENT_NOISY_01 = 3248406045U;
         static const AkUniqueID PLAY_APT_EVENT_NOISY_01_1 = 737168217U;
+        static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL = 3630940630U;
         static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_001 = 767732750U;
         static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_001_1 = 1106490366U;
-        static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_01 = 1812137508U;
         static const AkUniqueID PLAY_APT_EVENT_SEWERSMELL_01_1 = 1769151672U;
+        static const AkUniqueID PLAY_APT_EVENT_THIEF = 4003415283U;
         static const AkUniqueID PLAY_APT_EVENT_THIEF_001 = 1871429987U;
         static const AkUniqueID PLAY_APT_EVENT_THIEF_001_1 = 1010891971U;
         static const AkUniqueID PLAY_APT_EVENT_THIEF_01 = 1894765735U;
         static const AkUniqueID PLAY_APT_EVENT_THIEF_01_1 = 3858991871U;
+        static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_ = 245688734U;
         static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_001_V2 = 1466792758U;
         static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_001_V2_1 = 1577833558U;
-        static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_01_V2 = 305082626U;
         static const AkUniqueID PLAY_ATP_EVENT_ELEVATOR_01_V2_1 = 4089090122U;
         static const AkUniqueID PLAY_ATP_EVENT_SCARY_2_NOHEEL_V1 = 602794460U;
         static const AkUniqueID PLAY_ATP_EVENT_SCARY_2_NOHEEL_V2 = 602794463U;
@@ -55,6 +70,7 @@ namespace AK
         static const AkUniqueID PLAY_ATP_EVENT_WATER_OUTAGEV4 = 486934158U;
         static const AkUniqueID PLAY_BGM4 = 1325347504U;
         static const AkUniqueID PLAY_BGM5 = 1325347505U;
+        static const AkUniqueID PLAY_BGM_01 = 480150866U;
         static const AkUniqueID PLAY_BGMSEQUNCE1 = 1994810337U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;
         static const AkUniqueID PLAY_BUILDINGSOUND = 2611274067U;
@@ -79,7 +95,29 @@ namespace AK
         static const AkUniqueID PLAY_MAIL_OPEN_001 = 1751715434U;
         static const AkUniqueID PLAY_MAIL_TAKE_001 = 226547375U;
         static const AkUniqueID PLAY_MOUSE_001_V1 = 3906795593U;
+        static const AkUniqueID PLAY_NAPT_EVENT_DESOLATE_01 = 3970961582U;
+        static const AkUniqueID PLAY_NAPT_EVENT_DISEASE_01 = 4198523499U;
+        static const AkUniqueID PLAY_NAPT_EVENT_FIRE_01 = 2629115991U;
+        static const AkUniqueID PLAY_NAPT_EVENT_THIEF_01 = 3666548765U;
         static const AkUniqueID PLAY_NIGHT_DAWN = 3836024861U;
+        static const AkUniqueID PLAY_NNAPT_EVENT_DESOLATE_01 = 2398011252U;
+        static const AkUniqueID PLAY_NNAPT_EVENT_DISEASE_01 = 3048168877U;
+        static const AkUniqueID PLAY_NNAPT_EVENT_FIRE_01 = 4025613005U;
+        static const AkUniqueID PLAY_NNAPT_EVENT_THIEF_01 = 3944630123U;
+        static const AkUniqueID PLAY_NNSP_DECREASE_PRICE_01 = 642604430U;
+        static const AkUniqueID PLAY_NNSP_DISCOUNT_01 = 2686632827U;
+        static const AkUniqueID PLAY_NNSP_FESTIVAL_01 = 3380347256U;
+        static const AkUniqueID PLAY_NNSP_FEW_JOBS_01 = 2081122383U;
+        static const AkUniqueID PLAY_NNSP_INCREASE_PRICE_01 = 1911137782U;
+        static const AkUniqueID PLAY_NNSP_LOW_IN_STOCK_01 = 2549523169U;
+        static const AkUniqueID PLAY_NNSP_MANY_JOBS_01 = 1497557360U;
+        static const AkUniqueID PLAY_NSP_DECREASE_PRICE_01 = 385490140U;
+        static const AkUniqueID PLAY_NSP_DISCOUNT_01 = 168960681U;
+        static const AkUniqueID PLAY_NSP_FESTIVAL_01 = 348361594U;
+        static const AkUniqueID PLAY_NSP_FEW_JOBS_01 = 1143460721U;
+        static const AkUniqueID PLAY_NSP_INCREASE_PRICE_01 = 2241299872U;
+        static const AkUniqueID PLAY_NSP_LOW_IN_STOCK_01 = 3910001947U;
+        static const AkUniqueID PLAY_NSP_MANY_JOBS_01 = 4289174930U;
         static const AkUniqueID PLAY_PAY_001 = 2025304052U;
         static const AkUniqueID PLAY_PAYTHEPAYMENT_01 = 139162049U;
         static const AkUniqueID PLAY_POPUP_NEGATIVE = 2774129414U;
@@ -95,6 +133,13 @@ namespace AK
         static const AkUniqueID PLAY_SLOTMACHINE_ENTER_001 = 1031511574U;
         static const AkUniqueID PLAY_SLOTMASHIN_JACKPOT_ANI_01 = 2214109306U;
         static const AkUniqueID PLAY_SOMETHINGWRONG_01 = 3676035621U;
+        static const AkUniqueID PLAY_SP_DECREASE_PRICE_01 = 1287155802U;
+        static const AkUniqueID PLAY_SP_DISCOUNT_01 = 3781069583U;
+        static const AkUniqueID PLAY_SP_FESTIVAL_01 = 1383320540U;
+        static const AkUniqueID PLAY_SP_FEW_JOBS_01 = 3113821075U;
+        static const AkUniqueID PLAY_SP_INCREASE_PRICE_01 = 1635277034U;
+        static const AkUniqueID PLAY_SP_LOW_IN_STOCK_01 = 3317585901U;
+        static const AkUniqueID PLAY_SP_MANY_JOBS_01 = 52587300U;
         static const AkUniqueID PLAY_STAMP = 2683666007U;
         static const AkUniqueID PLAY_TESTING = 2149296550U;
         static const AkUniqueID PLAY_TILE_BUY_001 = 3972534815U;
@@ -104,28 +149,73 @@ namespace AK
         static const AkUniqueID PLAY_UI_PAPERSOUND_001 = 424395900U;
         static const AkUniqueID PLAY_UI_SOLVE_001 = 1520262876U;
         static const AkUniqueID PLAY_WIND = 1020223172U;
+        static const AkUniqueID STOP_1APT_EVENT_DESOLATE_01 = 901839057U;
+        static const AkUniqueID STOP_1APT_EVENT_DISEASE_01 = 25594662U;
+        static const AkUniqueID STOP_1APT_EVENT_FIRE_01 = 1533283580U;
+        static const AkUniqueID STOP_1APT_EVENT_THIEF_01 = 2025134512U;
+        static const AkUniqueID STOP_1SP_DECREASE_PRICE_01 = 2924011653U;
+        static const AkUniqueID STOP_1SP_DISCOUNT_01 = 1412284584U;
+        static const AkUniqueID STOP_1SP_FESTIVAL_01 = 1788621083U;
+        static const AkUniqueID STOP_1SP_FEW_JOBS_01 = 1224043236U;
+        static const AkUniqueID STOP_1SP_INCREASE_PRICE_01 = 561424697U;
+        static const AkUniqueID STOP_1SP_LOW_IN_STOCK_01 = 2124694142U;
+        static const AkUniqueID STOP_1SP_MANY_JOBS_01 = 3007530601U;
+        static const AkUniqueID STOP_APT_EVENT_DESOLATE_01 = 2986176910U;
         static const AkUniqueID STOP_APT_EVENT_DISEASE_001 = 2581958095U;
         static const AkUniqueID STOP_APT_EVENT_DISEASE_001_1 = 4284039319U;
         static const AkUniqueID STOP_APT_EVENT_DISEASE_01 = 1149006027U;
         static const AkUniqueID STOP_APT_EVENT_DISEASE_01_1 = 2774622587U;
+        static const AkUniqueID STOP_APT_EVENT_DISEASE_02 = 1149006024U;
         static const AkUniqueID STOP_APT_EVENT_FIRE_001 = 1705166259U;
         static const AkUniqueID STOP_APT_EVENT_FIRE_001_1 = 744494099U;
         static const AkUniqueID STOP_APT_EVENT_FIRE_01 = 188489143U;
         static const AkUniqueID STOP_APT_EVENT_FIRE_01_1 = 3695163727U;
+        static const AkUniqueID STOP_APT_EVENT_FIRE_02 = 188489140U;
         static const AkUniqueID STOP_APT_EVENT_THIEF_001 = 2648810501U;
         static const AkUniqueID STOP_APT_EVENT_THIEF_001_1 = 4039119537U;
         static const AkUniqueID STOP_APT_EVENT_THIEF_01 = 1525431165U;
         static const AkUniqueID STOP_APT_EVENT_THIEF_01_1 = 3040325241U;
+        static const AkUniqueID STOP_APT_EVENT_THIEF_02 = 1525431166U;
         static const AkUniqueID STOP_BGM4 = 4016311350U;
         static const AkUniqueID STOP_BGM5 = 4016311351U;
+        static const AkUniqueID STOP_BGM_01 = 3030862532U;
         static const AkUniqueID STOP_BGMSEQUNCE1 = 1894363095U;
         static const AkUniqueID STOP_CONSTRUCTION = 3493507479U;
         static const AkUniqueID STOP_FORESTAMBIENCE = 1345079091U;
         static const AkUniqueID STOP_FORESTAMBIENCEINLOBBY = 2778003230U;
         static const AkUniqueID STOP_LOBBY = 3639729344U;
+        static const AkUniqueID STOP_NAPT_EVENT_DESOLATE_01 = 2017181012U;
+        static const AkUniqueID STOP_NAPT_EVENT_DISEASE_01 = 2733485581U;
+        static const AkUniqueID STOP_NAPT_EVENT_FIRE_01 = 1792249901U;
+        static const AkUniqueID STOP_NAPT_EVENT_THIEF_01 = 2460715211U;
+        static const AkUniqueID STOP_NNAPT_EVENT_DESOLATE_01 = 1933472978U;
+        static const AkUniqueID STOP_NNAPT_EVENT_DISEASE_01 = 1815035551U;
+        static const AkUniqueID STOP_NNAPT_EVENT_FIRE_01 = 1009984523U;
+        static const AkUniqueID STOP_NNAPT_EVENT_THIEF_01 = 3293080945U;
+        static const AkUniqueID STOP_NNSP_DECREASE_PRICE_01 = 1786706416U;
+        static const AkUniqueID STOP_NNSP_DISCOUNT_01 = 2155125557U;
+        static const AkUniqueID STOP_NNSP_FESTIVAL_01 = 1296914678U;
+        static const AkUniqueID STOP_NNSP_FEW_JOBS_01 = 1794795005U;
+        static const AkUniqueID STOP_NNSP_INCREASE_PRICE_01 = 2166055516U;
+        static const AkUniqueID STOP_NNSP_LOW_IN_STOCK_01 = 1109279727U;
+        static const AkUniqueID STOP_NNSP_MANY_JOBS_01 = 75333342U;
+        static const AkUniqueID STOP_NSP_DECREASE_PRICE_01 = 1808963438U;
+        static const AkUniqueID STOP_NSP_DISCOUNT_01 = 3941357211U;
+        static const AkUniqueID STOP_NSP_FESTIVAL_01 = 1946673176U;
+        static const AkUniqueID STOP_NSP_FEW_JOBS_01 = 3241841583U;
+        static const AkUniqueID STOP_NSP_INCREASE_PRICE_01 = 706914262U;
+        static const AkUniqueID STOP_NSP_LOW_IN_STOCK_01 = 3492403713U;
+        static const AkUniqueID STOP_NSP_MANY_JOBS_01 = 840400464U;
         static const AkUniqueID STOP_PROTEST_002 = 3906996890U;
         static const AkUniqueID STOP_SLOT_DRRRRRR_01 = 3035396721U;
         static const AkUniqueID STOP_SLOTMASHIN_JACKPOT_ANI_01 = 1571046380U;
+        static const AkUniqueID STOP_SP_DECREASE_PRICE_01 = 2088385980U;
+        static const AkUniqueID STOP_SP_DISCOUNT_01 = 452867657U;
+        static const AkUniqueID STOP_SP_FESTIVAL_01 = 2028788634U;
+        static const AkUniqueID STOP_SP_FEW_JOBS_01 = 3363240785U;
+        static const AkUniqueID STOP_SP_INCREASE_PRICE_01 = 3256509184U;
+        static const AkUniqueID STOP_SP_LOW_IN_STOCK_01 = 1084494907U;
+        static const AkUniqueID STOP_SP_MANY_JOBS_01 = 2576315890U;
         static const AkUniqueID STOP_TESTING = 3190087908U;
         static const AkUniqueID STOP_TIMELAPSBGM = 1305109677U;
         static const AkUniqueID STOP_WIND = 3173136834U;
@@ -133,21 +223,36 @@ namespace AK
 
     namespace STATES
     {
-        namespace HAPPY
+        namespace BGM
         {
-            static const AkUniqueID GROUP = 1427264549U;
+            static const AkUniqueID GROUP = 412724365U;
 
             namespace STATE
             {
-                static const AkUniqueID HA0TO20 = 3759462269U;
-                static const AkUniqueID HA20TO50 = 1197651426U;
-                static const AkUniqueID HA50TO80 = 1968623160U;
-                static const AkUniqueID HA80TO100 = 3586288172U;
+                static const AkUniqueID BASIC = 3340296461U;
+                static const AkUniqueID DANGER = 4174463524U;
+                static const AkUniqueID FAIL = 2596272617U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE
-        } // namespace HAPPY
+        } // namespace BGM
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace NEW_SWITCH_GROUP
+        {
+            static const AkUniqueID GROUP = 2250165792U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BASIC = 3340296461U;
+                static const AkUniqueID DANGER = 4174463524U;
+                static const AkUniqueID FAIL = 2596272617U;
+            } // namespace SWITCH
+        } // namespace NEW_SWITCH_GROUP
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {
@@ -170,6 +275,7 @@ namespace AK
         static const AkUniqueID BGM = 412724365U;
         static const AkUniqueID BGM2 = 1189781957U;
         static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID NEWONE = 2890627007U;
         static const AkUniqueID STOP = 788884573U;
         static const AkUniqueID UI = 1551306167U;
         static const AkUniqueID UI2 = 1181390631U;

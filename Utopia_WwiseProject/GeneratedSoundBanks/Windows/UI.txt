@@ -1,54 +1,54 @@
 Event	ID	Name			Wwise Object Path	Notes
-	171395709	Play_GraphFallDown			\Default Work Unit\Play_GraphFallDown	
-	226547375	Play_Mail_take_001			\Default Work Unit\Play_Mail_take_001	
-	261981424	Play_APT_event_DESOLATE_01			\Default Work Unit\Condition2\Play_APT_event_DESOLATE_01	
-	263615490	Play_Jackpot_01			\Default Work Unit\Play_Jackpot_01	
+	171395709	Play_GraphFallDown			\Default Work Unit\old\Play_GraphFallDown	
+	226547375	Play_Mail_take_001			\Default Work Unit\old\Play_Mail_take_001	
+	245688734	Play_ATP_event_ELEVATOR_			\Default Work Unit\Condition2\Play_ATP_event_ELEVATOR_	
+	263615490	Play_Jackpot_01			\Default Work Unit\old\Play_Jackpot_01	
 	278321261	Play_APT_event_FIRE_01_1			\Default Work Unit\condition2-1\Play_APT_event_FIRE_01_1	
-	305082626	Play_ATP_event_ELEVATOR_01_v2			\Default Work Unit\Condition2\Play_ATP_event_ELEVATOR_01_v2	
-	424395900	Play_UI_papersound_001			\Default Work Unit\Play_UI_papersound_001	
+	343175869	Play_APT_event_DISEASE			\Default Work Unit\Condition2\Play_APT_event_DISEASE	
+	424395900	Play_UI_papersound_001			\Default Work Unit\old\Play_UI_papersound_001	
 	523596106	Play_APT_event_BLACKOUT_001_1			\Default Work Unit\conditionindex2\Play_APT_event_BLACKOUT_001_1	
 	527616348	Play_APT_event_BLACKOUT_01_1			\Default Work Unit\condition2-1\Play_APT_event_BLACKOUT_01_1	
 	669897392	Play_Demolition_001_v1			\Default Work Unit\UI\Play_Demolition_001_v1	
 	737168217	Play_APT_event_NOISY_01_1			\Default Work Unit\condition2-1\Play_APT_event_NOISY_01_1	
 	767732750	Play_APT_event_SEWERSMELL_001			\Default Work Unit\Conditionindex1\Play_APT_event_SEWERSMELL_001	
-	838938441	Play_APT_event_FIRE_01			\Default Work Unit\Condition2\Play_APT_event_FIRE_01	
 	846636250	Play_APT_event_DESOLATE_001_1			\Default Work Unit\conditionindex2\Play_APT_event_DESOLATE_001_1	
 	1010891971	Play_APT_event_THIEF_001_1			\Default Work Unit\conditionindex2\Play_APT_event_THIEF_001_1	
-	1044076768	Play_APT_event_BLACKOUT_01			\Default Work Unit\Condition2\Play_APT_event_BLACKOUT_01	
 	1106490366	Play_APT_event_SEWERSMELL_001_1			\Default Work Unit\conditionindex2\Play_APT_event_SEWERSMELL_001_1	
+	1267157265	Play_APT_event_NOISY			\Default Work Unit\Condition2\Play_APT_event_NOISY	
 	1278673985	Play_Building_click_003			\Default Work Unit\UI\Play_Building_click_003	
 	1466792758	Play_ATP_event_ELEVATOR_001_v2			\Default Work Unit\Conditionindex1\Play_ATP_event_ELEVATOR_001_v2	
-	1518229334	Play_D_Day_popup_001			\Default Work Unit\Play_D_Day_popup_001	
-	1520262876	Play_UI_solve_001			\Default Work Unit\Play_UI_solve_001	
+	1518229334	Play_D_Day_popup_001			\Default Work Unit\old\Play_D_Day_popup_001	
+	1520262876	Play_UI_solve_001			\Default Work Unit\old\Play_UI_solve_001	
 	1577833558	Play_ATP_event_ELEVATOR_001_v2_1			\Default Work Unit\conditionindex2\Play_ATP_event_ELEVATOR_001_v2_1	
-	1749625636	Play_protest_002			\Default Work Unit\Play_protest_002	
-	1751715434	Play_Mail_open_001			\Default Work Unit\Play_Mail_open_001	
+	1749625636	Play_protest_002			\Default Work Unit\old\Play_protest_002	
+	1751715434	Play_Mail_open_001			\Default Work Unit\old\Play_Mail_open_001	
 	1769151672	Play_APT_event_SEWERSMELL_01_1			\Default Work Unit\condition2-1\Play_APT_event_SEWERSMELL_01_1	
-	1812137508	Play_APT_event_SEWERSMELL_01			\Default Work Unit\Condition2\Play_APT_event_SEWERSMELL_01	
+	1838561709	Play_APT_event_FIRE			\Default Work Unit\Condition2\Play_APT_event_FIRE	
 	1871429987	Play_APT_event_THIEF_001			\Default Work Unit\Conditionindex1\Play_APT_event_THIEF_001	
-	1882539237	Play_Graph_fall_002			\Default Work Unit\Play_Graph_fall_002	
-	1882539238	Play_Graph_fall_001			\Default Work Unit\Play_Graph_fall_001	
-	1894765735	Play_APT_event_THIEF_01			\Default Work Unit\Condition2\Play_APT_event_THIEF_01	
+	1882539237	Play_Graph_fall_002			\Default Work Unit\old\Play_Graph_fall_002	
+	1882539238	Play_Graph_fall_001			\Default Work Unit\old\Play_Graph_fall_001	
 	2025304052	Play_Pay_001			\Default Work Unit\UI\Play_Pay_001	
-	2096024345	Play_APT_event_DISEASE_01			\Default Work Unit\Condition2\Play_APT_event_DISEASE_01	
 	2247640914	Play_APT_event_DESOLATE_001			\Default Work Unit\Conditionindex1\Play_APT_event_DESOLATE_001	
+	2457880402	Play_APT_event_DESOLATE			\Default Work Unit\Condition2\Play_APT_event_DESOLATE	
 	2475783214	Play_Turn_Move_Clock_001			\Default Work Unit\UI\Play_Turn_Move_Clock_001	
-	2683666007	Play_stamp			\Default Work Unit\Play_stamp	
-	2687999423	Play_Day_Night			\Default Work Unit\Play_Day_Night	
+	2683666007	Play_stamp			\Default Work Unit\old\Play_stamp	
+	2687999423	Play_Day_Night			\Default Work Unit\old\Play_Day_Night	
 	3024223309	Play_APT_event_FIRE_001_1			\Default Work Unit\conditionindex2\Play_APT_event_FIRE_001_1	
-	3248406045	Play_APT_event_NOISY_01			\Default Work Unit\Condition2\Play_APT_event_NOISY_01	
+	3240992450	Play_APT_event_BLACKOUT			\Default Work Unit\Condition2\Play_APT_event_BLACKOUT	
 	3286873849	Play_APT_event_DISEASE_001			\Default Work Unit\Conditionindex1\Play_APT_event_DISEASE_001	
 	3372231965	Play_APT_event_DISEASE_001_1			\Default Work Unit\conditionindex2\Play_APT_event_DISEASE_001_1	
+	3630940630	Play_APT_event_SEWERSMELL			\Default Work Unit\Condition2\Play_APT_event_SEWERSMELL	
 	3631016450	Play_APT_event_BLACKOUT_001			\Default Work Unit\Conditionindex1\Play_APT_event_BLACKOUT_001	
-	3676035621	Play_SomethingWrong_01			\Default Work Unit\Play_SomethingWrong_01	
+	3676035621	Play_SomethingWrong_01			\Default Work Unit\old\Play_SomethingWrong_01	
 	3788865580	Play_APT_event_DESOLATE_01_1			\Default Work Unit\condition2-1\Play_APT_event_DESOLATE_01_1	
-	3789420082	Play_Lever_001			\Default Work Unit\Play_Lever_001	
-	3836024861	Play_Night_Dawn			\Default Work Unit\Play_Night_Dawn	
+	3789420082	Play_Lever_001			\Default Work Unit\old\Play_Lever_001	
+	3836024861	Play_Night_Dawn			\Default Work Unit\old\Play_Night_Dawn	
 	3858991871	Play_APT_event_THIEF_01_1			\Default Work Unit\condition2-1\Play_APT_event_THIEF_01_1	
-	3897542940	Play_Mail_enter_001			\Default Work Unit\Play_Mail_enter_001	
+	3897542940	Play_Mail_enter_001			\Default Work Unit\old\Play_Mail_enter_001	
 	3906795593	Play_Mouse_001_v1			\Default Work Unit\UI\Play_Mouse_001_v1	
 	3907339813	Play_APT_event_NOISY_001			\Default Work Unit\Conditionindex1\Play_APT_event_NOISY_001	
 	3972534815	Play_Tile_Buy_001			\Default Work Unit\UI\Play_Tile_Buy_001	
+	4003415283	Play_APT_event_THIEF			\Default Work Unit\Condition2\Play_APT_event_THIEF	
 	4089090122	Play_ATP_event_ELEVATOR_01_v2_1			\Default Work Unit\condition2-1\Play_ATP_event_ELEVATOR_01_v2_1	
 	4106328849	Play_APT_event_NOISY_001_1			\Default Work Unit\conditionindex2\Play_APT_event_NOISY_001_1	
 	4292701801	Play_APT_event_FIRE_001			\Default Work Unit\Conditionindex1\Play_APT_event_FIRE_001	
@@ -74,18 +74,18 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	165481767	Graph_fall_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Graph_fall_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Graph_fall_001		2510
 	175516682	Turn_Move_Clock_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Turn_Move_Clock_001_AFCB1483.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Turn_Move_Clock_001		36963
 	204877032	APT_event_BLACKOUT_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_BLACKOUT_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_BLACKOUT_001		82694
-	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_FIRE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_FIRE_01		106649
+	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_FIRE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_FIRE_01		106649
 	255281743	Pay_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Pay_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pay_001		9113
 	256641271	Building_click_003	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Building_click_003_912821E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Building_click_003		1133
 	265951174	D-Day_popup_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\D-Day_popup_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\D-Day_popup_001		4215
 	323079966	APT_event_DISEASE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DISEASE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_DISEASE_001		72571
 	327294676	Mail_take_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mail_take_001_56C0E596.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_take_001		8769
 	361543517	stamp	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\stamp_004775AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\stamp		4802
-	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_DESOLATE_01		89357
+	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_DESOLATE_01		89357
 	476423553	APT_event_SEWERSMELL_001_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_SEWERSMELL_001_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\APT_event_SEWERSMELL_001_1		92934
 	546900594	APT_event_SEWERSMELL_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_SEWERSMELL_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_SEWERSMELL_01		92934
 	637537002	SomethingWrong_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SomethingWrong_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\SomethingWrong_01		114640
-	648936715	APT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_THIEF_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2\APT_event_THIEF_01		66098
+	648936715	APT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_THIEF_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_THIEF_01		66098
 	781588675	ATP_event_ELEVATOR_001_v2_1	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ATP_event_ELEVATOR_001_v2_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex2\ATP_event_ELEVATOR_001_v2_1		87886
 	822705564	Mail_open_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mail_open_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_open_001		3950
 	865553987	protest_002	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\protest_002_300294E6.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\protest_002		94240

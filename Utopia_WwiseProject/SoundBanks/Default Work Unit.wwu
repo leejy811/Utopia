@@ -49,17 +49,17 @@
 						<ObjectRef Name="Play_APT_event_SEWERSMELL_01_1" ID="{A4824685-8641-420E-921E-E2725F7A9391}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_NOISY_001_1" ID="{4521348D-56E6-422A-910F-E1F8DBA1527A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_NOISY_001" ID="{265B44B6-C34E-422F-AF1D-909DDEC7836F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_THIEF_01" ID="{D4333103-697A-4230-8F22-CF517117DD00}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_THIEF" ID="{D4333103-697A-4230-8F22-CF517117DD00}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Turn_Move_Clock_001" ID="{5D94B0CF-AB13-4288-88B5-77767D4E02D3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_NOISY_01_1" ID="{E2443DD6-6DB1-42BA-B67A-B64834AFD3B4}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Night_Dawn" ID="{CA3C013C-B39E-4367-9571-5AD47D84A6E5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_BLACKOUT_001_1" ID="{681BB614-FF0C-4367-BCD7-4FF4D2FA8A5A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_DESOLATE_001" ID="{854928DD-5A55-445E-90E4-0E3B13EBB748}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_NOISY_01" ID="{B4C7B08B-E1FA-4460-B1DF-6013D99936E3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_DISEASE_01" ID="{6C10D351-D04F-4481-A640-F17183A3FCA2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_ATP_event_ELEVATOR_01_v2" ID="{5F57381E-569B-44D1-87CF-0E7E667A29A3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_NOISY" ID="{B4C7B08B-E1FA-4460-B1DF-6013D99936E3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_DISEASE" ID="{6C10D351-D04F-4481-A640-F17183A3FCA2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_ATP_event_ELEVATOR_" ID="{5F57381E-569B-44D1-87CF-0E7E667A29A3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Jackpot_01" ID="{1B862394-EB23-44DF-8057-8A288367CF6A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_SEWERSMELL_01" ID="{4C30D963-6251-452E-B0AB-70C68A4BE453}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_SEWERSMELL" ID="{4C30D963-6251-452E-B0AB-70C68A4BE453}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_DISEASE_01_1" ID="{E43F90FC-E1A3-4554-A096-6B31C5A95631}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Graph_fall_002" ID="{EFEAFA7E-F7B1-455E-BB4A-DD47BF00F810}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_UI_solve_001" ID="{9E0A7543-B841-4594-A6BD-983964B23928}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -70,7 +70,7 @@
 						<ObjectRef Name="Play_Mail_open_001" ID="{C418D3AE-412E-46D8-8760-4C247723D1B6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_protest_002" ID="{2889AA25-41A3-46ED-A6F0-9E07A3B8D3D2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_DISEASE_001_1" ID="{43EA6929-1E8E-4731-917B-4FC9956D6FC6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_FIRE_01" ID="{3B76F9D2-2ACA-4789-BD1F-0080231B93FA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_FIRE" ID="{3B76F9D2-2ACA-4789-BD1F-0080231B93FA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_SEWERSMELL_001_1" ID="{05D9D995-E54F-48AE-A9F6-745D3105A8A1}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_DISEASE_001" ID="{C343BEF2-6FFE-4934-999B-83C3CC0C4550}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_DESOLATE_001_1" ID="{6D758148-9642-49C0-BC95-56E70C6674BF}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -78,11 +78,11 @@
 						<ObjectRef Name="Play_Tile_Buy_001" ID="{D834CA88-42E9-4A63-BC67-B4CAC3D77A7E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Mouse_001_v1" ID="{DED507F7-C0E5-4B03-86F3-C661A1B8DA9C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Demolition_001_v1" ID="{D0677CB7-675F-4B3F-9F6A-640801369617}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_DESOLATE_01" ID="{B6D7F097-8738-4B42-A1B1-6EC3B0CEFEB6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_DESOLATE" ID="{B6D7F097-8738-4B42-A1B1-6EC3B0CEFEB6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_FIRE_001" ID="{4922DDDF-6DD4-4BCF-99EC-3309E4BDC98C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Day_Night" ID="{AF74C293-743C-4C39-AAFF-FB07034743B5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_ATP_event_ELEVATOR_001_v2" ID="{711F16CA-6E28-4C73-83AC-C550E33CEC4E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="Play_APT_event_BLACKOUT_01" ID="{0DE783FA-8D9D-4C9F-9F47-17D7CE6963E5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_APT_event_BLACKOUT" ID="{0DE783FA-8D9D-4C9F-9F47-17D7CE6963E5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_THIEF_001_1" ID="{744A702D-FA4C-4CF1-ABA4-C500B5A8C42F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_THIEF_001" ID="{DA201AFB-CA5B-4CF6-8A19-B4C493A5B469}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_APT_event_THIEF_01_1" ID="{1F2BE3AA-C3CD-4D75-B70B-64FF52CF4AB9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -151,6 +151,18 @@
 						<ObjectRef Name="Stop_APT_event_FIRE_01" ID="{30ADE8CA-DEF3-4BAA-969F-E393C4A7CFE1}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BGM5" ID="{70BBFF59-3D52-4E78-96C0-96D23AC85E4A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_APT_event_FIRE_01_1" ID="{7693F3A6-8F25-4F4F-A160-1017559C2A27}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="NEWONE" ID="{75536D12-E234-43B6-8998-D7725C4D7094}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Stop_BGM_01" ID="{40E5DCC7-9DC3-4164-AC4B-B86559C72D9B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="0912_1" ID="{29C5C0CC-D8DB-4A27-B93E-CF9DC9B762A5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BGM_01" ID="{7D19FBCD-63BA-4B4A-85A2-E15569BDFF8B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="0912_3" ID="{A3515C03-783C-4D1A-97F1-3420B8FC979A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="0912_2" ID="{77904E32-D4DB-4F44-9BEB-51A2670DAD1B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="0912" ID="{0398E57F-6081-4FF0-BDB9-928FB0AE69E9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

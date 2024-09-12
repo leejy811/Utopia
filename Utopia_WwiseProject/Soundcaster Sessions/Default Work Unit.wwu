@@ -6,40 +6,8 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{494451DF-E80F-4DFC-8F14-A9338BC51E0C}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Pay_001" ID="{0D38955D-9DAC-41CC-BD61-35BFD685FDCC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
+							<ObjectRef Name="BGM" ID="{BE4F73A0-B4FF-48E6-AB10-D90618596CD3}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
 							<Position X="0" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_UI_solve_001" ID="{9E0A7543-B841-4594-A6BD-983964B23928}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_ForestAmbienceInLobby" ID="{60A85E52-F783-40E3-9D76-85C36BE2B300}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_Lobby" ID="{D2E399D5-DFD7-4E3C-A415-7D5E0B9AB7E5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Stop_Lobby" ID="{55918D1D-84E7-40B2-B884-80815932C6CC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_TImeLapsBGM" ID="{8F4B6598-1D32-4961-99A7-610B440024D7}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Stop_ForestAmbienceInLobby" ID="{4039E80C-4910-48DE-9968-D7600F9D172C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="3" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Stop_TImeLapsBGM" ID="{4C24E307-205F-4FDA-894D-90D01338E8B1}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="3" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Play_BGM" ID="{8B0F5FF7-678D-4AA6-A1A4-9A7F337EC94D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_BGM4" ID="{849790AB-77ED-4977-8E30-D33F7F1D663A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
@@ -53,11 +21,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
-							<Value>37.4927142930509</Value>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>28.6182466405064</Value>
+							<Value>28.9404674636234</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
@@ -93,9 +61,11 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="None" ID="{2FADD133-FCE6-4172-999B-D956C15786AB}"/>
+						<CurrentStateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="FAIL" ID="{F2A4569E-DFDD-4B8C-8F1A-55D8468B4A57}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 				<SoundcasterSession Name="New Soundcaster Session_01" ID="{FB2EABCA-D33C-44C2-BD4A-B7CD1B02DFD7}">
 					<ModuleList>

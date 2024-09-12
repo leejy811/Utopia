@@ -9,6 +9,19 @@
 						<Property Name="Threshold" Type="Real32" Value="-33.4"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="New_Guitar_Distortion" ID="{7D2599E4-D4D7-417E-9347-1C1A289CF10C}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
+					<PropertyList>
+						<Property Name="PostEQBand1Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand2Enable" Type="bool" Value="True"/>
+						<Property Name="PostEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand1Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand1Gain" Type="Real32" Value="26"/>
+						<Property Name="PreEQBand2Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand2Gain" Type="Real32" Value="26"/>
+						<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
+						<Property Name="PreEQBand3Gain" Type="Real32" Value="17"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

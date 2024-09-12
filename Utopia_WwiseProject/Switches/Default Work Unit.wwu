@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4B8B7683-DEC3-44BC-97AF-B9EB7A6E6B6F}" SchemaVersion="119">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{4B8B7683-DEC3-44BC-97AF-B9EB7A6E6B6F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{4B8B7683-DEC3-44BC-97AF-B9EB7A6E6B6F}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="New_Switch_Group" ID="{033900F1-6EEC-4124-82FF-A1FDA0B46C9E}">
+					<ChildrenList>
+						<Switch Name="BASIC" ID="{83EDDC8A-9065-40C2-AED3-94F819E7FF87}"/>
+						<Switch Name="DANGER" ID="{79815309-072D-417F-9913-1B2466EEED4F}"/>
+						<Switch Name="FAIL" ID="{F2A4569E-DFDD-4B8C-8F1A-55D8468B4A57}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>

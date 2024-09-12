@@ -1,12 +1,11 @@
 State Group	ID	Name			Wwise Object Path	Notes
-	1427264549	HAPPY			\Default Work Unit\HAPPY	
+	412724365	BGM			\Default Work Unit\BGM	
 
 State	ID	Name	State Group			Notes
-	748895195	None	HAPPY			
-	1197651426	HA20to50	HAPPY			
-	1968623160	HA50to80	HAPPY			
-	3586288172	HA80to100	HAPPY			
-	3759462269	HA0to20	HAPPY			
+	748895195	None	BGM			
+	2596272617	FAIL	BGM			
+	3340296461	BASIC	BGM			
+	4174463524	DANGER	BGM			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	42448320	SFX_VOL			\Default Work Unit\SFX_VOL	
