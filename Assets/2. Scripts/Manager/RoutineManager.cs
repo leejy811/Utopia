@@ -127,6 +127,7 @@ public class RoutineManager : MonoBehaviour
             payFailTime++;
             if (creditRating - 25 <= 0)
             {
+                AkSoundEngine.SetState("BGM", "None");
                 UIManager.instance.notifyObserver(EventState.GameOver);
             }
             else
@@ -157,6 +158,19 @@ public class RoutineManager : MonoBehaviour
     {
         creditRating = Mathf.Min(creditRating + value, 100);
         UIManager.instance.SetCreditScorePanel();
+
+        if (creditRating <= 20)
+        {
+            AkSoundEngine.SetState("BGM", "FAIL");
+        }
+        else if (creditRating < 40)
+        {
+            AkSoundEngine.SetState("BGM", "DANGER");
+        }
+        else
+        {
+            AkSoundEngine.SetState("BGM", "BASIC");
+        }
     }
 
     private void CalculateIncome()
