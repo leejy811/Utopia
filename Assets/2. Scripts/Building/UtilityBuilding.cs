@@ -46,7 +46,7 @@ public class UtilityBuilding : Building
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                income += 10;
+                income += 15;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 income += 0;
             else
@@ -59,7 +59,7 @@ public class UtilityBuilding : Building
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 income += 1;
             else
-                cost -= 0;
+                income += 0;
         }
         else
         {
@@ -97,9 +97,9 @@ public class UtilityBuilding : Building
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += -1;
+                changeAmount += -2;
             else
-                changeAmount += 0;
+                changeAmount += -1;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {

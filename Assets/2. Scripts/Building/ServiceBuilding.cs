@@ -37,7 +37,7 @@ public class ServiceBuilding : UtilityBuilding
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 income += 10;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                income += 1;
+                income += 0;
             else
                 income += 5;
         }
@@ -69,18 +69,18 @@ public class ServiceBuilding : UtilityBuilding
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 changeAmount += 2;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 0;
+                changeAmount += -2;
             else
-                changeAmount += 0;
+                changeAmount += -1;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 changeAmount += -1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 2;
-            else
                 changeAmount += 0;
+            else
+                changeAmount += 2;
         }
         else
         {
