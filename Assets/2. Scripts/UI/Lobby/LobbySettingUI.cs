@@ -8,12 +8,12 @@ public class LobbySettingUI : MonoBehaviour
     public GameObject fadeImage;
     private Scrollbar scrollbar;
 
-    private void Start()
+    protected virtual void Start()
     {
         scrollbar = gameObject.GetComponentInChildren<Scrollbar>();
     }
 
-    private void Update()
+    protected void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
             gameObject.SetActive(false);
