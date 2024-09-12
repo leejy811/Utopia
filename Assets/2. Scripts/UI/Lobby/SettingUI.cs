@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 
 public class SettingUI : LobbySettingUI
 {
@@ -18,8 +19,6 @@ public class SettingUI : LobbySettingUI
     {
         base.Start();
         InitResolution();
-
-        gameObject.SetActive(false);
     }
 
     private void InitResolution()
@@ -39,18 +38,24 @@ public class SettingUI : LobbySettingUI
         }
 
         resDropdown.options.Clear();
-        fullScreen = true;
 
         for (int i = 0;i < resolutions.Count;i++)
         {
             TMP_Dropdown.OptionData option = new TMP_Dropdown.OptionData();
             option.text = resolutions[i].width + " x " + resolutions[i].height;
             resDropdown.options.Add(option);
+
+            if (resolutions[i].width == Screen.width && resolutions[i].height == Screen.height)
+                resDropdown.value = i;
         }
 
-        resDropdown.value = resolutions.Count - 1;
+        fullScreen = Screen.fullScreen;
+        screenDropdown.value = Convert.ToInt32(fullScreen);
 
         resDropdown.RefreshShownValue();
+
+        resDropdown.onValueChanged.AddListener(ChangeResolution);
+        screenDropdown.onValueChanged.AddListener(ChangeScreenMode);
     }
 
     public void ChangeResolution(int value)
