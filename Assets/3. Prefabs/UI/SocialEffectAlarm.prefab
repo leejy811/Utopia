@@ -522,7 +522,7 @@ MonoBehaviour:
   m_text: "\uC9D1 \uADFC\uCC98\uC5D0 \uBB3C\uAC74\uC744 \uC0B4 \uACF3\uC774 \uC5C6\uC5B4\uC694"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54427267dff7b884db924511850c2d43, type: 2}
-  m_sharedMaterial: {fileID: 6645456449502325584, guid: 54427267dff7b884db924511850c2d43, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 2325c38470cc54c4ebf5a6aa1122c840, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
