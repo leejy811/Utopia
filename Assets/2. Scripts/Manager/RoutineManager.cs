@@ -157,7 +157,6 @@ public class RoutineManager : MonoBehaviour
     private void SetCreditRating(int value)
     {
         creditRating = Mathf.Min(creditRating + value, 100);
-        UIManager.instance.SetCreditScorePanel();
 
         if (creditRating <= 20)
         {

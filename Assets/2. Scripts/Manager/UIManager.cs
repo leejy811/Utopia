@@ -33,13 +33,6 @@ public class UIManager : MonoBehaviour, ISubject
     public InfoUI[] infos;
     public ListUI[] lists;
 
-    [Header("CityLevel")]
-    public UIElement cityLevelPanel;
-    public GameObject[] cityLevels;
-
-    [Header("CityLevelUp")]
-    public CityLevelUpUI cityLevelUp;
-
     [Header("Message")]
     public GameObject errorMessagePrefab;
     public GameObject happinessMessagePrefab;
@@ -59,11 +52,7 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("LockButton")]
     public UILockButton[] lockButtons;
 
-    [Header("MouseOver")]
-    public IconNameMouseOver[] mouseOvers;
-
     [Header("Debt")]
-    public CreditScorePanel creditScorePanel;
     public DDayUI[] ddays;
 
     [Header("Panel")]
@@ -88,14 +77,6 @@ public class UIManager : MonoBehaviour, ISubject
     private Building targetBuilding;
     private List<IObserver> observers = new List<IObserver>();
     private string[] weekStr = { "일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일" };
-    private string[] weekShortStr = { "일", "월", "화", "수", "목", "금", "토" };
-
-    //public int NewsHappiness;
-    //private int previousHappiness;
-    //private bool UpdateNews = false;
-    //public RectTransform imageRectTransform;
-    //public TextMeshProUGUI textComponent;
-    //public float animationDuration = 0.5f;
 
     private void Awake()
     {
@@ -113,179 +94,10 @@ public class UIManager : MonoBehaviour, ISubject
         DOTween.SetTweensCapacity(500, 50);
         UpdateDailyInfo();
         Setmoney();
-        SetCreditScorePanel();
         InitObserver();
         notifyObserver(EventState.LockButton);
         SetEventInfo(EventManager.instance.curEvents.ToArray());
-
-        //NewsHappiness = (int)RoutineManager.instance.cityHappiness;
-        //previousHappiness = NewsHappiness;
     }
-
-    #region NewsMessage
-    /*
-    void Update()
-    {
-        //lastCityHappiness = RoutineManager.instance.cityHappiness;
-        //int[] happiness = BuildingSpawner.instance.GetBuildingsHappiness();
-        //lastBuildingHappiness[(int)BuildingType.Residential] = happiness[(int)BuildingType.Residential];
-        //lastBuildingHappiness[(int)BuildingType.Commercial] = happiness[(int)BuildingType.Commercial];
-        //lastBuildingHappiness[(int)BuildingType.Culture] = happiness[(int)BuildingType.Culture];
-        ////lastBuildingHappiness[(int)BuildingType.Service] = happiness[(in ...
-        //lastCityMoney = ShopManager.instance.Money;
-        //lastTotalTax = CalculateTotalTax();
-        //lastTotalSpend = CalculateTotalSpend();
-        //lastBuildingTypeCount = BuildingSpawner.instance.buildingTypeCount;
-        //lastDay = RoutineManager.instance.day;
-
-        //CheckCityHappiness();
-        //CheckBuildingHappiness();
-        //CheckCityMoney();
-        //CheckTotalTax();
-        //CheckTotalSpend();
-        //CheckBuildingCounts();
-        //CheckDayChange();
-    }
-
-    public Text[] messageTexts;
-    private Queue<string> messageQueue = new Queue<string>();
-    private float messageDuration = 5.0f;
-
-    private float lastCityHappiness;
-    private int[] lastBuildingHappiness = new int[4];
-    private int lastCityMoney;
-    private int lastTotalTax;
-    private int lastTotalSpend;
-    private int[] lastBuildingTypeCount = new int[4];
-    private DateTime lastDay;
-
-    void CheckCityHappiness()
-    {
-        float currentHappiness = RoutineManager.instance.cityHappiness;
-        if (currentHappiness != lastCityHappiness)
-        {
-            AddMessage($"City happiness changed: {currentHappiness}");
-            lastCityHappiness = currentHappiness;
-        }
-    }
-
-    void CheckBuildingHappiness()
-    {
-        int[] happiness = BuildingSpawner.instance.GetBuildingsHappiness();
-        for (int i = 0; i < lastBuildingHappiness.Length; i++)
-        {
-            if (happiness[i] != lastBuildingHappiness[i])
-            {
-                BuildingType type = (BuildingType)i;
-                AddMessage($"{type} building happiness changed: {happiness[i]}");
-                lastBuildingHappiness[i] = happiness[i];
-            }
-        }
-    }
-
-    void CheckCityMoney()
-    {
-        int currentMoney = ShopManager.instance.Money;
-        if (currentMoney != lastCityMoney)
-        {
-            AddMessage($"City money changed: {currentMoney}");
-            lastCityMoney = currentMoney;
-        }
-    }
-
-    void CheckTotalTax()
-    {
-        int currentTotalTax = CalculateTotalTax();
-        if (currentTotalTax != lastTotalTax)
-        {
-            AddMessage($"Total daily tax income changed: {currentTotalTax}");
-            lastTotalTax = currentTotalTax;
-        }
-    }
-
-    void CheckTotalSpend()
-    {
-        int currentTotalSpend = CalculateTotalSpend();
-        if (currentTotalSpend != lastTotalSpend)
-        {
-            AddMessage($"Total daily spend changed: {currentTotalSpend}");
-            lastTotalSpend = currentTotalSpend;
-        }
-    }
-
-    void CheckBuildingCounts()
-    {
-        int[] buildingCounts = BuildingSpawner.instance.buildingTypeCount;
-        for (int i = 0; i < lastBuildingTypeCount.Length; i++)
-        {
-            if (buildingCounts[i] != lastBuildingTypeCount[i])
-            {
-                BuildingType type = (BuildingType)i;
-                AddMessage($"{type} buildings count changed: {buildingCounts[i]}");
-                lastBuildingTypeCount[i] = buildingCounts[i];
-            }
-        }
-    }
-
-    void CheckDayChange()
-    {
-        DateTime currentDay = RoutineManager.instance.day;
-        if (currentDay != lastDay)
-        {
-            AddMessage($"Day changed: {currentDay.ToShortDateString()}");
-            lastDay = currentDay;
-        }
-    }
-
-    void AddMessage(string message)
-    {
-        if (messageQueue.Count >= messageTexts.Length)
-        {
-            messageQueue.Dequeue();
-        }
-        messageQueue.Enqueue(message);
-        UpdateMessages();
-        StartCoroutine(RemoveOldestMessage());
-    }
-
-    private void UpdateMessages()
-    {
-        int i = 0;
-        foreach (string msg in messageQueue)
-        {
-            if (i < messageTexts.Length)
-            {
-                messageTexts[i].text = msg;
-                i++;
-            }
-        }
-        for (; i < messageTexts.Length; i++)
-        {
-            messageTexts[i].text = "";
-        }
-    }
-
-    IEnumerator RemoveOldestMessage()
-    {
-        yield return new WaitForSeconds(messageDuration);
-        if (messageQueue.Count > 0)
-        {
-            messageQueue.Dequeue();
-            UpdateMessages();
-        }
-    }
-
-    int CalculateTotalTax()
-    {
-        return ResidentialBuilding.income + CommercialBuilding.income + CultureBuilding.income + CommercialBuilding.bonusIncome + CultureBuilding.bonusIncome;
-    }
-
-    int CalculateTotalSpend()
-    {
-        return ServiceBuilding.income + ResidentialBuilding.bonusCost + ServiceBuilding.bonusCost + Tile.income;
-    }
-    */
-    #endregion
 
     #region SetValue
 
@@ -351,11 +163,6 @@ public class UIManager : MonoBehaviour, ISubject
         {
             ddays[dayOfWeek - 5].gameObject.SetActive(true);
         }
-    }
-
-    public void SetCreditScorePanel()
-    {
-        creditScorePanel.SetValue();
     }
 
     public void SetBuildingIntroValue()
@@ -461,28 +268,6 @@ public class UIManager : MonoBehaviour, ISubject
             costInfo.OnUI(cost, transform.position);
     }
 
-    public void SetAllPopUp()
-    {
-        if (ShopManager.instance.buyState == BuyState.BuyTile)
-            ShopManager.instance.SetTargetObject(null, Color.green, Color.red);
-        else if (ShopManager.instance.buyState == BuyState.SellBuilding)
-            ShopManager.instance.SetTargetObject(null, Color.red, Color.white);
-
-        ShopManager.instance.ChangeState(BuyState.None);
-    }
-
-    public void SetCityLevel()
-    {
-        int idx = CityLevelManager.instance.levelIdx;
-        for (int i = 0;i < CityLevelManager.instance.level.Length; i++)
-        {
-            if (i <= idx)
-                cityLevels[i].SetActive(true);
-            else
-                cityLevels[i].SetActive(false);
-        }
-    }
-
     #endregion
 
     #region OnClick
@@ -514,11 +299,6 @@ public class UIManager : MonoBehaviour, ISubject
             infos[i].gameObject.SetActive(false);
     }
 
-    public void OnClickTileBuild(int index)
-    {
-        ShopManager.instance.ChangeState(BuyState.BuildTile, index);
-    }
-
     public void OnClickBuildingBuy(int index)
     {
         ShopManager.instance.ChangeState(BuyState.BuyBuilding, index);
@@ -527,11 +307,6 @@ public class UIManager : MonoBehaviour, ISubject
     public void OnClickBuildingSell()
     {
         ShopManager.instance.ChangeState(BuyState.SellBuilding);
-    }
-
-    public void OnClickTileBuy()
-    {
-        ShopManager.instance.ChangeState(BuyState.BuyTile);
     }
 
     public void OnClickOptionBuy(int index)
@@ -596,31 +371,6 @@ public class UIManager : MonoBehaviour, ISubject
         eventNotify.NextBuilding(isRight);
     }
 
-    public void OnClickSlotMachineButton()
-    {
-        if (EventManager.instance.CheckEventCondition())
-        {
-            notifyObserver(EventState.SlotMachine);
-        }
-        else
-        {
-            string[] str = { "도시 규모가 작아 슬롯머신을 작동할 수 없습니다." };
-            SetErrorPopUp(str, transform.position);
-        }
-    }
-
-    public void OnClickDeptDocButton()
-    {
-        if (RoutineManager.instance.debt != 0)
-            notifyObserver(EventState.DebtDoc);
-    }
-
-    public void OnClickCityLevelButton()
-    {
-        notifyObserver(EventState.CityLevel);
-        SetCityLevel();
-    }
-
     public void OnClickCloseButton()
     {
         notifyObserver(EventState.None);
@@ -681,7 +431,6 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(Grid.instance);
         addObserver(BuildingSpawner.instance);
 
-        addObserver(cityLevelPanel);
         addObserver(eventNotify);
 
         addObserver(costInfo);
@@ -701,11 +450,6 @@ public class UIManager : MonoBehaviour, ISubject
         foreach (UILockButton lockButton in lockButtons)
         {
             addObserver(lockButton);
-        }
-
-        foreach (IconNameMouseOver mouseOver in mouseOvers)
-        {
-            addObserver(mouseOver);
         }
     }
     #endregion
