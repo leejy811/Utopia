@@ -44,7 +44,6 @@ public class Grid : MonoBehaviour, IObserver
     private void Start()
     {
         SetTile();
-        SetCamera();
     }
 
     private void SetTile()
@@ -83,12 +82,6 @@ public class Grid : MonoBehaviour, IObserver
             inputTiles[i, j].SetTilePurchased(false);
 
         inputTiles[i, j].tilePos = new Vector2(i, j);
-    }
-
-    private void SetCamera()
-    {
-        Camera camera = Camera.main;
-        camera.transform.position = ((Vector3Int)startPoint) + cameraOffset;
     }
 
     public void PurchaseTile(Vector2Int purchaseSize, Vector2Int prevSize, float time = 0.0f)
