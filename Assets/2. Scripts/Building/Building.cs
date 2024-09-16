@@ -75,7 +75,7 @@ public class Building : MonoBehaviour
         {
             if(curEvent.valueType == ValueType.Influence)
             {
-                power += (int)(power * (curEvent.GetEffectValue(0) / 100.0f));
+                power += (int)(power * (curEvent.effectValue[0] / 100.0f));
             }
         }
 
@@ -120,7 +120,7 @@ public class Building : MonoBehaviour
         if (!CheckApplyEvent(newEvent)) return;
 
         if (newEvent.type == EventType.Event)
-            ApplyEventEffect(newEvent.GetEffectValue(newEvent.curDay), newEvent.valueType, true);
+            ApplyEventEffect(newEvent.effectValue[newEvent.curDay], newEvent.valueType, true);
         else if (newEvent.type == EventType.Problem)
             ApplyEventProblem(newEvent, false);
 
@@ -147,7 +147,7 @@ public class Building : MonoBehaviour
             {
                 if (curevent.type == EventType.Event)
                 {
-                    ApplyEventEffect(curevent.GetEffectValue(curevent.curDay - 1), curevent.valueType, false);
+                    ApplyEventEffect(curevent.effectValue[curevent.curDay - 1], curevent.valueType, false);
                 }
                 removeIdx.Add(i);
                 continue;
@@ -262,7 +262,7 @@ public class Building : MonoBehaviour
     public void ApplyEventProblem(Event curevent, bool isAdd)
     {
         int sign = isAdd ? 1 : -1;
-        int value = curevent.GetEffectValue(curevent.curDay) * sign;
+        int value = curevent.effectValue[curevent.curDay] * sign;
         SetHappiness(value);
         RoutineManager.instance.SetCityHappiness(value, 0);
     }
@@ -319,7 +319,7 @@ public class Building : MonoBehaviour
         {
             if (globalEvent.valueType == ValueType.Tax && globalEvent.targetIndex == (int)type)
             {
-                total += globalEvent.GetEffectValue(0) / 100.0f;
+                total += globalEvent.effectValue[0] / 100.0f;
             }
         }
 

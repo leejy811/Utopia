@@ -40,9 +40,6 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("CityLevelUp")]
     public CityLevelUpUI cityLevelUp;
 
-    [Header("Roulette")]
-    public EventRouletteUI eventRoulette;
-
     [Header("Message")]
     public GameObject errorMessagePrefab;
     public GameObject happinessMessagePrefab;
@@ -386,11 +383,6 @@ public class UIManager : MonoBehaviour, ISubject
 
     #region PopUp
 
-    public void SetRoulettePopUp(int[] ranEvents)
-    {
-        eventRoulette.SetRandomEvent(ranEvents);
-    }
-
     public void SetInfoPopUp(int typeIndex, int index)
     {
         infos[typeIndex].SetValue(index);
@@ -442,8 +434,6 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void SetHappinessPopUp(int amount, Vector3 position)
     {
-        if (eventRoulette.gameObject.activeSelf) return;
-
         string[] str = { amount < 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>" };
 
         TemporayUI message = Instantiate(happinessMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
@@ -560,8 +550,6 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickNextDay()
     {
-        if (eventRoulette.gameObject.activeSelf) return;
-
         notifyObserver(EventState.None);
         RoutineManager.instance.DailyUpdate();
         AkSoundEngine.PostEvent("Play_Turn_Move_Clock_001", gameObject);
@@ -606,13 +594,6 @@ public class UIManager : MonoBehaviour, ISubject
             return;
 
         eventNotify.NextBuilding(isRight);
-    }
-
-    public void OnClickEventRoulette()
-    {
-        if (eventRoulette.state == RouletteState.While || eventRoulette.state == RouletteState.Before) return;
-        if (!EventManager.instance.PayRoulleteCost()) return;
-        eventRoulette.OnButtonClick();
     }
 
     public void OnClickSlotMachineButton()
@@ -702,7 +683,6 @@ public class UIManager : MonoBehaviour, ISubject
 
         addObserver(cityLevelPanel);
         addObserver(eventNotify);
-        addObserver(eventRoulette);
 
         addObserver(costInfo);
         addObserver(construct);

@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Reflection;
-using JetBrains.Annotations;
 using UnityEngine;
 
 public enum BuyState { None, BuyBuilding, SellBuilding, BuyTile, BuildTile, SolveBuilding, EventCheck }
@@ -65,7 +60,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState == BuyState.BuyBuilding)
             Destroy(curPickObject);
-        else if(state == BuyState.BuyBuilding)
+        else if (state == BuyState.BuyBuilding)
         {
             curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
             curPickObject.GetComponent<FollowMouse>().SetRedLineSize(curPickIndex);
@@ -93,7 +88,7 @@ public class ShopManager : MonoBehaviour, IObserver
         else if (state == BuyState.SellBuilding)
             UIManager.instance.notifyObserver(EventState.DestroyBuilding);
 
-            switch (state)
+        switch (state)
         {
             case BuyState.None:
             case BuyState.SellBuilding:
@@ -112,7 +107,7 @@ public class ShopManager : MonoBehaviour, IObserver
     public void ChangePickObject(int index = 0, GameObject pickObject = null)
     {
         curPickIndex = index;
-        
+
         if (buyState == BuyState.BuyBuilding)
         {
             Destroy(curPickObject);
@@ -139,8 +134,8 @@ public class ShopManager : MonoBehaviour, IObserver
     {
         float coefficient = 0.5f;
         float baseValue = 1.08f;
-        
-        return coefficient * (Mathf.Pow(baseValue, (BuildingSpawner.instance.buildingCount[index]))-1);
+
+        return coefficient * (Mathf.Pow(baseValue, (BuildingSpawner.instance.buildingCount[index])) - 1);
     }
 
     public void BuyBuilding(Transform spawnTrans)
@@ -169,7 +164,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
         Vector2Int pos = curPickObject.GetComponent<Building>().position;
         Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
-        
+
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
         EventManager.instance.SetEventBuildings(curPickObject.GetComponent<Building>(), false);
         Destroy(curPickObject);
@@ -322,7 +317,7 @@ public class ShopManager : MonoBehaviour, IObserver
         {
             if (globalEvent.valueType == ValueType.Cost && globalEvent.targetIndex == (int)buyState)
             {
-                cost += (int)(cost * (globalEvent.GetEffectValue(0) / 100.0f));
+                cost += (int)(cost * (globalEvent.effectValue[0] / 100.0f));
             }
         }
 

@@ -2,9 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.Rendering.PostProcessing;
-using UnityEngine.UIElements;
-using static Cinemachine.CinemachineBrain;
 
 public class EventManager : MonoBehaviour
 {
@@ -26,8 +23,6 @@ public class EventManager : MonoBehaviour
     public List<Event> possibleEvents;
     public List<Event> globalEvents;
     public List<Event> curEvents;
-
-    public int cost { get; private set; }
 
     private void Awake()
     {
@@ -112,10 +107,6 @@ public class EventManager : MonoBehaviour
             }
         }
 
-        //ToDo : 토토피아 추가되면 SelectRewardType 함수 조건 달아서 추가
-
-        //UIManager.instance.eventRoulette.SetPossibleEvent(possibleEvents.ToArray());
-
         targetBuildings = buildings;
         globalEvents.Clear();
     }
@@ -152,136 +143,85 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public bool PayRoulleteCost()
-    {
-        if (!ShopManager.instance.PayMoney(cost)) return false;
-        else return true;
-    }
-
-    public void EventCostUpdate(int totalIncome)
-    {
-        if (totalIncome > 0)
-        {
-            totalIncome = Mathf.FloorToInt(totalIncome / 400.0f);
-            cost = Mathf.Max(totalIncome * 100, 100);
-        }
-        else
-        {
-            int money = Mathf.FloorToInt(ShopManager.instance.Money / 800.0f);
-            cost = Mathf.Max(money * 100, 100);
-        }
-    }
-
     private void ResetCount()
     {
         curCountDay = 0;
         preCountDay = Random.Range(randomCount.x, randomCount.y);
     }
 
-    private List<Event> RemoveDuplicate(List<Event> ranEvents)
-    {
-        List<Event> temp = new List<Event>();
-        int idx = 0;
+    //private List<Event> RemoveDuplicate(List<Event> ranEvents)
+    //{
+    //    List<Event> temp = new List<Event>();
+    //    int idx = 0;
 
-        for (int i = 0; i < ranEvents.Count; i++)
-        {
-            Event e = ranEvents[i];
-            e.duplication = 1;
-            ranEvents[i] = e;
-        }
+    //    for (int i = 0; i < ranEvents.Count; i++)
+    //    {
+    //        Event e = ranEvents[i];
+    //        e.duplication = 1;
+    //        ranEvents[i] = e;
+    //    }
 
-        for (int i = 0;i < ranEvents.Count; i++)
-        {
-            if (temp.Contains(ranEvents[idx]))
-            {
-                int tmpIdx = temp.FindIndex(x => x == ranEvents[idx]);
-                Event e = temp[tmpIdx];
-                e.duplication++;
-                temp[tmpIdx] = e;
-                ranEvents.RemoveAt(idx);
-            }
-            else
-            {
-                temp.Add(ranEvents[idx]);
-                idx++;
-            }
-        }
+    //    for (int i = 0;i < ranEvents.Count; i++)
+    //    {
+    //        if (temp.Contains(ranEvents[idx]))
+    //        {
+    //            int tmpIdx = temp.FindIndex(x => x == ranEvents[idx]);
+    //            Event e = temp[tmpIdx];
+    //            e.duplication++;
+    //            temp[tmpIdx] = e;
+    //            ranEvents.RemoveAt(idx);
+    //        }
+    //        else
+    //        {
+    //            temp.Add(ranEvents[idx]);
+    //            idx++;
+    //        }
+    //    }
 
-        if (temp.Count == 1 && temp[0].duplication == 3)
-            ResetCount();
+    //    if (temp.Count == 1 && temp[0].duplication == 3)
+    //        ResetCount();
 
-        return temp;
-    }
+    //    return temp;
+    //}
 
     public void RandomRoulette(int eventNum)
     {
         if (!CheckEventCondition()) return;
 
-        List<Event> ranEvents = new List<Event>();
-        List<int> ranIdx = new List<int>();
         curCountDay++;
+        if (curCountDay != preCountDay) return;
+        ResetCount();
 
-        for (int i = 0; i < eventNum; i++)
-        {
-            ranIdx.Add(Random.Range(0, possibleEvents.Count));
-            ranEvents.Add(possibleEvents[ranIdx[i]]);
-        }
+        Event ranEvent = possibleEvents[Random.Range(0, possibleEvents.Count)];
 
-        if (curCountDay == preCountDay)
-        {
-            //if (토토피아 모드면)
-            //{
-            //    ranIdx.Add(Random.Range(0, possibleEvents.Count));
-            //    ranIdx.Add(ranIdx[0]);
-            //    ranIdx.Add(ranIdx[0]);
-            //    ranEvents.Add(possibleEvents[ranIdx[0]]);
-            //    ranEvents.Add(possibleEvents[ranIdx[0]]);
-            //    ranEvents.Add(possibleEvents[ranIdx[0]]);
-            //}
+        ApplyEvents(ranEvent);
+    }
 
-            ResetCount();
-        }
-        else
+    public void ApplyEvents(Event ranEvent)
+    {
+        curEvents.Add(ranEvent);
+        UIManager.instance.SetEventTempPopUp(ranEvent, transform.position);
+
+        if (ranEvent.type == EventType.Global)
         {
-            //if (일반모드면)
+            globalEvents.Add(ranEvent);
             return;
         }
 
-        //if (UIManager.instance.eventRoulette != null)
-        //    UIManager.instance.SetRoulettePopUp(ranIdx.ToArray());
+        List<int> indexs = new List<int>();
+        int range = Mathf.CeilToInt(targetBuildings[ranEvent.eventIndex].Count * eventApplyRatio);
 
-        ranEvents = RemoveDuplicate(ranEvents);
-
-        ApplyEvents(ranEvents);
-    }
-
-    public void ApplyEvents(List<Event> ranEvents)
-    {
-        foreach (Event ranEvent in ranEvents)
+        for (int i = 0; i < range; i++)
         {
-            curEvents.Add(ranEvent);
-            UIManager.instance.SetEventTempPopUp(ranEvent, transform.position);
-
-            if (ranEvent.type == EventType.Global)
+            int ranIdx = Random.Range(0, targetBuildings[ranEvent.eventIndex].Count);
+            while (indexs.Contains(ranIdx))
             {
-                globalEvents.Add(ranEvent);
-                continue;
+                ranIdx = Random.Range(0, targetBuildings[ranEvent.eventIndex].Count);
             }
-
-            List<int> indexs = new List<int>();
-            int range = Mathf.CeilToInt(targetBuildings[ranEvent.eventIndex].Count * eventApplyRatio);
-
-            for (int i = 0; i < range; i++)
-            {
-                int ranIdx = Random.Range(0, targetBuildings[ranEvent.eventIndex].Count);
-                while (indexs.Contains(ranIdx))
-                {
-                    ranIdx = Random.Range(0, targetBuildings[ranEvent.eventIndex].Count);
-                }
-                indexs.Add(ranIdx);
-                targetBuildings[ranEvent.eventIndex][ranIdx].ApplyEvent(ranEvent);
-            }
+            indexs.Add(ranIdx);
+            targetBuildings[ranEvent.eventIndex][ranIdx].ApplyEvent(ranEvent);
         }
+
     }
 
     public void EffectUpdate()
@@ -369,7 +309,7 @@ public class EventManager : MonoBehaviour
         foreach(Event globalEvent in globalEvents)
         {
             if(globalEvent.valueType == ValueType.FinalIncome)
-                res += globalEvent.GetEffectValue(0) / 100.0f;
+                res += globalEvent.effectValue[0] / 100.0f;
         }
         return res;
     }
@@ -380,7 +320,7 @@ public class EventManager : MonoBehaviour
         foreach (Event globalEvent in globalEvents)
         {
             if (globalEvent.valueType == ValueType.Cost && globalEvent.targetIndex == (int)BuyState.BuyBuilding)
-                res += globalEvent.GetEffectValue(0) / 100.0f;
+                res += globalEvent.effectValue[0] / 100.0f;
         }
         return res;
     }

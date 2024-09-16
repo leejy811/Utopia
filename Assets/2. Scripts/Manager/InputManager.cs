@@ -27,9 +27,6 @@ public class InputManager : MonoBehaviour, IObserver
 
     void Update()
     {
-        if (UIManager.instance.eventRoulette.gameObject.activeSelf)
-            GetSlotMachineInput();
-
         if (UIManager.instance.menu.gameObject.activeSelf || UIManager.instance.setting.gameObject.activeSelf)
             GetMenuInput();
 
@@ -156,21 +153,6 @@ public class InputManager : MonoBehaviour, IObserver
                 InvokeButton(alpha1Buttons[idx]);
             else
                 InvokeButton(buttons[idx]);
-        }
-    }
-
-    private void GetSlotMachineInput()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
-        {
-            UIManager.instance.OnClickEventRoulette();
-        }
-        else if (UIManager.instance.eventRoulette.state != RouletteState.While && UIManager.instance.eventRoulette.state != RouletteState.Before)
-        {
-            if (Input.GetMouseButtonDown(1))
-                UIManager.instance.notifyObserver(EventState.None);
-            else if (Input.GetKeyDown(KeyCode.Escape))
-                UIManager.instance.notifyObserver(EventState.Menu);
         }
     }
 

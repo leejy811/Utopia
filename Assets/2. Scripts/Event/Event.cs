@@ -20,18 +20,15 @@ public struct Event
     public string eventName;
     public string eventEffectComment;
     public Sprite eventIcon;
-    public Texture eventTexture;
     public int eventIndex;
     public EventType type;
     public RewardType rewardType;
     public ConditionType conditionType;
     public ValueType valueType;
     public int targetIndex;
-    public int duplication;
     public int curDay;
     public List<EventSolution> solutions;
     public List<int> effectValue;
-    public List<int> effectJackpotValue;
 
     public bool CheckCondition(Building building)
     {
@@ -103,32 +100,22 @@ public struct Event
         return left.eventIndex != right.eventIndex;
     }
 
-    public int GetEffectValue(int day)
-    {
-        int res = duplication == 3 ? effectJackpotValue[day] : effectValue[day] * duplication;
-
-        return res;
-    }
-
     public string GetEventToString()
     {
         string res = "";
         string[] valueString = { "상품가격", "입장료", "취업률" };
 
         if (valueType == ValueType.utility)
-            res += (duplication != 3 ? "<color=#FFAB40>" : "") + valueString[targetIndex - 1];
+            res += valueString[targetIndex - 1];
         else if (valueType == ValueType.Influence)
-            res += (duplication != 3 ? "<color=#FFAB40>" : "") + "영향력";
+            res += "영향력";
         else
-            res += (duplication != 3 ? "<color=#FF0000>" : "") + "행복도";
-
-        if (duplication == 3)
-            res += " <color=#FF0000>대폭</color>";
+            res += "행복도";
 
         if (type == EventType.Problem)
             res += " 감소";
         else
-            res += GetEffectValue(0) > 0 ? " 증가" : " 감소";
+            res += effectValue[0] > 0 ? " 증가" : " 감소";
 
         return res;
     }

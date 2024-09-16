@@ -195,7 +195,6 @@ public class RoutineManager : MonoBehaviour
         totalIncome = total;
 
         ShopManager.instance.GetMoney(total);
-        EventManager.instance.EventCostUpdate(total);
 
         UIManager.instance.DailyMoneyUpdate(curMoney, curMoney + total, lightUpdateDuration);
     }
