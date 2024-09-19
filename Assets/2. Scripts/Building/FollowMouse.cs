@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class FollowMouse : MonoBehaviour
 {
+    public string poolName;
     public GameObject tile;
     public GameObject redLine;
     public bool isbool;
@@ -14,7 +15,6 @@ public class FollowMouse : MonoBehaviour
     void Start()
     {
         main = Camera.main;
-        SetPosition();
     }
 
     void Update()

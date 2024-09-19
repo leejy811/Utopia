@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Redcode.Pools;
 
 public enum TextType { EventName, EventDescription }
 
-public class TemporayUI : MonoBehaviour
+public class TemporayUI : MonoBehaviour, IPoolObject
 {
+    public string poolName;
     public Image[] images;
     public TextMeshProUGUI[] texts;
     public float fadeInTime;
@@ -15,10 +17,7 @@ public class TemporayUI : MonoBehaviour
     public float fadeOutTime;
     public bool isFixed;
 
-    private void Start()
-    {
-        StartCoroutine(TempUpdate());
-    }
+    private Vector3 moveVec;
 
     public void SetUI(string[] str, Vector3 pos)
     {
@@ -64,6 +63,7 @@ public class TemporayUI : MonoBehaviour
 
         float color = 0.0f;
         float speed = fadeInTime != 0 ? 1.0f / fadeInTime : 0.0f;
+        moveVec = Vector3.zero;
 
         yield return StartCoroutine(UpdateColor(color, speed));
 
@@ -76,7 +76,8 @@ public class TemporayUI : MonoBehaviour
 
         yield return StartCoroutine(UpdateColor(color, speed));
 
-        Destroy(gameObject);
+        PoolSystem.instance.messagePool.TakeToPool<TemporayUI>(poolName, this);
+        transform.localPosition -= moveVec;
     }
 
     private void SetAlpha(float alpha)
@@ -99,10 +100,21 @@ public class TemporayUI : MonoBehaviour
             else if (sign == -1 && color <= 0.0f) break;
 
             color += speed * sign * Time.fixedDeltaTime;
+            moveVec += Vector3.up * speed * 20 * Time.fixedDeltaTime;
             transform.localPosition += Vector3.up * speed * 20 * Time.fixedDeltaTime;
             SetAlpha(color);
 
             yield return new WaitForFixedUpdate();
         }
+    }
+
+    public void OnCreatedInPool()
+    {
+        
+    }
+
+    public void OnGettingFromPool()
+    {
+        StartCoroutine(TempUpdate());
     }
 }

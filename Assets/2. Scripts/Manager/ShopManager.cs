@@ -11,7 +11,6 @@ public class ShopManager : MonoBehaviour, IObserver
     [SerializeField] private int money;
     public int Money { get { return money; } set { money = value; UIManager.instance.Setmoney(); } }
 
-    public GameObject[] buildingPrefabs;
     public GameObject[] tilePrefabs;
 
     private GameObject curPickObject;
@@ -59,10 +58,13 @@ public class ShopManager : MonoBehaviour, IObserver
         curPickIndex = index;
 
         if (buyState == BuyState.BuyBuilding)
-            Destroy(curPickObject);
+        {
+            FollowMouse poolComponent = curPickObject.GetComponent<FollowMouse>();
+            PoolSystem.instance.buildingPool.TakeToPool<FollowMouse>(poolComponent.poolName, poolComponent);
+        }
         else if (state == BuyState.BuyBuilding)
         {
-            curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
+            curPickObject = PoolSystem.instance.buildingPool.GetFromPool<FollowMouse>(curPickIndex).gameObject;
             curPickObject.GetComponent<FollowMouse>().SetRedLineSize(curPickIndex);
             Grid.instance.SetTileColorMode();
         }
@@ -110,8 +112,9 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState == BuyState.BuyBuilding)
         {
-            Destroy(curPickObject);
-            curPickObject = Instantiate(buildingPrefabs[curPickIndex], transform);
+            FollowMouse poolComponent = curPickObject.GetComponent<FollowMouse>();
+            PoolSystem.instance.buildingPool.TakeToPool<FollowMouse>(poolComponent.poolName, poolComponent);
+            curPickObject = PoolSystem.instance.buildingPool.GetFromPool<FollowMouse>(curPickIndex).gameObject;
         }
         else if (buyState == BuyState.BuildTile)
         {

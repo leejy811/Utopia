@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ab04c6a52803014cb44b9eb3756a67a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolName: Event
   images:
   - {fileID: 2942555473091607592}
   texts:

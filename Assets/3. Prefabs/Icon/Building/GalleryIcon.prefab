@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75f49e1e25082244386233fc39c8b357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolName: Gallery
   tile: {fileID: 0}
   redLine: {fileID: 2219863235028041877}
   isbool: 0

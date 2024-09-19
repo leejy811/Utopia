@@ -16,7 +16,6 @@ public class UIManager : MonoBehaviour, ISubject
 
     #region UIComponent
 
-    public Canvas canvas;
     public InputManager inputManager;
 
     [Header("Info")]
@@ -34,9 +33,6 @@ public class UIManager : MonoBehaviour, ISubject
     public ListUI[] lists;
 
     [Header("Message")]
-    public GameObject errorMessagePrefab;
-    public GameObject happinessMessagePrefab;
-    public GameObject eventMessagePrefab;
     public DestroyBuildingUI destroyMessage;
 
     [Header("Cost")]
@@ -234,7 +230,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void SetErrorPopUp(string[] str, Vector3 position)
     {
-        TemporayUI message = Instantiate(errorMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
+        TemporayUI message = PoolSystem.instance.messagePool.GetFromPool<TemporayUI>("Error");
         message.SetUI(str, position);
         AkSoundEngine.PostEvent("Play_Deny_01", gameObject);
     }
@@ -243,13 +239,13 @@ public class UIManager : MonoBehaviour, ISubject
     {
         string[] str = { amount < 0 ? "<sprite=1> <sprite=5>" : "<sprite=3> <sprite=6>" };
 
-        TemporayUI message = Instantiate(happinessMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
+        TemporayUI message = PoolSystem.instance.messagePool.GetFromPool<TemporayUI>("Happiness");
         message.SetUI(str, position);
     }
 
     public void SetEventTempPopUp(Event curEvent, Vector3 position)
     {
-        TemporayUI message = Instantiate(eventMessagePrefab, canvas.transform).GetComponent<TemporayUI>();
+        TemporayUI message = PoolSystem.instance.messagePool.GetFromPool<TemporayUI>("Event");
         message.SetUI(curEvent, position);
 
         if (curEvent.rewardType == RewardType.Penalty)
