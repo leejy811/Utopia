@@ -40,6 +40,12 @@ public class EndGameUI : MonoBehaviour
 
         int happiness = (int)RoutineManager.instance.cityHappiness;
         happinessText.text = happiness.ToString();
+
+        if (PlayerPrefs.GetInt("isPlay", 0) == 0)
+        {
+            PlayerPrefs.SetInt("isPlay", 1);
+            OnClickSaveData();
+        }
     }
 
     private string SecondToString(float second)
@@ -55,5 +61,21 @@ public class EndGameUI : MonoBehaviour
     private void OnEnable()
     {
         SetValue();
+    }
+
+    public void OnClickSaveData()
+    {
+        PlayerPrefs.SetString("PlayTime", playTimeText.text);
+        PlayerPrefs.SetString("ClearDay", curDayText.text);
+
+        for (int i = 0; i < buildingCntText.Length; i++)
+        {
+            PlayerPrefs.SetString((BuildingType)i + " Building Count", buildingCntText[i].text);
+        }
+
+        PlayerPrefs.SetString("DestroyCount", removeBuildingText.text);
+        PlayerPrefs.SetString("Happiness", happinessText.text);
+
+        Debug.Log("Save");
     }
 }
