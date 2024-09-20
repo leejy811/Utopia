@@ -11,6 +11,13 @@ public class AdjustCinemachinePriority : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(DelaySetPriority());
+    }
+
+    IEnumerator DelaySetPriority()
+    {
+        yield return new WaitForSeconds(0.2f);
+
         virtualCamera.Priority = initialPriority;
 
         virtualCamera.Priority = targetPriority;

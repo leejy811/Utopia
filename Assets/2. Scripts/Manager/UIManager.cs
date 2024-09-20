@@ -382,6 +382,21 @@ public class UIManager : MonoBehaviour, ISubject
         notifyObserver(EventState.Phone);
     }
 
+    public void OnClickLobbyButton()
+    {
+        GameManager.instance.LoadLobbyScene();
+    }
+
+    public void OnClickQuitGame()
+    {
+        GameManager.instance.QuitGame();
+    }
+
+    public void OnClickSound(string name)
+    {
+        SoundManager.instance.PostEvent(name);
+    }
+
     #endregion
 
 

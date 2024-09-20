@@ -7,9 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    public MCSS soundBnk;
-
     private PostProcessManager postProcess;
+    private SoundManager soundManager;
 
     private void Awake()
     {
@@ -20,18 +19,24 @@ public class GameManager : MonoBehaviour
         }
 
         instance = this;
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
         postProcess = PostProcessManager.instance;
+        soundManager = SoundManager.instance;
+
+        SceneManager.sceneLoaded += OnLoadedScene;
+    }
+
+    private void OnLoadedScene(Scene scene, LoadSceneMode mode)
+    {
+        postProcess.SetComponent();
     }
 
     public void LoadLobbyScene()
     {
-        soundBnk.StopInGameBGM();
-
         StartCoroutine(PlayLoadScene("LobbyScene"));
     }
 
@@ -49,6 +54,7 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
+        soundManager.SetBGM(SceneName);
         SceneManager.LoadScene(SceneName);
     }
 

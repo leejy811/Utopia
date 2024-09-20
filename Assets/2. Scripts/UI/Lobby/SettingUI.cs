@@ -6,19 +6,40 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI;
 
-public class SettingUI : LobbySettingUI
+public class SettingUI : MonoBehaviour
 {
     [Header("Resolution")]
     public TMP_Dropdown resDropdown;
     public TMP_Dropdown screenDropdown;
 
+    [Header("Sound")]
+    public TextMeshProUGUI bgmText;
+    public TextMeshProUGUI sfxText;
+
+    [Header("Fade")]
+    public GameObject fadeImage;
+
     private List<Resolution> resolutions = new List<Resolution>();
     private bool fullScreen;
+    private Scrollbar scrollbar;
 
-    protected override void Start()
+    private void Start()
     {
-        base.Start();
         InitResolution();
+        InitVolume();
+
+        scrollbar = gameObject.GetComponentInChildren<Scrollbar>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
+            gameObject.SetActive(false);
+
+        if (scrollbar.value < 0)
+            fadeImage.SetActive(false);
+        else
+            fadeImage.SetActive(true);
     }
 
     private void InitResolution()
@@ -58,6 +79,12 @@ public class SettingUI : LobbySettingUI
         screenDropdown.onValueChanged.AddListener(ChangeScreenMode);
     }
 
+    private void InitVolume()
+    {
+        bgmText.text = ((int)SoundManager.instance.volumes[(int)SoundType.BGM]).ToString();
+        sfxText.text = ((int)SoundManager.instance.volumes[(int)SoundType.SFX]).ToString();
+    }
+
     public void ChangeResolution(int value)
     {
         Screen.SetResolution(resolutions[value].width, resolutions[value].height, fullScreen);
@@ -68,5 +95,17 @@ public class SettingUI : LobbySettingUI
         int idx = resDropdown.value;
         fullScreen = Convert.ToBoolean(value);
         Screen.SetResolution(resolutions[idx].width, resolutions[idx].height, fullScreen);
+    }
+
+    public void ChangeBGMVolume(float value)
+    {
+        SoundManager.instance.ChangeVolume(SoundType.BGM, value * 100.0f, "BGM_VOL");
+        bgmText.text = ((int)(value * 100.0f)).ToString();
+    }
+
+    public void ChangeSFXVolume(float value)
+    {
+        SoundManager.instance.ChangeVolume(SoundType.SFX, value * 100.0f, "SFX_VOL");
+        sfxText.text = ((int)(value * 100.0f)).ToString();
     }
 }

@@ -91,6 +91,9 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         }
 
         BottonSound.instance.Click("Play_buildingsound");
+
+        if(buildings.Count >= 1)
+            AkSoundEngine.PostEvent("Stop_construction", gameObject);
     }
 
     public void RemoveBuilding(GameObject building)
@@ -111,6 +114,9 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         buildingRemoveCount++;
 
         CityLevelManager.instance.frames.Enqueue(new FrameInfo(0, new Vector2Int((int)building.transform.position.x, (int)building.transform.position.z), building.transform.rotation, false));
+
+        if (buildings.Count < 1)
+            AkSoundEngine.PostEvent("Play_construction", gameObject);
     }
 
     public void ChangeViewState(ViewStateType stateType)

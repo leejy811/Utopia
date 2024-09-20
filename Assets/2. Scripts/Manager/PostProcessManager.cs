@@ -28,13 +28,12 @@ public class PostProcessManager : MonoBehaviour
         }
 
         instance = this;
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
-        volume.profile.TryGet(out colorGrading);
-        volume.profile.TryGet(out vignette);
+        SetComponent();
     }
 
     private void Update()
@@ -49,6 +48,15 @@ public class PostProcessManager : MonoBehaviour
             colorGrading.colorFilter.value = Color.white * (((angleX / 45.0f) * 0.7f) + 0.3f);
         else if (angleX >= 45.0f && angleX < 90.0f)
             colorGrading.colorFilter.value = Color.white;
+    }
+
+    public void SetComponent()
+    {
+        volume = FindObjectOfType<Volume>();
+        canvas = FindObjectOfType<CanvasGroup>();
+
+        volume.profile.TryGet(out colorGrading);
+        volume.profile.TryGet(out vignette);
     }
 
     public IEnumerator FadeInOut(float second, bool isIn)
