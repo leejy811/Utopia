@@ -22,7 +22,7 @@ public class TimeLapseCamera : MonoBehaviour
         virtualCamera.m_Lens.OrthographicSize = zoomSizes[CityLevelManager.instance.levelIdx];
         virtualCamera.Priority = 100;
         yield return new WaitForSeconds(2.0f);
-        virtualCamera.transform.position += new Vector3(1000, 0, 0);
+        virtualCamera.transform.position += new Vector3(300, 0, 0);
     }
 
     public IEnumerator RotateCameraOn()
@@ -36,7 +36,7 @@ public class TimeLapseCamera : MonoBehaviour
 
     public void RotateCameraOff()
     {
-        virtualCamera.transform.position -= new Vector3(1000, 0, 0);
+        virtualCamera.transform.position -= new Vector3(300, 0, 0);
         virtualCamera.Priority = 1;
     }
 
