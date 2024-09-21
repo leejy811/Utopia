@@ -90,7 +90,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
                 break;
         }
 
-        BottonSound.instance.Click("Play_buildingsound");
+        SoundManager.instance.PostEvent("Play_buildingsound");
 
         if(buildings.Count >= 1)
             AkSoundEngine.PostEvent("Stop_construction", gameObject);

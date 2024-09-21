@@ -62,7 +62,7 @@ public class PhoneUI : MonoBehaviour, IObserver
 
         if (curState == EventState.CityLevelUp && CityLevelManager.instance.levelIdx == 1)
         {
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(5.0f);
             UIManager.instance.notifyObserver(EventState.None);
         }
         else
