@@ -15,6 +15,8 @@ public class CinemachineCameraController : MonoBehaviour
     public float maxX = 25f;
     public float minZ = -10f;
     public float maxZ = 25f;
+    public float minPitchAngle = 10f;
+    public float maxPitchAngle = 80f;
 
     public CinemachineTransposer transposer;
     public CinemachineComposer composer;
@@ -173,7 +175,7 @@ public class CinemachineCameraController : MonoBehaviour
 
             float currentXRotation = virtualCamera.transform.localEulerAngles.x;
             currentXRotation = (currentXRotation > 180) ? currentXRotation - 360 : currentXRotation;
-            currentXRotation = Mathf.Clamp(currentXRotation, -80, 80);
+            currentXRotation = Mathf.Clamp(currentXRotation, minPitchAngle, maxPitchAngle);
             virtualCamera.transform.localEulerAngles = new Vector3(currentXRotation, virtualCamera.transform.localEulerAngles.y, 0);
         }
     }
