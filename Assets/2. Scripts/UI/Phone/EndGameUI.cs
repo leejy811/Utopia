@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndGameUI : MonoBehaviour
 {
@@ -19,6 +20,9 @@ public class EndGameUI : MonoBehaviour
     public TextMeshProUGUI[] buildingCntText;
     public TextMeshProUGUI removeBuildingText;
     public TextMeshProUGUI happinessText;
+
+    [Header("Button")]
+    public Button saveButton;
 
     private void SetValue()
     {
@@ -65,6 +69,8 @@ public class EndGameUI : MonoBehaviour
 
     public void OnClickSaveData()
     {
+        saveButton.interactable = false;
+
         PlayerPrefs.SetString("PlayTime", playTimeText.text);
         PlayerPrefs.SetString("ClearDay", curDayText.text);
 
