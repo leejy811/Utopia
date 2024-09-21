@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        //PlayerPrefs.DeleteAll();
+
         postProcess = PostProcessManager.instance;
         soundManager = SoundManager.instance;
 

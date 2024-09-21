@@ -31,9 +31,9 @@ public class ResidentialBuilding : Building
         cityResident += (int)residentCnt.cur;
     }
 
-    private new void OnDestroy()
+    public override void DestroyBuilding()
     {
-        base.OnDestroy();
+        base.DestroyBuilding();
         cityResident -= (int)residentCnt.cur;
     }
 

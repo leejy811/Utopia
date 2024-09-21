@@ -117,6 +117,9 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
         if (buildings.Count < 1)
             AkSoundEngine.PostEvent("Play_construction", gameObject);
+
+        buildingComp.DestroyBuilding();
+        Destroy(building);
     }
 
     public void ChangeViewState(ViewStateType stateType)

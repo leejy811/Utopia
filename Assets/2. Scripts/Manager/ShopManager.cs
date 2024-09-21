@@ -170,7 +170,6 @@ public class ShopManager : MonoBehaviour, IObserver
 
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
         EventManager.instance.SetEventBuildings(curPickObject.GetComponent<Building>(), false);
-        Destroy(curPickObject);
         AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
     }
 

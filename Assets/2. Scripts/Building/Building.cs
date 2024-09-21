@@ -67,13 +67,13 @@ public class Building : MonoBehaviour
         ApplyInfluenceToTile(power, true, true);
     }
 
-    protected void OnDestroy()
+    public virtual void DestroyBuilding()
     {
         int power = type == BuildingType.Residential ? (int)values[ValueType.Resident].cur : influencePower;
 
-        foreach(Event curEvent in curEvents)
+        foreach (Event curEvent in curEvents)
         {
-            if(curEvent.valueType == ValueType.Influence)
+            if (curEvent.valueType == ValueType.Influence)
             {
                 power += (int)(power * (curEvent.effectValue[0] / 100.0f));
             }

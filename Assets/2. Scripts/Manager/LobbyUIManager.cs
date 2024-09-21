@@ -5,14 +5,26 @@ using UnityEngine;
 
 public class LobbyUIManager : MonoBehaviour, ISubject
 {
+    public UIElement main;
+    public UIElement mapSelect;
     public UIElement setting;
 
     private List<IObserver> observers = new List<IObserver>();
+
+    #region EventFunc
 
     private void Start()
     {
         InitObserver();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
+            notifyObserver(EventState.None);
+    }
+
+    #endregion
 
     #region OnClick
 
@@ -22,6 +34,11 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     }
 
     public void OnClickGameStart()
+    {
+        notifyObserver(EventState.MapSelect);
+    }
+
+    public void OnClickMap()
     {
         GameManager.instance.LoadGameScene();
     }
@@ -36,6 +53,8 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     #region Observer
     private void InitObserver()
     {
+        addObserver(main);
+        addObserver(mapSelect);
         addObserver(setting);
     }
 

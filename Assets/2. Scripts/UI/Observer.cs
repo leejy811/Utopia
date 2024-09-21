@@ -6,7 +6,7 @@ public enum EventState { None, EventNotify, CityLevelUp, SlotMachine,
                         Construct, EtcFunc, EventIcon, TileColor, LockButton, DebtDoc,
                         PaySuccess, HealCredit, LateReceipt, CityLevel, PayFail, GameOver, 
                         Menu, Setting, GameClear, Tutorial, DestroyBuilding, Phone,
-                        GameStart, ConstructButton, ConstructBuilding, SocialEffect }
+                        GameStart, ConstructButton, ConstructBuilding, SocialEffect, MapSelect }
 
 public interface IObserver
 {

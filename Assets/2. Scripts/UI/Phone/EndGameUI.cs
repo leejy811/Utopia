@@ -68,14 +68,13 @@ public class EndGameUI : MonoBehaviour
         PlayerPrefs.SetString("PlayTime", playTimeText.text);
         PlayerPrefs.SetString("ClearDay", curDayText.text);
 
-        for (int i = 0; i < buildingCntText.Length; i++)
+        int[,] count = BuildingSpawner.instance.buildingGradeCount;
+        for (int i = 0; i < System.Enum.GetValues(typeof(BuildingType)).Length; i++)
         {
-            PlayerPrefs.SetString((BuildingType)i + " Building Count", buildingCntText[i].text);
+            PlayerPrefs.SetInt((BuildingType)i + " Building Count", count[i, 0] + count[i, 1] + count[i, 2]);
         }
 
         PlayerPrefs.SetString("DestroyCount", removeBuildingText.text);
-        PlayerPrefs.SetString("Happiness", happinessText.text);
-
-        Debug.Log("Save");
+        PlayerPrefs.SetString("Happiness", happinessText.text + "%");
     }
 }
