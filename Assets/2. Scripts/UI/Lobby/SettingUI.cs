@@ -15,6 +15,8 @@ public class SettingUI : MonoBehaviour
     [Header("Sound")]
     public TextMeshProUGUI bgmText;
     public TextMeshProUGUI sfxText;
+    public Slider bgmSlider;
+    public Slider sfxSlider;
 
     [Header("Fade")]
     public GameObject fadeImage;
@@ -81,8 +83,12 @@ public class SettingUI : MonoBehaviour
 
     private void InitVolume()
     {
-        bgmText.text = ((int)SoundManager.instance.volumes[(int)SoundType.BGM]).ToString();
-        sfxText.text = ((int)SoundManager.instance.volumes[(int)SoundType.SFX]).ToString();
+        float[] volumes = SoundManager.instance.volumes;
+        bgmText.text = ((int)volumes[(int)SoundType.BGM]).ToString();
+        sfxText.text = ((int)volumes[(int)SoundType.SFX]).ToString();
+
+        bgmSlider.value = volumes[(int)SoundType.BGM] / 100.0f;
+        sfxSlider.value = volumes[(int)SoundType.SFX] / 100.0f;
     }
 
     public void ChangeResolution(int value)

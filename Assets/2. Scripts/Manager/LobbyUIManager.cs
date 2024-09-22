@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LobbyUIManager : MonoBehaviour, ISubject
 {
-    public UIElement main;
+    public LobbyMenuUI main;
     public UIElement mapSelect;
     public UIElement setting;
 
@@ -27,6 +27,11 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     #endregion
 
     #region OnClick
+
+    public void OnClickClose()
+    {
+        notifyObserver(EventState.None);
+    }
 
     public void OnClickSetting()
     {
