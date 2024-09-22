@@ -10,13 +10,17 @@ public class UtilityBuilding : Building
     public BoundaryValue userCnt;
     public BoundaryValue utilityValue;
 
-    public void SetParameter(int sign)
+    private void Awake()
     {
-        float value = utilityValue.cur;
-        utilityValue.cur = GetRandomParameter(sign);
-
         values[ValueType.user] = userCnt;
         values[ValueType.utility] = utilityValue;
+    }
+
+    public void SetParameter(int sign)
+    {
+        BoundaryValue user = values[ValueType.user];
+        user.cur = GetRandomParameter(sign);
+        values[ValueType.user] = user;
     }
 
     public float GetRandomParameter(int sign)
