@@ -95,20 +95,20 @@ public class UtilityBuilding : Building
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 10;
+                changeAmount += 1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 0;
+                changeAmount += -1;
             else
-                changeAmount += -20;
+                changeAmount += -2;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += -20;
+                changeAmount += -1;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 15;
+                changeAmount += 3;
             else
-                changeAmount += -20;
+                changeAmount += -1;
         }
         else
         {
@@ -117,7 +117,7 @@ public class UtilityBuilding : Building
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += 0;
             else
-                changeAmount += 10;
+                changeAmount += 1;
         }
 
         if (isExpect)
