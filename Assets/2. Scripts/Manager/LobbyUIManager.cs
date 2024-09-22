@@ -53,6 +53,11 @@ public class LobbyUIManager : MonoBehaviour, ISubject
         GameManager.instance.QuitGame();
     }
 
+    public void OnClickButtonSound(string name)
+    {
+        SoundManager.instance.PostEvent(name);
+    }
+
     #endregion
 
     #region Observer

@@ -14,13 +14,16 @@ public class ScaleMouseOver : UIMouseOver
 
     public override void OnPointerEnter(PointerEventData eventData)
     {
-        if (interactable)
-            transform.DOScale(enterScale, tweenTime);
+        if (!interactable) return;
+
+        base.OnPointerEnter(eventData);
+        transform.DOScale(enterScale, tweenTime);
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
-        if (interactable)
-            transform.DOScale(exitScale, tweenTime);
+        if (!interactable) return;
+
+        transform.DOScale(exitScale, tweenTime);
     }
 }
