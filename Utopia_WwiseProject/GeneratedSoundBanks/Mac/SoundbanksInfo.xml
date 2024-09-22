@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{DE6F97B9-DE7D-3F74-A64B-46611E5D46B9}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{D59A8F91-7439-3F8F-72C1-7A0F4571BD08}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{BC69B5CA-8FFC-EA5C-D892-03D65F8E04EC}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{830A2830-DD78-C8A0-4947-BB814C26641D}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -756,7 +756,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{F8EDC097-9C39-32A4-4B54-13A9EAD95B31}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{C4ECAA74-5B01-5777-B988-AB10F5866E8D}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -1122,6 +1122,7 @@
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="412724365" Name="BGM">
@@ -1134,7 +1135,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{259A5284-4745-1A5E-B39F-09491BEA1188}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{29E65B8B-57D1-1472-3FBD-D3891375DA68}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -1295,5 +1296,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{1BA22649-EDD8-2A57-EAE4-CB73CD54433A}</FileHash>
+	<FileHash>{E955EB52-F06D-3CA8-8541-B97302F3EFEB}</FileHash>
 </SoundBanksInfo>

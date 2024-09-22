@@ -1,22 +1,22 @@
 Event	ID	Name			Wwise Object Path	Notes
-	7328488	Play_CellPhone_01			\Default Work Unit\Play_CellPhone_01	
-	139162049	Play_Paythepayment_01			\Default Work Unit\Play_Paythepayment_01	
-	725934356	Play_Slot_Effect_Spwan_01			\Default Work Unit\Play_Slot_Effect_Spwan_01	
-	904270529	Play_Deny_02			\Default Work Unit\Play_Deny_02	
-	904270530	Play_Deny_01			\Default Work Unit\Play_Deny_01	
-	946941744	Play_Tutorial_Pop_up			\Default Work Unit\Play_Tutorial_Pop_up	
-	1031511574	Play_SlotMachine_enter_001			\Default Work Unit\Play_SlotMachine_enter_001	
-	1042317409	Play_Slot_Rever_01			\Default Work Unit\Play_Slot_Rever_01	
-	1571046380	Stop_Slotmashin_Jackpot_Ani_01			\Default Work Unit\Stop_Slotmashin_Jackpot_Ani_01	
-	2214109306	Play_Slotmashin_Jackpot_Ani_01			\Default Work Unit\Play_Slotmashin_Jackpot_Ani_01	
-	2450428583	Play_CellPhone_Click			\Default Work Unit\Play_CellPhone_Click	
-	2774129414	Play_POPUP_Negative			\Default Work Unit\Play_POPUP_Negative	
-	3035396721	Stop_Slot_Drrrrrr_01			\Default Work Unit\Stop_Slot_Drrrrrr_01	
-	3371155409	Play_Slot_Stop_01			\Default Work Unit\Play_Slot_Stop_01	
-	3452595303	Play_Slot_Drrrrrr_01			\Default Work Unit\Play_Slot_Drrrrrr_01	
-	3497197729	Play_GraphUP			\Default Work Unit\Play_GraphUP	
-	3583156534	Play_POPUP_Positive			\Default Work Unit\Play_POPUP_Positive	
-	3803209012	Play_Slot_Spwan_01			\Default Work Unit\Play_Slot_Spwan_01	
+	7328488	Play_CellPhone_01			\Default Work Unit\old\Play_CellPhone_01	
+	139162049	Play_Paythepayment_01			\Default Work Unit\old\Play_Paythepayment_01	
+	725934356	Play_Slot_Effect_Spwan_01			\Default Work Unit\old\Play_Slot_Effect_Spwan_01	
+	904270529	Play_Deny_02			\Default Work Unit\old\Play_Deny_02	
+	904270530	Play_Deny_01			\Default Work Unit\old\Play_Deny_01	
+	946941744	Play_Tutorial_Pop_up			\Default Work Unit\old\Play_Tutorial_Pop_up	
+	1031511574	Play_SlotMachine_enter_001			\Default Work Unit\old\Play_SlotMachine_enter_001	
+	1042317409	Play_Slot_Rever_01			\Default Work Unit\old\Play_Slot_Rever_01	
+	1571046380	Stop_Slotmashin_Jackpot_Ani_01			\Default Work Unit\old\Stop_Slotmashin_Jackpot_Ani_01	
+	2214109306	Play_Slotmashin_Jackpot_Ani_01			\Default Work Unit\old\Play_Slotmashin_Jackpot_Ani_01	
+	2450428583	Play_CellPhone_Click			\Default Work Unit\old\Play_CellPhone_Click	
+	2774129414	Play_POPUP_Negative			\Default Work Unit\old\Play_POPUP_Negative	
+	3035396721	Stop_Slot_Drrrrrr_01			\Default Work Unit\old\Stop_Slot_Drrrrrr_01	
+	3371155409	Play_Slot_Stop_01			\Default Work Unit\old\Play_Slot_Stop_01	
+	3452595303	Play_Slot_Drrrrrr_01			\Default Work Unit\old\Play_Slot_Drrrrrr_01	
+	3497197729	Play_GraphUP			\Default Work Unit\old\Play_GraphUP	
+	3583156534	Play_POPUP_Positive			\Default Work Unit\old\Play_POPUP_Positive	
+	3803209012	Play_Slot_Spwan_01			\Default Work Unit\old\Play_Slot_Spwan_01	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Paythepayment_01_00889829.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		248456

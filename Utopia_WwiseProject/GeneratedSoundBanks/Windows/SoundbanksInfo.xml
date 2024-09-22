@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{64934979-2166-0BC0-C383-1403F3F3E510}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{F69440A9-C67C-069D-FD08-56D22AACCFE1}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{0E3F6B1D-E4E0-2FD7-877F-E475C5D2F8BF}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{A2211D97-24B9-881A-1A7F-F1C82C54F1B5}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -756,7 +756,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{5CF3B7C9-A85E-FA09-B691-D6BE4A48B88B}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{8886B714-65C7-F479-4DE4-43A51FD3250C}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -1119,9 +1119,11 @@
 			<GameParameters>
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="848835168" Name="ZOOM"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="412724365" Name="BGM">
@@ -1134,7 +1136,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{778C3326-206A-99D2-21B9-2A5167DE6F8D}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9BA6B17D-1AF1-0D6B-37DC-6584DB704687}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -1295,5 +1297,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{57A6CB0F-77F5-8E83-F488-3A926C74AFF1}</FileHash>
+	<FileHash>{7D5BE01F-141F-5666-C49C-1B753C6135EA}</FileHash>
 </SoundBanksInfo>

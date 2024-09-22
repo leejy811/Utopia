@@ -102,9 +102,11 @@ State	ID	Name	State Group			Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	187723092	INDEX1			\Default Work Unit\INDEX1	
 	187723095	INDEX2			\Default Work Unit\INDEX2	
+	848835168	ZOOM			\Default Work Unit\ZOOM	
 	1584507803	CLICK			\Default Work Unit\CLICK	
 	1761501017	BOOL			\Default Work Unit\BOOL	
 	2212414277	DIST			\Default Work Unit\DIST	
+	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	30720200	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM2_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM2\BGM2		1235109

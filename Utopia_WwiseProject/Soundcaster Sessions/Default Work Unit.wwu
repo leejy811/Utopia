@@ -61,7 +61,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+						<CurrentStateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="FAIL" ID="{F2A4569E-DFDD-4B8C-8F1A-55D8468B4A57}"/>
