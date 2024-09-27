@@ -18,9 +18,9 @@ public class UtilityBuilding : Building
 
     public void SetParameter(int sign)
     {
-        BoundaryValue user = values[ValueType.user];
-        user.cur = GetRandomParameter(sign);
-        values[ValueType.user] = user;
+        BoundaryValue utility = values[ValueType.utility];
+        utility.cur = GetRandomParameter(sign);
+        values[ValueType.utility] = utility;
     }
 
     public float GetRandomParameter(int sign)
