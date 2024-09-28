@@ -136,7 +136,7 @@ public class ShopManager : MonoBehaviour, IObserver
     public float CalculateBuildingCostWeight(int index)
     {
         float coefficient = 0.5f;
-        float baseValue = 1.08f;
+        float baseValue = 1.075f;
 
         return coefficient * (Mathf.Pow(baseValue, (BuildingSpawner.instance.buildingCount[index])) - 1);
     }

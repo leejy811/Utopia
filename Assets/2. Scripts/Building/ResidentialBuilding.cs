@@ -148,27 +148,27 @@ public class ResidentialBuilding : Building
 
         //commercialCSAT
         if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.More)
-            commercialAmount += 2;
+            commercialAmount += -5;
         else if (values[ValueType.CommercialCSAT].CheckBoundary() == BoundaryType.Less)
-            commercialAmount += -4;
+            commercialAmount += -5;
         else
-            commercialAmount += 1;
+            commercialAmount += 5;
 
         //cultureCSAT
         if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.More)
-            cultureAmount += 2;
+            cultureAmount += -5;
         else if (values[ValueType.CultureCSAT].CheckBoundary() == BoundaryType.Less)
-            cultureAmount += -4;
+            cultureAmount += -5;
         else
-            cultureAmount += 1;
+            cultureAmount += 5;
 
         //serviceCSAT
         if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.More)
-            serviceAmount += 2;
+            serviceAmount += -5;
         else if (values[ValueType.ServiceCSAT].CheckBoundary() == BoundaryType.Less)
-            serviceAmount += -4;
+            serviceAmount += -5;
         else
-            serviceAmount += 1;
+            serviceAmount += 5;
 
         if (isExpect)
         {

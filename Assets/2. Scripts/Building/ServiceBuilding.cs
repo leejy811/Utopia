@@ -37,7 +37,7 @@ public class ServiceBuilding : UtilityBuilding
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 income += 10;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                income += 0;
+                income += 1;
             else
                 income += 5;
         }
@@ -46,7 +46,7 @@ public class ServiceBuilding : UtilityBuilding
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 income += 5;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                cost -= 1;
+                cost -= 5;
             else
                 income += 1;
         }
@@ -67,18 +67,18 @@ public class ServiceBuilding : UtilityBuilding
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += 2;
+                changeAmount += 10;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += -2;
+                changeAmount += -20;
             else
-                changeAmount += -1;
+                changeAmount += -20;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                changeAmount += -1;
+                changeAmount += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 2;
+                changeAmount += 10;
             else
                 changeAmount += 0;
         }
@@ -87,9 +87,9 @@ public class ServiceBuilding : UtilityBuilding
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 changeAmount += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 1;
+                changeAmount += 0;
             else
-                changeAmount += 2;
+                changeAmount += 10;
         }
 
         if (isExpect)
