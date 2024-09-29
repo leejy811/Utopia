@@ -133,10 +133,21 @@ public class ShopManager : MonoBehaviour, IObserver
         }
     }
 
-    public float CalculateBuildingCostWeight(int index)
+    public float CalculateBuildingCostWeight(int index, int grade)
     {
-        float coefficient = 0.5f;
+        float coefficient = 0.65f;
         float baseValue = 1.075f;
+        float weight = 2.5f;
+        if (grade == 2)
+        {
+            coefficient = 0.75f;
+            //baseValue *= weight;
+        }
+        else if (grade == 3)
+        {
+            coefficient = 0.8f;
+            //baseValue *= Mathf.Pow(weight, 2);
+        }
 
         return coefficient * (Mathf.Pow(baseValue, (BuildingSpawner.instance.buildingCount[index])) - 1);
     }
@@ -328,7 +339,8 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public int CalculateBuildingCost(Building building, int index)
     {
-        float costWeight = CalculateBuildingCostWeight(index);
+        int grade = building.grade;
+        float costWeight = CalculateBuildingCostWeight(index, grade);
         int originalCost = building.cost;
         return CalculateCost(Mathf.RoundToInt(Mathf.RoundToInt(originalCost + (originalCost * costWeight)) / 10.0f) * 10);
     }
