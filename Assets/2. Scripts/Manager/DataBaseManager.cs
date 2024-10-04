@@ -331,7 +331,7 @@ public class DataBaseManager : MonoBehaviour
     {
         data.Save(mapType);
 
-        string jsonData = JsonUtility.ToJson(data);
+        string jsonData = JsonUtility.ToJson(data, true);
         File.WriteAllText(path + fileName + mapType.ToString(), jsonData);
     }
 
@@ -373,7 +373,7 @@ public class DataBaseManager : MonoBehaviour
         data.creditPanelData = UIManager.instance.phone.panels[(int)PhoneState.Credit].GetComponent<CreditPanelUI>().data as CreditPanelData;
         data.levelPanelData = UIManager.instance.phone.panels[(int)PhoneState.Level].GetComponent<LevelPanelUI>().data as LevelPanelData;
 
-        string jsonData = JsonUtility.ToJson(data);
+        string jsonData = JsonUtility.ToJson(data, true);
         File.WriteAllText(path + fileName, jsonData);
 
         MapType type = GameManager.instance.curMapType;
