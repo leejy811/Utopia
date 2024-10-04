@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -45,9 +46,8 @@ public class EndGameUI : MonoBehaviour
         int happiness = (int)RoutineManager.instance.cityHappiness;
         happinessText.text = happiness.ToString();
 
-        if (PlayerPrefs.GetInt("isPlay", 0) == 0)
+        if (!File.Exists(Application.persistentDataPath + "/ClearData_" + GameManager.instance.curMapType.ToString()))
         {
-            PlayerPrefs.SetInt("isPlay", 1);
             OnClickSaveData();
         }
     }
@@ -57,7 +57,7 @@ public class EndGameUI : MonoBehaviour
         float minute = second / 60.0f;
         float hour = minute / 60.0f;
 
-        string res = ((int)hour).ToString() + " 시간 " + ((int)minute).ToString() + " 분";
+        string res = ((int)hour).ToString() + " 시간 " + ((int)minute % 60).ToString() + " 분";
 
         return res;
     }
@@ -71,16 +71,7 @@ public class EndGameUI : MonoBehaviour
     {
         saveButton.interactable = false;
 
-        PlayerPrefs.SetString("PlayTime", playTimeText.text);
-        PlayerPrefs.SetString("ClearDay", curDayText.text);
-
-        int[,] count = BuildingSpawner.instance.buildingGradeCount;
-        for (int i = 0; i < System.Enum.GetValues(typeof(BuildingType)).Length; i++)
-        {
-            PlayerPrefs.SetInt((BuildingType)i + " Building Count", count[i, 0] + count[i, 1] + count[i, 2]);
-        }
-
-        PlayerPrefs.SetString("DestroyCount", removeBuildingText.text);
-        PlayerPrefs.SetString("Happiness", happinessText.text + "%");
+        MapType type = GameManager.instance.curMapType;
+        DataBaseManager.instance.SaveMapData(DataBaseManager.instance.clearData[(int)type], type, "/ClearData_");
     }
 }

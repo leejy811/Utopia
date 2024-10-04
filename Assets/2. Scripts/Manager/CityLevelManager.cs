@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 
@@ -14,20 +15,12 @@ public struct CityLevel
 }
 
 [System.Serializable]
-public struct FrameInfo
+public class FrameInfo
 {
     public int index;
     public Vector2Int position;
     public Quaternion rotation;
     public bool isInsert;
-
-    public FrameInfo(int idx, Vector2Int pos, Quaternion rot, bool isIn)
-    {
-        index = idx;
-        position = pos;
-        rotation = rot;
-        isInsert = isIn;
-    }
 }
 
 public class CityLevelManager : MonoBehaviour
@@ -36,7 +29,8 @@ public class CityLevelManager : MonoBehaviour
 
     public int levelIdx;
     public CityLevel[] level;
-    public Queue<FrameInfo> frames = new Queue<FrameInfo>();
+    public Queue<FrameInfo> prevFrames = new Queue<FrameInfo>();
+    public Queue<FrameInfo> curFrames = new Queue<FrameInfo>();
 
     public TimeLapseCamera cameraController;
 
@@ -77,6 +71,12 @@ public class CityLevelManager : MonoBehaviour
             UIManager.instance.notifyObserver(EventState.CityLevelUp);
     }
 
+    public void LoadLevel(int levelData)
+    {
+        levelIdx = levelData;
+        Grid.instance.PurchaseTile(level[levelIdx].tileSize, level[0].tileSize, 0f);
+    }
+
     public bool CheckBuildingLevel(Building building)
     {
         return building.grade <= levelIdx;
@@ -92,6 +92,36 @@ public class CityLevelManager : MonoBehaviour
         }
 
         return sum;
+    }
+
+    public void LoadFrame(FrameInfo[] prevFrames, FrameInfo[] curFrames)
+    {
+        foreach (FrameInfo frame in prevFrames)
+        {
+            this.prevFrames.Enqueue(frame);
+            DequeueFrame(frame);
+        }
+
+        foreach (FrameInfo frame in curFrames)
+        {
+            this.curFrames.Enqueue(frame);
+        }
+    }
+
+    public void DequeueFrame(FrameInfo frame)
+    {
+        if (frame.isInsert)
+        {
+            GameObject prefab = BuildingSpawner.instance.buildingPrefabs[frame.index];
+            Vector3 startPos = new Vector3(Grid.instance.levelUPStartPoint.x, 0, Grid.instance.levelUPStartPoint.y);
+            Vector3 spawnPos = new Vector3(frame.position.x, 0, frame.position.y);
+            GameObject building = Instantiate(prefab, spawnPos + startPos, frame.rotation, transform);
+            Grid.instance.levelUpTiles[frame.position.x, frame.position.y].building = building;
+        }
+        else
+        {
+            Destroy(Grid.instance.levelUpTiles[frame.position.x, frame.position.y].building);
+        }
     }
 
     IEnumerator PlayTimeLapse()
@@ -122,24 +152,14 @@ public class CityLevelManager : MonoBehaviour
         cameraController.rotateOnCoroutine = StartCoroutine(cameraController.RotateCameraOn());
 
         int timesOfRotate = 2;
-        float timePerFrame = ((360 * timesOfRotate) / cameraController.rotationSpeed) / frames.Count;
+        float timePerFrame = ((360 * timesOfRotate) / cameraController.rotationSpeed) / curFrames.Count;
 
-        while (frames.Count > 0)
+        while (curFrames.Count > 0)
         {
-            FrameInfo curFrame = frames.Dequeue();
+            FrameInfo curFrame = curFrames.Dequeue();
+            prevFrames.Enqueue(curFrame);
 
-            if (curFrame.isInsert)
-            {
-                GameObject prefab = BuildingSpawner.instance.buildingPrefabs[curFrame.index];
-                Vector3 startPos = new Vector3(Grid.instance.levelUPStartPoint.x, 0, Grid.instance.levelUPStartPoint.y);
-                Vector3 spawnPos = new Vector3(curFrame.position.x, 0, curFrame.position.y);
-                GameObject building = Instantiate(prefab, spawnPos + startPos, curFrame.rotation, transform);
-                Grid.instance.levelUpTiles[curFrame.position.x, curFrame.position.y].building = building;
-            }
-            else
-            {
-                Destroy(Grid.instance.levelUpTiles[curFrame.position.x, curFrame.position.y].building);
-            }
+            DequeueFrame(curFrame);
 
             yield return new WaitForSeconds(timePerFrame);
         }

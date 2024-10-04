@@ -12,10 +12,6 @@ public class EventManager : MonoBehaviour
     public int preCountDay;
     public Vector2Int randomCount;
 
-    [Header("Value")]
-    public int[] eventCount;
-    [Range(0.0f, 1.0f)] public float eventApplyRatio;
-
     [Header("Event List")]
     public List<List<Building>> targetBuildings = new List<List<Building>>();
     public List<Building> eventBuildings;
@@ -111,38 +107,6 @@ public class EventManager : MonoBehaviour
         globalEvents.Clear();
     }
 
-    private void SelectRewardType()
-    {
-        List<List<Event>> rewardTypeEvent = new List<List<Event>>
-        {
-            new List<Event>(),
-            new List<Event>(),
-            new List<Event>()
-        };
-
-        for (int i = 0; i < possibleEvents.Count; i++)
-        {
-            rewardTypeEvent[(int)possibleEvents[i].rewardType].Add(possibleEvents[i]);
-        }
-
-        for (int i = 0; i < rewardTypeEvent.Count; i++)
-        {
-            List<int> indexs = new List<int>();
-            int range = rewardTypeEvent[i].Count - eventCount[i];
-
-            for (int j = 0; j < range; j++)
-            {
-                int ranIdx = Random.Range(0, rewardTypeEvent[i].Count);
-                while (indexs.Contains(ranIdx))
-                {
-                    ranIdx = Random.Range(0, rewardTypeEvent[i].Count);
-                }
-                indexs.Add(ranIdx);
-                possibleEvents.Remove(rewardTypeEvent[i][ranIdx]);
-            }
-        }
-    }
-
     private void ResetCount()
     {
         curCountDay = 0;
@@ -209,9 +173,8 @@ public class EventManager : MonoBehaviour
         }
 
         List<int> indexs = new List<int>();
-        int range = Mathf.CeilToInt(targetBuildings[ranEvent.eventIndex].Count * eventApplyRatio);
 
-        for (int i = 0; i < range; i++)
+        for (int i = 0; i < targetBuildings[ranEvent.eventIndex].Count; i++)
         {
             int ranIdx = Random.Range(0, targetBuildings[ranEvent.eventIndex].Count);
             while (indexs.Contains(ranIdx))

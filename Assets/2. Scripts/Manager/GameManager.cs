@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum MapType { Utopia, Totopia, SnowRabbit }
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    public MapType curMapType;
+    public bool isLoad;
+
     private PostProcessManager postProcess;
     private SoundManager soundManager;
+    private DataBaseManager DataBaseManager;
 
     private void Awake()
     {
@@ -28,6 +34,7 @@ public class GameManager : MonoBehaviour
 
         postProcess = PostProcessManager.instance;
         soundManager = SoundManager.instance;
+        DataBaseManager = DataBaseManager.instance;
 
         SceneManager.sceneLoaded += OnLoadedScene;
     }

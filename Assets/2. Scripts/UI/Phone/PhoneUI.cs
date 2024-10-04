@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -23,6 +24,7 @@ public class PhoneUI : MonoBehaviour, IObserver
     public Transform mailParent;
     public GameObject[] mailPrefabs;
 
+    public List<MailData> mailDatas = new List<MailData>();
     public PanelData prevData;
 
     private Dictionary<EventState, PhoneState> matchState = new Dictionary<EventState, PhoneState>();
@@ -102,17 +104,28 @@ public class PhoneUI : MonoBehaviour, IObserver
         }
         else if (state == PhoneState.Level)
         {
-            data = new LevelPanelData(CityLevelManager.instance.levelIdx);
+            data = new LevelPanelData(CityLevelManager.instance.levelIdx, DateTime.Now);
         }
 
         SetPanelData(state, data);
     }
 
-    public void AddMail(MailType type, PanelData data)
+    public MailUI AddMail(MailType type, PanelData data)
     {
+        MailData mailData = new MailData();
+        if (type == MailType.Credit)
+        {
+            mailData.Save(type, data as CreditPanelData, false);
+        }
+        else if (type == MailType.Level)
+        {
+            mailData.Save(type, data as LevelPanelData, false);
+        }
+        mailDatas.Add(mailData);
+
         MailUI mail = Instantiate(mailPrefabs[(int)type], mailParent).GetComponent<MailUI>();
         mail.transform.SetAsFirstSibling();
-        mail.SetValue();
+        mail.SetValue(mailData);
 
         Button button = mail.gameObject.GetComponent<Button>();
 
@@ -123,7 +136,24 @@ public class PhoneUI : MonoBehaviour, IObserver
             button.onClick.AddListener(() => ChaneState((PhoneState)(type + 3)));
             button.onClick.AddListener(() => ReturnToCurrentData((PhoneState)(type + 3)));
             button.onClick.AddListener(() => PlayButtonClickSound());
+            button.onClick.AddListener(() => SetMailClickData(mailDatas.Count - 1));
         }
+
+        return mail;
+    }
+
+    public void LoadMail(MailData data)
+    {
+        data.creditPanelData.day = data.mailDay.Load();
+        data.levelPanelData.day = data.mailDay.Load();
+        MailUI mail = AddMail(data.mailType, data.mailType == MailType.Credit ? data.creditPanelData : data.levelPanelData);
+        mail.gameObject.GetComponent<Button>().interactable = !data.isClick;
+        mail.newImage.gameObject.SetActive(!data.isClick);
+    }
+
+    public void SetMailClickData(int index)
+    {
+        mailDatas[index].isClick = true;
     }
 
     public void PlayButtonClickSound()
@@ -141,7 +171,7 @@ public class PhoneUI : MonoBehaviour, IObserver
         {
             if (state == EventState.CityLevelUp)
             {
-                PanelData data = new LevelPanelData(CityLevelManager.instance.levelIdx);
+                PanelData data = new LevelPanelData(CityLevelManager.instance.levelIdx, RoutineManager.instance.day);
                 SetPanelData(PhoneState.Level, data);
                 AddMail(MailType.Level, data);
             }

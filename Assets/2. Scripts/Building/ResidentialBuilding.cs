@@ -8,7 +8,6 @@ public enum OptionType { Water = 0, Sewage, Electricity, SoundInsulation }
 public class ResidentialBuilding : Building
 {
     public static int cityResident;
-    public static int yesterDayResident;
     public static int income;
     public static int bonusIncome;
     public static int bonusCost;

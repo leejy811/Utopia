@@ -40,6 +40,7 @@ public struct BoundaryValue
 public class Building : MonoBehaviour
 {
     public string buildingName;
+    public int index;
     public int count;
     public int grade;
     public BuildingType type;
@@ -123,6 +124,16 @@ public class Building : MonoBehaviour
             ApplyEventEffect(newEvent.effectValue[newEvent.curDay], newEvent.valueType, true);
         else if (newEvent.type == EventType.Problem)
             ApplyEventProblem(newEvent, false);
+
+        if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
+            EventManager.instance.SetEventBuildings(this, true);
+        curEvents.Add(newEvent);
+    }
+
+    public void LoadEvent(Event newEvent)
+    {
+        if (newEvent.type == EventType.Event)
+            ApplyEventEffect(newEvent.effectValue[newEvent.curDay], newEvent.valueType, true);
 
         if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, true);

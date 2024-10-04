@@ -14,7 +14,6 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public GameObject[] buildingPrefabs;
 
     public int[] buildingCount;
-    public int[] buildingTypeCount;
     public int[] randomParameter;
     public int[,] buildingGradeCount;
     public int buildingRemoveCount;
@@ -64,12 +63,11 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         spawnTrans.gameObject.GetComponent<Tile>().ApplyInfluenceToBuilding();
         spawnTrans.gameObject.GetComponent<Tile>().Coloring(Grid.instance.isColorMode);
         building.SetPosition(spawnTrans.position);
-        CityLevelManager.instance.frames.Enqueue(new FrameInfo(index, new Vector2Int((int)spawnTrans.position.x, (int)spawnTrans.position.z), spawnTrans.rotation, true));
+        building.index = index;
+        CityLevelManager.instance.curFrames.Enqueue(new FrameInfo() { index = index, position = new Vector2Int((int)spawnTrans.position.x, (int)spawnTrans.position.z), rotation = spawnTrans.rotation, isInsert = true });
 
         buildingCount[index]++;
         building.count = buildingCount[index];
-
-        buildingTypeCount[(int)building.type]++;
         buildingGradeCount[(int)building.type, building.grade]++;
 
         RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
@@ -96,6 +94,60 @@ public class BuildingSpawner : MonoBehaviour, IObserver
             AkSoundEngine.PostEvent("Stop_construction", gameObject);
     }
 
+    public void LoadBuilding(BuildingData data)
+    {
+        Building building = Instantiate(buildingPrefabs[data.index], new Vector3(data.position.x, 0, data.position.y), data.rotation, transform).GetComponent<Building>();
+
+        if (building.type == BuildingType.Residential)
+        {
+            BoundaryValue value = building.values[ValueType.Resident];
+            value.cur = data.parameter;
+            building.values[ValueType.Resident] = value;
+        }
+        else
+        {
+            BoundaryValue value = building.values[ValueType.utility];
+            value.cur = data.parameter;
+            building.values[ValueType.utility] = value;
+        }
+
+        Tile tile = Grid.instance.tiles[data.position.x, data.position.y];
+        tile.building = building.gameObject;
+        tile.ApplyInfluenceToBuilding();
+        building.SetPosition(new Vector3(data.position.x, 0, data.position.y));
+        building.index = data.index;
+
+        buildingCount[data.index]++;
+        building.count = buildingCount[data.index];
+        buildingGradeCount[(int)building.type, building.grade]++;
+
+        building.happinessRate = data.happiness;
+        building.happinessDifference = data.happinessDifference;
+
+        for(int i = 0;i < data.curEvents.Count; i++)
+        {
+            building.LoadEvent(data.curEvents[i].Load());
+        }
+
+        RoutineManager.instance.SetCityHappiness(building.happinessRate, 1);
+
+        switch (building.type)
+        {
+            case BuildingType.Residential:
+                buildings.Add(building as ResidentialBuilding);
+                break;
+            case BuildingType.Commercial:
+                buildings.Add(building as CommercialBuilding);
+                break;
+            case BuildingType.Culture:
+                buildings.Add(building as CultureBuilding);
+                break;
+            case BuildingType.Service:
+                buildings.Add(building as ServiceBuilding);
+                break;
+        }
+    }
+
     public void RemoveBuilding(GameObject building)
     {
         for (int i = 0;i < buildings.Count; i++)
@@ -109,11 +161,10 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         }
 
         Building buildingComp = building.GetComponent<Building>();
-        buildingTypeCount[(int)buildingComp.type]--;
         buildingGradeCount[(int)buildingComp.type, buildingComp.grade]--;
         buildingRemoveCount++;
 
-        CityLevelManager.instance.frames.Enqueue(new FrameInfo(0, new Vector2Int((int)building.transform.position.x, (int)building.transform.position.z), building.transform.rotation, false));
+        CityLevelManager.instance.curFrames.Enqueue(new FrameInfo() { index = 0, position = new Vector2Int((int)building.transform.position.x, (int)building.transform.position.z), rotation = building.transform.rotation, isInsert = false });
 
         if (buildings.Count < 1)
             AkSoundEngine.PostEvent("Play_construction", gameObject);

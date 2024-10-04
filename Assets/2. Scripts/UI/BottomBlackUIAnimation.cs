@@ -16,15 +16,16 @@ public class BottomBlackUIAnimation : MonoBehaviour
 
     IEnumerator DelayedAction()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
 
         RectTransform rectTransform = GetComponent<RectTransform>();
 
+        if (GameManager.instance.isLoad)
+            DataBaseManager.instance.Load();
 
         rectTransform.DOAnchorPosY(rectTransform.anchoredPosition.y + moveDistance, duration).SetEase(Ease.InOutQuad).OnComplete(() =>
         {
             UIManager.instance.MovePanelAnim(2f, false);
-            //UIManager.instance.notifyObserver(EventState.CityLevelUp);
             UIManager.instance.notifyObserver(EventState.GameStart);
         });
     }
