@@ -88,11 +88,9 @@ public class UIManager : MonoBehaviour, ISubject
     private void Start()
     {
         DOTween.SetTweensCapacity(500, 50);
-        UpdateDailyInfo();
-        Setmoney();
         InitObserver();
         notifyObserver(EventState.LockButton);
-        SetEventInfo(EventManager.instance.curEvents.ToArray());
+        InitInfoUI();
     }
 
     #region SetValue
@@ -103,6 +101,13 @@ public class UIManager : MonoBehaviour, ISubject
             return data.ToString();
         else
             return string.Format("{0:#,###}", data);
+    }
+
+    public void InitInfoUI()
+    {
+        UpdateDailyInfo();
+        Setmoney();
+        SetEventInfo(EventManager.instance.curEvents.ToArray());
     }
 
     public void UpdateDailyInfo()

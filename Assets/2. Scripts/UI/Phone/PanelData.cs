@@ -3,18 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PanelData
+[Serializable]
+public class PanelData
 {
-
+    public DateTime day;
 }
 
+[Serializable]
 public class CreditPanelData : PanelData
 {
-    public int money { get; private set; }
-    public int score { get; private set; }
-    public int debt { get; private set; }
-    public ResultType result { get; private set; }
-    public DateTime day { get; private set; }
+    public int money;
+    public int score;
+    public int debt;
+    public ResultType result;
 
     public CreditPanelData(int money, int score, int debt, ResultType result, DateTime day)
     {
@@ -26,9 +27,14 @@ public class CreditPanelData : PanelData
     }
 }
 
+[Serializable]
 public class LevelPanelData : PanelData
 {
-    public int level { get; private set; }
+    public int level;
 
-    public LevelPanelData(int level) { this.level = level; }
+    public LevelPanelData(int level, DateTime day) 
+    { 
+        this.level = level;
+        this.day = day;
+    }
 }

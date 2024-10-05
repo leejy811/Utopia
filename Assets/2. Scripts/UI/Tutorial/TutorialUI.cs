@@ -101,7 +101,7 @@ public class TutorialUI : MonoBehaviour, IObserver
             InputManager.SetCanInput(true);
             AkSoundEngine.SetRTPCValue("CLICK", 1);
 
-            if (curState == EventState.GameStart)
+            if (curState == EventState.GameStart && !GameManager.instance.isLoad)
                 UIManager.instance.notifyObserver(EventState.CityLevelUp);
         }
     }

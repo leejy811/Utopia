@@ -12,7 +12,6 @@ public class RoutineManager : MonoBehaviour
 
     public DateTime day;
     public float cityHappiness;
-    public float cityHappinessDifference;
     public ResultType weekResult;
     public int[] debtsOfWeek;
     public int debt;
@@ -25,11 +24,12 @@ public class RoutineManager : MonoBehaviour
     public float lightDailySpeed;
     public float defalutAngleX;
 
+    public int totalIncome;
+    public int payFailTime;
+    public int paySuccessTime;
+
     public float playTime;
     private Coroutine lightCoroutine;
-    private int totalIncome;
-    private int payFailTime;
-    private int paySuccessTime;
 
     private void Awake()
     {
@@ -91,6 +91,8 @@ public class RoutineManager : MonoBehaviour
             UIManager.instance.UpdateDailyInfo();
 
             lightCoroutine = StartCoroutine(DailyLight());
+
+            DataBaseManager.instance.Save();
         }
         );
     }
@@ -211,13 +213,10 @@ public class RoutineManager : MonoBehaviour
 
         if (BuildingSpawner.instance.buildings.Count != 0)
         {
-            cityHappinessDifference = total / BuildingSpawner.instance.buildings.Count - cityHappiness;
-            cityHappiness += cityHappinessDifference;
+            cityHappiness = total / BuildingSpawner.instance.buildings.Count;
         }
         else
             cityHappiness = 0;
-
-        ResidentialBuilding.yesterDayResident = ResidentialBuilding.cityResident;
 
         AkSoundEngine.SetRTPCValue("HAPPY", cityHappiness);
     }

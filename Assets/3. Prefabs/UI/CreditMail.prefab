@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dataText: {fileID: 7177877173752208979}
+  newImage: {fileID: 3682450101060511919}
   titleText: {fileID: 7177877172326352867}
 --- !u!114 &4633985973020356347
 MonoBehaviour:

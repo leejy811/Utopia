@@ -16,7 +16,7 @@ public class TopBlackUIAnimation : MonoBehaviour
 
     IEnumerator DelayedAction()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
 
         RectTransform rectTransform = GetComponent<RectTransform>();
 

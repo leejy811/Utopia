@@ -7,10 +7,11 @@ public class CreditMailUI : MailUI
 {
     public TextMeshProUGUI titleText;
 
-    public override void SetValue()
+    public override void SetValue(MailData data)
     {
-        ResultType result = RoutineManager.instance.weekResult;
-        int score = RoutineManager.instance.creditRating;
+        CreditPanelData creditData = data.creditPanelData;
+        ResultType result = creditData.result;
+        int score = creditData.score;
         
         if (result == ResultType.PayFail)
         {
@@ -23,6 +24,6 @@ public class CreditMailUI : MailUI
             dataText.text = "신용 점수가 " + (score - 10).ToString() + "에서 " + score.ToString() + "로 상승하였습니다.\n";
         }
 
-        dataText.text += RoutineManager.instance.day.ToString("yyyy.MM.dd");
+        dataText.text += data.mailDay.Load().ToString("yyyy.MM.dd");
     }
 }
