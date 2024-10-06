@@ -39,7 +39,7 @@ public class EnterBuilding : UtilityBuilding
 
         if (!isInit)
         {
-            ExpectHappiness();
+            ExpectHappiness(0);
         }
     }
 }

@@ -180,19 +180,12 @@ public class Building : MonoBehaviour
 
     public void SetHappiness(int amount)
     {
-        happinessDifference += amount;
-
         if (happinessRate + amount < 0)
-        {
-            happinessRate = 0;
-            return;
-        }
+            amount = happinessRate * -1;
         else if (happinessRate + amount > 100)
-        {
-            happinessRate = 100;
-            return;
-        }
+            amount = 100 - happinessRate;
 
+        happinessDifference += amount;
         happinessRate += amount;
     }
 
@@ -303,7 +296,7 @@ public class Building : MonoBehaviour
        
     }
 
-    public void ExpectHappiness()
+    public void ExpectHappiness(BuildingType type)
     {
         int amount = UpdateHappiness(true, (int)type);
         UIManager.instance.SetHappinessPopUp(amount, transform.position);

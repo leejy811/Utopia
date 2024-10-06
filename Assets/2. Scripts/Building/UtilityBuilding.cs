@@ -160,7 +160,7 @@ public class UtilityBuilding : Building
 
         if (!isInit)
         {
-            ExpectHappiness();
+            ExpectHappiness(0);
         }
     }
 }
