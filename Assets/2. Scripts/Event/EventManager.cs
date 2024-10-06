@@ -104,7 +104,6 @@ public class EventManager : MonoBehaviour
         }
 
         targetBuildings = buildings;
-        globalEvents.Clear();
     }
 
     private void ResetCount()
