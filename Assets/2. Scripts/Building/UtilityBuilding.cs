@@ -16,14 +16,14 @@ public class UtilityBuilding : Building
         values[ValueType.utility] = utilityValue;
     }
 
-    public void SetParameter(int sign)
+    public virtual void SetParameter(int sign)
     {
         BoundaryValue utility = values[ValueType.utility];
         utility.cur = GetRandomParameter(sign);
         values[ValueType.utility] = utility;
     }
 
-    public float GetRandomParameter(int sign)
+    public virtual float GetRandomParameter(int sign)
     {
         return utilityValue.cur + (utilityValue.cur * 0.25f * sign);
     }
@@ -37,7 +37,17 @@ public class UtilityBuilding : Building
         if (type == BuildingType.Commercial)
             CommercialBuilding.income += res;
         else if (type == BuildingType.Culture)
-            CultureBuilding.income += res;
+        {
+            switch (GameManager.instance.curMapType)
+            {
+                case MapType.Utopia:
+                    CultureBuilding.income += res;
+                    break;
+                case MapType.Totopia:
+                    EnterBuilding.income += res;
+                    break;
+            }
+        }
 
         return res;
     }
@@ -84,8 +94,17 @@ public class UtilityBuilding : Building
             }
             else if (type == BuildingType.Culture)
             {
-                CultureBuilding.bonusIncome += income;
-                CultureBuilding.bonusCost += cost;
+                switch (GameManager.instance.curMapType)
+                {
+                    case MapType.Utopia:
+                        CultureBuilding.bonusIncome += income;
+                        CultureBuilding.bonusCost += cost;
+                        break;
+                    case MapType.Totopia:
+                        EnterBuilding.bonusIncome += income;
+                        EnterBuilding.bonusCost += cost;
+                        break;
+                }
             }
         }
 
@@ -141,8 +160,7 @@ public class UtilityBuilding : Building
 
         if (!isInit)
         {
-            int amount = UpdateHappiness(true);
-            UIManager.instance.SetHappinessPopUp(amount, transform.position);
+            ExpectHappiness();
         }
     }
 }

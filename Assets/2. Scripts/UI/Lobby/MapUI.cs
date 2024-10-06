@@ -73,7 +73,7 @@ public class MapUI : MonoBehaviour
         else
             data = DataBaseManager.instance.clearData[(int)mapType];
 
-        dayText.text = data.day.year.ToString() + " / "+ data.day.month.ToString() + " / " + data.day.day.ToString();
+        dayText.text = data.day.year.ToString("0000") + " / "+ data.day.month.ToString("00") + " / " + data.day.day.ToString("00");
         timeText.text = SecondToString(data.playTime);
         destroyText.text = data.destroyCount.ToString();
         happinessText.text = data.happiness.ToString();
@@ -92,6 +92,11 @@ public class MapUI : MonoBehaviour
         mapImage.gameObject.SetActive(isExist);
         lockImage.gameObject.SetActive(!isExist);
         gameObject.GetComponent<ScaleMouseOver>().interactable = isExist;
+
+        foreach (Button button in buttons)
+        {
+            button.interactable = isExist;
+        }
     }
 
     private string SecondToString(float second)

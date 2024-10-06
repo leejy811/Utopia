@@ -196,8 +196,7 @@ public class ResidentialBuilding : Building
 
         if (!isInit)
         {
-            int amount = UpdateHappiness(true, (int)type);
-            UIManager.instance.SetHappinessPopUp(amount, transform.position);
+            ExpectHappiness();
         }
     }
 }

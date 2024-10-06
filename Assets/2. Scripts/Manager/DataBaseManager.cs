@@ -241,6 +241,11 @@ public class MapData
     public int happiness;
     public int[] buildingTypeCount = new int[System.Enum.GetValues(typeof(BuildingType)).Length];
 
+    public MapData()
+    {
+        day = new DayData();
+    }
+
     public void Save(MapType mapType)
     {
         this.mapType = mapType;

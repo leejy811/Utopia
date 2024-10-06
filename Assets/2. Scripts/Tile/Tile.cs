@@ -95,7 +95,11 @@ public class Tile : MonoBehaviour
             }
         }
         else
+        {
             buildCom.ApplyInfluence(influenceValues[(int)BuildingType.Residential], 0, true);
+            if (GameManager.instance.curMapType == MapType.Totopia)
+                buildCom.ApplyInfluence(influenceValues[(int)BuildingType.Culture], BuildingType.Culture, true);
+        }
     }
 
     public void SetTileColor(Color color)

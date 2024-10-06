@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
 
     private PostProcessManager postProcess;
     private SoundManager soundManager;
-    private DataBaseManager DataBaseManager;
 
     private void Awake()
     {
@@ -30,11 +29,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //PlayerPrefs.DeleteAll();
-
         postProcess = PostProcessManager.instance;
         soundManager = SoundManager.instance;
-        DataBaseManager = DataBaseManager.instance;
 
         SceneManager.sceneLoaded += OnLoadedScene;
     }
@@ -54,7 +50,7 @@ public class GameManager : MonoBehaviour
         AkSoundEngine.PostEvent("Stop_ForestAmbienceInLobby", Camera.main.gameObject);
         AkSoundEngine.PostEvent("Stop_Lobby", Camera.main.gameObject);
 
-        StartCoroutine(PlayLoadScene("InGameScene"));
+        StartCoroutine(PlayLoadScene("InGameScene_" + (int)curMapType));
     }
 
     IEnumerator PlayLoadScene(string SceneName)

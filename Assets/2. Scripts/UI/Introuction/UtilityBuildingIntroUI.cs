@@ -13,8 +13,9 @@ public class UtilityBuildingIntroUI : BuildingIntroUI
     public ValueSlider userSlider;
     public TextMeshProUGUI paramHappinessText;
     public TextMeshProUGUI paramBonusText;
+    public GameObject minigamePanel;
 
-    string[] valueTypeString = { "상품 가격", "입장료", "활동비" };
+    public string[] valueTypeString = { "상품 가격", "입장료", "활동비" };
 
     public override void SetValue(Building building)
     {
@@ -23,6 +24,11 @@ public class UtilityBuildingIntroUI : BuildingIntroUI
         influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString() + "(" + GetSignString(building.additionalInfluencePower, "+") + ")";
         valueTypeText.text = valueTypeString[(int)building.type - 1];
         SetParamText(building, (int)building.values[ValueType.user].CheckBoundary() + 1, (int)building.values[ValueType.utility].CheckBoundary() + 1);
+
+        if (GameManager.instance.curMapType == MapType.Totopia && building.type == BuildingType.Culture)
+            minigamePanel.SetActive(true);
+        else 
+            minigamePanel.SetActive(false);
     }
 
     public void SetParamText(Building building, int userBoundary, int utilityBoundary)

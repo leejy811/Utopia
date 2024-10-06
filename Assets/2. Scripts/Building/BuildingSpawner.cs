@@ -81,7 +81,10 @@ public class BuildingSpawner : MonoBehaviour, IObserver
                 buildings.Add(building as CommercialBuilding);
                 break;
             case BuildingType.Culture:
-                buildings.Add(building as CultureBuilding);
+                if (GameManager.instance.curMapType == MapType.Utopia)
+                    buildings.Add(building as CultureBuilding);
+                else if (GameManager.instance.curMapType == MapType.Totopia)
+                    buildings.Add(building as EnterBuilding);
                 break;
             case BuildingType.Service:
                 buildings.Add(building as ServiceBuilding);
@@ -140,7 +143,10 @@ public class BuildingSpawner : MonoBehaviour, IObserver
                 buildings.Add(building as CommercialBuilding);
                 break;
             case BuildingType.Culture:
-                buildings.Add(building as CultureBuilding);
+                if (GameManager.instance.curMapType == MapType.Utopia)
+                    buildings.Add(building as CultureBuilding);
+                else if (GameManager.instance.curMapType == MapType.Totopia)
+                    buildings.Add(building as EnterBuilding);
                 break;
             case BuildingType.Service:
                 buildings.Add(building as ServiceBuilding);

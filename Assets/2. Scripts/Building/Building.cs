@@ -303,6 +303,12 @@ public class Building : MonoBehaviour
        
     }
 
+    public void ExpectHappiness()
+    {
+        int amount = UpdateHappiness(true, (int)type);
+        UIManager.instance.SetHappinessPopUp(amount, transform.position);
+    }
+
     public static void InitStaticCalcValue()
     {
         ResidentialBuilding.income = 0;
