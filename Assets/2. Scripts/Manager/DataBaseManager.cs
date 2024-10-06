@@ -316,7 +316,7 @@ public class DataBaseManager : MonoBehaviour
     private void Start()
     {
         path = Application.persistentDataPath;
-        fileName = "/SaveData";
+        fileName = "/SaveData_";
         InitMapData();
     }
     
@@ -346,6 +346,11 @@ public class DataBaseManager : MonoBehaviour
 
         string jsonData = File.ReadAllText(path + fileName + mapType.ToString());
         return JsonUtility.FromJson<MapData>(jsonData);
+    }
+
+    public void DeleteMapData(MapType mapType, string fileName)
+    {
+        File.Delete(path + fileName + mapType.ToString());
     }
 
     public void Save()
@@ -379,7 +384,7 @@ public class DataBaseManager : MonoBehaviour
         data.levelPanelData = UIManager.instance.phone.panels[(int)PhoneState.Level].GetComponent<LevelPanelUI>().data as LevelPanelData;
 
         string jsonData = JsonUtility.ToJson(data, true);
-        File.WriteAllText(path + fileName, jsonData);
+        File.WriteAllText(path + fileName + GameManager.instance.curMapType, jsonData);
 
         MapType type = GameManager.instance.curMapType;
         SaveMapData(mapData[(int)type], type, "/MapData_");
@@ -387,7 +392,7 @@ public class DataBaseManager : MonoBehaviour
 
     public void Load()
     {
-        string jsonData = File.ReadAllText(path + fileName);
+        string jsonData = File.ReadAllText(path + fileName + GameManager.instance.curMapType);
         data = JsonUtility.FromJson<Data>(jsonData);
 
         data.moneyData.Load();

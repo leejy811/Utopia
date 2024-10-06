@@ -73,5 +73,6 @@ public class EndGameUI : MonoBehaviour
 
         MapType type = GameManager.instance.curMapType;
         DataBaseManager.instance.SaveMapData(DataBaseManager.instance.clearData[(int)type], type, "/ClearData_");
+        DataBaseManager.instance.DeleteMapData(type, "/MapData_");
     }
 }
