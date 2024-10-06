@@ -26,7 +26,7 @@ public class PaybackUI : CreditUI
 
         foreach (var dayText in curDayTexts)
         {
-            dayText.text = data.day.ToString("yy.MM.dd");
+            dayText.text = data.day.Load().ToString("yy.MM.dd");
         }
     }
 }

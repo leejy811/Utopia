@@ -218,7 +218,7 @@ public class MailData
     {
         this.mailType = mailType;
         creditPanelData = panelData;
-        mailDay.Save(panelData.day);
+        mailDay = panelData.day;
         this.isClick = isClick;
     }
 
@@ -226,7 +226,7 @@ public class MailData
     {
         this.mailType = mailType;
         levelPanelData = panelData;
-        mailDay.Save(panelData.day);
+        mailDay = panelData.day;
         this.isClick = isClick;
     }
 }

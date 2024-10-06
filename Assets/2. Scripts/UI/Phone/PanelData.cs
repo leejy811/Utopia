@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class PanelData
 {
-    public DateTime day;
+    public DayData day = new DayData();
 }
 
 [Serializable]
@@ -23,7 +23,7 @@ public class CreditPanelData : PanelData
         this.score = score;
         this.debt = debt;
         this.result = result;
-        this.day = day;
+        this.day.Save(day);
     }
 }
 
@@ -35,6 +35,6 @@ public class LevelPanelData : PanelData
     public LevelPanelData(int level, DateTime day) 
     { 
         this.level = level;
-        this.day = day;
+        this.day.Save(day);
     }
 }

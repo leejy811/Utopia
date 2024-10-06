@@ -144,8 +144,8 @@ public class PhoneUI : MonoBehaviour, IObserver
 
     public void LoadMail(MailData data)
     {
-        data.creditPanelData.day = data.mailDay.Load();
-        data.levelPanelData.day = data.mailDay.Load();
+        data.creditPanelData.day = data.mailDay;
+        data.levelPanelData.day = data.mailDay;
         MailUI mail = AddMail(data.mailType, data.mailType == MailType.Credit ? data.creditPanelData : data.levelPanelData);
         mail.gameObject.GetComponent<Button>().interactable = !data.isClick;
         mail.newImage.gameObject.SetActive(!data.isClick);

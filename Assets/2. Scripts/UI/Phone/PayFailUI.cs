@@ -20,6 +20,6 @@ public class PayFailUI : CreditUI
         int debt = data.debt;
         totalMoneyText.text = GetCommaText(debt);
 
-        payDayText.text = data.day.ToString("yy.MM.dd");
+        payDayText.text = data.day.Load().ToString("yy.MM.dd");
     }
 }
