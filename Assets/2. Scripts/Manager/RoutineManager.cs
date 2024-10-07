@@ -65,20 +65,45 @@ public class RoutineManager : MonoBehaviour
 
     public void DailyUpdate()
     {
-        InputManager.SetCanInput(false);
-
-        if (lightCoroutine != null)
-            StopCoroutine(lightCoroutine);
-        Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
-
-        Building.InitStaticCalcValue();
-
-        Tile.income = 0;
-        CalculateIncome();
-
-        mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
+        if (GameManager.instance.curMapType == MapType.Utopia)
         {
-            InputManager.SetCanInput(true);
+            InputManager.SetCanInput(false);
+
+            if (lightCoroutine != null)
+                StopCoroutine(lightCoroutine);
+            Vector3 angle = mainLight.gameObject.transform.localEulerAngles;
+
+            Building.InitStaticCalcValue();
+
+            Tile.income = 0;
+            CalculateIncome();
+
+            mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
+            {
+                InputManager.SetCanInput(true);
+                day = day.AddDays(1);
+
+                UpdateHappiness();
+                EventManager.instance.EffectUpdate();
+                EventManager.instance.CheckEvents();
+                EventManager.instance.RandomRoulette(1);
+                UIManager.instance.SetEventInfo(EventManager.instance.curEvents.ToArray());
+                ApplyDept();
+
+                UIManager.instance.UpdateDailyInfo();
+
+                lightCoroutine = StartCoroutine(DailyLight());
+
+                DataBaseManager.instance.Save();
+            }
+            );
+        }
+        else if (GameManager.instance.curMapType == MapType.Totopia)
+        {
+            Building.InitStaticCalcValue();
+
+            Tile.income = 0;
+            CalculateIncome();
             day = day.AddDays(1);
 
             UpdateHappiness();
@@ -87,14 +112,13 @@ public class RoutineManager : MonoBehaviour
             EventManager.instance.RandomRoulette(1);
             UIManager.instance.SetEventInfo(EventManager.instance.curEvents.ToArray());
             ApplyDept();
+            ChipManager.instance.CostUpdate();
+            ChipManager.instance.RatioUpdate();
 
             UIManager.instance.UpdateDailyInfo();
 
-            lightCoroutine = StartCoroutine(DailyLight());
-
             DataBaseManager.instance.Save();
         }
-        );
     }
 
     IEnumerator DailyLight()
@@ -108,6 +132,8 @@ public class RoutineManager : MonoBehaviour
 
     public void OnOffDailyLight(bool isOn)
     {
+        if (GameManager.instance.curMapType == MapType.Totopia) return;
+
         if (isOn)
             lightCoroutine = StartCoroutine(DailyLight());
         else if (lightCoroutine != null)
