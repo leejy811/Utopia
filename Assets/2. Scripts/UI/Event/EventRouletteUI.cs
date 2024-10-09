@@ -162,8 +162,8 @@
 //    private void PlayLeverAnim()
 //    {
 //        lever.transform.DOLocalRotate(new Vector3(120, 0, 0), leverDownSecond, RotateMode.Fast)
-//            .OnComplete(() => 
-//            { 
+//            .OnComplete(() =>
+//            {
 //                lever.transform.DOLocalRotate(new Vector3(0, 0, 0), leverUpSecond, RotateMode.Fast)
 //                    .SetEase(Ease.InOutSine);
 //            }
@@ -265,7 +265,7 @@
 //        RoutineManager.instance.OnOffDailyLight(false);
 //        state = RouletteState.Before;
 //        slotMachine.transform.localPosition = new Vector3(530, slotMachine.transform.localPosition.y, slotMachine.transform.localPosition.z);
-//        slotMachine.transform.DOLocalMoveX(220, slotmachineOnSecond).OnComplete(() =>{ state = RouletteState.Start; });
+//        slotMachine.transform.DOLocalMoveX(220, slotmachineOnSecond).OnComplete(() => { state = RouletteState.Start; });
 //        InitSlot();
 //        costText.text = GetCommaText(EventManager.instance.cost);
 
@@ -294,7 +294,7 @@
 
 //    public void Notify(EventState state)
 //    {
-//        if(state == EventState.SlotMachine)
+//        if (state == EventState.SlotMachine)
 //        {
 //            if (!gameObject.activeSelf)
 //                gameObject.SetActive(true);

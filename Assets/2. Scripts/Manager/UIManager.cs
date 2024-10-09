@@ -68,6 +68,9 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Tutorial")]
     public TutorialUI tutorial;
 
+    [Header("Minigame")]
+    public MinigameUI[] minigames;
+
     #endregion
 
     private Building targetBuilding;
@@ -397,6 +400,13 @@ public class UIManager : MonoBehaviour, ISubject
         GameManager.instance.QuitGame();
     }
 
+    public void OnClickMinigame()
+    {
+        EnterBuilding enterBuilding = ShopManager.instance.GetPickBuilding().GetComponent<EnterBuilding>();
+        minigames[(int)enterBuilding.minigameType].InitGame(enterBuilding);
+        notifyObserver(EventState.Minigame);
+    }
+
     public void OnClickSound(string name)
     {
         SoundManager.instance.PostEvent(name);
@@ -466,6 +476,14 @@ public class UIManager : MonoBehaviour, ISubject
         foreach (UILockButton lockButton in lockButtons)
         {
             addObserver(lockButton);
+        }
+
+        if(GameManager.instance.curMapType == MapType.Totopia)
+        {
+            foreach (MinigameUI game in minigames)
+            {
+                addObserver(game);
+            }
         }
     }
     #endregion

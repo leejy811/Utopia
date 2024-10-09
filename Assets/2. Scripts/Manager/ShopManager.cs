@@ -307,6 +307,11 @@ public class ShopManager : MonoBehaviour, IObserver
         curPickObject.transform.Rotate(Vector3.up * 90f);
     }
 
+    public GameObject GetPickBuilding()
+    {
+        return curPickObject;
+    }
+
     private void SetSolveEvent(GameObject pickObject = null)
     {
         if (pickObject != null)

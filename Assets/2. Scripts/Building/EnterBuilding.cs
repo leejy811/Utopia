@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum MinigameType { SlotMachine, BlackJack, HorseRace }
+
 public class EnterBuilding : UtilityBuilding
 {
     public static int income;
     public static int bonusIncome;
     public static int bonusCost;
 
+    public MinigameType minigameType;
     public int betChip;
     public int betTimes;
     public BoundaryValue RandomChip;
