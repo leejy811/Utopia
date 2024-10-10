@@ -112,41 +112,6 @@ public class EventManager : MonoBehaviour
         preCountDay = Random.Range(randomCount.x, randomCount.y);
     }
 
-    //private List<Event> RemoveDuplicate(List<Event> ranEvents)
-    //{
-    //    List<Event> temp = new List<Event>();
-    //    int idx = 0;
-
-    //    for (int i = 0; i < ranEvents.Count; i++)
-    //    {
-    //        Event e = ranEvents[i];
-    //        e.duplication = 1;
-    //        ranEvents[i] = e;
-    //    }
-
-    //    for (int i = 0;i < ranEvents.Count; i++)
-    //    {
-    //        if (temp.Contains(ranEvents[idx]))
-    //        {
-    //            int tmpIdx = temp.FindIndex(x => x == ranEvents[idx]);
-    //            Event e = temp[tmpIdx];
-    //            e.duplication++;
-    //            temp[tmpIdx] = e;
-    //            ranEvents.RemoveAt(idx);
-    //        }
-    //        else
-    //        {
-    //            temp.Add(ranEvents[idx]);
-    //            idx++;
-    //        }
-    //    }
-
-    //    if (temp.Count == 1 && temp[0].duplication == 3)
-    //        ResetCount();
-
-    //    return temp;
-    //}
-
     public void RandomRoulette(int eventNum)
     {
         if (!CheckEventCondition()) return;

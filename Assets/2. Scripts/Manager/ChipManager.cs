@@ -67,4 +67,14 @@ public class ChipManager : MonoBehaviour
         curTradeTimes--;
         curChip += amount;
     }
+
+    public bool PayChip(int amount)
+    {
+        if(curChip - amount < 0)
+            return false;
+
+        curChip -= amount;
+
+        return true;
+    }
 }
