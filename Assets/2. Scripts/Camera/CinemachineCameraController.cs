@@ -46,7 +46,9 @@ public class CinemachineCameraController : MonoBehaviour
             MoveCamera();
             RotateCamera();
         }
-        ZoomCamera();
+
+        if (GameManager.instance.curMapType == MapType.Totopia && !UIManager.instance.phone.panels[(int)PhoneState.GameList].activeSelf)
+            ZoomCamera();
         PitchCamera();
         UpdateCameraSettings();
         AkSoundEngine.SetRTPCValue("ZOOM", publicOrthographicSize);

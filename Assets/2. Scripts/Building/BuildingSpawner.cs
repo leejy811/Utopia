@@ -10,6 +10,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     static public BuildingSpawner instance;
 
     public List<Building> buildings;
+    public List<EnterBuilding> gameBuildings;
 
     public GameObject[] buildingPrefabs;
 
@@ -84,7 +85,10 @@ public class BuildingSpawner : MonoBehaviour, IObserver
                 if (GameManager.instance.curMapType == MapType.Utopia)
                     buildings.Add(building as CultureBuilding);
                 else if (GameManager.instance.curMapType == MapType.Totopia)
+                {
                     buildings.Add(building as EnterBuilding);
+                    gameBuildings.Add(building as EnterBuilding);
+                }
                 break;
             case BuildingType.Service:
                 buildings.Add(building as ServiceBuilding);
@@ -146,7 +150,10 @@ public class BuildingSpawner : MonoBehaviour, IObserver
                 if (GameManager.instance.curMapType == MapType.Utopia)
                     buildings.Add(building as CultureBuilding);
                 else if (GameManager.instance.curMapType == MapType.Totopia)
+                {
                     buildings.Add(building as EnterBuilding);
+                    gameBuildings.Add(building as EnterBuilding);
+                }
                 break;
             case BuildingType.Service:
                 buildings.Add(building as ServiceBuilding);
@@ -162,6 +169,9 @@ public class BuildingSpawner : MonoBehaviour, IObserver
             {
                 RoutineManager.instance.SetCityHappiness(buildings[i].happinessRate * -1, -1);
                 buildings.RemoveAt(i);
+
+                if (GameManager.instance.curMapType == MapType.Totopia && building.GetComponent<Building>().type == BuildingType.Culture)
+                    gameBuildings.Remove(building.GetComponent<EnterBuilding>());
                 break;
             }
         }

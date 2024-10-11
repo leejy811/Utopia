@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum PhoneState { Main, Bank, Mail, Credit, Level, Chip }
+public enum PhoneState { Main, Bank, Mail, Credit, Level, Chip, GameList }
 public enum MailType { Credit, Level }
 
 public class PhoneUI : MonoBehaviour, IObserver
