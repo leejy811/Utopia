@@ -203,7 +203,7 @@ public class BlackJackUI : MinigameUI
     public void OnClickDrawCard()
     {
         player.Add(DrawCard());
-        PrintHand(player);
+        PrintHand(player, "Player");
 
         if (CalculateResult(player) > 21)
         {
@@ -232,8 +232,8 @@ public class BlackJackUI : MinigameUI
         dealer.Add(DrawCard());
         dealer.Add(DrawCard());
 
-        PrintHand(player);
-        PrintHand(dealer);
+        PrintHand(player, "Player");
+        PrintHand(dealer, "Dealer");
     }
 
     private void DrawDealer()
@@ -242,7 +242,7 @@ public class BlackJackUI : MinigameUI
         {
             dealer.Add(DrawCard());
         }
-        PrintHand(dealer);
+        PrintHand(dealer, "Dealer");
 
         if (CalculateResult(dealer) > 21)
         {
@@ -324,9 +324,9 @@ public class BlackJackUI : MinigameUI
         }
     }
 
-    private void PrintHand(List<Card> cards)
+    private void PrintHand(List<Card> cards, string name)
     {
-        string res = "";
+        string res = name + " : ";
 
         foreach(Card card in cards)
         {

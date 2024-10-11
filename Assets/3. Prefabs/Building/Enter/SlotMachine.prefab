@@ -88,6 +88,7 @@ MonoBehaviour:
     cur: 0
   minigameType: 0
   betChip: 0
+  maxBetTimes: 3
   betTimes: 3
   RandomChip:
     max: 10
