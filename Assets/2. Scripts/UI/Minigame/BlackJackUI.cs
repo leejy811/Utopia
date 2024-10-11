@@ -1,7 +1,9 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum BlackJackState { Lobby, Betting, Play }
 public enum CardShape { Spade, Diamond, Heart, Clover }
@@ -19,6 +21,30 @@ public struct Card
     }
 }
 
+[System.Serializable]
+public class MsgPanel
+{
+    public GameObject panel;
+    public TextMeshProUGUI msgText;
+
+    public void OnMessage(string msg, float sec)
+    {
+        panel.SetActive(true);
+
+        Image[] images = panel.GetComponentsInChildren<Image>();
+
+        foreach (Image image in images)
+        {
+            image.color = Color.white;
+            image.DOFade(0.0f, sec);
+        }
+
+        msgText.text = msg;
+        msgText.color = Color.white;
+        msgText.DOFade(0.0f, sec).OnComplete(() => { panel.SetActive(false); });
+    }
+}
+
 public class BlackJackUI : MinigameUI
 {
     [Header("Panels")]
@@ -28,11 +54,21 @@ public class BlackJackUI : MinigameUI
     public TextMeshProUGUI baseChipText;
     public TextMeshProUGUI curChipText;
     public TextMeshProUGUI betTimesText_Lobby;
+    public MsgPanel errorMsg_Lobby;
 
     [Header("Betting")]
     public TextMeshProUGUI betChipText;
     public TextMeshProUGUI remainChipText;
     public TextMeshProUGUI betTimesText_Betting;
+    public MsgPanel errorMsg_Betting;
+
+    [Header("Play")]
+    public MsgPanel winResultMsg;
+    public MsgPanel defeatResultMsg;
+
+    [Header("Parameter")]
+    public float errorMsgSecond;
+    public float resultSecond;
 
     private int betChip;
     private List<Card> deck = new List<Card>();
@@ -51,7 +87,7 @@ public class BlackJackUI : MinigameUI
         reward[GameResult.Player_Win] = 2;
         reward[GameResult.Dealer_BlackJack] = -2;
         reward[GameResult.Dealer_Win] = -1;
-        reward[GameResult.Draw] = -1;
+        reward[GameResult.Draw] = 0;
     }
 
     public override void InitGame(EnterBuilding building)
@@ -59,6 +95,7 @@ public class BlackJackUI : MinigameUI
         base.InitGame(building);
         SetState(BlackJackState.Lobby);
         betChip = building.betChip;
+        InputManager.SetCanInput(false);
     }
 
     #region SetFunc
@@ -92,37 +129,68 @@ public class BlackJackUI : MinigameUI
         {
             panels[i].SetActive(i == (int)state);
         }
+
+        SetUI(state);
+    }
+
+    private void SetResultPanel(GameResult result)
+    {
+        switch (result)
+        {
+            case GameResult.Player_BlackJack:
+                winResultMsg.OnMessage("!! Player BlackJack !!", resultSecond);
+                break;
+            case GameResult.Player_Win:
+                winResultMsg.OnMessage("!! Player Win !!", resultSecond);
+                break;
+            case GameResult.Dealer_BlackJack:
+                defeatResultMsg.OnMessage("!! Dealerb BlackJack !!", resultSecond);
+                break;
+            case GameResult.Dealer_Win:
+                defeatResultMsg.OnMessage("!! Dealer Win !!", resultSecond);
+                break;
+            case GameResult.Draw:
+                defeatResultMsg.OnMessage("!! Draw !!", resultSecond);
+                break;
+        }
+
+        StartCoroutine(ReturnToLobby(resultSecond));
     }
     #endregion
 
     #region OnClick
     public void OnClickStartGame()
     {
-        SetState(BlackJackState.Betting);
+        if (curGameBuilding.betTimes == 0)
+            errorMsg_Lobby.OnMessage("실행 가능 횟수를\n모두 소진하였습니다.", errorMsgSecond);
+        else if(ChipManager.instance.curChip < curGameBuilding.betChip)
+            errorMsg_Lobby.OnMessage("해당 미니 게임을 하기 위한\n칩이 부족합니다.", errorMsgSecond);
+        else
+        {
+            curGameBuilding.betTimes--;
+            SetState(BlackJackState.Betting);
+        }
     }
 
     public void OnClickQuitGame()
     {
+        InputManager.SetCanInput(true);
         UIManager.instance.notifyObserver(EventState.None);
     }
 
     public void OnClickBetChip(int amount)
     {
         if(betChip + amount > ChipManager.instance.curChip)
-        {
-            //TODO - Error Msg
-            return;
-        }
+            errorMsg_Betting.OnMessage("배팅하기 위한\n칩이 부족합니다.", errorMsgSecond);
         else if (betChip + amount < curGameBuilding.betChip)
+            errorMsg_Betting.OnMessage("기본 판돈이하로\n칩을 회수할 수 없습니다.", errorMsgSecond);
+        else
         {
-            //TODO - Error Msg
-            return;
+            betChip += amount;
+            SetUI(BlackJackState.Betting);
+
+            //TODO - 칩 던지는 연출있으면 좋을거 같음
         }
-
-        betChip += amount;
-        SetUI(BlackJackState.Betting);
-
-        //TODO - 칩 던지는 연출있으면 좋을거 같음
     }
 
     public void OnClickPlayGame()
@@ -135,18 +203,19 @@ public class BlackJackUI : MinigameUI
     public void OnClickDrawCard()
     {
         player.Add(DrawCard());
+        PrintHand(player);
 
         if (CalculateResult(player) > 21)
         {
-            //TODO - Player Burst!!
+            defeatResultMsg.OnMessage("!! Player Burst !!", resultSecond);
             GetReward(GameResult.Dealer_Win);
+            StartCoroutine(ReturnToLobby(resultSecond));
         }
     }
 
     public void OnClickCheckResult()
     {
         DrawDealer();
-        GetReward(GetResult());
     }
     #endregion
 
@@ -155,13 +224,16 @@ public class BlackJackUI : MinigameUI
     {
         pickIndex.Clear();
         player.Clear();
-        player.Clear();
+        dealer.Clear();
 
         player.Add(DrawCard());
         player.Add(DrawCard());
 
         dealer.Add(DrawCard());
         dealer.Add(DrawCard());
+
+        PrintHand(player);
+        PrintHand(dealer);
     }
 
     private void DrawDealer()
@@ -170,11 +242,19 @@ public class BlackJackUI : MinigameUI
         {
             dealer.Add(DrawCard());
         }
+        PrintHand(dealer);
 
         if (CalculateResult(dealer) > 21)
         {
-            //TODO - Dealer Burst!!
+            winResultMsg.OnMessage("!! Dealer Burst !!", resultSecond);
             GetReward(GameResult.Player_Win);
+            StartCoroutine(ReturnToLobby(resultSecond));
+        }
+        else
+        {
+            GameResult result = GetResult();
+            GetReward(result);
+            SetResultPanel(result);
         }
     }
 
@@ -218,7 +298,7 @@ public class BlackJackUI : MinigameUI
 
     private void GetReward(GameResult result)
     {
-        ChipManager.instance.curChip = Mathf.Max(ChipManager.instance.curChip + reward[result], 0);
+        ChipManager.instance.curChip = Mathf.Max(ChipManager.instance.curChip + reward[result] * betChip, 0);
     }
 
     private GameResult GetResult()
@@ -242,6 +322,30 @@ public class BlackJackUI : MinigameUI
             else
                 return GameResult.Dealer_Win;
         }
+    }
+
+    private void PrintHand(List<Card> cards)
+    {
+        string res = "";
+
+        foreach(Card card in cards)
+        {
+            res += card.shape.ToString() + " " + card.number.ToString() + " / ";
+        }
+
+        res += "result : " + CalculateResult(cards);
+
+        Debug.Log(res);
+    }
+    #endregion
+
+    #region Direction
+    IEnumerator ReturnToLobby(float second)
+    {
+        yield return new WaitForSeconds(second);
+
+        betChip = curGameBuilding.betChip;
+        SetState(BlackJackState.Lobby);
     }
     #endregion
 }

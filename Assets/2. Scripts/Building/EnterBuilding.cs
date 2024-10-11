@@ -12,6 +12,7 @@ public class EnterBuilding : UtilityBuilding
 
     public MinigameType minigameType;
     public int betChip;
+    public int maxBetTimes;
     public int betTimes;
     public BoundaryValue RandomChip;
 

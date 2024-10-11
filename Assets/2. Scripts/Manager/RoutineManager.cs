@@ -114,6 +114,8 @@ public class RoutineManager : MonoBehaviour
             ApplyDept();
             ChipManager.instance.CostUpdate();
             ChipManager.instance.RatioUpdate();
+            if (day.DayOfWeek == DayOfWeek.Monday)
+                UpdateBetTimes();
 
             UIManager.instance.UpdateDailyInfo();
 
@@ -245,6 +247,15 @@ public class RoutineManager : MonoBehaviour
             cityHappiness = 0;
 
         AkSoundEngine.SetRTPCValue("HAPPY", cityHappiness);
+    }
+
+    private void UpdateBetTimes()
+    {
+        foreach (Building building in BuildingSpawner.instance.buildings)
+        {
+            if (building.type == BuildingType.Culture)
+                (building as EnterBuilding).betTimes = (building as EnterBuilding).maxBetTimes;
+        }
     }
 
     public void SetCityHappiness(int happiness, int sign)
