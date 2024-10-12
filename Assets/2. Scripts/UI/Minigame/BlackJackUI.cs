@@ -45,6 +45,13 @@ public class MsgPanel
     }
 }
 
+[System.Serializable]
+public class CardSprite
+{
+    public CardShape shape;
+    public Sprite[] sprite;
+}
+
 public class BlackJackUI : MinigameUI
 {
     [Header("Panels")]
@@ -67,21 +74,50 @@ public class BlackJackUI : MinigameUI
     public MsgPanel defeatResultMsg;
 
     [Header("Parameter")]
+    public List<Image> playerHand;
+    public List<Image> dealerHand;
     public float errorMsgSecond;
     public float resultSecond;
+    public float drawSecond;
+    public float initDrawSecond;
+    public float openSecond;
+    public float throwSecond;
+    public float cardSpace;
+    public float openSpace;
+
+    [Header("Transform")]
+    public RectTransform playerTransform;
+    public RectTransform dealerTransform;
+    public RectTransform deckTransform;
+    public RectTransform chipTransform;
+    public Vector2 chipMinPos;
+    public Vector2 chipMaxPos;
+
+    [Header("Card")]
+    public CardSprite[] cardSprites;
+    public Sprite backCard;
 
     private int betChip;
+    private List<RectTransform> chips = new List<RectTransform>();
     private List<Card> deck = new List<Card>();
     private List<Card> player = new List<Card>();
     private List<Card> dealer = new List<Card>();
     private List<int> pickIndex = new List<int>();
     private Dictionary<GameResult, int> reward = new Dictionary<GameResult, int>();
+    private Sprite[,] sprites;
+    private bool canDraw;
 
     private void Start()
     {
-        for (int i = 0;i < 4; i++)
+        sprites = new Sprite[4, 13];
+        for (int i = 0; i < 4; i++)
+        {
             for (int j = 1; j <= 13; j++)
+            {
                 deck.Add(new Card((CardShape)i, j));
+                sprites[i, j - 1] = cardSprites[i].sprite[j - 1];
+            }
+        }
 
         reward[GameResult.Player_BlackJack] = 3;
         reward[GameResult.Player_Win] = 2;
@@ -156,6 +192,32 @@ public class BlackJackUI : MinigameUI
 
         StartCoroutine(ReturnToLobby(resultSecond));
     }
+
+    private void ResetCard()
+    {
+        pickIndex.Clear();
+        player.Clear();
+        dealer.Clear();
+
+        for(int i = 0;i < playerHand.Count; i++)
+            PoolSystem.instance.messagePool.TakeToPool<Image>("Card", playerHand[i]);
+
+        for (int i = 0; i < dealerHand.Count; i++)
+            PoolSystem.instance.messagePool.TakeToPool<Image>("Card", dealerHand[i]);
+
+        playerHand.Clear();
+        dealerHand.Clear();
+
+        canDraw = true;
+    }
+
+    private void ResetChip()
+    {
+        for (int i = 0; i < chips.Count; i++)
+            PoolSystem.instance.messagePool.TakeToPool<RectTransform>("Chip", chips[i]);
+
+        chips.Clear();
+    }
     #endregion
 
     #region OnClick
@@ -169,6 +231,7 @@ public class BlackJackUI : MinigameUI
         {
             curGameBuilding.betTimes--;
             SetState(BlackJackState.Betting);
+            StartCoroutine(ThrowChip(curGameBuilding.betChip));
         }
     }
 
@@ -188,8 +251,7 @@ public class BlackJackUI : MinigameUI
         {
             betChip += amount;
             SetUI(BlackJackState.Betting);
-
-            //TODO - 칩 던지는 연출있으면 좋을거 같음
+            StartCoroutine(ThrowChip(amount));
         }
     }
 
@@ -202,63 +264,27 @@ public class BlackJackUI : MinigameUI
 
     public void OnClickDrawCard()
     {
-        player.Add(DrawCard());
-        PrintHand(player, "Player");
-
-        if (CalculateResult(player) > 21)
-        {
-            defeatResultMsg.OnMessage("!! Player Burst !!", resultSecond);
-            GetReward(GameResult.Dealer_Win);
-            StartCoroutine(ReturnToLobby(resultSecond));
-        }
+        if (canDraw)
+            StartCoroutine(PlayerTurn());
     }
 
     public void OnClickCheckResult()
     {
-        DrawDealer();
+        canDraw = false;
+        StartCoroutine(DealerTurn());
     }
     #endregion
 
     #region GameLogic
     private void StartBlackJack()
     {
-        pickIndex.Clear();
-        player.Clear();
-        dealer.Clear();
-
-        player.Add(DrawCard());
-        player.Add(DrawCard());
-
-        dealer.Add(DrawCard());
-        dealer.Add(DrawCard());
-
-        PrintHand(player, "Player");
-        PrintHand(dealer, "Dealer");
+        StartCoroutine(DrawCard(true, true));
+        StartCoroutine(DrawCard(true, true));
+        StartCoroutine(DrawCard(false, true));
+        StartCoroutine(DrawCard(false, false));
     }
 
-    private void DrawDealer()
-    {
-        while(CalculateResult(dealer) <= 16)
-        {
-            dealer.Add(DrawCard());
-        }
-        PrintHand(dealer, "Dealer");
-
-        if (CalculateResult(dealer) > 21)
-        {
-            winResultMsg.OnMessage("!! Dealer Burst !!", resultSecond);
-            GetReward(GameResult.Player_Win);
-            StartCoroutine(ReturnToLobby(resultSecond));
-        }
-        else
-        {
-            GameResult result = GetResult();
-            GetReward(result);
-            SetResultPanel(result);
-        }
-    }
-
-    private Card DrawCard()
+    private Card PickCard()
     {
         int ranIdx = Random.Range(0, 52);
         while (pickIndex.Contains(ranIdx))
@@ -298,6 +324,7 @@ public class BlackJackUI : MinigameUI
 
     private void GetReward(GameResult result)
     {
+        canDraw = false;
         ChipManager.instance.curChip = Mathf.Max(ChipManager.instance.curChip + reward[result] * betChip, 0);
     }
 
@@ -323,20 +350,6 @@ public class BlackJackUI : MinigameUI
                 return GameResult.Dealer_Win;
         }
     }
-
-    private void PrintHand(List<Card> cards, string name)
-    {
-        string res = name + " : ";
-
-        foreach(Card card in cards)
-        {
-            res += card.shape.ToString() + " " + card.number.ToString() + " / ";
-        }
-
-        res += "result : " + CalculateResult(cards);
-
-        Debug.Log(res);
-    }
     #endregion
 
     #region Direction
@@ -346,6 +359,138 @@ public class BlackJackUI : MinigameUI
 
         betChip = curGameBuilding.betChip;
         SetState(BlackJackState.Lobby);
+
+        ResetCard();
+        ResetChip();
+    }
+
+    IEnumerator DrawCard(bool isPlayer, bool isOpen)
+    {
+        canDraw = false;
+
+        List<Card> cards = isPlayer ? player : dealer;
+        List<Image> images = isPlayer ? playerHand : dealerHand;
+
+        Card newCard = PickCard();
+        cards.Add(newCard);
+
+        Image newImage = InitImage();
+        images.Add(newImage);
+
+        AlignCard(isPlayer);
+        yield return new WaitForSeconds(drawSecond);
+
+        if (isOpen)
+        {
+            OpenCard(newImage, newCard);
+            yield return new WaitForSeconds(openSecond);
+        }
+
+        canDraw = true;
+    }
+
+    IEnumerator PlayerTurn()
+    {
+        yield return StartCoroutine(DrawCard(true, true));
+
+        if (CalculateResult(player) > 21)
+        {
+            defeatResultMsg.OnMessage("!! Player Burst !!", resultSecond);
+            GetReward(GameResult.Dealer_Win);
+            StartCoroutine(ReturnToLobby(resultSecond));
+        }
+    }
+
+    IEnumerator DealerTurn()
+    {
+        OpenCard(dealerHand[1], dealer[1]);
+        yield return new WaitForSeconds(openSecond);
+
+        while (CalculateResult(dealer) <= 16)
+        {
+            yield return StartCoroutine(DrawCard(false, true));
+        }
+
+        if (CalculateResult(dealer) > 21)
+        {
+            winResultMsg.OnMessage("!! Dealer Burst !!", resultSecond);
+            GetReward(GameResult.Player_Win);
+            StartCoroutine(ReturnToLobby(resultSecond));
+        }
+        else
+        {
+            GameResult result = GetResult();
+            GetReward(result);
+            SetResultPanel(result);
+        }
+    }
+
+    IEnumerator ThrowChip(int amount)
+    {
+        for (int i = 0; i < Mathf.Abs(amount); i++)
+        {
+            if (amount > 0)
+                ThrowChip();
+            else
+                StartCoroutine(ReturnChip());
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+
+    IEnumerator ReturnChip()
+    {
+        int ranIdx = Random.Range(0, chips.Count);
+
+        RectTransform transform = chips[ranIdx];
+        transform.DOLocalMove(chipTransform.localPosition, throwSecond).SetEase(Ease.OutCubic);
+        chips.RemoveAt(ranIdx);
+
+        yield return new WaitForSeconds(throwSecond);
+
+        PoolSystem.instance.messagePool.TakeToPool<RectTransform>("Chip", transform);
+    }
+
+    private Image InitImage()
+    {
+        Image newImage = PoolSystem.instance.messagePool.GetFromPool<Image>("Card");
+        newImage.sprite = backCard;
+        newImage.rectTransform.localPosition = deckTransform.localPosition;
+        return newImage;
+    }
+
+    private void ThrowChip()
+    {
+        float xPos = Random.Range(chipMinPos.x, chipMaxPos.x) - chipTransform.localPosition.x;
+        float yPos = Random.Range(chipMinPos.y, chipMaxPos.y) - chipTransform.localPosition.y;
+
+        RectTransform transform = PoolSystem.instance.messagePool.GetFromPool<RectTransform>("Chip");
+        transform.localPosition = chipTransform.localPosition;
+        transform.DOLocalMove(new Vector3(xPos, yPos, 0), throwSecond).SetEase(Ease.OutCubic);
+        chips.Add(transform);
+    }
+
+    private void AlignCard(bool isPlayer)
+    {
+        List<Image> images = isPlayer ? playerHand : dealerHand;
+        float width = images[0].rectTransform.sizeDelta.x;
+        float minPos = -(width / 2.0f) * (images.Count - 1) - (cardSpace / 2.0f) * (images.Count - 1);
+        float space = width + cardSpace;
+        float yPos = isPlayer ? playerTransform.localPosition.y : dealerTransform.localPosition.y;
+        for (int i = 0; i < images.Count; i++)
+        {
+            float xPos = minPos + space * i;
+            Vector3 newPos = new Vector3(xPos, yPos, images[i].transform.localPosition.z);
+            images[i].transform.DOLocalMove(newPos, drawSecond);
+        }
+    }
+
+    private void OpenCard(Image image, Card card)
+    {
+        image.transform.DOLocalMoveX(image.transform.localPosition.x - openSpace, openSecond / 2.0f).OnComplete(() =>
+        {
+            image.sprite = sprites[(int)card.shape, card.number - 1];
+            image.transform.DOLocalMoveX(image.transform.localPosition.x + openSpace, openSecond / 2.0f);
+        });
     }
     #endregion
 }
