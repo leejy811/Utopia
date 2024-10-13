@@ -9,6 +9,7 @@ public class MinigameListUI : MonoBehaviour
 {
     public Transform listParent;
     public GameObject gameInfoPrefab;
+    public Scrollbar scrollbar;
 
     private List<GameInfoUI> gameInfos = new List<GameInfoUI>();
     private List<EnterBuilding> sortBuilding = new List<EnterBuilding>();
@@ -19,7 +20,7 @@ public class MinigameListUI : MonoBehaviour
     private void OnEnable()
     {
         nameGreater = true;
-        gameObject.GetComponentInChildren<Scrollbar>().value = 1.0f;
+        scrollbar.value = 1.0f;
         SetInfo();
         OnClickNameSort();
     }
