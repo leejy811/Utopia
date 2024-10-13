@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -79,7 +80,6 @@ public class BlackJackUI : MinigameUI
     public float errorMsgSecond;
     public float resultSecond;
     public float drawSecond;
-    public float initDrawSecond;
     public float openSecond;
     public float throwSecond;
     public float cardSpace;
@@ -259,7 +259,7 @@ public class BlackJackUI : MinigameUI
     {
         if (!ChipManager.instance.PayChip(betChip)) return;
         SetState(BlackJackState.Play);
-        StartBlackJack();
+        StartCoroutine(StartBlackJack());
     }
 
     public void OnClickDrawCard()
@@ -276,12 +276,36 @@ public class BlackJackUI : MinigameUI
     #endregion
 
     #region GameLogic
-    private void StartBlackJack()
+    IEnumerator StartBlackJack()
     {
-        StartCoroutine(DrawCard(true, true));
-        StartCoroutine(DrawCard(true, true));
-        StartCoroutine(DrawCard(false, true));
-        StartCoroutine(DrawCard(false, false));
+        canDraw = false;
+        player.Add(PickCard());
+        player.Add(PickCard());
+        dealer.Add(PickCard());
+        dealer.Add(PickCard());
+
+        playerHand.Add(InitImage());
+        playerHand.Add(InitImage());
+        dealerHand.Add(InitImage());
+        dealerHand.Add(InitImage());
+
+        AlignCard(true, 0);
+        yield return new WaitForSeconds(drawSecond / 4.0f);
+        AlignCard(true, 1);
+        yield return new WaitForSeconds(drawSecond / 4.0f);
+        AlignCard(false, 0);
+        yield return new WaitForSeconds(drawSecond / 4.0f);
+        AlignCard(false, 1);
+        yield return new WaitForSeconds(drawSecond / 4.0f);
+
+        OpenCard(playerHand[0], player[0]);
+        yield return new WaitForSeconds(openSecond / 4.0f);
+        OpenCard(playerHand[1], player[1]);
+        yield return new WaitForSeconds(openSecond / 4.0f);
+        OpenCard(dealerHand[0], dealer[0]);
+        yield return new WaitForSeconds(openSecond / 4.0f);
+
+        canDraw = true;
     }
 
     private Card PickCard()
@@ -469,18 +493,28 @@ public class BlackJackUI : MinigameUI
         chips.Add(transform);
     }
 
-    private void AlignCard(bool isPlayer)
+    private void AlignCard(bool isPlayer, int idx = -1)
     {
         List<Image> images = isPlayer ? playerHand : dealerHand;
         float width = images[0].rectTransform.sizeDelta.x;
         float minPos = -(width / 2.0f) * (images.Count - 1) - (cardSpace / 2.0f) * (images.Count - 1);
         float space = width + cardSpace;
         float yPos = isPlayer ? playerTransform.localPosition.y : dealerTransform.localPosition.y;
-        for (int i = 0; i < images.Count; i++)
+
+        if (idx == -1)
         {
-            float xPos = minPos + space * i;
-            Vector3 newPos = new Vector3(xPos, yPos, images[i].transform.localPosition.z);
-            images[i].transform.DOLocalMove(newPos, drawSecond);
+            for (int i = 0; i < images.Count; i++)
+            {
+                float xPos = minPos + space * i;
+                Vector3 newPos = new Vector3(xPos, yPos, images[i].transform.localPosition.z);
+                images[i].transform.DOLocalMove(newPos, drawSecond);
+            }
+        }
+        else
+        {
+            float xPos = minPos + space * idx;
+            Vector3 newPos = new Vector3(xPos, yPos, images[idx].transform.localPosition.z);
+            images[idx].transform.DOLocalMove(newPos, drawSecond);
         }
     }
 
