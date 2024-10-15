@@ -6,6 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using JetBrains.Annotations;
+using System.Security.Cryptography;
+using UnityEngine.XR;
 
 [Serializable]
 public class Data
@@ -300,6 +302,7 @@ public class DataBaseManager : MonoBehaviour
 
     private string path;
     private string fileName;
+    private readonly string privateKey = "bcbffk4dm1fgfzzzepl4316sgznvaomitf7lsll";
 
     private void Awake()
     {
@@ -337,14 +340,16 @@ public class DataBaseManager : MonoBehaviour
         data.Save(mapType);
 
         string jsonData = JsonUtility.ToJson(data, true);
-        File.WriteAllText(path + fileName + mapType.ToString(), jsonData);
+        //File.WriteAllText(path + fileName + mapType.ToString(), jsonData);
+        SaveFile(jsonData, path + fileName + mapType.ToString());
     }
 
     public MapData LoadMapData(MapType mapType, string fileName)
     {
         if (!File.Exists(path + fileName + mapType.ToString())) return new MapData();
 
-        string jsonData = File.ReadAllText(path + fileName + mapType.ToString());
+        //string jsonData = File.ReadAllText(path + fileName + mapType.ToString());
+        string jsonData = LoadFile(path + fileName + mapType.ToString());
         return JsonUtility.FromJson<MapData>(jsonData);
     }
 
@@ -384,7 +389,8 @@ public class DataBaseManager : MonoBehaviour
         data.levelPanelData = UIManager.instance.phone.panels[(int)PhoneState.Level].GetComponent<LevelPanelUI>().data as LevelPanelData;
 
         string jsonData = JsonUtility.ToJson(data, true);
-        File.WriteAllText(path + fileName + GameManager.instance.curMapType, jsonData);
+        SaveFile(jsonData, path + fileName + GameManager.instance.curMapType);
+        //File.WriteAllText(path + fileName + GameManager.instance.curMapType, jsonData);
 
         MapType type = GameManager.instance.curMapType;
         SaveMapData(mapData[(int)type], type, "/MapData_");
@@ -392,7 +398,8 @@ public class DataBaseManager : MonoBehaviour
 
     public void Load()
     {
-        string jsonData = File.ReadAllText(path + fileName + GameManager.instance.curMapType);
+        //string jsonData = File.ReadAllText(path + fileName + GameManager.instance.curMapType);
+        string jsonData = LoadFile(path + fileName + GameManager.instance.curMapType);
         data = JsonUtility.FromJson<Data>(jsonData);
 
         data.moneyData.Load();
@@ -420,5 +427,54 @@ public class DataBaseManager : MonoBehaviour
         mapData[(int)GameManager.instance.curMapType].Load();
 
         UIManager.instance.InitInfoUI();
+    }
+
+    private void SaveFile(string jsonData, string path)
+    {
+        string cryptoString = Encrypt(jsonData);
+        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(cryptoString);
+        File.WriteAllBytes(path, bytes);
+    }
+
+    private string LoadFile(string path)
+    {
+        byte[] bytes = File.ReadAllBytes(path);
+        string cryptoString = System.Text.Encoding.UTF8.GetString(bytes);
+        string jsonString = Decrypt(cryptoString);
+        return jsonString;
+    }
+
+    private string Encrypt(string data)
+    {
+
+        byte[] bytes = System.Text.Encoding.UTF8.GetBytes(data);
+        RijndaelManaged rm = CreateRijndaelManaged();
+        ICryptoTransform ct = rm.CreateEncryptor();
+        byte[] results = ct.TransformFinalBlock(bytes, 0, bytes.Length);
+        return System.Convert.ToBase64String(results, 0, results.Length);
+    }
+
+    private string Decrypt(string data)
+    {
+
+        byte[] bytes = System.Convert.FromBase64String(data);
+        RijndaelManaged rm = CreateRijndaelManaged();
+        ICryptoTransform ct = rm.CreateDecryptor();
+        byte[] resultArray = ct.TransformFinalBlock(bytes, 0, bytes.Length);
+        return System.Text.Encoding.UTF8.GetString(resultArray);
+    }
+
+    private RijndaelManaged CreateRijndaelManaged()
+    {
+        byte[] keyArray = System.Text.Encoding.UTF8.GetBytes(privateKey);
+        RijndaelManaged result = new RijndaelManaged();
+
+        byte[] newKeysArray = new byte[16];
+        System.Array.Copy(keyArray, 0, newKeysArray, 0, 16);
+
+        result.Key = newKeysArray;
+        result.Mode = CipherMode.ECB;
+        result.Padding = PaddingMode.PKCS7;
+        return result;
     }
 }
