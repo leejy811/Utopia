@@ -2,11 +2,10 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
-public enum SlotState { Before, Start, While, End }
-public enum SlotType { Spade, Heart, Clover, Dia, Joker }
+public enum SlotState { Ready, While }
+public enum SlotType { Joker, Spade, Dia, Heart, Clover }
 
 public class SlotMachineUI : MinigameUI
 {
@@ -14,14 +13,10 @@ public class SlotMachineUI : MinigameUI
     public TextMeshProUGUI payChipText;
     public TextMeshProUGUI curChipText;
     public TextMeshProUGUI playTimesText;
-
-    [Header("Machine")]
-    public GameObject slotMachine;
-    public GameObject lever;
-    public GameObject[] slots;
+    public TextMeshProUGUI errorMsgText;
 
     [Header("Slot")]
-    public MeshRenderer[] slotMeshs;
+    public Slot[] slots;
     public SlotState state;
 
     [Header("Light")]
@@ -32,17 +27,14 @@ public class SlotMachineUI : MinigameUI
     public MeshRenderer[] redLightMeshs;
 
     [Header("Parameter")]
-    public float slotmachineOnSecond;
     public float oneSlotSecond;
-    public float resultOnSecond;
-    public float resultOffSecond;
-    public float leverDownSecond;
-    public float leverUpSecond;
+    public float leverSecond;
+    public float errorMsgSecond;
     public int prevRotateNum;
+    public int[] reward;
 
     private bool[] isDuplicate = new bool[3];
     private bool[] isEndSlot = new bool[3];
-    private int[] slotIdx = new int[3];
     private SlotType[] ranSlot = new SlotType[3];
 
     public override void InitGame(EnterBuilding building)
@@ -64,34 +56,30 @@ public class SlotMachineUI : MinigameUI
         int slotLength = System.Enum.GetValues(typeof(SlotType)).Length;
         isEndSlot[idx] = false;
 
-        float rotateSecond = oneSlotSecond * slotLength * prevRotateNum;
-        float rotateAngle = 360.0f * prevRotateNum;
-        if (slotIdx[idx] > 2)
-            rotateAngle *= -1;
-        slots[idx].transform.DOLocalRotate(slots[idx].transform.localEulerAngles + Vector3.right * rotateAngle * (idx + 1), rotateSecond * (idx + 1), RotateMode.FastBeyond360)
-            .SetEase(Ease.Linear);
-
-        yield return new WaitForSeconds(rotateSecond * (idx + 1));
+        for (int i = 0;i < prevRotateNum; i++)
+        {
+            yield return StartCoroutine(slots[idx].RollSlot(slots[idx].curIdx, oneSlotSecond));
+        }
 
         while (true)
         {
-            float angle = 360.0f / slotLength;
-            if (slotIdx[idx] > 2)
-                angle *= -1;
-            slots[idx].transform.DOLocalRotate(slots[idx].transform.localEulerAngles + Vector3.right * angle, oneSlotSecond, RotateMode.FastBeyond360)
-                .SetEase(Ease.Linear);
-
-            slotIdx[idx] = (slotIdx[idx] + 1) % slotLength;
-
-            if (slotIdx[idx] == (int)ranSlot[idx])
+            if (idx == 0)
             {
-                if (idx == 0)
-                    break;
-                else if (isEndSlot[idx - 1])
-                    break;
+                yield return StartCoroutine(slots[idx].RollSlot((int)ranSlot[idx], oneSlotSecond));
+                break;
             }
-
-            yield return new WaitForSeconds(oneSlotSecond);
+            else if (isEndSlot[idx - 1])
+            {
+                yield return StartCoroutine(slots[idx].RollSlot((int)ranSlot[idx], oneSlotSecond));
+                break;
+            }
+            else
+            {
+                for (int i = 0; i < prevRotateNum; i++)
+                {
+                    yield return StartCoroutine(slots[idx].RollSlot(slots[idx].curIdx, oneSlotSecond));
+                }
+            }
         }
 
         AkSoundEngine.PostEvent("Play_Slot_Stop_01", gameObject);
@@ -101,24 +89,22 @@ public class SlotMachineUI : MinigameUI
         {
             AkSoundEngine.PostEvent("Stop_Slot_Drrrrrr_01", gameObject);
 
-            for (int i = 0; i < isDuplicate.Length; i++)
-            {
-                if (isDuplicate[i])
-                {
-                    redLights[i].gameObject.SetActive(true);
-                    redLightMeshs[i].material.color = Color.red;
-                }
-            }
+            //for (int i = 0; i < isDuplicate.Length; i++)
+            //{
+            //    if (isDuplicate[i])
+            //    {
+            //        redLights[i].gameObject.SetActive(true);
+            //        redLightMeshs[i].material.color = Color.red;
+            //    }
+            //}
 
             if (isDuplicate[0] && isDuplicate[1] && isDuplicate[2])
             {
                 ApplyResult();
-                StartCoroutine(PlayJackpotLight());
+                //StartCoroutine(PlayJackpotLight());
             }
 
-            yield return new WaitForSeconds(resultOnSecond);
-
-            state = SlotState.End;
+            state = SlotState.Ready;
         }
     }
 
@@ -150,10 +136,7 @@ public class SlotMachineUI : MinigameUI
 
     private void ApplyResult()
     {
-        ChipManager.instance.curChip += curGameBuilding.betChip * ((int)ranSlot[0] + 1);
-
-        if (ranSlot[0] == SlotType.Joker)
-            ChipManager.instance.curChip += curGameBuilding.betChip;
+        ChipManager.instance.curChip += curGameBuilding.betChip * reward[(int)ranSlot[0]];
 
         SetValue();
     }
@@ -162,7 +145,7 @@ public class SlotMachineUI : MinigameUI
     {
         int slotLength = System.Enum.GetValues(typeof(SlotType)).Length;
         
-        for (int i = 0;i < slotLength; i++)
+        for (int i = 0;i < ranSlot.Length; i++)
             ranSlot[i] = (SlotType)Random.Range(0, slotLength);
 
         FindDuplicate(ranSlot);
@@ -204,16 +187,17 @@ public class SlotMachineUI : MinigameUI
         }
     }
 
-    private void StartSlot()
+    public void StartSlot()
     {
-        if (curGameBuilding.betTimes == 0)
+        if (state == SlotState.While) return;
+        else if (curGameBuilding.betTimes == 0)
         {
-            //TODO - ErrorMsg
+            SetErrorMsg("실행 가능 횟수를 모두 소진하였습니다.");
             return;
         }
         else if (!ChipManager.instance.PayChip(curGameBuilding.betChip))
         {
-            //TODO - ErrorMsg
+            SetErrorMsg("칩이 부족합니다.");
             return;
         }
 
@@ -221,7 +205,6 @@ public class SlotMachineUI : MinigameUI
         SetValue();
 
         RollRandom();
-        InitSlot();
         PlayLeverAnim();
         state = SlotState.While;
 
@@ -233,41 +216,23 @@ public class SlotMachineUI : MinigameUI
         }
     }
 
-    private void PlayLeverAnim()
+    private void SetErrorMsg(string message)
     {
-        lever.transform.DOLocalRotate(new Vector3(120, 0, 0), leverDownSecond, RotateMode.Fast)
-            .OnComplete(() =>
-            {
-                lever.transform.DOLocalRotate(new Vector3(0, 0, 0), leverUpSecond, RotateMode.Fast)
-                    .SetEase(Ease.InOutSine);
-            }
-            )
-            .SetEase(Ease.InOutSine);
-
-        AkSoundEngine.PostEvent("Play_Slot_Rever_01", gameObject);
+        errorMsgText.color += Color.black;
+        errorMsgText.text = message;
+        errorMsgText.DOFade(0.0f, errorMsgSecond);
     }
 
-    private void InitSlot()
+    private void PlayLeverAnim()
     {
-        for (int i = 0; i < slots.Length; i++)
-        {
-            redLights[i].gameObject.SetActive(false);
-            redLightMeshs[i].material.color = Color.red / 2;
-        }
-
-        for (int i = 0; i < jackpotLights.Length; i++)
-        {
-            jackpotLights[i].gameObject.SetActive(false);
-        }
+        //Lever Animation
+        AkSoundEngine.PostEvent("Play_Slot_Rever_01", gameObject);
     }
 
     private void Init()
     {
         InputManager.SetCanInput(false);
-        state = SlotState.Before;
-        slotMachine.transform.localPosition = new Vector3(530, slotMachine.transform.localPosition.y, slotMachine.transform.localPosition.z);
-        slotMachine.transform.DOLocalMoveX(220, slotmachineOnSecond).OnComplete(() => { state = SlotState.Start; });
-        InitSlot();
+        state = SlotState.Ready;
 
         AkSoundEngine.PostEvent("Play_Slot_Spwan_01", gameObject);
         AkSoundEngine.SetRTPCValue("CLICK", 2);
