@@ -19,12 +19,8 @@ public class SlotMachineUI : MinigameUI
     public Slot[] slots;
     public SlotState state;
 
-    [Header("Light")]
-    public Light[] jackpotLights;
-    public Color[] jackpotLightColors;
-    public MeshRenderer[] jackpotLightMeshs;
-    public Light[] redLights;
-    public MeshRenderer[] redLightMeshs;
+    [Header("Animation")]
+    public Animator leverAnim;
 
     [Header("Parameter")]
     public float oneSlotSecond;
@@ -36,6 +32,11 @@ public class SlotMachineUI : MinigameUI
     private bool[] isDuplicate = new bool[3];
     private bool[] isEndSlot = new bool[3];
     private SlotType[] ranSlot = new SlotType[3];
+
+    private void Start()
+    {
+        leverAnim.SetFloat("LeverSpeed", 1.0f / leverSecond);
+    }
 
     public override void InitGame(EnterBuilding building)
     {
@@ -89,48 +90,15 @@ public class SlotMachineUI : MinigameUI
         {
             AkSoundEngine.PostEvent("Stop_Slot_Drrrrrr_01", gameObject);
 
-            //for (int i = 0; i < isDuplicate.Length; i++)
-            //{
-            //    if (isDuplicate[i])
-            //    {
-            //        redLights[i].gameObject.SetActive(true);
-            //        redLightMeshs[i].material.color = Color.red;
-            //    }
-            //}
+            //Red Light Animation
 
             if (isDuplicate[0] && isDuplicate[1] && isDuplicate[2])
             {
                 ApplyResult();
-                //StartCoroutine(PlayJackpotLight());
+                //JackPot Light Animation
             }
 
             state = SlotState.Ready;
-        }
-    }
-
-    private IEnumerator PlayJackpotLight()
-    {
-        int cnt = 0;
-
-        for (int i = 0; i < jackpotLights.Length; i++)
-        {
-            jackpotLights[i].gameObject.SetActive(true);
-        }
-
-        AkSoundEngine.PostEvent("Play_Slotmashin_Jackpot_Ani_01", gameObject);
-
-        while (jackpotLights[0].gameObject.activeSelf)
-        {
-            cnt++;
-
-            for (int i = 0; i < jackpotLights.Length; i++)
-            {
-                int idx = (i + cnt) % jackpotLightColors.Length;
-                jackpotLightMeshs[i].material.color = jackpotLightColors[idx];
-                jackpotLights[i].color = jackpotLightColors[idx];
-            }
-
-            yield return new WaitForSeconds(0.2f);
         }
     }
 
@@ -225,7 +193,7 @@ public class SlotMachineUI : MinigameUI
 
     private void PlayLeverAnim()
     {
-        //Lever Animation
+        leverAnim.SetTrigger("DoLever");
         AkSoundEngine.PostEvent("Play_Slot_Rever_01", gameObject);
     }
 
