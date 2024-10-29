@@ -3,9 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum SlotState { Ready, While }
 public enum SlotType { Joker, Spade, Dia, Heart, Clover }
+
+[System.Serializable]
+public class SlotLight
+{
+    public Image lightImage;
+    public Sprite onSprite;
+    public Sprite offSprite;
+
+    public void SetLight(bool isOn)
+    {
+        lightImage.sprite = isOn ? onSprite : offSprite;
+    }
+}
 
 public class SlotMachineUI : MinigameUI
 {
@@ -15,16 +29,22 @@ public class SlotMachineUI : MinigameUI
     public TextMeshProUGUI playTimesText;
     public TextMeshProUGUI errorMsgText;
 
+    [Header("Light")]
+    public SlotLight[] slotLights;
+
     [Header("Slot")]
     public Slot[] slots;
     public SlotState state;
 
     [Header("Animation")]
     public Animator leverAnim;
+    public Animator jackPotAnim;
 
     [Header("Parameter")]
     public float oneSlotSecond;
     public float leverSecond;
+    public float jackPotSpeed;
+    public float jackPotSecond;
     public float errorMsgSecond;
     public int prevRotateNum;
     public int[] reward;
@@ -90,16 +110,27 @@ public class SlotMachineUI : MinigameUI
         {
             AkSoundEngine.PostEvent("Stop_Slot_Drrrrrr_01", gameObject);
 
-            //Red Light Animation
+            for(int i = 0;i < slotLights.Length;i++)
+            {
+                slotLights[i].SetLight(isDuplicate[i]);
+            }
 
             if (isDuplicate[0] && isDuplicate[1] && isDuplicate[2])
             {
                 ApplyResult();
-                //JackPot Light Animation
+                yield return StartCoroutine(PlayJackPot());
             }
 
             state = SlotState.Ready;
         }
+    }
+
+    IEnumerator PlayJackPot()
+    {
+        jackPotAnim.SetBool("IsJackPot", true);
+        jackPotAnim.SetFloat("LightSpeed", jackPotSpeed);
+        yield return new WaitForSeconds(jackPotSecond);
+        jackPotAnim.SetBool("IsJackPot", false);
     }
 
     private void ApplyResult()
@@ -174,6 +205,10 @@ public class SlotMachineUI : MinigameUI
 
         RollRandom();
         PlayLeverAnim();
+        for (int i = 0; i < slotLights.Length; i++)
+        {
+            slotLights[i].SetLight(false);
+        }
         state = SlotState.While;
 
         AkSoundEngine.PostEvent("Play_Slot_Drrrrrr_01", gameObject);
@@ -206,6 +241,11 @@ public class SlotMachineUI : MinigameUI
         AkSoundEngine.SetRTPCValue("CLICK", 2);
         AkSoundEngine.SetRTPCValue("INDEX1", -1);
         AkSoundEngine.SetRTPCValue("INDEX2", -1);
+
+        for (int i = 0; i < slotLights.Length; i++)
+        {
+            slotLights[i].SetLight(false);
+        }
     }
 
     private void OnDisable()
@@ -213,5 +253,11 @@ public class SlotMachineUI : MinigameUI
         InputManager.SetCanInput(true);
         AkSoundEngine.SetRTPCValue("CLICK", 1);
         AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
+    }
+
+    public void OnClickQuitGame()
+    {
+        if (state == SlotState.Ready)
+            UIManager.instance.OnClickCloseButton();
     }
 }
