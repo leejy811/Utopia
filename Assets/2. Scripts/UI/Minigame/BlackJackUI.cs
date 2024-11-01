@@ -6,7 +6,6 @@ using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum BlackJackState { Lobby, Betting, Play }
 public enum CardShape { Spade, Diamond, Heart, Clover }
 public enum GameResult { Player_BlackJack, Player_Win, Dealer_BlackJack, Dealer_Win, Draw }
 
@@ -55,13 +54,7 @@ public class CardSprite
 
 public class BlackJackUI : MinigameUI
 {
-    [Header("Panels")]
-    public GameObject[] panels;
-
     [Header("Lobby")]
-    public TextMeshProUGUI baseChipText;
-    public TextMeshProUGUI curChipText;
-    public TextMeshProUGUI betTimesText_Lobby;
     public MsgPanel errorMsg_Lobby;
 
     [Header("Betting")]
@@ -129,44 +122,31 @@ public class BlackJackUI : MinigameUI
     public override void InitGame(EnterBuilding building)
     {
         base.InitGame(building);
-        SetState(BlackJackState.Lobby);
         betChip = building.betChip;
-        InputManager.SetCanInput(false);
     }
 
     #region SetFunc
-    public override void SetValue()
+    protected override void SetValue()
     {
         //TODO - 나중에 연출 여기다가 넣으면 될듯
+        base.SetValue();
     }
 
-    private void SetUI(BlackJackState state)
+    protected override void SetUI(MinigameState state)
     {
         switch(state)
         {
-            case BlackJackState.Lobby:
-                baseChipText.text = curGameBuilding.betChip.ToString();
-                curChipText.text = ChipManager.instance.curChip.ToString();
-                betTimesText_Lobby.text = curGameBuilding.betTimes.ToString();
+            case MinigameState.Lobby:
+                base.SetValue();
                 break;
-            case BlackJackState.Betting:
+            case MinigameState.Betting:
                 betChipText.text = betChip.ToString();
                 remainChipText.text = (ChipManager.instance.curChip - betChip).ToString();
                 betTimesText_Betting.text = curGameBuilding.betTimes.ToString();
                 break;
-            case BlackJackState.Play:
+            case MinigameState.Play:
                 break;
         }
-    }
-
-    private void SetState(BlackJackState state)
-    {
-        for (int i = 0; i < panels.Length; i++)
-        {
-            panels[i].SetActive(i == (int)state);
-        }
-
-        SetUI(state);
     }
 
     private void SetResultPanel(GameResult result)
@@ -230,15 +210,9 @@ public class BlackJackUI : MinigameUI
         else
         {
             curGameBuilding.betTimes--;
-            SetState(BlackJackState.Betting);
+            SetState(MinigameState.Betting);
             StartCoroutine(ThrowChip(curGameBuilding.betChip));
         }
-    }
-
-    public void OnClickQuitGame()
-    {
-        InputManager.SetCanInput(true);
-        UIManager.instance.notifyObserver(EventState.None);
     }
 
     public void OnClickBetChip(int amount)
@@ -250,7 +224,7 @@ public class BlackJackUI : MinigameUI
         else
         {
             betChip += amount;
-            SetUI(BlackJackState.Betting);
+            SetUI(MinigameState.Betting);
             StartCoroutine(ThrowChip(amount));
         }
     }
@@ -258,7 +232,7 @@ public class BlackJackUI : MinigameUI
     public void OnClickPlayGame()
     {
         if (!ChipManager.instance.PayChip(betChip)) return;
-        SetState(BlackJackState.Play);
+        SetState(MinigameState.Play);
         StartCoroutine(StartBlackJack());
     }
 
@@ -382,7 +356,7 @@ public class BlackJackUI : MinigameUI
         yield return new WaitForSeconds(second);
 
         betChip = curGameBuilding.betChip;
-        SetState(BlackJackState.Lobby);
+        SetState(MinigameState.Lobby);
 
         ResetCard();
         ResetChip();

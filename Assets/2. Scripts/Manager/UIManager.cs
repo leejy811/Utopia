@@ -402,6 +402,9 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickMinigame()
     {
+        topPanel.SetActive(false);
+        bottomPanel.SetActive(false);
+
         EnterBuilding enterBuilding = ShopManager.instance.GetPickBuilding().GetComponent<EnterBuilding>();
         minigames[(int)enterBuilding.minigameType].InitGame(enterBuilding);
         notifyObserver(EventState.Minigame);

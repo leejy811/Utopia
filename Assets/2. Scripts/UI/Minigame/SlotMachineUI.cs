@@ -23,12 +23,6 @@ public class SlotLight
 
 public class SlotMachineUI : MinigameUI
 {
-    [Header("Text")]
-    public TextMeshProUGUI payChipText;
-    public TextMeshProUGUI curChipText;
-    public TextMeshProUGUI playTimesText;
-    public TextMeshProUGUI errorMsgText;
-
     [Header("Light")]
     public SlotLight[] slotLights;
 
@@ -61,15 +55,12 @@ public class SlotMachineUI : MinigameUI
     public override void InitGame(EnterBuilding building)
     {
         base.InitGame(building);
-        SetValue();
         Init();
     }
 
-    public override void SetValue()
+    protected override void SetValue()
     {
-        payChipText.text = curGameBuilding.betChip.ToString();
-        curChipText.text = ChipManager.instance.curChip.ToString();
-        playTimesText.text = curGameBuilding.betTimes.ToString();
+        base.SetValue();
     }
 
     private IEnumerator SpinSlot(int idx)
@@ -191,12 +182,12 @@ public class SlotMachineUI : MinigameUI
         if (state == SlotState.While) return;
         else if (curGameBuilding.betTimes == 0)
         {
-            SetErrorMsg("실행 가능 횟수를 모두 소진하였습니다.");
+            SetErrorMsg("실행 가능 횟수를 모두 소진하였습니다.", errorMsgSecond);
             return;
         }
         else if (!ChipManager.instance.PayChip(curGameBuilding.betChip))
         {
-            SetErrorMsg("칩이 부족합니다.");
+            SetErrorMsg("칩이 부족합니다.", errorMsgSecond);
             return;
         }
 
@@ -219,13 +210,6 @@ public class SlotMachineUI : MinigameUI
         }
     }
 
-    private void SetErrorMsg(string message)
-    {
-        errorMsgText.color += Color.black;
-        errorMsgText.text = message;
-        errorMsgText.DOFade(0.0f, errorMsgSecond);
-    }
-
     private void PlayLeverAnim()
     {
         leverAnim.SetTrigger("DoLever");
@@ -234,13 +218,9 @@ public class SlotMachineUI : MinigameUI
 
     private void Init()
     {
-        InputManager.SetCanInput(false);
         state = SlotState.Ready;
 
         AkSoundEngine.PostEvent("Play_Slot_Spwan_01", gameObject);
-        AkSoundEngine.SetRTPCValue("CLICK", 2);
-        AkSoundEngine.SetRTPCValue("INDEX1", -1);
-        AkSoundEngine.SetRTPCValue("INDEX2", -1);
 
         for (int i = 0; i < slotLights.Length; i++)
         {
@@ -248,10 +228,9 @@ public class SlotMachineUI : MinigameUI
         }
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
-        InputManager.SetCanInput(true);
-        AkSoundEngine.SetRTPCValue("CLICK", 1);
+        base.OnDisable();
         AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
