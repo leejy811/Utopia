@@ -182,12 +182,12 @@ public class SlotMachineUI : MinigameUI
         if (state == SlotState.While) return;
         else if (curGameBuilding.betTimes == 0)
         {
-            SetErrorMsg("½ÇÇà °¡´É È½¼ö¸¦ ¸ğµÎ ¼ÒÁøÇÏ¿´½À´Ï´Ù.", errorMsgSecond);
+            SetErrorMsg("ì‹¤í–‰ ê°€ëŠ¥ íšŸìˆ˜ë¥¼ ëª¨ë‘ ì†Œì§„í•˜ì˜€ìŠµë‹ˆë‹¤.", errorMsgSecond);
             return;
         }
         else if (!ChipManager.instance.PayChip(curGameBuilding.betChip))
         {
-            SetErrorMsg("Ä¨ÀÌ ºÎÁ·ÇÕ´Ï´Ù.", errorMsgSecond);
+            SetErrorMsg("ì¹©ì´ ë¶€ì¡±í•©ë‹ˆë‹¤.", errorMsgSecond);
             return;
         }
 
