@@ -42,14 +42,19 @@ public class SlotMachineUI : MinigameUI
     public float errorMsgSecond;
     public int prevRotateNum;
     public int[] reward;
+    public Vector2Int jackPotRange;
 
     private bool[] isDuplicate = new bool[3];
     private bool[] isEndSlot = new bool[3];
     private SlotType[] ranSlot = new SlotType[3];
+    private int curTimes;
+    private int jackPotTimes;
 
     private void Start()
     {
         leverAnim.SetFloat("LeverSpeed", 1.0f / leverSecond);
+        curTimes = 0;
+        jackPotTimes = Random.Range(jackPotRange.x, jackPotRange.y);
     }
 
     public override void InitGame(EnterBuilding building)
@@ -109,7 +114,7 @@ public class SlotMachineUI : MinigameUI
             if (isDuplicate[0] && isDuplicate[1] && isDuplicate[2])
             {
                 ApplyResult();
-                yield return StartCoroutine(PlayJackPot());
+                StartCoroutine(PlayJackPot());
             }
 
             state = SlotState.Ready;
@@ -134,9 +139,19 @@ public class SlotMachineUI : MinigameUI
     private void RollRandom()
     {
         int slotLength = System.Enum.GetValues(typeof(SlotType)).Length;
-        
-        for (int i = 0;i < ranSlot.Length; i++)
-            ranSlot[i] = (SlotType)Random.Range(0, slotLength);
+
+        curTimes++;
+        if(curTimes < jackPotTimes)
+        {
+            for (int i = 0; i < ranSlot.Length; i++)
+                ranSlot[i] = (SlotType)Random.Range(0, slotLength);
+        }
+        else
+        {
+            SlotType jackpotSlot = (SlotType)Random.Range(0, slotLength);
+            for (int i = 0; i < ranSlot.Length; i++)
+                ranSlot[i] = jackpotSlot;
+        }
 
         FindDuplicate(ranSlot);
     }
@@ -191,6 +206,7 @@ public class SlotMachineUI : MinigameUI
             return;
         }
 
+        jackPotAnim.SetBool("IsJackPot", false);
         curGameBuilding.betTimes--;
         SetValue();
 

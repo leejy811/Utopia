@@ -30,6 +30,10 @@ public class InputManager : MonoBehaviour, IObserver
         if (UIManager.instance.menu.gameObject.activeSelf || UIManager.instance.setting.gameObject.activeSelf)
             GetMenuInput();
 
+        if (UIManager.instance.minigames[(int)MinigameType.SlotMachine] != null)
+            if (UIManager.instance.minigames[(int)MinigameType.SlotMachine].gameObject.activeSelf)
+                GetSlotMachineInput();
+
         if (!canInput) return;
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -162,6 +166,14 @@ public class InputManager : MonoBehaviour, IObserver
         {
             UIManager.instance.notifyObserver(EventState.None);
             SetCanInput(true);
+        }
+    }
+
+    private void GetSlotMachineInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            (UIManager.instance.minigames[(int)MinigameType.SlotMachine] as SlotMachineUI).StartSlot();
         }
     }
 
