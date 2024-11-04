@@ -55,7 +55,6 @@ public class HorseRacingUI : MinigameUI
     {
         base.OnDisable();
         gamePanel.SetActive(false);
-        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
     public override void InitGame(EnterBuilding building)
