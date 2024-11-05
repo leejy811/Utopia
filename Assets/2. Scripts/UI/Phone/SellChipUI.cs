@@ -22,7 +22,7 @@ public class SellChipUI : TradeChipUI
         int possibleChip = ChipManager.instance.curChip;
         if (possibleChip == tradeChip)
         {
-            OnErrorMessage();
+            OnErrorMessage("더 이상 교환할 수 없습니다.");
             return;
         }
 

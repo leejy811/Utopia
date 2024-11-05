@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TradeChipUI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class TradeChipUI : MonoBehaviour
     public TextMeshProUGUI tradeChipText;
     public TextMeshProUGUI tradeCostText;
     public TextMeshProUGUI errorMsgText;
+    public Button tradeButton;
 
     protected int tradeChip;
 
@@ -18,6 +20,7 @@ public class TradeChipUI : MonoBehaviour
     {
         tradeChip = 0;
         errorMsgText.color -= new Color(0, 0, 0, 1);
+        tradeButton.interactable = false;
         SetValue();
     }
 
@@ -28,20 +31,23 @@ public class TradeChipUI : MonoBehaviour
         tradeCostText.text = (tradeChip * ChipManager.instance.CalcChipCost()).ToString();
     }
 
-    protected void OnErrorMessage()
+    protected void OnErrorMessage(string message)
     {
+        errorMsgText.text = message;
         errorMsgText.color += new Color(0, 0, 0, 1);
         errorMsgText.DOFade(0.0f, 0.5f);
     }
 
     public void OnClickInitTrade()
     {
+        tradeButton.interactable = false;
         tradeChip = 0;
         SetValue();
     }
 
     public virtual void OnClickAddTrade()
     {
+        tradeButton.interactable = true;
         SetValue();
     }
 
