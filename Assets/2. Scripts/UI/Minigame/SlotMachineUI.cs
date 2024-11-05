@@ -53,8 +53,7 @@ public class SlotMachineUI : MinigameUI
     private void Start()
     {
         leverAnim.SetFloat("LeverSpeed", 1.0f / leverSecond);
-        curTimes = 0;
-        jackPotTimes = Random.Range(jackPotRange.x, jackPotRange.y);
+        ResetJackPot();
     }
 
     public override void InitGame(EnterBuilding building)
@@ -114,6 +113,7 @@ public class SlotMachineUI : MinigameUI
             if (isDuplicate[0] && isDuplicate[1] && isDuplicate[2])
             {
                 ApplyResult();
+                ResetJackPot();
                 StartCoroutine(PlayJackPot());
             }
 
@@ -134,6 +134,12 @@ public class SlotMachineUI : MinigameUI
         ChipManager.instance.curChip += curGameBuilding.betChip * reward[(int)ranSlot[0]];
 
         SetValue();
+    }
+
+    private void ResetJackPot()
+    {
+        curTimes = 0;
+        jackPotTimes = Random.Range(jackPotRange.x, jackPotRange.y);
     }
 
     private void RollRandom()

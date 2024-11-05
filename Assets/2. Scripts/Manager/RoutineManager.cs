@@ -119,7 +119,8 @@ public class RoutineManager : MonoBehaviour
 
             UIManager.instance.UpdateDailyInfo();
 
-            DataBaseManager.instance.Save();
+            if (DataBaseManager.instance != null)
+                DataBaseManager.instance.Save();
         }
     }
 
