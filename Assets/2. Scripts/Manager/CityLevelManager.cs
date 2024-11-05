@@ -116,7 +116,9 @@ public class CityLevelManager : MonoBehaviour
             Vector3 startPos = new Vector3(Grid.instance.levelUPStartPoint.x, 0, Grid.instance.levelUPStartPoint.y);
             Vector3 spawnPos = new Vector3(frame.position.x, 0, frame.position.y);
             GameObject building = Instantiate(prefab, spawnPos + startPos, frame.rotation, transform);
-            Grid.instance.levelUpTiles[frame.position.x, frame.position.y].building = building;
+            Tile tile = Grid.instance.levelUpTiles[frame.position.x, frame.position.y];
+            tile.building = building;
+            tile.smokeFX.Play(true);
         }
         else
         {
