@@ -11,7 +11,6 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
 
-    public float initialVolume;
     public float[] volumes;
 
     private void Awake()
@@ -28,20 +27,21 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        InitVolume(initialVolume);
+        InitVolume();
     }
 
-    private void InitVolume(float volume)
+    private void InitVolume()
     {
-        volumes = new float[2];
-        ChangeVolume(SoundType.BGM, volume, "BGM_VOL");
-        ChangeVolume(SoundType.SFX, volume, "SFX_VOL");
+        volumes = DataBaseManager.instance.LoadSoundData();
+        ChangeVolume(SoundType.BGM, volumes[(int)SoundType.BGM], "BGM_VOL");
+        ChangeVolume(SoundType.SFX, volumes[(int)SoundType.SFX], "SFX_VOL");
     }
 
     public void ChangeVolume(SoundType type, float volume, string valueName)
     {
         SetValue(valueName, volume);
         volumes[(int)type] = volume;
+        DataBaseManager.instance.SaveSoundData(volumes);
     }
 
     public void PostEvent(string name)

@@ -30,7 +30,7 @@ public class InputManager : MonoBehaviour, IObserver
         if (UIManager.instance.menu.gameObject.activeSelf || UIManager.instance.setting.gameObject.activeSelf)
             GetMenuInput();
 
-        if (UIManager.instance.minigames[(int)MinigameType.SlotMachine] != null)
+        if (GameManager.instance.curMapType == MapType.Totopia)
             if (UIManager.instance.minigames[(int)MinigameType.SlotMachine].gameObject.activeSelf)
                 GetSlotMachineInput();
 

@@ -8,6 +8,8 @@ using UnityEngine;
 using JetBrains.Annotations;
 using System.Security.Cryptography;
 using UnityEngine.XR;
+using Unity.Mathematics;
+using UnityEngine.Rendering;
 
 [Serializable]
 public class Data
@@ -292,6 +294,22 @@ public class DayData
     }
 }
 
+[Serializable]
+public class SoundData
+{
+    public float[] volumes;
+
+    public void Save(float[] volumes)
+    {
+        this.volumes = volumes;
+    }
+
+    public float[] Load()
+    {
+        return volumes;
+    }
+}
+
 public class DataBaseManager : MonoBehaviour
 {
     public static DataBaseManager instance;
@@ -299,6 +317,7 @@ public class DataBaseManager : MonoBehaviour
     public Data data;
     public MapData[] mapData;
     public MapData[] clearData;
+    public SoundData soundData;
 
     private string path;
     private string fileName;
@@ -340,7 +359,6 @@ public class DataBaseManager : MonoBehaviour
         data.Save(mapType);
 
         string jsonData = JsonUtility.ToJson(data, true);
-        //File.WriteAllText(path + fileName + mapType.ToString(), jsonData);
         SaveFile(jsonData, path + fileName + mapType.ToString());
     }
 
@@ -348,7 +366,6 @@ public class DataBaseManager : MonoBehaviour
     {
         if (!File.Exists(path + fileName + mapType.ToString())) return new MapData();
 
-        //string jsonData = File.ReadAllText(path + fileName + mapType.ToString());
         string jsonData = LoadFile(path + fileName + mapType.ToString());
         return JsonUtility.FromJson<MapData>(jsonData);
     }
@@ -356,6 +373,27 @@ public class DataBaseManager : MonoBehaviour
     public void DeleteMapData(MapType mapType, string fileName)
     {
         File.Delete(path + fileName + mapType.ToString());
+    }
+
+    public void SaveSoundData(float[] volumes)
+    {
+        soundData.Save(volumes);
+
+        string jsonData = JsonUtility.ToJson(soundData, true);
+        SaveFile(jsonData, path + "/SoundData");
+    }
+
+    public float[] LoadSoundData()
+    {
+        if (!File.Exists(path + "/SoundData"))
+        {
+            float[] volumes = { 100.0f, 100.0f };
+            return volumes;
+        }   
+
+        string jsonData = LoadFile(path + "/SoundData");
+        soundData = JsonUtility.FromJson<SoundData>(jsonData);
+        return soundData.volumes;
     }
 
     public void Save()
@@ -390,7 +428,6 @@ public class DataBaseManager : MonoBehaviour
 
         string jsonData = JsonUtility.ToJson(data, true);
         SaveFile(jsonData, path + fileName + GameManager.instance.curMapType);
-        //File.WriteAllText(path + fileName + GameManager.instance.curMapType, jsonData);
 
         MapType type = GameManager.instance.curMapType;
         SaveMapData(mapData[(int)type], type, "/MapData_");
@@ -398,7 +435,6 @@ public class DataBaseManager : MonoBehaviour
 
     public void Load()
     {
-        //string jsonData = File.ReadAllText(path + fileName + GameManager.instance.curMapType);
         string jsonData = LoadFile(path + fileName + GameManager.instance.curMapType);
         data = JsonUtility.FromJson<Data>(jsonData);
 
