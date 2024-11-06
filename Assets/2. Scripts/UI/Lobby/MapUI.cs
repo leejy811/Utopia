@@ -38,7 +38,7 @@ public class MapUI : MonoBehaviour
 
         if (!File.Exists(path))
         {
-            if(!GameManager.instance.isLoad && mapType == MapType.Utopia)
+            if(!GameManager.instance.isLoad && (mapType == MapType.Utopia || mapType == MapType.Totopia))
             {
                 SetMapImage(true);
                 buttons[0].onClick.Invoke();
