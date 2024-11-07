@@ -62,6 +62,11 @@ public class ChipManager : MonoBehaviour
         return (int)(baseCost * (1.0f + changeRatio));
     }
 
+    public void TradeTimeUpdate()
+    {
+        curTradeTimes = maxTradeTimes;
+    }
+
     public void TradeChip(int amount)
     {
         curTradeTimes--;
