@@ -70,7 +70,7 @@ MonoBehaviour:
   happinessRate: 50
   happinessDifference: 0
   position: {x: 0, y: 0}
-  influencePower: 50
+  influencePower: 100
   additionalInfluencePower: 0
   influenceSize: 1
   influenceObject: {fileID: 877148467899691272}
