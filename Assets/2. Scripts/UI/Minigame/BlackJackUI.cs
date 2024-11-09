@@ -76,6 +76,7 @@ public class BlackJackUI : MinigameUI
     public float drawSecond;
     public float openSecond;
     public float throwSecond;
+    public float throwInterval;
     public float cardSpace;
     public float openSpace;
 
@@ -448,7 +449,7 @@ public class BlackJackUI : MinigameUI
                 ThrowChip(isPlayer);
             else
                 StartCoroutine(ReturnChip(isPlayer));
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(throwInterval);
         }
     }
 
