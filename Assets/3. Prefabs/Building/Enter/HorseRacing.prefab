@@ -75,12 +75,12 @@ MonoBehaviour:
   influenceSize: 3
   influenceObject: {fileID: 6080172490550152855}
   curEvents: []
-  cost: 100
+  cost: 2500
   buildingIcon: {fileID: 21300000, guid: 31b5e57c0b866b046a67424eeb532ef7, type: 3}
   costPerDay: 0
   userCnt:
-    max: 400
-    min: 100
+    max: 1500
+    min: 1000
     cur: 0
   utilityValue:
     max: 400
@@ -91,9 +91,9 @@ MonoBehaviour:
   maxBetTimes: 5
   betTimes: 5
   RandomChip:
-    max: 10
-    min: 3
-    cur: 5
+    max: 20
+    min: 6
+    cur: 10
 --- !u!1001 &1740573439356409621
 PrefabInstance:
   m_ObjectHideFlags: 0

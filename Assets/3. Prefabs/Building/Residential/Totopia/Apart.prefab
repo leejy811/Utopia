@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: "\uC544\uD30C\uD2B8"
+  index: 0
   count: 0
   grade: 1
   type: 0
@@ -74,24 +75,24 @@ MonoBehaviour:
   influenceSize: 2
   influenceObject: {fileID: 8547929079635860779}
   curEvents: []
-  cost: 500
+  cost: 1000
   buildingIcon: {fileID: 21300000, guid: 4671da3345ac3334dbba7e80410a4e64, type: 3}
   existFacility: 00000000
   residentCnt:
-    max: 200
+    max: 400
     min: 0
-    cur: 200
+    cur: 400
   commercialCSAT:
-    max: 200
-    min: 150
+    max: 400
+    min: 300
     cur: 0
   cultureCSAT:
-    max: 150
-    min: 100
+    max: 300
+    min: 200
     cur: 0
   serviceCSAT:
-    max: 300
-    min: 150
+    max: 600
+    min: 300
     cur: 0
 --- !u!1001 &4244227914723542185
 PrefabInstance:
