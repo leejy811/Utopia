@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 [System.Serializable]
@@ -34,6 +36,12 @@ public class HorseController : MonoBehaviour
     public float injuryDuration;
     public float injuryParam;
 
+    [Header("Effect")]
+    public SpriteRenderer crownEffect;
+    public SpriteRenderer skillEffect;
+    public SpriteRenderer injuryEffect;
+    public SpriteRenderer pickEffect;
+
     public Func<HorseType, int> getGrade;
     public Action<HorseType> applyResult;
 
@@ -52,8 +60,8 @@ public class HorseController : MonoBehaviour
     public void StartRace()
     {
         isEnd = false;
-        StartCoroutine(CountEvent(skillCooltime, skillDuration, skillParam, checkSkill));
-        StartCoroutine(CountEvent(injuryCooltime, injuryDuration, injuryParam, checkInjury));
+        StartCoroutine(CountEvent(skillCooltime, skillDuration, skillParam, checkSkill, skillEffect));
+        StartCoroutine(CountEvent(injuryCooltime, injuryDuration, injuryParam, checkInjury, injuryEffect));
         StartCoroutine(MoveHorse());
     }
 
@@ -75,21 +83,23 @@ public class HorseController : MonoBehaviour
         horseAnim.SetBool("IsMoving", false);
     }
 
-    IEnumerator CountEvent(float coolTime, float duration, float param, Func<bool> checkCondition)
+    IEnumerator CountEvent(float coolTime, float duration, float param, Func<bool> checkCondition, SpriteRenderer effect)
     {
         yield return new WaitForSeconds(coolTime);
         while (!isEnd)
         {
             if (checkCondition.Invoke())
-                StartCoroutine(ApplyEvent(duration, param));
+                StartCoroutine(ApplyEvent(duration, param, effect));
             yield return new WaitForSeconds(coolTime);
         }
     }
 
-    IEnumerator ApplyEvent(float duration, float amount)
+    IEnumerator ApplyEvent(float duration, float amount, SpriteRenderer effect)
     {
         curSpeed += amount;
+        effect.gameObject.SetActive(true);
         yield return new WaitForSeconds(duration);
+        effect.gameObject.SetActive(false);
         if (!isEnd)
             curSpeed -= amount;
     }

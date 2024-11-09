@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HorseRacingUI : MinigameUI
 {
@@ -18,11 +18,16 @@ public class HorseRacingUI : MinigameUI
 
     [Header("Result")]
     public TextMeshProUGUI[] gradeNameTexts;
+    public Image[] gradePickImages;
 
     [Header("Parameter")]
     public int bettingSecond;
     public float errorMsgSecond;
     public float rewardRatio;
+
+    [Header("CountDown")]
+    public Image countImage;
+    public Sprite[] countSprites;
 
     [Header("System")]
     public GameObject gamePanel;
@@ -33,6 +38,7 @@ public class HorseRacingUI : MinigameUI
     private HorseType curHorseType;
     private int curBetChip;
     private Coroutine timeCountCoroutine;
+    private HorseController prevPickHorse;
 
     private void Start()
     {
@@ -95,7 +101,11 @@ public class HorseRacingUI : MinigameUI
         foreach (HorseController horse in horses)
         {
             horse.transform.localPosition = new Vector3(0.0f, horse.transform.localPosition.y, horse.transform.localPosition.z);
+            horse.crownEffect.gameObject.SetActive(false);
         }
+
+        if(prevPickHorse != null)
+            prevPickHorse.pickEffect.gameObject.SetActive(false);
     }
 
     private void SetHorseSpeed()
@@ -112,6 +122,11 @@ public class HorseRacingUI : MinigameUI
         horseSpeedText.text = horse.curSpeed.ToString("F1");
         horseTypeText.text = horse.horseInfo.typeName;
         horseSkillText.text = horse.horseInfo.skillDescription;
+
+        if (prevPickHorse != null)
+            prevPickHorse.pickEffect.gameObject.SetActive(false);
+        horse.pickEffect.gameObject.SetActive(true);
+        prevPickHorse = horse;
     }
 
     private void SetHorseTab(int index)
@@ -136,9 +151,33 @@ public class HorseRacingUI : MinigameUI
         }
     }
 
+    private void SetPickGrade(int grade)
+    {
+        for (int i = 0; i < gradePickImages.Length; i++)
+        {
+            gradePickImages[i].enabled = i == grade - 1;
+        }
+    }
+
     private void GetReward()
     {
         ChipManager.instance.curChip += (int)Mathf.Round(curBetChip * rewardRatio);
+    }
+
+    IEnumerator CountDown()
+    {
+        countImage.gameObject.SetActive(true);
+        for (int i = 0;i < countSprites.Length;i++)
+        {
+            countImage.sprite = countSprites[i];
+            yield return new WaitForSeconds(1);
+        }
+        countImage.gameObject.SetActive(false);
+
+        foreach (HorseController horse in horses)
+        {
+            horse.StartRace();
+        }
     }
 
     IEnumerator CountTime()
@@ -163,10 +202,7 @@ public class HorseRacingUI : MinigameUI
         ChipManager.instance.PayChip(curBetChip);
         resultInfo.Clear();
         SetState(MinigameState.Play);
-        foreach (HorseController horse in horses)
-        {
-            horse.StartRace();
-        }
+        StartCoroutine(CountDown());
     }
 
     public void OnClickPickHorse(int type)
@@ -208,8 +244,15 @@ public class HorseRacingUI : MinigameUI
 
         if (resultInfo.Count == horses.Count)
             SetState(MinigameState.Result);
-        else if (resultInfo.Count == 1 && horseType == curHorseType)
-            GetReward();
+        else if (resultInfo.Count == 1)
+        {
+            FindHorse(horseType).crownEffect.gameObject.SetActive(true);
+            if (horseType == curHorseType)
+                GetReward();
+        }
+
+        if (horseType == curHorseType)
+            SetPickGrade(resultInfo.Count);
     }
 
     private int GetGrade(HorseType horseType)

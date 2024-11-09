@@ -54,3 +54,6 @@ TagManager:
   - name: Fence
     uniqueID: 2263865027
     locked: 0
+  - name: Effect
+    uniqueID: 591738493
+    locked: 0
