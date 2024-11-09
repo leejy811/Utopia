@@ -25,7 +25,6 @@ public class ShopManager : MonoBehaviour, IObserver
         }
 
         instance = this;
-        Money = 500;
     }
 
     public void GetMoney(int amount)
