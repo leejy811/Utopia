@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buildingName: "\uBCD1\uC6D0"
+  index: 0
   count: 0
   grade: 2
   type: 3
@@ -76,7 +77,7 @@ MonoBehaviour:
   curEvents: []
   cost: 1000
   buildingIcon: {fileID: 21300000, guid: 95758fba52e0b4b4ba7c1101629dcc6a, type: 3}
-  costPerDay: 10
+  costPerDay: 25
   userCnt:
     max: 1600
     min: 800
