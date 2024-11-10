@@ -77,7 +77,7 @@ MonoBehaviour:
   curEvents: []
   cost: 500
   buildingIcon: {fileID: 21300000, guid: b8b40c740b5b46249bc98c74752c2dca, type: 3}
-  costPerDay: 0
+  costPerDay: 100
   userCnt:
     max: 1000
     min: 700
@@ -91,9 +91,9 @@ MonoBehaviour:
   maxBetTimes: 4
   betTimes: 4
   RandomChip:
-    max: 15
-    min: 8
-    cur: 10
+    max: 10
+    min: 4
+    cur: 8
 --- !u!1001 &3846295754168264045
 PrefabInstance:
   m_ObjectHideFlags: 0

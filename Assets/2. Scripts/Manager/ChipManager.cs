@@ -44,6 +44,7 @@ public class ChipManager : MonoBehaviour
             baseCost += ShopManager.instance.CalculateBuildingCost(building, i);
             count++;
         }
+
         baseCost /= count;
     }
 
@@ -59,7 +60,7 @@ public class ChipManager : MonoBehaviour
 
     public int CalcChipCost()
     {
-        return (int)(baseCost * (1.0f + changeRatio));
+        return (int)((baseCost * (1.0f + changeRatio)) / 2);
     }
 
     public void TradeTimeUpdate()
