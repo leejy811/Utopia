@@ -26,29 +26,29 @@ public class ServiceBuilding : UtilityBuilding
         if (values[ValueType.user].CheckBoundary() == BoundaryType.More)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                income += 1;
+                income += 10;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                cost -= 10;
+                income += 5;
             else
-                cost -= 5;
+                income += 5;
         }
         else if (values[ValueType.user].CheckBoundary() == BoundaryType.Less)
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
-                income += 10;
+                income += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                income += 1;
+                income += 10;
             else
-                income += 5;
+                cost -= 5;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 income += 5;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                cost -= 5;
+                income += 0;
             else
-                income += 1;
+                income += 10;
         }
 
         if (!isExpect)
@@ -80,14 +80,14 @@ public class ServiceBuilding : UtilityBuilding
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
                 changeAmount += 10;
             else
-                changeAmount += 0;
+                changeAmount += -10;
         }
         else
         {
             if (values[ValueType.utility].CheckBoundary() == BoundaryType.More)
                 changeAmount += 0;
             else if (values[ValueType.utility].CheckBoundary() == BoundaryType.Less)
-                changeAmount += 0;
+                changeAmount += -10;
             else
                 changeAmount += 10;
         }
