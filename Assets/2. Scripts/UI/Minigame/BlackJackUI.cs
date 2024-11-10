@@ -77,6 +77,7 @@ public class BlackJackUI : MinigameUI
     public float openSecond;
     public float throwSecond;
     public float throwInterval;
+    public float resultInterval;
     public float cardSpace;
     public float openSpace;
 
@@ -261,7 +262,7 @@ public class BlackJackUI : MinigameUI
     #region GameLogic
     IEnumerator StartBlackJack()
     {
-        yield return StartCoroutine(ThrowChip(-curGameBuilding.betChip, false));
+        yield return StartCoroutine(ThrowChip(-betChip, false));
 
         canDraw = false;
         player.Add(PickCard());
@@ -375,8 +376,9 @@ public class BlackJackUI : MinigameUI
         ResetCard();
 
         canStart = false;
-        yield return StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), rewardChip > 0 ? false : true));
-        yield return StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, rewardChip > 0 ? true : false));
+        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), rewardChip > 0 ? false : true));
+        yield return new WaitForSeconds(resultInterval);
+        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, rewardChip > 0 ? true : false));
         canStart = true;
     }
 
