@@ -209,6 +209,7 @@ MonoBehaviour:
   skillEffect: {fileID: 6251462172622252058}
   injuryEffect: {fileID: 7080842693720372302}
   pickEffect: {fileID: 8241796382056082329}
+  effectSecond: 1
 --- !u!61 &6620248033002005143
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -41,6 +41,7 @@ public class HorseController : MonoBehaviour
     public SpriteRenderer skillEffect;
     public SpriteRenderer injuryEffect;
     public SpriteRenderer pickEffect;
+    public float effectSecond;
 
     public Func<HorseType, int> getGrade;
     public Action<HorseType> applyResult;
@@ -97,11 +98,17 @@ public class HorseController : MonoBehaviour
     IEnumerator ApplyEvent(float duration, float amount, SpriteRenderer effect)
     {
         curSpeed += amount;
-        effect.gameObject.SetActive(true);
+        StartCoroutine(PlayEffect(effect));
         yield return new WaitForSeconds(duration);
-        effect.gameObject.SetActive(false);
         if (!isEnd)
             curSpeed -= amount;
+    }
+
+    IEnumerator PlayEffect(SpriteRenderer effect)
+    {
+        effect.gameObject.SetActive(true);
+        yield return new WaitForSeconds(effectSecond);
+        effect.gameObject.SetActive(false);
     }
 
     private bool CheckInjuryCondition()
