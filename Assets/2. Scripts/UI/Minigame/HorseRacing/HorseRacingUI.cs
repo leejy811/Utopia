@@ -24,6 +24,7 @@ public class HorseRacingUI : MinigameUI
     public int bettingSecond;
     public float errorMsgSecond;
     public float rewardRatio;
+    public Vector2 horseYRange;
 
     [Header("CountDown")]
     public Image countImage;
@@ -100,7 +101,16 @@ public class HorseRacingUI : MinigameUI
         mainCamera.targetHorse = null;
         foreach (HorseController horse in horses)
         {
-            horse.transform.localPosition = new Vector3(0.0f, horse.transform.localPosition.y, horse.transform.localPosition.z);
+            float yPos = horse.transform.localPosition.y;
+            float zPos = horse.transform.localPosition.z;
+            if (resultInfo.Count != 0)
+            {
+                int grade = resultInfo.FindIndex(x => x.horseType == horse.horseInfo.horseType);
+                int index = resultInfo.Count - grade - 1;
+                yPos = horseYRange.x + (horseYRange.y - horseYRange.x) / (resultInfo.Count - 1) * index;
+                zPos = index;
+            }
+            horse.transform.localPosition = new Vector3(0.0f, yPos, zPos);
             horse.crownEffect.gameObject.SetActive(false);
         }
 
@@ -205,13 +215,14 @@ public class HorseRacingUI : MinigameUI
         StartCoroutine(CountDown());
     }
 
-    public void OnClickPickHorse(int type)
+    public void OnClickPickHorse(int index)
     {
-        HorseController horse = FindHorse((HorseType)type);
-        curHorseType = (HorseType)type;
+        HorseType type = resultInfo.Count == 0 ? (HorseType)index : resultInfo[index].horseType;
+        HorseController horse = FindHorse(type);
+        curHorseType = type;
         mainCamera.targetHorse = horse.transform;
         SetHorseInfo(horse);
-        SetHorseTab(type);
+        SetHorseTab(index);
     }
     
     public void OnClickChangeState(int state)
@@ -258,7 +269,7 @@ public class HorseRacingUI : MinigameUI
     private int GetGrade(HorseType horseType)
     {
         horses.Sort(CompareGrade);
-        return horses.FindIndex(x => x.horseType == horseType);
+        return horses.FindIndex(x => x.horseInfo.horseType == horseType);
     }
 
     private int CompareGrade(HorseController a, HorseController b)
@@ -268,6 +279,6 @@ public class HorseRacingUI : MinigameUI
 
     private HorseController FindHorse(HorseType horseType)
     {
-        return horses.Find(x => x.horseType == horseType);
+        return horses.Find(x => x.horseInfo.horseType == horseType);
     }
 }

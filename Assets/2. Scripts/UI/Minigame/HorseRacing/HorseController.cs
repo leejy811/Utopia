@@ -8,6 +8,7 @@ using UnityEngine;
 [System.Serializable]
 public struct HorseInfo
 {
+    public HorseType horseType;
     public string horseName;
     public string typeName;
     public string skillDescription;
@@ -18,7 +19,6 @@ public enum HorseType { Solo, Chase, Sense, Sincere, Health }
 public class HorseController : MonoBehaviour
 {
     public HorseInfo horseInfo;
-    public HorseType horseType;
     public Vector2 speedRange;
     public float animationSpeedRatio;
     public int curGrade;
@@ -120,7 +120,7 @@ public class HorseController : MonoBehaviour
 
     private bool CheckSkillCondition()
     {
-        curGrade = getGrade.Invoke(horseType);
+        curGrade = getGrade.Invoke(horseInfo.horseType);
         if (curGrade == skillCondition || skillCondition == -1) return true;
         else return false;
     }
@@ -130,7 +130,7 @@ public class HorseController : MonoBehaviour
         if (collision.tag == "Goal")
         {
             isEnd = true;
-            applyResult.Invoke(horseType);
+            applyResult.Invoke(horseInfo.horseType);
         }
     }
 }
