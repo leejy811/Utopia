@@ -83,8 +83,8 @@ MonoBehaviour:
     min: 300
     cur: 0
   utilityValue:
-    max: 300
-    min: 200
+    max: 200
+    min: 100
     cur: 0
   minigameType: 0
   betChip: 0
