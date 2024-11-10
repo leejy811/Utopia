@@ -18,6 +18,10 @@ public class MinigameUI : MonoBehaviour, IObserver
     public TextMeshProUGUI playTimesText;
     public TextMeshProUGUI errorMsgText;
 
+    [Header("Opening")]
+    public Animator openingAnim;
+    public float openingSecond;
+
     protected EnterBuilding curGameBuilding;
 
     public virtual void InitGame(EnterBuilding building)
@@ -31,6 +35,12 @@ public class MinigameUI : MonoBehaviour, IObserver
         AkSoundEngine.SetRTPCValue("CLICK", 2);
         AkSoundEngine.SetRTPCValue("INDEX1", -1);
         AkSoundEngine.SetRTPCValue("INDEX2", -1);
+
+        if (openingAnim != null)
+        {
+            openingAnim.SetFloat("Speed", 1.0f / openingSecond);
+            openingAnim.SetBool("IsPlaying", true);
+        }
     }
 
     protected virtual void SetValue()
@@ -68,6 +78,22 @@ public class MinigameUI : MonoBehaviour, IObserver
 
         UIManager.instance.topPanel.SetActive(true);
         UIManager.instance.bottomPanel.SetActive(true);
+    }
+
+    public virtual void OnClickCloseGame()
+    {
+        StartCoroutine(PlayCloseGame());
+    }
+
+    protected IEnumerator PlayCloseGame()
+    {
+        if (openingAnim != null) 
+        {
+            openingAnim.SetBool("IsPlaying", false);
+            yield return new WaitForSeconds(openingSecond);
+        }
+
+        UIManager.instance.notifyObserver(EventState.None);
     }
 
     public void Notify(EventState state)

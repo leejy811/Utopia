@@ -300,9 +300,9 @@ public class SlotMachineUI : MinigameUI
         AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
-    public void OnClickQuitGame()
+    public override void OnClickCloseGame()
     {
         if (state == SlotState.Ready)
-            UIManager.instance.OnClickCloseButton();
+            base.OnClickCloseGame();
     }
 }
