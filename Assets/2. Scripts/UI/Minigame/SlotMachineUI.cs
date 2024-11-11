@@ -35,13 +35,6 @@ public class SlotMachineUI : MinigameUI
     public Animator leverAnim;
     public Animator jackPotAnim;
 
-    [Header("AddChip")]
-    public RectTransform chipImageTrans;
-    public Vector2 chipImageBox;
-    public Vector2 plusLimitBox;
-    public float plusMoveDist;
-    public float chipPunch;
-
     [Header("Parameter")]
     public float oneSlotSecond;
     public float leverSecond;
@@ -138,31 +131,10 @@ public class SlotMachineUI : MinigameUI
         for (int i = 0;i < rewardChip; i++)
         {
             curChipText.text = (ChipManager.instance.curChip - rewardChip + i + 1).ToString();
-            StartCoroutine(PlayAddChip((jackPotSecond / rewardChip) * 5.0f));
+            StartCoroutine(PlayAddChip((jackPotSecond / rewardChip) * 5.0f, 1));
             yield return new WaitForSeconds(jackPotSecond / rewardChip);
         }
         jackPotAnim.SetBool("IsJackPot", false);
-    }
-
-    IEnumerator PlayAddChip(float second)
-    {
-        RectTransform plus = PoolSystem.instance.messagePool.GetFromPool<RectTransform>("PlusChip");
-        TextMeshProUGUI plusText = plus.GetComponent<TextMeshProUGUI>();
-
-        float xPos = Random.Range(chipImageBox.x, plusLimitBox.x);
-        float yPos = Random.Range(chipImageBox.y, plusLimitBox.y);
-        int xSign = Random.Range(0, 2) == 0 ? -1 : 1;
-        int ySign = Random.Range(0, 2) == 0 ? -1 : 1;
-        plus.localPosition = new Vector3(xPos * xSign, yPos * ySign, 0);
-        plus.DOLocalMove(plus.localPosition + plus.localPosition.normalized * plusMoveDist, second);
-
-        plusText.color += Color.black;
-        plusText.DOFade(0.0f, second);
-
-        //chipImageTrans.DOPunchScale(Vector3.one * chipPunch, second * 0.2f, 1);
-        yield return new WaitForSeconds(second);
-
-        PoolSystem.instance.messagePool.TakeToPool<RectTransform>("PlusChip", plus);
     }
 
     private void StopJackPot()

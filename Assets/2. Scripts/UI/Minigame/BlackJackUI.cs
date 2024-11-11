@@ -27,23 +27,6 @@ public class MsgPanel
 {
     public GameObject panel;
     public TextMeshProUGUI msgText;
-
-    public void OnMessage(string msg, float sec)
-    {
-        panel.SetActive(true);
-
-        Image[] images = panel.GetComponentsInChildren<Image>();
-
-        foreach (Image image in images)
-        {
-            image.color = Color.white;
-            image.DOFade(0.0f, sec);
-        }
-
-        msgText.text = msg;
-        msgText.color = Color.white;
-        msgText.DOFade(0.0f, sec).OnComplete(() => { panel.SetActive(false); });
-    }
 }
 
 [System.Serializable]
@@ -55,14 +38,13 @@ public class CardSprite
 
 public class BlackJackUI : MinigameUI
 {
-    [Header("Lobby")]
-    public MsgPanel errorMsg_Lobby;
+    [Header("ErrorMessage")]
+    public MsgPanel errorMsg;
 
     [Header("Betting")]
     public TextMeshProUGUI betChipText;
     public TextMeshProUGUI remainChipText;
     public TextMeshProUGUI betTimesText_Betting;
-    public MsgPanel errorMsg_Betting;
 
     [Header("Play")]
     public MsgPanel winResultMsg;
@@ -159,19 +141,19 @@ public class BlackJackUI : MinigameUI
         switch (result)
         {
             case GameResult.Player_BlackJack:
-                winResultMsg.OnMessage("!! Player BlackJack !!", resultSecond);
+                StartCoroutine(OnMessage(winResultMsg, "!! Player BlackJack !!", resultSecond));
                 break;
             case GameResult.Player_Win:
-                winResultMsg.OnMessage("!! Player Win !!", resultSecond);
+                StartCoroutine(OnMessage(winResultMsg, "!! Player Win !!", resultSecond));
                 break;
             case GameResult.Dealer_BlackJack:
-                defeatResultMsg.OnMessage("!! Dealerb BlackJack !!", resultSecond);
+                StartCoroutine(OnMessage(defeatResultMsg, "!! Dealer BlackJack !!", resultSecond));
                 break;
             case GameResult.Dealer_Win:
-                defeatResultMsg.OnMessage("!! Dealer Win !!", resultSecond);
+                StartCoroutine(OnMessage(defeatResultMsg, "!! Dealer Win !!", resultSecond));
                 break;
             case GameResult.Draw:
-                defeatResultMsg.OnMessage("!! Draw !!", resultSecond);
+                StartCoroutine(OnMessage(defeatResultMsg, "!! Draw !!", resultSecond));
                 break;
         }
 
@@ -209,9 +191,9 @@ public class BlackJackUI : MinigameUI
     public void OnClickStartGame()
     {
         if (curGameBuilding.betTimes == 0)
-            errorMsg_Lobby.OnMessage("실행 가능 횟수를\n모두 소진하였습니다.", errorMsgSecond);
+            StartCoroutine(OnMessage(errorMsg, "실행 가능 횟수를\n모두 소진하였습니다.", errorMsgSecond));
         else if (ChipManager.instance.curChip < curGameBuilding.betChip)
-            errorMsg_Lobby.OnMessage("해당 미니 게임을 하기 위한\n칩이 부족합니다.", errorMsgSecond);
+            StartCoroutine(OnMessage(errorMsg, "해당 미니 게임을 하기 위한\n칩이 부족합니다.", errorMsgSecond));
         else if (!canClick) return;
         else
         {
@@ -224,9 +206,9 @@ public class BlackJackUI : MinigameUI
     public void OnClickBetChip(int amount)
     {
         if(betChip + amount > ChipManager.instance.curChip)
-            errorMsg_Betting.OnMessage("배팅하기 위한\n칩이 부족합니다.", errorMsgSecond);
+            StartCoroutine(OnMessage(errorMsg, "배팅하기 위한\n칩이 부족합니다.", errorMsgSecond));
         else if (betChip + amount < curGameBuilding.betChip)
-            errorMsg_Betting.OnMessage("기본 판돈이하로\n칩을 회수할 수 없습니다.", errorMsgSecond);
+            StartCoroutine(OnMessage(errorMsg, "기본 판돈이하로\n칩을 회수할 수 없습니다.", errorMsgSecond));
         else if (!canClick) return;
         else
         {
@@ -239,11 +221,11 @@ public class BlackJackUI : MinigameUI
     public void OnClickAllIn()
     {
         if (betChip == ChipManager.instance.curChip)
-            errorMsg_Betting.OnMessage("배팅하기 위한\n칩이 부족합니다.", errorMsgSecond);
+            StartCoroutine(OnMessage(errorMsg, "배팅하기 위한\n칩이 부족합니다.", errorMsgSecond));
         else if (!canClick) return;
         else
         {
-            errorMsg_Betting.OnMessage("ALL-IN", errorMsgSecond);
+            StartCoroutine(OnMessage(errorMsg, "ALL-IN", errorMsgSecond));
             StartCoroutine(ThrowChip(ChipManager.instance.curChip - betChip, throwInterval, true));
             betChip = ChipManager.instance.curChip;
             SetUI(MinigameState.Betting);
@@ -437,7 +419,7 @@ public class BlackJackUI : MinigameUI
 
         if (CalculateResult(player) > 21)
         {
-            defeatResultMsg.OnMessage("!! Player Burst !!", resultSecond);
+            StartCoroutine(OnMessage(defeatResultMsg, "!! Player Burst !!", resultSecond));
             GetReward(GameResult.Dealer_Win);
             StartCoroutine(ReturnToLobby(resultSecond, GameResult.Dealer_Win));
         }
@@ -455,7 +437,7 @@ public class BlackJackUI : MinigameUI
 
         if (CalculateResult(dealer) > 21)
         {
-            winResultMsg.OnMessage("!! Dealer Burst !!", resultSecond);
+            StartCoroutine(OnMessage(winResultMsg, "!! Dealer Burst !!", resultSecond));
             GetReward(GameResult.Player_Win);
             StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_Win));
         }
@@ -470,6 +452,8 @@ public class BlackJackUI : MinigameUI
     IEnumerator ThrowChip(int amount, float second, bool isPlayer)
     {
         canClick = false;
+        if (isPlayer)
+            StartCoroutine(PlayAddChip(throwSecond, -amount));
         for (int i = 0; i < Mathf.Abs(amount); i++)
         {
             if (amount > 0)
@@ -495,6 +479,14 @@ public class BlackJackUI : MinigameUI
         yield return new WaitForSeconds(throwSecond);
 
         PoolSystem.instance.messagePool.TakeToPool<RectTransform>("Chip", transform);
+    }
+
+    IEnumerator OnMessage(MsgPanel msgPanel, string msg, float second)
+    {
+        msgPanel.panel.SetActive(true);
+        msgPanel.msgText.text = msg;
+        yield return new WaitForSeconds(second);
+        msgPanel.panel.SetActive(false);
     }
 
     private Image InitImage()

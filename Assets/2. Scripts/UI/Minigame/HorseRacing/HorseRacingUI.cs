@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class HorseRacingUI : MinigameUI
 {
+    [Header("Error")]
+    public Image chipErrorImage;
+    public Image timesErrorImage;
+
     [Header("Betting")]
     public TextMeshProUGUI[] tabText;
     public TextMeshProUGUI secondText;
@@ -174,6 +178,13 @@ public class HorseRacingUI : MinigameUI
         ChipManager.instance.curChip += (int)Mathf.Round(curBetChip * rewardRatio);
     }
 
+    IEnumerator OnError(Image errorImage)
+    {
+        errorImage.enabled = true;
+        yield return new WaitForSeconds(errorMsgSecond);
+        errorImage.enabled = false;
+    }
+
     IEnumerator CountDown()
     {
         countImage.gameObject.SetActive(true);
@@ -230,18 +241,24 @@ public class HorseRacingUI : MinigameUI
         SetState((MinigameState)state);
     }
 
+    public void OnClickStartBetting()
+    {
+        if (ChipManager.instance.curChip < curGameBuilding.betChip)
+            StartCoroutine(OnError(chipErrorImage));
+        else if (curGameBuilding.betTimes == 0)
+            StartCoroutine(OnError(timesErrorImage));
+        else
+            SetState(MinigameState.Betting);
+    }
+
     public void OnClickBetChip(int amount)
     {
         if (curBetChip + amount < curGameBuilding.betChip)
         {
-            Debug.Log("기본 배팅 금액보다 적음");
-            //Error Msg
             return;
         }
         else if (curBetChip + amount > ChipManager.instance.curChip)
         {
-            Debug.Log("보유 금액 초과");
-            //Error Msg
             return;
         }
 

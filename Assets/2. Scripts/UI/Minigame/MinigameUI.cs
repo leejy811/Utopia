@@ -24,6 +24,13 @@ public class MinigameUI : MonoBehaviour, IObserver
     public float openingSecond;
     public float openingInterval;
 
+    [Header("AddChip")]
+    public Vector2 chipImageBox;
+    public Vector2 plusLimitBox;
+    public float plusMoveDist;
+    public float plusScale;
+    public string poolName;
+
     protected EnterBuilding curGameBuilding;
 
     public virtual void InitGame(EnterBuilding building)
@@ -113,7 +120,29 @@ public class MinigameUI : MonoBehaviour, IObserver
             if (!isOpen)
                 UIManager.instance.notifyObserver(EventState.None);
         }
-    } 
+    }
+
+    protected IEnumerator PlayAddChip(float second, int chip)
+    {
+        RectTransform plus = PoolSystem.instance.messagePool.GetFromPool<RectTransform>(poolName);
+        TextMeshProUGUI plusText = plus.GetComponent<TextMeshProUGUI>();
+
+        plus.localScale = Vector3.one * plusScale;
+        float xPos = Random.Range(chipImageBox.x, plusLimitBox.x);
+        float yPos = Random.Range(chipImageBox.y, plusLimitBox.y);
+        int xSign = Random.Range(0, 2) == 0 ? -1 : 1;
+        int ySign = Random.Range(0, 2) == 0 ? -1 : 1;
+        plus.localPosition = new Vector3(xPos * xSign, yPos * ySign, 0);
+        plus.DOLocalMove(plus.localPosition + plus.localPosition.normalized * plusMoveDist, second);
+
+        plusText.text = (chip >= 0 ? "+" : "-") + Mathf.Abs(chip).ToString();
+        plusText.color += Color.black;
+        plusText.DOFade(0.0f, second);
+
+        yield return new WaitForSeconds(second);
+
+        PoolSystem.instance.messagePool.TakeToPool<RectTransform>(poolName, plus);
+    }
 
     public void Notify(EventState state)
     {
