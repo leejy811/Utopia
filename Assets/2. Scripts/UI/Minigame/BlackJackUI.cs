@@ -77,7 +77,6 @@ public class BlackJackUI : MinigameUI
     public float openSecond;
     public float throwSecond;
     public float throwInterval;
-    public float resultInterval;
     public float cardSpace;
     public float openSpace;
 
@@ -95,15 +94,14 @@ public class BlackJackUI : MinigameUI
     public Sprite backCard;
 
     private int betChip;
-    private List<RectTransform> chips = new List<RectTransform>();
+    public List<RectTransform> chips = new List<RectTransform>();
     private List<Card> deck = new List<Card>();
     private List<Card> player = new List<Card>();
     private List<Card> dealer = new List<Card>();
     private List<int> pickIndex = new List<int>();
     private Dictionary<GameResult, int> reward = new Dictionary<GameResult, int>();
     private Sprite[,] sprites;
-    private bool canDraw;
-    private bool canStart;
+    private bool canClick;
 
     private void Start()
     {
@@ -123,7 +121,7 @@ public class BlackJackUI : MinigameUI
         reward[GameResult.Dealer_Win] = -1;
         reward[GameResult.Draw] = 0;
 
-        canStart = true;
+        canClick = true;
     }
 
     public override void InitGame(EnterBuilding building)
@@ -195,7 +193,7 @@ public class BlackJackUI : MinigameUI
         playerHand.Clear();
         dealerHand.Clear();
 
-        canDraw = true;
+        canClick = true;
     }
 
     private void ResetChip()
@@ -214,12 +212,12 @@ public class BlackJackUI : MinigameUI
             errorMsg_Lobby.OnMessage("실행 가능 횟수를\n모두 소진하였습니다.", errorMsgSecond);
         else if (ChipManager.instance.curChip < curGameBuilding.betChip)
             errorMsg_Lobby.OnMessage("해당 미니 게임을 하기 위한\n칩이 부족합니다.", errorMsgSecond);
-        else if (!canStart) return;
+        else if (!canClick) return;
         else
         {
             curGameBuilding.betTimes--;
             SetState(MinigameState.Betting);
-            StartCoroutine(ThrowChip(curGameBuilding.betChip, true));
+            StartCoroutine(ThrowChip(curGameBuilding.betChip, throwInterval, true));
         }
     }
 
@@ -229,16 +227,40 @@ public class BlackJackUI : MinigameUI
             errorMsg_Betting.OnMessage("배팅하기 위한\n칩이 부족합니다.", errorMsgSecond);
         else if (betChip + amount < curGameBuilding.betChip)
             errorMsg_Betting.OnMessage("기본 판돈이하로\n칩을 회수할 수 없습니다.", errorMsgSecond);
+        else if (!canClick) return;
         else
         {
             betChip += amount;
             SetUI(MinigameState.Betting);
-            StartCoroutine(ThrowChip(amount, true));
+            StartCoroutine(ThrowChip(amount, throwInterval, true));
         }
+    }
+
+    public void OnClickAllIn()
+    {
+        if (betChip == ChipManager.instance.curChip)
+            errorMsg_Betting.OnMessage("배팅하기 위한\n칩이 부족합니다.", errorMsgSecond);
+        else if (!canClick) return;
+        else
+        {
+            errorMsg_Betting.OnMessage("ALL-IN", errorMsgSecond);
+            StartCoroutine(ThrowChip(ChipManager.instance.curChip - betChip, throwInterval, true));
+            betChip = ChipManager.instance.curChip;
+            SetUI(MinigameState.Betting);
+        }
+    }
+
+    public void OnClickResetBetting()
+    {
+        if (!canClick) return;
+        StartCoroutine(ThrowChip((betChip - curGameBuilding.betChip) * -1, throwInterval, true));
+        betChip = curGameBuilding.betChip;
+        SetUI(MinigameState.Betting);
     }
 
     public void OnClickPlayGame()
     {
+        if (!canClick) return;
         if (!ChipManager.instance.PayChip(betChip)) return;
         SetState(MinigameState.Play);
         StartCoroutine(StartBlackJack());
@@ -246,15 +268,15 @@ public class BlackJackUI : MinigameUI
 
     public void OnClickDrawCard()
     {
-        if (canDraw)
+        if (canClick)
             StartCoroutine(PlayerTurn());
     }
 
     public void OnClickCheckResult()
     {
-        if (!canDraw) return;
+        if (!canClick) return;
 
-        canDraw = false;
+        canClick = false;
         StartCoroutine(DealerTurn());
     }
     #endregion
@@ -262,9 +284,9 @@ public class BlackJackUI : MinigameUI
     #region GameLogic
     IEnumerator StartBlackJack()
     {
-        yield return StartCoroutine(ThrowChip(-betChip, false));
+        yield return StartCoroutine(ThrowChip(-betChip, 0.0f, false));
 
-        canDraw = false;
+        canClick = false;
         player.Add(PickCard());
         player.Add(PickCard());
         dealer.Add(PickCard());
@@ -291,7 +313,7 @@ public class BlackJackUI : MinigameUI
         OpenCard(dealerHand[0], dealer[0]);
         yield return new WaitForSeconds(openSecond / 4.0f);
 
-        canDraw = true;
+        canClick = true;
     }
 
     private Card PickCard()
@@ -334,7 +356,7 @@ public class BlackJackUI : MinigameUI
 
     private void GetReward(GameResult result)
     {
-        canDraw = false; ;
+        canClick = false; ;
         ChipManager.instance.curChip = Mathf.Max(ChipManager.instance.curChip + reward[result] * betChip, 0);
     }
 
@@ -374,17 +396,19 @@ public class BlackJackUI : MinigameUI
         SetState(MinigameState.Lobby);
 
         ResetCard();
+        ResetChip();
 
-        canStart = false;
-        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), rewardChip > 0 ? false : true));
-        yield return new WaitForSeconds(resultInterval);
-        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, rewardChip > 0 ? true : false));
-        canStart = true;
+        canClick = false;
+        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), throwInterval, rewardChip > 0 ? false : true));
+        yield return new WaitForSeconds(throwInterval * rewardChip + throwSecond * 2);
+        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false));
+        yield return new WaitForSeconds(throwSecond);
+        canClick = true;
     }
 
     IEnumerator DrawCard(bool isPlayer, bool isOpen)
     {
-        canDraw = false;
+        canClick = false;
 
         List<Card> cards = isPlayer ? player : dealer;
         List<Image> images = isPlayer ? playerHand : dealerHand;
@@ -404,7 +428,7 @@ public class BlackJackUI : MinigameUI
             yield return new WaitForSeconds(openSecond);
         }
 
-        canDraw = true;
+        canClick = true;
     }
 
     IEnumerator PlayerTurn()
@@ -443,16 +467,19 @@ public class BlackJackUI : MinigameUI
         }
     }
 
-    IEnumerator ThrowChip(int amount, bool isPlayer)
+    IEnumerator ThrowChip(int amount, float second, bool isPlayer)
     {
+        canClick = false;
         for (int i = 0; i < Mathf.Abs(amount); i++)
         {
             if (amount > 0)
                 ThrowChip(isPlayer);
             else
                 StartCoroutine(ReturnChip(isPlayer));
-            yield return new WaitForSeconds(throwInterval);
+            yield return new WaitForSeconds(second);
         }
+        yield return new WaitForSeconds(throwSecond);
+        canClick = true;
     }
 
     IEnumerator ReturnChip(bool isPlayer)

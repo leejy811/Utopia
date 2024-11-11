@@ -297,7 +297,6 @@ public class SlotMachineUI : MinigameUI
     protected override void OnDisable()
     {
         base.OnDisable();
-        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
     public override void OnClickCloseGame()

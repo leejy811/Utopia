@@ -20,13 +20,16 @@ public class MinigameUI : MonoBehaviour, IObserver
 
     [Header("Opening")]
     public Animator openingAnim;
+    public GameObject gamePanel;
     public float openingSecond;
+    public float openingInterval;
 
     protected EnterBuilding curGameBuilding;
 
     public virtual void InitGame(EnterBuilding building)
     {
         gameObject.SetActive(true);
+        StartCoroutine(PlayOpening(true));
         curGameBuilding = building;
         InputManager.SetCanInput(false);
         SetState(MinigameState.Lobby);
@@ -35,12 +38,6 @@ public class MinigameUI : MonoBehaviour, IObserver
         AkSoundEngine.SetRTPCValue("CLICK", 2);
         AkSoundEngine.SetRTPCValue("INDEX1", -1);
         AkSoundEngine.SetRTPCValue("INDEX2", -1);
-
-        if (openingAnim != null)
-        {
-            openingAnim.SetFloat("Speed", 1.0f / openingSecond);
-            openingAnim.SetBool("IsPlaying", true);
-        }
     }
 
     protected virtual void SetValue()
@@ -82,19 +79,41 @@ public class MinigameUI : MonoBehaviour, IObserver
 
     public virtual void OnClickCloseGame()
     {
-        StartCoroutine(PlayCloseGame());
+        StartCoroutine(PlayOpening(false));
     }
 
-    protected IEnumerator PlayCloseGame()
+    protected IEnumerator PlayOpening(bool isOpen)
     {
         if (openingAnim != null) 
         {
+            if(isOpen)
+                UIManager.instance.MovePanelAnim(openingSecond, true);
+
+            openingAnim.gameObject.SetActive(true);
+            openingAnim.SetFloat("Speed", 1.0f / openingSecond);
             openingAnim.SetBool("IsPlaying", false);
             yield return new WaitForSeconds(openingSecond);
-        }
+            yield return new WaitForSeconds(openingInterval);
 
-        UIManager.instance.notifyObserver(EventState.None);
-    }
+            gamePanel.SetActive(isOpen);
+            openingAnim.SetBool("IsPlaying", true);
+            yield return new WaitForSeconds(openingSecond);
+
+            openingAnim.gameObject.SetActive(false);
+
+            if (!isOpen)
+            {
+                UIManager.instance.MovePanelAnim(openingSecond, false);
+                UIManager.instance.notifyObserver(EventState.None);
+            }
+        }
+        else
+        {
+            gamePanel.SetActive(isOpen);
+            if (!isOpen)
+                UIManager.instance.notifyObserver(EventState.None);
+        }
+    } 
 
     public void Notify(EventState state)
     {
