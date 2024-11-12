@@ -116,7 +116,7 @@ public class UIManager : MonoBehaviour, ISubject
     public void UpdateDailyInfo()
     {
         DateTime curDay = RoutineManager.instance.day;
-        dayText.text = curDay.ToString("yyyy/MM/dd");
+        dayText.text = curDay.ToString("yy.MM.dd");
         dayOfWeekText.text = weekStr[(int)curDay.DayOfWeek];
         SetDebt();
         SetDebtInfo();
