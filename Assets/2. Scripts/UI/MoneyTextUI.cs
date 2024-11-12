@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MoneyTextUI : MonoBehaviour
 {
+    public Color changeColor;
+    public Color defaultColor;
     private TextMeshProUGUI moneyText;
 
     private void Start()
@@ -19,7 +21,7 @@ public class MoneyTextUI : MonoBehaviour
         int direction = (nextMoney > prevMoney) ? 1 : -1;
         int totalSteps = Mathf.Abs(nextMoney - prevMoney);
         moneyText.text = string.Format("{0:#,###}", currentNumber) + "¿ø";
-        moneyText.color = Color.yellow;
+        moneyText.color = changeColor;
 
         AkSoundEngine.PostEvent("Play_Paythepayment_01", gameObject);
         while (elapsedTime < second)
@@ -34,6 +36,6 @@ public class MoneyTextUI : MonoBehaviour
         }
 
         moneyText.text = string.Format("{0:#,###}", nextMoney) + "¿ø";
-        moneyText.color = Color.white;
+        moneyText.color = defaultColor;
     }
 }
