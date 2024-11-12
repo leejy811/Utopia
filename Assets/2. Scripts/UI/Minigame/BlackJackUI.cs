@@ -115,7 +115,6 @@ public class BlackJackUI : MinigameUI
     #region SetFunc
     protected override void SetValue()
     {
-        //TODO - 나중에 연출 여기다가 넣으면 될듯
         base.SetValue();
     }
 
@@ -226,7 +225,7 @@ public class BlackJackUI : MinigameUI
         else
         {
             StartCoroutine(OnMessage(errorMsg, "ALL-IN", errorMsgSecond));
-            StartCoroutine(ThrowChip(ChipManager.instance.curChip - betChip, throwInterval, true));
+            StartCoroutine(ThrowChip(ChipManager.instance.curChip - betChip, 0.0f, true));
             betChip = ChipManager.instance.curChip;
             SetUI(MinigameState.Betting);
         }
@@ -383,7 +382,7 @@ public class BlackJackUI : MinigameUI
         canClick = false;
         StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), throwInterval, rewardChip > 0 ? false : true));
         yield return new WaitForSeconds(throwInterval * rewardChip + throwSecond * 2);
-        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false));
+        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false)); ;
         yield return new WaitForSeconds(throwSecond);
         canClick = true;
     }
@@ -437,9 +436,18 @@ public class BlackJackUI : MinigameUI
 
         if (CalculateResult(dealer) > 21)
         {
-            StartCoroutine(OnMessage(winResultMsg, "!! Dealer Burst !!", resultSecond));
-            GetReward(GameResult.Player_Win);
-            StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_Win));
+            if (CalculateResult(player) == 21)
+            {
+                GameResult result = GetResult();
+                GetReward(result);
+                SetResultPanel(result);
+            }
+            else
+            {
+                StartCoroutine(OnMessage(winResultMsg, "!! Dealer Burst !!", resultSecond));
+                GetReward(GameResult.Player_Win);
+                StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_Win));
+            }
         }
         else
         {
