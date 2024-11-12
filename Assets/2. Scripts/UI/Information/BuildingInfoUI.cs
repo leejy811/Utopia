@@ -21,7 +21,7 @@ public class BuildingInfoUI : InfoUI
         if (!CityLevelManager.instance.CheckBuildingLevel(building.GetComponent<Building>()) && index != 0) return;
 
         gameObject.SetActive(!gameObject.activeSelf);
-
+        Debug.Log(gameObject.activeSelf);
         nameText.text = building.buildingName;
         typeText.text = typeString[(int)building.type] + "/" + subTypeString[(int)building.subType];
         buildingCostText.text = ShopManager.instance.CalculateBuildingCost(building, index).ToString("#,##0") + "¿ø";
