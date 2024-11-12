@@ -438,9 +438,9 @@ public class BlackJackUI : MinigameUI
         {
             if (CalculateResult(player) == 21)
             {
-                GameResult result = GetResult();
-                GetReward(result);
-                SetResultPanel(result);
+                StartCoroutine(OnMessage(winResultMsg, "!! Player BlackJack !!", resultSecond));
+                GetReward(GameResult.Player_BlackJack);
+                StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_BlackJack));
             }
             else
             {
