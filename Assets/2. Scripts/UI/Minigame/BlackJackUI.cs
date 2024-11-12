@@ -461,7 +461,7 @@ public class BlackJackUI : MinigameUI
     {
         canClick = false;
         if (isPlayer)
-            StartCoroutine(PlayAddChip(throwSecond, -amount));
+            StartCoroutine(PlayAddChip(plusSecond, -amount));
         for (int i = 0; i < Mathf.Abs(amount); i++)
         {
             if (amount > 0)

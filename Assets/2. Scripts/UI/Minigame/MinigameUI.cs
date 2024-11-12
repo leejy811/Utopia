@@ -29,6 +29,7 @@ public class MinigameUI : MonoBehaviour, IObserver
     public Vector2 plusLimitBox;
     public float plusMoveDist;
     public float plusScale;
+    public float plusSecond;
     public string poolName;
 
     protected EnterBuilding curGameBuilding;

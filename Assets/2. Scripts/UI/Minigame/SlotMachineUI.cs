@@ -131,7 +131,7 @@ public class SlotMachineUI : MinigameUI
         for (int i = 0;i < rewardChip; i++)
         {
             curChipText.text = (ChipManager.instance.curChip - rewardChip + i + 1).ToString();
-            StartCoroutine(PlayAddChip((jackPotSecond / rewardChip) * 5.0f, 1));
+            StartCoroutine(PlayAddChip(plusSecond, 1));
             yield return new WaitForSeconds(jackPotSecond / rewardChip);
         }
         jackPotAnim.SetBool("IsJackPot", false);
@@ -228,6 +228,7 @@ public class SlotMachineUI : MinigameUI
 
         StopJackPot();
         curGameBuilding.betTimes--;
+        StartCoroutine(PlayAddChip(plusSecond, -curGameBuilding.betChip));
         SetValue();
 
         RollRandom();
