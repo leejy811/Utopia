@@ -45,6 +45,7 @@ public class HorseController : MonoBehaviour
 
     public Func<HorseType, int> getGrade;
     public Action<HorseType> applyResult;
+    public Action<int, float> setHorsePin;
 
     private bool isEnd;
     private Func<bool> checkSkill;
@@ -70,6 +71,7 @@ public class HorseController : MonoBehaviour
     {
         float ranSpeed = UnityEngine.Random.Range(speedRange.x, speedRange.y);
         curSpeed = Mathf.Round(ranSpeed * 10) * 0.1f;
+        setHorsePin.Invoke((int)horseInfo.horseType, transform.position.x);
     }
 
     IEnumerator MoveHorse()
@@ -79,6 +81,7 @@ public class HorseController : MonoBehaviour
         {
             horseAnim.SetFloat("Speed", curSpeed / animationSpeedRatio);
             transform.position += Vector3.right * Time.fixedDeltaTime * curSpeed;
+            setHorsePin.Invoke((int)horseInfo.horseType, transform.position.x);
             yield return new WaitForFixedUpdate();
         }
         horseAnim.SetBool("IsMoving", false);

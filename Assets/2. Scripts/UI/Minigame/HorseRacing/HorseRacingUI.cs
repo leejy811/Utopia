@@ -34,8 +34,16 @@ public class HorseRacingUI : MinigameUI
     public Image countImage;
     public Sprite[] countSprites;
 
+    [Header("Bar")]
+    public Image[] horsePinImages;
+    public Sprite pickHorse;
+    public Sprite otherHorse;
+    public Transform goalPoint;
+    public float pickPinScale;
+    public float otherPinScale;
+
     [Header("System")]
-    public GameObject gamePanel;
+    public GameObject horsePanel;
     public HorseRacingCamera mainCamera;
     public List<HorseController> horses;
 
@@ -52,6 +60,7 @@ public class HorseRacingUI : MinigameUI
         {
             horse.getGrade += GetGrade;
             horse.applyResult += GoalInHorse;
+            horse.setHorsePin += SetHorsePinPos;
             speedAvg += (horse.speedRange.x + horse.speedRange.y) / 2.0f;
         }
         speedAvg /= horses.Count;
@@ -65,13 +74,13 @@ public class HorseRacingUI : MinigameUI
     protected override void OnDisable()
     {
         base.OnDisable();
-        gamePanel.SetActive(false);
+        horsePanel.SetActive(false);
     }
 
     public override void InitGame(EnterBuilding building)
     {
         base.InitGame(building);
-        gamePanel.SetActive(true);
+        horsePanel.SetActive(true);
     }
 
     protected override void SetValue()
@@ -149,6 +158,17 @@ public class HorseRacingUI : MinigameUI
         {
             tabText[i].color = i == index ? Color.white : Color.gray;
         }
+    }
+
+    private void SetHorsePickImage(int index)
+    {
+        for (int i = 0; i < horsePinImages.Length; i++)
+        {
+            horsePinImages[i].sprite = i == index ? pickHorse : otherHorse;
+            horsePinImages[i].transform.localScale = Vector3.one * (i == index ? pickPinScale : otherPinScale);
+        }
+
+        horsePinImages[index].transform.SetAsLastSibling();
     }
 
     private void SetBetChipUI()
@@ -234,6 +254,7 @@ public class HorseRacingUI : MinigameUI
         mainCamera.targetHorse = horse.transform;
         SetHorseInfo(horse);
         SetHorseTab(index);
+        SetHorsePickImage((int)type);
     }
     
     public void OnClickChangeState(int state)
@@ -281,6 +302,15 @@ public class HorseRacingUI : MinigameUI
 
         if (horseType == curHorseType)
             SetPickGrade(resultInfo.Count);
+    }
+
+    private void SetHorsePinPos(int type, float xPos)
+    {
+        float ratio = xPos / (mainCamera.mapWidth * 2.0f);
+        float xRectPos = goalPoint.localPosition.x * ratio;
+
+        Vector3 prevPos = horsePinImages[type].transform.localPosition;
+        horsePinImages[type].transform.localPosition = new Vector3(xRectPos, prevPos.y, prevPos.z);
     }
 
     private int GetGrade(HorseType horseType)
