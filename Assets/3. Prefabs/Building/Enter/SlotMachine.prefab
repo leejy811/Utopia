@@ -152,7 +152,7 @@ PrefabInstance:
     - target: {fileID: -1384396380026467084, guid: bf0414d9d25c2004c8dd5dd5bd25e975, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 8f9768c792c5c6e4b97d8f43b54e29ce, type: 2}
+      objectReference: {fileID: 2100000, guid: f6e2bc0d215dc6044890a6345e12080b, type: 2}
     - target: {fileID: 919132149155446097, guid: bf0414d9d25c2004c8dd5dd5bd25e975, type: 3}
       propertyPath: m_Name
       value: casino
