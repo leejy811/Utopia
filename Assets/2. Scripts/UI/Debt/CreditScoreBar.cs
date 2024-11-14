@@ -33,7 +33,7 @@ public class CreditScoreBar : MonoBehaviour
     {
         SetScoreImage(firstNum / 100.0f);
 
-        float startAmount = scoreImage.fillAmount;
+        float startAmount = scoreImage.transform.localScale.x;
         float endAmount = secondNum / 100.0f;
         float elapsedTime = 0f;
         float totalChange = endAmount - startAmount;
@@ -48,14 +48,13 @@ public class CreditScoreBar : MonoBehaviour
             yield return null;
         }
 
-        scoreImage.fillAmount = endAmount;
+        scoreImage.transform.localScale = Vector3.one * endAmount;
     }
 
     private void SetScoreImage(float amount)
     {
-        scoreImage.fillAmount = amount;
-        scoreImage.color = scoreColor.Evaluate(scoreImage.fillAmount);
-        scoreText.color = scoreImage.color;
+        scoreImage.transform.localScale = Vector3.one * amount;
+        scoreImage.color = scoreColor.Evaluate(amount);
     }
 
     private IEnumerator MoveTextOverTime(int startNumber, int endNumber)

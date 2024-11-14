@@ -14,8 +14,8 @@ public class DDayUI : MonoBehaviour
 
     private void OnEnable()
     {
-        transform.localPosition = new Vector3(transform.localPosition.x, -245f, transform.localPosition.z);
-        transform.DOLocalMoveY(-285f, 1f);
+        transform.localPosition = new Vector3(transform.localPosition.x, -113f, transform.localPosition.z);
+        transform.DOLocalMoveY(-170f, 1f);
 
         panel.color -= new Color(0, 0, 0, 1);
         title.color -= new Color(0, 0, 0, 1);

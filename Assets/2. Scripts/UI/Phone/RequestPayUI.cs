@@ -10,8 +10,7 @@ public class RequestPayUI : MonoBehaviour
     [Header("TopPanel")]
     public TextMeshProUGUI curMoneyText;
     public TextMeshProUGUI prevMoneyText;
-    public TextMeshProUGUI outcomeText;
-    public TextMeshProUGUI incomeText;
+    public TextMeshProUGUI changeText;
 
     [Header("BottomPanel")]
     public TextMeshProUGUI balanceText;
@@ -39,8 +38,7 @@ public class RequestPayUI : MonoBehaviour
 
         curMoneyText.text = GetCommaText(curMoney);
         prevMoneyText.text = GetCommaText(curMoney - total);
-        outcomeText.text = "- " + GetCommaText(Math.Abs(totalSpend));
-        incomeText.text = "+ " + GetCommaText(totalTax);
+        changeText.text = total < 0 ? "-" : "+" + GetCommaText(Mathf.Abs(total));
 
         balanceText.text = GetCommaText(Mathf.Max(debt - curMoney, 0)) + " 남았어요!";
         dayText.text = "만기일 : " + payDay.ToString("yy.MM.dd");
