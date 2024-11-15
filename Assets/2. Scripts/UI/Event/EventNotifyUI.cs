@@ -1,39 +1,66 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
+[System.Serializable]
+public class EventSolutionPanel
+{
+    public GameObject panel;
+    public TextMeshProUGUI eventSolText;
+    public TextMeshProUGUI eventProbText;
+    public TextMeshProUGUI eventDayText;
+    public TextMeshProUGUI eventCostText;
+
+    public void SetValue(Event curEvent)
+    {
+        eventSolText.text = curEvent.solutions[0].name;
+        eventProbText.text = curEvent.solutions[0].prob.ToString() + "%";
+        eventDayText.text = "D-" + (curEvent.effectValue.Count - curEvent.curDay).ToString();
+        eventCostText.text = "-" + string.Format("{0:#,###}", curEvent.solutions[0].cost) + "¿ø";
+    }
+}
 
 public class EventNotifyUI : MonoBehaviour, IObserver
 {
-    [Header("Building Intro")]
-    public BuildingIntroUI[] buildingIntros;
+    [Header("UIElement")]
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI happinessText;
+    public TextMeshProUGUI listText;
+    public Image[] eventIconImages;
+    public EventMouseOverUI[] eventMouseOvers;
+    public EventSolutionPanel[] eventSolutionPanels;
 
     [Header("Event List")]
     public int curIndex;
-    public TextMeshProUGUI[] listTexts;
 
     [Header("Camera")]
     public CameraPriorityController cameraPriorityController;
 
+    private bool isClicked;
+
     public void SetValue(Building building)
     {
-        ShopManager.instance.SetObjectColor(building.gameObject, Color.red);
+        //ShopManager.instance.SetObjectColor(building.gameObject, Color.red);
 
-        int idx = building.type == BuildingType.Residential ? 0 : 1;
-
-        for(int i = 0;i < buildingIntros.Length;i++)
+        nameText.text = building.buildingName;
+        happinessText.text = building.happinessRate + (building.happinessDifference  < 0 ? " (-" : " (+") + Mathf.Abs(building.happinessDifference) + ")%";
+        listText.text = (curIndex + 1).ToString() + "/" + EventManager.instance.eventBuildings.Count.ToString();
+        for(int i = 0;i < eventIconImages.Length; i++)
         {
-            if (idx == i)
-                buildingIntros[i].gameObject.SetActive(true);
+            if (building.curEvents.Count > i)
+            {
+                eventMouseOvers[i].interactable = true;
+                eventIconImages[i].sprite = building.curEvents[i].eventIcon;
+                eventSolutionPanels[i].SetValue(building.curEvents[i]);
+            }
             else
-                buildingIntros[i].gameObject.SetActive(false);
-        }
-
-        buildingIntros[idx].SetValue(building);
-
-        foreach (TextMeshProUGUI text in listTexts)
-        {
-            text.text = (curIndex + 1).ToString() + "/" + EventManager.instance.eventBuildings.Count.ToString();
+            {
+                eventMouseOvers[i].interactable = false;
+                eventIconImages[i].enabled = false;
+            }
         }
     }
 
@@ -61,12 +88,41 @@ public class EventNotifyUI : MonoBehaviour, IObserver
         }
     }
 
+    public void OnClickEventButton(int index)
+    {
+        List<Event> events = EventManager.instance.eventBuildings[curIndex].curEvents;
+        isClicked = !isClicked;
+        if (!isClicked)
+        {
+            for (int i = 0; i < eventMouseOvers.Length; i++)
+            {
+                if (events.Count > i)
+                    eventMouseOvers[i].interactable = true;
+            }
+            eventSolutionPanels[index].panel.SetActive(false);
+            return;
+        }
+
+        eventSolutionPanels[index].panel.SetActive(true);
+        eventSolutionPanels[(index + 1) % 2].panel.SetActive(false);
+
+        eventSolutionPanels[index].SetValue(events[index]);
+
+        eventMouseOvers[index].interactable = false;
+        eventMouseOvers[(index + 1) % 2].interactable = false;
+    }
+
     public void OnDisable()
     {
         if (EventManager.instance.eventBuildings.Count != 0 && curIndex < EventManager.instance.eventBuildings.Count && EventManager.instance.eventBuildings[curIndex].gameObject != null)
             ShopManager.instance.SetObjectColor(EventManager.instance.eventBuildings[curIndex].gameObject, Color.white);
 
         cameraPriorityController.ChangeActiveState();
+
+        for(int i = 0;i < eventSolutionPanels.Length; i++)
+        {
+            eventSolutionPanels[i].panel.SetActive(false);
+        }
     }
 
     public void Notify(EventState state)
