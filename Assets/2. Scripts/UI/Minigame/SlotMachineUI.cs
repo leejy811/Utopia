@@ -55,6 +55,7 @@ public class SlotMachineUI : MinigameUI
     private void Start()
     {
         ResetJackPot();
+        leverAnim.SetFloat("LeverSpeed", 1.0f / leverSecond);
     }
 
     public override void InitGame(EnterBuilding building)
@@ -263,8 +264,6 @@ public class SlotMachineUI : MinigameUI
         {
             slotLights[i].SetLight(false);
         }
-
-        leverAnim.SetFloat("LeverSpeed", 1.0f / leverSecond);
     }
 
     protected override void OnDisable()
