@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584754548523498240
+    m_lastTime: -8584694188436720892
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -172,6 +172,20 @@ MonoBehaviour:
         ObjectType: 7
         guid: 284c591f53045a42ac3adab8ed5cd86d
       Path: SoundBanks\Default Work Unit\STOP
+    - name: TOTOPIA
+      guid: 028a465a2f28254f82e6ec6be3c7b11d
+      id: 2864201533
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a3314ea6034880469012d6b012acb40a
+      - ElementName: TOTOPIA
+        ObjectType: 7
+        guid: 028a465a2f28254f82e6ec6be3c7b11d
+      Path: SoundBanks\Default Work Unit\TOTOPIA
     - name: UI
       guid: 4601a5b674a4a949a6cf87ed355dcc56
       id: 1551306167
@@ -212,7 +226,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584754548579274087
+    m_lastTime: -8584694188437033128
     List:
     - name: 0912
       guid: 7fe598038160f04fbdb9928fb0ae69e9
@@ -1564,6 +1578,206 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_BLACKJACK_bet
+      guid: 21f0e4bf52f6cc4b95c70d509e2127c8
+      id: 3857103390
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_bet
+        ObjectType: 3
+        guid: 21f0e4bf52f6cc4b95c70d509e2127c8
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_bet
+      maxAttenuation: 0
+      maxDuration: 0.526625
+      minDuration: 0.526625
+    - name: Play_BLACKJACK_card_flip
+      guid: 3cfcdbfbecd11d4586b4d795e830ce1d
+      id: 1048074567
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_card_flip
+        ObjectType: 3
+        guid: 3cfcdbfbecd11d4586b4d795e830ce1d
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_card_flip
+      maxAttenuation: 0
+      maxDuration: 0.23854166
+      minDuration: 0.23854166
+    - name: Play_BLACKJACK_card_put_01
+      guid: 8e9c6937a2599049ba65c1a78b469aed
+      id: 4014308333
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_card_put_01
+        ObjectType: 3
+        guid: 8e9c6937a2599049ba65c1a78b469aed
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_card_put_01
+      maxAttenuation: 0
+      maxDuration: 0.2434375
+      minDuration: 0.2434375
+    - name: Play_BLACKJACK_card_put_02
+      guid: 7fc28bcb838913488ba3bacfbef7f02e
+      id: 4014308334
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_card_put_02
+        ObjectType: 3
+        guid: 7fc28bcb838913488ba3bacfbef7f02e
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_card_put_02
+      maxAttenuation: 0
+      maxDuration: 0.2434375
+      minDuration: 0.2434375
+    - name: Play_BLACKJACK_intro
+      guid: 63add5f83567534a8e7f5bac406fb6de
+      id: 2854514125
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_intro
+        ObjectType: 3
+        guid: 63add5f83567534a8e7f5bac406fb6de
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_intro
+      maxAttenuation: 0
+      maxDuration: 1.5914792
+      minDuration: 1.5914792
+    - name: Play_BLACKJACK_recall
+      guid: 9735693fffcfd748939b6ea4748e5f54
+      id: 1114446378
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_recall
+        ObjectType: 3
+        guid: 9735693fffcfd748939b6ea4748e5f54
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_recall
+      maxAttenuation: 0
+      maxDuration: 0.5118542
+      minDuration: 0.5118542
+    - name: Play_BLACKJACK_rule_blackjack
+      guid: 1823aaade9b49347a0fa469f1920658d
+      id: 3685917818
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_rule_blackjack
+        ObjectType: 3
+        guid: 1823aaade9b49347a0fa469f1920658d
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_blackjack
+      maxAttenuation: 0
+      maxDuration: 1.0794375
+      minDuration: 1.0794375
+    - name: Play_BLACKJACK_rule_bust
+      guid: c0dded47f96baa449b98beb2f72d7a53
+      id: 1599756660
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_rule_bust
+        ObjectType: 3
+        guid: c0dded47f96baa449b98beb2f72d7a53
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_bust
+      maxAttenuation: 0
+      maxDuration: 1.5
+      minDuration: 1.5
+    - name: Play_BLACKJACK_rule_draw
+      guid: 51a798d146b35a45abfda8c7bff940d0
+      id: 2625493016
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_rule_draw
+        ObjectType: 3
+        guid: 51a798d146b35a45abfda8c7bff940d0
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_draw
+      maxAttenuation: 0
+      maxDuration: 0.64179164
+      minDuration: 0.64179164
+    - name: Play_BLACKJACK_rule_win
+      guid: d84239c5d60a9d46af1ec4a0073fe8f0
+      id: 4012406984
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BLACKJACK_rule_win
+        ObjectType: 3
+        guid: d84239c5d60a9d46af1ec4a0073fe8f0
+      Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_win
+      maxAttenuation: 0
+      maxDuration: 1.0794375
+      minDuration: 1.0794375
     - name: Play_Building_click_003
       guid: 0c3f6499a09287418a9d7fc153ec194a
       id: 1278673985
@@ -1804,6 +2018,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_GAMEPLAY_chips_exchange
+      guid: d23a6437fab50346b3ca7efafd7c08e1
+      id: 2096465206
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_GAMEPLAY_chips_exchange
+        ObjectType: 3
+        guid: d23a6437fab50346b3ca7efafd7c08e1
+      Path: Events\Default Work Unit\toto\Play_GAMEPLAY_chips_exchange
+      maxAttenuation: 0
+      maxDuration: 1.0018958
+      minDuration: 1.0018958
     - name: Play_Graph_fall_001
       guid: e71614efa462e0458d081548d8f586af
       id: 1882539238
@@ -2604,6 +2838,186 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_RACE_active
+      guid: 789b2eea0ef6ea4a9d6c0672c9c530d8
+      id: 1907415786
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_active
+        ObjectType: 3
+        guid: 789b2eea0ef6ea4a9d6c0672c9c530d8
+      Path: Events\Default Work Unit\toto\Play_RACE_active
+      maxAttenuation: 0
+      maxDuration: 3.5497916
+      minDuration: 3.5497916
+    - name: Play_RACE_active_L_
+      guid: 150d454be72acb4cbd19d3835ea99479
+      id: 4013421106
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_active_L_
+        ObjectType: 3
+        guid: 150d454be72acb4cbd19d3835ea99479
+      Path: Events\Default Work Unit\toto\Play_RACE_active_L_
+      maxAttenuation: 0
+      maxDuration: 3.0942292
+      minDuration: 3.0942292
+    - name: Play_RACE_bet_01
+      guid: f1724994222cb0489ef235c77e527d78
+      id: 3403597365
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_bet_01
+        ObjectType: 3
+        guid: f1724994222cb0489ef235c77e527d78
+      Path: Events\Default Work Unit\toto\Play_RACE_bet_01
+      maxAttenuation: 0
+      maxDuration: 0.09991667
+      minDuration: 0.09991667
+    - name: Play_RACE_bet_02
+      guid: 9388da2c8adbd443b0878ef6378c4449
+      id: 3403597366
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_bet_02
+        ObjectType: 3
+        guid: 9388da2c8adbd443b0878ef6378c4449
+      Path: Events\Default Work Unit\toto\Play_RACE_bet_02
+      maxAttenuation: 0
+      maxDuration: 0.118395835
+      minDuration: 0.118395835
+    - name: Play_RACE_countdown
+      guid: 91c86f0bde90394e99235c768a0523b8
+      id: 2521540693
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_countdown
+        ObjectType: 3
+        guid: 91c86f0bde90394e99235c768a0523b8
+      Path: Events\Default Work Unit\toto\Play_RACE_countdown
+      maxAttenuation: 0
+      maxDuration: 0.039020833
+      minDuration: 0.039020833
+    - name: Play_RACE_horserace
+      guid: f88ecf17bd35b74faa97689a23f1f3d7
+      id: 2027986540
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_horserace
+        ObjectType: 3
+        guid: f88ecf17bd35b74faa97689a23f1f3d7
+      Path: Events\Default Work Unit\toto\Play_RACE_horserace
+      maxAttenuation: 0
+      maxDuration: 0.2001875
+      minDuration: 0.2001875
+    - name: Play_RACE_recall_01
+      guid: 031ce6e276b0e74896a7c6e170a1daa0
+      id: 3546129119
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_recall_01
+        ObjectType: 3
+        guid: 031ce6e276b0e74896a7c6e170a1daa0
+      Path: Events\Default Work Unit\toto\Play_RACE_recall_01
+      maxAttenuation: 0
+      maxDuration: 0.09977084
+      minDuration: 0.09977084
+    - name: Play_RACE_recall_02
+      guid: 41505d309d1de74995fc61a38488401c
+      id: 3546129116
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_recall_02
+        ObjectType: 3
+        guid: 41505d309d1de74995fc61a38488401c
+      Path: Events\Default Work Unit\toto\Play_RACE_recall_02
+      maxAttenuation: 0
+      maxDuration: 0.118395835
+      minDuration: 0.118395835
+    - name: Play_RACE_start
+      guid: ed3c9a880bdc834c919d0aef72dbd2a0
+      id: 1325406880
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_RACE_start
+        ObjectType: 3
+        guid: ed3c9a880bdc834c919d0aef72dbd2a0
+      Path: Events\Default Work Unit\toto\Play_RACE_start
+      maxAttenuation: 0
+      maxDuration: 0.56939584
+      minDuration: 0.56939584
     - name: Play_Select_Button
       guid: 84c6369bcf91e748b6e9c8192be67e41
       id: 880454473
@@ -3761,6 +4175,206 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_BLACKJACK_bet
+      guid: a128ede032546c43a57bab3a59014404
+      id: 4195040360
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_bet
+        ObjectType: 3
+        guid: a128ede032546c43a57bab3a59014404
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_bet
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_card_flip
+      guid: cf3f2c1a81ab3a448607866be08ee76d
+      id: 3308072525
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_card_flip
+        ObjectType: 3
+        guid: cf3f2c1a81ab3a448607866be08ee76d
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_card_flip
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_card_put_01
+      guid: 798fa52d08f5ba46972360d099049e4f
+      id: 2965005019
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_card_put_01
+        ObjectType: 3
+        guid: 798fa52d08f5ba46972360d099049e4f
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_card_put_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_card_put_02
+      guid: 986f3710edcb3b418f7b8e513d6d9276
+      id: 2965005016
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_card_put_02
+        ObjectType: 3
+        guid: 986f3710edcb3b418f7b8e513d6d9276
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_card_put_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_intro
+      guid: 44d236736120024f9069d5d31601383e
+      id: 493229879
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_intro
+        ObjectType: 3
+        guid: 44d236736120024f9069d5d31601383e
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_intro
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_recall
+      guid: 35fb2aa16faba542b2bd149a0c3fdf39
+      id: 2433175204
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_recall
+        ObjectType: 3
+        guid: 35fb2aa16faba542b2bd149a0c3fdf39
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_recall
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_rule_blackjack
+      guid: bd03fb82459d664794fcd43267c0745e
+      id: 1903408204
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_rule_blackjack
+        ObjectType: 3
+        guid: bd03fb82459d664794fcd43267c0745e
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_blackjack
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_rule_bust
+      guid: ffd991340b05b047beffa9528bf58295
+      id: 2122381770
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_rule_bust
+        ObjectType: 3
+        guid: ffd991340b05b047beffa9528bf58295
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_bust
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_rule_draw
+      guid: 04faee8fa4fc024dadee9bfc697298a5
+      id: 1237074726
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_rule_draw
+        ObjectType: 3
+        guid: 04faee8fa4fc024dadee9bfc697298a5
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_draw
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BLACKJACK_rule_win
+      guid: bf7a3ee8a3c48245bd752377d29a7518
+      id: 1478085386
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_BLACKJACK_rule_win
+        ObjectType: 3
+        guid: bf7a3ee8a3c48245bd752377d29a7518
+      Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_win
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_construction
       guid: f52f07cca1b231439ba45051290aac45
       id: 3493507479
@@ -3818,6 +4432,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0ce839401049de489968d7600f9d172c
       Path: Events\Default Work Unit\old\Stop_ForestAmbienceInLobby
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_GAMEPLAY_chips_exchange
+      guid: 9c1ac10b7038b84b8f77ba6345365932
+      id: 885567024
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_GAMEPLAY_chips_exchange
+        ObjectType: 3
+        guid: 9c1ac10b7038b84b8f77ba6345365932
+      Path: Events\Default Work Unit\toto\Stop_GAMEPLAY_chips_exchange
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -4301,6 +4935,186 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_RACE_active
+      guid: ba2e2ec38ee5e54d825781fd37941b5f
+      id: 3220345088
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_active
+        ObjectType: 3
+        guid: ba2e2ec38ee5e54d825781fd37941b5f
+      Path: Events\Default Work Unit\toto\Stop_RACE_active
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_active_L_
+      guid: 2e7a51308d563d4ab8eb822f5388edc4
+      id: 2355063916
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_active_L_
+        ObjectType: 3
+        guid: 2e7a51308d563d4ab8eb822f5388edc4
+      Path: Events\Default Work Unit\toto\Stop_RACE_active_L_
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_bet_01
+      guid: 445115975a2ba3428833e2759267f771
+      id: 1635092595
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_bet_01
+        ObjectType: 3
+        guid: 445115975a2ba3428833e2759267f771
+      Path: Events\Default Work Unit\toto\Stop_RACE_bet_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_bet_02
+      guid: a1e2393d2649d742940be661ab0a35c4
+      id: 1635092592
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_bet_02
+        ObjectType: 3
+        guid: a1e2393d2649d742940be661ab0a35c4
+      Path: Events\Default Work Unit\toto\Stop_RACE_bet_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_countdown
+      guid: 19d69ce87a80e9478cbbf287c9ad7007
+      id: 1877882295
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_countdown
+        ObjectType: 3
+        guid: 19d69ce87a80e9478cbbf287c9ad7007
+      Path: Events\Default Work Unit\toto\Stop_RACE_countdown
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_horserace
+      guid: 5f32d628063a2743823958f3f9bfdb3f
+      id: 2347644930
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_horserace
+        ObjectType: 3
+        guid: 5f32d628063a2743823958f3f9bfdb3f
+      Path: Events\Default Work Unit\toto\Stop_RACE_horserace
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_recall_01
+      guid: dd9c17e18d4e68448e181df962f46566
+      id: 4039949733
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_recall_01
+        ObjectType: 3
+        guid: dd9c17e18d4e68448e181df962f46566
+      Path: Events\Default Work Unit\toto\Stop_RACE_recall_01
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_recall_02
+      guid: f7935d0aac3313489ebfaf35f81b12ce
+      id: 4039949734
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_recall_02
+        ObjectType: 3
+        guid: f7935d0aac3313489ebfaf35f81b12ce
+      Path: Events\Default Work Unit\toto\Stop_RACE_recall_02
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_RACE_start
+      guid: 06261ccd76451e4ab962c456d8fb0d86
+      id: 3549795858
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Stop_RACE_start
+        ObjectType: 3
+        guid: 06261ccd76451e4ab962c456d8fb0d86
+      Path: Events\Default Work Unit\toto\Stop_RACE_start
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Slot_Drrrrrr_01
       guid: 121a9767894bb945a42f14209fde0e34
       id: 3035396721
@@ -4541,6 +5355,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: toto
+      guid: 950f480523b7a346b25bea7125b5eba0
+      id: 3108347557
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      Path: Events\Default Work Unit\toto
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: UI
       guid: d7b0821bdee22b49b8b736e0816a3653
       id: 1551306167
@@ -4917,7 +5748,7 @@ MonoBehaviour:
     m_lastTime: -8584757057864275183
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000a000000
+  ExpandedWaapiItemIds: 0300000005000000060000000a000000170000001800000019000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

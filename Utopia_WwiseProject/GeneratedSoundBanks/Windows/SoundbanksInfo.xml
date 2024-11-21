@@ -756,6 +756,294 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{B0C70F8C-5D56-99B2-3C1C-AA58414327B6}">
+			<ShortName>TOTOPIA</ShortName>
+			<Path>TOTOPIA.bnk</Path>
+			<Media>
+				<File Id="48900095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GAMEPLAY_chips_exchange.wav</ShortName>
+					<CachePath>SFX/GAMEPLAY_chips_exchange_8E324C96.wem</CachePath>
+				</File>
+				<File Id="51417048" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_bet.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_bet_8E324C96.wem</CachePath>
+				</File>
+				<File Id="132635145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_win.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_win_8E324C96.wem</CachePath>
+				</File>
+				<File Id="156090381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_recall_01.wav</ShortName>
+					<CachePath>SFX/RACE_recall_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="227663847" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_bet_01.wav</ShortName>
+					<CachePath>SFX/RACE_bet_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="250967311" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_intro.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_intro_8E324C96.wem</CachePath>
+				</File>
+				<File Id="270764609" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_bust.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_bust_8E324C96.wem</CachePath>
+				</File>
+				<File Id="488086698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_draw.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_draw_8E324C96.wem</CachePath>
+				</File>
+				<File Id="498749437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_card_put_02.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_card_put_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="605082462" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_countdown.wav</ShortName>
+					<CachePath>SFX/RACE_countdown_8E324C96.wem</CachePath>
+				</File>
+				<File Id="606623087" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_recall.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_recall_8E324C96.wem</CachePath>
+				</File>
+				<File Id="610915002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_bet_02.wav</ShortName>
+					<CachePath>SFX/RACE_bet_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="612612925" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_active.wav</ShortName>
+					<CachePath>SFX/RACE_active_8E324C96.wem</CachePath>
+				</File>
+				<File Id="644314288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_horserace.wav</ShortName>
+					<CachePath>SFX/RACE_horserace_8E324C96.wem</CachePath>
+				</File>
+				<File Id="644672470" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_card_put_01.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_card_put_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="683471986" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_blackjack.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_blackjack_8E324C96.wem</CachePath>
+				</File>
+				<File Id="738002531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_start.wav</ShortName>
+					<CachePath>SFX/RACE_start_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1000881140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_card_flip.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_card_flip_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1028501577" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_recall_02.wav</ShortName>
+					<CachePath>SFX/RACE_recall_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1041706813" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_active(L).wav</ShortName>
+					<CachePath>SFX/RACE_active(L)_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3857103390" Name="Play_BLACKJACK_bet" DurationType="OneShot" DurationMin="0.526625" DurationMax="0.526625">
+					<MediaRefs>
+						<MediaRef Id="51417048"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1048074567" Name="Play_BLACKJACK_card_flip" DurationType="OneShot" DurationMin="0.23854166" DurationMax="0.23854166">
+					<MediaRefs>
+						<MediaRef Id="1000881140"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4014308333" Name="Play_BLACKJACK_card_put_01" DurationType="OneShot" DurationMin="0.2434375" DurationMax="0.2434375">
+					<MediaRefs>
+						<MediaRef Id="644672470"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4014308334" Name="Play_BLACKJACK_card_put_02" DurationType="OneShot" DurationMin="0.2434375" DurationMax="0.2434375">
+					<MediaRefs>
+						<MediaRef Id="498749437"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2854514125" Name="Play_BLACKJACK_intro" DurationType="OneShot" DurationMin="1.5914792" DurationMax="1.5914792">
+					<MediaRefs>
+						<MediaRef Id="250967311"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1114446378" Name="Play_BLACKJACK_recall" DurationType="OneShot" DurationMin="0.5118542" DurationMax="0.5118542">
+					<MediaRefs>
+						<MediaRef Id="606623087"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3685917818" Name="Play_BLACKJACK_rule_blackjack" DurationType="OneShot" DurationMin="1.0794375" DurationMax="1.0794375">
+					<MediaRefs>
+						<MediaRef Id="683471986"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1599756660" Name="Play_BLACKJACK_rule_bust" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="270764609"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2625493016" Name="Play_BLACKJACK_rule_draw" DurationType="OneShot" DurationMin="0.64179164" DurationMax="0.64179164">
+					<MediaRefs>
+						<MediaRef Id="488086698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4012406984" Name="Play_BLACKJACK_rule_win" DurationType="OneShot" DurationMin="1.0794375" DurationMax="1.0794375">
+					<MediaRefs>
+						<MediaRef Id="132635145"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2096465206" Name="Play_GAMEPLAY_chips_exchange" DurationType="OneShot" DurationMin="1.0018958" DurationMax="1.0018958">
+					<MediaRefs>
+						<MediaRef Id="48900095"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1907415786" Name="Play_RACE_active" DurationType="OneShot" DurationMin="3.5497916" DurationMax="3.5497916">
+					<MediaRefs>
+						<MediaRef Id="612612925"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4013421106" Name="Play_RACE_active_L_" DurationType="OneShot" DurationMin="3.0942292" DurationMax="3.0942292">
+					<MediaRefs>
+						<MediaRef Id="1041706813"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3403597365" Name="Play_RACE_bet_01" DurationType="OneShot" DurationMin="0.09991667" DurationMax="0.09991667">
+					<MediaRefs>
+						<MediaRef Id="227663847"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3403597366" Name="Play_RACE_bet_02" DurationType="OneShot" DurationMin="0.118395835" DurationMax="0.118395835">
+					<MediaRefs>
+						<MediaRef Id="610915002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2521540693" Name="Play_RACE_countdown" DurationType="OneShot" DurationMin="0.039020833" DurationMax="0.039020833">
+					<MediaRefs>
+						<MediaRef Id="605082462"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2027986540" Name="Play_RACE_horserace" DurationType="OneShot" DurationMin="0.2001875" DurationMax="0.2001875">
+					<MediaRefs>
+						<MediaRef Id="644314288"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3546129119" Name="Play_RACE_recall_01" DurationType="OneShot" DurationMin="0.09977084" DurationMax="0.09977084">
+					<MediaRefs>
+						<MediaRef Id="156090381"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3546129116" Name="Play_RACE_recall_02" DurationType="OneShot" DurationMin="0.118395835" DurationMax="0.118395835">
+					<MediaRefs>
+						<MediaRef Id="1028501577"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1325406880" Name="Play_RACE_start" DurationType="OneShot" DurationMin="0.56939584" DurationMax="0.56939584">
+					<MediaRefs>
+						<MediaRef Id="738002531"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4195040360" Name="Stop_BLACKJACK_bet" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="51417048"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3308072525" Name="Stop_BLACKJACK_card_flip" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="1000881140"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2965005019" Name="Stop_BLACKJACK_card_put_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="644672470"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2965005016" Name="Stop_BLACKJACK_card_put_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="498749437"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="493229879" Name="Stop_BLACKJACK_intro" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="250967311"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2433175204" Name="Stop_BLACKJACK_recall" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="606623087"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1903408204" Name="Stop_BLACKJACK_rule_blackjack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="683471986"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2122381770" Name="Stop_BLACKJACK_rule_bust" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="270764609"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1237074726" Name="Stop_BLACKJACK_rule_draw" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="488086698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1478085386" Name="Stop_BLACKJACK_rule_win" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="132635145"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="885567024" Name="Stop_GAMEPLAY_chips_exchange" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="48900095"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3220345088" Name="Stop_RACE_active" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="612612925"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2355063916" Name="Stop_RACE_active_L_" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="1041706813"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1635092595" Name="Stop_RACE_bet_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="227663847"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1635092592" Name="Stop_RACE_bet_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="610915002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1877882295" Name="Stop_RACE_countdown" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="605082462"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2347644930" Name="Stop_RACE_horserace" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="644314288"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4039949733" Name="Stop_RACE_recall_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="156090381"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4039949734" Name="Stop_RACE_recall_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="1028501577"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3549795858" Name="Stop_RACE_start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="738002531"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
 		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{8886B714-65C7-F479-4DE4-43A51FD3250C}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
@@ -1297,5 +1585,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{7D5BE01F-141F-5666-C49C-1B753C6135EA}</FileHash>
+	<FileHash>{F02C3C47-6286-2DEA-FCF9-7B588964B509}</FileHash>
 </SoundBanksInfo>

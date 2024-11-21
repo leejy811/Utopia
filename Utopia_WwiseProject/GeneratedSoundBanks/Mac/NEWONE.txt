@@ -102,6 +102,7 @@ State	ID	Name	State Group			Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	187723092	INDEX1			\Default Work Unit\INDEX1	
 	187723095	INDEX2			\Default Work Unit\INDEX2	
+	848835168	ZOOM			\Default Work Unit\ZOOM	
 	1584507803	CLICK			\Default Work Unit\CLICK	
 	1761501017	BOOL			\Default Work Unit\BOOL	
 	2212414277	DIST			\Default Work Unit\DIST	

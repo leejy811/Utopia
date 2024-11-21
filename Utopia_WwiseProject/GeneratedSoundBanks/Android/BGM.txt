@@ -1,11 +1,11 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1325347504	Play_BGM4			\Default Work Unit\Play_BGM4	
-	1325347505	Play_BGM5			\Default Work Unit\Play_BGM5	
-	1994810337	Play_BGMsequnce1			\Default Work Unit\Play_BGMsequnce1	
-	2111096682	Play_Lobby			\Default Work Unit\Play_Lobby	
-	2778003230	Stop_ForestAmbienceInLobby			\Default Work Unit\Stop_ForestAmbienceInLobby	
-	2968224064	Play_ForestAmbienceInLobby			\Default Work Unit\Play_ForestAmbienceInLobby	
-	3639729344	Stop_Lobby			\Default Work Unit\Stop_Lobby	
+	1325347504	Play_BGM4			\Default Work Unit\old\Play_BGM4	
+	1325347505	Play_BGM5			\Default Work Unit\old\Play_BGM5	
+	1994810337	Play_BGMsequnce1			\Default Work Unit\old\Play_BGMsequnce1	
+	2111096682	Play_Lobby			\Default Work Unit\old\Play_Lobby	
+	2778003230	Stop_ForestAmbienceInLobby			\Default Work Unit\old\Stop_ForestAmbienceInLobby	
+	2968224064	Play_ForestAmbienceInLobby			\Default Work Unit\old\Play_ForestAmbienceInLobby	
+	3639729344	Stop_Lobby			\Default Work Unit\old\Stop_Lobby	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	848835168	ZOOM			\Default Work Unit\ZOOM	
