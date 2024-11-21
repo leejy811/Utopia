@@ -14,10 +14,6 @@ public class MapUI : MonoBehaviour
     public Image mapImage;
     public Image lockImage;
 
-    [Header("Button")]
-    public Button[] buttons;
-    public Image[] buttonImages;
-
     [Header("Text")]
     public TextMeshProUGUI dayText;
     public TextMeshProUGUI timeText;
@@ -41,7 +37,6 @@ public class MapUI : MonoBehaviour
             if(!GameManager.instance.isLoad && (mapType == MapType.Utopia || mapType == MapType.Totopia))
             {
                 SetMapImage(true);
-                buttons[0].onClick.Invoke();
             }
             else
             {
@@ -52,16 +47,7 @@ public class MapUI : MonoBehaviour
 
         SetMapImage(true);
 
-        buttons[0].onClick.Invoke();
         SetStat();
-    }
-
-    public void OnClickButton(int idx)
-    {
-        int otherIdx = idx == 0 ? 1 : 0;
-
-        buttonImages[otherIdx].color = Color.white * 0.66666f;
-        buttonImages[idx].color = Color.white * 1.0f;
     }
 
     public void SetStat()
@@ -92,11 +78,6 @@ public class MapUI : MonoBehaviour
         mapImage.gameObject.SetActive(isExist);
         lockImage.gameObject.SetActive(!isExist);
         gameObject.GetComponent<ScaleMouseOver>().interactable = isExist;
-
-        foreach (Button button in buttons)
-        {
-            button.interactable = isExist;
-        }
     }
 
     private string SecondToString(float second)

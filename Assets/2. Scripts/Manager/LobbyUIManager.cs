@@ -11,7 +11,6 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     [Header("Observer")]
     public LobbyMenuUI main;
     public UIElement mapSelect;
-    public UIElement setting;
 
     [Header("UIElement")]
     public Button continueButton;
@@ -52,11 +51,6 @@ public class LobbyUIManager : MonoBehaviour, ISubject
         notifyObserver(EventState.None);
     }
 
-    public void OnClickSetting()
-    {
-        notifyObserver(EventState.Setting);
-    }
-
     public void OnClickGameStart(bool isLoad)
     {
         GameManager.instance.isLoad = isLoad;
@@ -86,7 +80,6 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     {
         addObserver(main);
         addObserver(mapSelect);
-        addObserver(setting);
     }
 
     public void addObserver(IObserver observer)

@@ -18,30 +18,19 @@ public class SettingUI : MonoBehaviour
     public Slider bgmSlider;
     public Slider sfxSlider;
 
-    [Header("Fade")]
-    public GameObject fadeImage;
-
     private List<Resolution> resolutions = new List<Resolution>();
     private bool fullScreen;
-    private Scrollbar scrollbar;
 
     private void Start()
     {
         InitResolution();
         InitVolume();
-
-        scrollbar = gameObject.GetComponentInChildren<Scrollbar>();
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
             gameObject.SetActive(false);
-
-        if (scrollbar.value < 0)
-            fadeImage.SetActive(false);
-        else
-            fadeImage.SetActive(true);
     }
 
     private void InitResolution()
