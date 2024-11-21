@@ -53,7 +53,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	605082462	RACE_countdown	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_countdown_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_countdown		3842
 	606623087	BLACKJACK_recall	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BLACKJACK_recall_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_recall		98372
 	610915002	RACE_bet_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_bet_02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_bet_02		11462
-	612612925	RACE_active	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_active_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_active		681656
+	612612925	RACE_active	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_active_346CC00C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_active		681704
 	644314288	RACE_horserace	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_horserace_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_horserace		19314
 	644672470	BLACKJACK_card_put_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BLACKJACK_card_put_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_card_put_01		23466
 	683471986	BLACKJACK_rule_blackjack	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BLACKJACK_rule_blackjack_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_rule_blackjack		207348
