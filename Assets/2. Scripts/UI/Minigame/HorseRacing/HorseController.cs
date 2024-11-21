@@ -128,6 +128,12 @@ public class HorseController : MonoBehaviour
         else return false;
     }
 
+    public void PlayMoveSound()
+    {
+        if (pickEffect.gameObject.activeSelf)
+            AkSoundEngine.PostEvent("Play_RACE_horserace", gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Goal")

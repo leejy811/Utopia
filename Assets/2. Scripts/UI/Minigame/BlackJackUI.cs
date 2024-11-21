@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.UI;
@@ -198,6 +199,7 @@ public class BlackJackUI : MinigameUI
         {
             curGameBuilding.betTimes--;
             SetState(MinigameState.Betting);
+            AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
             StartCoroutine(ThrowChip(curGameBuilding.betChip, throwInterval, true));
         }
     }
@@ -211,6 +213,8 @@ public class BlackJackUI : MinigameUI
         else if (!canClick) return;
         else
         {
+            if (amount > 0) AkSoundEngine.PostEvent("Play_BLACKJACK_bet", gameObject);
+            else AkSoundEngine.PostEvent("Play_BLACKJACK_recall", gameObject);
             betChip += amount;
             SetUI(MinigameState.Betting);
             StartCoroutine(ThrowChip(amount, throwInterval, true));
@@ -224,6 +228,7 @@ public class BlackJackUI : MinigameUI
         else if (!canClick) return;
         else
         {
+            AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
             StartCoroutine(OnMessage(errorMsg, "ALL-IN", errorMsgSecond));
             StartCoroutine(ThrowChip(ChipManager.instance.curChip - betChip, 0.0f, true));
             betChip = ChipManager.instance.curChip;
@@ -234,6 +239,7 @@ public class BlackJackUI : MinigameUI
     public void OnClickResetBetting()
     {
         if (!canClick) return;
+        AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
         StartCoroutine(ThrowChip((betChip - curGameBuilding.betChip) * -1, throwInterval, true));
         betChip = curGameBuilding.betChip;
         SetUI(MinigameState.Betting);
@@ -265,6 +271,7 @@ public class BlackJackUI : MinigameUI
     #region GameLogic
     IEnumerator StartBlackJack()
     {
+        //Ĩ Intro
         yield return StartCoroutine(ThrowChip(-betChip, 0.0f, false));
 
         canClick = false;
@@ -279,12 +286,16 @@ public class BlackJackUI : MinigameUI
         dealerHand.Add(InitImage());
 
         AlignCard(true, 0);
+        AkSoundEngine.PostEvent("Play_BLACKJACK_card_put_01", gameObject);
         yield return new WaitForSeconds(drawSecond / 4.0f);
         AlignCard(true, 1);
+        AkSoundEngine.PostEvent("Play_BLACKJACK_card_put_01", gameObject);
         yield return new WaitForSeconds(drawSecond / 4.0f);
         AlignCard(false, 0);
+        AkSoundEngine.PostEvent("Play_BLACKJACK_card_put_01", gameObject);
         yield return new WaitForSeconds(drawSecond / 4.0f);
         AlignCard(false, 1);
+        AkSoundEngine.PostEvent("Play_BLACKJACK_card_put_01", gameObject);
         yield return new WaitForSeconds(drawSecond / 4.0f);
 
         OpenCard(playerHand[0], player[0]);
@@ -380,6 +391,7 @@ public class BlackJackUI : MinigameUI
         ResetChip();
 
         canClick = false;
+        AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
         StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), throwInterval, rewardChip > 0 ? false : true));
         yield return new WaitForSeconds(throwInterval * rewardChip + throwSecond * 2);
         StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false)); ;
@@ -401,6 +413,7 @@ public class BlackJackUI : MinigameUI
         images.Add(newImage);
 
         AlignCard(isPlayer);
+        AkSoundEngine.PostEvent("Play_BLACKJACK_card_put_01", gameObject);
         yield return new WaitForSeconds(drawSecond);
 
         if (isOpen)
@@ -418,6 +431,7 @@ public class BlackJackUI : MinigameUI
 
         if (CalculateResult(player) > 21)
         {
+            AkSoundEngine.PostEvent("Play_BLACKJACK_rule_bust", gameObject);
             StartCoroutine(OnMessage(defeatResultMsg, "!! Player Burst !!", resultSecond));
             GetReward(GameResult.Dealer_Win);
             StartCoroutine(ReturnToLobby(resultSecond, GameResult.Dealer_Win));
@@ -440,12 +454,14 @@ public class BlackJackUI : MinigameUI
             {
                 StartCoroutine(OnMessage(winResultMsg, "!! Player BlackJack !!", resultSecond));
                 GetReward(GameResult.Player_BlackJack);
+                ResultSound(GameResult.Player_BlackJack);
                 StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_BlackJack));
             }
             else
             {
                 StartCoroutine(OnMessage(winResultMsg, "!! Dealer Burst !!", resultSecond));
                 GetReward(GameResult.Player_Win);
+                ResultSound(GameResult.Player_Win);
                 StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_Win));
             }
         }
@@ -453,6 +469,7 @@ public class BlackJackUI : MinigameUI
         {
             GameResult result = GetResult();
             GetReward(result);
+            ResultSound(result);
             SetResultPanel(result);
         }
     }
@@ -495,6 +512,26 @@ public class BlackJackUI : MinigameUI
         msgPanel.msgText.text = msg;
         yield return new WaitForSeconds(second);
         msgPanel.panel.SetActive(false);
+    }
+
+    private void ResultSound(GameResult result)
+    {
+        switch (result)
+        {
+            case GameResult.Dealer_Win:
+            case GameResult.Dealer_BlackJack:
+                //Defeat Sound
+                break;
+            case GameResult.Player_Win:
+                AkSoundEngine.PostEvent("Play_BLACKJACK_rule_win", gameObject);
+                break;
+            case GameResult.Player_BlackJack:
+                AkSoundEngine.PostEvent("Play_BLACKJACK_rule_blackjack", gameObject);
+                break;
+            case GameResult.Draw:
+                AkSoundEngine.PostEvent("Play_BLACKJACK_rule_draw", gameObject);
+                break;
+        }
     }
 
     private Image InitImage()
@@ -546,6 +583,7 @@ public class BlackJackUI : MinigameUI
     {
         image.transform.DOLocalMoveX(image.transform.localPosition.x - openSpace, openSecond / 2.0f).OnComplete(() =>
         {
+            AkSoundEngine.PostEvent("Play_BLACKJACK_card_flip", gameObject);
             image.sprite = sprites[(int)card.shape, card.number - 1];
             image.transform.DOLocalMoveX(image.transform.localPosition.x + openSpace, openSecond / 2.0f);
         });

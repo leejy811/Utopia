@@ -127,6 +127,7 @@ public class SlotMachineUI : MinigameUI
     {
         jackPotAnim.SetBool("IsJackPot", true);
         jackPotAnim.SetFloat("LightSpeed", jackPotSpeed);
+        AkSoundEngine.PostEvent("Play_Slotmashin_Jackpot_Ani_01", gameObject);
 
         int rewardChip = curGameBuilding.betChip * reward[(int)ranSlot[0]];
         for (int i = 0;i < rewardChip; i++)
@@ -136,6 +137,7 @@ public class SlotMachineUI : MinigameUI
             yield return new WaitForSeconds(jackPotSecond / rewardChip);
         }
         jackPotAnim.SetBool("IsJackPot", false);
+        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
     private void StopJackPot()
@@ -268,6 +270,7 @@ public class SlotMachineUI : MinigameUI
 
     protected override void OnDisable()
     {
+        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
         base.OnDisable();
     }
 

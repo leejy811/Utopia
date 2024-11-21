@@ -75,12 +75,14 @@ public class HorseRacingUI : MinigameUI
     {
         base.OnDisable();
         horsePanel.SetActive(false);
+        AkSoundEngine.PostEvent("Stop_RACE_active", gameObject);
     }
 
     public override void InitGame(EnterBuilding building)
     {
         base.InitGame(building);
         horsePanel.SetActive(true);
+        AkSoundEngine.PostEvent("Play_RACE_active", gameObject);
     }
 
     protected override void SetValue()
@@ -211,6 +213,7 @@ public class HorseRacingUI : MinigameUI
         for (int i = 0;i < countSprites.Length;i++)
         {
             countImage.sprite = countSprites[i];
+            AkSoundEngine.PostEvent("Play_RACE_countdown", gameObject);
             yield return new WaitForSeconds(1);
         }
         countImage.gameObject.SetActive(false);
