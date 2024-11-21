@@ -114,6 +114,8 @@ public class Building : MonoBehaviour
                     tile.SetSubInfluenceValue(subType, subEnable);
             }
         }
+
+        Debug.Log("power : " + power);
     }
 
     public void ApplyEvent(Event newEvent)
@@ -187,6 +189,18 @@ public class Building : MonoBehaviour
 
         happinessDifference += amount;
         happinessRate += amount;
+
+        if (type != BuildingType.Residential)
+        {
+            if (happinessRate == 0 && happinessDifference != 0)
+            {
+                ApplyInfluenceToTile(-(influencePower + additionalInfluencePower), false);
+            }
+            else if (happinessRate == happinessDifference && happinessRate != 0)
+            {
+                ApplyInfluenceToTile(influencePower + additionalInfluencePower, false);
+            }
+        }
     }
 
     public void SolveEvent(int index)
@@ -252,7 +266,8 @@ public class Building : MonoBehaviour
         if(type == ValueType.Influence)
         {
             if (!enable) amount *= -1;
-            ApplyInfluenceToTile((int)(influencePower * (amount / 100.0f)), false);
+            if (happinessRate != 0)
+                ApplyInfluenceToTile((int)(influencePower * (amount / 100.0f)), false);
             additionalInfluencePower += (int)(influencePower * (amount / 100.0f));
             return;
         }

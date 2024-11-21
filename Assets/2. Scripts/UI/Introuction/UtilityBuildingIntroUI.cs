@@ -20,7 +20,14 @@ public class UtilityBuildingIntroUI : BuildingIntroUI
     {
         base.SetValue(building);
 
-        influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString() + "(" + GetSignString(building.additionalInfluencePower, "+") + ")";
+        if (building.happinessRate == 0)
+        {
+            influenceText.text = "0(" + (- building.influencePower - building.additionalInfluencePower) + ")";
+        }
+        else
+        {
+            influenceText.text = (building.influencePower + building.additionalInfluencePower).ToString() + "(" + GetSignString(building.additionalInfluencePower, "+") + ")";
+        }
         valueTypeText.text = valueTypeString[(int)building.type - 1];
         SetParamText(building, (int)building.values[ValueType.user].CheckBoundary() + 1, (int)building.values[ValueType.utility].CheckBoundary() + 1);
     }
