@@ -11,6 +11,7 @@ public class MapUI : MonoBehaviour
     public MapType mapType;
 
     [Header("Image")]
+    public ScaleMouseOver playButton;
     public Image mapImage;
     public Image lockImage;
 
@@ -34,14 +35,7 @@ public class MapUI : MonoBehaviour
 
         if (!File.Exists(path))
         {
-            if(!GameManager.instance.isLoad && (mapType == MapType.Utopia || mapType == MapType.Totopia))
-            {
-                SetMapImage(true);
-            }
-            else
-            {
-                SetMapImage(false);
-            }
+            SetMapImage(!GameManager.instance.isLoad && mapType == MapType.Utopia);
             return;
         }
 
@@ -50,7 +44,7 @@ public class MapUI : MonoBehaviour
         SetStat();
     }
 
-    public void SetStat()
+    private void SetStat()
     {
         MapData data = new MapData();
 
@@ -73,11 +67,31 @@ public class MapUI : MonoBehaviour
         }
     }
 
+    private void SetZeroStat()
+    {
+        dayText.text = "0000 / 00 / 00";
+        timeText.text = "0½Ã°£ 0ºÐ";
+        destroyText.text = "0";
+        happinessText.text = "0";
+
+        buildingText.text = "";
+        for (int i = 0; i < System.Enum.GetValues(typeof(BuildingType)).Length; i++)
+        {
+            buildingText.text += "<color=#" + colorStr[i] + ">" + "0" + "</color>";
+            if (i != System.Enum.GetValues(typeof(BuildingType)).Length - 1)
+                buildingText.text += " / ";
+        }
+    }
+
     private void SetMapImage(bool isExist)
     {
         mapImage.gameObject.SetActive(isExist);
         lockImage.gameObject.SetActive(!isExist);
-        gameObject.GetComponent<ScaleMouseOver>().interactable = isExist;
+        playButton.interactable = isExist;
+        playButton.GetComponent<Button>().interactable = isExist;
+
+        if (!isExist)
+            SetZeroStat();
     }
 
     private string SecondToString(float second)

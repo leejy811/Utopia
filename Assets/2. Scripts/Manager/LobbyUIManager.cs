@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class LobbyUIManager : MonoBehaviour, ISubject
 {
@@ -14,6 +15,7 @@ public class LobbyUIManager : MonoBehaviour, ISubject
 
     [Header("UIElement")]
     public Button continueButton;
+    public GameObject optionPanel;
 
     private List<IObserver> observers = new List<IObserver>();
 
@@ -49,6 +51,11 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     public void OnClickClose()
     {
         notifyObserver(EventState.None);
+    }
+
+    public void OnClickSetting()
+    {
+        optionPanel.SetActive(!optionPanel.activeSelf);
     }
 
     public void OnClickGameStart(bool isLoad)
