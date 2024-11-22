@@ -115,7 +115,11 @@ public class Tile : MonoBehaviour
         if (!targetTile.activeSelf) return;
 
         MeshRenderer renderer = targetTile.GetComponent<MeshRenderer>();
-        renderer.material.DOColor(Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)], time);
+
+        if (time != 0.0f)
+            renderer.material.DOColor(Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)], time);
+        else
+            renderer.material.color = Grid.instance.tilePurchaseColors[Convert.ToInt32(isPurchased)];
 
         if (time != 0.0f)
             smokeFX.Play();
