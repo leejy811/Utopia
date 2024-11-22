@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584694183482680578
+    m_lastTime: -8584693497291166416
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -226,7 +226,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584694183495207456
+    m_lastTime: -8584693497344364938
     List:
     - name: 0912
       guid: 7fe598038160f04fbdb9928fb0ae69e9
@@ -2856,8 +2856,8 @@ MonoBehaviour:
         guid: 789b2eea0ef6ea4a9d6c0672c9c530d8
       Path: Events\Default Work Unit\toto\Play_RACE_active
       maxAttenuation: 0
-      maxDuration: 3.5497916
-      minDuration: 3.5497916
+      maxDuration: -1
+      minDuration: -1
     - name: Play_RACE_active_L_
       guid: 150d454be72acb4cbd19d3835ea99479
       id: 4013421106
