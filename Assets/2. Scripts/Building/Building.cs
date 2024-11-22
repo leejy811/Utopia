@@ -114,8 +114,6 @@ public class Building : MonoBehaviour
                     tile.SetSubInfluenceValue(subType, subEnable);
             }
         }
-
-        Debug.Log("power : " + power);
     }
 
     public void ApplyEvent(Event newEvent)
