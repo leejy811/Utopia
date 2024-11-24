@@ -1,0 +1,23 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	412724365	BGM			\Default Work Unit\BGM	
+
+State	ID	Name	State Group			Notes
+	748895195	None	BGM			
+	2596272617	FAIL	BGM			
+	3340296461	BASIC	BGM			
+	4174463524	DANGER	BGM			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	42448320	SFX_VOL			\Default Work Unit\SFX_VOL	
+	731737678	OPTION			\Default Work Unit\OPTION	
+	1622127507	BGM_VOL			\Default Work Unit\BGM_VOL	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	412724365	BGM			\Default Work Unit\Master Audio Bus\BGM	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+
+Audio Devices	ID	Name	Type				Notes
+	2317455096	No_Output	No Output			
+	3859886410	System	System			
+

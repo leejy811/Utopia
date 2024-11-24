@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{F69440A9-C67C-069D-FD08-56D22AACCFE1}">
+			<ShortName>BGM</ShortName>
+			<Path>BGM.bnk</Path>
+			<Media>
+				<File Id="135050005" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lobby_BGM.wav</ShortName>
+					<CachePath>SFX/Lobby_BGM_8E324C96.wem</CachePath>
+				</File>
+				<File Id="159506193" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM2.wav</ShortName>
+					<CachePath>SFX/BGM2_3C2E2B1B.wem</CachePath>
+				</File>
+				<File Id="348594287" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM3.wav</ShortName>
+					<CachePath>SFX/BGM3_56CEF360.wem</CachePath>
+				</File>
+				<File Id="394814525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM.wav</ShortName>
+					<CachePath>SFX/BGM_2C9019F0.wem</CachePath>
+				</File>
+				<File Id="475494921" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM5.wav</ShortName>
+					<CachePath>SFX/BGM5_388D43A2.wem</CachePath>
+				</File>
+				<File Id="824445506" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>utopia sound design.wav</ShortName>
+					<CachePath>SFX/utopia sound design_D7FFE3E4.wem</CachePath>
+				</File>
+				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3131.wav</ShortName>
+					<CachePath>SFX/3131_56CEF360.wem</CachePath>
+				</File>
+			</Media>
+			<Plugins>
+				<Custom>
+					<Plugin Id="225323522" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+					<Plugin Id="1000201217" Name="Silence" LibName="Wwise Silence" LibId="6619138"/>
+				</Custom>
+			</Plugins>
+			<Events>
+				<Event Id="1325347504" Name="Play_BGM4" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="839951050"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1325347505" Name="Play_BGM5" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="475494921"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1994810337" Name="Play_BGMsequnce1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="159506193"/>
+						<MediaRef Id="348594287"/>
+						<MediaRef Id="394814525"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="1000201217"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2968224064" Name="Play_ForestAmbienceInLobby" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="824445506"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2111096682" Name="Play_Lobby" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="135050005"/>
+					</MediaRefs>
+					<PluginRefs>
+						<Custom>
+							<PluginRef Id="225323522"/>
+						</Custom>
+					</PluginRefs>
+				</Event>
+				<Event Id="2778003230" Name="Stop_ForestAmbienceInLobby" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="824445506"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3639729344" Name="Stop_Lobby" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="788884573" Type="User" Language="SFX" Hash="{CEE152ED-4C3B-824D-8745-F05F97C93DAC}">
+			<ShortName>STOP</ShortName>
+			<Path>STOP.bnk</Path>
+			<Events>
+				<Event Id="2581958095" Name="Stop_APT_event_DISEASE_001" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4284039319" Name="Stop_APT_event_DISEASE_001_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1149006027" Name="Stop_APT_event_DISEASE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2774622587" Name="Stop_APT_event_DISEASE_01_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1705166259" Name="Stop_APT_event_FIRE_001" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="744494099" Name="Stop_APT_event_FIRE_001_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="188489143" Name="Stop_APT_event_FIRE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3695163727" Name="Stop_APT_event_FIRE_01_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2648810501" Name="Stop_APT_event_THIEF_001" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4039119537" Name="Stop_APT_event_THIEF_001_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1525431165" Name="Stop_APT_event_THIEF_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3040325241" Name="Stop_APT_event_THIEF_01_1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4016311350" Name="Stop_BGM4" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4016311351" Name="Stop_BGM5" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1894363095" Name="Stop_BGMsequnce1" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1345079091" Name="Stop_ForestAmbience" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3906996890" Name="Stop_protest_002" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3190087908" Name="Stop_testing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{A2211D97-24B9-881A-1A7F-F1C82C54F1B5}">
+			<ShortName>UI2</ShortName>
+			<Path>UI2.bnk</Path>
+			<Media>
+				<File Id="204508889" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Paythepayment_01.wav</ShortName>
+					<CachePath>SFX/Paythepayment_01_ABF879B9.wem</CachePath>
+				</File>
+				<File Id="236384276" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>POPUP_Positive_v2.wav</ShortName>
+					<CachePath>SFX/POPUP_Positive_v2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="262109454" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>POPUP_Positive_v1.wav</ShortName>
+					<CachePath>SFX/POPUP_Positive_v1_6581387E.wem</CachePath>
+				</File>
+				<File Id="439018999" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slotmashin_Jackpot_Ani_01.wav</ShortName>
+					<CachePath>SFX/Slotmashin_Jackpot_Ani_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="444873937" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Effect_Spwan_01.wav</ShortName>
+					<CachePath>SFX/Slot_Effect_Spwan_01_7EE5D2A8.wem</CachePath>
+				</File>
+				<File Id="488455765" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SlotMachine_enter_001.wav</ShortName>
+					<CachePath>SFX/SlotMachine_enter_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="537067420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>POPUP_Negative_v2.wav</ShortName>
+					<CachePath>SFX/POPUP_Negative_v2_8E324C96.wem</CachePath>
+				</File>
+				<File Id="594404784" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Spwan_01.wav</ShortName>
+					<CachePath>SFX/Slot_Spwan_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="650016289" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MUI DENY SMALL Short Fast Click.wav</ShortName>
+					<CachePath>SFX/MUI DENY SMALL Short Fast Click_167EAF51.wem</CachePath>
+				</File>
+				<File Id="748782326" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02.wav</ShortName>
+					<CachePath>SFX/PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02_C28DB17C.wem</CachePath>
+				</File>
+				<File Id="749327532" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Stop_01.wav</ShortName>
+					<CachePath>SFX/Slot_Stop_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="791175701" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CellPhone_01.wav</ShortName>
+					<CachePath>SFX/CellPhone_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="809211139" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Drrrrrr_01.wav</ShortName>
+					<CachePath>SFX/Slot_Drrrrrr_01_5FFF549D.wem</CachePath>
+				</File>
+				<File Id="925625941" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Slot_Rever_01.wav</ShortName>
+					<CachePath>SFX/Slot_Rever_01_58381DFD.wem</CachePath>
+				</File>
+				<File Id="927414738" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GraphUP.wav</ShortName>
+					<CachePath>SFX/GraphUP_2F272586.wem</CachePath>
+				</File>
+				<File Id="1037521745" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>CellPhone_Click.wav</ShortName>
+					<CachePath>SFX/CellPhone_Click_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="7328488" Name="Play_CellPhone_01" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
+					<MediaRefs>
+						<MediaRef Id="791175701"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2450428583" Name="Play_CellPhone_Click" DurationType="OneShot" DurationMin="0.8571655" DurationMax="0.8571655">
+					<MediaRefs>
+						<MediaRef Id="1037521745"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="904270530" Name="Play_Deny_01" DurationType="OneShot" DurationMin="0.27504364" DurationMax="0.27504364">
+					<MediaRefs>
+						<MediaRef Id="650016289"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="904270529" Name="Play_Deny_02" DurationType="OneShot" DurationMin="0.43383914" DurationMax="0.43383914">
+					<MediaRefs>
+						<MediaRef Id="748782326"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3497197729" Name="Play_GraphUP" DurationType="OneShot" DurationMin="1.4934043" DurationMax="1.4934043">
+					<MediaRefs>
+						<MediaRef Id="927414738"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="139162049" Name="Play_Paythepayment_01" DurationType="OneShot" DurationMin="1.2935417" DurationMax="1.2935417">
+					<MediaRefs>
+						<MediaRef Id="204508889"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2774129414" Name="Play_POPUP_Negative" DurationType="OneShot" DurationMin="1.2945417" DurationMax="1.2945417">
+					<MediaRefs>
+						<MediaRef Id="537067420"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3583156534" Name="Play_POPUP_Positive" DurationType="OneShot" DurationMin="1.5687083" DurationMax="1.5687083">
+					<MediaRefs>
+						<MediaRef Id="236384276"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3452595303" Name="Play_Slot_Drrrrrr_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="809211139"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="725934356" Name="Play_Slot_Effect_Spwan_01" DurationType="OneShot" DurationMin="0.32329836" DurationMax="0.32329836">
+					<MediaRefs>
+						<MediaRef Id="444873937"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1042317409" Name="Play_Slot_Rever_01" DurationType="OneShot" DurationMin="0.3293589" DurationMax="0.3293589">
+					<MediaRefs>
+						<MediaRef Id="925625941"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3803209012" Name="Play_Slot_Spwan_01" DurationType="OneShot" DurationMin="0.93914586" DurationMax="0.93914586">
+					<MediaRefs>
+						<MediaRef Id="594404784"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3371155409" Name="Play_Slot_Stop_01" DurationType="OneShot" DurationMin="0.0851875" DurationMax="0.0851875">
+					<MediaRefs>
+						<MediaRef Id="749327532"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1031511574" Name="Play_SlotMachine_enter_001" DurationType="OneShot" DurationMin="0.93572915" DurationMax="0.93572915">
+					<MediaRefs>
+						<MediaRef Id="488455765"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2214109306" Name="Play_Slotmashin_Jackpot_Ani_01" DurationType="OneShot" DurationMin="19.781166" DurationMax="19.781166">
+					<MediaRefs>
+						<MediaRef Id="439018999"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="946941744" Name="Play_Tutorial_Pop_up" DurationType="OneShot" DurationMin="1.2190975" DurationMax="1.2190975">
+					<MediaRefs>
+						<MediaRef Id="262109454"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3035396721" Name="Stop_Slot_Drrrrrr_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{D0E0DF47-00D3-8308-E2A2-5A63F6DAA16C}">
+			<ShortName>BGM2</ShortName>
+			<Path>BGM2.bnk</Path>
+			<Media>
+				<File Id="846080429" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TImeLapsBGM.wav</ShortName>
+					<CachePath>SFX/TImeLapsBGM_9B80FBE6.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="318309431" Name="Play_TImeLapsBGM" DurationType="OneShot" DurationMin="120.048" DurationMax="120.048">
+					<MediaRefs>
+						<MediaRef Id="846080429"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{1E99859F-5818-68A6-14B7-6CEA506A4D10}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="393239870" Name="SFX"/>
+				<Bus Id="412724365" Name="BGM"/>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="42448320" Name="SFX_VOL"/>
+				<GameParameter Id="187723092" Name="INDEX1"/>
+				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="731737678" Name="OPTION"/>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1622127507" Name="BGM_VOL"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="412724365" Name="BGM">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2596272617" Name="FAIL"/>
+						<State Id="3340296461" Name="BASIC"/>
+						<State Id="4174463524" Name="DANGER"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+			<SwitchGroups>
+				<SwitchGroup Id="2250165792" Name="New_Switch_Group">
+					<Switches>
+						<Switch Id="2596272617" Name="FAIL"/>
+						<Switch Id="3340296461" Name="BASIC"/>
+						<Switch Id="4174463524" Name="DANGER"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
+		</SoundBank>
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{74599EFF-AB32-F82F-CF28-D2F822BA0759}">
+			<ShortName>UI</ShortName>
+			<Path>UI.bnk</Path>
+			<Media>
+				<File Id="37938370" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Day-Night.wav</ShortName>
+					<CachePath>SFX/Day-Night_8E324C96.wem</CachePath>
+				</File>
+				<File Id="43538208" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_solve_001.wav</ShortName>
+					<CachePath>SFX/UI_solve_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="46416667" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mail_enter_001.wav</ShortName>
+					<CachePath>SFX/Mail_enter_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="97953192" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GraphFallDown.wav</ShortName>
+					<CachePath>SFX/GraphFallDown_52D4454A.wem</CachePath>
+				</File>
+				<File Id="115031296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Night-Dawn.wav</ShortName>
+					<CachePath>SFX/Night-Dawn_8E324C96.wem</CachePath>
+				</File>
+				<File Id="119271698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Tile_Buy_001(short).wav</ShortName>
+					<CachePath>SFX/Tile_Buy_001(short)_8E324C96.wem</CachePath>
+				</File>
+				<File Id="121382095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Jackpot_01.wav</ShortName>
+					<CachePath>SFX/Jackpot_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="165481767" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Graph_fall_001.wav</ShortName>
+					<CachePath>SFX/Graph_fall_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="175516682" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Turn_Move_Clock_001.wav</ShortName>
+					<CachePath>SFX/Turn_Move_Clock_001_AFCB1483.wem</CachePath>
+				</File>
+				<File Id="204877032" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_BLACKOUT_001.wav</ShortName>
+					<CachePath>SFX/APT_event_BLACKOUT_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="228042333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_FIRE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_FIRE_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="255281743" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Pay_001.wav</ShortName>
+					<CachePath>SFX/Pay_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="256641271" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Building_click_003.wav</ShortName>
+					<CachePath>SFX/Building_click_003_912821E8.wem</CachePath>
+				</File>
+				<File Id="265951174" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>D-Day_popup_001.wav</ShortName>
+					<CachePath>SFX/D-Day_popup_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="323079966" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DISEASE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DISEASE_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="327294676" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mail_take_001.wav</ShortName>
+					<CachePath>SFX/Mail_take_001_56C0E596.wem</CachePath>
+				</File>
+				<File Id="361543517" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>stamp.wav</ShortName>
+					<CachePath>SFX/stamp_004775AA.wem</CachePath>
+				</File>
+				<File Id="433461852" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DESOLATE_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="476423553" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
+					<CachePath>SFX/APT_event_SEWERSMELL_001_2C9019F0.wem</CachePath>
+				</File>
+				<File Id="546900594" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_SEWERSMELL_001.wav</ShortName>
+					<CachePath>SFX/APT_event_SEWERSMELL_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="637537002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SomethingWrong_01.wav</ShortName>
+					<CachePath>SFX/SomethingWrong_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_THIEF_001.wav</ShortName>
+					<CachePath>SFX/APT_event_THIEF_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="781588675" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ATP_event_ELEVATOR_001_v2.wav</ShortName>
+					<CachePath>SFX/ATP_event_ELEVATOR_001_v2_56CEF360.wem</CachePath>
+				</File>
+				<File Id="822705564" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mail_open_001.wav</ShortName>
+					<CachePath>SFX/Mail_open_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="865553987" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>protest_002.wav</ShortName>
+					<CachePath>SFX/protest_002_300294E6.wem</CachePath>
+				</File>
+				<File Id="899727040" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Lever_001.wav</ShortName>
+					<CachePath>SFX/Lever_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="901484845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Graph_fall_002.wav</ShortName>
+					<CachePath>SFX/Graph_fall_002_8E324C96.wem</CachePath>
+				</File>
+				<File Id="942761984" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Demolition_001_v1.wav</ShortName>
+					<CachePath>SFX/Demolition_001_v1_8E324C96.wem</CachePath>
+				</File>
+				<File Id="991450525" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mouse_001_v1.wav</ShortName>
+					<CachePath>SFX/Mouse_001_v1_8602117B.wem</CachePath>
+				</File>
+				<File Id="1013754079" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>UI_papersound_001.wav</ShortName>
+					<CachePath>SFX/UI_papersound_001_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1058891980" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_NOISY_001.wav</ShortName>
+					<CachePath>SFX/APT_event_NOISY_001_56CEF360.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3240992450" Name="Play_APT_event_BLACKOUT" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204877032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3631016450" Name="Play_APT_event_BLACKOUT_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204877032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="523596106" Name="Play_APT_event_BLACKOUT_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204877032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="527616348" Name="Play_APT_event_BLACKOUT_01_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="204877032"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2457880402" Name="Play_APT_event_DESOLATE" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2247640914" Name="Play_APT_event_DESOLATE_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="846636250" Name="Play_APT_event_DESOLATE_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3788865580" Name="Play_APT_event_DESOLATE_01_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="343175869" Name="Play_APT_event_DISEASE" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3286873849" Name="Play_APT_event_DISEASE_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3372231965" Name="Play_APT_event_DISEASE_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4293701245" Name="Play_APT_event_DISEASE_01_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1838561709" Name="Play_APT_event_FIRE" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4292701801" Name="Play_APT_event_FIRE_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3024223309" Name="Play_APT_event_FIRE_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="278321261" Name="Play_APT_event_FIRE_01_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1267157265" Name="Play_APT_event_NOISY" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1058891980"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3907339813" Name="Play_APT_event_NOISY_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1058891980"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4106328849" Name="Play_APT_event_NOISY_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1058891980"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="737168217" Name="Play_APT_event_NOISY_01_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="1058891980"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3630940630" Name="Play_APT_event_SEWERSMELL" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="546900594"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="767732750" Name="Play_APT_event_SEWERSMELL_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="476423553"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1106490366" Name="Play_APT_event_SEWERSMELL_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="476423553"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1769151672" Name="Play_APT_event_SEWERSMELL_01_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="546900594"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4003415283" Name="Play_APT_event_THIEF" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1871429987" Name="Play_APT_event_THIEF_001" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1010891971" Name="Play_APT_event_THIEF_001_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3858991871" Name="Play_APT_event_THIEF_01_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="245688734" Name="Play_ATP_event_ELEVATOR_" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="781588675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1466792758" Name="Play_ATP_event_ELEVATOR_001_v2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="781588675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1577833558" Name="Play_ATP_event_ELEVATOR_001_v2_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="781588675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4089090122" Name="Play_ATP_event_ELEVATOR_01_v2_1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="781588675"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1278673985" Name="Play_Building_click_003" DurationType="OneShot" DurationMin="0.049125" DurationMax="0.049125">
+					<MediaRefs>
+						<MediaRef Id="256641271"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1518229334" Name="Play_D_Day_popup_001" DurationType="OneShot" DurationMin="0.3501875" DurationMax="0.3501875">
+					<MediaRefs>
+						<MediaRef Id="265951174"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2687999423" Name="Play_Day_Night" DurationType="OneShot" DurationMin="2.7866666" DurationMax="2.7866666">
+					<MediaRefs>
+						<MediaRef Id="37938370"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="669897392" Name="Play_Demolition_001_v1" DurationType="OneShot" DurationMin="0.7253125" DurationMax="0.7253125">
+					<MediaRefs>
+						<MediaRef Id="942761984"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1882539238" Name="Play_Graph_fall_001" DurationType="OneShot" DurationMin="0.2626875" DurationMax="0.2626875">
+					<MediaRefs>
+						<MediaRef Id="165481767"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1882539237" Name="Play_Graph_fall_002" DurationType="OneShot" DurationMin="0.2626875" DurationMax="0.2626875">
+					<MediaRefs>
+						<MediaRef Id="901484845"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="171395709" Name="Play_GraphFallDown" DurationType="OneShot" DurationMin="1.8163024" DurationMax="1.8163024">
+					<MediaRefs>
+						<MediaRef Id="97953192"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="263615490" Name="Play_Jackpot_01" DurationType="OneShot" DurationMin="19.499855" DurationMax="19.499855">
+					<MediaRefs>
+						<MediaRef Id="121382095"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3789420082" Name="Play_Lever_001" DurationType="OneShot" DurationMin="0.5254167" DurationMax="0.5254167">
+					<MediaRefs>
+						<MediaRef Id="899727040"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3897542940" Name="Play_Mail_enter_001" DurationType="OneShot" DurationMin="0.9781042" DurationMax="0.9781042">
+					<MediaRefs>
+						<MediaRef Id="46416667"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1751715434" Name="Play_Mail_open_001" DurationType="OneShot" DurationMin="0.32891667" DurationMax="0.32891667">
+					<MediaRefs>
+						<MediaRef Id="822705564"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="226547375" Name="Play_Mail_take_001" DurationType="OneShot" DurationMin="0.5802917" DurationMax="0.5802917">
+					<MediaRefs>
+						<MediaRef Id="327294676"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3906795593" Name="Play_Mouse_001_v1" DurationType="OneShot" DurationMin="0.098" DurationMax="0.098">
+					<MediaRefs>
+						<MediaRef Id="991450525"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3836024861" Name="Play_Night_Dawn" DurationType="OneShot" DurationMin="2.7866666" DurationMax="2.7866666">
+					<MediaRefs>
+						<MediaRef Id="115031296"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2025304052" Name="Play_Pay_001" DurationType="OneShot" DurationMin="0.992875" DurationMax="0.992875">
+					<MediaRefs>
+						<MediaRef Id="255281743"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1749625636" Name="Play_protest_002" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="865553987"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3676035621" Name="Play_SomethingWrong_01" DurationType="OneShot" DurationMin="5.141354" DurationMax="5.141354">
+					<MediaRefs>
+						<MediaRef Id="637537002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2683666007" Name="Play_stamp" DurationType="OneShot" DurationMin="0.62745833" DurationMax="0.62745833">
+					<MediaRefs>
+						<MediaRef Id="361543517"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3972534815" Name="Play_Tile_Buy_001" DurationType="OneShot" DurationMin="0.992875" DurationMax="0.992875">
+					<MediaRefs>
+						<MediaRef Id="119271698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2475783214" Name="Play_Turn_Move_Clock_001" DurationType="OneShot" DurationMin="2.4492707" DurationMax="2.4492707">
+					<MediaRefs>
+						<MediaRef Id="175516682"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="424395900" Name="Play_UI_papersound_001" DurationType="OneShot" DurationMin="0.41116667" DurationMax="0.41116667">
+					<MediaRefs>
+						<MediaRef Id="1013754079"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1520262876" Name="Play_UI_solve_001" DurationType="OneShot" DurationMin="1.125" DurationMax="1.125">
+					<MediaRefs>
+						<MediaRef Id="43538208"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="187723092" Name="INDEX1"/>
+				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="2212414277" Name="DIST"/>
+			</GameParameters>
+		</SoundBank>
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{93AFCB1B-3C79-BBE0-1160-DAF9CB3CC141}">
+			<ShortName>TOTOPIA</ShortName>
+			<Path>TOTOPIA.bnk</Path>
+			<Media>
+				<File Id="48900095" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>GAMEPLAY_chips_exchange.wav</ShortName>
+					<CachePath>SFX/GAMEPLAY_chips_exchange_8E324C96.wem</CachePath>
+				</File>
+				<File Id="51417048" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_bet.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_bet_8E324C96.wem</CachePath>
+				</File>
+				<File Id="132635145" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_win.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_win_8E324C96.wem</CachePath>
+				</File>
+				<File Id="156090381" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_recall_01.wav</ShortName>
+					<CachePath>SFX/RACE_recall_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="227663847" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_bet_01.wav</ShortName>
+					<CachePath>SFX/RACE_bet_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="250967311" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_intro.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_intro_8E324C96.wem</CachePath>
+				</File>
+				<File Id="270764609" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_bust.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_bust_8E324C96.wem</CachePath>
+				</File>
+				<File Id="488086698" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_draw.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_draw_8E324C96.wem</CachePath>
+				</File>
+				<File Id="498749437" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_card_put_02.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_card_put_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="605082462" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_countdown.wav</ShortName>
+					<CachePath>SFX/RACE_countdown_8E324C96.wem</CachePath>
+				</File>
+				<File Id="606623087" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_recall.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_recall_8E324C96.wem</CachePath>
+				</File>
+				<File Id="610915002" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_bet_02.wav</ShortName>
+					<CachePath>SFX/RACE_bet_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="612612925" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_active.wav</ShortName>
+					<CachePath>SFX/RACE_active_59ACED3C.wem</CachePath>
+				</File>
+				<File Id="644314288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_horserace.wav</ShortName>
+					<CachePath>SFX/RACE_horserace_8E324C96.wem</CachePath>
+				</File>
+				<File Id="644672470" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_card_put_01.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_card_put_01_8E324C96.wem</CachePath>
+				</File>
+				<File Id="683471986" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_rule_blackjack.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_rule_blackjack_8E324C96.wem</CachePath>
+				</File>
+				<File Id="738002531" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_start.wav</ShortName>
+					<CachePath>SFX/RACE_start_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1000881140" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BLACKJACK_card_flip.wav</ShortName>
+					<CachePath>SFX/BLACKJACK_card_flip_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1028501577" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_recall_02.wav</ShortName>
+					<CachePath>SFX/RACE_recall_02_8E324C96.wem</CachePath>
+				</File>
+				<File Id="1041706813" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_active(L).wav</ShortName>
+					<CachePath>SFX/RACE_active(L)_8E324C96.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="3857103390" Name="Play_BLACKJACK_bet" DurationType="OneShot" DurationMin="0.526625" DurationMax="0.526625">
+					<MediaRefs>
+						<MediaRef Id="51417048"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1048074567" Name="Play_BLACKJACK_card_flip" DurationType="OneShot" DurationMin="0.23854166" DurationMax="0.23854166">
+					<MediaRefs>
+						<MediaRef Id="1000881140"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4014308333" Name="Play_BLACKJACK_card_put_01" DurationType="OneShot" DurationMin="0.2434375" DurationMax="0.2434375">
+					<MediaRefs>
+						<MediaRef Id="644672470"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4014308334" Name="Play_BLACKJACK_card_put_02" DurationType="OneShot" DurationMin="0.2434375" DurationMax="0.2434375">
+					<MediaRefs>
+						<MediaRef Id="498749437"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2854514125" Name="Play_BLACKJACK_intro" DurationType="OneShot" DurationMin="1.5914792" DurationMax="1.5914792">
+					<MediaRefs>
+						<MediaRef Id="250967311"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1114446378" Name="Play_BLACKJACK_recall" DurationType="OneShot" DurationMin="0.5118542" DurationMax="0.5118542">
+					<MediaRefs>
+						<MediaRef Id="606623087"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3685917818" Name="Play_BLACKJACK_rule_blackjack" DurationType="OneShot" DurationMin="1.0794375" DurationMax="1.0794375">
+					<MediaRefs>
+						<MediaRef Id="683471986"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1599756660" Name="Play_BLACKJACK_rule_bust" DurationType="OneShot" DurationMin="1.5" DurationMax="1.5">
+					<MediaRefs>
+						<MediaRef Id="270764609"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2625493016" Name="Play_BLACKJACK_rule_draw" DurationType="OneShot" DurationMin="0.64179164" DurationMax="0.64179164">
+					<MediaRefs>
+						<MediaRef Id="488086698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4012406984" Name="Play_BLACKJACK_rule_win" DurationType="OneShot" DurationMin="1.0794375" DurationMax="1.0794375">
+					<MediaRefs>
+						<MediaRef Id="132635145"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2096465206" Name="Play_GAMEPLAY_chips_exchange" DurationType="OneShot" DurationMin="1.0018958" DurationMax="1.0018958">
+					<MediaRefs>
+						<MediaRef Id="48900095"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1907415786" Name="Play_RACE_active" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="612612925"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4013421106" Name="Play_RACE_active_L_" DurationType="OneShot" DurationMin="3.0942292" DurationMax="3.0942292">
+					<MediaRefs>
+						<MediaRef Id="1041706813"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3403597365" Name="Play_RACE_bet_01" DurationType="OneShot" DurationMin="0.09991667" DurationMax="0.09991667">
+					<MediaRefs>
+						<MediaRef Id="227663847"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3403597366" Name="Play_RACE_bet_02" DurationType="OneShot" DurationMin="0.118395835" DurationMax="0.118395835">
+					<MediaRefs>
+						<MediaRef Id="610915002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2521540693" Name="Play_RACE_countdown" DurationType="OneShot" DurationMin="0.039020833" DurationMax="0.039020833">
+					<MediaRefs>
+						<MediaRef Id="605082462"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2027986540" Name="Play_RACE_horserace" DurationType="OneShot" DurationMin="0.2001875" DurationMax="0.2001875">
+					<MediaRefs>
+						<MediaRef Id="644314288"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3546129119" Name="Play_RACE_recall_01" DurationType="OneShot" DurationMin="0.09977084" DurationMax="0.09977084">
+					<MediaRefs>
+						<MediaRef Id="156090381"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3546129116" Name="Play_RACE_recall_02" DurationType="OneShot" DurationMin="0.118395835" DurationMax="0.118395835">
+					<MediaRefs>
+						<MediaRef Id="1028501577"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1325406880" Name="Play_RACE_start" DurationType="OneShot" DurationMin="0.56939584" DurationMax="0.56939584">
+					<MediaRefs>
+						<MediaRef Id="738002531"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4195040360" Name="Stop_BLACKJACK_bet" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="51417048"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3308072525" Name="Stop_BLACKJACK_card_flip" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="1000881140"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2965005019" Name="Stop_BLACKJACK_card_put_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="644672470"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2965005016" Name="Stop_BLACKJACK_card_put_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="498749437"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="493229879" Name="Stop_BLACKJACK_intro" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="250967311"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2433175204" Name="Stop_BLACKJACK_recall" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="606623087"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1903408204" Name="Stop_BLACKJACK_rule_blackjack" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="683471986"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2122381770" Name="Stop_BLACKJACK_rule_bust" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="270764609"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1237074726" Name="Stop_BLACKJACK_rule_draw" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="488086698"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1478085386" Name="Stop_BLACKJACK_rule_win" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="132635145"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="885567024" Name="Stop_GAMEPLAY_chips_exchange" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="48900095"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3220345088" Name="Stop_RACE_active" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="612612925"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2355063916" Name="Stop_RACE_active_L_" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="1041706813"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1635092595" Name="Stop_RACE_bet_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="227663847"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1635092592" Name="Stop_RACE_bet_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="610915002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1877882295" Name="Stop_RACE_countdown" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="605082462"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2347644930" Name="Stop_RACE_horserace" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="644314288"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4039949733" Name="Stop_RACE_recall_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="156090381"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4039949734" Name="Stop_RACE_recall_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="1028501577"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3549795858" Name="Stop_RACE_start" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
+					<MediaRefs>
+						<MediaRef Id="738002531"/>
+					</MediaRefs>
+				</Event>
+			</Events>
+		</SoundBank>
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{8886B714-65C7-F479-4DE4-43A51FD3250C}">
+			<ShortName>NEWONE</ShortName>
+			<Path>NEWONE.bnk</Path>
+			<Media>
+				<File Id="30720200" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM2.wav</ShortName>
+					<CachePath>SFX/BGM2_56CEF360.wem</CachePath>
+				</File>
+				<File Id="141264882" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM5.wav</ShortName>
+					<CachePath>SFX/BGM5_56CEF360.wem</CachePath>
+				</File>
+				<File Id="169061225" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SP_Discount_01.wav</ShortName>
+					<CachePath>SFX/SP_Discount_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="190275362" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SP_Many_jobs_01.wav</ShortName>
+					<CachePath>SFX/SP_Many_jobs_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="228042333" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_FIRE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_FIRE_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="257243960" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SP_Increase_price_01.wav</ShortName>
+					<CachePath>SFX/SP_Increase_price_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="323079966" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DISEASE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DISEASE_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="348594287" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM3.wav</ShortName>
+					<CachePath>SFX/BGM3_56CEF360.wem</CachePath>
+				</File>
+				<File Id="415772296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SP_Festival_01.wav</ShortName>
+					<CachePath>SFX/SP_Festival_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="433461852" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
+					<CachePath>SFX/APT_event_DESOLATE_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>APT_event_THIEF_001.wav</ShortName>
+					<CachePath>SFX/APT_event_THIEF_001_56CEF360.wem</CachePath>
+				</File>
+				<File Id="698255832" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SP_Few_jobs_01.wav</ShortName>
+					<CachePath>SFX/SP_Few_jobs_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="791981080" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM.wav</ShortName>
+					<CachePath>SFX/BGM_56CEF360.wem</CachePath>
+				</File>
+				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>3131.wav</ShortName>
+					<CachePath>SFX/3131_56CEF360.wem</CachePath>
+				</File>
+				<File Id="864269945" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SP_Decrease_price_01.wav</ShortName>
+					<CachePath>SFX/SP_Decrease_price_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="927128712" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SP_Low_in_stock_01.wav</ShortName>
+					<CachePath>SFX/SP_Low_in_stock_01_56CEF360.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="4209066311" Name="Play_1APT_event_DESOLATE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3411385584" Name="Play_1APT_event_DISEASE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3929652442" Name="Play_1APT_event_FIRE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1749607638" Name="Play_1APT_event_THIEF_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="30697391" Name="Play_1SP_Decrease_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="864269945"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3698034714" Name="Play_1SP_Discount_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="169061225"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1975750249" Name="Play_1SP_Festival_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="415772296"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2477356218" Name="Play_1SP_Few_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="698255832"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="600092703" Name="Play_1SP_Increase_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="257243960"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1819511852" Name="Play_1SP_Low_in_stock_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="927128712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1686356159" Name="Play_1SP_Many_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="190275362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="261981424" Name="Play_APT_event_DESOLATE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2096024345" Name="Play_APT_event_DISEASE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="838938441" Name="Play_APT_event_FIRE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1894765735" Name="Play_APT_event_THIEF_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="480150866" Name="Play_BGM_01" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="412724365" Id="3340296461"/>
+							<MediaRefs>
+								<MediaRef Id="30720200"/>
+								<MediaRef Id="348594287"/>
+								<MediaRef Id="791981080"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="412724365" Id="2596272617"/>
+							<MediaRefs>
+								<MediaRef Id="141264882"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="412724365" Id="4174463524"/>
+							<MediaRefs>
+								<MediaRef Id="839951050"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3970961582" Name="Play_NAPT_event_DESOLATE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4198523499" Name="Play_NAPT_event_DISEASE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2629115991" Name="Play_NAPT_event_FIRE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3666548765" Name="Play_NAPT_event_THIEF_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2398011252" Name="Play_NNAPT_event_DESOLATE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="433461852"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3048168877" Name="Play_NNAPT_event_DISEASE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="323079966"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4025613005" Name="Play_NNAPT_event_FIRE_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="228042333"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3944630123" Name="Play_NNAPT_event_THIEF_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="648936715"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="642604430" Name="Play_NNSP_Decrease_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="864269945"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2686632827" Name="Play_NNSP_Discount_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="169061225"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3380347256" Name="Play_NNSP_Festival_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="415772296"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2081122383" Name="Play_NNSP_Few_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="698255832"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1911137782" Name="Play_NNSP_Increase_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="257243960"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2549523169" Name="Play_NNSP_Low_in_stock_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="927128712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1497557360" Name="Play_NNSP_Many_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="190275362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="385490140" Name="Play_NSP_Decrease_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="864269945"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="168960681" Name="Play_NSP_Discount_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="169061225"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="348361594" Name="Play_NSP_Festival_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="415772296"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1143460721" Name="Play_NSP_Few_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="698255832"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2241299872" Name="Play_NSP_Increase_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="257243960"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3910001947" Name="Play_NSP_Low_in_stock_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="927128712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4289174930" Name="Play_NSP_Many_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="190275362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1287155802" Name="Play_SP_Decrease_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="864269945"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3781069583" Name="Play_SP_Discount_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="169061225"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1383320540" Name="Play_SP_Festival_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="415772296"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3113821075" Name="Play_SP_Few_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="698255832"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1635277034" Name="Play_SP_Increase_price_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="257243960"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3317585901" Name="Play_SP_Low_in_stock_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="927128712"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="52587300" Name="Play_SP_Many_jobs_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="190275362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="901839057" Name="Stop_1APT_event_DESOLATE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="25594662" Name="Stop_1APT_event_DISEASE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1533283580" Name="Stop_1APT_event_FIRE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2025134512" Name="Stop_1APT_event_THIEF_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2924011653" Name="Stop_1SP_Decrease_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1412284584" Name="Stop_1SP_Discount_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1788621083" Name="Stop_1SP_Festival_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1224043236" Name="Stop_1SP_Few_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="561424697" Name="Stop_1SP_Increase_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2124694142" Name="Stop_1SP_Low_in_stock_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3007530601" Name="Stop_1SP_Many_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2986176910" Name="Stop_APT_event_DESOLATE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1149006024" Name="Stop_APT_event_DISEASE_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="188489140" Name="Stop_APT_event_FIRE_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1525431166" Name="Stop_APT_event_THIEF_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3030862532" Name="Stop_BGM_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2017181012" Name="Stop_NAPT_event_DESOLATE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2733485581" Name="Stop_NAPT_event_DISEASE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1792249901" Name="Stop_NAPT_event_FIRE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2460715211" Name="Stop_NAPT_event_THIEF_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1933472978" Name="Stop_NNAPT_event_DESOLATE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1815035551" Name="Stop_NNAPT_event_DISEASE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1009984523" Name="Stop_NNAPT_event_FIRE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3293080945" Name="Stop_NNAPT_event_THIEF_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1786706416" Name="Stop_NNSP_Decrease_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2155125557" Name="Stop_NNSP_Discount_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1296914678" Name="Stop_NNSP_Festival_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1794795005" Name="Stop_NNSP_Few_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2166055516" Name="Stop_NNSP_Increase_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1109279727" Name="Stop_NNSP_Low_in_stock_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="75333342" Name="Stop_NNSP_Many_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1808963438" Name="Stop_NSP_Decrease_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3941357211" Name="Stop_NSP_Discount_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1946673176" Name="Stop_NSP_Festival_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3241841583" Name="Stop_NSP_Few_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="706914262" Name="Stop_NSP_Increase_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3492403713" Name="Stop_NSP_Low_in_stock_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="840400464" Name="Stop_NSP_Many_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2088385980" Name="Stop_SP_Decrease_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="452867657" Name="Stop_SP_Discount_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2028788634" Name="Stop_SP_Festival_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3363240785" Name="Stop_SP_Few_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3256509184" Name="Stop_SP_Increase_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1084494907" Name="Stop_SP_Low_in_stock_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2576315890" Name="Stop_SP_Many_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="187723092" Name="INDEX1"/>
+				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="412724365" Name="BGM">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2596272617" Name="FAIL"/>
+						<State Id="3340296461" Name="BASIC"/>
+						<State Id="4174463524" Name="DANGER"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{9BA6B17D-1AF1-0D6B-37DC-6584DB704687}">
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<Media>
+				<File Id="32765491" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>shs_oat_ambience_construction_work_1_jackhammer.wav</ShortName>
+					<CachePath>SFX/shs_oat_ambience_construction_work_1_jackhammer_2C9019F0.wem</CachePath>
+				</File>
+				<File Id="57723684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>scary_2(noHeel).wav</ShortName>
+					<CachePath>SFX/scary_2(noHeel)_56CEF360.wem</CachePath>
+				</File>
+				<File Id="65709662" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>xylophone.wav</ShortName>
+					<CachePath>SFX/xylophone_797B5584.wem</CachePath>
+				</File>
+				<File Id="81639684" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>marimbaC#.wav</ShortName>
+					<CachePath>SFX/marimbaC#_292D3C5C.wem</CachePath>
+				</File>
+				<File Id="181388217" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>shs_oat_ambience_construction_work_5_jackhammer.wav</ShortName>
+					<CachePath>SFX/shs_oat_ambience_construction_work_5_jackhammer_56CEF360.wem</CachePath>
+				</File>
+				<File Id="314776306" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Building_click_002.wav</ShortName>
+					<CachePath>SFX/Building_click_002_6D585517.wem</CachePath>
+				</File>
+				<File Id="336403806" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>105guitarriffCmaj.wav</ShortName>
+					<CachePath>SFX/105guitarriffCmaj_8E324C96.wem</CachePath>
+				</File>
+				<File Id="367849771" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Construction_S08IN.354.wav</ShortName>
+					<CachePath>SFX/Construction_S08IN.354_5292D4B6.wem</CachePath>
+				</File>
+				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>airplane.wav</ShortName>
+					<CachePath>SFX/airplane_AD430AB8.wem</CachePath>
+				</File>
+				<File Id="742924674" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>ESM_Wind_Loop_Distant_Air_Steady_1.wav</ShortName>
+					<CachePath>SFX/ESM_Wind_Loop_Distant_Air_Steady_1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="779451324" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>SO_BA_rim_chin_upbounce.wav</ShortName>
+					<CachePath>SFX/SO_BA_rim_chin_upbounce_8C239BD2.wem</CachePath>
+				</File>
+				<File Id="824445506" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>utopia sound design.wav</ShortName>
+					<CachePath>SFX/utopia sound design_D7FFE3E4.wem</CachePath>
+				</File>
+				<File Id="832635833" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Build_001.wav</ShortName>
+					<CachePath>SFX/Build_001_3D7C98B4.wem</CachePath>
+				</File>
+				<File Id="967811573" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>water_outage.wav</ShortName>
+					<CachePath>SFX/water_outage_56CEF360.wem</CachePath>
+				</File>
+				<File Id="1034700149" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Construction_S08IN.355.wav</ShortName>
+					<CachePath>SFX/Construction_S08IN.355_56CEF360.wem</CachePath>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="602794460" Name="Play_ATP_event_scary_2_noHeel_v1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="602794463" Name="Play_ATP_event_scary_2_noHeel_v2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="602794462" Name="Play_ATP_event_scary_2_noHeel_v3" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="602794457" Name="Play_ATP_event_scary_2_noHeel_v4" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="57723684"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934155" Name="Play_ATP_event_water_outagev1" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934152" Name="Play_ATP_event_water_outagev2" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934153" Name="Play_ATP_event_water_outagev3" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="486934158" Name="Play_ATP_event_water_outagev4" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="967811573"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2611274067" Name="Play_buildingsound" DurationType="OneShot" DurationMin="0.7253125" DurationMax="0.7253125">
+					<MediaRefs>
+						<MediaRef Id="832635833"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1598463209" Name="Play_construction" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="32765491"/>
+						<MediaRef Id="181388217"/>
+						<MediaRef Id="367849771"/>
+						<MediaRef Id="1034700149"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3149538809" Name="Play_ForestAmbience" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="824445506"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="880454473" Name="Play_Select_Button" DurationType="OneShot" DurationMin="0.06489583" DurationMax="0.06489583">
+					<MediaRefs>
+						<MediaRef Id="314776306"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1073654463" Name="Play_Slot_rimshot" DurationType="OneShot" DurationMin="4.0776334" DurationMax="4.0776334">
+					<MediaRefs>
+						<MediaRef Id="779451324"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2149296550" Name="Play_testing" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="65709662"/>
+						<MediaRef Id="81639684"/>
+						<MediaRef Id="336403806"/>
+						<MediaRef Id="583359231"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1020223172" Name="Play_Wind" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="742924674"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3493507479" Name="Stop_construction" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="187723092" Name="INDEX1"/>
+				<GameParameter Id="187723095" Name="INDEX2"/>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
+			</GameParameters>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{A789D53F-A8EB-B472-7B0E-48AC0981B471}</FileHash>
+</SoundBanksInfo>

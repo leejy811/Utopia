@@ -1,0 +1,29 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1325347504	Play_BGM4			\Default Work Unit\old\Play_BGM4	
+	1325347505	Play_BGM5			\Default Work Unit\old\Play_BGM5	
+	1994810337	Play_BGMsequnce1			\Default Work Unit\old\Play_BGMsequnce1	
+	2111096682	Play_Lobby			\Default Work Unit\old\Play_Lobby	
+	2778003230	Stop_ForestAmbienceInLobby			\Default Work Unit\old\Stop_ForestAmbienceInLobby	
+	2968224064	Play_ForestAmbienceInLobby			\Default Work Unit\old\Play_ForestAmbienceInLobby	
+	3639729344	Stop_Lobby			\Default Work Unit\old\Stop_Lobby	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	848835168	ZOOM			\Default Work Unit\ZOOM	
+	1427264549	HAPPY			\Default Work Unit\HAPPY	
+	1584507803	CLICK			\Default Work Unit\CLICK	
+	1761501017	BOOL			\Default Work Unit\BOOL	
+	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	225323522	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Lobby\New Silence\Silence	
+	1000201217	Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\New Silence\Silence	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	135050005	Lobby_BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Lobby_BGM_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Lobby\Lobby_BGM		1569509
+	159506193	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM2_3C2E2B1B.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM2		1235109
+	348594287	BGM3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM3_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM3		510731
+	394814525	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGMsequnce1\BGM		792242
+	475494921	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM5_388D43A2.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGM5		1491730
+	824445506	ForestAmbienceInLobby	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\utopia sound design_D7FFE3E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\ForestAmbienceInLobby		3219744
+	839951050	BGM4	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\3131_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\BGM4		896136
+
