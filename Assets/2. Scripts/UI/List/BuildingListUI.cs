@@ -7,6 +7,9 @@ using System.Globalization;
 
 public class BuildingListUI : ListUI
 {
+    public float lockScale;
+    public float unlockScale;
+
     int[] buildingCount = { 0, 3, 6, 9 };
 
     public override void SetValue(int type)
@@ -25,6 +28,7 @@ public class BuildingListUI : ListUI
 
                     bool checkGrade = CityLevelManager.instance.CheckBuildingLevel(building);
                     ButtonImage[j].sprite = !checkGrade ? lockSprite : building.buildingIcon;
+                    ButtonImage[j].transform.localScale = (!checkGrade ? lockScale : unlockScale) * Vector3.one;
                     Button[j].interactable = checkGrade;
                 }
                 break;
