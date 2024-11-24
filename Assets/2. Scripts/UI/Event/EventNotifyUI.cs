@@ -43,7 +43,7 @@ public class EventNotifyUI : MonoBehaviour, IObserver
 
     public void SetValue(Building building)
     {
-        //ShopManager.instance.SetObjectColor(building.gameObject, Color.red);
+        ShopManager.instance.SetObjectColor(building.gameObject, Color.red);
 
         nameText.text = building.buildingName;
         happinessText.text = building.happinessRate + (building.happinessDifference  < 0 ? " (-" : " (+") + Mathf.Abs(building.happinessDifference) + ")%";

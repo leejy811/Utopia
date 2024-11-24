@@ -15,7 +15,7 @@ public class EndGameUI : MonoBehaviour
     public TextMeshProUGUI playTimeText;
 
     [Header("Credit")]
-    public CreditScoreBar creditScore;
+    public TextMeshProUGUI creditScoreText;
 
     [Header("Building")]
     public TextMeshProUGUI[] buildingCntText;
@@ -33,7 +33,7 @@ public class EndGameUI : MonoBehaviour
 
         int score = RoutineManager.instance.creditRating;
         int endScore = state == EventState.GameOver ? 0 : score;
-        creditScore.SetScore(score, endScore);
+        creditScoreText.text = endScore.ToString() + "<size=10>Á¡</size>";
 
         int[,] count = BuildingSpawner.instance.buildingGradeCount;
         for (int i = 0;i < buildingCntText.Length;i++)
@@ -46,9 +46,12 @@ public class EndGameUI : MonoBehaviour
         int happiness = (int)RoutineManager.instance.cityHappiness;
         happinessText.text = happiness.ToString();
 
-        if (!File.Exists(Application.persistentDataPath + "/ClearData_" + GameManager.instance.curMapType.ToString()))
+        if (state == EventState.GameClear)
         {
-            OnClickSaveData();
+            if (!File.Exists(Application.persistentDataPath + "/ClearData_" + GameManager.instance.curMapType.ToString()))
+            {
+                OnClickSaveData();
+            }
         }
     }
 
