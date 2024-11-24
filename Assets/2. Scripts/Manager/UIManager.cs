@@ -143,7 +143,7 @@ public class UIManager : MonoBehaviour, ISubject
         if (RoutineManager.instance.debt != 0)
             debtDayText.text = "<size=200>D-" + dDay.ToString() + "</size>";
         else
-            debtDayText.text = "<size=150>납부\n완료</size>";
+            debtDayText.text = "<size=155>납부 완료</size>";
 
         int maxWeek = CityLevelManager.instance.level[CityLevelManager.instance.levelIdx + 1].debtWeek;
         int curWeek = RoutineManager.instance.GetWeekOfYear() - CityLevelManager.instance.GetPrefixSumWeek();

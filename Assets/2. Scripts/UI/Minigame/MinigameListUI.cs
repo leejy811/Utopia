@@ -10,6 +10,9 @@ public class MinigameListUI : MonoBehaviour
     public Transform listParent;
     public GameObject gameInfoPrefab;
     public Scrollbar scrollbar;
+    public Image nameSortImage;
+    public Image chipSortImage;
+    public Image timesSortImage;
 
     private List<GameInfoUI> gameInfos = new List<GameInfoUI>();
     private List<EnterBuilding> sortBuilding = new List<EnterBuilding>();
@@ -52,6 +55,12 @@ public class MinigameListUI : MonoBehaviour
                     gameInfos[i].gameObject.SetActive(false);
             }
         }
+    }
+
+    private void SetSortImage(Image sortImage, bool isGrater)
+    {
+        float scale = Mathf.Abs(sortImage.transform.localScale.x);
+        sortImage.transform.localScale = Vector3.one * scale * (isGrater ? 1f : -1f);
     }
 
     private void AddInfo(EnterBuilding building)
@@ -102,18 +111,21 @@ public class MinigameListUI : MonoBehaviour
     {
         SortBuilding(nameGreater ? CompareNameGreater : CompareNameLesser);
         nameGreater = !nameGreater;
+        SetSortImage(nameSortImage, nameGreater);
     }
 
     public void OnClickChipSort()
     {
         SortBuilding(chipGreater ? CompareBetChipGreater : CompareBetChipLesser);
         chipGreater = !chipGreater;
+        SetSortImage(chipSortImage, chipGreater);
     }
 
     public void OnClickTimesSort()
     {
         SortBuilding(timesGreater ? CompareBetTimesGreater : CompareBetTimesLesser);
         timesGreater = !timesGreater;
+        SetSortImage(timesSortImage, timesGreater);
     }
     #endregion
 }
