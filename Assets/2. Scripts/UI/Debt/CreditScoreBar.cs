@@ -8,6 +8,8 @@ public class CreditScoreBar : MonoBehaviour
 {
     [Header("UI Element")]
     public Image scoreImage;
+    public Image rowImage;
+    public Image colImage;
     public TextMeshProUGUI scoreText;
 
     [Header("value")]
@@ -55,6 +57,8 @@ public class CreditScoreBar : MonoBehaviour
     {
         scoreImage.transform.localScale = Vector3.one * amount;
         scoreImage.color = scoreColor.Evaluate(amount);
+        rowImage.color = scoreColor.Evaluate(amount);
+        colImage.color = scoreColor.Evaluate(amount);
     }
 
     private IEnumerator MoveTextOverTime(int startNumber, int endNumber)

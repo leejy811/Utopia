@@ -7247,8 +7247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 2
+  buttonType: 3
+  index: 11
 --- !u!114 &110877739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7300,7 +7300,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12240,8 +12240,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 0
+  buttonType: 2
+  index: 6
 --- !u!114 &190797871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12293,7 +12293,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -16945,8 +16945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 2
+  buttonType: 1
+  index: 5
 --- !u!114 &275460850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16998,7 +16998,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -25460,8 +25460,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 1
+  buttonType: 1
+  index: 4
 --- !u!114 &406206642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25513,7 +25513,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -26533,8 +26533,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 1
+  buttonType: 3
+  index: 10
 --- !u!114 &428852049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26586,7 +26586,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -27492,7 +27492,7 @@ MonoBehaviour:
   phone: {fileID: 1483607378}
   gamePhone: {fileID: 626421051}
   gameFinish: {fileID: 1799350931}
-  tutorial: {fileID: 606788122}
+  tutorial: {fileID: 509693754}
   minigames: []
 --- !u!4 &455419183
 Transform:
@@ -30476,7 +30476,6 @@ MonoBehaviour:
       \uBC88\uC9F8 \uBC29\uBC95</color>\uC740 \uC0AC\uD68C\uD604\uC0C1 \uBC1C\uC0DD
       \uC6D0\uC778\uC744 \uD30C\uC545\uD558\uC5EC \uC0C8\uB85C\uC6B4 \uAC74\uBB3C\uC744
       \uC9D3\uB294 \uBC29\uBC95\uC785\uB2C8\uB2E4."
-  curIdx: 0
 --- !u!1 &510826257
 GameObject:
   m_ObjectHideFlags: 0
@@ -30610,6 +30609,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreImage: {fileID: 2018367498}
+  rowImage: {fileID: 1065431087}
+  colImage: {fileID: 883325066}
   scoreText: {fileID: 2075755421}
   scoreColor:
     serializedVersion: 2
@@ -37309,7 +37310,6 @@ MonoBehaviour:
       \uBC88\uC9F8 \uBC29\uBC95</color>\uC740 \uC0AC\uD68C\uD604\uC0C1 \uBC1C\uC0DD
       \uC6D0\uC778\uC744 \uD30C\uC545\uD558\uC5EC \uC0C8\uB85C\uC6B4 \uAC74\uBB3C\uC744
       \uC9D3\uB294 \uBC29\uBC95\uC785\uB2C8\uB2E4."
-  curIdx: 0
 --- !u!114 &606788123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38784,7 +38784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &636608809
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43945,7 +43945,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -22.400024, y: -20}
+  m_AnchoredPosition: {x: -22.400146, y: -19.99997}
   m_SizeDelta: {x: 30.1, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &733780372
@@ -58481,8 +58481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 2
+  buttonType: 2
+  index: 8
 --- !u!114 &1081287158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58534,7 +58534,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -71419,6 +71419,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreImage: {fileID: 1277785744}
+  rowImage: {fileID: 10245524}
+  colImage: {fileID: 220234808}
   scoreText: {fileID: 1580389939}
   scoreColor:
     serializedVersion: 2
@@ -73122,6 +73124,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreImage: {fileID: 880928733}
+  rowImage: {fileID: 96818124}
+  colImage: {fileID: 763738654}
   scoreText: {fileID: 943536366}
   scoreColor:
     serializedVersion: 2
@@ -80330,10 +80334,14 @@ MonoBehaviour:
   - {fileID: 1676271935}
   moveTime: 0.5
   waitTime: 0.5
+  turnTime: 0
   mailParent: {fileID: 1947381335}
   mailPrefabs:
   - {fileID: 7177877173316814728, guid: b009d0751db9e2641b453a14028cce4a, type: 3}
   - {fileID: 11430031223910680, guid: 96b0cde1cd441354a884296bb35e9ee3, type: 3}
+  mainDevice: {fileID: 0}
+  colDevice: {fileID: 0}
+  rowDevice: {fileID: 0}
   mailDatas: []
   prevData:
     day:
@@ -80733,8 +80741,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 1
+  buttonType: 2
+  index: 7
 --- !u!114 &1490254337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80786,7 +80794,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 7
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -98412,6 +98420,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreImage: {fileID: 401003568}
+  rowImage: {fileID: 549653692}
+  colImage: {fileID: 1292731770}
   scoreText: {fileID: 285193975}
   scoreColor:
     serializedVersion: 2
@@ -110649,8 +110659,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 0
+  buttonType: 3
+  index: 9
 --- !u!114 &2018807206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110702,7 +110712,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 9
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -113753,7 +113763,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2070018506
 RectTransform:
   m_ObjectHideFlags: 0
@@ -117982,8 +117992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
-  buttonType: 0
-  index: 0
+  buttonType: 1
+  index: 3
 --- !u!114 &2142321657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118035,7 +118045,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

@@ -13,7 +13,7 @@ public class EnterBuildingInfoUI : UtilityBuildingInfoUI
         base.SetValue(index);
         EnterBuilding enterBuilding = building as EnterBuilding;
 
-        randomParameterText.text = enterBuilding.utilityValue.min.ToString() + " ~ " + enterBuilding.utilityValue.max.ToString();
+        randomParameterText.text = enterBuilding.utilityValue.min.ToString() + "~" + enterBuilding.utilityValue.max.ToString();
         
         int sign = BuildingSpawner.instance.randomParameter[index];
         int parameter = (int)enterBuilding.GetRandomParameter(sign);

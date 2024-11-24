@@ -18,7 +18,7 @@ public class UtilityBuildingInfoUI : BuildingInfoUI
         UtilityBuilding utilityBuilding = building as UtilityBuilding;
 
         influenceText.text = building.influencePower.ToString();
-        userCntText.text = utilityBuilding.userCnt.min.ToString() + " ~ " + utilityBuilding.userCnt.max.ToString();
+        userCntText.text = utilityBuilding.userCnt.min.ToString() + "~" + utilityBuilding.userCnt.max.ToString();
 
         int sign = BuildingSpawner.instance.randomParameter[index];
         int parameter = (int)utilityBuilding.GetRandomParameter(sign);

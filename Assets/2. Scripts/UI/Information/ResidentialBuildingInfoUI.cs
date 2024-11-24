@@ -19,8 +19,8 @@ public class ResidentialBuildingInfoUI : BuildingInfoUI
         ResidentialBuilding residentialBuilding = building as ResidentialBuilding;
 
         residentText.text = residentialBuilding.residentCnt.max.ToString();
-        commercialCsatText.text = residentialBuilding.commercialCSAT.min.ToString() + " ~ " + residentialBuilding.commercialCSAT.max.ToString();
-        cultureCsatText.text = residentialBuilding.cultureCSAT.min.ToString() + " ~ " + residentialBuilding.cultureCSAT.max.ToString();
-        serviceCsatText.text = residentialBuilding.serviceCSAT.min.ToString() + " ~ " + residentialBuilding.serviceCSAT.max.ToString();
+        commercialCsatText.text = residentialBuilding.commercialCSAT.min.ToString() + "~" + residentialBuilding.commercialCSAT.max.ToString();
+        cultureCsatText.text = residentialBuilding.cultureCSAT.min.ToString() + "~" + residentialBuilding.cultureCSAT.max.ToString();
+        serviceCsatText.text = residentialBuilding.serviceCSAT.min.ToString() + "~" + residentialBuilding.serviceCSAT.max.ToString();
     }
 }
