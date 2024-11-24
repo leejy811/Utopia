@@ -33,7 +33,7 @@ public class TutorialUI : MonoBehaviour, IObserver
 
     private Dictionary<EventState, TutorialContent[]> content = new Dictionary<EventState, TutorialContent[]>();
     private EventState curState;
-    public int curIdx;
+    private int curIdx;
     private int pageLength;
 
     private void Awake()
@@ -60,16 +60,16 @@ public class TutorialUI : MonoBehaviour, IObserver
 
     private void SetButton()
     {
-        rightButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "¥Ÿ¿Ω";
-        leftButton.interactable = true;
+        rightButton.gameObject.SetActive(true);
+        leftButton.gameObject.SetActive(true);
 
         if (curIdx == 0)
         {
-            leftButton.interactable = false;
+            leftButton.gameObject.SetActive(false);
         }
         if (curIdx == pageLength - 1)
         {
-            rightButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().text = "¥›±‚";
+            //rightButton.gameObject.SetActive(false);
         }
         if (curIdx == pageLength)
         {

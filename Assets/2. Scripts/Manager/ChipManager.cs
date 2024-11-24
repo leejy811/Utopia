@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,14 +7,13 @@ public class ChipManager : MonoBehaviour
 {
     static public ChipManager instance;
 
-    public int curTradeTimes;
-    public int maxTradeTimes;
     public int curChip;
     public int baseCost;
     public float changeRatio;
     public Vector2 increaseRange;
     public Vector2 decreaseRange;
     [Range(0.0f, 1.0f)]public float increaseProb;
+    public Dictionary<DateTime, int> chipCostDatas = new Dictionary<DateTime, int>();
 
     private void Awake()
     {
@@ -30,6 +30,8 @@ public class ChipManager : MonoBehaviour
     {
         CostUpdate();
         RatioUpdate();
+
+        chipCostDatas[new DateTime(2023, 12, 31)] = baseCost / 2;
     }
 
     public void CostUpdate()
@@ -50,12 +52,14 @@ public class ChipManager : MonoBehaviour
 
     public void RatioUpdate()
     {
-        float ranNum = Random.Range(0.0f, 1.0f);
+        float ranNum = UnityEngine.Random.Range(0.0f, 1.0f);
 
         if (ranNum < increaseProb)
-            changeRatio = Random.Range(increaseRange.x, increaseRange.y);
+            changeRatio = UnityEngine.Random.Range(increaseRange.x, increaseRange.y);
         else
-            changeRatio = Random.Range(decreaseRange.x, decreaseRange.y);
+            changeRatio = UnityEngine.Random.Range(decreaseRange.x, decreaseRange.y);
+
+        chipCostDatas[RoutineManager.instance.day] = CalcChipCost();
     }
 
     public int CalcChipCost()
@@ -63,15 +67,12 @@ public class ChipManager : MonoBehaviour
         return (int)((baseCost * (1.0f + changeRatio)) / 2);
     }
 
-    public void TradeTimeUpdate()
-    {
-        curTradeTimes = maxTradeTimes;
-    }
-
     public void TradeChip(int amount)
     {
-        curTradeTimes--;
+        int totalCost = amount * CalcChipCost();
+
         curChip += amount;
+        ShopManager.instance.GetMoney(-totalCost);
     }
 
     public bool PayChip(int amount)

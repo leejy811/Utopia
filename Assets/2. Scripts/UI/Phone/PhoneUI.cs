@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.UI;
 
 public enum PhoneState { Main, Bank, Mail, Credit, Level, Chip, GameList }
@@ -19,10 +20,16 @@ public class PhoneUI : MonoBehaviour, IObserver
     [Header("Time")]
     public float moveTime;
     public float waitTime;
+    public float turnTime;
 
     [Header("Mail")]
     public Transform mailParent;
     public GameObject[] mailPrefabs;
+
+    [Header("Device")]
+    public Transform mainDevice;
+    public Transform colDevice;
+    public Transform rowDevice;
 
     public List<MailData> mailDatas = new List<MailData>();
     public PanelData prevData;
@@ -30,6 +37,7 @@ public class PhoneUI : MonoBehaviour, IObserver
     private Dictionary<EventState, PhoneState> matchState = new Dictionary<EventState, PhoneState>();
     private EventState curState;
     private bool isTweening;
+    private bool isRow;
 
     private void Start()
     {
@@ -51,11 +59,12 @@ public class PhoneUI : MonoBehaviour, IObserver
         {
             panel.SetActive(false);
         }
+        ChangeToDevice(false, 0.0f);
     }
 
     IEnumerator InitPhone()
     {
-        transform.DOLocalMoveY(0.0f, moveTime).SetEase(Ease.OutBack);
+        transform.DOLocalMoveY(-80.0f, moveTime).SetEase(Ease.OutBack);
         InputManager.SetCanInput(false);
 
         yield return new WaitForSeconds(moveTime + waitTime);
@@ -73,6 +82,7 @@ public class PhoneUI : MonoBehaviour, IObserver
 
     public void ChaneState(PhoneState state)
     {
+        PhoneState prevState = this.state;
         this.state = state;
 
         for(int i = 0;i < panels.Length; i++)
@@ -82,6 +92,9 @@ public class PhoneUI : MonoBehaviour, IObserver
         }
 
         panels[(int)state].SetActive(true);
+
+        float second = state == PhoneState.Chip || prevState == PhoneState.Chip ? turnTime : 0.0f;
+        ChangeToDevice(state == PhoneState.Chip, second);
     }
 
     public void ChangeStateToInt(int state)
@@ -197,5 +210,19 @@ public class PhoneUI : MonoBehaviour, IObserver
                 isTweening = false;
             });
         }
+    }
+
+    private void ChangeToDevice(bool isRow, float second)
+    {
+        if (mainDevice == null) return;
+        isTweening = true;
+        Transform targetTrans = isRow ? rowDevice : colDevice;
+
+        mainDevice.DOLocalMove(targetTrans.localPosition, second);
+        mainDevice.DOScale(targetTrans.localScale, second);
+        mainDevice.DOLocalRotate(targetTrans.localEulerAngles, second).OnComplete(() =>
+        {
+            isTweening = false;
+        });
     }
 }

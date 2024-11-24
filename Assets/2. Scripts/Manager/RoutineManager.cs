@@ -116,7 +116,6 @@ public class RoutineManager : MonoBehaviour
             ChipManager.instance.RatioUpdate();
             if (day.DayOfWeek == DayOfWeek.Monday)
             {
-                ChipManager.instance.TradeTimeUpdate();
                 UpdateBetTimes();
             }
 
