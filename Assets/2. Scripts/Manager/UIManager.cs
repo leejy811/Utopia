@@ -427,6 +427,10 @@ public class UIManager : MonoBehaviour, ISubject
     private int GetBuildingIndex()
     {
         int idx = targetBuilding.type == BuildingType.Residential ? 0 : 1;
+
+        if (GameManager.instance.curMapType == MapType.Totopia && targetBuilding.type == BuildingType.Culture)
+            idx = 2;
+
         return idx;
     }
 
