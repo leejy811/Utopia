@@ -42,7 +42,7 @@ public class ResidentialBuildingIntroUI : BuildingIntroUI
         if (residentialBuilding.CheckFacility((OptionType)index))
         {
             ColorBlock block = optionButtons[index].colors;
-            block.disabledColor = block.selectedColor;
+            block.disabledColor = block.pressedColor;
             optionButtons[index].colors = block;
             optionToggles[index].colors = block;
             optionButtons[index].interactable = false;

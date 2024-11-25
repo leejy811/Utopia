@@ -5,12 +5,14 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Runtime.CompilerServices;
+using DG.Tweening.Plugins.Core.PathCore;
 
 public class MapUI : MonoBehaviour
 {
     public MapType mapType;
 
     [Header("Image")]
+    public Button dataResetButton;
     public ScaleMouseOver playButton;
     public Image mapImage;
     public Image lockImage;
@@ -34,18 +36,28 @@ public class MapUI : MonoBehaviour
             path = Application.persistentDataPath + "/ClearData_" + (mapType - 1).ToString();
 
         if (!File.Exists(path))
-        {
             SetMapImage(!GameManager.instance.isLoad && mapType == MapType.Utopia);
-            return;
-        }
-
-        SetMapImage(true);
+        else
+            SetMapImage(true);
 
         SetStat();
+
+        dataResetButton.gameObject.SetActive(!GameManager.instance.isLoad);
     }
 
     private void SetStat()
     {
+        if (!GameManager.instance.isLoad)
+        {
+            string path = Application.persistentDataPath + "/ClearData_" + mapType.ToString();
+            if (!File.Exists(path))
+            {
+                SetZeroStat();
+                return;
+            }
+        }
+
+
         MapData data = new MapData();
 
         if (GameManager.instance.isLoad)
@@ -89,9 +101,6 @@ public class MapUI : MonoBehaviour
         lockImage.gameObject.SetActive(!isExist);
         playButton.interactable = isExist;
         playButton.GetComponent<Button>().interactable = isExist;
-
-        if (!isExist)
-            SetZeroStat();
     }
 
     private string SecondToString(float second)
@@ -102,5 +111,12 @@ public class MapUI : MonoBehaviour
         string res = ((int)hour).ToString() + " ½Ã°£ " + ((int)minute % 60).ToString() + " ºÐ";
 
         return res;
+    }
+
+    public void OnClickResetData()
+    {
+        SetZeroStat();
+        DataBaseManager.instance.DeleteMapData(mapType, "/ClearData_");
+        DataBaseManager.instance.clearData[(int)mapType] = new MapData();
     }
 }
