@@ -30,8 +30,7 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     private void SetButton()
     {
         if(File.Exists(Application.persistentDataPath + "/MapData_" + MapType.Utopia.ToString())
-            || File.Exists(Application.persistentDataPath + "/MapData_" + MapType.Totopia.ToString())
-            || File.Exists(Application.persistentDataPath + "/MapData_" + MapType.SnowRabbit.ToString()))
+            || File.Exists(Application.persistentDataPath + "/MapData_" + MapType.Totopia.ToString()))
         {
             continueButton.interactable = true;
             continueButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;

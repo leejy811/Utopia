@@ -2,6 +2,7 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.SocialPlatforms;
 
@@ -103,7 +104,7 @@ public class MinigameUI : MonoBehaviour, IObserver
             yield return new WaitForSeconds(openingSecond);
             yield return new WaitForSeconds(openingInterval);
 
-            gamePanel.SetActive(isOpen);
+            SetGamePanel(isOpen);
             openingAnim.SetBool("IsPlaying", true);
             yield return new WaitForSeconds(openingSecond);
 
@@ -121,6 +122,11 @@ public class MinigameUI : MonoBehaviour, IObserver
             if (!isOpen)
                 UIManager.instance.notifyObserver(EventState.None);
         }
+    }
+
+    protected virtual void SetGamePanel(bool active)
+    {
+        gamePanel.SetActive(active);
     }
 
     protected IEnumerator PlayAddChip(float second, int chip)

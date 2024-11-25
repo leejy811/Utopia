@@ -31,9 +31,10 @@ public class SlotMachineUI : MinigameUI
     public Slot[] slots;
     public SlotState state;
 
-    [Header("Animation")]
+    [Header("Effect")]
     public Animator leverAnim;
     public Animator jackPotAnim;
+    public ParticleSystem jackpotParticle;
 
     [Header("Parameter")]
     public float oneSlotSecond;
@@ -127,6 +128,7 @@ public class SlotMachineUI : MinigameUI
     {
         jackPotAnim.SetBool("IsJackPot", true);
         jackPotAnim.SetFloat("LightSpeed", jackPotSpeed);
+        jackpotParticle.Play(true);
         AkSoundEngine.PostEvent("Play_Slotmashin_Jackpot_Ani_01", gameObject);
 
         int rewardChip = curGameBuilding.betChip * reward[(int)ranSlot[0]];

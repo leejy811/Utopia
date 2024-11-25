@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum MapType { Utopia, Totopia, SnowRabbit }
+public enum MapType { Utopia, Totopia }
 
 public class GameManager : MonoBehaviour
 {

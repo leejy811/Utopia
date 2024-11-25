@@ -74,15 +74,20 @@ public class HorseRacingUI : MinigameUI
     protected override void OnDisable()
     {
         base.OnDisable();
-        horsePanel.SetActive(false);
-        AkSoundEngine.PostEvent("Stop_RACE_active", gameObject);
     }
 
     public override void InitGame(EnterBuilding building)
     {
         base.InitGame(building);
-        horsePanel.SetActive(true);
-        AkSoundEngine.PostEvent("Play_RACE_active", gameObject);
+    }
+
+    protected override void SetGamePanel(bool active)
+    {
+        base.SetGamePanel(active);
+        horsePanel.SetActive(active);
+
+        string isPlay = active ? "Play" : "Stop";
+        AkSoundEngine.PostEvent(isPlay + "_RACE_active", gameObject);
     }
 
     protected override void SetValue()
