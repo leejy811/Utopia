@@ -36,7 +36,7 @@ public class RequestPayUI : MonoBehaviour
 
         DateTime payDay = RoutineManager.instance.GetPayDay();
 
-        curMoneyText.text = GetCommaText(curMoney);
+        curMoneyText.text = GetCommaText(curMoney, 20);
         prevMoneyText.text = GetCommaText(curMoney - total);
         changeText.text = total < 0 ? "-" : "+" + GetCommaText(Mathf.Abs(total));
 
@@ -48,10 +48,12 @@ public class RequestPayUI : MonoBehaviour
         slider.value = curMoney / (float)debt;
     }
 
-    private string GetCommaText(int data)
+    private string GetCommaText(int data, int size = 0)
     {
         if (data == 0)
             return data.ToString() + "¿ø";
+        else if (size != 0)
+            return string.Format("{0:#,###}", data) + "<size=" + size + "> ¿ø";
         else
             return string.Format("{0:#,###}", data) + "¿ø";
     }
