@@ -57,10 +57,12 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
     private void InitGraph()
     {
         maxDay = RoutineManager.instance.day;
-        minDay = RoutineManager.instance.day.Subtract(new TimeSpan(7, 0, 0, 0));
+        minDay = RoutineManager.instance.day.Subtract(new TimeSpan(6, 0, 0, 0));
 
         if (minDay < new DateTime(2024, 1, 1))
             minDay = new DateTime(2024, 1, 1);
+
+        Debug.Log(maxDay.ToString() + "/" + minDay.ToString() + "/" + (maxDay - minDay).Days);
     }
 
     protected override void OnPopulateMesh(VertexHelper vh)
@@ -73,7 +75,13 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
 
         for (int i = 0; i <= (maxDay - minDay).Days; i++)
         {
-            DayToGraph(minDay.AddDays(i)).DrawSquare(vh);
+            SquareGraphInfo graph = DayToGraph(minDay.AddDays(i));
+            graph.DrawSquare(vh);
+
+            if ((maxDay - minDay).Days == i)
+            {
+                Debug.Log(graph.startPoint.x);
+            }
         }
     }
 
@@ -85,15 +93,15 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
         float height = rectTransform.rect.height;
 
         float costHeight = maxcost - mincost;
-        int dayWidth = Mathf.Max((maxDay - minDay).Days, 7);
+        int dayWidth = Mathf.Max((maxDay - minDay).Days + 1, 7);
 
         int prevCost = chipCostDatas[day.Subtract(new TimeSpan(1, 0, 0, 0))];
         int curCost = chipCostDatas[day];
 
-        stick.width = width / (dayWidth + padding * (dayWidth + 1));
+        stick.width = width / (dayWidth + padding * dayWidth);
         stick.color = prevCost > curCost ? decreaseColor : increaseColor;
 
-        float xPos = stick.width * (padding + 0.5f + (1 + padding) * (day - minDay).Days);
+        float xPos = stick.width * (1 + padding) * (0.5f + (day - minDay).Days);
         float startYPos = (prevCost - mincost) / costHeight * height;
         float endYPos = (curCost - mincost) / costHeight * height;
 
@@ -138,7 +146,6 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
                 maxDay = RoutineManager.instance.day;
         }
 
-        Debug.Log("Scroll");
         SetAllDirty();
     }
 
@@ -166,7 +173,6 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
             }
         }
 
-        Debug.Log("Drag");
         SetAllDirty();
     }
 }

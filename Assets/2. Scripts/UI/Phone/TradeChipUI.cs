@@ -73,7 +73,7 @@ public class TradeChipUI : MonoBehaviour
         float prevCost = ChipManager.instance.chipCostDatas[RoutineManager.instance.day.Subtract(new TimeSpan(1, 0, 0, 0))];
 
         string sign = (curCost / prevCost) > 1.0f ? "+ " : "- ";
-        string text = sign + ((int)(((curCost / prevCost) - 1.0f) * 100.0f)).ToString() + "%";
+        string text = sign + ((int)(Mathf.Abs((curCost / prevCost) - 1.0f) * 100.0f)).ToString() + "%";
 
         return text;
     }
