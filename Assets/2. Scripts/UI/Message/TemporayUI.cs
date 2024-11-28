@@ -42,6 +42,15 @@ public class TemporayUI : MonoBehaviour, IPoolObject
         SetPosition(pos);
     }
 
+    public void SetUI(Sprite sprite, Vector3 pos)
+    {
+        images[0].sprite = sprite;
+
+        if (isFixed) return;
+
+        SetPosition(pos);
+    }
+
     private void SetPosition(Vector3 pos)
     {
         Canvas canvas = GetComponentInParent<Canvas>();

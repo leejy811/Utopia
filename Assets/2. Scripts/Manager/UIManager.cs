@@ -261,6 +261,12 @@ public class UIManager : MonoBehaviour, ISubject
             AkSoundEngine.PostEvent("Play_POPUP_Positive", gameObject);
     }
 
+    public void SetEventIconPopUp(Event curEvent, Vector3 position)
+    {
+        TemporayUI message = PoolSystem.instance.messagePool.GetFromPool<TemporayUI>("EventIcon");
+        message.SetUI(curEvent.eventIcon, position);
+    }
+
     public void SetCostPopUp(Transform transform = null, int cost = 0)
     {
         if (transform == null)

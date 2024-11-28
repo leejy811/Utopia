@@ -30247,6 +30247,11 @@ MonoBehaviour:
     _count: 0
     _container: {fileID: 475028861}
     _nonLazy: 0
+  - _name: EventIcon
+    _component: {fileID: 4705107201506718309, guid: 516edd43247a24e4aa064fff19913e0d, type: 3}
+    _count: 0
+    _container: {fileID: 475028861}
+    _nonLazy: 0
 --- !u!114 &499671118
 MonoBehaviour:
   m_ObjectHideFlags: 0
