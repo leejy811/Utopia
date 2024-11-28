@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SocialPlatforms;
 
 public enum MinigameState { Lobby, Betting, Play, Result }
@@ -24,6 +25,8 @@ public class MinigameUI : MonoBehaviour, IObserver
     public GameObject gamePanel;
     public float openingSecond;
     public float openingInterval;
+    public bool postProcessing;
+    public UniversalAdditionalCameraData uiCamera;
 
     [Header("AddChip")]
     public Vector2 chipImageBox;
@@ -102,10 +105,15 @@ public class MinigameUI : MonoBehaviour, IObserver
             openingAnim.SetFloat("Speed", 1.0f / openingSecond);
             openingAnim.SetBool("IsPlaying", false);
             yield return new WaitForSeconds(openingSecond);
+
+            if (postProcessing)
+                uiCamera.renderPostProcessing = isOpen;
+
             yield return new WaitForSeconds(openingInterval);
 
             SetGamePanel(isOpen);
             openingAnim.SetBool("IsPlaying", true);
+
             yield return new WaitForSeconds(openingSecond);
 
             openingAnim.gameObject.SetActive(false);
