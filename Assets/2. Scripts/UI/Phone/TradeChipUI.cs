@@ -30,16 +30,13 @@ public class TradeChipUI : MonoBehaviour
     public float errorSecond;
 
     private int tradeChip;
-    private DateTime hoverDay;
-    private bool isHover;
 
     private void OnEnable()
     {
         tradeChip = 0;
-        isHover = false;
 
         SetCurInfo();
-        SetChartInfo();
+        SetChartInfo(DateTime.MinValue, false);
         SetTradeInfo();
     }
 
@@ -51,7 +48,7 @@ public class TradeChipUI : MonoBehaviour
         curChipRatioText.text = GetRatioText(RoutineManager.instance.day);
     }
 
-    private void SetChartInfo()
+    public void SetChartInfo(DateTime hoverDay, bool isHover)
     {
         infoPanel.SetActive(isHover);
         emptyPanel.SetActive(!isHover);
@@ -69,8 +66,8 @@ public class TradeChipUI : MonoBehaviour
 
     private string GetRatioText(DateTime day)
     {
-        float curCost = ChipManager.instance.chipCostDatas[RoutineManager.instance.day];
-        float prevCost = ChipManager.instance.chipCostDatas[RoutineManager.instance.day.Subtract(new TimeSpan(1, 0, 0, 0))];
+        float curCost = ChipManager.instance.chipCostDatas[day];
+        float prevCost = ChipManager.instance.chipCostDatas[day.Subtract(new TimeSpan(1, 0, 0, 0))];
 
         string sign = (curCost / prevCost) > 1.0f ? "+ " : "- ";
         string text = sign + ((int)(Mathf.Abs((curCost / prevCost) - 1.0f) * 100.0f)).ToString() + "%";

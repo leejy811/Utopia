@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -30,14 +32,32 @@ public class SquareGraphInfo
 
         vh.AddUIVertexQuad(verts);
     }
+
+    public SquareGraphInfo(Vector2 startPoint, Vector2 endPoint, float width, Color color)
+    {
+        this.startPoint = startPoint;
+        this.endPoint = endPoint;
+        this.width = width;
+        this.color = color;
+    }
+
+    public SquareGraphInfo(SquareGraphInfo graph)
+    {
+        startPoint = graph.startPoint;
+        endPoint = graph.endPoint;
+        width = graph.width;
+        color = graph.color;
+    }
 }
 
-public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
+public class ChipGraphUI : Graphic, IScrollHandler, IDragHandler
 {
     public float padding;
     public int dragThreshold;
     public Color increaseColor;
     public Color decreaseColor;
+    public Camera uiCamera;
+    public GraphHighlight highlight;
 
     private Dictionary<DateTime, int> chipCostDatas;
 
@@ -46,12 +66,65 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
     private int mincost;
     private int maxcost;
     private int dragCount;
+    private List<SquareGraphInfo> graphs = new List<SquareGraphInfo>();
+    private int pickIdx;
+    private TradeChipUI chipUI;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        chipUI = gameObject.GetComponentInParent<TradeChipUI>();
+    }
 
     protected override void OnEnable()
     {
         InitGraph();
 
         base.OnEnable();
+    }
+
+    private void Update()
+    {
+        Vector2 localPos;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(rectTransform, Input.mousePosition, uiCamera, out localPos);
+
+        if (0.0f > localPos.y || rectTransform.rect.height < localPos.y)
+        {
+            pickIdx = -1;
+            SetHightlight(null);
+            return;
+        }
+
+        bool isOnGraph = false;
+        int prevIdx = pickIdx;
+        for (int i = 0;i < graphs.Count; i++)
+        {
+            if (graphs[i].startPoint.x - graphs[i].width / 2 < localPos.x
+                && graphs[i].startPoint.x + graphs[i].width / 2 > localPos.x)
+            {
+                pickIdx = i;
+                isOnGraph = true;
+                break;
+            }
+        }
+
+        if (!isOnGraph)
+        {
+            pickIdx = -1;
+            SetHightlight(null);
+            return;
+        }
+        else if (prevIdx == pickIdx) return;
+
+        SetHightlight(graphs[pickIdx]);
+    }
+
+    private void SetHightlight(SquareGraphInfo graph)
+    {
+        highlight.ChangeGraph(graph);
+        highlight.SetAllDirty();
+        chipUI.SetChartInfo(minDay.AddDays(pickIdx), pickIdx != -1);
     }
 
     private void InitGraph()
@@ -61,8 +134,6 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
 
         if (minDay < new DateTime(2024, 1, 1))
             minDay = new DateTime(2024, 1, 1);
-
-        Debug.Log(maxDay.ToString() + "/" + minDay.ToString() + "/" + (maxDay - minDay).Days);
     }
 
     protected override void OnPopulateMesh(VertexHelper vh)
@@ -73,22 +144,16 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
 
         CalcMinMaxCost();
 
+        graphs.Clear();
         for (int i = 0; i <= (maxDay - minDay).Days; i++)
         {
-            SquareGraphInfo graph = DayToGraph(minDay.AddDays(i));
-            graph.DrawSquare(vh);
-
-            if ((maxDay - minDay).Days == i)
-            {
-                Debug.Log(graph.startPoint.x);
-            }
+            graphs.Add(DayToGraph(minDay.AddDays(i)));
+            graphs[i].DrawSquare(vh);
         }
     }
 
     private SquareGraphInfo DayToGraph(DateTime day)
     {
-        SquareGraphInfo stick = new SquareGraphInfo();
-
         float width = rectTransform.rect.width;
         float height = rectTransform.rect.height;
 
@@ -98,15 +163,17 @@ public class ChipGraphUI : MaskableGraphic, IScrollHandler, IDragHandler
         int prevCost = chipCostDatas[day.Subtract(new TimeSpan(1, 0, 0, 0))];
         int curCost = chipCostDatas[day];
 
-        stick.width = width / (dayWidth + padding * dayWidth);
-        stick.color = prevCost > curCost ? decreaseColor : increaseColor;
+        float gWidth = width / (dayWidth + padding * dayWidth);
+        Color color = prevCost > curCost ? decreaseColor : increaseColor;
 
-        float xPos = stick.width * (1 + padding) * (0.5f + (day - minDay).Days);
+        float xPos = gWidth * (1 + padding) * (0.5f + (day - minDay).Days);
         float startYPos = (prevCost - mincost) / costHeight * height;
         float endYPos = (curCost - mincost) / costHeight * height;
 
-        stick.startPoint = new Vector2(xPos, startYPos);
-        stick.endPoint = new Vector2(xPos, endYPos);
+        Vector2 startPoint = new Vector2(xPos, startYPos);
+        Vector2 endPoint = new Vector2(xPos, endYPos);
+
+        SquareGraphInfo stick = new SquareGraphInfo(startPoint, endPoint, gWidth, color);
 
         return stick;
     }

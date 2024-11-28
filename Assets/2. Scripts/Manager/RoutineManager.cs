@@ -128,7 +128,7 @@ public class RoutineManager : MonoBehaviour
 
     IEnumerator DailyLight()
     {
-        while(mainLight.gameObject.transform.localEulerAngles.x > 5)
+        while(mainLight.gameObject.transform.localEulerAngles.x > 5 && GameManager.instance.curMapType != MapType.Totopia)
         {
             mainLight.gameObject.transform.Rotate(Vector3.right * Time.fixedDeltaTime * lightDailySpeed);
             yield return new WaitForFixedUpdate();
