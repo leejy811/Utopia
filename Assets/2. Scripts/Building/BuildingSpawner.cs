@@ -185,6 +185,11 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         if (buildings.Count < 1)
             AkSoundEngine.PostEvent("Play_construction", gameObject);
 
+        Vector2Int pos = buildingComp.position;
+        Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
+        EventManager.instance.SetEventBuildings(buildingComp, false);
+        AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
+
         buildingComp.DestroyBuilding();
         Destroy(building);
     }

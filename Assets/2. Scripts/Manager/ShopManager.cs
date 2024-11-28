@@ -175,12 +175,7 @@ public class ShopManager : MonoBehaviour, IObserver
 
         if (buyState != BuyState.SellBuilding) return;
 
-        Vector2Int pos = curPickObject.GetComponent<Building>().position;
-        Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
-
         BuildingSpawner.instance.RemoveBuilding(curPickObject);
-        EventManager.instance.SetEventBuildings(curPickObject.GetComponent<Building>(), false);
-        AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
     }
 
     public void BuildTile(Transform spawnTrans)

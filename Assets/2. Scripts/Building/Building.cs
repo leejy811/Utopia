@@ -61,6 +61,7 @@ public class Building : MonoBehaviour
     public Sprite buildingIcon;
 
     public Dictionary<ValueType, BoundaryValue> values = new Dictionary<ValueType, BoundaryValue>();
+    public int zeroCnt;
 
     private void Start()
     {
@@ -195,9 +196,19 @@ public class Building : MonoBehaviour
             {
                 ApplyInfluenceToTile(-(influencePower + additionalInfluencePower), false);
             }
-            else if (happinessRate == happinessDifference && happinessRate != 0)
+            else if (happinessRate == happinessDifference)
             {
-                ApplyInfluenceToTile(influencePower + additionalInfluencePower, false);
+                if (happinessRate != 0)
+                {
+                    zeroCnt = 0;
+                    ApplyInfluenceToTile(influencePower + additionalInfluencePower, false);
+                }
+                else
+                {
+                    zeroCnt++;
+                    if (zeroCnt >= 2)
+                        BuildingSpawner.instance.RemoveBuilding(gameObject);
+                }
             }
         }
     }
