@@ -207,7 +207,10 @@ public class Building : MonoBehaviour
                 {
                     zeroCnt++;
                     if (zeroCnt >= 2)
+                    {
                         BuildingSpawner.instance.RemoveBuilding(gameObject);
+                        UIManager.instance.SetHappinessPopUp(-1, transform.position);
+                    }
                 }
             }
         }
