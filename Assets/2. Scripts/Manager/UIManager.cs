@@ -267,6 +267,13 @@ public class UIManager : MonoBehaviour, ISubject
         message.SetUI(curEvent.eventIcon, position);
     }
 
+    public TemporayUI SetEventHighlightPopUp(Event[] curEvents, Vector3 position)
+    {
+        TemporayUI message = PoolSystem.instance.messagePool.GetFromPool<TemporayUI>("EventHighlight");
+        message.SetUI(curEvents, position);
+        return message;
+    }
+
     public void SetCostPopUp(Transform transform = null, int cost = 0)
     {
         if (transform == null)

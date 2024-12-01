@@ -30252,6 +30252,11 @@ MonoBehaviour:
     _count: 0
     _container: {fileID: 475028861}
     _nonLazy: 0
+  - _name: EventHighlight
+    _component: {fileID: 4705107201506718309, guid: adcff730413ed1a4fb87e95aa968ddae, type: 3}
+    _count: 0
+    _container: {fileID: 475028861}
+    _nonLazy: 0
 --- !u!114 &499671118
 MonoBehaviour:
   m_ObjectHideFlags: 0

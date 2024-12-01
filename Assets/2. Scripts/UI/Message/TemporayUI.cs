@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using Redcode.Pools;
+using UnityEngine.Rendering.PostProcessing;
 
 public enum TextType { EventName, EventDescription }
 
@@ -16,8 +17,12 @@ public class TemporayUI : MonoBehaviour, IPoolObject
     public float waitTime;
     public float fadeOutTime;
     public bool isFixed;
+    public bool isOnOff;
+    public bool offUI;
+    public bool isMoved;
 
     private Vector3 moveVec;
+    private Vector3 targetPos;
 
     public void SetUI(string[] str, Vector3 pos)
     {
@@ -40,6 +45,27 @@ public class TemporayUI : MonoBehaviour, IPoolObject
         if (isFixed) return;
 
         SetPosition(pos);
+    }
+
+    public void SetUI(Event[] curEvents, Vector3 pos)
+    {
+        for(int i = 0;i < 2;i++)
+        {
+            if (i < curEvents.Length)
+            {
+                images[i].gameObject.SetActive(true);
+                images[i].sprite = curEvents[i].eventIcon;
+            }
+            else
+            {
+                images[i].gameObject.SetActive(false);
+            }
+        }
+
+        if (isFixed) return;
+
+        SetPosition(pos);
+        targetPos = pos;
     }
 
     public void SetUI(Sprite sprite, Vector3 pos)
@@ -76,7 +102,18 @@ public class TemporayUI : MonoBehaviour, IPoolObject
 
         yield return StartCoroutine(UpdateColor(color, speed));
 
-        yield return new WaitForSeconds(waitTime);
+        if (isOnOff)
+        {
+            offUI = false;
+            while (!offUI)
+            {
+                if (isMoved)
+                    SetPosition(targetPos);
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        else
+            yield return new WaitForSeconds(waitTime);
 
         SetAlpha(1.0f);
 

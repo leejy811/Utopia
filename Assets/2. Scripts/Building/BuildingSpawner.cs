@@ -20,6 +20,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public int buildingRemoveCount;
 
     private bool isFirst;
+    private List<TemporayUI> eventIconTemps = new List<TemporayUI>();
 
     private void Awake()
     {
@@ -204,12 +205,23 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
     public void EventBuildingsHighlight(bool active)
     {
-        foreach (Building building in buildings)
+        if(active)
         {
-            if (building.GetEventProblemCount() > 0 && active)
-                ShopManager.instance.SetObjectColor(building.gameObject, Color.yellow);
-            else
-                ShopManager.instance.SetObjectColor(building.gameObject, Color.white);
+            foreach (Building building in buildings)
+            {
+                if (building.GetEventProblemCount() > 0)
+                {
+                    TemporayUI temp = UIManager.instance.SetEventHighlightPopUp(building.curEvents.ToArray(), building.transform.position);
+                    eventIconTemps.Add(temp);
+                }
+            }
+        }
+        else
+        {
+            foreach (TemporayUI temp in eventIconTemps)
+                temp.offUI = true;
+
+            eventIconTemps.Clear();
         }
     }
 
