@@ -55,6 +55,10 @@ public class TemporayUI : MonoBehaviour, IPoolObject
             {
                 images[i].gameObject.SetActive(true);
                 images[i].sprite = curEvents[i].eventIcon;
+                if (curEvents[i].type == EventType.Problem)
+                    images[i].color = Color.red;
+                else
+                    images[i].color = Color.white;
             }
             else
             {

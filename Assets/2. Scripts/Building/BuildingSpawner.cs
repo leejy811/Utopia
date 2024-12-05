@@ -20,6 +20,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public int buildingRemoveCount;
 
     private bool isFirst;
+    private bool isHighlight;
     private List<TemporayUI> eventIconTemps = new List<TemporayUI>();
 
     private void Awake()
@@ -203,17 +204,16 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         }
     }
 
-    public void EventBuildingsHighlight(bool active)
+    private void EventBuildingsHighlight()
     {
-        if(active)
+        isHighlight = !isHighlight;
+
+        if (isHighlight)
         {
             foreach (Building building in buildings)
             {
-                if (building.GetEventProblemCount() > 0)
-                {
-                    TemporayUI temp = UIManager.instance.SetEventHighlightPopUp(building.curEvents.ToArray(), building.transform.position);
-                    eventIconTemps.Add(temp);
-                }
+                TemporayUI temp = UIManager.instance.SetEventHighlightPopUp(building.curEvents.ToArray(), building.transform.position);
+                eventIconTemps.Add(temp);
             }
         }
         else
@@ -223,6 +223,13 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
             eventIconTemps.Clear();
         }
+    }
+
+    public void EventHighlightUpdate()
+    {
+        isHighlight = true;
+        EventBuildingsHighlight();
+        EventBuildingsHighlight();
     }
 
     public int GetEventBuildingCount()
@@ -274,8 +281,8 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public void Notify(EventState state)
     {
         if (state == EventState.EventIcon)
-            EventBuildingsHighlight(true);
-        else
-            EventBuildingsHighlight(false);
+        {
+            EventBuildingsHighlight();
+        }
     }
 }

@@ -129,7 +129,6 @@ public class Building : MonoBehaviour
         if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, true);
         curEvents.Add(newEvent);
-        UIManager.instance.SetEventIconPopUp(newEvent, transform.position);
     }
 
     public void LoadEvent(Event newEvent)
