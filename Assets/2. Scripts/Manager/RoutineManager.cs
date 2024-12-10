@@ -235,10 +235,14 @@ public class RoutineManager : MonoBehaviour
     {
         int total = 0;
 
+        for (int i = 0;i < BuildingSpawner.instance.buildings.Count;i++)
+        {
+            BuildingSpawner.instance.buildings[i].happinessDifference = 0;
+            BuildingSpawner.instance.buildings[i].UpdateHappiness();
+        }
+
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
-            building.happinessDifference = 0;
-            building.UpdateHappiness();
             total += building.happinessRate;
         }
 

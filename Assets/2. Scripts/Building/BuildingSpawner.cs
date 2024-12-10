@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -163,7 +164,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         }
     }
 
-    public void RemoveBuilding(GameObject building)
+    public void RemoveBuilding(GameObject building, float second = 0.0f)
     {
         for (int i = 0;i < buildings.Count; i++)
         {
@@ -193,7 +194,17 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
 
         buildingComp.DestroyBuilding();
-        Destroy(building);
+        PlayDestroy(building, second);
+    }
+
+    private void PlayDestroy(GameObject building, float second)
+    {
+        building.GetComponent<Collider>().enabled = false;
+
+        building.transform.DOMoveY(-2.2f, second).OnComplete(() =>
+        {
+            Destroy(building);
+        });
     }
 
     public void ChangeViewState(ViewStateType stateType)
