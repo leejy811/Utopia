@@ -18,7 +18,7 @@ public class MoneyDetailUI : DetailUI
         string sign = total >= 0 ? "+" : "-";
         string color = total >= 0 ? "<color=#00FF00>" : "<color=#FF0000>";
 
-        totalText.text = color + sign + total.ToString() + "원</color>";
+        totalText.text = color + sign + Mathf.Abs(total).ToString() + "원</color>";
         incomeText.text = totalTax.ToString() + "원";
         outcomeText.text = Mathf.Abs(totalSpend).ToString() + "원";
     }

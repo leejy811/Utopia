@@ -1,3 +1,4 @@
+using Cinemachine;
 using DG.Tweening;
 using System;
 using System.Collections;
@@ -29,6 +30,7 @@ public class RoutineManager : MonoBehaviour
     public int paySuccessTime;
 
     public float playTime;
+    public CinemachineVirtualCamera virtualCamera;
     private Coroutine lightCoroutine;
 
     private void Awake()
@@ -235,11 +237,15 @@ public class RoutineManager : MonoBehaviour
     {
         int total = 0;
 
+        int buildingCount = BuildingSpawner.instance.buildings.Count;
         for (int i = 0;i < BuildingSpawner.instance.buildings.Count;i++)
         {
             BuildingSpawner.instance.buildings[i].happinessDifference = 0;
             BuildingSpawner.instance.buildings[i].UpdateHappiness();
         }
+
+        if (buildingCount != BuildingSpawner.instance.buildings.Count)
+            StartCoroutine(ShakeCamera());
 
         foreach (Building building in BuildingSpawner.instance.buildings)
         {
@@ -254,6 +260,18 @@ public class RoutineManager : MonoBehaviour
             cityHappiness = 0;
 
         AkSoundEngine.SetRTPCValue("HAPPY", cityHappiness);
+    }
+
+    IEnumerator ShakeCamera()
+    {
+        CinemachineBasicMultiChannelPerlin noise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        noise.m_AmplitudeGain = 5.0f;
+        noise.m_FrequencyGain = 1.0f;
+
+        yield return new WaitForSeconds(2.0f);
+
+        noise.m_AmplitudeGain = 0.0f;
+        noise.m_FrequencyGain = 0.0f;
     }
 
     private void UpdateBetTimes()

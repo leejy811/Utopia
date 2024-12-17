@@ -17096,6 +17096,7 @@ MonoBehaviour:
   payFailTime: 0
   paySuccessTime: 0
   playTime: 0
+  virtualCamera: {fileID: 2028396362}
 --- !u!4 &275851916
 Transform:
   m_ObjectHideFlags: 0
@@ -72192,7 +72193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buyState: 0
-  money: 10000000
+  money: 132000
   tilePrefabs:
   - {fileID: 1179345971447982024, guid: 02c34bbe7f29e904ab2cd0c1ae7c275c, type: 3}
   - {fileID: 1179345971447982024, guid: a4f4de84b4eb1c8458cd67719cc81285, type: 3}
@@ -95653,7 +95654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ce468ce5683454d8fcd7adcd0f928f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelIdx: 0
+  levelIdx: 2
   level:
   - type: 0
     debtWeek: 0

@@ -393,8 +393,8 @@ public class BlackJackUI : MinigameUI
         canClick = false;
         AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
         StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), throwInterval, rewardChip > 0 ? false : true));
-        yield return new WaitForSeconds(throwInterval * rewardChip + throwSecond * 2);
-        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false)); ;
+        yield return new WaitForSeconds(throwInterval * rewardChip + throwSecond * 5);
+        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false));
         yield return new WaitForSeconds(throwSecond);
         canClick = true;
     }
@@ -493,8 +493,9 @@ public class BlackJackUI : MinigameUI
 
     IEnumerator ReturnChip(bool isPlayer)
     {
+        Debug.Log(chips.Count);
         Vector3 chipPos = isPlayer ? playerChipTransform.localPosition : dealerChipTransform.localPosition;
-
+        
         int ranIdx = Random.Range(0, chips.Count);
 
         RectTransform transform = chips[ranIdx];

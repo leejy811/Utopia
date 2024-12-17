@@ -83,26 +83,28 @@ public class TradeChipUI : MonoBehaviour
 
     public void OnClickResetChip()
     {
-        tradeChip += 0;
+        tradeChip = 0;
         SetTradeInfo();
     }
 
     public void OnClickTrade(bool isBuy)
     {
-        tradeChip *= isBuy ? 1 : -1;
+        int tradeAmount = tradeChip * (isBuy ? 1 : -1);
 
-        if (ChipManager.instance.curChip + tradeChip > 0)
+        if (tradeAmount == 0)
+            return;
+        else if (ChipManager.instance.curChip + tradeAmount < 0)
         {
             OnErrorMsg("칩이 부족합니다", errorSecond);
             return;
         }
-        else if (ShopManager.instance.Money - (ChipManager.instance.CalcChipCost() * tradeChip) < 0)
+        else if (ShopManager.instance.Money - (ChipManager.instance.CalcChipCost() * tradeAmount) < 0)
         {
             OnErrorMsg("돈이 부족합니다", errorSecond);
             return;
         }
 
-        ChipManager.instance.TradeChip(tradeChip);
+        ChipManager.instance.TradeChip(tradeAmount);
         tradeChip = 0;
         SetCurInfo();
         SetTradeInfo();

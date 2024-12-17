@@ -38,7 +38,7 @@ public class RequestPayUI : MonoBehaviour
 
         curMoneyText.text = GetCommaText(curMoney, 20);
         prevMoneyText.text = GetCommaText(curMoney - total);
-        changeText.text = total < 0 ? "-" : "+" + GetCommaText(Mathf.Abs(total));
+        changeText.text = (total < 0 ? "-" : "+") + GetCommaText(Mathf.Abs(total));
 
         balanceText.text = GetCommaText(Mathf.Max(debt - curMoney, 0)) + " 남았어요!";
         dayText.text = "만기일 : " + payDay.ToString("yy.MM.dd");
