@@ -72,7 +72,7 @@ public class PhoneUI : MonoBehaviour, IObserver
         ChaneState(matchState[curState]);
 
         if (curState == EventState.CityLevelUp && CityLevelManager.instance.levelIdx == 1
-            && !GameManager.instance.skipTutorial && UIManager.instance.tutorial.ContainState(EventState.CityLevelUp))
+            && !GameManager.instance.skipTutorial && UIManager.instance.tutorial.ContainState(EventState.SocialEffect))
         {
             yield return new WaitForSeconds(5.0f);
             UIManager.instance.notifyObserver(EventState.None);
