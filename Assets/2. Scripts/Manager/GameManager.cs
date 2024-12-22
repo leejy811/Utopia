@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     public MapType curMapType;
     public bool isLoad;
+    public bool skipTutorial;
 
     private PostProcessManager postProcess;
     private SoundManager soundManager;

@@ -7,10 +7,17 @@ using UnityEngine.UI;
 using UnityEngine.Video;
 
 [System.Serializable]
-public struct TutorialContent
+public struct TutorialClip
 {
     public VideoClip videoClip;
     [TextArea] public string description;
+}
+
+[System.Serializable]
+public struct TutorialState
+{
+    public EventState state;
+    public TutorialClip[] clips;
 }
 
 public class TutorialUI : MonoBehaviour, IObserver
@@ -27,26 +34,16 @@ public class TutorialUI : MonoBehaviour, IObserver
     public Button leftButton;
 
     [Header("content")]
-    public TutorialContent[] gameStart;
-    public TutorialContent[] constructBuilding;
-    public TutorialContent[] socialEffect;
-
-    private Dictionary<EventState, TutorialContent[]> content = new Dictionary<EventState, TutorialContent[]>();
+    public List<TutorialState> content = new List<TutorialState>();
+    
     private EventState curState;
     private int curIdx;
     private int pageLength;
 
-    private void Awake()
-    {
-        content[EventState.GameStart] = gameStart;
-        content[EventState.ConstructBuilding] = constructBuilding;
-        content[EventState.SocialEffect] = socialEffect;
-    }
-
     public void SetValue()
     {
-        videoPlayer.clip = content[curState][curIdx].videoClip;
-        descriptionText.text = content[curState][curIdx].description;
+        videoPlayer.clip = FindState(curState).clips[curIdx].videoClip;
+        descriptionText.text = FindState(curState).clips[curIdx].description;
         indexText.text = (curIdx + 1).ToString() + "/" + pageLength.ToString();
     }
 
@@ -80,16 +77,25 @@ public class TutorialUI : MonoBehaviour, IObserver
         SetValue();
     }
 
+    public TutorialState FindState(EventState state)
+    {
+        return content.Find(x => x.state == state);
+    }
+
+    public bool ContainState(EventState state)
+    {
+        return content.Exists(x => x.state == state);
+    }
+
     public void Notify(EventState state)
     {
-        if (state == EventState.GameStart || 
-            state == EventState.ConstructBuilding || state == EventState.SocialEffect)
+        if (ContainState(state))
         {
             InputManager.SetCanInput(false);
             gameObject.SetActive(true);
             curState = state;
             curIdx = 0;
-            pageLength = content[curState].Length;
+            pageLength = FindState(curState).clips.Length;
             SetButton();
 
             AkSoundEngine.SetRTPCValue("CLICK", 2);

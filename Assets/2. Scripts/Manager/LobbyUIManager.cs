@@ -79,6 +79,11 @@ public class LobbyUIManager : MonoBehaviour, ISubject
         SoundManager.instance.PostEvent(name);
     }
 
+    public void OnClickSkipTutorial(bool isSkip)
+    {
+        GameManager.instance.skipTutorial = isSkip;
+    }
+
     #endregion
 
     #region Observer

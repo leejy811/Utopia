@@ -51,7 +51,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     {
         if (!isFirst) 
         {
-            UIManager.instance.notifyObserver(EventState.ConstructBuilding);
+            UIManager.instance.SetTutorialPopup(EventState.ConstructBuilding);
             isFirst = true;
         }
 

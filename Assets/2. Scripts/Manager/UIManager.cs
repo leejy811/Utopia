@@ -284,6 +284,14 @@ public class UIManager : MonoBehaviour, ISubject
             costInfo.OnUI(cost, transform.position);
     }
 
+    public void SetTutorialPopup(EventState state)
+    {
+        if (GameManager.instance.skipTutorial) return;
+        else if (!tutorial.ContainState(state)) return;
+
+        notifyObserver(state);
+    }
+
     #endregion
 
     #region OnClick
