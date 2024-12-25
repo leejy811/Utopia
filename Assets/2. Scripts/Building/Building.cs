@@ -71,7 +71,7 @@ public class Building : MonoBehaviour
 
     public virtual void DestroyBuilding()
     {
-        if (zeroCnt >= 2) return;
+        if (happinessRate == 0) return;
 
         int power = type == BuildingType.Residential ? (int)values[ValueType.Resident].cur : influencePower;
 
