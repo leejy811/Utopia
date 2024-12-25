@@ -67,9 +67,28 @@ public class ChipManager : MonoBehaviour
         return (int)((baseCost * (1.0f + changeRatio)) / 2);
     }
 
+    public int CalcChipCostWithEvent()
+    {
+        int cost = (int)((baseCost * (1.0f + changeRatio)) / 2);
+
+        foreach (Event e in EventManager.instance.globalEvents)
+        {
+            if (e.valueType == ValueType.Chip)
+                cost = (int)(cost * ((e.effectValue[0] + 100.0f) / 100.0f));
+        }
+
+        return cost;
+    }
+
     public void TradeChip(int amount)
     {
         int totalCost = amount * CalcChipCost();
+
+        foreach (Event e in EventManager.instance.globalEvents)
+        {
+            if (e.valueType == ValueType.Chip)
+                totalCost = (int)(totalCost * ((e.effectValue[0] + 100.0f) / 100.0f));
+        }
 
         curChip += amount;
         ShopManager.instance.GetMoney(-totalCost);

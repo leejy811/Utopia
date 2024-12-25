@@ -61,7 +61,7 @@ public class TradeChipUI : MonoBehaviour
     private void SetTradeInfo()
     {
         tradeChipText.text = tradeChip.ToString("#,##0") + "개";
-        tradeCostText.text = (tradeChip * ChipManager.instance.CalcChipCost()).ToString("#,##0") + " 원";
+        tradeCostText.text = (tradeChip * ChipManager.instance.CalcChipCostWithEvent()).ToString("#,##0") + " 원";
     }
 
     private string GetRatioText(DateTime day)
@@ -98,7 +98,7 @@ public class TradeChipUI : MonoBehaviour
             OnErrorMsg("칩이 부족합니다", errorSecond);
             return;
         }
-        else if (ShopManager.instance.Money - (ChipManager.instance.CalcChipCost() * tradeAmount) < 0)
+        else if (ShopManager.instance.Money - (ChipManager.instance.CalcChipCostWithEvent() * tradeAmount) < 0)
         {
             OnErrorMsg("돈이 부족합니다", errorSecond);
             return;
