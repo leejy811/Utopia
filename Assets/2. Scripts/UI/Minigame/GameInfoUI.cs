@@ -16,7 +16,7 @@ public class GameInfoUI : MonoBehaviour
         building = enterBuilding;
 
         nameText.text = building.buildingName + building.count.ToString();
-        betChipText.text = building.betChip.ToString();
+        betChipText.text = ((int)building.values[ValueType.betChip].cur).ToString();
         betTimesText.text = building.betTimes.ToString();
 
         gameObject.SetActive(true);

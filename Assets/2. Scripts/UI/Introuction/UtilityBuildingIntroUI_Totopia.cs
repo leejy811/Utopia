@@ -21,7 +21,7 @@ public class UtilityBuildingIntroUI_Totopia : UtilityBuildingIntroUI
             minigamePanel.SetActive(true);
 
             EnterBuilding enterBuilding = building as EnterBuilding;
-            betChipText.text = enterBuilding.betChip.ToString();
+            betChipText.text = ((int)enterBuilding.values[ValueType.betChip].cur).ToString();
             betTimesText.text = enterBuilding.betTimes.ToString();
 
             if (enterBuilding.betTimes == 0)

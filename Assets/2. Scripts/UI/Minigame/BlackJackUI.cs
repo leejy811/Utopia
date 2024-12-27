@@ -110,7 +110,7 @@ public class BlackJackUI : MinigameUI
     public override void InitGame(EnterBuilding building)
     {
         base.InitGame(building);
-        betChip = building.betChip;
+        betChip = (int)building.values[ValueType.betChip].cur;
     }
 
     #region SetFunc
@@ -192,7 +192,7 @@ public class BlackJackUI : MinigameUI
     {
         if (curGameBuilding.betTimes == 0)
             StartCoroutine(OnMessage(errorMsg, "실행 가능 횟수를\n모두 소진하였습니다.", errorMsgSecond));
-        else if (ChipManager.instance.curChip < curGameBuilding.betChip)
+        else if (ChipManager.instance.curChip < curGameBuilding.values[ValueType.betChip].cur)
             StartCoroutine(OnMessage(errorMsg, "해당 미니 게임을 하기 위한\n칩이 부족합니다.", errorMsgSecond));
         else if (!canClick) return;
         else
@@ -200,7 +200,7 @@ public class BlackJackUI : MinigameUI
             curGameBuilding.betTimes--;
             SetState(MinigameState.Betting);
             AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
-            StartCoroutine(ThrowChip(curGameBuilding.betChip, throwInterval, true));
+            StartCoroutine(ThrowChip((int)curGameBuilding.values[ValueType.betChip].cur, throwInterval, true));
         }
     }
 
@@ -208,7 +208,7 @@ public class BlackJackUI : MinigameUI
     {
         if(betChip + amount > ChipManager.instance.curChip)
             StartCoroutine(OnMessage(errorMsg, "배팅하기 위한\n칩이 부족합니다.", errorMsgSecond));
-        else if (betChip + amount < curGameBuilding.betChip)
+        else if (betChip + amount < curGameBuilding.values[ValueType.betChip].cur)
             StartCoroutine(OnMessage(errorMsg, "기본 판돈이하로\n칩을 회수할 수 없습니다.", errorMsgSecond));
         else if (!canClick) return;
         else
@@ -240,8 +240,8 @@ public class BlackJackUI : MinigameUI
     {
         if (!canClick) return;
         AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
-        StartCoroutine(ThrowChip((betChip - curGameBuilding.betChip) * -1, throwInterval, true));
-        betChip = curGameBuilding.betChip;
+        StartCoroutine(ThrowChip((betChip - (int)curGameBuilding.values[ValueType.betChip].cur) * -1, throwInterval, true));
+        betChip = (int)curGameBuilding.values[ValueType.betChip].cur;
         SetUI(MinigameState.Betting);
     }
 
@@ -384,7 +384,7 @@ public class BlackJackUI : MinigameUI
         yield return new WaitForSeconds(second);
 
         int rewardChip = betChip * reward[result];
-        betChip = curGameBuilding.betChip;
+        betChip = (int)curGameBuilding.values[ValueType.betChip].cur;
         SetState(MinigameState.Lobby);
 
         ResetCard();

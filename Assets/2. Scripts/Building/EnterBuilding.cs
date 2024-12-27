@@ -11,14 +11,15 @@ public class EnterBuilding : UtilityBuilding
     public static int bonusCost;
 
     public MinigameType minigameType;
-    public int betChip;
     public int maxBetTimes;
     public int betTimes;
     public BoundaryValue RandomChip;
 
     public override void SetParameter(int sign)
     {
-        betChip = (int)GetRandomParameter(sign);
+        BoundaryValue betChip = new BoundaryValue();
+        betChip.cur = (int)GetRandomParameter(sign);
+        values[ValueType.betChip] = betChip;
     }
 
     public override float GetRandomParameter(int sign)

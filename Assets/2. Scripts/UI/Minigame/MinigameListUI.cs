@@ -73,12 +73,12 @@ public class MinigameListUI : MonoBehaviour
     #region Compare
     private int CompareBetChipGreater(EnterBuilding a, EnterBuilding b)
     {
-        return a.betChip < b.betChip ? -1 : 1;
+        return a.values[ValueType.betChip].cur < b.values[ValueType.betChip].cur ? -1 : 1;
     }
 
     private int CompareBetChipLesser(EnterBuilding a, EnterBuilding b)
     {
-        return a.betChip > b.betChip ? -1 : 1;
+        return a.values[ValueType.betChip].cur > b.values[ValueType.betChip].cur ? -1 : 1;
     }
 
     private int CompareBetTimesGreater(EnterBuilding a, EnterBuilding b)

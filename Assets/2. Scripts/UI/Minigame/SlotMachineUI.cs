@@ -131,7 +131,7 @@ public class SlotMachineUI : MinigameUI
         jackpotParticle.Play(true);
         AkSoundEngine.PostEvent("Play_Slotmashin_Jackpot_Ani_01", gameObject);
 
-        int rewardChip = curGameBuilding.betChip * reward[(int)ranSlot[0]];
+        int rewardChip = (int)curGameBuilding.values[ValueType.betChip].cur * reward[(int)ranSlot[0]];
         for (int i = 0;i < rewardChip; i++)
         {
             curChipText.text = (ChipManager.instance.curChip - rewardChip + i + 1).ToString();
@@ -152,7 +152,7 @@ public class SlotMachineUI : MinigameUI
 
     private void ApplyResult()
     {
-        ChipManager.instance.curChip += curGameBuilding.betChip * reward[(int)ranSlot[0]];
+        ChipManager.instance.curChip += (int)curGameBuilding.values[ValueType.betChip].cur * reward[(int)ranSlot[0]];
     }
 
     private void ResetJackPot()
@@ -225,7 +225,7 @@ public class SlotMachineUI : MinigameUI
             SetErrorMsg("실행 가능 횟수를 모두 소진하였습니다.", errorMsgSecond);
             return;
         }
-        else if (!ChipManager.instance.PayChip(curGameBuilding.betChip))
+        else if (!ChipManager.instance.PayChip((int)curGameBuilding.values[ValueType.betChip].cur))
         {
             SetErrorMsg("칩이 부족합니다.", errorMsgSecond);
             return;
@@ -233,7 +233,7 @@ public class SlotMachineUI : MinigameUI
 
         StopJackPot();
         curGameBuilding.betTimes--;
-        StartCoroutine(PlayAddChip(plusSecond, -curGameBuilding.betChip));
+        StartCoroutine(PlayAddChip(plusSecond, -(int)curGameBuilding.values[ValueType.betChip].cur));
         SetValue();
 
         RollRandom();

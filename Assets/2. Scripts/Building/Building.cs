@@ -11,7 +11,7 @@ using Random = UnityEngine.Random;
 public enum BuildingType { Residential = 0, Commercial, Culture, Service }
 public enum BuildingSubType { Apartment = 0, Store, Cinema, Police, Restaurant, Gallery, Fire, Park, Hospital, Entertainment }
 public enum ViewStateType { Transparent = 0, Translucent, Opaque }
-public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility, Influence, Tax, Cost, FinalIncome, Chip }
+public enum ValueType { None = 0, CommercialCSAT, CultureCSAT, ServiceCSAT, Happiness, Resident, user, utility, Influence, Tax, Cost, FinalIncome, Chip, betChip }
 public enum BoundaryType { Less = -1, Include, More }
 
 [Serializable]

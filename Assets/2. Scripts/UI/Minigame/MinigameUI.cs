@@ -54,7 +54,7 @@ public class MinigameUI : MonoBehaviour, IObserver
 
     protected virtual void SetValue()
     {
-        payChipText.text = curGameBuilding.betChip.ToString();
+        payChipText.text = ((int)curGameBuilding.values[ValueType.betChip].cur).ToString();
         curChipText.text = ChipManager.instance.curChip.ToString();
         playTimesText.text = curGameBuilding.betTimes.ToString();
     }

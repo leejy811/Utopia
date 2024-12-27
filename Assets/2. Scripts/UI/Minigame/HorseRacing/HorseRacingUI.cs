@@ -104,7 +104,7 @@ public class HorseRacingUI : MinigameUI
                 InitHorses();
                 break;
             case MinigameState.Betting:
-                curBetChip = curGameBuilding.betChip;
+                curBetChip = (int)curGameBuilding.values[ValueType.betChip].cur;
                 SetHorseSpeed();
                 OnClickPickHorse(0);
                 SetBetChipUI();
@@ -272,17 +272,17 @@ public class HorseRacingUI : MinigameUI
 
     public void OnClickStartBetting()
     {
-        if (ChipManager.instance.curChip < curGameBuilding.betChip)
+        if (ChipManager.instance.curChip < curGameBuilding.values[ValueType.betChip].cur)
             StartCoroutine(OnError(chipErrorImage));
         else if (curGameBuilding.betTimes == 0)
-            StartCoroutine(OnError(timesErrorImage));
+            StartCoroutine(OnError(timesErrorImage));   
         else
             SetState(MinigameState.Betting);
     }
 
     public void OnClickBetChip(int amount)
     {
-        if (curBetChip + amount < curGameBuilding.betChip)
+        if (curBetChip + amount < curGameBuilding.values[ValueType.betChip].cur)
         {
             return;
         }
