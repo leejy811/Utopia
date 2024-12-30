@@ -28,10 +28,28 @@ public class ChipManager : MonoBehaviour
 
     private void Start()
     {
-        CostUpdate();
-        RatioUpdate();
+        if (!GameManager.instance.isLoad)
+        {
+            InitChipCost();
+        }
+    }
 
-        chipCostDatas[new DateTime(2023, 12, 31)] = baseCost / 2;
+    public void InitChipCost()
+    {
+        CostUpdate();
+        RatioUpdate(true);
+
+        if(GameManager.instance.isLoad)
+        {
+            ChipData data = DataBaseManager.instance.LoadChipData();
+            chipCostDatas = data.Load();
+            changeRatio = data.changeRatio;
+            curChip = data.curChip;
+        }
+        else
+        {
+            chipCostDatas[new DateTime(2023, 12, 31)] = baseCost / 2;
+        }
     }
 
     public void CostUpdate()
@@ -50,7 +68,7 @@ public class ChipManager : MonoBehaviour
         baseCost /= count;
     }
 
-    public void RatioUpdate()
+    public void RatioUpdate(bool isInit = false)
     {
         float ranNum = UnityEngine.Random.Range(0.0f, 1.0f);
 
@@ -60,6 +78,8 @@ public class ChipManager : MonoBehaviour
             changeRatio = UnityEngine.Random.Range(decreaseRange.x, decreaseRange.y);
 
         chipCostDatas[RoutineManager.instance.day] = CalcChipCost();
+        if (!isInit)
+            DataBaseManager.instance.SaveChipData(chipCostDatas, changeRatio, curChip);
     }
 
     public int CalcChipCost()

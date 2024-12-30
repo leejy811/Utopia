@@ -15,6 +15,12 @@ public class EnterBuilding : UtilityBuilding
     public int betTimes;
     public BoundaryValue RandomChip;
 
+    protected override void Awake()
+    {
+        base.Awake();
+        values[ValueType.betChip] = RandomChip;
+    }
+
     public override void SetParameter(int sign)
     {
         BoundaryValue betChip = new BoundaryValue();

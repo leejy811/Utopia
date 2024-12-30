@@ -103,6 +103,7 @@ public class BuildingData
     public int happiness;
     public int happinessDifference;
     public float parameter;
+    public float extraParameter;
     public List<EventData> curEvents = new List<EventData>();
 
     public BuildingData(Building building)
@@ -121,6 +122,11 @@ public class BuildingData
 
         if (building.type == BuildingType.Residential)
             parameter = building.values[ValueType.Resident].cur;
+        else if (GameManager.instance.curMapType == MapType.Totopia && building.type == BuildingType.Culture)
+        {
+            parameter = building.values[ValueType.betChip].cur;
+            extraParameter = (building as EnterBuilding).betTimes;
+        }
         else
             parameter = building.values[ValueType.utility].cur;
 
@@ -310,6 +316,43 @@ public class SoundData
     }
 }
 
+[Serializable]
+public class ChipData
+{
+    public int[] costs;
+    public float changeRatio;
+    public int curChip;
+
+    public void Save(Dictionary<DateTime, int> costs, float ratio, int chip)
+    {
+        DateTime startDay = new DateTime(2023, 12, 31);
+        DateTime endDay = RoutineManager.instance.day;
+        this.costs = new int[(endDay - startDay).Days + 1];
+
+        for (int i = 0;i <= (endDay - startDay).Days; i++)
+        {
+            Debug.Log(startDay.AddDays(i));
+            this.costs[i] = costs[startDay.AddDays(i)];
+        }
+
+        this.changeRatio = ratio;
+        this.curChip = chip;
+    }
+
+    public Dictionary<DateTime, int> Load()
+    {
+        Dictionary<DateTime, int> costs = new Dictionary<DateTime, int>();
+        DateTime startDay = new DateTime(2023, 12, 31);
+        DateTime endDay = RoutineManager.instance.day;
+        Debug.Log(endDay);
+        for (int i = 0; i <= (endDay - startDay).Days; i++)
+        {
+            costs[startDay.AddDays(i)] = this.costs[i];
+        }
+        return costs;
+    }
+}
+
 public class DataBaseManager : MonoBehaviour
 {
     public static DataBaseManager instance;
@@ -396,6 +439,26 @@ public class DataBaseManager : MonoBehaviour
         return soundData.volumes;
     }
 
+    public void SaveChipData(Dictionary<DateTime, int> rawChipData, float ratio, int chip)
+    {
+        ChipData chipData = new ChipData();
+        chipData.Save(rawChipData, ratio, chip);
+        string jsonData = JsonUtility.ToJson(chipData, true);
+        SaveFile(jsonData, path + "/ChipData");
+    }
+
+    public ChipData LoadChipData()
+    {
+        if (!File.Exists(path + "/ChipData"))
+        {
+            return null;
+        }
+
+        string jsonData = LoadFile(path + "/ChipData");
+        ChipData chipData = JsonUtility.FromJson<ChipData>(jsonData);
+        return chipData;
+    }
+
     public void Save()
     {
         data.level = CityLevelManager.instance.levelIdx;
@@ -463,6 +526,9 @@ public class DataBaseManager : MonoBehaviour
         mapData[(int)GameManager.instance.curMapType].Load();
 
         UIManager.instance.InitInfoUI();
+
+        if (GameManager.instance.curMapType == MapType.Totopia)
+            ChipManager.instance.InitChipCost();
     }
 
     private void SaveFile(string jsonData, string path)

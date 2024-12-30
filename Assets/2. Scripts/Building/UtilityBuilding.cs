@@ -10,7 +10,7 @@ public class UtilityBuilding : Building
     public BoundaryValue userCnt;
     public BoundaryValue utilityValue;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         values[ValueType.user] = userCnt;
         values[ValueType.utility] = utilityValue;

@@ -114,6 +114,13 @@ public class BuildingSpawner : MonoBehaviour, IObserver
             value.cur = data.parameter;
             building.values[ValueType.Resident] = value;
         }
+        else if (GameManager.instance.curMapType == MapType.Totopia && building.type == BuildingType.Culture)
+        {
+            BoundaryValue value = building.values[ValueType.betChip];
+            value.cur = data.parameter;
+            building.values[ValueType.betChip] = value;
+            (building as EnterBuilding).betTimes = (int)data.extraParameter;
+        }
         else
         {
             BoundaryValue value = building.values[ValueType.utility];
