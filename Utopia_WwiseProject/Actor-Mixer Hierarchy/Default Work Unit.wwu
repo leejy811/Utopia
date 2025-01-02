@@ -17435,6 +17435,9 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="BlackJack_BGM" ID="{F6C14886-AEC4-4C77-9D9B-B786F9DC2953}" ShortID="572679826">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>

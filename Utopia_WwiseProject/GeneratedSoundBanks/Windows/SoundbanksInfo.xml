@@ -298,7 +298,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0399F68E-29D9-958B-F81E-12841C18ECA8}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9CB414EF-BFED-72F9-E99B-5F0A6C19759C}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -757,7 +757,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{6012B773-4B69-9B1B-D008-645AA1F22ADF}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{8094C56A-0D37-76B1-A348-858916D7CBFC}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -855,7 +855,7 @@
 				</File>
 				<File Id="963492286" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlackJack_BGM.wav</ShortName>
-					<CachePath>SFX/BlackJack_BGM_8E324C96.wem</CachePath>
+					<CachePath>SFX/BlackJack_BGM_56CEF360.wem</CachePath>
 				</File>
 				<File Id="1000881140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_card_flip.wav</ShortName>
@@ -880,7 +880,7 @@
 						<MediaRef Id="51417048"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3823548201" Name="Play_BlackJack_BGM" DurationType="OneShot" DurationMin="48" DurationMax="48">
+				<Event Id="3823548201" Name="Play_BlackJack_BGM" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="963492286"/>
 					</MediaRefs>
@@ -1682,5 +1682,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{35149398-9554-545D-616D-38D47555D144}</FileHash>
+	<FileHash>{D7B2A2B1-0D24-05CF-5E06-3DD60A32C084}</FileHash>
 </SoundBanksInfo>
