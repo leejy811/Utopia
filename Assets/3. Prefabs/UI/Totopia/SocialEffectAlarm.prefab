@@ -65,6 +65,7 @@ MonoBehaviour:
   poolName: Event
   images:
   - {fileID: 2942555473091607592}
+  - {fileID: 7735424814704328253}
   texts:
   - {fileID: 2942555473531376513}
   - {fileID: 2942555473319708500}
@@ -72,6 +73,9 @@ MonoBehaviour:
   waitTime: 5
   fadeOutTime: 1
   isFixed: 1
+  isOnOff: 0
+  offUI: 0
+  isMoved: 0
 --- !u!1 &2942555473091607594
 GameObject:
   m_ObjectHideFlags: 0

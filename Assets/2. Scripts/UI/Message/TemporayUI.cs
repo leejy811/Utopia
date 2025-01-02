@@ -41,6 +41,7 @@ public class TemporayUI : MonoBehaviour, IPoolObject
         texts[(int)TextType.EventName].text = curEvent.eventName;
         texts[(int)TextType.EventDescription].text = curEvent.eventEffectComment;
         images[0].sprite = curEvent.eventIcon;
+        images[1].color = curEvent.eventColor;
 
         if (isFixed) return;
 
