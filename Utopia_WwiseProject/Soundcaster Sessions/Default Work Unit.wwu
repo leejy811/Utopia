@@ -49,7 +49,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}"/>
-							<Value>1.79556074766355</Value>
+							<Value>2</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
@@ -61,11 +61,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>3.8</Value>
+							<Value>7.6</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>8</Value>
+							<Value>51</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MINIGAME" ID="{95531E89-701B-4C64-ADCF-DEF0612E084E}"/>

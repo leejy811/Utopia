@@ -757,7 +757,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{D067FED1-9A56-84E7-1945-7C8A9417EB00}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{BD69A6AA-0A6B-D5A2-7F87-0F2314162DED}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1682,5 +1682,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EB606A67-41D5-8290-AA5F-AE25F95A8CD3}</FileHash>
+	<FileHash>{D0F6FD76-E3C2-41C0-D280-895ACC53D282}</FileHash>
 </SoundBanksInfo>

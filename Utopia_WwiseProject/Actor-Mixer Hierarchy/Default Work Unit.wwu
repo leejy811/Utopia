@@ -17444,6 +17444,11 @@
 						<Sound Name="BlackJack_BGM" ID="{F6C14886-AEC4-4C77-9D9B-B786F9DC2953}" ShortID="572679826">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
