@@ -298,7 +298,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{C9EC9DDF-C1E5-29F6-FDB7-E69E4CF5F6FE}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A613FFE1-F09B-7990-CECA-301F6AC9D82D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -323,6 +323,7 @@
 				<GameParameter Id="1622127507" Name="BGM_VOL"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
+				<GameParameter Id="3310578182" Name="MINIGAME"/>
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 			<StateGroups>
@@ -756,7 +757,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{694009A3-C039-EC71-B78C-1C6CABF90EC8}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{ED2B22CE-42E1-A673-889D-B5E6AC68B2A1}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1121,6 +1122,7 @@
 				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="3310578182" Name="MINIGAME"/>
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 			<StateGroups>
@@ -1680,5 +1682,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{6B906396-0447-8ADC-5BC8-2DB7E616A6D8}</FileHash>
+	<FileHash>{D0FCB5B5-741B-9BD2-D130-26D9D6AA2A46}</FileHash>
 </SoundBanksInfo>

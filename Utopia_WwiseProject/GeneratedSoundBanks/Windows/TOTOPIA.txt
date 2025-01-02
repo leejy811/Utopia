@@ -62,6 +62,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1427264549	HAPPY			\Default Work Unit\HAPPY	
 	1584507803	CLICK			\Default Work Unit\CLICK	
 	1761501017	BOOL			\Default Work Unit\BOOL	
+	3310578182	MINIGAME			\Default Work Unit\MINIGAME	
 	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

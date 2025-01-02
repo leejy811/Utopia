@@ -311,6 +311,7 @@ namespace AK
         static const AkUniqueID HAPPY = 1427264549U;
         static const AkUniqueID INDEX1 = 187723092U;
         static const AkUniqueID INDEX2 = 187723095U;
+        static const AkUniqueID MINIGAME = 3310578182U;
         static const AkUniqueID OPTION = 731737678U;
         static const AkUniqueID SFX_VOL = 42448320U;
         static const AkUniqueID TIMELAP = 3842075637U;

@@ -65,6 +65,13 @@
 						<Property Name="InitialValue" Type="Real64" Value="70"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="MINIGAME" ID="{95531E89-701B-4C64-ADCF-DEF0612E084E}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="2"/>
+						<Property Name="Max" Type="Real64" Value="2"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
