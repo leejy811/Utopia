@@ -17413,6 +17413,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Race_BGM" ID="{20D5204B-E551-4258-8813-1D24648FD5B9}" ShortID="471922723">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-15</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
