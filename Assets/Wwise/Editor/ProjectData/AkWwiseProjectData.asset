@@ -226,7 +226,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584658026730312411
+    m_lastTime: -8584657979374675035
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -1633,8 +1633,8 @@ MonoBehaviour:
         guid: 8d3ca823684b88469d05e8afebed3b9f
       Path: Events\Default Work Unit\0102\Play_BlackJack_BGM
       maxAttenuation: 0
-      maxDuration: 48
-      minDuration: 48
+      maxDuration: -1
+      minDuration: -1
     - name: Play_BLACKJACK_card_flip
       guid: 3cfcdbfbecd11d4586b4d795e830ce1d
       id: 1048074567
@@ -5578,7 +5578,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584757057940848653
+    m_lastTime: -8584657987678055045
     List:
     - name: BGM_VOL
       guid: 17e4ff598f446d498dddd6e9b337a6de
@@ -5678,6 +5678,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: f1300da40ed4b440bec7cd5462971c4a
       Path: Game Parameters\Default Work Unit\INDEX2
+    - name: MINIGAME
+      guid: 891e53951b70644cadcfdef0612e084e
+      id: 3310578182
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: MINIGAME
+        ObjectType: 13
+        guid: 891e53951b70644cadcfdef0612e084e
+      Path: Game Parameters\Default Work Unit\MINIGAME
     - name: OPTION
       guid: 35a65b972a9c3e46ae0a4be629293298
       id: 731737678
@@ -5925,7 +5939,7 @@ MonoBehaviour:
     m_lastTime: -8584757057864275183
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0300000005000000060000000a000000170000001800000019000000
+  ExpandedWaapiItemIds: 05000000060000000a000000170000001800000019000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

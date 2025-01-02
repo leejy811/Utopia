@@ -757,7 +757,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{931798E7-70EA-BBBE-DC71-C12DC14AF2A5}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{33464A3F-4999-7E46-4F6F-1369D8D5F194}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -847,7 +847,7 @@
 				</File>
 				<File Id="742753463" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Race_BGM.wav</ShortName>
-					<CachePath>SFX/Race_BGM_8E324C96.wem</CachePath>
+					<CachePath>SFX/Race_BGM_56CEF360.wem</CachePath>
 				</File>
 				<File Id="903890296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>jazz2.wav</ShortName>
@@ -965,7 +965,7 @@
 						<MediaRef Id="610915002"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="504948858" Name="Play_Race_BGM" DurationType="OneShot" DurationMin="24" DurationMax="24">
+				<Event Id="504948858" Name="Play_Race_BGM" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="742753463"/>
 					</MediaRefs>
@@ -1682,5 +1682,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{564F01AD-0B20-499C-0C38-1E32E7332D7C}</FileHash>
+	<FileHash>{FFF1128F-011F-E31A-F2E0-E454F3467246}</FileHash>
 </SoundBanksInfo>
