@@ -169,6 +169,8 @@
 				</SoundBank>
 				<SoundBank Name="TOTOPIA" ID="{5A468A02-282F-4F25-82E6-EC6BE3C7B11D}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Stop_Race_BGM" ID="{96C2E17F-155F-4023-BD28-96D35A863656}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Race_BGM" ID="{640F7EA4-9CBC-403C-8DB9-39B7DBC214ED}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_card_put_02" ID="{10376F98-CBED-413B-8F7B-8E513D6D9276}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="GAMEPLAY_chips_exchange" ID="{34E25E1D-F4B2-421A-8649-8CCEECB53F1A}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_RACE_bet_01" ID="{97155144-2B5A-42A3-8833-E2759267F771}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -177,14 +179,19 @@
 						<ObjectRef Name="Stop_RACE_horserace" ID="{28D6325F-3A06-4327-8239-58F3F9BFDB3F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_bet" ID="{E0ED28A1-5432-436C-A57B-AB3A59014404}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="RACE_start" ID="{E662B1E8-9A1D-4391-9885-25BB618DD06C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_BlackJack_BGM" ID="{9C5039D3-8261-43A4-BC70-67507B44476C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BLACKJACK_rule_draw" ID="{0E1E35D1-D0E6-43D3-8CA1-F65E4245D67E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BLACKJACK_rule_win" ID="{C487F2FB-C02A-43F0-9C53-831263A8E738}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_card_flip" ID="{1A2C3FCF-AB81-443A-8607-866BE08EE76D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_RACE_recall_01" ID="{E1179CDD-4E8D-4468-8E18-1DF962F46566}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_LOOP_bar" ID="{9227C8DF-86BA-4471-934E-B0247213DF25}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BLACKJACK_recall" ID="{64212944-73F3-44D8-BEB1-BA1C48323D7E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="RACE_bet_02" ID="{04A3AB14-D2F7-4519-9F35-B0C2DB24AEAD}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_rule_win" ID="{E83E7ABF-C4A3-4582-BD75-2377D29A7518}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BLACKJACK_intro" ID="{316BDD62-D498-45C4-B5D1-9F0CC9015862}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TOBGM" ID="{2AC9A6A1-0F04-45D1-8458-8F8A3B581D8E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_LOOP_vomit_01" ID="{5D61E7EC-C008-4631-9C77-08AAC4487AB3}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BlackJack_BGM" ID="{23A83C8D-4B68-4688-9D05-E8AFEBED3B9F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_card_put_01" ID="{2DA58F79-F508-46BA-9723-60D099049E4F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="RACE_countdown" ID="{9BA31036-12B8-46FA-8DC8-92255F0CA719}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_rule_blackjack" ID="{82FB03BD-9D45-4766-94FC-D43267C0745E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -208,6 +215,7 @@
 						<ObjectRef Name="Stop_GAMEPLAY_chips_exchange" ID="{0BC11A9C-3870-4BB8-8F77-BA6345365932}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_rule_draw" ID="{8FEEFA04-FCA4-4D02-ADEE-9BFC697298A5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_RACE_active" ID="{C32E2EBA-E58E-4DE5-8257-81FD37941B5F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TOBGM" ID="{52257C1E-172D-4E5F-BB8C-657B72A83788}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_intro" ID="{7336D244-2061-4F02-9069-D5D31601383E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

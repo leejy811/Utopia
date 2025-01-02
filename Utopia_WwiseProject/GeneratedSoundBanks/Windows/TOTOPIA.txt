@@ -1,11 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
+	443838562	Play_LOOP_vomit_01			\Default Work Unit\0102\Play_LOOP_vomit_01	
 	493229879	Stop_BLACKJACK_intro			\Default Work Unit\toto\Stop_BLACKJACK_intro	
+	504948858	Play_Race_BGM			\Default Work Unit\0102\Play_Race_BGM	
 	885567024	Stop_GAMEPLAY_chips_exchange			\Default Work Unit\toto\Stop_GAMEPLAY_chips_exchange	
 	1048074567	Play_BLACKJACK_card_flip			\Default Work Unit\toto\Play_BLACKJACK_card_flip	
 	1114446378	Play_BLACKJACK_recall			\Default Work Unit\toto\Play_BLACKJACK_recall	
 	1237074726	Stop_BLACKJACK_rule_draw			\Default Work Unit\toto\Stop_BLACKJACK_rule_draw	
 	1325406880	Play_RACE_start			\Default Work Unit\toto\Play_RACE_start	
 	1478085386	Stop_BLACKJACK_rule_win			\Default Work Unit\toto\Stop_BLACKJACK_rule_win	
+	1553512265	Play_TOBGM			\Default Work Unit\0102\Play_TOBGM	
 	1599756660	Play_BLACKJACK_rule_bust			\Default Work Unit\toto\Play_BLACKJACK_rule_bust	
 	1635092592	Stop_RACE_bet_02			\Default Work Unit\toto\Stop_RACE_bet_02	
 	1635092595	Stop_RACE_bet_01			\Default Work Unit\toto\Stop_RACE_bet_01	
@@ -23,6 +26,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2854514125	Play_BLACKJACK_intro			\Default Work Unit\toto\Play_BLACKJACK_intro	
 	2965005016	Stop_BLACKJACK_card_put_02			\Default Work Unit\toto\Stop_BLACKJACK_card_put_02	
 	2965005019	Stop_BLACKJACK_card_put_01			\Default Work Unit\toto\Stop_BLACKJACK_card_put_01	
+	3016710050	Play_LOOP_bar			\Default Work Unit\0102\Play_LOOP_bar	
 	3220345088	Stop_RACE_active			\Default Work Unit\toto\Stop_RACE_active	
 	3308072525	Stop_BLACKJACK_card_flip			\Default Work Unit\toto\Stop_BLACKJACK_card_flip	
 	3403597365	Play_RACE_bet_01			\Default Work Unit\toto\Play_RACE_bet_01	
@@ -30,8 +34,11 @@ Event	ID	Name			Wwise Object Path	Notes
 	3546129116	Play_RACE_recall_02			\Default Work Unit\toto\Play_RACE_recall_02	
 	3546129119	Play_RACE_recall_01			\Default Work Unit\toto\Play_RACE_recall_01	
 	3549795858	Stop_RACE_start			\Default Work Unit\toto\Stop_RACE_start	
+	3666577687	Stop_TOBGM			\Default Work Unit\0102\Stop_TOBGM	
 	3685917818	Play_BLACKJACK_rule_blackjack			\Default Work Unit\toto\Play_BLACKJACK_rule_blackjack	
+	3823548201	Play_BlackJack_BGM			\Default Work Unit\0102\Play_BlackJack_BGM	
 	3857103390	Play_BLACKJACK_bet			\Default Work Unit\toto\Play_BLACKJACK_bet	
+	3972443436	Stop_Race_BGM			\Default Work Unit\0102\Stop_Race_BGM	
 	4012406984	Play_BLACKJACK_rule_win			\Default Work Unit\toto\Play_BLACKJACK_rule_win	
 	4013421106	Play_RACE_active_L_			\Default Work Unit\toto\Play_RACE_active_L_	
 	4014308333	Play_BLACKJACK_card_put_01			\Default Work Unit\toto\Play_BLACKJACK_card_put_01	
@@ -39,15 +46,36 @@ Event	ID	Name			Wwise Object Path	Notes
 	4039949733	Stop_RACE_recall_01			\Default Work Unit\toto\Stop_RACE_recall_01	
 	4039949734	Stop_RACE_recall_02			\Default Work Unit\toto\Stop_RACE_recall_02	
 	4195040360	Stop_BLACKJACK_bet			\Default Work Unit\toto\Stop_BLACKJACK_bet	
+	4228595503	Stop_BlackJack_BGM			\Default Work Unit\0102\Stop_BlackJack_BGM	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	412724365	BGM			\Default Work Unit\BGM	
+
+State	ID	Name	State Group			Notes
+	748895195	None	BGM			
+	2596272617	FAIL	BGM			
+	3340296461	BASIC	BGM			
+	4174463524	DANGER	BGM			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	848835168	ZOOM			\Default Work Unit\ZOOM	
+	1427264549	HAPPY			\Default Work Unit\HAPPY	
+	1584507803	CLICK			\Default Work Unit\CLICK	
+	1761501017	BOOL			\Default Work Unit\BOOL	
+	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	48900095	GAMEPLAY_chips_exchange	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\GAMEPLAY_chips_exchange_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\GAMEPLAY_chips_exchange		14083
 	51417048	BLACKJACK_bet	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_bet_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_bet		12298
+	56928845	LOOP_bar	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\LOOP_bar_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\LOOP_bar		144994
 	132635145	BLACKJACK_rule_win	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_rule_win_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_rule_win		18879
 	156090381	RACE_recall_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_recall_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_recall_01		1983
 	227663847	RACE_bet_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_bet_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_bet_01		1958
 	250967311	BLACKJACK_intro	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_intro_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_intro		34195
 	270764609	BLACKJACK_rule_bust	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_rule_bust_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_rule_bust		12331
+	277184368	LOOP_vomit_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\LOOP_vomit_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\LOOP_vomit_01		149049
+	286284271	jazz	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\jazz_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\TOBGM\Baisc\BGM\jazz		400543
+	348594287	sliencs	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\TOBGM\Baisc\silence\sliencs		510731
 	488086698	BLACKJACK_rule_draw	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_rule_draw_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_rule_draw		5319
 	498749437	BLACKJACK_card_put_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_card_put_02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_card_put_02		2744
 	605082462	RACE_countdown	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_countdown_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_countdown		1451
@@ -58,7 +86,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	644672470	BLACKJACK_card_put_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_card_put_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_card_put_01		2902
 	683471986	BLACKJACK_rule_blackjack	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_rule_blackjack_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_rule_blackjack		18639
 	738002531	RACE_start	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_start_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_start		7195
+	742753463	Race_BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Race_BGM_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\Race_BGM		308530
+	903890296	jazz2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\jazz2_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\TOBGM\Danger\BGM2\jazz2		540166
+	963492286	BlackJack_BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BlackJack_BGM_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BlackJack_BGM		720470
 	1000881140	BLACKJACK_card_flip	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_card_flip_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_card_flip		4830
+	1023215211	jazz3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\jazz3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\TOBGM\Baisc\BGM3\jazz3		455472
 	1028501577	RACE_recall_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_recall_02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_recall_02		1812
 	1041706813	RACE_active(L)	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_active(L)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_active(L)		48514
 

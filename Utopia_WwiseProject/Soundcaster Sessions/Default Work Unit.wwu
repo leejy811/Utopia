@@ -6,8 +6,16 @@
 				<SoundcasterSession Name="New Soundcaster Session" ID="{494451DF-E80F-4DFC-8F14-A9338BC51E0C}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="BGM" ID="{BE4F73A0-B4FF-48E6-AB10-D90618596CD3}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
+							<ObjectRef Name="LOOP_bar" ID="{88CB899F-6AF6-494C-98CE-BC567E898521}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="TOBGM" ID="{59D6618C-5F91-4A97-A98F-ABFB913E3D43}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="LOOP_vomit_01" ID="{158CA7B7-8196-406F-9068-CD003800A704}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Play_BGM4" ID="{849790AB-77ED-4977-8E30-D33F7F1D663A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
@@ -17,7 +25,7 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1.93107476635514</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
@@ -33,7 +41,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="OPTION" ID="{975BA635-9C2A-463E-AE0A-4BE629293298}"/>
-							<Value>71.04</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SFX_VOL" ID="{EF073ADC-8463-4815-A1E4-49769140BD78}"/>
@@ -41,23 +49,23 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}"/>
-							<Value>1.2</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
-							<Value>1.59892523364486</Value>
+							<Value>1</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BGM_VOL" ID="{59FFE417-448F-496D-8DDD-D6E9B337A6DE}"/>
-							<Value>70</Value>
+							<Value>100</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>13.8808887090915</Value>
+							<Value>3.8</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>0</Value>
+							<Value>8</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
@@ -70,16 +78,30 @@
 				<SoundcasterSession Name="New Soundcaster Session_01" ID="{FB2EABCA-D33C-44C2-BD4A-B7CD1B02DFD7}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="ForestAmbienceInLobby" ID="{0DB7E4BB-BE3D-4A87-9185-20CF3EA63232}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
-							<Position X="1" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Lobby" ID="{1767CBA6-779B-4513-A2AC-355E5D2CF6FF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_02" ID="{4E56CF0D-E4F6-4194-AC59-BCA9215BDC88}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="TOBGM" ID="{59D6618C-5F91-4A97-A98F-ABFB913E3D43}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="BGM_VOL" ID="{59FFE417-448F-496D-8DDD-D6E9B337A6DE}"/>
+							<Value>100</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

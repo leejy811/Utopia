@@ -119,6 +119,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	348594287	BGM3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\BGM3		510731
 	415772296	1SP_Festival_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Festival_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Festival_01		78311
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_DESOLATE_01		89357
+	442624949	torobgm3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\torobgm3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM6\torobgm3		1024517
 	648936715	NAPT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_THIEF_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NAPT_event_THIEF_01		66098
 	698255832	SP_Few_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Few_jobs_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Few_jobs_01		83497
 	791981080	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM\BGM		792242

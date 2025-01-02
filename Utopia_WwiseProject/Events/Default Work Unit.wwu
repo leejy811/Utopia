@@ -3068,6 +3068,107 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Folder Name="0102" ID="{AA1EF792-2F1A-4CDA-9B3F-3099517DF469}" ShortID="600011958">
+					<ChildrenList>
+						<Event Name="Play_TOBGM" ID="{52257C1E-172D-4E5F-BB8C-657B72A83788}">
+							<ChildrenList>
+								<Action Name="" ID="{525299F0-D6BB-4DA7-B962-174EA10A2B15}" ShortID="551959039">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TOBGM" ID="{59D6618C-5F91-4A97-A98F-ABFB913E3D43}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_TOBGM" ID="{2AC9A6A1-0F04-45D1-8458-8F8A3B581D8E}">
+							<ChildrenList>
+								<Action Name="" ID="{ACB91321-4212-4391-80AA-2ABC4A210AD3}" ShortID="183422478">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="TOBGM" ID="{59D6618C-5F91-4A97-A98F-ABFB913E3D43}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Race_BGM" ID="{96C2E17F-155F-4023-BD28-96D35A863656}">
+							<ChildrenList>
+								<Action Name="" ID="{8D2BD48C-409A-4A6F-8C2A-0869052D5786}" ShortID="655974484">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Race_BGM" ID="{20D5204B-E551-4258-8813-1D24648FD5B9}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Race_BGM" ID="{640F7EA4-9CBC-403C-8DB9-39B7DBC214ED}">
+							<ChildrenList>
+								<Action Name="" ID="{9526E035-A62B-4029-8119-FB68E97A72A5}" ShortID="618020978">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Race_BGM" ID="{20D5204B-E551-4258-8813-1D24648FD5B9}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LOOP_bar" ID="{9227C8DF-86BA-4471-934E-B0247213DF25}">
+							<ChildrenList>
+								<Action Name="" ID="{51F09B00-B31D-46B7-8F8F-87028519FF0D}" ShortID="611096409">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LOOP_bar" ID="{88CB899F-6AF6-494C-98CE-BC567E898521}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_BlackJack_BGM" ID="{9C5039D3-8261-43A4-BC70-67507B44476C}">
+							<ChildrenList>
+								<Action Name="" ID="{EF80416E-DD44-44B5-9CBD-725F417E447B}" ShortID="973567695">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BlackJack_BGM" ID="{F6C14886-AEC4-4C77-9D9B-B786F9DC2953}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_BlackJack_BGM" ID="{23A83C8D-4B68-4688-9D05-E8AFEBED3B9F}">
+							<ChildrenList>
+								<Action Name="" ID="{DB1892B7-859E-4D01-A88A-6B881A441CC1}" ShortID="467368412">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="BlackJack_BGM" ID="{F6C14886-AEC4-4C77-9D9B-B786F9DC2953}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_LOOP_vomit_01" ID="{5D61E7EC-C008-4631-9C77-08AAC4487AB3}">
+							<ChildrenList>
+								<Action Name="" ID="{28EA5526-D5F9-4533-81B0-2AE87571E1E0}" ShortID="320355106">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="LOOP_vomit_01" ID="{158CA7B7-8196-406F-9068-CD003800A704}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

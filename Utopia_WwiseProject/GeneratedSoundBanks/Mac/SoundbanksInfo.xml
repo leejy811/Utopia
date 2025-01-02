@@ -756,7 +756,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{EE8A5C61-F43D-9FF2-B663-AF34B3976D70}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{694009A3-C039-EC71-B78C-1C6CABF90EC8}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -767,6 +767,10 @@
 				<File Id="51417048" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_bet.wav</ShortName>
 					<CachePath>SFX/BLACKJACK_bet_818F3B66.wem</CachePath>
+				</File>
+				<File Id="56928845" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LOOP_bar.wav</ShortName>
+					<CachePath>SFX/LOOP_bar_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="132635145" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_rule_win.wav</ShortName>
@@ -787,6 +791,18 @@
 				<File Id="270764609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_rule_bust.wav</ShortName>
 					<CachePath>SFX/BLACKJACK_rule_bust_818F3B66.wem</CachePath>
+				</File>
+				<File Id="277184368" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>LOOP_vomit_01.wav</ShortName>
+					<CachePath>SFX/LOOP_vomit_01_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="286284271" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jazz.wav</ShortName>
+					<CachePath>SFX/jazz_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="348594287" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM3.wav</ShortName>
+					<CachePath>SFX/BGM3_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="488086698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_rule_draw.wav</ShortName>
@@ -828,9 +844,25 @@
 					<ShortName>RACE_start.wav</ShortName>
 					<CachePath>SFX/RACE_start_818F3B66.wem</CachePath>
 				</File>
+				<File Id="742753463" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Race_BGM.wav</ShortName>
+					<CachePath>SFX/Race_BGM_818F3B66.wem</CachePath>
+				</File>
+				<File Id="903890296" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jazz2.wav</ShortName>
+					<CachePath>SFX/jazz2_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="963492286" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BlackJack_BGM.wav</ShortName>
+					<CachePath>SFX/BlackJack_BGM_818F3B66.wem</CachePath>
+				</File>
 				<File Id="1000881140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_card_flip.wav</ShortName>
 					<CachePath>SFX/BLACKJACK_card_flip_818F3B66.wem</CachePath>
+				</File>
+				<File Id="1023215211" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>jazz3.wav</ShortName>
+					<CachePath>SFX/jazz3_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="1028501577" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_recall_02.wav</ShortName>
@@ -845,6 +877,11 @@
 				<Event Id="3857103390" Name="Play_BLACKJACK_bet" DurationType="OneShot" DurationMin="0.526625" DurationMax="0.526625">
 					<MediaRefs>
 						<MediaRef Id="51417048"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="3823548201" Name="Play_BlackJack_BGM" DurationType="OneShot" DurationMin="48" DurationMax="48">
+					<MediaRefs>
+						<MediaRef Id="963492286"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1048074567" Name="Play_BLACKJACK_card_flip" DurationType="OneShot" DurationMin="0.23854166" DurationMax="0.23854166">
@@ -897,6 +934,16 @@
 						<MediaRef Id="48900095"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3016710050" Name="Play_LOOP_bar" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="56928845"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="443838562" Name="Play_LOOP_vomit_01" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="277184368"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="1907415786" Name="Play_RACE_active" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="612612925"/>
@@ -915,6 +962,11 @@
 				<Event Id="3403597366" Name="Play_RACE_bet_02" DurationType="OneShot" DurationMin="0.118395835" DurationMax="0.118395835">
 					<MediaRefs>
 						<MediaRef Id="610915002"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="504948858" Name="Play_Race_BGM" DurationType="OneShot" DurationMin="24" DurationMax="24">
+					<MediaRefs>
+						<MediaRef Id="742753463"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2521540693" Name="Play_RACE_countdown" DurationType="OneShot" DurationMin="0.039020833" DurationMax="0.039020833">
@@ -942,11 +994,30 @@
 						<MediaRef Id="738002531"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="1553512265" Name="Play_TOBGM" DurationType="Infinite">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="412724365" Id="3340296461"/>
+							<MediaRefs>
+								<MediaRef Id="286284271"/>
+								<MediaRef Id="348594287"/>
+								<MediaRef Id="1023215211"/>
+							</MediaRefs>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="412724365" Id="4174463524"/>
+							<MediaRefs>
+								<MediaRef Id="903890296"/>
+							</MediaRefs>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
 				<Event Id="4195040360" Name="Stop_BLACKJACK_bet" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="51417048"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="4228595503" Name="Stop_BlackJack_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3308072525" Name="Stop_BLACKJACK_card_flip" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="1000881140"/>
@@ -1017,6 +1088,7 @@
 						<MediaRef Id="610915002"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3972443436" Name="Stop_Race_BGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1877882295" Name="Stop_RACE_countdown" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="605082462"/>
@@ -1042,9 +1114,27 @@
 						<MediaRef Id="738002531"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3666577687" Name="Stop_TOBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
+			<GameParameters>
+				<GameParameter Id="848835168" Name="ZOOM"/>
+				<GameParameter Id="1427264549" Name="HAPPY"/>
+				<GameParameter Id="1584507803" Name="CLICK"/>
+				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="3842075637" Name="TIMELAP"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="412724365" Name="BGM">
+					<States>
+						<State Id="748895195" Name="None"/>
+						<State Id="2596272617" Name="FAIL"/>
+						<State Id="3340296461" Name="BASIC"/>
+						<State Id="4174463524" Name="DANGER"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{7F768397-E2DF-CBF9-3318-E4E8DF071AC8}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{D80B141A-8607-EF7C-88C9-0B28705A2952}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -1087,6 +1177,10 @@
 				<File Id="433461852" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DESOLATE_001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="442624949" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>torobgm3.wav</ShortName>
+					<CachePath>SFX/torobgm3_FBC78EF0.wem</CachePath>
 				</File>
 				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_THIEF_001.wav</ShortName>
@@ -1196,6 +1290,7 @@
 							<MediaRefs>
 								<MediaRef Id="30720200"/>
 								<MediaRef Id="348594287"/>
+								<MediaRef Id="442624949"/>
 								<MediaRef Id="791981080"/>
 							</MediaRefs>
 						</SwitchContainer>
@@ -1585,5 +1680,5 @@
 			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C5E30775-C150-F5B8-F652-476AA5DF92CC}</FileHash>
+	<FileHash>{6B906396-0447-8ADC-5BC8-2DB7E616A6D8}</FileHash>
 </SoundBanksInfo>

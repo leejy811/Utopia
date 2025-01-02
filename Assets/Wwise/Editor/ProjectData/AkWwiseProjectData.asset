@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584693497291166416
+    m_lastTime: -8584658026730208234
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -226,8 +226,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584693497344364938
+    m_lastTime: -8584658026730312411
     List:
+    - name: 0102
+      guid: 92f71eaa1a2fda4c9b3f3099517df469
+      id: 3817316942
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      Path: Events\Default Work Unit\0102
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: 0912
       guid: 7fe598038160f04fbdb9928fb0ae69e9
       id: 4101256629
@@ -1598,6 +1615,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.526625
       minDuration: 0.526625
+    - name: Play_BlackJack_BGM
+      guid: 8d3ca823684b88469d05e8afebed3b9f
+      id: 3823548201
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Play_BlackJack_BGM
+        ObjectType: 3
+        guid: 8d3ca823684b88469d05e8afebed3b9f
+      Path: Events\Default Work Unit\0102\Play_BlackJack_BGM
+      maxAttenuation: 0
+      maxDuration: 48
+      minDuration: 48
     - name: Play_BLACKJACK_card_flip
       guid: 3cfcdbfbecd11d4586b4d795e830ce1d
       id: 1048074567
@@ -2175,6 +2212,46 @@ MonoBehaviour:
         ObjectType: 3
         guid: d599e3d2d7df3c4ea4157d5e0b9ab7e5
       Path: Events\Default Work Unit\old\Play_Lobby
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_LOOP_bar
+      guid: dfc82792ba867144934eb0247213df25
+      id: 3016710050
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Play_LOOP_bar
+        ObjectType: 3
+        guid: dfc82792ba867144934eb0247213df25
+      Path: Events\Default Work Unit\0102\Play_LOOP_bar
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_LOOP_vomit_01
+      guid: ece7615d08c031469c7708aac4487ab3
+      id: 443838562
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Play_LOOP_vomit_01
+        ObjectType: 3
+        guid: ece7615d08c031469c7708aac4487ab3
+      Path: Events\Default Work Unit\0102\Play_LOOP_vomit_01
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -2918,6 +2995,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.118395835
       minDuration: 0.118395835
+    - name: Play_Race_BGM
+      guid: a47e0f64bc9c3c408db939b7dbc214ed
+      id: 504948858
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Play_Race_BGM
+        ObjectType: 3
+        guid: a47e0f64bc9c3c408db939b7dbc214ed
+      Path: Events\Default Work Unit\0102\Play_Race_BGM
+      maxAttenuation: 0
+      maxDuration: 24
+      minDuration: 24
     - name: Play_RACE_countdown
       guid: 91c86f0bde90394e99235c768a0523b8
       id: 2521540693
@@ -3458,6 +3555,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 120.048
       minDuration: 120.048
+    - name: Play_TOBGM
+      guid: 1e7c25522d175f4ebb8c657b72a83788
+      id: 1553512265
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Play_TOBGM
+        ObjectType: 3
+        guid: 1e7c25522d175f4ebb8c657b72a83788
+      Path: Events\Default Work Unit\0102\Play_TOBGM
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Turn_Move_Clock_001
       guid: cfb0945d13ab884288b577767d4e02d3
       id: 2475783214
@@ -4192,6 +4309,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: a128ede032546c43a57bab3a59014404
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_bet
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_BlackJack_BGM
+      guid: d339509c6182a443bc7067507b44476c
+      id: 4228595503
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Stop_BlackJack_BGM
+        ObjectType: 3
+        guid: d339509c6182a443bc7067507b44476c
+      Path: Events\Default Work Unit\0102\Stop_BlackJack_BGM
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
@@ -5015,6 +5152,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Race_BGM
+      guid: 7fe1c2965f152340bd2896d35a863656
+      id: 3972443436
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Stop_Race_BGM
+        ObjectType: 3
+        guid: 7fe1c2965f152340bd2896d35a863656
+      Path: Events\Default Work Unit\0102\Stop_Race_BGM
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_countdown
       guid: 19d69ce87a80e9478cbbf287c9ad7007
       id: 1877882295
@@ -5332,6 +5489,26 @@ MonoBehaviour:
         ObjectType: 3
         guid: 07e3244c5f20da4f894d90d01338e8b1
       Path: Events\Default Work Unit\old\Stop_TImeLapsBGM
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_TOBGM
+      guid: a1a6c92a040fd14584588f8a3b581d8e
+      id: 3666577687
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: 0102
+        ObjectType: 4
+        guid: 92f71eaa1a2fda4c9b3f3099517df469
+      - ElementName: Stop_TOBGM
+        ObjectType: 3
+        guid: a1a6c92a040fd14584588f8a3b581d8e
+      Path: Events\Default Work Unit\0102\Stop_TOBGM
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

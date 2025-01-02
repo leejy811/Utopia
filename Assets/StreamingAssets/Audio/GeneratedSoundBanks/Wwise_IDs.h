@@ -73,6 +73,7 @@ namespace AK
         static const AkUniqueID PLAY_BGM_01 = 480150866U;
         static const AkUniqueID PLAY_BGMSEQUNCE1 = 1994810337U;
         static const AkUniqueID PLAY_BLACKJACK_BET = 3857103390U;
+        static const AkUniqueID PLAY_BLACKJACK_BGM = 3823548201U;
         static const AkUniqueID PLAY_BLACKJACK_CARD_FLIP = 1048074567U;
         static const AkUniqueID PLAY_BLACKJACK_CARD_PUT_01 = 4014308333U;
         static const AkUniqueID PLAY_BLACKJACK_CARD_PUT_02 = 4014308334U;
@@ -102,6 +103,8 @@ namespace AK
         static const AkUniqueID PLAY_JACKPOT_01 = 263615490U;
         static const AkUniqueID PLAY_LEVER_001 = 3789420082U;
         static const AkUniqueID PLAY_LOBBY = 2111096682U;
+        static const AkUniqueID PLAY_LOOP_BAR = 3016710050U;
+        static const AkUniqueID PLAY_LOOP_VOMIT_01 = 443838562U;
         static const AkUniqueID PLAY_MAIL_ENTER_001 = 3897542940U;
         static const AkUniqueID PLAY_MAIL_OPEN_001 = 1751715434U;
         static const AkUniqueID PLAY_MAIL_TAKE_001 = 226547375U;
@@ -138,6 +141,7 @@ namespace AK
         static const AkUniqueID PLAY_RACE_ACTIVE_L_ = 4013421106U;
         static const AkUniqueID PLAY_RACE_BET_01 = 3403597365U;
         static const AkUniqueID PLAY_RACE_BET_02 = 3403597366U;
+        static const AkUniqueID PLAY_RACE_BGM = 504948858U;
         static const AkUniqueID PLAY_RACE_COUNTDOWN = 2521540693U;
         static const AkUniqueID PLAY_RACE_HORSERACE = 2027986540U;
         static const AkUniqueID PLAY_RACE_RECALL_01 = 3546129119U;
@@ -164,6 +168,7 @@ namespace AK
         static const AkUniqueID PLAY_TESTING = 2149296550U;
         static const AkUniqueID PLAY_TILE_BUY_001 = 3972534815U;
         static const AkUniqueID PLAY_TIMELAPSBGM = 318309431U;
+        static const AkUniqueID PLAY_TOBGM = 1553512265U;
         static const AkUniqueID PLAY_TURN_MOVE_CLOCK_001 = 2475783214U;
         static const AkUniqueID PLAY_TUTORIAL_POP_UP = 946941744U;
         static const AkUniqueID PLAY_UI_PAPERSOUND_001 = 424395900U;
@@ -201,6 +206,7 @@ namespace AK
         static const AkUniqueID STOP_BGM_01 = 3030862532U;
         static const AkUniqueID STOP_BGMSEQUNCE1 = 1894363095U;
         static const AkUniqueID STOP_BLACKJACK_BET = 4195040360U;
+        static const AkUniqueID STOP_BLACKJACK_BGM = 4228595503U;
         static const AkUniqueID STOP_BLACKJACK_CARD_FLIP = 3308072525U;
         static const AkUniqueID STOP_BLACKJACK_CARD_PUT_01 = 2965005019U;
         static const AkUniqueID STOP_BLACKJACK_CARD_PUT_02 = 2965005016U;
@@ -242,6 +248,7 @@ namespace AK
         static const AkUniqueID STOP_RACE_ACTIVE_L_ = 2355063916U;
         static const AkUniqueID STOP_RACE_BET_01 = 1635092595U;
         static const AkUniqueID STOP_RACE_BET_02 = 1635092592U;
+        static const AkUniqueID STOP_RACE_BGM = 3972443436U;
         static const AkUniqueID STOP_RACE_COUNTDOWN = 1877882295U;
         static const AkUniqueID STOP_RACE_HORSERACE = 2347644930U;
         static const AkUniqueID STOP_RACE_RECALL_01 = 4039949733U;
@@ -258,6 +265,7 @@ namespace AK
         static const AkUniqueID STOP_SP_MANY_JOBS_01 = 2576315890U;
         static const AkUniqueID STOP_TESTING = 3190087908U;
         static const AkUniqueID STOP_TIMELAPSBGM = 1305109677U;
+        static const AkUniqueID STOP_TOBGM = 3666577687U;
         static const AkUniqueID STOP_WIND = 3173136834U;
     } // namespace EVENTS
 
