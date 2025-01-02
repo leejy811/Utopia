@@ -88,6 +88,7 @@ public class HorseRacingUI : MinigameUI
 
         string isPlay = active ? "Play" : "Stop";
         AkSoundEngine.PostEvent(isPlay + "_RACE_active", gameObject);
+        AkSoundEngine.PostEvent(isPlay + "_Race_BGM", gameObject);
     }
 
     protected override void SetValue()

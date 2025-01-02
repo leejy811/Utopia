@@ -47,7 +47,6 @@ public class MinigameUI : MonoBehaviour, IObserver
         SetState(MinigameState.Lobby);
         SetValue();
 
-        AkSoundEngine.SetRTPCValue("CLICK", 2);
         AkSoundEngine.SetRTPCValue("INDEX1", -1);
         AkSoundEngine.SetRTPCValue("INDEX2", -1);
     }
@@ -135,6 +134,7 @@ public class MinigameUI : MonoBehaviour, IObserver
     protected virtual void SetGamePanel(bool active)
     {
         gamePanel.SetActive(active);
+        AkSoundEngine.SetRTPCValue("MINIGAME", active ? 2 : 1);
     }
 
     protected IEnumerator PlayAddChip(float second, int chip)

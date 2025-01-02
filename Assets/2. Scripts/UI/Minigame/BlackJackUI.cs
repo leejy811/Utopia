@@ -114,6 +114,14 @@ public class BlackJackUI : MinigameUI
     }
 
     #region SetFunc
+    protected override void SetGamePanel(bool active)
+    {
+        base.SetGamePanel(active);
+
+        string isPlay = active ? "Play" : "Stop";
+        AkSoundEngine.PostEvent(isPlay + "_BlackJack_BGM", gameObject);
+    }
+
     protected override void SetValue()
     {
         base.SetValue();
