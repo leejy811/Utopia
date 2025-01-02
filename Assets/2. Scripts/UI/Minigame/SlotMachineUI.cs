@@ -262,9 +262,6 @@ public class SlotMachineUI : MinigameUI
     {
         state = SlotState.Ready;
 
-        //커튼 소리로 대체 -> 애니메이션 이벤트로 할까
-        AkSoundEngine.PostEvent("Play_Slot_Spwan_01", gameObject);
-
         for (int i = 0; i < slotLights.Length; i++)
         {
             slotLights[i].SetLight(false);

@@ -491,7 +491,7 @@ public class BlackJackUI : MinigameUI
         {
             if (amount > 0)
                 ThrowChip(isPlayer);
-            else
+            else if (chips.Count != 0)
                 StartCoroutine(ReturnChip(isPlayer));
             yield return new WaitForSeconds(second);
         }
@@ -501,7 +501,6 @@ public class BlackJackUI : MinigameUI
 
     IEnumerator ReturnChip(bool isPlayer)
     {
-        Debug.Log(chips.Count);
         Vector3 chipPos = isPlayer ? playerChipTransform.localPosition : dealerChipTransform.localPosition;
         
         int ranIdx = Random.Range(0, chips.Count);

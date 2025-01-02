@@ -25,6 +25,7 @@ public class MinigameUI : MonoBehaviour, IObserver
     public GameObject gamePanel;
     public float openingSecond;
     public float openingInterval;
+    public string openingSound;
     public bool postProcessing;
     public UniversalAdditionalCameraData uiCamera;
 
@@ -103,6 +104,7 @@ public class MinigameUI : MonoBehaviour, IObserver
             openingAnim.gameObject.SetActive(true);
             openingAnim.SetFloat("Speed", 1.0f / openingSecond);
             openingAnim.SetBool("IsPlaying", false);
+            AkSoundEngine.PostEvent(openingSound, gameObject);
             yield return new WaitForSeconds(openingSecond);
 
             if (postProcessing)
@@ -112,6 +114,7 @@ public class MinigameUI : MonoBehaviour, IObserver
 
             SetGamePanel(isOpen);
             openingAnim.SetBool("IsPlaying", true);
+            AkSoundEngine.PostEvent(openingSound, gameObject);
 
             yield return new WaitForSeconds(openingSecond);
 
