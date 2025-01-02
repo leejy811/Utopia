@@ -17414,6 +17414,7 @@
 						</Sound>
 						<Sound Name="Race_BGM" ID="{20D5204B-E551-4258-8813-1D24648FD5B9}" ShortID="471922723">
 							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-15</Value>
