@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584658026730208234
+    m_lastTime: -8584656496896560073
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -226,7 +226,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584657979374675035
+    m_lastTime: -8584656496935429452
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -3013,8 +3013,8 @@ MonoBehaviour:
         guid: a47e0f64bc9c3c408db939b7dbc214ed
       Path: Events\Default Work Unit\0102\Play_Race_BGM
       maxAttenuation: 0
-      maxDuration: 24
-      minDuration: 24
+      maxDuration: -1
+      minDuration: -1
     - name: Play_RACE_countdown
       guid: 91c86f0bde90394e99235c768a0523b8
       id: 2521540693
@@ -5578,7 +5578,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584657987678055045
+    m_lastTime: -8584656496935288028
     List:
     - name: BGM_VOL
       guid: 17e4ff598f446d498dddd6e9b337a6de
