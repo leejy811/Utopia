@@ -13,6 +13,7 @@ public class TradeChipUI : MonoBehaviour
     public TextMeshProUGUI curChipText;
     public TextMeshProUGUI curChipCostText;
     public TextMeshProUGUI curChipRatioText;
+    public TextMeshProUGUI curFeeText;
 
     [Header("Hover Chart Info")]
     public TextMeshProUGUI chartDayText;
@@ -46,6 +47,21 @@ public class TradeChipUI : MonoBehaviour
         curChipText.text = ChipManager.instance.curChip.ToString("#,##0") + " 개";
         curChipCostText.text = ChipManager.instance.CalcChipCost().ToString("#,##0") + " 원";
         curChipRatioText.text = GetRatioText(RoutineManager.instance.day);
+
+        string feeText = "칩 거래 수수료 : " + ChipManager.instance.GetFee().ToString() + "%";
+
+        int additionalFee = 0;
+        foreach (Event e in EventManager.instance.globalEvents)
+        {
+            if (e.valueType == ValueType.Chip)
+                additionalFee += e.effectValue[0];
+        }
+
+        if (additionalFee < 0)
+            feeText += "<color=#5480D1>(" + additionalFee + "%)";
+        else if (additionalFee > 0)
+            feeText += "<color=#FE5C56>(+" + additionalFee + "%)";
+        curFeeText.text = feeText;
     }
 
     public void SetChartInfo(DateTime hoverDay, bool isHover)
@@ -61,7 +77,7 @@ public class TradeChipUI : MonoBehaviour
     private void SetTradeInfo()
     {
         tradeChipText.text = tradeChip.ToString("#,##0") + "개";
-        tradeCostText.text = (tradeChip * ChipManager.instance.CalcChipCostWithEvent()).ToString("#,##0") + " 원";
+        tradeCostText.text = (ChipManager.instance.CalcChipCost() * tradeChip).ToString("#,##0") + " 원";
     }
 
     private string GetRatioText(DateTime day)
@@ -98,7 +114,7 @@ public class TradeChipUI : MonoBehaviour
             OnErrorMsg("칩이 부족합니다", errorSecond);
             return;
         }
-        else if (ShopManager.instance.Money - (ChipManager.instance.CalcChipCostWithEvent() * tradeAmount) < 0)
+        else if (ShopManager.instance.Money - ChipManager.instance.CalcChipCostWithFee(tradeAmount) < 0)
         {
             OnErrorMsg("돈이 부족합니다", errorSecond);
             return;

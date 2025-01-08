@@ -10,6 +10,7 @@ public class ChipManager : MonoBehaviour
     public int curChip;
     public int baseCost;
     public float changeRatio;
+    public int fee;
     public Vector2 increaseRange;
     public Vector2 decreaseRange;
     [Range(0.0f, 1.0f)]public float increaseProb;
@@ -87,28 +88,16 @@ public class ChipManager : MonoBehaviour
         return (int)((baseCost * (1.0f + changeRatio)) / 2);
     }
 
-    public int CalcChipCostWithEvent()
+    public int CalcChipCostWithFee(int amount)
     {
-        int cost = (int)((baseCost * (1.0f + changeRatio)) / 2);
-
-        foreach (Event e in EventManager.instance.globalEvents)
-        {
-            if (e.valueType == ValueType.Chip)
-                cost = (int)(cost * ((e.effectValue[0] + 100.0f) / 100.0f));
-        }
-
+        int cost = CalcChipCost() * amount;
+        cost += (int)Mathf.Abs(cost * (GetFee() / 100.0f));
         return cost;
     }
 
     public void TradeChip(int amount)
     {
-        int totalCost = amount * CalcChipCost();
-
-        foreach (Event e in EventManager.instance.globalEvents)
-        {
-            if (e.valueType == ValueType.Chip)
-                totalCost = (int)(totalCost * ((e.effectValue[0] + 100.0f) / 100.0f));
-        }
+        int totalCost = CalcChipCostWithFee(amount);
 
         curChip += amount;
         ShopManager.instance.GetMoney(-totalCost);
@@ -122,5 +111,16 @@ public class ChipManager : MonoBehaviour
         curChip -= amount;
 
         return true;
+    }
+
+    public int GetFee()
+    {
+        int fee = this.fee;
+        foreach (Event e in EventManager.instance.globalEvents)
+        {
+            if (e.valueType == ValueType.Chip)
+                fee = fee + e.effectValue[0];
+        }
+        return fee;
     }
 }
