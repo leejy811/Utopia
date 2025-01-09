@@ -39,11 +39,12 @@ public class GameManager : MonoBehaviour
     private void OnLoadedScene(Scene scene, LoadSceneMode mode)
     {
         postProcess.SetComponent();
+        soundManager.SetBGM(scene.name);
     }
 
     public void LoadLobbyScene()
     {
-        StartCoroutine(PlayLoadScene("LobbyScene"));
+        LoadingSceneController.Instance.LoadScene("LobbyScene");
     }
 
     public void LoadGameScene()
@@ -51,17 +52,7 @@ public class GameManager : MonoBehaviour
         AkSoundEngine.PostEvent("Stop_ForestAmbienceInLobby", Camera.main.gameObject);
         AkSoundEngine.PostEvent("Stop_Lobby", Camera.main.gameObject);
 
-        StartCoroutine(PlayLoadScene("InGameScene_" + (int)curMapType));
-    }
-
-    IEnumerator PlayLoadScene(string SceneName)
-    {
-        StartCoroutine(postProcess.FadeInOut(1.5f, true));
-
-        yield return new WaitForSeconds(1.5f);
-
-        soundManager.SetBGM(SceneName);
-        SceneManager.LoadScene(SceneName);
+        LoadingSceneController.Instance.LoadScene("InGameScene_" + (int)curMapType);
     }
 
     public void QuitGame()
