@@ -21,15 +21,6 @@ public class LobbyRotateCamera : MonoBehaviour
     void RotateCamera()
     {
         float direction = -1;
-
-        Ray ray = new Ray(virtualCamera.transform.position, virtualCamera.transform.forward);
-        Plane plane = new Plane(Vector3.up, Vector3.zero);
-        float enter = 0.0f;
-
-        if (plane.Raycast(ray, out enter))
-        {
-            Vector3 hitPoint = ray.GetPoint(enter);
-            virtualCamera.transform.RotateAround(hitPoint, Vector3.up, rotationSpeed * direction * Time.deltaTime);
-        }
+        virtualCamera.transform.RotateAround(virtualCamera.LookAt.position, Vector3.up, rotationSpeed * direction * Time.deltaTime);
     }
 }
