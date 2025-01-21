@@ -151,6 +151,7 @@ public class CityLevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(2.0f);
 
+        UIManager.instance.skipTimeLapse.gameObject.SetActive(true);
         cameraController.rotateOnCoroutine = StartCoroutine(cameraController.RotateCameraOn());
 
         int timesOfRotate = 2;
@@ -163,9 +164,13 @@ public class CityLevelManager : MonoBehaviour
 
             DequeueFrame(curFrame);
 
-            yield return new WaitForSeconds(timePerFrame);
+            if (UIManager.instance.skipTimeLapse.isSkip)
+                yield return null;
+            else
+                yield return new WaitForSeconds(timePerFrame);
         }
 
+        UIManager.instance.skipTimeLapse.gameObject.SetActive(false);
         StopCoroutine(cameraController.rotateOnCoroutine);
         cameraController.RotateCameraOff();
         StartCoroutine(StopTimeLapse());

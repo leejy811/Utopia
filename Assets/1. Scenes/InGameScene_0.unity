@@ -28427,6 +28427,7 @@ MonoBehaviour:
   gamePhone: {fileID: 1399166099}
   tutorial: {fileID: 509693754}
   minigames: []
+  skipTimeLapse: {fileID: 2042733210}
 --- !u!4 &455419183
 Transform:
   m_ObjectHideFlags: 0
@@ -115062,7 +115063,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2042733207}
   - component: {fileID: 2042733209}
-  - component: {fileID: 2042733208}
+  - component: {fileID: 2042733210}
   m_Layer: 5
   m_Name: P_Timelapse
   m_TagString: Untagged
@@ -115091,19 +115092,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2042733208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2042733206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317e758f0afd1904fbb43bcb1e1bba1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  state: 16
 --- !u!222 &2042733209
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -115112,6 +115100,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042733206}
   m_CullTransparentMesh: 1
+--- !u!114 &2042733210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042733206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a30d3421976b7d40b07bcc64ee35738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skipImage: {fileID: 2139863922}
+  skipSpeed: 1
+  isSkip: 0
 --- !u!1 &2045259161
 GameObject:
   m_ObjectHideFlags: 0
@@ -117633,6 +117636,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 24
+  skipSpeed: 360
   zoomSizes:
   - 4
   - 6
@@ -120876,7 +120880,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2139863921
 RectTransform:
   m_ObjectHideFlags: 0
@@ -120923,7 +120927,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
-  m_FillAmount: 0.69
+  m_FillAmount: 0.999
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

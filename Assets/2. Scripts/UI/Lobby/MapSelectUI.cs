@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Video;
 
 public class MapSelectUI : MonoBehaviour
 {
     public RectTransform targetRect;
+    public VideoPlayer videoPlayer;
     public Image[] inActiveImage;
+    public VideoClip[] mapVideos;
+
     public float slideSecond;
 
     private int curIdx;
@@ -22,5 +26,7 @@ public class MapSelectUI : MonoBehaviour
         {
             inActiveImage[i].enabled = i != curIdx;
         }
+
+        videoPlayer.clip = mapVideos[curIdx];
     }
 }

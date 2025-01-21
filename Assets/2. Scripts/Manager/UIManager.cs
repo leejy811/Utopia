@@ -70,6 +70,9 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("Minigame")]
     public MinigameUI[] minigames;
 
+    [Header("TimeLapse")]
+    public SkipTimeLapseUI skipTimeLapse;
+
     #endregion
 
     private Building targetBuilding;
@@ -188,7 +191,6 @@ public class UIManager : MonoBehaviour, ISubject
     {
         eventInfo.SetValue(curEvents);
     }
-
     #endregion
 
     #region PopUp

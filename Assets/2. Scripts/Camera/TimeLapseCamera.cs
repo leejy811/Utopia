@@ -1,4 +1,5 @@
 using Cinemachine;
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,10 +12,14 @@ public class TimeLapseCamera : MonoBehaviour
     public Coroutine rotateOnCoroutine;
 
     private CinemachineVirtualCamera virtualCamera;
+    private Vector3 initPos;
+    private Quaternion initRot;
 
     private void Start()
     {
         virtualCamera = gameObject.GetComponent<CinemachineVirtualCamera>();
+        initPos= virtualCamera.transform.position;
+        initRot = virtualCamera.transform.rotation;
     }
 
     public IEnumerator SetCameraPrioritiesWithDelay()
@@ -29,7 +34,7 @@ public class TimeLapseCamera : MonoBehaviour
     {
         while (true)
         {
-            RotateCamera();
+            RotateCamera(rotationSpeed * -1 * Time.deltaTime);
             yield return new WaitForFixedUpdate();
         }
     }
@@ -40,10 +45,14 @@ public class TimeLapseCamera : MonoBehaviour
         virtualCamera.Priority = 1;
     }
 
-    void RotateCamera()
+    public void InitCamera()
     {
-        float direction = -1;
+        virtualCamera.transform.position = initPos;
+        virtualCamera.transform.rotation = initRot;
+    }
 
+    void RotateCamera(float angle)
+    {
         Ray ray = new Ray(virtualCamera.transform.position, virtualCamera.transform.forward);
         Plane plane = new Plane(Vector3.up, Vector3.zero);
         float enter = 0.0f;
@@ -51,7 +60,7 @@ public class TimeLapseCamera : MonoBehaviour
         if (plane.Raycast(ray, out enter))
         {
             Vector3 hitPoint = ray.GetPoint(enter);
-            virtualCamera.transform.RotateAround(hitPoint, Vector3.up, rotationSpeed * direction * Time.deltaTime);
+            virtualCamera.transform.RotateAround(hitPoint, Vector3.up, angle);
         }
     }
 }
