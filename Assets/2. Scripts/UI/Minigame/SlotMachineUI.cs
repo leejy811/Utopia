@@ -134,7 +134,7 @@ public class SlotMachineUI : MinigameUI
         int rewardChip = (int)curGameBuilding.values[ValueType.betChip].cur * reward[(int)ranSlot[0]];
         for (int i = 0;i < rewardChip; i++)
         {
-            curChipText.text = (ChipManager.instance.curChip - rewardChip + i + 1).ToString();
+            curChipText.text = (ChipManager.instance.CurChip - rewardChip + i + 1).ToString();
             StartCoroutine(PlayAddChip(plusSecond, 1));
             yield return new WaitForSeconds(jackPotSecond / rewardChip);
         }
@@ -152,7 +152,7 @@ public class SlotMachineUI : MinigameUI
 
     private void ApplyResult()
     {
-        ChipManager.instance.curChip += (int)curGameBuilding.values[ValueType.betChip].cur * reward[(int)ranSlot[0]];
+        ChipManager.instance.CurChip += (int)curGameBuilding.values[ValueType.betChip].cur * reward[(int)ranSlot[0]];
     }
 
     private void ResetJackPot()

@@ -25,6 +25,7 @@ public class UIManager : MonoBehaviour, ISubject
     public TextMeshProUGUI debtInfoText;
     public TextMeshProUGUI debtText;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI chipText;
     public EventInfoUI eventInfo;
 
     [Header("Building")]
@@ -113,6 +114,9 @@ public class UIManager : MonoBehaviour, ISubject
         UpdateDailyInfo();
         Setmoney();
         SetEventInfo(EventManager.instance.curEvents.ToArray());
+
+        if (GameManager.instance.curMapType == MapType.Totopia)
+            SetChip();
     }
 
     public void UpdateDailyInfo()
@@ -128,6 +132,11 @@ public class UIManager : MonoBehaviour, ISubject
     public void Setmoney()
     {
         moneyText.text = GetCommaText(ShopManager.instance.Money) + "원";
+    }
+
+    public void SetChip()
+    {
+        chipText.text = GetCommaText(ChipManager.instance.CurChip) + "개";
     }
 
     public void DailyMoneyUpdate(int prevMoney, int nextMoney, float second)

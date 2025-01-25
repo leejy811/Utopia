@@ -24,12 +24,21 @@ public class TradeChipUI : MonoBehaviour
     [Header("Trade Info")]
     public TextMeshProUGUI tradeChipText;
     public TextMeshProUGUI tradeCostText;
+    public TextMeshProUGUI tradeFeeText;
 
     [Header("ErrorMsg")]
     public Image errorPanel;
     public TextMeshProUGUI errorText;
-    public float errorSecond;
+    public float errorFadeIn;
+    public float errorFadeOut;
 
+    [Header("TradeMsg")]
+    public Image tradePanel;
+    public TextMeshProUGUI tradeText;
+    public float tradeFadeIn;
+    public float tradeFadeOut;
+
+    private bool isTweening;
     private int tradeChip;
 
     private void OnEnable()
@@ -44,7 +53,7 @@ public class TradeChipUI : MonoBehaviour
     private void SetCurInfo()
     {
         curMoneyText.text = ShopManager.instance.Money.ToString("#,##0") + " 원";
-        curChipText.text = ChipManager.instance.curChip.ToString("#,##0") + " 개";
+        curChipText.text = ChipManager.instance.CurChip.ToString("#,##0") + " 개";
         curChipCostText.text = ChipManager.instance.CalcChipCost().ToString("#,##0") + " 원";
         curChipRatioText.text = GetRatioText(RoutineManager.instance.day);
 
@@ -78,6 +87,7 @@ public class TradeChipUI : MonoBehaviour
     {
         tradeChipText.text = tradeChip.ToString("#,##0") + "개";
         tradeCostText.text = (ChipManager.instance.CalcChipCost() * tradeChip).ToString("#,##0") + " 원";
+        tradeFeeText.text = "+" + (ChipManager.instance.CalcChipCostWithFee(tradeChip) - (ChipManager.instance.CalcChipCost() * tradeChip)).ToString("#,##0") + " 원";
     }
 
     private string GetRatioText(DateTime day)
@@ -109,31 +119,43 @@ public class TradeChipUI : MonoBehaviour
 
         if (tradeAmount == 0)
             return;
-        else if (ChipManager.instance.curChip + tradeAmount < 0)
+        else if (ChipManager.instance.CurChip + tradeAmount < 0)
         {
-            OnErrorMsg("칩이 부족합니다", errorSecond);
+            OnMessage(errorPanel, errorText, "칩이 부족합니다", errorFadeIn, errorFadeOut);
             return;
         }
         else if (ShopManager.instance.Money - ChipManager.instance.CalcChipCostWithFee(tradeAmount) < 0)
         {
-            OnErrorMsg("돈이 부족합니다", errorSecond);
+            OnMessage(errorPanel, errorText, "돈이 부족합니다", errorFadeIn, errorFadeOut);
             return;
         }
 
+        string resMsg = "칩 " + Mathf.Abs(tradeAmount).ToString() + "개를 " + Mathf.Abs(ChipManager.instance.CalcChipCostWithFee(tradeAmount)).ToString()
+                        + "원에 " + (tradeAmount > 0 ? "구매" : "판매") + "했습니다.";
+        OnMessage(tradePanel, tradeText, resMsg, tradeFadeIn, tradeFadeOut);
         ChipManager.instance.TradeChip(tradeAmount);
         tradeChip = 0;
         SetCurInfo();
         SetTradeInfo();
     }
 
-    private void OnErrorMsg(string msg, float second)
+    private void OnMessage(Image panel, TextMeshProUGUI text, string msg, float fadeInTime, float fadeOutTime)
     {
-        errorText.text = msg;
+        if (isTweening) return;
 
-        errorText.color += Color.black;
-        errorPanel.color += Color.black;
+        isTweening = true;
+        text.text = msg;
 
-        errorText.DOFade(0.0f, second);
-        errorPanel.DOFade(0.0f, second);
+        text.DOFade(1.0f, fadeInTime);
+        panel.DOFade(1.0f, fadeInTime);
+        panel.transform.DOLocalMoveX(panel.transform.localPosition.x + 15.0f, fadeInTime).OnComplete(() =>
+        {
+            text.DOFade(0.0f, fadeOutTime);
+            panel.DOFade(0.0f, fadeOutTime).OnComplete(() =>
+            {
+                panel.transform.localPosition -= Vector3.right * 15.0f;
+                isTweening = false;
+            });
+        });
     }
 }

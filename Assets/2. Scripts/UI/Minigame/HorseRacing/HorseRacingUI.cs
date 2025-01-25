@@ -182,7 +182,7 @@ public class HorseRacingUI : MinigameUI
     private void SetBetChipUI()
     {
         curBetText.text = curBetChip.ToString();
-        remainChipText.text = "보유 칩 : " + (ChipManager.instance.curChip - curBetChip).ToString();
+        remainChipText.text = "보유 칩 : " + (ChipManager.instance.CurChip - curBetChip).ToString();
     }
 
     private void SetGradeName()
@@ -203,7 +203,7 @@ public class HorseRacingUI : MinigameUI
 
     private void GetReward()
     {
-        ChipManager.instance.curChip += (int)Mathf.Round(curBetChip * rewardRatio);
+        ChipManager.instance.CurChip += (int)Mathf.Round(curBetChip * rewardRatio);
     }
 
     IEnumerator OnError(Image errorImage)
@@ -273,7 +273,7 @@ public class HorseRacingUI : MinigameUI
 
     public void OnClickStartBetting()
     {
-        if (ChipManager.instance.curChip < curGameBuilding.values[ValueType.betChip].cur)
+        if (ChipManager.instance.CurChip < curGameBuilding.values[ValueType.betChip].cur)
             StartCoroutine(OnError(chipErrorImage));
         else if (curGameBuilding.betTimes == 0)
             StartCoroutine(OnError(timesErrorImage));   
@@ -287,7 +287,7 @@ public class HorseRacingUI : MinigameUI
         {
             return;
         }
-        else if (curBetChip + amount > ChipManager.instance.curChip)
+        else if (curBetChip + amount > ChipManager.instance.CurChip)
         {
             return;
         }

@@ -7,7 +7,8 @@ public class ChipManager : MonoBehaviour
 {
     static public ChipManager instance;
 
-    public int curChip;
+    [SerializeField] private int curChip;
+    public int CurChip { get { return curChip; } set { curChip = value; UIManager.instance.SetChip(); } }
     public int baseCost;
     public float changeRatio;
     public int fee;
@@ -45,7 +46,7 @@ public class ChipManager : MonoBehaviour
             ChipData data = DataBaseManager.instance.LoadChipData();
             chipCostDatas = data.Load();
             changeRatio = data.changeRatio;
-            curChip = data.curChip;
+            CurChip = data.curChip;
         }
         else
         {
@@ -99,16 +100,16 @@ public class ChipManager : MonoBehaviour
     {
         int totalCost = CalcChipCostWithFee(amount);
 
-        curChip += amount;
+        CurChip += amount;
         ShopManager.instance.GetMoney(-totalCost);
     }
 
     public bool PayChip(int amount)
     {
-        if(curChip - amount < 0)
+        if(CurChip - amount < 0)
             return false;
 
-        curChip -= amount;
+        CurChip -= amount;
 
         return true;
     }

@@ -136,7 +136,7 @@ public class BlackJackUI : MinigameUI
                 break;
             case MinigameState.Betting:
                 betChipText.text = betChip.ToString();
-                remainChipText.text = (ChipManager.instance.curChip - betChip).ToString();
+                remainChipText.text = (ChipManager.instance.CurChip - betChip).ToString();
                 betTimesText_Betting.text = curGameBuilding.betTimes.ToString();
                 break;
             case MinigameState.Play:
@@ -200,7 +200,7 @@ public class BlackJackUI : MinigameUI
     {
         if (curGameBuilding.betTimes == 0)
             StartCoroutine(OnMessage(errorMsg, "실행 가능 횟수를\n모두 소진하였습니다.", errorMsgSecond));
-        else if (ChipManager.instance.curChip < curGameBuilding.values[ValueType.betChip].cur)
+        else if (ChipManager.instance.CurChip < curGameBuilding.values[ValueType.betChip].cur)
             StartCoroutine(OnMessage(errorMsg, "해당 미니 게임을 하기 위한\n칩이 부족합니다.", errorMsgSecond));
         else if (!canClick) return;
         else
@@ -214,7 +214,7 @@ public class BlackJackUI : MinigameUI
 
     public void OnClickBetChip(int amount)
     {
-        if(betChip + amount > ChipManager.instance.curChip)
+        if(betChip + amount > ChipManager.instance.CurChip)
             StartCoroutine(OnMessage(errorMsg, "배팅하기 위한\n칩이 부족합니다.", errorMsgSecond));
         else if (betChip + amount < curGameBuilding.values[ValueType.betChip].cur)
             StartCoroutine(OnMessage(errorMsg, "기본 판돈이하로\n칩을 회수할 수 없습니다.", errorMsgSecond));
@@ -231,15 +231,15 @@ public class BlackJackUI : MinigameUI
 
     public void OnClickAllIn()
     {
-        if (betChip == ChipManager.instance.curChip)
+        if (betChip == ChipManager.instance.CurChip)
             StartCoroutine(OnMessage(errorMsg, "배팅하기 위한\n칩이 부족합니다.", errorMsgSecond));
         else if (!canClick) return;
         else
         {
             AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
             StartCoroutine(OnMessage(errorMsg, "ALL-IN", errorMsgSecond));
-            StartCoroutine(ThrowChip(ChipManager.instance.curChip - betChip, 0.0f, true));
-            betChip = ChipManager.instance.curChip;
+            StartCoroutine(ThrowChip(ChipManager.instance.CurChip - betChip, 0.0f, true));
+            betChip = ChipManager.instance.CurChip;
             SetUI(MinigameState.Betting);
         }
     }
@@ -357,7 +357,7 @@ public class BlackJackUI : MinigameUI
     private void GetReward(GameResult result)
     {
         canClick = false; ;
-        ChipManager.instance.curChip = Mathf.Max(ChipManager.instance.curChip + reward[result] * betChip, 0);
+        ChipManager.instance.CurChip = Mathf.Max(ChipManager.instance.CurChip + reward[result] * betChip, 0);
     }
 
     private GameResult GetResult()
