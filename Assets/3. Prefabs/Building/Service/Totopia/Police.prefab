@@ -67,7 +67,7 @@ MonoBehaviour:
   type: 3
   subType: 3
   viewState: 0
-  happinessRate: 50
+  happinessRate: 60
   happinessDifference: 0
   position: {x: 0, y: 0}
   influencePower: 100
