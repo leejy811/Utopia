@@ -286,12 +286,12 @@ public class UIManager : MonoBehaviour, ISubject
             costInfo.OnUI(cost, transform.position);
     }
 
-    public void SetTutorialPopup(EventState state)
+    public void SetTutorialPopup(bool isForce = false)
     {
-        if (GameManager.instance.skipTutorial) return;
-        else if (!tutorial.ContainState(state)) return;
+        if (GameManager.instance.skipTutorial && !isForce) return;
 
-        notifyObserver(state);
+        tutorial.isInit = !isForce;
+        notifyObserver(EventState.Tutorial);
     }
 
     #endregion
@@ -410,6 +410,11 @@ public class UIManager : MonoBehaviour, ISubject
     public void OnClickPhoneButton()
     {
         notifyObserver(EventState.Phone);
+    }
+
+    public void OnClickTutorialButton()
+    {
+        SetTutorialPopup(true);
     }
 
     public void OnClickLobbyButton()

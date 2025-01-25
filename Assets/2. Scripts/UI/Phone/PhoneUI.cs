@@ -71,14 +71,7 @@ public class PhoneUI : MonoBehaviour, IObserver
 
         ChaneState(matchState[curState]);
 
-        if (curState == EventState.CityLevelUp && CityLevelManager.instance.levelIdx == 1
-            && !GameManager.instance.skipTutorial && UIManager.instance.tutorial.ContainState(EventState.SocialEffect))
-        {
-            yield return new WaitForSeconds(5.0f);
-            UIManager.instance.notifyObserver(EventState.None);
-        }
-        else
-            InputManager.SetCanInput(true);
+        InputManager.SetCanInput(true);
     }
 
     public void ChaneState(PhoneState state)
@@ -202,11 +195,6 @@ public class PhoneUI : MonoBehaviour, IObserver
             isTweening = true;
             transform.DOLocalMoveY(-450.0f, moveTime).SetEase(Ease.InBack).OnComplete(() => 
             {
-                if (prevState == EventState.CityLevelUp && CityLevelManager.instance.levelIdx == 1)
-                {
-                    UIManager.instance.SetTutorialPopup(EventState.SocialEffect);
-                }
-
                 gameObject.SetActive(false);
                 isTweening = false;
             });

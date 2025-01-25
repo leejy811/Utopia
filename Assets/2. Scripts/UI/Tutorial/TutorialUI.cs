@@ -13,13 +13,6 @@ public struct TutorialClip
     [TextArea] public string description;
 }
 
-[System.Serializable]
-public struct TutorialState
-{
-    public EventState state;
-    public TutorialClip[] clips;
-}
-
 public class TutorialUI : MonoBehaviour, IObserver
 {
     [Header("Video")]
@@ -34,16 +27,16 @@ public class TutorialUI : MonoBehaviour, IObserver
     public Button leftButton;
 
     [Header("content")]
-    public List<TutorialState> content = new List<TutorialState>();
+    public List<TutorialClip> contents = new List<TutorialClip>();
+    public bool isInit;
     
-    private EventState curState;
     private int curIdx;
     private int pageLength;
 
     public void SetValue()
     {
-        videoPlayer.clip = FindState(curState).clips[curIdx].videoClip;
-        descriptionText.text = FindState(curState).clips[curIdx].description;
+        videoPlayer.clip = contents[curIdx].videoClip;
+        descriptionText.text = contents[curIdx].description;
         indexText.text = (curIdx + 1).ToString() + "/" + pageLength.ToString();
     }
 
@@ -60,42 +53,34 @@ public class TutorialUI : MonoBehaviour, IObserver
         rightButton.gameObject.SetActive(true);
         leftButton.gameObject.SetActive(true);
 
-        if (curIdx == 0)
+        if (isInit)
         {
-            leftButton.gameObject.SetActive(false);
+            if (curIdx == 0)
+            {
+                leftButton.gameObject.SetActive(false);
+            }
+            if (curIdx == pageLength)
+            {
+                UIManager.instance.notifyObserver(EventState.None);
+                return;
+            }
         }
-        if (curIdx == pageLength - 1)
+        else
         {
-            //rightButton.gameObject.SetActive(false);
-        }
-        if (curIdx == pageLength)
-        {
-            UIManager.instance.notifyObserver(EventState.None);
-            return;
+            curIdx = (curIdx + pageLength) % pageLength;
         }
 
         SetValue();
     }
 
-    public TutorialState FindState(EventState state)
-    {
-        return content.Find(x => x.state == state);
-    }
-
-    public bool ContainState(EventState state)
-    {
-        return content.Exists(x => x.state == state);
-    }
-
     public void Notify(EventState state)
     {
-        if (ContainState(state))
+        if (state == EventState.Tutorial)
         {
             InputManager.SetCanInput(false);
             gameObject.SetActive(true);
-            curState = state;
             curIdx = 0;
-            pageLength = FindState(curState).clips.Length;
+            pageLength = contents.Count;
             SetButton();
 
             AkSoundEngine.SetRTPCValue("CLICK", 2);
@@ -107,7 +92,7 @@ public class TutorialUI : MonoBehaviour, IObserver
             InputManager.SetCanInput(true);
             AkSoundEngine.SetRTPCValue("CLICK", 1);
 
-            if (curState == EventState.GameStart && !GameManager.instance.isLoad)
+            if (!GameManager.instance.isLoad && isInit)
                 UIManager.instance.notifyObserver(EventState.CityLevelUp);
         }
     }

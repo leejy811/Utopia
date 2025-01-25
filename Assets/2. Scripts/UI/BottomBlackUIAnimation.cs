@@ -30,7 +30,7 @@ public class BottomBlackUIAnimation : MonoBehaviour
             if (GameManager.instance.skipTutorial)
                 InputManager.SetCanInput(true);
             else
-                UIManager.instance.SetTutorialPopup(EventState.GameStart);
+                UIManager.instance.SetTutorialPopup();
         });
     }
 }

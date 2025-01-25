@@ -20,7 +20,6 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public int[,] buildingGradeCount;
     public int buildingRemoveCount;
 
-    private bool isFirst;
     private bool isHighlight;
     private List<TemporayUI> eventIconTemps = new List<TemporayUI>();
 
@@ -49,12 +48,6 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
     public void PlaceBuilding(int index, Transform spawnTrans)
     {
-        if (!isFirst) 
-        {
-            UIManager.instance.SetTutorialPopup(EventState.ConstructBuilding);
-            isFirst = true;
-        }
-
         Building building = Instantiate(buildingPrefabs[index], new Vector3(spawnTrans.position.x, 0, spawnTrans.position.z), spawnTrans.rotation, transform).GetComponent<Building>();
 
         if (building.type != BuildingType.Residential)
