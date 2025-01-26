@@ -3,10 +3,12 @@ Event	ID	Name			Wwise Object Path	Notes
 	37099562	Stop_TO_event_DISEASE_02			\Default Work Unit\Stop_TO_event_DISEASE_02	
 	37099563	Stop_TO_event_DISEASE_03			\Default Work Unit\Stop_TO_event_DISEASE_03	
 	37099564	Stop_TO_event_DISEASE_04			\Default Work Unit\Stop_TO_event_DISEASE_04	
+	492449051	Play_RACE_SKILL			\Default Work Unit\Play_RACE_SKILL	
 	1408964427	Stop_TO_Increase_price_04			\Default Work Unit\Stop_TO_Increase_price_04	
 	1408964428	Stop_TO_Increase_price_03			\Default Work Unit\Stop_TO_Increase_price_03	
 	1408964429	Stop_TO_Increase_price_02			\Default Work Unit\Stop_TO_Increase_price_02	
 	1408964430	Stop_TO_Increase_price_01			\Default Work Unit\Stop_TO_Increase_price_01	
+	1657583265	Play_RACE_INJURY			\Default Work Unit\Play_RACE_INJURY	
 	1778818128	Stop_TO_Festival_01			\Default Work Unit\Stop_TO_Festival_01	
 	1778818130	Stop_TO_Festival_03			\Default Work Unit\Stop_TO_Festival_03	
 	1778818131	Stop_TO_Festival_02			\Default Work Unit\Stop_TO_Festival_02	
@@ -49,6 +51,8 @@ Event	ID	Name			Wwise Object Path	Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	75256438	MINIGAME_COIN	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\MINIGAME_COIN_84E28A70.wem		\Actor-Mixer Hierarchy\Default Work Unit\MINIGAME_COIN		89392
+	360820788	RACE_INJURY	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_INJURY_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_INJURY		155788
 	389311814	RACE_START	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_START_99D9845F.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_START		297344
+	581554853	RACE_SKILL	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_SKILL_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_SKILL		345700
 	774795037	RACE_TANG	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_TANG_358D3AAA.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_TANG		125908
 

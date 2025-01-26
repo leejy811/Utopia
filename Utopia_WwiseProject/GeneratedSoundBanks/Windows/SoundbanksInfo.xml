@@ -2042,7 +2042,7 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{3C4B658B-2E71-1B17-3069-1483496B7740}">
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{034A43F7-BF82-24B7-59E5-717B592DF32E}">
 			<ShortName>TOTOPIA2</ShortName>
 			<Path>TOTOPIA2.bnk</Path>
 			<Media>
@@ -2050,9 +2050,17 @@
 					<ShortName>MINIGAME_COIN.wav</ShortName>
 					<CachePath>SFX/MINIGAME_COIN_7DDE98A0.wem</CachePath>
 				</File>
+				<File Id="360820788" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_INJURY.wav</ShortName>
+					<CachePath>SFX/RACE_INJURY_8E324C96.wem</CachePath>
+				</File>
 				<File Id="389311814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_START.wav</ShortName>
 					<CachePath>SFX/RACE_START_408D07EF.wem</CachePath>
+				</File>
+				<File Id="581554853" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_SKILL.wav</ShortName>
+					<CachePath>SFX/RACE_SKILL_8E324C96.wem</CachePath>
 				</File>
 				<File Id="774795037" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_TANG.wav</ShortName>
@@ -2063,6 +2071,16 @@
 				<Event Id="3433467811" Name="Play_MINIGAME_COIN" DurationType="OneShot" DurationMin="0.46508333" DurationMax="0.46508333">
 					<MediaRefs>
 						<MediaRef Id="75256438"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1657583265" Name="Play_RACE_INJURY" DurationType="OneShot" DurationMin="0.81089586" DurationMax="0.81089586">
+					<MediaRefs>
+						<MediaRef Id="360820788"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="492449051" Name="Play_RACE_SKILL" DurationType="OneShot" DurationMin="1.8000208" DurationMax="1.8000208">
+					<MediaRefs>
+						<MediaRef Id="581554853"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="3977497622" Name="Play_RACE_START_01" DurationType="OneShot" DurationMin="1.5481738" DurationMax="1.5481738">
@@ -2122,5 +2140,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BE8A5DAA-AE5F-D621-4BCE-84B0CDFDC642}</FileHash>
+	<FileHash>{656F6EB7-7B55-6C4A-9143-4CB62A57943E}</FileHash>
 </SoundBanksInfo>

@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584637096426718317
+    m_lastTime: -8584637086776880156
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -240,7 +240,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584637096426584387
+    m_lastTime: -8584637086776750872
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -3154,6 +3154,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.2001875
       minDuration: 0.2001875
+    - name: Play_RACE_INJURY
+      guid: 1c6e891e3129634bbafee0b135994acf
+      id: 1657583265
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_RACE_INJURY
+        ObjectType: 3
+        guid: 1c6e891e3129634bbafee0b135994acf
+      Path: Events\Default Work Unit\Play_RACE_INJURY
+      maxAttenuation: 0
+      maxDuration: 0.81089586
+      minDuration: 0.81089586
     - name: Play_RACE_recall_01
       guid: 031ce6e276b0e74896a7c6e170a1daa0
       id: 3546129119
@@ -3194,6 +3211,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.118395835
       minDuration: 0.118395835
+    - name: Play_RACE_SKILL
+      guid: 309802e99bdb384196ed1e0410a3aa5a
+      id: 492449051
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_RACE_SKILL
+        ObjectType: 3
+        guid: 309802e99bdb384196ed1e0410a3aa5a
+      Path: Events\Default Work Unit\Play_RACE_SKILL
+      maxAttenuation: 0
+      maxDuration: 1.8000208
+      minDuration: 1.8000208
     - name: Play_RACE_start
       guid: ed3c9a880bdc834c919d0aef72dbd2a0
       id: 1325406880

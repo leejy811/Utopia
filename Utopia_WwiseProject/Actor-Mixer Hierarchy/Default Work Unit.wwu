@@ -24805,6 +24805,50 @@
 						<ActiveSource Name="MINIGAME_COIN" ID="{987C5FD8-AF12-40F6-BDB7-4537B6575791}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="RACE_INJURY" ID="{B6788797-3725-4E66-9D2E-01A885891BB1}" ShortID="898932396">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="RACE_INJURY" ID="{E4F3A905-5424-42CC-ADF0-73C240175DD5}">
+							<Language>SFX</Language>
+							<AudioFile>RACE_INJURY.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="360820788"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="RACE_INJURY" ID="{E4F3A905-5424-42CC-ADF0-73C240175DD5}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="RACE_SKILL" ID="{214A9A9D-CDB8-4C7C-9185-6F229C362B98}" ShortID="91500363">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="RACE_SKILL" ID="{590BBACB-67B2-4D6D-9AD6-380C2AD42821}">
+							<Language>SFX</Language>
+							<AudioFile>RACE_SKILL.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="581554853"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="RACE_SKILL" ID="{590BBACB-67B2-4D6D-9AD6-380C2AD42821}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

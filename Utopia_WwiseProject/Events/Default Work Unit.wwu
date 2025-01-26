@@ -4470,6 +4470,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_RACE_INJURY" ID="{1E896E1C-2931-4B63-BAFE-E0B135994ACF}">
+					<ChildrenList>
+						<Action Name="" ID="{747C3F9A-04A0-4F54-91DF-2865502AF161}" ShortID="874957710">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RACE_INJURY" ID="{B6788797-3725-4E66-9D2E-01A885891BB1}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RACE_SKILL" ID="{E9029830-DB9B-4138-96ED-1E0410A3AA5A}">
+					<ChildrenList>
+						<Action Name="" ID="{15A8E650-69ED-4DF8-B508-B15A5034587C}" ShortID="885720703">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RACE_SKILL" ID="{214A9A9D-CDB8-4C7C-9185-6F229C362B98}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

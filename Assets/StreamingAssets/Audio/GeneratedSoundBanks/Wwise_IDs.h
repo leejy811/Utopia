@@ -148,8 +148,10 @@ namespace AK
         static const AkUniqueID PLAY_RACE_BGM = 504948858U;
         static const AkUniqueID PLAY_RACE_COUNTDOWN = 2521540693U;
         static const AkUniqueID PLAY_RACE_HORSERACE = 2027986540U;
+        static const AkUniqueID PLAY_RACE_INJURY = 1657583265U;
         static const AkUniqueID PLAY_RACE_RECALL_01 = 3546129119U;
         static const AkUniqueID PLAY_RACE_RECALL_02 = 3546129116U;
+        static const AkUniqueID PLAY_RACE_SKILL = 492449051U;
         static const AkUniqueID PLAY_RACE_START = 1325406880U;
         static const AkUniqueID PLAY_RACE_START_01 = 3977497622U;
         static const AkUniqueID PLAY_RACE_STARTMOTION = 3801795766U;
