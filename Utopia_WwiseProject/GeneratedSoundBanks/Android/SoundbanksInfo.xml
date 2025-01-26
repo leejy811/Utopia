@@ -758,7 +758,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{4F6235E5-5BD5-71D8-92CB-B733710DA5EE}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{75B1286D-9EBF-DC4D-AB57-E2EE9558F4DE}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -956,7 +956,7 @@
 				</File>
 				<File Id="1055642362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_STARTMOTION.wav</ShortName>
-					<CachePath>SFX/RACE_STARTMOTION_31D76594.wem</CachePath>
+					<CachePath>SFX/RACE_STARTMOTION_6ACA5221.wem</CachePath>
 				</File>
 			</Media>
 			<Events>
@@ -1120,7 +1120,7 @@
 						<MediaRef Id="738002531"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="3801795766" Name="Play_RACE_STARTMOTION" DurationType="OneShot" DurationMin="4.2464375" DurationMax="4.2464375">
+				<Event Id="3801795766" Name="Play_RACE_STARTMOTION" DurationType="OneShot" DurationMin="1.5599617" DurationMax="1.5599617">
 					<MediaRefs>
 						<MediaRef Id="1055642362"/>
 					</MediaRefs>
@@ -2093,5 +2093,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{3616CE50-D8F4-EB27-724B-A1DB5CF9686E}</FileHash>
+	<FileHash>{6D36B1F3-BC3E-5CD9-6D0F-CD551D3B6A4E}</FileHash>
 </SoundBanksInfo>

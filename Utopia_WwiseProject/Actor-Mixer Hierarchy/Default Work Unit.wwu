@@ -17689,6 +17689,7 @@
 								<Property Name="FadeInDuration" Type="Real64" Value="0.154415909090909"/>
 								<Property Name="FadeOutDuration" Type="Real64" Value="0.907193465909091"/>
 								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.55996164241872"/>
 							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>RACE_STARTMOTION.wav</AudioFile>

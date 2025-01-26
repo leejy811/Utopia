@@ -3212,8 +3212,8 @@ MonoBehaviour:
         guid: acef577019c9cd47add892f95b1f7c77
       Path: Events\Default Work Unit\Play_RACE_STARTMOTION
       maxAttenuation: 0
-      maxDuration: 4.2464375
-      minDuration: 4.2464375
+      maxDuration: 1.5599617
+      minDuration: 1.5599617
     - name: Play_Select_Button
       guid: 84c6369bcf91e748b6e9c8192be67e41
       id: 880454473
@@ -7207,7 +7207,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584657987678055045
+    m_lastTime: -8584637147274634702
     List:
     - name: BGM_VOL
       guid: 17e4ff598f446d498dddd6e9b337a6de
@@ -7307,6 +7307,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: f1300da40ed4b440bec7cd5462971c4a
       Path: Game Parameters\Default Work Unit\INDEX2
+    - name: JACKPOT
+      guid: 16a6fe085ec60a4fbeb3f05e732d1d97
+      id: 4121515321
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: JACKPOT
+        ObjectType: 13
+        guid: 16a6fe085ec60a4fbeb3f05e732d1d97
+      Path: Game Parameters\Default Work Unit\JACKPOT
     - name: MINIGAME
       guid: 891e53951b70644cadcfdef0612e084e
       id: 3310578182

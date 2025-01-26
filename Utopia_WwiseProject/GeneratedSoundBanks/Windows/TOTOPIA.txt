@@ -170,5 +170,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1023215211	jazz3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\jazz3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\TOBGM\Baisc\BGM3\jazz3		455472
 	1028501577	RACE_recall_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_recall_02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_recall_02		1812
 	1041706813	RACE_active(L)	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_active(L)_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_active(L)		48514
-	1055642362	RACE_STARTMOTION	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_STARTMOTION_11C9E344.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_STARTMOTION		57494
+	1055642362	RACE_STARTMOTION	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\RACE_STARTMOTION_2F7A5971.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_STARTMOTION		21608
 
