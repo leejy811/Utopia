@@ -98,13 +98,15 @@ public class MinigameUI : MonoBehaviour, IObserver
     {
         if (openingAnim != null) 
         {
-            if(isOpen)
+            if (isOpen)
                 UIManager.instance.MovePanelAnim(openingSecond, true);
 
             openingAnim.gameObject.SetActive(true);
             openingAnim.SetFloat("Speed", 1.0f / openingSecond);
             openingAnim.SetBool("IsPlaying", false);
-            AkSoundEngine.PostEvent(openingSound, gameObject);
+
+            if (openingSound != "")
+                AkSoundEngine.PostEvent(openingSound, gameObject);
             yield return new WaitForSeconds(openingSecond);
 
             if (postProcessing)
@@ -114,7 +116,9 @@ public class MinigameUI : MonoBehaviour, IObserver
 
             SetGamePanel(isOpen);
             openingAnim.SetBool("IsPlaying", true);
-            AkSoundEngine.PostEvent(openingSound, gameObject);
+
+            if (openingSound != "")
+                AkSoundEngine.PostEvent(openingSound, gameObject);
 
             yield return new WaitForSeconds(openingSecond);
 

@@ -23,6 +23,7 @@ public class HorseController : MonoBehaviour
     public float animationSpeedRatio;
     public int curGrade;
     public float curSpeed;
+    public bool isPick;
 
     [Header("Skill")]
     public float skillCooltime;
@@ -62,8 +63,8 @@ public class HorseController : MonoBehaviour
     public void StartRace()
     {
         isEnd = false;
-        StartCoroutine(CountEvent(skillCooltime, skillDuration, skillParam, checkSkill, skillEffect));
-        StartCoroutine(CountEvent(injuryCooltime, injuryDuration, injuryParam, checkInjury, injuryEffect));
+        StartCoroutine(CountEvent(skillCooltime, skillDuration, skillParam, checkSkill, skillEffect, "Play_RACE_SKILL"));
+        StartCoroutine(CountEvent(injuryCooltime, injuryDuration, injuryParam, checkInjury, injuryEffect, "Play_RACE_INJURY"));
         StartCoroutine(MoveHorse());
     }
 
@@ -87,28 +88,30 @@ public class HorseController : MonoBehaviour
         horseAnim.SetBool("IsMoving", false);
     }
 
-    IEnumerator CountEvent(float coolTime, float duration, float param, Func<bool> checkCondition, SpriteRenderer effect)
+    IEnumerator CountEvent(float coolTime, float duration, float param, Func<bool> checkCondition, SpriteRenderer effect, string sound)
     {
         yield return new WaitForSeconds(coolTime);
         while (!isEnd)
         {
             if (checkCondition.Invoke())
-                StartCoroutine(ApplyEvent(duration, param, effect));
+                StartCoroutine(ApplyEvent(duration, param, effect, sound));
             yield return new WaitForSeconds(coolTime);
         }
     }
 
-    IEnumerator ApplyEvent(float duration, float amount, SpriteRenderer effect)
+    IEnumerator ApplyEvent(float duration, float amount, SpriteRenderer effect, string sound)
     {
         curSpeed += amount;
-        StartCoroutine(PlayEffect(effect));
+        StartCoroutine(PlayEffect(effect, sound));
         yield return new WaitForSeconds(duration);
         if (!isEnd)
             curSpeed -= amount;
     }
 
-    IEnumerator PlayEffect(SpriteRenderer effect)
+    IEnumerator PlayEffect(SpriteRenderer effect, string sound)
     {
+        if (isPick)
+            AkSoundEngine.PostEvent(sound, gameObject);
         effect.gameObject.SetActive(true);
         yield return new WaitForSeconds(effectSecond);
         effect.gameObject.SetActive(false);
@@ -140,6 +143,7 @@ public class HorseController : MonoBehaviour
         {
             isEnd = true;
             applyResult.Invoke(horseInfo.horseType);
+            AkSoundEngine.PostEvent("Play_RACE_TANG", gameObject);
         }
     }
 }

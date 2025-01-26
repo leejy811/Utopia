@@ -47,6 +47,7 @@ public class LoadingSceneController : MonoBehaviour
     public float fadeSecond;
     public CanvasGroup canvasGroup;
     public Image progressBar;
+    public List<Sprite> barSprites;
     public TextMeshProUGUI tipText;
     public List<string> tipStrings;
     public Image backGroundImage;
@@ -65,6 +66,7 @@ public class LoadingSceneController : MonoBehaviour
     private IEnumerator LoadSceneProcess()
     {
         progressBar.fillAmount = 0f;
+        progressBar.sprite = barSprites[(int)GameManager.instance.curMapType];
         tipText.text = tipStrings[Random.Range(0, tipStrings.Count)];
         backGroundImage.sprite = backGroundSprites[(int)GameManager.instance.curMapType];
         yield return StartCoroutine(Fade(true));

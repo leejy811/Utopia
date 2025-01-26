@@ -70,6 +70,14 @@ public class SlotMachineUI : MinigameUI
         base.SetValue();
     }
 
+    protected override void SetGamePanel(bool active)
+    {
+        base.SetGamePanel(active);
+
+        string isPlay = active ? "Play" : "Stop";
+        AkSoundEngine.PostEvent(isPlay + "_Slot_BGM", gameObject);
+    }
+
     private IEnumerator SpinSlot(int idx)
     {
         int slotLength = System.Enum.GetValues(typeof(SlotType)).Length;
@@ -129,6 +137,7 @@ public class SlotMachineUI : MinigameUI
         jackPotAnim.SetBool("IsJackPot", true);
         jackPotAnim.SetFloat("LightSpeed", jackPotSpeed);
         jackpotParticle.Play(true);
+        AkSoundEngine.SetRTPCValue("JACKPOT", 1);
         AkSoundEngine.PostEvent("Play_Slotmashin_Jackpot_Ani_01", gameObject);
 
         int rewardChip = (int)curGameBuilding.values[ValueType.betChip].cur * reward[(int)ranSlot[0]];
@@ -139,6 +148,7 @@ public class SlotMachineUI : MinigameUI
             yield return new WaitForSeconds(jackPotSecond / rewardChip);
         }
         jackPotAnim.SetBool("IsJackPot", false);
+        AkSoundEngine.SetRTPCValue("JACKPOT", 0);
         AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
@@ -148,6 +158,8 @@ public class SlotMachineUI : MinigameUI
 
         StopCoroutine(jackPotCoroutine);
         jackPotAnim.SetBool("IsJackPot", false);
+        AkSoundEngine.SetRTPCValue("JACKPOT", 0);
+        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
     }
 
     private void ApplyResult()
@@ -245,7 +257,6 @@ public class SlotMachineUI : MinigameUI
         state = SlotState.While;
 
         AkSoundEngine.PostEvent("Play_Slot_Drrrrrr_01", gameObject);
-        AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
         for (int i = 0; i < slots.Length; i++)
         {
             StartCoroutine(SpinSlot(i));
@@ -271,6 +282,8 @@ public class SlotMachineUI : MinigameUI
     protected override void OnDisable()
     {
         AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
+        AkSoundEngine.PostEvent("Stop_Slot_BGM", gameObject);
+        AkSoundEngine.SetRTPCValue("JACKPOT", 0);
         base.OnDisable();
     }
 

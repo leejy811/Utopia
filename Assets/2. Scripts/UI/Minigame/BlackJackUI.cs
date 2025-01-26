@@ -236,7 +236,7 @@ public class BlackJackUI : MinigameUI
         else if (!canClick) return;
         else
         {
-            AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
+            AkSoundEngine.PostEvent("Play_BLACKJACK_ALLIN", gameObject);
             StartCoroutine(OnMessage(errorMsg, "ALL-IN", errorMsgSecond));
             StartCoroutine(ThrowChip(ChipManager.instance.CurChip - betChip, 0.0f, true));
             betChip = ChipManager.instance.CurChip;
@@ -247,7 +247,7 @@ public class BlackJackUI : MinigameUI
     public void OnClickResetBetting()
     {
         if (!canClick) return;
-        AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
+        AkSoundEngine.PostEvent("Play_BLACKJACK_GETBACK", gameObject);
         StartCoroutine(ThrowChip((betChip - (int)curGameBuilding.values[ValueType.betChip].cur) * -1, throwInterval, true));
         betChip = (int)curGameBuilding.values[ValueType.betChip].cur;
         SetUI(MinigameState.Betting);
@@ -257,6 +257,7 @@ public class BlackJackUI : MinigameUI
     {
         if (!canClick) return;
         if (!ChipManager.instance.PayChip(betChip)) return;
+        AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
         SetState(MinigameState.Play);
         StartCoroutine(StartBlackJack());
     }
@@ -528,7 +529,7 @@ public class BlackJackUI : MinigameUI
         {
             case GameResult.Dealer_Win:
             case GameResult.Dealer_BlackJack:
-                //Defeat Sound
+                AkSoundEngine.PostEvent("Play_BLACKJACK_LOOSE", gameObject);
                 break;
             case GameResult.Player_Win:
                 AkSoundEngine.PostEvent("Play_BLACKJACK_rule_win", gameObject);

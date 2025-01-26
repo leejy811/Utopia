@@ -23,7 +23,11 @@ public class MoneyTextUI : MonoBehaviour
         moneyText.text = string.Format("{0:#,###}", currentNumber) + "¿ø";
         moneyText.color = changeColor;
 
-        AkSoundEngine.PostEvent("Play_Paythepayment_01", gameObject);
+        if (GameManager.instance.curMapType == MapType.Utopia)
+            AkSoundEngine.PostEvent("Play_Paythepayment_01", gameObject);
+        else if (GameManager.instance.curMapType == MapType.Totopia)
+            AkSoundEngine.PostEvent("Play_GAMEPLAY_chips_exchange", gameObject);
+
         while (elapsedTime < second)
         {
             float t = elapsedTime / second;

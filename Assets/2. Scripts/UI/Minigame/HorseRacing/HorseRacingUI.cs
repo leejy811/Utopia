@@ -155,8 +155,12 @@ public class HorseRacingUI : MinigameUI
         horseSkillText.text = horse.horseInfo.skillDescription;
 
         if (prevPickHorse != null)
+        {
             prevPickHorse.pickEffect.gameObject.SetActive(false);
+            prevPickHorse.isPick = false;
+        }
         horse.pickEffect.gameObject.SetActive(true);
+        horse.isPick = true;
         prevPickHorse = horse;
     }
 
@@ -223,6 +227,7 @@ public class HorseRacingUI : MinigameUI
             yield return new WaitForSeconds(1);
         }
         countImage.gameObject.SetActive(false);
+        AkSoundEngine.PostEvent("Play_RACE_TANG", gameObject);
 
         foreach (HorseController horse in horses)
         {

@@ -142,6 +142,62 @@ public class SoundManager : MonoBehaviour
             PostEvent(state + "TOBGM");
             PostEvent(state + "LOOP_bar");
             PostEvent(state + "LOOP_vomit_01");
+            PostEvent(state + "Wind");
+
+            PostEvent(state + "TO_Decrease_price_01");
+            PostEvent(state + "TO_Decrease_price_02");
+            PostEvent(state + "TO_Decrease_price_03");
+            PostEvent(state + "TO_Decrease_price_04");
+
+            PostEvent(state + "TO_Discount_01");
+            PostEvent(state + "TO_Discount_02");
+            PostEvent(state + "TO_Discount_03");
+            PostEvent(state + "TO_Discount_04");
+
+            PostEvent(state + "TO_event_DESOLATE_01");
+            PostEvent(state + "TO_event_DESOLATE_02");
+            PostEvent(state + "TO_event_DESOLATE_03");
+            PostEvent(state + "TO_event_DESOLATE_04");
+
+            PostEvent(state + "TO_event_DISEASE_01");
+            PostEvent(state + "TO_event_DISEASE_02");
+            PostEvent(state + "TO_event_DISEASE_03");
+            PostEvent(state + "TO_event_DISEASE_04");
+
+            PostEvent(state + "TO_event_FIRE_01");
+            PostEvent(state + "TO_event_FIRE_02");
+            PostEvent(state + "TO_event_FIRE_03");
+            PostEvent(state + "TO_event_FIRE_04");
+
+            PostEvent(state + "TO_event_THIEF_01");
+            PostEvent(state + "TO_event_THIEF_02");
+            PostEvent(state + "TO_event_THIEF_03");
+            PostEvent(state + "TO_event_THIEF_04");
+
+            PostEvent(state + "TO_Festival_01");
+            PostEvent(state + "TO_Festival_02");
+            PostEvent(state + "TO_Festival_03");
+            PostEvent(state + "TO_Festival_04");
+
+            PostEvent(state + "TO_Few_jobs_01");
+            PostEvent(state + "TO_Few_jobs_02");
+            PostEvent(state + "TO_Few_jobs_03");
+            PostEvent(state + "TO_Few_jobs_04");
+
+            PostEvent(state + "TO_Increase_price_01");
+            PostEvent(state + "TO_Increase_price_02");
+            PostEvent(state + "TO_Increase_price_03");
+            PostEvent(state + "TO_Increase_price_04");
+
+            PostEvent(state + "TO_Low_in_stock_01");
+            PostEvent(state + "TO_Low_in_stock_02");
+            PostEvent(state + "TO_Low_in_stock_03");
+            PostEvent(state + "TO_Low_in_stock_04");
+
+            PostEvent(state + "TO_Many_jobs_01");
+            PostEvent(state + "TO_Many_jobs_02");
+            PostEvent(state + "TO_Many_jobs_03");
+            PostEvent(state + "TO_Many_jobs_04");
         }
 
         if (isPlay)

@@ -121,11 +121,13 @@ public class TradeChipUI : MonoBehaviour
             return;
         else if (ChipManager.instance.CurChip + tradeAmount < 0)
         {
+            AkSoundEngine.PostEvent("Play_Deny_01", gameObject);
             OnMessage(errorPanel, errorText, "칩이 부족합니다", errorFadeIn, errorFadeOut);
             return;
         }
         else if (ShopManager.instance.Money - ChipManager.instance.CalcChipCostWithFee(tradeAmount) < 0)
         {
+            AkSoundEngine.PostEvent("Play_Deny_01", gameObject);
             OnMessage(errorPanel, errorText, "돈이 부족합니다", errorFadeIn, errorFadeOut);
             return;
         }
@@ -134,6 +136,7 @@ public class TradeChipUI : MonoBehaviour
                         + "원에 " + (tradeAmount > 0 ? "구매" : "판매") + "했습니다.";
         OnMessage(tradePanel, tradeText, resMsg, tradeFadeIn, tradeFadeOut);
         ChipManager.instance.TradeChip(tradeAmount);
+        AkSoundEngine.PostEvent("Play_GAMEPLAY_chips_exchange", gameObject);
         tradeChip = 0;
         SetCurInfo();
         SetTradeInfo();
