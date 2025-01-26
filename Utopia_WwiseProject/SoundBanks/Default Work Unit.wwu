@@ -273,6 +273,56 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="TOTOPIA2" ID="{CF404723-9848-4B2F-982B-31B8A5FA7667}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Stop_TO_Low_in_stock_01" ID="{C45154B1-B972-4161-9ABB-4DB973D975FA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Discount_04" ID="{F727945C-C7F1-4193-A09C-658F93ABCB50}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_FIRE_01" ID="{4A903938-3F9B-419A-AA62-E31B0A537D18}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Increase_price_04" ID="{12B88227-88B9-4244-85C7-7000DCFB275D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_THIEF_02" ID="{3327E635-CBA0-424F-BB76-1F65942F571A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Discount_03" ID="{2D7ECF05-AFF0-43F9-B015-E61A29BCA888}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_THIEF_03" ID="{6524F5CC-F05E-4424-8DFD-6FC14852294E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DISEASE_03" ID="{80087913-6021-4442-BA0E-9744CFF9BE36}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DESOLATE_01" ID="{66384F2D-FE5C-4454-8DBF-1089C121AF44}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Low_in_stock_03" ID="{068964ED-9F37-44D5-9BE9-7E770C8B863D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_FIRE_04" ID="{B1FD53C6-89FD-44F2-8DD5-A68F19B0E34D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_FIRE_03" ID="{7E31E6B1-96EE-4580-AA37-4289B401B5EE}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Low_in_stock_02" ID="{23E91A34-D7E9-45CF-A278-C42E66C2EA43}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Discount_02" ID="{FAC33CDF-A6B7-4610-A88A-A53104E9DCDC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_THIEF_04" ID="{45B0D842-ED11-4639-A010-33B65B95744B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Few_jobs_03" ID="{93AD5B84-C0AF-465A-A35E-6CE9DD15E972}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Increase_price_03" ID="{A490AF4C-034A-4708-A437-086E3AAC230A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Discount_01" ID="{79460883-3675-476A-93ED-34E40488B2E4}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DISEASE_04" ID="{DED74719-ED95-4781-A407-8DADA462D07B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Many_jobs_01" ID="{64BAF250-AA68-4864-8194-E5738049089C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Festival_01" ID="{E791391B-224C-48F1-A032-3DF45965D9CA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Low_in_stock_04" ID="{0765BE10-3290-49A5-98A6-935DA8492D58}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_FIRE_02" ID="{C84C5ED9-2764-4A52-97EC-BA670E86248E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DISEASE_01" ID="{EA2ECD94-9873-4A85-924A-3E22E0C6C940}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DESOLATE_02" ID="{8A7215B4-2A34-4AC0-BF7C-78E7C4B7B422}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Increase_price_02" ID="{ECBDD143-24DA-4B2E-BFD0-59E892603D93}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DESOLATE_04" ID="{C61D7432-49D1-4BC1-8F7C-D031039A81F4}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Decrease_price_03" ID="{2EAC69CA-9CDE-4C42-8B68-C33D018114B2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Many_jobs_02" ID="{A1ECA8C8-BB37-4C90-B852-6E72CE604698}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Festival_03" ID="{955B1057-CAAC-4D85-8919-C66C398BF0FC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Festival_02" ID="{17DC43FC-7BDF-4DC7-BD1A-3F4E3BB196D6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Few_jobs_02" ID="{9DF333C0-69D4-4DD6-B6F9-AC64BFADC8DF}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Many_jobs_04" ID="{315ED852-D248-4DEB-A9A4-86EDC13CFB7C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_THIEF_01" ID="{5303FED3-4AB7-4E07-8A6E-90F6975FB18E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Increase_price_01" ID="{0FE97FD3-4E08-4E2D-919B-05AC0D8A07E4}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DESOLATE_03" ID="{6EC6AF4B-2A3D-4E44-BE16-D659B8BB8B0A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Festival_04" ID="{7F8A3D5F-4FB0-4E5A-ABE7-F5B3E93107E0}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Many_jobs_03" ID="{AE28065D-BC50-4E9F-BEE1-F4DCEDB947B0}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Decrease_price_01" ID="{B5BED59E-608B-4EC0-B3D1-2C01202864DC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Few_jobs_04" ID="{EB102052-7E0F-4EDE-B3C8-A8C590FE023C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_event_DISEASE_02" ID="{CA92DEFE-30A6-4F14-A0B0-BBA1402F07DC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Decrease_price_04" ID="{200828D9-E7EA-4F66-BE30-D1AD428EF3A8}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Decrease_price_02" ID="{FEF69DE4-A01F-4F76-AD68-8449DDCF6D42}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_TO_Few_jobs_01" ID="{6981E0AD-9820-4F9B-996A-A40A9B3DB074}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>

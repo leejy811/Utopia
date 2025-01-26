@@ -2040,6 +2040,56 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{89E994FE-F33E-7059-4E09-5BB700BCC105}">
+			<ShortName>TOTOPIA2</ShortName>
+			<Path>TOTOPIA2.bnk</Path>
+			<Events>
+				<Event Id="4014218246" Name="Stop_TO_Decrease_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4014218245" Name="Stop_TO_Decrease_price_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4014218244" Name="Stop_TO_Decrease_price_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4014218243" Name="Stop_TO_Decrease_price_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3754217315" Name="Stop_TO_Discount_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3754217312" Name="Stop_TO_Discount_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3754217313" Name="Stop_TO_Discount_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3754217318" Name="Stop_TO_Discount_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4031053600" Name="Stop_TO_event_DESOLATE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4031053603" Name="Stop_TO_event_DESOLATE_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4031053602" Name="Stop_TO_event_DESOLATE_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="4031053605" Name="Stop_TO_event_DESOLATE_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="37099561" Name="Stop_TO_event_DISEASE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="37099562" Name="Stop_TO_event_DISEASE_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="37099563" Name="Stop_TO_event_DISEASE_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="37099564" Name="Stop_TO_event_DISEASE_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3572679577" Name="Stop_TO_event_FIRE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3572679578" Name="Stop_TO_event_FIRE_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3572679579" Name="Stop_TO_event_FIRE_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3572679580" Name="Stop_TO_event_FIRE_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3689082583" Name="Stop_TO_event_THIEF_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3689082580" Name="Stop_TO_event_THIEF_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3689082581" Name="Stop_TO_event_THIEF_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3689082578" Name="Stop_TO_event_THIEF_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1778818128" Name="Stop_TO_Festival_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1778818131" Name="Stop_TO_Festival_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1778818130" Name="Stop_TO_Festival_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1778818133" Name="Stop_TO_Festival_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2443780343" Name="Stop_TO_Few_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2443780340" Name="Stop_TO_Few_jobs_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2443780341" Name="Stop_TO_Few_jobs_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2443780338" Name="Stop_TO_Few_jobs_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1408964430" Name="Stop_TO_Increase_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1408964429" Name="Stop_TO_Increase_price_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1408964428" Name="Stop_TO_Increase_price_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1408964427" Name="Stop_TO_Increase_price_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3333135353" Name="Stop_TO_Low_in_stock_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3333135354" Name="Stop_TO_Low_in_stock_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3333135355" Name="Stop_TO_Low_in_stock_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="3333135356" Name="Stop_TO_Low_in_stock_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2692954104" Name="Stop_TO_Many_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2692954107" Name="Stop_TO_Many_jobs_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2692954106" Name="Stop_TO_Many_jobs_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="2692954109" Name="Stop_TO_Many_jobs_04" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+			</Events>
+		</SoundBank>
 	</SoundBanks>
-	<FileHash>{59F2639C-CE6E-BBEB-68B7-7295AA8283B4}</FileHash>
+	<FileHash>{84848D8C-9E37-A66B-F334-887EF03731C4}</FileHash>
 </SoundBanksInfo>
