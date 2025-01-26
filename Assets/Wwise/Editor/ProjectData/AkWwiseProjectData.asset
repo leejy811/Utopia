@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584637158922427330
+    m_lastTime: -8584637111513278324
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -240,7 +240,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584637158922144629
+    m_lastTime: -8584637111513144408
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -3195,8 +3195,25 @@ MonoBehaviour:
         guid: ed3c9a880bdc834c919d0aef72dbd2a0
       Path: Events\Default Work Unit\toto\Play_RACE_start
       maxAttenuation: 0
-      maxDuration: 0.56939584
-      minDuration: 0.56939584
+      maxDuration: 3.7500207
+      minDuration: 3.7500207
+    - name: Play_RACE_START_01
+      guid: 0a19fddbd5e5e1408010a19e4e35f3c4
+      id: 3977497622
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_RACE_START_01
+        ObjectType: 3
+        guid: 0a19fddbd5e5e1408010a19e4e35f3c4
+      Path: Events\Default Work Unit\Play_RACE_START_01
+      maxAttenuation: 0
+      maxDuration: 1.5481738
+      minDuration: 1.5481738
     - name: Play_RACE_STARTMOTION
       guid: acef577019c9cd47add892f95b1f7c77
       id: 3801795766
@@ -3214,6 +3231,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.5599617
       minDuration: 1.5599617
+    - name: Play_RACE_TANG
+      guid: 888cab91fb043947b14c112183096696
+      id: 4193698072
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_RACE_TANG
+        ObjectType: 3
+        guid: 888cab91fb043947b14c112183096696
+      Path: Events\Default Work Unit\Play_RACE_TANG
+      maxAttenuation: 0
+      maxDuration: 0.6552708
+      minDuration: 0.6552708
     - name: Play_Select_Button
       guid: 84c6369bcf91e748b6e9c8192be67e41
       id: 880454473
@@ -7582,7 +7616,7 @@ MonoBehaviour:
     m_lastTime: -8584897083625962771
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 7800000079000000
+  ExpandedWaapiItemIds: 06000000070000008a0000008b000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
