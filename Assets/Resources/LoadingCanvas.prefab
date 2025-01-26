@@ -689,3 +689,15 @@ MonoBehaviour:
   fadeSecond: 1
   canvasGroup: {fileID: 959295922157578792}
   progressBar: {fileID: 1181552010004239571}
+  tipText: {fileID: 1181552008815948785}
+  tipStrings:
+  - "TIP. 2025\uB144 1\uC6D4 4\uC77C \uD140\uBE14\uBC85 \uBAA8\uAE08\uC561\uC740
+    1,035,000\uC785\uB2C8\uB2E4."
+  - "TIP. 2025\uB144 1\uC6D4 4\uC77C \uD140\uBE14\uBC85 \uBAA8\uAE08\uC561\uC740
+    2,004,000\uC785\uB2C8\uB2E4."
+  - "TIP. 2025\uB144 1\uC6D4 4\uC77C \uD140\uBE14\uBC85 \uBAA8\uAE08\uC561\uC740
+    000\uC785\uB2C8\uB2E4."
+  backGroundImage: {fileID: 1181552008787689134}
+  backGroundSprites:
+  - {fileID: 21300000, guid: 958cbc0c3d5e0224abc7dfe890a85a8e, type: 3}
+  - {fileID: 21300000, guid: efa15311393e25746a16176defd23abe, type: 3}

@@ -1,7 +1,7 @@
 using DG.Tweening;
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -47,6 +47,10 @@ public class LoadingSceneController : MonoBehaviour
     public float fadeSecond;
     public CanvasGroup canvasGroup;
     public Image progressBar;
+    public TextMeshProUGUI tipText;
+    public List<string> tipStrings;
+    public Image backGroundImage;
+    public List<Sprite> backGroundSprites;
 
     private string loadSceneName;
 
@@ -61,6 +65,8 @@ public class LoadingSceneController : MonoBehaviour
     private IEnumerator LoadSceneProcess()
     {
         progressBar.fillAmount = 0f;
+        tipText.text = tipStrings[Random.Range(0, tipStrings.Count)];
+        backGroundImage.sprite = backGroundSprites[(int)GameManager.instance.curMapType];
         yield return StartCoroutine(Fade(true));
 
         AsyncOperation op = SceneManager.LoadSceneAsync(loadSceneName);
