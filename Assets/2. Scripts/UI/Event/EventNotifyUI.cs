@@ -39,7 +39,7 @@ public class EventNotifyUI : MonoBehaviour, IObserver
     [Header("Camera")]
     public CameraPriorityController cameraPriorityController;
 
-    private bool isClicked;
+    private bool[] isClicked = new bool[2];
 
     public void SetValue(Building building)
     {
@@ -53,13 +53,16 @@ public class EventNotifyUI : MonoBehaviour, IObserver
             if (building.curEvents.Count > i)
             {
                 eventMouseOvers[i].interactable = true;
+                eventMouseOvers[i].GetComponent<Button>().interactable = true;
                 eventIconImages[i].sprite = building.curEvents[i].eventIcon;
                 eventSolutionPanels[i].SetValue(building.curEvents[i]);
             }
             else
             {
                 eventMouseOvers[i].interactable = false;
+                eventMouseOvers[i].GetComponent<Button>().interactable = false;
                 eventIconImages[i].enabled = false;
+                eventSolutionPanels[i].panel.SetActive(false);
             }
         }
     }
@@ -79,6 +82,8 @@ public class EventNotifyUI : MonoBehaviour, IObserver
     public void Init()
     {
         curIndex = 0;
+        isClicked[0] = false;
+        isClicked[1] = false;
 
         if (EventManager.instance.eventBuildings.Count != 0)
         {
@@ -91,8 +96,8 @@ public class EventNotifyUI : MonoBehaviour, IObserver
     public void OnClickEventButton(int index)
     {
         List<Event> events = EventManager.instance.eventBuildings[curIndex].curEvents;
-        isClicked = !isClicked;
-        if (!isClicked)
+        isClicked[index] = !isClicked[index];
+        if (!isClicked[index])
         {
             for (int i = 0; i < eventMouseOvers.Length; i++)
             {
@@ -100,16 +105,19 @@ public class EventNotifyUI : MonoBehaviour, IObserver
                     eventMouseOvers[i].interactable = true;
             }
             eventSolutionPanels[index].panel.SetActive(false);
-            return;
         }
+        else
+        {
+            eventSolutionPanels[index].panel.SetActive(true);
+            eventSolutionPanels[(index + 1) % 2].panel.SetActive(false);
 
-        eventSolutionPanels[index].panel.SetActive(true);
-        eventSolutionPanels[(index + 1) % 2].panel.SetActive(false);
+            eventSolutionPanels[index].SetValue(events[index]);
 
-        eventSolutionPanels[index].SetValue(events[index]);
+            eventMouseOvers[index].interactable = false;
+            eventMouseOvers[(index + 1) % 2].interactable = false;
 
-        eventMouseOvers[index].interactable = false;
-        eventMouseOvers[(index + 1) % 2].interactable = false;
+            isClicked[(index + 1) % 2] = false;
+        }
     }
 
     public void OnDisable()

@@ -86,11 +86,13 @@ public class RoutineManager : MonoBehaviour
                 day = day.AddDays(1);
 
                 UpdateHappiness();
+                ApplyDept();
+                if (creditRating == 0) return;
+
                 EventManager.instance.EffectUpdate();
                 EventManager.instance.CheckEvents();
                 EventManager.instance.RandomRoulette(1);
                 UIManager.instance.SetEventInfo(EventManager.instance.curEvents.ToArray());
-                ApplyDept();
 
                 UIManager.instance.UpdateDailyInfo();
 
@@ -109,11 +111,13 @@ public class RoutineManager : MonoBehaviour
             day = day.AddDays(1);
 
             UpdateHappiness();
+            ApplyDept();
+            if (creditRating == 0) return;
+
             EventManager.instance.EffectUpdate();
             EventManager.instance.CheckEvents();
             EventManager.instance.RandomRoulette(1);
             UIManager.instance.SetEventInfo(EventManager.instance.curEvents.ToArray());
-            ApplyDept();
             ChipManager.instance.CostUpdate();
             ChipManager.instance.RatioUpdate();
             if (day.DayOfWeek == DayOfWeek.Monday)
@@ -162,6 +166,7 @@ public class RoutineManager : MonoBehaviour
             payFailTime++;
             if (creditRating - 25 <= 0)
             {
+                creditRating = 0;
                 AkSoundEngine.SetState("BGM", "None");
                 UIManager.instance.notifyObserver(EventState.GameOver);
             }
