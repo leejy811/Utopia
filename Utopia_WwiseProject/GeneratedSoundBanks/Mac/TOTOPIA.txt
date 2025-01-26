@@ -158,7 +158,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	683471986	BLACKJACK_rule_blackjack	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BLACKJACK_rule_blackjack_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_rule_blackjack		207348
 	691630657	BLACKJACK_LOOSE	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BLACKJACK_LOOSE_A6992CB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\BLACKJACK_LOOSE		176388
 	698255832	TO_Few_jobs_04	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Few_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\TOTOPIA_CONDITION_IN2\TO_Few_jobs_04		728372
-	738002531	RACE_start	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_start_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_start		54758
+	738002531	RACE_start	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_start_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_start		720100
 	742753463	Race_BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Race_BGM_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\Race_BGM		4608096
 	791981080	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BGM_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM\BGM		7680096
 	839951050	3131	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\3131_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Danger\BGM4\3131		12289040

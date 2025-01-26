@@ -758,7 +758,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{142C2B5B-38AC-E42E-4EB0-FCD5F6CC949C}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{B369B6B8-AE5D-CA69-60D7-410C08282F7E}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1115,7 +1115,7 @@
 						<MediaRef Id="1028501577"/>
 					</MediaRefs>
 				</Event>
-				<Event Id="1325406880" Name="Play_RACE_start" DurationType="OneShot" DurationMin="0.56939584" DurationMax="0.56939584">
+				<Event Id="1325406880" Name="Play_RACE_start" DurationType="OneShot" DurationMin="3.7500207" DurationMax="3.7500207">
 					<MediaRefs>
 						<MediaRef Id="738002531"/>
 					</MediaRefs>
@@ -2042,10 +2042,30 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{89E994FE-F33E-7059-4E09-5BB700BCC105}">
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{8C3FCC2D-D600-74FF-2832-F7398EF15391}">
 			<ShortName>TOTOPIA2</ShortName>
 			<Path>TOTOPIA2.bnk</Path>
+			<Media>
+				<File Id="389311814" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_START.wav</ShortName>
+					<CachePath>SFX/RACE_START_408D07EF.wem</CachePath>
+				</File>
+				<File Id="774795037" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>RACE_TANG.wav</ShortName>
+					<CachePath>SFX/RACE_TANG_BD5E427A.wem</CachePath>
+				</File>
+			</Media>
 			<Events>
+				<Event Id="3977497622" Name="Play_RACE_START_01" DurationType="OneShot" DurationMin="1.5481738" DurationMax="1.5481738">
+					<MediaRefs>
+						<MediaRef Id="389311814"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="4193698072" Name="Play_RACE_TANG" DurationType="OneShot" DurationMin="0.6552708" DurationMax="0.6552708">
+					<MediaRefs>
+						<MediaRef Id="774795037"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="4014218246" Name="Stop_TO_Decrease_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4014218245" Name="Stop_TO_Decrease_price_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4014218244" Name="Stop_TO_Decrease_price_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -2093,5 +2113,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{BC2D3AEB-5B35-6FB9-EDAD-B4A4D6B18E1B}</FileHash>
+	<FileHash>{50F03C3B-B0C9-68C7-31B7-ADBFB20D7122}</FileHash>
 </SoundBanksInfo>

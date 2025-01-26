@@ -4437,6 +4437,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_RACE_START_01" ID="{DBFD190A-E5D5-40E1-8010-A19E4E35F3C4}">
+					<ChildrenList>
+						<Action Name="" ID="{481652F3-CA7C-4BE5-8407-2F30850C0CD3}" ShortID="582931441">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RACE_START" ID="{CC287C87-DD4A-4D88-812B-071B2A07AF5C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_RACE_TANG" ID="{91AB8C88-04FB-4739-B14C-112183096696}">
+					<ChildrenList>
+						<Action Name="" ID="{C1D88D56-6EE2-4F71-B6B9-340CD1DFB365}" ShortID="803540160">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RACE_TANG" ID="{B3C7D3F8-EF6E-4BD9-ADE9-2D7B640F3911}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

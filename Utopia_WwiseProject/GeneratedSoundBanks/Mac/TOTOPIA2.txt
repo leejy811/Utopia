@@ -35,6 +35,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3754217313	Stop_TO_Discount_03			\Default Work Unit\Stop_TO_Discount_03	
 	3754217315	Stop_TO_Discount_01			\Default Work Unit\Stop_TO_Discount_01	
 	3754217318	Stop_TO_Discount_04			\Default Work Unit\Stop_TO_Discount_04	
+	3977497622	Play_RACE_START_01			\Default Work Unit\Play_RACE_START_01	
 	4014218243	Stop_TO_Decrease_price_04			\Default Work Unit\Stop_TO_Decrease_price_04	
 	4014218244	Stop_TO_Decrease_price_03			\Default Work Unit\Stop_TO_Decrease_price_03	
 	4014218245	Stop_TO_Decrease_price_02			\Default Work Unit\Stop_TO_Decrease_price_02	
@@ -43,4 +44,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	4031053602	Stop_TO_event_DESOLATE_03			\Default Work Unit\Stop_TO_event_DESOLATE_03	
 	4031053603	Stop_TO_event_DESOLATE_02			\Default Work Unit\Stop_TO_event_DESOLATE_02	
 	4031053605	Stop_TO_event_DESOLATE_04			\Default Work Unit\Stop_TO_event_DESOLATE_04	
+	4193698072	Play_RACE_TANG			\Default Work Unit\Play_RACE_TANG	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	389311814	RACE_START	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_START_99D9845F.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_START		297344
+	774795037	RACE_TANG	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\RACE_TANG_358D3AAA.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_TANG		125908
 

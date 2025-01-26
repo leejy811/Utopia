@@ -150,7 +150,9 @@ namespace AK
         static const AkUniqueID PLAY_RACE_RECALL_01 = 3546129119U;
         static const AkUniqueID PLAY_RACE_RECALL_02 = 3546129116U;
         static const AkUniqueID PLAY_RACE_START = 1325406880U;
+        static const AkUniqueID PLAY_RACE_START_01 = 3977497622U;
         static const AkUniqueID PLAY_RACE_STARTMOTION = 3801795766U;
+        static const AkUniqueID PLAY_RACE_TANG = 4193698072U;
         static const AkUniqueID PLAY_SELECT_BUTTON = 880454473U;
         static const AkUniqueID PLAY_SLOT_BGM = 123171413U;
         static const AkUniqueID PLAY_SLOT_DRRRRRR_01 = 3452595303U;

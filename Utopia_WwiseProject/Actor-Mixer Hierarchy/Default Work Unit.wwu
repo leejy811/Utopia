@@ -24704,6 +24704,73 @@
 						</Sound>
 					</ChildrenList>
 				</Folder>
+				<Sound Name="RACE_TANG" ID="{B3C7D3F8-EF6E-4BD9-ADE9-2D7B640F3911}" ShortID="884206683">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="RACE_TANG" ID="{645F1814-F57A-4016-9E4F-5C5E975FDD00}">
+							<PropertyList>
+								<Property Name="FadeInDuration" Type="Real64" Value="0.0270524655963303"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.0721399082568808"/>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>RACE_TANG.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="774795037"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="RACE_TANG" ID="{645F1814-F57A-4016-9E4F-5C5E975FDD00}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="RACE_START" ID="{CC287C87-DD4A-4D88-812B-071B2A07AF5C}" ShortID="568610112">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-13</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="RACE_START" ID="{60800D64-69F2-43D3-BA0A-E90C108EF87C}">
+							<PropertyList>
+								<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+								<Property Name="TrimEnd" Type="Real64" Value="1.54817373853211"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>RACE_START.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="389311814"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="RACE_START" ID="{60800D64-69F2-43D3-BA0A-E90C108EF87C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>
