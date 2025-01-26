@@ -2042,7 +2042,7 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{8C8B48C7-3AA8-6132-A98B-D933E11290A8}">
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{8B82E812-6C66-0FB3-3504-B4E731A24A2D}">
 			<ShortName>TOTOPIA2</ShortName>
 			<Path>TOTOPIA2.bnk</Path>
 			<Media>
@@ -2140,5 +2140,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0AA435B2-F7DE-E4A8-DC64-0998EBC3BB42}</FileHash>
+	<FileHash>{48B1013E-BF32-A4C9-DC48-2BA9DD44EF33}</FileHash>
 </SoundBanksInfo>
