@@ -71,6 +71,10 @@
 							<GameParameterRef Name="MINIGAME" ID="{95531E89-701B-4C64-ADCF-DEF0612E084E}"/>
 							<Value>1.24448529411765</Value>
 						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="JACKPOT" ID="{08FEA616-C65E-4F0A-BEB3-F05E732D1D97}"/>
+							<Value>0</Value>
+						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>

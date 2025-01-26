@@ -298,7 +298,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{A423A27A-8C2A-A061-EE74-D09D895140B1}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0AA0CB48-A070-B9E8-EB64-EC1810799085}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -325,6 +325,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 				<GameParameter Id="3310578182" Name="MINIGAME"/>
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
+				<GameParameter Id="4121515321" Name="JACKPOT"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="412724365" Name="BGM">
@@ -757,7 +758,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{A74514A7-6509-2792-4837-E505823BCAC8}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{BD4342E3-1EB8-BE62-21AD-BAE5E8C65B8C}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1483,6 +1484,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 				<GameParameter Id="3310578182" Name="MINIGAME"/>
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
+				<GameParameter Id="4121515321" Name="JACKPOT"/>
 			</GameParameters>
 			<StateGroups>
 				<StateGroup Id="412724365" Name="BGM">
@@ -2091,5 +2093,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9AC4D1C3-BD7E-7762-FCFE-BE60F77F7DCB}</FileHash>
+	<FileHash>{5D3E9D0B-C99D-AD7C-B4B7-B5D132C65D41}</FileHash>
 </SoundBanksInfo>

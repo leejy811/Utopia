@@ -119,6 +119,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2212414277	DIST			\Default Work Unit\DIST	
 	3310578182	MINIGAME			\Default Work Unit\MINIGAME	
 	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
+	4121515321	JACKPOT			\Default Work Unit\JACKPOT	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	10352558	BLACKJACK_ALLIN	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BLACKJACK_ALLIN_175525F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\BLACKJACK_ALLIN		750896
