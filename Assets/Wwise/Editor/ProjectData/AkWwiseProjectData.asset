@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584637111513278324
+    m_lastTime: -8584637096426718317
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -240,7 +240,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584637111513144408
+    m_lastTime: -8584637096426584387
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -2417,6 +2417,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_MINIGAME_COIN
+      guid: d0a09e6e3fe0264ba97e67181c1163a7
+      id: 3433467811
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_MINIGAME_COIN
+        ObjectType: 3
+        guid: d0a09e6e3fe0264ba97e67181c1163a7
+      Path: Events\Default Work Unit\Play_MINIGAME_COIN
+      maxAttenuation: 0
+      maxDuration: 0.46508333
+      minDuration: 0.46508333
     - name: Play_Mouse_001_v1
       guid: f707d5dee5c0034b86f3c661a1b8da9c
       id: 3906795593

@@ -4459,6 +4459,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_MINIGAME_COIN" ID="{6E9EA0D0-E03F-4B26-A97E-67181C1163A7}">
+					<ChildrenList>
+						<Action Name="" ID="{CB368F0E-8396-4ABD-9854-765BBC017836}" ShortID="286469228">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MINIGAME_COIN" ID="{8678870A-BA10-4104-BF7C-5764FBD93FA6}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

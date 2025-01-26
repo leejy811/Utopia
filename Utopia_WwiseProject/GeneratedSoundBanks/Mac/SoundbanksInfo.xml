@@ -2042,10 +2042,14 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{2050B3F8-287F-F9F3-8DD7-2840C968A9CD}">
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{C92FAD21-CDF5-B167-036B-DB0DF15CCB73}">
 			<ShortName>TOTOPIA2</ShortName>
 			<Path>TOTOPIA2.bnk</Path>
 			<Media>
+				<File Id="75256438" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>MINIGAME_COIN.wav</ShortName>
+					<CachePath>SFX/MINIGAME_COIN_84E28A70.wem</CachePath>
+				</File>
 				<File Id="389311814" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_START.wav</ShortName>
 					<CachePath>SFX/RACE_START_99D9845F.wem</CachePath>
@@ -2056,6 +2060,11 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="3433467811" Name="Play_MINIGAME_COIN" DurationType="OneShot" DurationMin="0.46508333" DurationMax="0.46508333">
+					<MediaRefs>
+						<MediaRef Id="75256438"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3977497622" Name="Play_RACE_START_01" DurationType="OneShot" DurationMin="1.5481738" DurationMax="1.5481738">
 					<MediaRefs>
 						<MediaRef Id="389311814"/>
@@ -2113,5 +2122,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{431FB3F3-B813-F82A-94A3-AE8CE521E299}</FileHash>
+	<FileHash>{358A93EE-D0A2-C4DA-C415-B1E7FB0021EA}</FileHash>
 </SoundBanksInfo>

@@ -23,6 +23,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3333135354	Stop_TO_Low_in_stock_02			\Default Work Unit\Stop_TO_Low_in_stock_02	
 	3333135355	Stop_TO_Low_in_stock_03			\Default Work Unit\Stop_TO_Low_in_stock_03	
 	3333135356	Stop_TO_Low_in_stock_04			\Default Work Unit\Stop_TO_Low_in_stock_04	
+	3433467811	Play_MINIGAME_COIN			\Default Work Unit\Play_MINIGAME_COIN	
 	3572679577	Stop_TO_event_FIRE_01			\Default Work Unit\Stop_TO_event_FIRE_01	
 	3572679578	Stop_TO_event_FIRE_02			\Default Work Unit\Stop_TO_event_FIRE_02	
 	3572679579	Stop_TO_event_FIRE_03			\Default Work Unit\Stop_TO_event_FIRE_03	
@@ -47,6 +48,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	4193698072	Play_RACE_TANG			\Default Work Unit\Play_RACE_TANG	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	75256438	MINIGAME_COIN	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\MINIGAME_COIN_84E28A70.wem		\Actor-Mixer Hierarchy\Default Work Unit\MINIGAME_COIN		89392
 	389311814	RACE_START	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\RACE_START_99D9845F.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_START		297344
 	774795037	RACE_TANG	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\RACE_TANG_358D3AAA.wem		\Actor-Mixer Hierarchy\Default Work Unit\RACE_TANG		125908
 
