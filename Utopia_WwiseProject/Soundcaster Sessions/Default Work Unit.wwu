@@ -25,19 +25,19 @@
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1</Value>
+							<Value>1.7002853380158</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
-							<Value>0</Value>
+							<Value>25.2379399311588</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>28.9404674636234</Value>
+							<Value>8.47293499609094</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
-							<Value>0</Value>
+							<Value>2.72727272727273</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="OPTION" ID="{975BA635-9C2A-463E-AE0A-4BE629293298}"/>
@@ -49,11 +49,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="TIMELAP" ID="{815A235E-A3FA-48A9-B8B5-800F68BF3307}"/>
-							<Value>2</Value>
+							<Value>1.37383177570093</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
-							<Value>1</Value>
+							<Value>2</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BGM_VOL" ID="{59FFE417-448F-496D-8DDD-D6E9B337A6DE}"/>
@@ -61,7 +61,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>7.6</Value>
+							<Value>4.96682242990656</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
@@ -69,11 +69,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MINIGAME" ID="{95531E89-701B-4C64-ADCF-DEF0612E084E}"/>
-							<Value>1</Value>
+							<Value>1.24448529411765</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+						<CurrentStateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="FAIL" ID="{F2A4569E-DFDD-4B8C-8F1A-55D8468B4A57}"/>

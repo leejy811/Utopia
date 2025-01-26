@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584656496896560073
+    m_lastTime: -8584637465199410200
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -226,7 +226,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584656496935429452
+    m_lastTime: -8584637465199514359
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -395,6 +395,23 @@ MonoBehaviour:
         ObjectType: 4
         guid: 79a60248ea31c048b4ed63a9433d7677
       Path: Events\Default Work Unit\old
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play
+      guid: bdfc79ab59f74343a2239296903ed2b0
+      id: 1256202815
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play
+        ObjectType: 3
+        guid: bdfc79ab59f74343a2239296903ed2b0
+      Path: Events\Default Work Unit\Play
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -1595,6 +1612,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Play_BLACKJACK_ALLIN
+      guid: d8cca3e964112b4b8adad2a20a084165
+      id: 2202932523
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_BLACKJACK_ALLIN
+        ObjectType: 3
+        guid: d8cca3e964112b4b8adad2a20a084165
+      Path: Events\Default Work Unit\Play_BLACKJACK_ALLIN
+      maxAttenuation: 0
+      maxDuration: 3.9104166
+      minDuration: 3.9104166
     - name: Play_BLACKJACK_bet
       guid: 21f0e4bf52f6cc4b95c70d509e2127c8
       id: 3857103390
@@ -1695,6 +1729,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.2434375
       minDuration: 0.2434375
+    - name: Play_BLACKJACK_GETBACK
+      guid: de296b6a0fc25246b27e7c106794b13f
+      id: 933227670
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_BLACKJACK_GETBACK
+        ObjectType: 3
+        guid: de296b6a0fc25246b27e7c106794b13f
+      Path: Events\Default Work Unit\Play_BLACKJACK_GETBACK
+      maxAttenuation: 0
+      maxDuration: 1.1250417
+      minDuration: 1.1250417
     - name: Play_BLACKJACK_intro
       guid: 63add5f83567534a8e7f5bac406fb6de
       id: 2854514125
@@ -1715,6 +1766,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.5914792
       minDuration: 1.5914792
+    - name: Play_BLACKJACK_LOOSE
+      guid: f1bd304ac2e39545bfeaafc882ec6461
+      id: 3328211061
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_BLACKJACK_LOOSE
+        ObjectType: 3
+        guid: f1bd304ac2e39545bfeaafc882ec6461
+      Path: Events\Default Work Unit\Play_BLACKJACK_LOOSE
+      maxAttenuation: 0
+      maxDuration: 0.91818184
+      minDuration: 0.91818184
     - name: Play_BLACKJACK_recall
       guid: 9735693fffcfd748939b6ea4748e5f54
       id: 1114446378
@@ -3115,6 +3183,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.56939584
       minDuration: 0.56939584
+    - name: Play_RACE_STARTMOTION
+      guid: acef577019c9cd47add892f95b1f7c77
+      id: 3801795766
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_RACE_STARTMOTION
+        ObjectType: 3
+        guid: acef577019c9cd47add892f95b1f7c77
+      Path: Events\Default Work Unit\Play_RACE_STARTMOTION
+      maxAttenuation: 0
+      maxDuration: 4.2464375
+      minDuration: 4.2464375
     - name: Play_Select_Button
       guid: 84c6369bcf91e748b6e9c8192be67e41
       id: 880454473
@@ -3152,6 +3237,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 0988c9710d304f478bb9a49af57f7d98
       Path: Events\Default Work Unit\old\Play_singsingsingmybird
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Slot_BGM
+      guid: c1a7a672daf5af4c95a3d5102d0f31eb
+      id: 123171413
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Slot_BGM
+        ObjectType: 3
+        guid: c1a7a672daf5af4c95a3d5102d0f31eb
+      Path: Events\Default Work Unit\Play_Slot_BGM
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -3555,6 +3657,754 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 120.048
       minDuration: 120.048
+    - name: Play_TO_Decrease_price_01
+      guid: bb0207b9ce4a7b4998920367d901a898
+      id: 4042442036
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Decrease_price_01
+        ObjectType: 3
+        guid: bb0207b9ce4a7b4998920367d901a898
+      Path: Events\Default Work Unit\Play_TO_Decrease_price_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Decrease_price_02
+      guid: 2efa62f8ae5ad1498245afba83ff2fb3
+      id: 4042442039
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Decrease_price_02
+        ObjectType: 3
+        guid: 2efa62f8ae5ad1498245afba83ff2fb3
+      Path: Events\Default Work Unit\Play_TO_Decrease_price_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Decrease_price_03
+      guid: 208473e95fec6a47a0cff41ad757a739
+      id: 4042442038
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Decrease_price_03
+        ObjectType: 3
+        guid: 208473e95fec6a47a0cff41ad757a739
+      Path: Events\Default Work Unit\Play_TO_Decrease_price_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Decrease_price_04
+      guid: 46edec5c63847a4fa29541805d7f475b
+      id: 4042442033
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Decrease_price_04
+        ObjectType: 3
+        guid: 46edec5c63847a4fa29541805d7f475b
+      Path: Events\Default Work Unit\Play_TO_Decrease_price_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Discount_01
+      guid: f082b92d8e12c74f86414bf9fb532415
+      id: 2787455057
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Discount_01
+        ObjectType: 3
+        guid: f082b92d8e12c74f86414bf9fb532415
+      Path: Events\Default Work Unit\Play_TO_Discount_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Discount_02
+      guid: 229e1e52cbe4c142a7186b2d589704d1
+      id: 2787455058
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Discount_02
+        ObjectType: 3
+        guid: 229e1e52cbe4c142a7186b2d589704d1
+      Path: Events\Default Work Unit\Play_TO_Discount_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Discount_03
+      guid: 1585be282d089d41ac1cd82365ac08f2
+      id: 2787455059
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Discount_03
+        ObjectType: 3
+        guid: 1585be282d089d41ac1cd82365ac08f2
+      Path: Events\Default Work Unit\Play_TO_Discount_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Discount_04
+      guid: 859b7057599b054dbdfb7e721f7c0550
+      id: 2787455060
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Discount_04
+        ObjectType: 3
+        guid: 859b7057599b054dbdfb7e721f7c0550
+      Path: Events\Default Work Unit\Play_TO_Discount_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DESOLATE_01
+      guid: 26884d02bc042747a4ab3a383730653f
+      id: 633610690
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DESOLATE_01
+        ObjectType: 3
+        guid: 26884d02bc042747a4ab3a383730653f
+      Path: Events\Default Work Unit\Play_TO_event_DESOLATE_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DESOLATE_02
+      guid: b3e0d198a4f4dc47a8959ae02eedd573
+      id: 633610689
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DESOLATE_02
+        ObjectType: 3
+        guid: b3e0d198a4f4dc47a8959ae02eedd573
+      Path: Events\Default Work Unit\Play_TO_event_DESOLATE_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DESOLATE_03
+      guid: d41c608538ff5644828bd1e01f377b0b
+      id: 633610688
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DESOLATE_03
+        ObjectType: 3
+        guid: d41c608538ff5644828bd1e01f377b0b
+      Path: Events\Default Work Unit\Play_TO_event_DESOLATE_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DESOLATE_04
+      guid: 265f362464e4744ca59598ff09f0abfc
+      id: 633610695
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DESOLATE_04
+        ObjectType: 3
+        guid: 265f362464e4744ca59598ff09f0abfc
+      Path: Events\Default Work Unit\Play_TO_event_DESOLATE_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DISEASE_01
+      guid: e85b1c3eee4d6b45bf1c8aa774d77624
+      id: 3188460015
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DISEASE_01
+        ObjectType: 3
+        guid: e85b1c3eee4d6b45bf1c8aa774d77624
+      Path: Events\Default Work Unit\Play_TO_event_DISEASE_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DISEASE_02
+      guid: a1e4e193ae0c4041939295244128b675
+      id: 3188460012
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DISEASE_02
+        ObjectType: 3
+        guid: a1e4e193ae0c4041939295244128b675
+      Path: Events\Default Work Unit\Play_TO_event_DISEASE_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DISEASE_03
+      guid: 40779bd4369b68419d15b3f00ae60d47
+      id: 3188460013
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DISEASE_03
+        ObjectType: 3
+        guid: 40779bd4369b68419d15b3f00ae60d47
+      Path: Events\Default Work Unit\Play_TO_event_DISEASE_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_DISEASE_04
+      guid: 7750a5992262f447ab1b59828c421626
+      id: 3188460010
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_DISEASE_04
+        ObjectType: 3
+        guid: 7750a5992262f447ab1b59828c421626
+      Path: Events\Default Work Unit\Play_TO_event_DISEASE_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_FIRE_01
+      guid: 3b18f2f042a9e44e90257c6dbaedc5b5
+      id: 2210916251
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_FIRE_01
+        ObjectType: 3
+        guid: 3b18f2f042a9e44e90257c6dbaedc5b5
+      Path: Events\Default Work Unit\Play_TO_event_FIRE_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_FIRE_02
+      guid: fa6bd0373467bb44a97404a24c98c99a
+      id: 2210916248
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_FIRE_02
+        ObjectType: 3
+        guid: fa6bd0373467bb44a97404a24c98c99a
+      Path: Events\Default Work Unit\Play_TO_event_FIRE_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_FIRE_03
+      guid: a604e9751be1784e800770863dc63a85
+      id: 2210916249
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_FIRE_03
+        ObjectType: 3
+        guid: a604e9751be1784e800770863dc63a85
+      Path: Events\Default Work Unit\Play_TO_event_FIRE_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_FIRE_04
+      guid: 3c48bd8aee93db4b8d0c9ffed9241f94
+      id: 2210916254
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_FIRE_04
+        ObjectType: 3
+        guid: 3c48bd8aee93db4b8d0c9ffed9241f94
+      Path: Events\Default Work Unit\Play_TO_event_FIRE_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_THIEF_01
+      guid: 95144e8241bbea44bb78aba74a5533df
+      id: 1161776993
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_THIEF_01
+        ObjectType: 3
+        guid: 95144e8241bbea44bb78aba74a5533df
+      Path: Events\Default Work Unit\Play_TO_event_THIEF_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_THIEF_02
+      guid: 187405b3127da7479cc5869848a1da1a
+      id: 1161776994
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_THIEF_02
+        ObjectType: 3
+        guid: 187405b3127da7479cc5869848a1da1a
+      Path: Events\Default Work Unit\Play_TO_event_THIEF_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_THIEF_03
+      guid: 674e853f0026f8449ef89a773364c541
+      id: 1161776995
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_THIEF_03
+        ObjectType: 3
+        guid: 674e853f0026f8449ef89a773364c541
+      Path: Events\Default Work Unit\Play_TO_event_THIEF_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_event_THIEF_04
+      guid: e8b83fb758bf3e4b8971ec2412744e29
+      id: 1161776996
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_event_THIEF_04
+        ObjectType: 3
+        guid: e8b83fb758bf3e4b8971ec2412744e29
+      Path: Events\Default Work Unit\Play_TO_event_THIEF_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Festival_01
+      guid: 1b0fb9180e6bd54c997e5f5e8c9a3b44
+      id: 2309878450
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Festival_01
+        ObjectType: 3
+        guid: 1b0fb9180e6bd54c997e5f5e8c9a3b44
+      Path: Events\Default Work Unit\Play_TO_Festival_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Festival_02
+      guid: cff422bbbe47394e8a0390c7e82dad6b
+      id: 2309878449
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Festival_02
+        ObjectType: 3
+        guid: cff422bbbe47394e8a0390c7e82dad6b
+      Path: Events\Default Work Unit\Play_TO_Festival_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Festival_03
+      guid: 63c60e82df9a7f42b6436103b37ae46f
+      id: 2309878448
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Festival_03
+        ObjectType: 3
+        guid: 63c60e82df9a7f42b6436103b37ae46f
+      Path: Events\Default Work Unit\Play_TO_Festival_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Festival_04
+      guid: 4a9b8779e80cdd4e8d4e6d542c47e891
+      id: 2309878455
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Festival_04
+        ObjectType: 3
+        guid: 4a9b8779e80cdd4e8d4e6d542c47e891
+      Path: Events\Default Work Unit\Play_TO_Festival_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Few_jobs_01
+      guid: acb3f55b4febbe4e933d0391e284ac42
+      id: 4024649529
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Few_jobs_01
+        ObjectType: 3
+        guid: acb3f55b4febbe4e933d0391e284ac42
+      Path: Events\Default Work Unit\Play_TO_Few_jobs_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Few_jobs_02
+      guid: f1d8755f3d1beb44930ee319da69ff75
+      id: 4024649530
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Few_jobs_02
+        ObjectType: 3
+        guid: f1d8755f3d1beb44930ee319da69ff75
+      Path: Events\Default Work Unit\Play_TO_Few_jobs_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Few_jobs_03
+      guid: 324e2e5033292f46b2625d864273296f
+      id: 4024649531
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Few_jobs_03
+        ObjectType: 3
+        guid: 324e2e5033292f46b2625d864273296f
+      Path: Events\Default Work Unit\Play_TO_Few_jobs_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Few_jobs_04
+      guid: a8a647c9ec7c6a4dba75f3309e03fa7e
+      id: 4024649532
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Few_jobs_04
+        ObjectType: 3
+        guid: a8a647c9ec7c6a4dba75f3309e03fa7e
+      Path: Events\Default Work Unit\Play_TO_Few_jobs_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Increase_price_01
+      guid: 5244cedbdd5c6a41a37847884f5fdbca
+      id: 1236395704
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Increase_price_01
+        ObjectType: 3
+        guid: 5244cedbdd5c6a41a37847884f5fdbca
+      Path: Events\Default Work Unit\Play_TO_Increase_price_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Increase_price_02
+      guid: 15dfb863bcd858458f3f32612295c835
+      id: 1236395707
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Increase_price_02
+        ObjectType: 3
+        guid: 15dfb863bcd858458f3f32612295c835
+      Path: Events\Default Work Unit\Play_TO_Increase_price_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Increase_price_03
+      guid: 58207366ebe3c942b932f3bcc329fcde
+      id: 1236395706
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Increase_price_03
+        ObjectType: 3
+        guid: 58207366ebe3c942b932f3bcc329fcde
+      Path: Events\Default Work Unit\Play_TO_Increase_price_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Increase_price_04
+      guid: b615751c9a9491428d903b94abe8cfe5
+      id: 1236395709
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Increase_price_04
+        ObjectType: 3
+        guid: b615751c9a9491428d903b94abe8cfe5
+      Path: Events\Default Work Unit\Play_TO_Increase_price_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Low_in_stock_01
+      guid: f9eeae2b10d1d642a321dc39a326a191
+      id: 2706297875
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Low_in_stock_01
+        ObjectType: 3
+        guid: f9eeae2b10d1d642a321dc39a326a191
+      Path: Events\Default Work Unit\Play_TO_Low_in_stock_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Low_in_stock_02
+      guid: 80f1fb4f10f93f4db157ae1a13d0fbe2
+      id: 2706297872
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Low_in_stock_02
+        ObjectType: 3
+        guid: 80f1fb4f10f93f4db157ae1a13d0fbe2
+      Path: Events\Default Work Unit\Play_TO_Low_in_stock_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Low_in_stock_03
+      guid: da4bf77223044c4ca560feea08f6d21f
+      id: 2706297873
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Low_in_stock_03
+        ObjectType: 3
+        guid: da4bf77223044c4ca560feea08f6d21f
+      Path: Events\Default Work Unit\Play_TO_Low_in_stock_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Low_in_stock_04
+      guid: 0543d3575e5a624d82660c26ea409f70
+      id: 2706297878
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Low_in_stock_04
+        ObjectType: 3
+        guid: 0543d3575e5a624d82660c26ea409f70
+      Path: Events\Default Work Unit\Play_TO_Low_in_stock_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Many_jobs_01
+      guid: 2ab28e29228a7b4abca7b1ec2346ce71
+      id: 4205911962
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Many_jobs_01
+        ObjectType: 3
+        guid: 2ab28e29228a7b4abca7b1ec2346ce71
+      Path: Events\Default Work Unit\Play_TO_Many_jobs_01
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Many_jobs_02
+      guid: 214f470e6539664495dc0a921a3abfdb
+      id: 4205911961
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Many_jobs_02
+        ObjectType: 3
+        guid: 214f470e6539664495dc0a921a3abfdb
+      Path: Events\Default Work Unit\Play_TO_Many_jobs_02
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Many_jobs_03
+      guid: 64c7ac66dd356346a320132b6f69fd56
+      id: 4205911960
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Many_jobs_03
+        ObjectType: 3
+        guid: 64c7ac66dd356346a320132b6f69fd56
+      Path: Events\Default Work Unit\Play_TO_Many_jobs_03
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_TO_Many_jobs_04
+      guid: ff03c425906ae94ba2ed5225ccf548b1
+      id: 4205911967
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_TO_Many_jobs_04
+        ObjectType: 3
+        guid: ff03c425906ae94ba2ed5225ccf548b1
+      Path: Events\Default Work Unit\Play_TO_Many_jobs_04
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_TOBGM
       guid: 1e7c25522d175f4ebb8c657b72a83788
       id: 1553512265
@@ -5272,6 +6122,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Slot_BGM
+      guid: 4eeba6d4a4eac94e85eabdc6c8e24153
+      id: 4154771207
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_Slot_BGM
+        ObjectType: 3
+        guid: 4eeba6d4a4eac94e85eabdc6c8e24153
+      Path: Events\Default Work Unit\Stop_Slot_BGM
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Slot_Drrrrrr_01
       guid: 121a9767894bb945a42f14209fde0e34
       id: 3035396721
@@ -5939,7 +6806,7 @@ MonoBehaviour:
     m_lastTime: -8584757057864275183
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 05000000060000000a000000170000001800000019000000
+  ExpandedWaapiItemIds: 050000000600000007000000170000001800000019000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
