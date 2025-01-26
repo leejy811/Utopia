@@ -2042,7 +2042,7 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{8B82E812-6C66-0FB3-3504-B4E731A24A2D}">
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{B068DCA7-2116-FEE6-7AAD-414AC53A8F0A}">
 			<ShortName>TOTOPIA2</ShortName>
 			<Path>TOTOPIA2.bnk</Path>
 			<Media>
@@ -2093,6 +2093,8 @@
 						<MediaRef Id="774795037"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3544330092" Name="Stop_LOOP_bar" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1761728308" Name="Stop_LOOP_vomit_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4014218246" Name="Stop_TO_Decrease_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4014218245" Name="Stop_TO_Decrease_price_02" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="4014218244" Name="Stop_TO_Decrease_price_03" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -2140,5 +2142,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{B96C61E0-3056-932E-E04C-A3E995E9E956}</FileHash>
+	<FileHash>{811EA347-DD05-8A75-936F-6551215D4230}</FileHash>
 </SoundBanksInfo>

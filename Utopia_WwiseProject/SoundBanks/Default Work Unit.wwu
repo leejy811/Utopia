@@ -303,11 +303,13 @@
 						<ObjectRef Name="Stop_TO_event_FIRE_02" ID="{C84C5ED9-2764-4A52-97EC-BA670E86248E}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_event_DISEASE_01" ID="{EA2ECD94-9873-4A85-924A-3E22E0C6C940}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_event_DESOLATE_02" ID="{8A7215B4-2A34-4AC0-BF7C-78E7C4B7B422}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_LOOP_vomit_01" ID="{F98ED2D9-98FD-4B10-BB0B-368D8AA34CED}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_MINIGAME_COIN" ID="{6E9EA0D0-E03F-4B26-A97E-67181C1163A7}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_Increase_price_02" ID="{ECBDD143-24DA-4B2E-BFD0-59E892603D93}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_RACE_INJURY" ID="{1E896E1C-2931-4B63-BAFE-E0B135994ACF}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_event_DESOLATE_04" ID="{C61D7432-49D1-4BC1-8F7C-D031039A81F4}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_Decrease_price_03" ID="{2EAC69CA-9CDE-4C42-8B68-C33D018114B2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_LOOP_bar" ID="{40D79557-FDB8-4C74-94A6-B6276BACE465}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_Many_jobs_02" ID="{A1ECA8C8-BB37-4C90-B852-6E72CE604698}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_Festival_03" ID="{955B1057-CAAC-4D85-8919-C66C398BF0FC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_TO_Festival_02" ID="{17DC43FC-7BDF-4DC7-BD1A-3F4E3BB196D6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>

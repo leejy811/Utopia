@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1408964429	Stop_TO_Increase_price_02			\Default Work Unit\Stop_TO_Increase_price_02	
 	1408964430	Stop_TO_Increase_price_01			\Default Work Unit\Stop_TO_Increase_price_01	
 	1657583265	Play_RACE_INJURY			\Default Work Unit\Play_RACE_INJURY	
+	1761728308	Stop_LOOP_vomit_01			\Default Work Unit\Stop_LOOP_vomit_01	
 	1778818128	Stop_TO_Festival_01			\Default Work Unit\Stop_TO_Festival_01	
 	1778818130	Stop_TO_Festival_03			\Default Work Unit\Stop_TO_Festival_03	
 	1778818131	Stop_TO_Festival_02			\Default Work Unit\Stop_TO_Festival_02	
@@ -26,6 +27,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3333135355	Stop_TO_Low_in_stock_03			\Default Work Unit\Stop_TO_Low_in_stock_03	
 	3333135356	Stop_TO_Low_in_stock_04			\Default Work Unit\Stop_TO_Low_in_stock_04	
 	3433467811	Play_MINIGAME_COIN			\Default Work Unit\Play_MINIGAME_COIN	
+	3544330092	Stop_LOOP_bar			\Default Work Unit\Stop_LOOP_bar	
 	3572679577	Stop_TO_event_FIRE_01			\Default Work Unit\Stop_TO_event_FIRE_01	
 	3572679578	Stop_TO_event_FIRE_02			\Default Work Unit\Stop_TO_event_FIRE_02	
 	3572679579	Stop_TO_event_FIRE_03			\Default Work Unit\Stop_TO_event_FIRE_03	

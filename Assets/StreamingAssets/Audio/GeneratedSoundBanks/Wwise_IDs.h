@@ -275,6 +275,8 @@ namespace AK
         static const AkUniqueID STOP_FORESTAMBIENCEINLOBBY = 2778003230U;
         static const AkUniqueID STOP_GAMEPLAY_CHIPS_EXCHANGE = 885567024U;
         static const AkUniqueID STOP_LOBBY = 3639729344U;
+        static const AkUniqueID STOP_LOOP_BAR = 3544330092U;
+        static const AkUniqueID STOP_LOOP_VOMIT_01 = 1761728308U;
         static const AkUniqueID STOP_NAPT_EVENT_DESOLATE_01 = 2017181012U;
         static const AkUniqueID STOP_NAPT_EVENT_DISEASE_01 = 2733485581U;
         static const AkUniqueID STOP_NAPT_EVENT_FIRE_01 = 1792249901U;

@@ -4492,6 +4492,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_LOOP_bar" ID="{40D79557-FDB8-4C74-94A6-B6276BACE465}">
+					<ChildrenList>
+						<Action Name="" ID="{90E0C58A-ED97-4937-8192-BA124CA952ED}" ShortID="266570478">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LOOP_bar" ID="{88CB899F-6AF6-494C-98CE-BC567E898521}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_LOOP_vomit_01" ID="{F98ED2D9-98FD-4B10-BB0B-368D8AA34CED}">
+					<ChildrenList>
+						<Action Name="" ID="{C87FFD32-2360-4F73-B0C9-F4F51F747CCF}" ShortID="424695339">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="LOOP_vomit_01" ID="{158CA7B7-8196-406F-9068-CD003800A704}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
