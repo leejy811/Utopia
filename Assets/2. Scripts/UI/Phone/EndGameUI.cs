@@ -5,10 +5,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class EndGameUI : MonoBehaviour
 {
     public EventState state;
+
+    [Header("Image Transform")]
+    public Transform backGroundImage;
+    public Transform frontImage;
+    public Transform buttons;
+    public Transform inline;
+    public Transform saveInfo;
 
     [Header("Date")]
     public TextMeshProUGUI curDayText;
@@ -65,13 +73,42 @@ public class EndGameUI : MonoBehaviour
         return res;
     }
 
+    private void InitAnimation()
+    {
+        backGroundImage.DOLocalMove(Vector3.zero, 1f);
+        frontImage.DOLocalMove(Vector3.zero, 1f);
+        buttons.DOLocalMoveY(buttons.transform.localPosition.y + 130.0f, 1f).OnComplete(() =>
+        {
+            Image[] images = frontImage.GetComponentsInChildren<Image>();
+            TextMeshProUGUI[] texts = frontImage.GetComponentsInChildren<TextMeshProUGUI>();
+
+            foreach (Image image in images)
+            {
+                image.DOFade(1.0f, 0.7f);
+            }
+
+            foreach (TextMeshProUGUI text in texts)
+            {
+                text.DOFade(1.0f, 0.7f);
+            }
+
+            inline.DOLocalMoveX(inline.transform.localPosition.x + 10.0f, 0.7f);
+        });
+    }
+
     private void OnEnable()
     {
         SetValue();
+        InitAnimation();
     }
 
     public void OnClickSaveData()
     {
+        saveInfo.DOLocalMoveY(saveInfo.transform.localPosition.y - 40.0f, 0.7f);
+        saveInfo.gameObject.GetComponent<Image>().DOFade(1.0f, 0.7f).OnComplete(() =>
+        {
+            saveInfo.gameObject.GetComponent<Image>().DOFade(0.0f, 1.0f);
+        });
         saveButton.interactable = false;
 
         MapType type = GameManager.instance.curMapType;

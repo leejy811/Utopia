@@ -17,6 +17,12 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     public Button continueButton;
     public GameObject optionPanel;
 
+    [Header("Image")]
+    public Image mainImage;
+    public Image optionImage;
+    public Sprite[] mainSprites;
+    public Sprite[] optionSprites;
+
     private List<IObserver> observers = new List<IObserver>();
 
     #region EventFunc
@@ -41,6 +47,12 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1))
             notifyObserver(EventState.None);
+    }
+
+    public void SetMainColor(int idx)
+    {
+        mainImage.sprite = mainSprites[idx];
+        optionImage.sprite = optionSprites[idx];
     }
 
     #endregion

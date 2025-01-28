@@ -331,7 +331,6 @@ public class ChipData
 
         for (int i = 0;i <= (endDay - startDay).Days; i++)
         {
-            Debug.Log(startDay.AddDays(i));
             this.costs[i] = costs[startDay.AddDays(i)];
         }
 

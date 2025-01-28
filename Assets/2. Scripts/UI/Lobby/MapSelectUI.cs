@@ -11,6 +11,7 @@ public class MapSelectUI : MonoBehaviour
     public VideoPlayer videoPlayer;
     public Image[] inActiveImage;
     public VideoClip[] mapVideos;
+    public LobbyUIManager uiManager;
 
     public float slideSecond;
 
@@ -28,5 +29,6 @@ public class MapSelectUI : MonoBehaviour
         }
 
         videoPlayer.clip = mapVideos[curIdx];
+        uiManager.SetMainColor(curIdx);
     }
 }
