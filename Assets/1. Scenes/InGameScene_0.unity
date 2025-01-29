@@ -16091,7 +16091,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 281, y: -237.39001}
-  m_SizeDelta: {x: 325, y: 90}
+  m_SizeDelta: {x: 406, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247563683
 MonoBehaviour:
@@ -16181,7 +16181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 413d082af68db4847a4c8b1a9c958ce0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4331a0e9320d2cb47a98680e393f537a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -32007,22 +32007,73 @@ MonoBehaviour:
   rightButton: {fileID: 1562931110}
   leftButton: {fileID: 1736227823}
   contents:
-  - videoClip: {fileID: 32900000, guid: d5977e81f3d4e944f939c07f7179d9f9, type: 3}
-    description: 1
-  - videoClip: {fileID: 32900000, guid: d40c4caea6392074b8f5f4ab796ae266, type: 3}
-    description: 2
-  - videoClip: {fileID: 32900000, guid: 6a873acf757490a44bbdf21db94379d0, type: 3}
-    description: 3
-  - videoClip: {fileID: 32900000, guid: 2140988cda1ddbb44a30498062202bd3, type: 3}
-    description: 4
-  - videoClip: {fileID: 32900000, guid: 7821de25c774ec84ab46c984802d1526, type: 3}
-    description: 5
-  - videoClip: {fileID: 32900000, guid: b7397d112d4f81c4cb2fae9e2b26bdf9, type: 3}
-    description: 6
-  - videoClip: {fileID: 32900000, guid: d7a829ce2b31ec54bb920e3650aea9eb, type: 3}
-    description: 7
-  - videoClip: {fileID: 32900000, guid: f20769a26f20e9b4299a2ddf4bf47c7c, type: 3}
-    description: 8
+  - videoClip: {fileID: 32900000, guid: 2a8492ac0ebca32499c1d41d8a169afe, type: 3}
+    description: "<color=#B6FB6C>\uC720\uD1A0\uD53C\uC544 \uD504\uB85C\uC81D\uD2B8</color>\uC5D0
+      \uCC38\uC5EC\uD558\uC2E0 \uC5EC\uB7EC\uBD84\uB4E4 \uBAA8\uB450 \uD658\uC601\uD569\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uC720\uD1A0\uD53C\uC544
+      \uD504\uB85C\uC81D\uD2B8</color>\uB294 \uC5EC\uB7EC\uBD84\uB4E4\uC774 \uC784\uC2DC
+      \uC2DC\uC7A5\uC774 \uB418\uC5B4 \uC2DC\uBBFC\uB4E4\uC774 \uD589\uBCF5\uD574\uD558\uB294
+      \uB3C4\uC2DC\uB97C \uAC74\uC124\uD558\uB294 \uB3C4\uC2DC \uACBD\uC601 \uD504\uB85C\uC81D\uD2B8\uC785\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uB3C4\uC2DC\uB97C
+      \uC77C\uC815 \uADDC\uBAA8 \uC774\uC0C1\uC73C\uB85C \uBC1C\uC804\uC2DC\uD0A4\uACE0
+      \uC815\uC2DD \uC2DC\uC7A5\uC774 \uB418\uC5B4, \uB3C4\uC2DC\uB97C \uACC4\uC18D
+      \uAD00\uB9AC\uD558\uBA70 \uAFC8\uC758 \uB3C4\uC2DC\uB97C \uC644\uC131\uD560
+      \uAE30\uD68C\uB97C \uC5BB\uC5B4 \uBCF4\uC138\uC694!</color>"
+  - videoClip: {fileID: 32900000, guid: 6ff2ec0f50b41f2488f3d944e3b509dd, type: 3}
+    description: "\uB3C4\uC2DC\uB294 \uCD1D 4\uAC00\uC9C0 \uC885\uB958\uC758 \uAC74\uBB3C\uB85C
+      \uAD6C\uC131\uB429\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uC8FC\uAC70 \uAC74\uBB3C</color>\uC740
+      \uC2DC\uBBFC\uB4E4\uC774 \uAC70\uC8FC\uD558\uBA70, \uC2DC\uBBFC\uB4E4\uC744
+      \uD1B5\uD574 <color=#B6FB6C>\uC0C1\uC5C5/\uBB38\uD654/\uC11C\uBE44\uC2A4</color>
+      \uAC74\uBB3C\uC774 \uC694\uAD6C\uD558\uB294 \uC774\uC6A9\uC790 \uC218\uB97C
+      \uCDA9\uC871\uC2DC\uD0AC \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n\n\uC2DC\uBBFC\uB4E4\uC740
+      \uADFC\uCC98\uC5D0 \uC874\uC7AC\uD558\uB294 <color=#B6FB6C>\uC0C1\uC5C5/\uBB38\uD654/\uC11C\uBE44\uC2A4</color>
+      \uAC74\uBB3C\uC5D0 \uB530\uB77C \uB354 \uB9CE\uC740 \uD589\uBCF5\uC744 \uB290\uB08D\uB2C8\uB2E4."
+  - videoClip: {fileID: 32900000, guid: 15b1e160a7c57d64e9ba21dc93a02c26, type: 3}
+    description: "<color=#B6FB6C>\uC0C1\uC5C5/\uBB38\uD654/\uC11C\uBE44\uC2A4 \uAC74\uBB3C</color>\uC740
+      \uAC01 \uAC74\uBB3C \uC0C1\uD669\uC5D0 \uB530\uB77C \uC694\uAD6C\uD558\uB294
+      \uC774\uC6A9\uC790 \uC218\uAC00 \uB2E4\uB985\uB2C8\uB2E4.\n\n\uAC01 \uAC74\uBB3C
+      \uC0C1\uD669\uC5D0 \uB9DE\uB294 \uC774\uC6A9\uC790 \uC218\uB97C \uCDA9\uC871\uC2DC\uD0A4\uBA74
+      \uB354 \uB9CE\uC740 \uD589\uBCF5\uC744 \uB290\uB08D\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uD589\uBCF5\uD558\uC9C0
+      \uC54A\uC740 \uAC74\uBB3C\uC740 \uC790\uB3D9 \uCCA0\uAC70\uB418\uB2C8 \uC8FC\uC758\uD558\uC138\uC694!</color>"
+  - videoClip: {fileID: 32900000, guid: a5c8614f083debd4b8daa8d8cd2031f1, type: 3}
+    description: "<color=#B6FB6C>\uD558\uB8E8\uAC00 \uC9C0\uB0A0 \uB54C\uB9C8\uB2E4
+      \uAC74\uBB3C\uB85C\uBD80\uD130 \uC138\uAE08\uC744 \uD68D\uB4DD\uD558\uAC70\uB098
+      \uC720\uC9C0\uBE44\uB97C \uC9C0\uBD88\uD569\uB2C8\uB2E4.</color>\n\n\uC8FC\uAC70/\uC0C1\uC5C5/\uBB38\uD654
+      \uAC74\uBB3C\uC5D0\uC11C\uB294 \uD589\uBCF5\uB3C4\uAC00 \uB192\uC744\uC218\uB85D
+      \uB354 \uB9CE\uC740 \uC138\uAE08\uC744 \uC5BB\uC744 \uC218 \uC788\uC73C\uBA70,\n\n\uC11C\uBE44\uC2A4
+      \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4\uAC00 \uB192\uC744\uC218\uB85D \uB354
+      \uC801\uC740 \uC720\uC9C0\uBE44\uB97C \uC9C0\uBD88\uD569\uB2C8\uB2E4."
+  - videoClip: {fileID: 32900000, guid: 95dbbac38e5c7194490fe7796513bfa8, type: 3}
+    description: "\uB9E4\uC8FC \uC77C\uC694\uC77C\uB9C8\uB2E4 \uC77C\uC815 \uAE08\uC561\uC744
+      \uAC1A\uC73C\uBA74 \uB545\uC744 \uD655\uC7A5\uC2DC\uD0AC \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uBE5A\uC744
+      \uAC1A\uC9C0 \uBABB\uD558\uBA74 \uC5F0\uCCB4\uAE08\uC774 \uCD94\uAC00\uB85C
+      \uBD80\uACFC\uB418\uBA70, \uAE08\uC561\uC744 \uAC1A\uC9C0 \uBABB\uD574 \uD30C\uC0B0\uD55C\uB2E4\uBA74
+      \uD504\uB85C\uC81D\uD2B8\uAC00 \uC911\uC9C0\uB420 \uC218 \uC788\uC73C\uB2C8</color>\n\n\uC815\uD574\uC9C4
+      \uAE30\uD55C \uB0B4\uC5D0 \uD578\uB4DC\uD3F0\uC744 \uD1B5\uD574 \uBE5A\uC744
+      \uAC1A\uC73C\uC138\uC694!"
+  - videoClip: {fileID: 32900000, guid: e5f41102cced49748891fb3c51f687cb, type: 3}
+    description: "\uC77C\uC815 \uADDC\uBAA8\uC774\uC0C1 \uCEE4\uC9C4 \uB3C4\uC2DC\uC5D0\uC11C\uB294
+      \uC0AC\uD68C\uD604\uC0C1\uC774 \uBC1C\uC0DD\uD569\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uAC04\uC811
+      \uC0AC\uD68C\uD604\uC0C1</color>\uC740 \uAC74\uBB3C \uC0C1\uD669\uC5D0 \uC601\uD5A5\uC744
+      \uB07C\uCCD0 \uAC74\uBB3C \uC0C1\uD0DC\uB97C \uBCC0\uACBD\uC2DC\uD0B5\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uC9C1\uC811
+      \uC0AC\uD68C\uD604\uC0C1</color>\uC740 \uAC74\uBB3C\uC774 \uC694\uAD6C\uD558\uB294
+      \uD56D\uBAA9\uC744 \uCDA9\uC871\uC2DC\uD0A4\uC9C0 \uBABB\uD588\uC744 \uB54C
+      \uAC74\uBB3C \uD589\uBCF5\uB3C4\uB97C \uB0AE\uCDA5\uB2C8\uB2E4."
+  - videoClip: {fileID: 32900000, guid: eb46f79cceda70448a28874d9842ab60, type: 3}
+    description: "\uBAA8\uB4E0 \uC0AC\uD68C\uD604\uC0C1\uC740 \uC2DC\uAC04\uC774
+      \uD750\uB974\uBA74 \uC790\uB3D9\uC73C\uB85C \uD574\uACB0\uB429\uB2C8\uB2E4\uB9CC,
+      \uC2DC\uBBFC\uB4E4\uC744 \uC704\uD574 \uC77C\uCC0D \uD574\uACB0\uD558\uB294
+      \uAC83\uC774 \uC88B\uC2B5\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uAC04\uC811 \uC0AC\uD68C\uD604\uC0C1</color>\uC740
+      \uAC74\uBB3C \uC0C1\uD669\uC5D0 \uB9DE\uCDB0 \uC774\uC6A9\uC790 \uC218\uC5D0
+      \uBCC0\uD654\uB97C \uC8FC\uBA74 \uD574\uACB0\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uC9C1\uC811
+      \uC0AC\uD68C\uD604\uC0C1</color>\uC740 \uAC74\uBB3C\uC774 \uC694\uAD6C\uD558\uB294
+      \uD56D\uBAA9\uC744 \uCDA9\uC871\uC2DC\uCF1C\uC8FC\uAC70\uB098, \uB3C8\uC744
+      \uD22C\uC790\uD558\uC5EC \uD574\uACB0\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n"
+  - videoClip: {fileID: 32900000, guid: 5c68f9330b65e3f4591e24cb63da0f47, type: 3}
+    description: "<color=#B6FB6C>WASD,QE</color>\uB97C \uC774\uC6A9\uD574 \uD654\uBA74
+      \uC774\uB3D9, <color=#B6FB6C>\uB9C8\uC6B0\uC2A4 \uD720</color>\uC744 \uC774\uC6A9\uD574
+      \uD655\uB300/\uCD95\uC18C\uAC00 \uAC00\uB2A5\uD569\uB2C8\uB2E4.\n\n<color=#B6FB6C>\uB9C8\uC6B0\uC2A4
+      \uC6B0\uD074\uB9AD</color>\uC744 \uD1B5\uD574 \uD604\uC7AC \uD589\uB3D9\uC744
+      \uCDE8\uC18C\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.\n\n\uB2E4\uB978 \uB2E8\uCD95\uD0A4\uB294
+      \uC124\uC815\uCC3D\uC744 \uCC38\uACE0\uD558\uC138\uC694."
   isInit: 0
 --- !u!1 &512286095
 GameObject:
@@ -35160,7 +35211,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC0C1\uC5C5 \uAC74\uBB3C\uC758 \uC0C1\uD488
       \uAC00\uACA9 \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: 45ab29973ce2fac49b299bcd05b4f3aa, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 0
     type: 1
     rewardType: 1
@@ -35174,7 +35225,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC0C1\uC5C5 \uAC74\uBB3C\uC758 \uC0C1\uD488
       \uAC00\uACA9 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 4927bff0437857540be7c28618e8e957, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 15
     type: 1
     rewardType: 1
@@ -35188,7 +35239,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uBB38\uD654 \uAC74\uBB3C\uC758 \uC785\uC7A5\uB8CC
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: 884d28b9b06106f46b5c3e6bdc8c7b00, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 16
     type: 1
     rewardType: 1
@@ -35202,7 +35253,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uBB38\uD654 \uAC74\uBB3C\uC758 \uC785\uC7A5\uB8CC
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 20fa0001103919147a9a7a3ed28de661, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 17
     type: 1
     rewardType: 1
@@ -35216,7 +35267,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC11C\uBE44\uC2A4 \uAC74\uBB3C\uC758 \uD65C\uB3D9\uBE44
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: 554a2ac54f8fa8d4586e3de354942b59, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 18
     type: 1
     rewardType: 1
@@ -35230,7 +35281,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC11C\uBE44\uC2A4 \uAC74\uBB3C\uC758 \uD65C\uB3D9\uBE44
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 2483a4b6546459143aa41e3c68764b17, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 19
     type: 1
     rewardType: 1
@@ -35244,7 +35295,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC0C1\uC5C5 \uAC74\uBB3C\uC758 \uC601\uD5A5\uB825
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: eb7652d8656fa0e479d4cf8642a6d2d5, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 20
     type: 1
     rewardType: 1
@@ -35258,7 +35309,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC0C1\uC5C5 \uAC74\uBB3C\uC758 \uC601\uD5A5\uB825
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 68a9cd8dcc8393c41a9b86c67ec2f320, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 21
     type: 1
     rewardType: 1
@@ -35272,7 +35323,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uBB38\uD654 \uAC74\uBB3C\uC758 \uC601\uD5A5\uB825
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: 0210a9d18c5109d409b512bd1d0cde13, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 22
     type: 1
     rewardType: 1
@@ -35286,7 +35337,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uBB38\uD654 \uAC74\uBB3C\uC758 \uC601\uD5A5\uB825
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 8f19df97f9efb2b4abf4b4b7be4ed036, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 23
     type: 1
     rewardType: 1
@@ -35300,7 +35351,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC11C\uBE44\uC2A4 \uAC74\uBB3C\uC758 \uC601\uD5A5\uB825
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: ec35a4670c86b2e42ba5fc50dccaf816, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 24
     type: 1
     rewardType: 1
@@ -35314,7 +35365,7 @@ MonoBehaviour:
     eventEffectComment: "\uBAA8\uB4E0 \uC11C\uBE44\uC2A4 \uAC74\uBB3C\uC758 \uC601\uD5A5\uB825
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 6e5505511cba64c4c9f52834c2287647, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.78431374, g: 0.5686275, b: 0.06666667, a: 1}
     eventIndex: 25
     type: 1
     rewardType: 1
@@ -35328,7 +35379,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uAC70 \uAC74\uBB3C\uC5D0\uC11C \uBC1B\uB294 \uC138\uAE08
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: c0cbeef6845eec044b93f07f28945b7e, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.34901962, g: 0.49803922, b: 0.13725491, a: 1}
     eventIndex: 30
     type: 2
     rewardType: 2
@@ -35342,7 +35393,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uAC70 \uAC74\uBB3C\uC5D0\uC11C \uBC1B\uB294 \uC138\uAE08
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 7d2dbd611f8bbed43a1036132e8e836d, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 31
     type: 2
     rewardType: 0
@@ -35356,7 +35407,7 @@ MonoBehaviour:
     eventEffectComment: "\uC0C1\uC5C5 \uAC74\uBB3C\uC5D0\uC11C \uBC1B\uB294 \uC138\uAE08
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: 73c507c709044f64c96ec00403c8ce70, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.34901962, g: 0.49803922, b: 0.13725491, a: 1}
     eventIndex: 32
     type: 2
     rewardType: 2
@@ -35370,7 +35421,7 @@ MonoBehaviour:
     eventEffectComment: "\uC0C1\uC5C5 \uAC74\uBB3C\uC5D0\uC11C \uBC1B\uB294 \uC138\uAE08
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 9ce7fa1a04c65414e96011173624f463, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 33
     type: 2
     rewardType: 0
@@ -35384,7 +35435,7 @@ MonoBehaviour:
     eventEffectComment: "\uBB38\uD654 \uAC74\uBB3C\uC5D0\uC11C \uBC1B\uB294 \uC138\uAE08
       \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: 504479b0f29f42841963604654af317d, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.34901962, g: 0.49803922, b: 0.13725491, a: 1}
     eventIndex: 34
     type: 2
     rewardType: 2
@@ -35398,7 +35449,7 @@ MonoBehaviour:
     eventEffectComment: "\uBB38\uD654 \uAC74\uBB3C\uC5D0\uC11C \uBC1B\uB294 \uC138\uAE08
       \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 3c4fe836cb2230c42882cddea5d6c0a3, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 35
     type: 2
     rewardType: 0
@@ -35411,7 +35462,7 @@ MonoBehaviour:
   - eventName: "\uC790\uC6D0\uBD09\uC0AC\uC790\uAC00 \uC801\uC5B4\uC694"
     eventEffectComment: "\uC11C\uBE44\uC2A4 \uAC74\uBB3C \uC720\uC9C0\uBE44 \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: 8806efeed79fe0a488f776d3ad1092a9, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 36
     type: 2
     rewardType: 2
@@ -35424,7 +35475,7 @@ MonoBehaviour:
   - eventName: "\uC790\uC6D0\uBD09\uC0AC\uC790\uAC00 \uB9CE\uC544\uC694"
     eventEffectComment: "\uC11C\uBE44\uC2A4 \uAC74\uBB3C \uC720\uC9C0\uBE44 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 711903a25a971de409dd094366e55f89, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.34901962, g: 0.49803922, b: 0.13725491, a: 1}
     eventIndex: 37
     type: 2
     rewardType: 0
@@ -35437,7 +35488,7 @@ MonoBehaviour:
   - eventName: "\uAC74\uC124 \uBE44\uC6A9\uC774 \uC62C\uB790\uC5B4\uC694"
     eventEffectComment: "\uAC74\uC124 \uBE44\uC6A9 \uC99D\uAC00"
     eventIcon: {fileID: 21300000, guid: b8c79a80c05b4ee4d840579926a14081, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 28
     type: 2
     rewardType: 0
@@ -35450,7 +35501,7 @@ MonoBehaviour:
   - eventName: "\uAC74\uC124 \uBE44\uC6A9\uC774 \uB0B4\uB838\uC5B4\uC694"
     eventEffectComment: "\uAC74\uC124 \uBE44\uC6A9 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: bf8839b43719b9f43b5e89b46a9ac929, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.34901962, g: 0.49803922, b: 0.13725491, a: 1}
     eventIndex: 29
     type: 2
     rewardType: 2
@@ -35465,7 +35516,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uC7A1\uD654 \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 362f17400e0e7d342a8baae6f9ac578f, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 4
     type: 0
     rewardType: 0
@@ -35482,7 +35533,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uC74C\uC2DD \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: c024f9eae2e79a6458877c07e8d232f7, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 5
     type: 0
     rewardType: 0
@@ -35499,7 +35550,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uC601\uD654 \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: aa3161faa24ede34dabea32f3c011246, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 41
     type: 0
     rewardType: 0
@@ -35516,7 +35567,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uC624\uB77D \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 25f17860f23cb524eac15c744ac24fe2, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 41
     type: 0
     rewardType: 0
@@ -35533,7 +35584,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uBBF8\uC220 \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 1bf1b33cfaa44a44dae97f3f73a9583d, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 41
     type: 0
     rewardType: 0
@@ -35550,7 +35601,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uACBD\uCC30 \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: c835c47642ecdad4ea58d5559f25e4a2, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 41
     type: 0
     rewardType: 0
@@ -35567,7 +35618,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uC18C\uBC29 \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 65ae23d1dcd72934cb30e72ec0d107c7, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 13
     type: 0
     rewardType: 0
@@ -35584,7 +35635,7 @@ MonoBehaviour:
     eventEffectComment: "\uC8FC\uBCC0\uC5D0 \uC758\uB8CC \uAC74\uBB3C\uC774 \uC5C6\uB294
       \uC8FC\uAC70 \uAC74\uBB3C\uC758 \uD589\uBCF5\uB3C4 \uAC10\uC18C"
     eventIcon: {fileID: 21300000, guid: 2b44fbe57beea7e488cf79a71c0fd777, type: 3}
-    eventColor: {r: 0, g: 0, b: 0, a: 0}
+    eventColor: {r: 0.9098039, g: 0.32941177, b: 0.11764706, a: 1}
     eventIndex: 13
     type: 0
     rewardType: 0
@@ -39307,7 +39358,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -42375,7 +42426,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -46260,7 +46311,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -53193,7 +53244,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4280053850
+    rgba: 1863770
   m_fontColor: {r: 0.3529412, g: 0.4392157, b: 0.10980392, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -54082,7 +54133,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -55755,7 +55806,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282141759
+    rgba: 3951679
   m_fontColor: {r: 0.24705882, g: 0.29803923, b: 0.23529412, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -58034,7 +58085,7 @@ RectTransform:
   m_GameObject: {fileID: 1018269400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.62, y: 0.62, z: 0.62}
+  m_LocalScale: {x: 0.633, y: 0.633, z: 0.633}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1986420007}
@@ -58042,7 +58093,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1, y: 1}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1018269402
@@ -59187,7 +59238,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282141759
+    rgba: 3951679
   m_fontColor: {r: 0.24705882, g: 0.29803923, b: 0.23529412, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -60726,7 +60777,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 486, y: -237.39001}
-  m_SizeDelta: {x: 325, y: 90}
+  m_SizeDelta: {x: 406, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1069649799
 MonoBehaviour:
@@ -60804,7 +60855,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 35cfe9f373463054680f4ddc11c02bb7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc29555ccad132e45830bf29064b51e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -64195,7 +64246,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279076454
+    rgba: 886374
   m_fontColor: {r: 0.4, g: 0.5254902, b: 0.050980393, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -65536,7 +65587,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279076454
+    rgba: 886374
   m_fontColor: {r: 0.4, g: 0.5254902, b: 0.050980393, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -83768,7 +83819,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -99368,7 +99419,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281830005
+    rgba: 3639925
   m_fontColor: {r: 0.45882353, g: 0.5411765, b: 0.21568628, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -103979,7 +104030,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 0
   m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -104817,7 +104868,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 737, y: -237.39001}
-  m_SizeDelta: {x: 325, y: 90}
+  m_SizeDelta: {x: 406, y: 108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841453018
 MonoBehaviour:
@@ -104895,7 +104946,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 35cfe9f373463054680f4ddc11c02bb7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cc29555ccad132e45830bf29064b51e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -110373,7 +110424,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -2.1}
-  m_SizeDelta: {x: 350, y: 60}
+  m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1928681915
 MonoBehaviour:
@@ -110395,13 +110446,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB354 \uB113\uC740 \uB545\uC744 \uAD6C\uB9E4\uD558\uAE30 \uC704\uD574\uC11C
-    \uC2DC\uC7A5\uB2D8\uC740 \uB9E4\uC8FC \uC77C\uC815 \uAE08\uC561\uC744 \uB0A9\uBD80\uD574\uC57C
-    \uD569\uB2C8\uB2E4.\r\n\r\n\uB0A9\uBD80\uC5D0 \uC131\uACF5\uD558\uBA74 \uC2E0\uC6A9\uC810\uC218\uAC00
-    \uC99D\uAC00\uD558\uC5EC \uB0A9\uBD80 \uAE08\uC561\uC758 \uC77C\uBD80\uB97C \uB3CC\uB824\uBC1B\uC744
-    \uC218 \uC788\uC2B5\uB2C8\uB2E4.\r\n\r\n\uB0A9\uBD80\uC5D0 \uC2E4\uD328\uD558\uBA74
-    \uC2E0\uC6A9\uC810\uC218\uAC00 \uAC10\uC18C\uD558\uC5EC \uD504\uB85C\uC81D\uD2B8\uAC00
-    \uC911\uB2E8\uB420 \uC218 \uC788\uC2B5\uB2C8\uB2E4."
+  m_text: "<color=#C0D84E>\uC720\uD1A0\uD53C\uC544 \uD504\uB85C\uC81D\uD2B8</color>\uC5D0
+    \uCC38\uC5EC\uD558\uC2E0 \uC5EC\uB7EC\uBD84\uB4E4 \uBAA8\uB450 \uD658\uC601\uD569\uB2C8\uB2E4.\n\n<color=#C0D84E>\uC720\uD1A0\uD53C\uC544
+    \uD504\uB85C\uC81D\uD2B8</color>\uB294 \uC5EC\uB7EC\uBD84\uB4E4\uC774 \uC784\uC2DC
+    \uC2DC\uC7A5\uC774 \uB418\uC5B4 \uC2DC\uBBFC\uB4E4\uC774 \uD589\uBCF5\uD574\uD558\uB294
+    \uB3C4\uC2DC\uB97C \uAC74\uC124\uD558\uB294 \uB3C4\uC2DC \uACBD\uC601 \uD504\uB85C\uC81D\uD2B8\uC785\uB2C8\uB2E4.\n\n<color=#C0D84E>\uB3C4\uC2DC\uB97C
+    \uC77C\uC815 \uADDC\uBAA8 \uC774\uC0C1\uC73C\uB85C \uBC1C\uC804\uC2DC\uD0A4\uACE0
+    \uC815\uC2DD \uC2DC\uC7A5\uC774 \uB418\uC5B4, \uB3C4\uC2DC\uB97C \uACC4\uC18D
+    \uAD00\uB9AC\uD558\uBA70 \uAFC8\uC758 \uB3C4\uC2DC\uB97C \uC644\uC131\uD560 \uAE30\uD68C\uB97C
+    \uC5BB\uC5B4 \uBCF4\uC138\uC694!</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e4f5ebe6784054e488282915e54537c1, type: 2}
   m_sharedMaterial: {fileID: 3386041669907756068, guid: e4f5ebe6784054e488282915e54537c1, type: 2}
@@ -114241,7 +114294,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1986420007}
   - component: {fileID: 1986420009}
-  - component: {fileID: 1986420008}
   - component: {fileID: 1986420010}
   - component: {fileID: 1986420011}
   m_Layer: 5
@@ -114272,36 +114324,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1209, y: 680}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1986420008
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1986420006}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2aaefa9266c8a5d4e8c67644054964bb, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1986420009
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -118889,7 +118911,7 @@ RectTransform:
   m_GameObject: {fileID: 2068245544}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.29, y: 0.29, z: 0.29}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1986420007}
@@ -118899,7 +118921,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -10}
-  m_SizeDelta: {x: 1291, y: 751}
+  m_SizeDelta: {x: 1307, y: 774}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2068245546
 MonoBehaviour:
@@ -118921,7 +118943,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b2a4dccffb020af4497daaf12337bc2a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e48b96945a983914fa9c215f4dd1fdf2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
