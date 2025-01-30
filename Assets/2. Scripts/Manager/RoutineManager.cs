@@ -65,7 +65,7 @@ public class RoutineManager : MonoBehaviour
         playTime += Time.fixedDeltaTime;
     }
 
-    public void DailyUpdate()
+    public IEnumerator DailyUpdate()
     {
         if (GameManager.instance.curMapType == MapType.Utopia)
         {
@@ -80,15 +80,16 @@ public class RoutineManager : MonoBehaviour
             Tile.income = 0;
             CalculateIncome();
 
-            mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360).OnComplete(() =>
+            mainLight.gameObject.transform.DOLocalRotate(new Vector3(defalutAngleX + 360, 0, 0), lightUpdateDuration, RotateMode.FastBeyond360);
+            yield return new WaitForSeconds(lightUpdateDuration);
+            
+            InputManager.SetCanInput(true);
+            day = day.AddDays(1);
+
+            UpdateHappiness();
+            ApplyDept();
+            if (creditRating != 0)
             {
-                InputManager.SetCanInput(true);
-                day = day.AddDays(1);
-
-                UpdateHappiness();
-                ApplyDept();
-                if (creditRating == 0) return;
-
                 EventManager.instance.EffectUpdate();
                 EventManager.instance.CheckEvents();
                 EventManager.instance.RandomRoulette(1);
@@ -100,35 +101,38 @@ public class RoutineManager : MonoBehaviour
 
                 DataBaseManager.instance.Save();
             }
-            );
         }
         else if (GameManager.instance.curMapType == MapType.Totopia)
         {
+            InputManager.SetCanInput(false);
             Building.InitStaticCalcValue();
 
             Tile.income = 0;
             CalculateIncome();
+            yield return new WaitForSeconds(lightUpdateDuration);
             day = day.AddDays(1);
+            InputManager.SetCanInput(true);
 
             UpdateHappiness();
             ApplyDept();
-            if (creditRating == 0) return;
-
-            EventManager.instance.EffectUpdate();
-            EventManager.instance.CheckEvents();
-            EventManager.instance.RandomRoulette(1);
-            UIManager.instance.SetEventInfo(EventManager.instance.curEvents.ToArray());
-            ChipManager.instance.CostUpdate();
-            ChipManager.instance.RatioUpdate();
-            if (day.DayOfWeek == DayOfWeek.Monday)
+            if (creditRating != 0)
             {
-                UpdateBetTimes();
+                EventManager.instance.EffectUpdate();
+                EventManager.instance.CheckEvents();
+                EventManager.instance.RandomRoulette(1);
+                UIManager.instance.SetEventInfo(EventManager.instance.curEvents.ToArray());
+                ChipManager.instance.CostUpdate();
+                ChipManager.instance.RatioUpdate();
+                if (day.DayOfWeek == DayOfWeek.Monday)
+                {
+                    UpdateBetTimes();
+                }
+
+                UIManager.instance.UpdateDailyInfo();
+
+                if (DataBaseManager.instance != null)
+                    DataBaseManager.instance.Save();
             }
-
-            UIManager.instance.UpdateDailyInfo();
-
-            if (DataBaseManager.instance != null)
-                DataBaseManager.instance.Save();
         }
     }
 

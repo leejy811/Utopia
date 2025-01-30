@@ -361,7 +361,7 @@ public class UIManager : MonoBehaviour, ISubject
     public void OnClickNextDay()
     {
         notifyObserver(EventState.None);
-        RoutineManager.instance.DailyUpdate();
+        StartCoroutine(RoutineManager.instance.DailyUpdate());
 
         if (GameManager.instance.curMapType == MapType.Utopia)
             AkSoundEngine.PostEvent("Play_Turn_Move_Clock_001", gameObject);
