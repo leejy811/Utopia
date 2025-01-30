@@ -134,17 +134,17 @@ public class ShopManager : MonoBehaviour, IObserver
 
     public float CalculateBuildingCostWeight(int index, int grade)
     {
-        float coefficient = 0.65f;
+        float coefficient = 0.5f;
         float baseValue = 1.075f;
         float weight = 2.5f;
         if (grade == 2)
         {
-            coefficient = 0.75f;
+            coefficient = 0.4f;
             //baseValue *= weight;
         }
         else if (grade == 3)
         {
-            coefficient = 0.8f;
+            coefficient = 0.3f;
             //baseValue *= Mathf.Pow(weight, 2);
         }
 

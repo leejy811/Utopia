@@ -205,12 +205,12 @@ MonoBehaviour:
   zeroCnt: 0
   costPerDay: 200
   userCnt:
-    max: 2500
-    min: 1000
+    max: 2400
+    min: 1400
     cur: 0
   utilityValue:
-    max: 400
-    min: 100
+    max: 1000
+    min: 600
     cur: 0
   minigameType: 2
   maxBetTimes: 5

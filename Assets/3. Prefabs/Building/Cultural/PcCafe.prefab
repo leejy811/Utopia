@@ -144,7 +144,7 @@ MonoBehaviour:
   costPerDay: 100
   userCnt:
     max: 700
-    min: 300
+    min: 400
     cur: 0
   utilityValue:
     max: 60

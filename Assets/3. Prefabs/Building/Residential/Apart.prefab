@@ -147,15 +147,15 @@ MonoBehaviour:
     cur: 200
   commercialCSAT:
     max: 200
-    min: 150
+    min: 100
     cur: 0
   cultureCSAT:
-    max: 150
+    max: 200
     min: 100
     cur: 0
   serviceCSAT:
-    max: 300
-    min: 150
+    max: 200
+    min: 100
     cur: 0
 --- !u!1001 &550210731925770462
 PrefabInstance:

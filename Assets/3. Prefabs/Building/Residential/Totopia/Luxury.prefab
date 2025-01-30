@@ -85,15 +85,15 @@ MonoBehaviour:
     cur: 400
   commercialCSAT:
     max: 400
-    min: 300
-    cur: 0
-  cultureCSAT:
-    max: 300
     min: 200
     cur: 0
-  serviceCSAT:
-    max: 600
+  cultureCSAT:
+    max: 400
     min: 300
+    cur: 0
+  serviceCSAT:
+    max: 400
+    min: 200
     cur: 0
 --- !u!1 &7623952911163344844
 GameObject:

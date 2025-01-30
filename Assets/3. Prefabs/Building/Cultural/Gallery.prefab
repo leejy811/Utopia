@@ -80,8 +80,8 @@ MonoBehaviour:
   zeroCnt: 0
   costPerDay: 200
   userCnt:
-    max: 1300
-    min: 600
+    max: 1400
+    min: 800
     cur: 0
   utilityValue:
     max: 60

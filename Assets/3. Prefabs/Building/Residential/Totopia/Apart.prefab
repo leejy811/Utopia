@@ -150,11 +150,11 @@ MonoBehaviour:
     min: 100
     cur: 0
   cultureCSAT:
-    max: 200
-    min: 100
+    max: 300
+    min: 200
     cur: 0
   serviceCSAT:
-    max: 400
+    max: 200
     min: 100
     cur: 0
 --- !u!1001 &3101054411989094179
