@@ -168,6 +168,11 @@ public class PhoneUI : MonoBehaviour, IObserver
         AkSoundEngine.PostEvent("Play_CellPhone_Click", gameObject);
     }
 
+    public bool CheckZoom()
+    {
+        return state != PhoneState.Chip && state != PhoneState.GameList;
+    }
+
     public void Notify(EventState state)
     {
         EventState prevState = curState;

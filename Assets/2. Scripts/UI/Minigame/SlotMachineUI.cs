@@ -160,6 +160,8 @@ public class SlotMachineUI : MinigameUI
         jackPotAnim.SetBool("IsJackPot", false);
         AkSoundEngine.SetRTPCValue("JACKPOT", 0);
         AkSoundEngine.PostEvent("Stop_Slotmashin_Jackpot_Ani_01", gameObject);
+        if (jackpotParticle.isPlaying)
+            jackpotParticle.Stop(true);
     }
 
     private void ApplyResult()

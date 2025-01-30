@@ -47,8 +47,7 @@ public class CinemachineCameraController : MonoBehaviour
             RotateCamera();
         }
 
-        if ((GameManager.instance.curMapType == MapType.Totopia && !UIManager.instance.phone.panels[(int)PhoneState.GameList].activeSelf) ||
-            GameManager.instance.curMapType == MapType.Utopia)
+        if (UIManager.instance.phone.CheckZoom())
             ZoomCamera();
         PitchCamera();
         UpdateCameraSettings();
