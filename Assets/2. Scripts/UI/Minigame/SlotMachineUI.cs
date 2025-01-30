@@ -290,6 +290,10 @@ public class SlotMachineUI : MinigameUI
     public override void OnClickCloseGame()
     {
         if (state == SlotState.Ready)
+        {
+            if (jackpotParticle.isPlaying)
+                jackpotParticle.Stop(true);
             base.OnClickCloseGame();
+        }
     }
 }
