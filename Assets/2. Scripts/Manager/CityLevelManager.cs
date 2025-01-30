@@ -164,10 +164,12 @@ public class CityLevelManager : MonoBehaviour
 
             DequeueFrame(curFrame);
 
-            if (UIManager.instance.skipTimeLapse.isSkip)
-                yield return null;
-            else
-                yield return new WaitForSeconds(timePerFrame);
+            float second = 0.0f;
+            while (second < timePerFrame && !UIManager.instance.skipTimeLapse.isSkip)
+            {
+                second += Time.fixedDeltaTime;
+                yield return new WaitForFixedUpdate();
+            }
         }
 
         UIManager.instance.skipTimeLapse.gameObject.SetActive(false);
