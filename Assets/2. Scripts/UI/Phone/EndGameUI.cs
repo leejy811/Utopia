@@ -32,6 +32,7 @@ public class EndGameUI : MonoBehaviour
 
     [Header("Button")]
     public Button saveButton;
+    public Button exitButton;
 
     private void SetValue()
     {
@@ -53,14 +54,6 @@ public class EndGameUI : MonoBehaviour
 
         int happiness = (int)RoutineManager.instance.cityHappiness;
         happinessText.text = happiness.ToString();
-
-        if (state == EventState.GameClear)
-        {
-            if (!File.Exists(Application.persistentDataPath + "/ClearData_" + GameManager.instance.curMapType.ToString()))
-            {
-                OnClickSaveData();
-            }
-        }
     }
 
     private string SecondToString(float second)
@@ -96,9 +89,24 @@ public class EndGameUI : MonoBehaviour
         });
     }
 
+    private void SetData()
+    {
+        MapType type = GameManager.instance.curMapType;
+        DataBaseManager.instance.DeleteMapData(type, "/MapData_");
+
+        if (state == EventState.GameClear)
+        {
+            if (!File.Exists(Application.persistentDataPath + "/ClearData_" + GameManager.instance.curMapType.ToString()))
+            {
+                exitButton.gameObject.SetActive(false);
+            }
+        }
+    }
+
     private void OnEnable()
     {
         SetValue();
+        SetData();
         InitAnimation();
     }
 
@@ -110,9 +118,9 @@ public class EndGameUI : MonoBehaviour
             saveInfo.gameObject.GetComponent<Image>().DOFade(0.0f, 1.0f);
         });
         saveButton.interactable = false;
+        if (!exitButton.gameObject.activeSelf) exitButton.gameObject.SetActive(true);
 
         MapType type = GameManager.instance.curMapType;
         DataBaseManager.instance.SaveMapData(DataBaseManager.instance.clearData[(int)type], type, "/ClearData_");
-        DataBaseManager.instance.DeleteMapData(type, "/MapData_");
     }
 }

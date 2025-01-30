@@ -56522,6 +56522,7 @@ MonoBehaviour:
   removeBuildingText: {fileID: 1437652710}
   happinessText: {fileID: 1610700413}
   saveButton: {fileID: 0}
+  exitButton: {fileID: 1069649799}
 --- !u!222 &967779017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60946,6 +60947,7 @@ MonoBehaviour:
   removeBuildingText: {fileID: 1475271436}
   happinessText: {fileID: 791462507}
   saveButton: {fileID: 0}
+  exitButton: {fileID: 0}
 --- !u!114 &1069797469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61569,6 +61571,7 @@ MonoBehaviour:
   removeBuildingText: {fileID: 1823919691}
   happinessText: {fileID: 619558831}
   saveButton: {fileID: 247563683}
+  exitButton: {fileID: 1841453018}
 --- !u!222 &1082888608
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -113298,6 +113301,7 @@ MonoBehaviour:
   removeBuildingText: {fileID: 347140198}
   happinessText: {fileID: 135671640}
   saveButton: {fileID: 1458721627}
+  exitButton: {fileID: 0}
 --- !u!222 &1971135981
 CanvasRenderer:
   m_ObjectHideFlags: 0

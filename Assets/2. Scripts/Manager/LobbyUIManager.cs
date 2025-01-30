@@ -31,6 +31,7 @@ public class LobbyUIManager : MonoBehaviour, ISubject
     {
         InitObserver();
         SetButton();
+        GameManager.instance.skipTutorial = false;
     }
 
     private void SetButton()

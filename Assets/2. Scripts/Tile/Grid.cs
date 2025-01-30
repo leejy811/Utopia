@@ -86,6 +86,8 @@ public class Grid : MonoBehaviour, IObserver
 
     public void PurchaseTile(Vector2Int purchaseSize, Vector2Int prevSize, float time = 0.0f)
     {
+        if (purchaseSize == prevSize) return;
+
         for (int i = (width / 2) - (purchaseSize.x / 2); i < (width / 2) + (purchaseSize.x / 2); i++)
         {
             for (int j = (height / 2) - (purchaseSize.y / 2); j < (height / 2) + (purchaseSize.y / 2); j++)
