@@ -16,11 +16,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	3149538809	Play_ForestAmbience			\Default Work Unit\old\Play_ForestAmbience	
 	3493507479	Stop_construction			\Default Work Unit\old\Stop_construction	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	412724365	BGM			\Default Work Unit\BGM	
+
+State	ID	Name	State Group			Notes
+	748895195	None	BGM			
+	2596272617	FAIL	BGM			
+	3340296461	BASIC	BGM			
+	4174463524	DANGER	BGM			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	187723092	INDEX1			\Default Work Unit\INDEX1	
 	187723095	INDEX2			\Default Work Unit\INDEX2	
 	848835168	ZOOM			\Default Work Unit\ZOOM	
-	1427264549	HAPPY			\Default Work Unit\HAPPY	
 	1584507803	CLICK			\Default Work Unit\CLICK	
 	1761501017	BOOL			\Default Work Unit\BOOL	
 	2212414277	DIST			\Default Work Unit\DIST	

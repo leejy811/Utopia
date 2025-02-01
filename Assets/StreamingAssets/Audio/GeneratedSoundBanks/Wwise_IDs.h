@@ -405,6 +405,7 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BC = 1870080932U;
         static const AkUniqueID BGM_VOL = 1622127507U;
         static const AkUniqueID BOOL = 1761501017U;
         static const AkUniqueID CLICK = 1584507803U;

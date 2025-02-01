@@ -54,11 +54,19 @@ Event	ID	Name			Wwise Object Path	Notes
 	4292701801	Play_APT_event_FIRE_001			\Default Work Unit\Conditionindex1\Play_APT_event_FIRE_001	
 	4293701245	Play_APT_event_DISEASE_01_1			\Default Work Unit\condition2-1\Play_APT_event_DISEASE_01_1	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	412724365	BGM			\Default Work Unit\BGM	
+
+State	ID	Name	State Group			Notes
+	748895195	None	BGM			
+	2596272617	FAIL	BGM			
+	3340296461	BASIC	BGM			
+	4174463524	DANGER	BGM			
+
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	187723092	INDEX1			\Default Work Unit\INDEX1	
 	187723095	INDEX2			\Default Work Unit\INDEX2	
 	848835168	ZOOM			\Default Work Unit\ZOOM	
-	1427264549	HAPPY			\Default Work Unit\HAPPY	
 	1584507803	CLICK			\Default Work Unit\CLICK	
 	1761501017	BOOL			\Default Work Unit\BOOL	
 	2212414277	DIST			\Default Work Unit\DIST	

@@ -20,6 +20,7 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	505060943	limiter	Wwise Peak Limiter			
 	1763592331	New_Meter	Wwise Meter			
+	3160090811	New_Compressor	Wwise Compressor			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

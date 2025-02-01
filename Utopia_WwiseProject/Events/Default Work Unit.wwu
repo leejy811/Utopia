@@ -723,6 +723,9 @@
 						<Event Name="Play_ForestAmbience" ID="{3102994D-9723-447C-9B5C-80CE8AFEB234}">
 							<ChildrenList>
 								<Action Name="" ID="{442435F0-9E43-4B0E-8EBD-2BE93732864D}" ShortID="1002114348">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="ForestAmbience" ID="{0537576E-F521-4F97-B2B4-2FBAF13ACD8F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>

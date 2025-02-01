@@ -298,13 +298,14 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{07B370BB-5C72-96FE-51A8-2C769AA363AD}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9B09B5E0-7FDB-06EA-7877-E8863C725B7B}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
 				<ShareSets>
 					<Plugin Id="505060943" Name="limiter" LibName="Wwise Peak Limiter" LibId="7208963"/>
 					<Plugin Id="1763592331" Name="New_Meter" LibName="Wwise Meter" LibId="8454147"/>
+					<Plugin Id="3160090811" Name="New_Compressor" LibName="Wwise Compressor" LibId="7077891"/>
 				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
@@ -325,6 +326,7 @@
 						<ShareSets>
 							<PluginRef Id="505060943"/>
 							<PluginRef Id="1763592331"/>
+							<PluginRef Id="3160090811"/>
 						</ShareSets>
 					</PluginRefs>
 				</Bus>
@@ -339,6 +341,7 @@
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1622127507" Name="BGM_VOL"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
+				<GameParameter Id="1870080932" Name="BC"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
 				<GameParameter Id="3310578182" Name="MINIGAME"/>
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
@@ -364,7 +367,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B7F40D11-CCA5-694E-CB17-65B33391E818}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{537CF647-1DA3-0E66-D7FB-7756077572AC}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -769,13 +772,12 @@
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
-				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{749C18D0-352C-7238-0A6A-C26BBC8FAFC9}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{1DC55CA5-53A3-52AF-6601-9AC70FE790B4}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1505,7 +1507,6 @@
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
-				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
@@ -1524,7 +1525,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{64FA059E-D6D0-A495-E2A9-155993887518}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{8B43D789-022E-53FF-9222-69E1515C8169}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -1919,7 +1920,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{108C8ABA-DE91-9513-5237-4DBB2DED324B}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4175E9DC-F940-BE35-36E7-4B434F695BE6}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2087,7 +2088,6 @@
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
-				<GameParameter Id="1427264549" Name="HAPPY"/>
 				<GameParameter Id="1584507803" Name="CLICK"/>
 				<GameParameter Id="1761501017" Name="BOOL"/>
 				<GameParameter Id="2212414277" Name="DIST"/>
@@ -2194,5 +2194,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{EFD90FA9-586F-76B9-18BA-4ADACEFD4BEF}</FileHash>
+	<FileHash>{3D02BDE1-0A7D-7DEA-A651-93305CC6BD29}</FileHash>
 </SoundBanksInfo>

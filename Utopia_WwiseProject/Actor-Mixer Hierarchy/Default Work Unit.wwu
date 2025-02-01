@@ -406,6 +406,35 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="BGM" ID="{DFCFB80A-579E-4BC0-9FEB-A5B7225BBF69}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+												<CustomState Name="" ID="{2763D82F-5E84-40FA-81A1-53E22A8C387B}" ShortID="9500043">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="DANGER" ID="{F906ADDC-55E2-4244-B06E-5CFB5AE394B7}"/>
+												<CustomState Name="" ID="{3B0EFE7B-E91B-4E1B-BDF9-4AA2917F584C}" ShortID="732637490"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+												<CustomState Name="" ID="{820E0DF8-3552-4408-9576-218CDA87E77D}" ShortID="36602466">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</BlendContainer>
 								<RandomSequenceContainer Name="New Random Container" ID="{06017EBD-3F77-4903-9F68-24AF2D929072}" ShortID="452394714">
 									<PropertyList>
@@ -1081,6 +1110,35 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<StateInfo>
+										<StateGroupList>
+											<StateGroupInfo>
+												<StateGroupRef Name="BGM" ID="{DFCFB80A-579E-4BC0-9FEB-A5B7225BBF69}"/>
+											</StateGroupInfo>
+										</StateGroupList>
+										<CustomStateList>
+											<CustomState>
+												<StateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+												<CustomState Name="" ID="{C4A387C9-331E-4A54-9459-AFAEDF04D193}" ShortID="810993390"/>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="DANGER" ID="{F906ADDC-55E2-4244-B06E-5CFB5AE394B7}"/>
+												<CustomState Name="" ID="{BA125C50-4A6C-4BCB-9DE7-C6B6C14C926E}" ShortID="458278375">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+											<CustomState>
+												<StateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+												<CustomState Name="" ID="{80952B33-458D-48EF-9DCD-99E20074D8CB}" ShortID="972062480">
+													<PropertyList>
+														<Property Name="Volume" Type="Real64" Value="-108"/>
+													</PropertyList>
+												</CustomState>
+											</CustomState>
+										</CustomStateList>
+									</StateInfo>
 								</RandomSequenceContainer>
 							</ChildrenList>
 							<ObjectLists>
@@ -1168,6 +1226,27 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="BGM" ID="{DFCFB80A-579E-4BC0-9FEB-A5B7225BBF69}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+										<CustomState Name="" ID="{8FFBC13F-F674-4086-867A-8CA53449CE15}" ShortID="680332251"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DANGER" ID="{F906ADDC-55E2-4244-B06E-5CFB5AE394B7}"/>
+										<CustomState Name="" ID="{3CA3D69E-5A10-4D07-9D66-1B0101DDBED2}" ShortID="591562676"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+										<CustomState Name="" ID="{D2135CE2-3274-4372-8E0B-979B939570B3}" ShortID="1021303404"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -1216,51 +1295,6 @@
 											</RTPC>
 										</Local>
 									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{3F69D38E-1006-4B7E-9D49-46F8CE3FDE18}" ShortID="887899142">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{5C925C1C-C7E3-4A21-91FD-397FB2C4CD14}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>20.14034</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>20.14134</XPos>
-																		<YPos>-0.02685</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
 								</ObjectList>
 							</ObjectLists>
 							<ActiveSourceList>
@@ -1293,6 +1327,31 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="BGM" ID="{DFCFB80A-579E-4BC0-9FEB-A5B7225BBF69}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+										<CustomState Name="" ID="{F37EC73A-7774-49D3-B081-4EEA8C489849}" ShortID="1011627941"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DANGER" ID="{F906ADDC-55E2-4244-B06E-5CFB5AE394B7}"/>
+										<CustomState Name="" ID="{570C7B5B-DF48-4977-9E67-A3AAA69A1589}" ShortID="569847216"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+										<CustomState Name="" ID="{6A6F1D20-35D8-4F9A-B82A-EB83B5B0CBCF}" ShortID="16155617">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -1336,56 +1395,6 @@
 																	<Point>
 																		<XPos>15</XPos>
 																		<YPos>-200</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{FFA02776-B75A-4356-A8AE-F83C5EA69A0A}" ShortID="175850438">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{3CEE9239-E612-4003-94CB-EA02080700D7}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>39.99787</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>39.99887</XPos>
-																		<YPos>-161.84951</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>39.99987</XPos>
-																		<YPos>-0.09668</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
@@ -2311,53 +2320,37 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="BGM" ID="{DFCFB80A-579E-4BC0-9FEB-A5B7225BBF69}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+										<CustomState Name="" ID="{4983B7B5-7D70-42AA-8BD1-7BDA24ACC6E1}" ShortID="192219519">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DANGER" ID="{F906ADDC-55E2-4244-B06E-5CFB5AE394B7}"/>
+										<CustomState Name="" ID="{231A5FA3-2702-4075-8396-4C6DD6F2772D}" ShortID="783265647">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+										<CustomState Name="" ID="{D09F5DF9-38EB-48ED-B168-5BB930938924}" ShortID="905373359"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{E55BB9D1-6F8D-41D3-BCB6-FF05DF3654EB}" ShortID="803156056">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{FBF2DC74-D43C-46E5-A47F-2C2A02FDEBF4}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-0.11454</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>20.35752</XPos>
-																		<YPos>-0.09877</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>20.35852</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
 									<Reference>
 										<Local>
 											<RTPC Name="" ID="{C43DC68F-82AF-4C2C-B3D3-938D5F8E3663}" ShortID="748354928">
@@ -17547,6 +17540,31 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="BGM" ID="{DFCFB80A-579E-4BC0-9FEB-A5B7225BBF69}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+										<CustomState Name="" ID="{E0C9CDC9-9AB0-4B12-9A3F-4100230D2D03}" ShortID="608467519"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DANGER" ID="{F906ADDC-55E2-4244-B06E-5CFB5AE394B7}"/>
+										<CustomState Name="" ID="{AC406D16-0250-4BBF-9C8C-30C9BD1C5032}" ShortID="105442054"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+										<CustomState Name="" ID="{45FB347E-43E8-48ED-9A58-1A01D284AE7D}" ShortID="1019757860">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
 									<Reference>
@@ -17647,56 +17665,6 @@
 									</Reference>
 									<Reference>
 										<Local>
-											<RTPC Name="" ID="{54650339-0348-4FE3-9653-2BB15F35730D}" ShortID="30839174">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{4235969E-C26E-41D3-BF8B-1E326A2326E4}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>39.99787</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>39.99887</XPos>
-																		<YPos>-161.84951</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>39.99987</XPos>
-																		<YPos>-0.0966799999999921</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>0</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
-									<Reference>
-										<Local>
 											<RTPC Name="" ID="{0DBC61B9-190F-4C80-A372-609E3458EC72}" ShortID="99881759">
 												<PropertyList>
 													<Property Name="PropertyName" Type="string" Value="Volume"/>
@@ -17772,53 +17740,37 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="BGM" ID="{DFCFB80A-579E-4BC0-9FEB-A5B7225BBF69}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+										<CustomState Name="" ID="{71EDF1AF-ACCC-40A8-879C-4C9B5FBEDD35}" ShortID="59908247">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="DANGER" ID="{F906ADDC-55E2-4244-B06E-5CFB5AE394B7}"/>
+										<CustomState Name="" ID="{0C5E2CFB-67C2-4C70-9885-E201C70A7D4E}" ShortID="471799043">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64" Value="-108"/>
+											</PropertyList>
+										</CustomState>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
+										<CustomState Name="" ID="{9BFFF1C8-1B01-4929-85BB-08AAC18E27F5}" ShortID="216625760"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 							<ObjectLists>
 								<ObjectList Name="RTPC">
-									<Reference>
-										<Local>
-											<RTPC Name="" ID="{15A384EC-898C-4BF5-A8C4-80C38B46A858}" ShortID="375796813">
-												<PropertyList>
-													<Property Name="PropertyName" Type="string" Value="Volume"/>
-												</PropertyList>
-												<ReferenceList>
-													<Reference Name="ControlInput">
-														<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
-													</Reference>
-													<Reference Name="Curve">
-														<Custom>
-															<Curve Name="" ID="{1D03FAA6-FE75-4F8A-89E7-12969385C857}">
-																<PropertyList>
-																	<Property Name="Flags" Type="int32" Value="3"/>
-																</PropertyList>
-																<PointList>
-																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-0.114540000000005</YPos>
-																		<Flags>5</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>20.35752</XPos>
-																		<YPos>-0.0987700000000018</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>20.35852</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>0</Flags>
-																	</Point>
-																	<Point>
-																		<XPos>100</XPos>
-																		<YPos>-200</YPos>
-																		<Flags>37</Flags>
-																	</Point>
-																</PointList>
-															</Curve>
-														</Custom>
-													</Reference>
-												</ReferenceList>
-											</RTPC>
-										</Local>
-									</Reference>
 									<Reference>
 										<Local>
 											<RTPC Name="" ID="{60EB621F-438A-418D-9501-AFE7EDA23754}" ShortID="632805049">

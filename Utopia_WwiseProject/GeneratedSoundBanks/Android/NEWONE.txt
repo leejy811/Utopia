@@ -108,22 +108,25 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2212414277	DIST			\Default Work Unit\DIST	
 	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
 
+Effect plug-ins	ID	Name	Type				Notes
+	86245554	Attack_Remover	Wwise Compressor			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	30720200	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM2_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM2\BGM2		15360208
-	141264882	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM5_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		18432096
 	169061225	SP_Discount_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Discount_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Discount_01		728372
 	190275362	1SP_Many_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Many_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Many_jobs_01		728672
 	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_FIRE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_FIRE_01		1079100
 	257243960	SP_Increase_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Increase_price_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Increase_price_01		1076988
+	258521796	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM2_LU3_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM2\New Music Track		15360208
 	323079966	NNAPT_event_DISEASE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_DISEASE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNAPT_event_DISEASE_01		960100
-	348594287	BGM3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM3_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\BGM3		6144660
+	348594287	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM3_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\New Music Track		6144660
 	415772296	1SP_Festival_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Festival_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Festival_01		1004868
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_DESOLATE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_DESOLATE_01		1076988
-	442624949	torobgm3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\torobgm3_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM6\torobgm3		12288096
+	441200128	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM5_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		18432096
 	648936715	NAPT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_THIEF_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NAPT_event_THIEF_01		1030916
 	698255832	SP_Few_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Few_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Few_jobs_01		728372
-	791981080	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM\BGM		7680096
 	839951050	3131	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\3131_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Danger\BGM4\3131		12289040
 	864269945	NSP_Decrease_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Decrease_price_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NSP_Decrease_price_01		1076988
 	927128712	NNSP_Low_in_stock_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Low_in_stock_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNSP_Low_in_stock_01		1079176
+	929905877	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM6_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM6\New Music Track		12288096
+	993211934	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM\BGM		7680096
 
