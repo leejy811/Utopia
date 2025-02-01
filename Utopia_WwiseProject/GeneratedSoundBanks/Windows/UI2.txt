@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	7328488	Play_CellPhone_01			\Default Work Unit\old\Play_CellPhone_01	
 	139162049	Play_Paythepayment_01			\Default Work Unit\old\Play_Paythepayment_01	
+	501297411	Play_Break_01			\Default Work Unit\Play_Break_01	
 	725934356	Play_Slot_Effect_Spwan_01			\Default Work Unit\old\Play_Slot_Effect_Spwan_01	
 	904270529	Play_Deny_02			\Default Work Unit\old\Play_Deny_02	
 	904270530	Play_Deny_01			\Default Work Unit\old\Play_Deny_01	
@@ -11,21 +12,27 @@ Event	ID	Name			Wwise Object Path	Notes
 	2214109306	Play_Slotmashin_Jackpot_Ani_01			\Default Work Unit\old\Play_Slotmashin_Jackpot_Ani_01	
 	2450428583	Play_CellPhone_Click			\Default Work Unit\old\Play_CellPhone_Click	
 	2774129414	Play_POPUP_Negative			\Default Work Unit\old\Play_POPUP_Negative	
+	2779889645	Play_Break_Rumble_01			\Default Work Unit\Play_Break_Rumble_01	
+	2927211377	Play_Break_Melodic_01			\Default Work Unit\Play_Break_Melodic_01	
 	3035396721	Stop_Slot_Drrrrrr_01			\Default Work Unit\old\Stop_Slot_Drrrrrr_01	
 	3371155409	Play_Slot_Stop_01			\Default Work Unit\old\Play_Slot_Stop_01	
 	3452595303	Play_Slot_Drrrrrr_01			\Default Work Unit\old\Play_Slot_Drrrrrr_01	
 	3497197729	Play_GraphUP			\Default Work Unit\old\Play_GraphUP	
+	3499138947	Stop_Break_Rumble_01			\Default Work Unit\Stop_Break_Rumble_01	
 	3583156534	Play_POPUP_Positive			\Default Work Unit\old\Play_POPUP_Positive	
 	3803209012	Play_Slot_Spwan_01			\Default Work Unit\old\Play_Slot_Spwan_01	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	201474464	Break_Melodic_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Break_Melodic_01_D50B2123.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_Melodic_01		48197
 	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Paythepayment_01_ABF879B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		23728
 	236384276	POPUP_Positive	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\POPUP_Positive_v2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\POPUP_Positive		16259
 	262109454	Tutorial_Pop_up	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\POPUP_Positive_v1_6581387E.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Tutorial_Pop_up		10828
 	439018999	Slotmashin_Jackpot_Ani_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slotmashin_Jackpot_Ani_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slotmashin_Jackpot_Ani_01		290794
 	444873937	Slot_Effect_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Effect_Spwan_01_7EE5D2A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Effect_Spwan_01		6108
+	449843411	Break_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Break_01_FC545D5F.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_01		25298
 	488455765	SlotMachine_enter_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SlotMachine_enter_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\SlotMachine_enter_001		6689
 	537067420	POPUP_Negative	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\POPUP_Negative_v2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\POPUP_Negative		11968
+	571800047	Break_Rumble_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Break_Rumble_01_6A37F79F.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_Rumble_01		112862
 	594404784	Slot_Spwan_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Slot_Spwan_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Slot_Spwan_01		13895
 	650016289	Deny_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\MUI DENY SMALL Short Fast Click_167EAF51.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Deny_01		2518
 	748782326	Deny_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\PSE_DDV1_FX_One_Shot_Glitch_UI_Synth_Beep_Negative_02_C28DB17C.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI3\Deny_02		6389

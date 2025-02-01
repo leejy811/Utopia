@@ -4528,6 +4528,65 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Play_Break_01" ID="{4CBE0A08-3F52-4C02-AF4A-F42D1608F511}">
+					<ChildrenList>
+						<Action Name="" ID="{2DFB3DA4-76A0-4A4E-B999-B2A846F09BDA}" ShortID="515647213">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Break_01" ID="{CB649E90-97E2-4B81-A08D-D5A9EA00A03C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Break_Melodic_01" ID="{33F88AB5-DDD6-4CBD-8CD1-6E9F271A917C}">
+					<ChildrenList>
+						<Action Name="" ID="{C151B12B-B5A1-4998-98A1-B18EC169AA9E}" ShortID="186647926">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Break_Melodic_01" ID="{A658E898-F1C1-424F-9681-CDA349D943D4}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Break_Rumble_01" ID="{17C1931F-AE03-4274-B017-6220D4650F5B}">
+					<ChildrenList>
+						<Action Name="" ID="{B8C37871-CF16-4551-AFA4-8437EE99149C}" ShortID="692747366">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Break_Rumble_01" ID="{A6F89A0F-0940-4DDA-A8D9-5D296C5C93FF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Intro_camera" ID="{A41F94AB-DB5D-44C8-B5D8-5404CA7F5A22}">
+					<ChildrenList>
+						<Action Name="" ID="{6A7FD01D-D1BD-4CA2-A7B9-8106184D7242}" ShortID="636808409">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Intro_camera" ID="{17FA7FD2-E452-4AF3-83B6-FAF7EBB8E482}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Break_Rumble_01" ID="{EF99BEDA-D927-4453-AAC4-DD24CA6820F6}">
+					<ChildrenList>
+						<Action Name="" ID="{A43D79CE-59B4-43B2-8EA8-17DEDCC629F2}" ShortID="394381816">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Break_Rumble_01" ID="{A6F89A0F-0940-4DDA-A8D9-5D296C5C93FF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

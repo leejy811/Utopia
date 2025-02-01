@@ -126,10 +126,14 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{4693DB07-2560-BFEB-FDE8-8CCAC0C9B9B3}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{B033A64B-FCA5-3BD2-4622-7570F8BBDE46}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
+				<File Id="201474464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Break_Melodic_01.wav</ShortName>
+					<CachePath>SFX/Break_Melodic_01_367389B3.wem</CachePath>
+				</File>
 				<File Id="204508889" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Paythepayment_01.wav</ShortName>
 					<CachePath>SFX/Paythepayment_01_00889829.wem</CachePath>
@@ -150,6 +154,10 @@
 					<ShortName>Slot_Effect_Spwan_01.wav</ShortName>
 					<CachePath>SFX/Slot_Effect_Spwan_01_C28BA518.wem</CachePath>
 				</File>
+				<File Id="449843411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Break_01.wav</ShortName>
+					<CachePath>SFX/Break_01_9973206F.wem</CachePath>
+				</File>
 				<File Id="488455765" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SlotMachine_enter_001.wav</ShortName>
 					<CachePath>SFX/SlotMachine_enter_001_818F3B66.wem</CachePath>
@@ -157,6 +165,10 @@
 				<File Id="537067420" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>POPUP_Negative_v2.wav</ShortName>
 					<CachePath>SFX/POPUP_Negative_v2_818F3B66.wem</CachePath>
+				</File>
+				<File Id="571800047" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Break_Rumble_01.wav</ShortName>
+					<CachePath>SFX/Break_Rumble_01_A7FF4E2F.wem</CachePath>
 				</File>
 				<File Id="594404784" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_Spwan_01.wav</ShortName>
@@ -196,6 +208,21 @@
 				</File>
 			</Media>
 			<Events>
+				<Event Id="501297411" Name="Play_Break_01" DurationType="OneShot" DurationMin="1.1793529" DurationMax="1.1793529">
+					<MediaRefs>
+						<MediaRef Id="449843411"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2927211377" Name="Play_Break_Melodic_01" DurationType="OneShot" DurationMin="3.3547945" DurationMax="3.3547945">
+					<MediaRefs>
+						<MediaRef Id="201474464"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2779889645" Name="Play_Break_Rumble_01" DurationType="OneShot" DurationMin="5.349421" DurationMax="5.349421">
+					<MediaRefs>
+						<MediaRef Id="571800047"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="7328488" Name="Play_CellPhone_01" DurationType="OneShot" DurationMin="1.75" DurationMax="1.75">
 					<MediaRefs>
 						<MediaRef Id="791175701"/>
@@ -276,6 +303,7 @@
 						<MediaRef Id="262109454"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3499138947" Name="Stop_Break_Rumble_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="3035396721" Name="Stop_Slot_Drrrrrr_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
@@ -777,7 +805,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{A112800A-1A1C-ECAE-2C27-A122BE01F90D}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{139008AA-D61A-0A08-C3A6-898E9EF4B247}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -820,6 +848,10 @@
 				<File Id="190275362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Many_jobs_01.wav</ShortName>
 					<CachePath>SFX/SP_Many_jobs_01_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="201474464" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Break_Melodic_01.wav</ShortName>
+					<CachePath>SFX/Break_Melodic_01_367389B3.wem</CachePath>
 				</File>
 				<File Id="227663847" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_bet_01.wav</ShortName>
@@ -873,6 +905,10 @@
 					<ShortName>BGM5_LU1.wav</ShortName>
 					<CachePath>SFX/BGM5_LU1_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="449843411" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Break_01.wav</ShortName>
+					<CachePath>SFX/Break_01_9973206F.wem</CachePath>
+				</File>
 				<File Id="488086698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_rule_draw.wav</ShortName>
 					<CachePath>SFX/BLACKJACK_rule_draw_818F3B66.wem</CachePath>
@@ -880,6 +916,10 @@
 				<File Id="498749437" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_card_put_02.wav</ShortName>
 					<CachePath>SFX/BLACKJACK_card_put_02_818F3B66.wem</CachePath>
+				</File>
+				<File Id="571800047" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Break_Rumble_01.wav</ShortName>
+					<CachePath>SFX/Break_Rumble_01_A7FF4E2F.wem</CachePath>
 				</File>
 				<File Id="605082462" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_countdown.wav</ShortName>
@@ -1082,6 +1122,21 @@
 				<Event Id="4012406984" Name="Play_BLACKJACK_rule_win" DurationType="OneShot" DurationMin="1.0794375" DurationMax="1.0794375">
 					<MediaRefs>
 						<MediaRef Id="132635145"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="501297411" Name="Play_Break_01" DurationType="OneShot" DurationMin="1.1793529" DurationMax="1.1793529">
+					<MediaRefs>
+						<MediaRef Id="449843411"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2927211377" Name="Play_Break_Melodic_01" DurationType="OneShot" DurationMin="3.3547945" DurationMax="3.3547945">
+					<MediaRefs>
+						<MediaRef Id="201474464"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2779889645" Name="Play_Break_Rumble_01" DurationType="OneShot" DurationMin="5.349421" DurationMax="5.349421">
+					<MediaRefs>
+						<MediaRef Id="571800047"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="2096465206" Name="Play_GAMEPLAY_chips_exchange" DurationType="OneShot" DurationMin="1.0018958" DurationMax="1.0018958">
@@ -1449,6 +1504,7 @@
 						<MediaRef Id="132635145"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="3499138947" Name="Stop_Break_Rumble_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="885567024" Name="Stop_GAMEPLAY_chips_exchange" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0">
 					<MediaRefs>
 						<MediaRef Id="48900095"/>
@@ -2194,5 +2250,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{26EF03BA-A6C8-025C-E0FF-0D8CFABCF7C4}</FileHash>
+	<FileHash>{0D1A57DD-1D47-1F7B-8AD5-DDA501A6DB46}</FileHash>
 </SoundBanksInfo>

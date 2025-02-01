@@ -100,6 +100,8 @@
 				</SoundBank>
 				<SoundBank Name="UI2" ID="{63CB7A5A-A8BC-4EAD-85EA-D1B6BCB95AAB}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Play_Break_Rumble_01" ID="{17C1931F-AE03-4274-B017-6220D4650F5B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Break_Rumble_01" ID="{EF99BEDA-D927-4453-AAC4-DD24CA6820F6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_POPUP_Positive" ID="{C2EA6645-9659-44F5-83CB-638363E40A6D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_Stop_01" ID="{A75C96F9-C83A-44FB-89D3-323B688D0C69}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Deny_01" ID="{AE2A952F-11E5-457B-984A-F16885A753AA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -113,6 +115,8 @@
 						<ObjectRef Name="Play_Deny_02" ID="{01066F9C-5123-4A01-99BB-563C66F94685}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_CellPhone_Click" ID="{889A9691-6AA4-4AA4-AD39-6300EB5C75DC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_Spwan_01" ID="{70716D87-9578-4B36-BECB-D3AE94194338}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Break_01" ID="{4CBE0A08-3F52-4C02-AF4A-F42D1608F511}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Break_Melodic_01" ID="{33F88AB5-DDD6-4CBD-8CD1-6E9F271A917C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_Rever_01" ID="{01DA6832-8C92-4CD0-A9A6-3F8482D87A19}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Paythepayment_01" ID="{A63697CC-B743-4CE1-960D-B12EDFDFBF22}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slotmashin_Jackpot_Ani_01" ID="{D6931FBA-8A51-4DAE-A40E-E35591D67749}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -178,6 +182,7 @@
 						<ObjectRef Name="Play_TO_Increase_price_01" ID="{DBCE4452-5CDD-416A-A378-47884F5FDBCA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Discount_03" ID="{28BE8515-082D-419D-AC1C-D82365AC08F2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="GAMEPLAY_chips_exchange" ID="{34E25E1D-F4B2-421A-8649-8CCEECB53F1A}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Break_Rumble_01" ID="{17C1931F-AE03-4274-B017-6220D4650F5B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Festival_03" ID="{820EC663-9ADF-427F-B643-6103B37AE46F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Increase_price_04" ID="{1C7515B6-949A-4291-8D90-3B94ABE8CFE5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_RACE_bet_01" ID="{97155144-2B5A-42A3-8833-E2759267F771}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -193,6 +198,7 @@
 						<ObjectRef Name="BLACKJACK_rule_draw" ID="{0E1E35D1-D0E6-43D3-8CA1-F65E4245D67E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BLACKJACK_rule_win" ID="{C487F2FB-C02A-43F0-9C53-831263A8E738}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_card_flip" ID="{1A2C3FCF-AB81-443A-8607-866BE08EE76D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Stop_Break_Rumble_01" ID="{EF99BEDA-D927-4453-AAC4-DD24CA6820F6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_event_DESOLATE_03" ID="{85601CD4-FF38-4456-828B-D1E01F377B0B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Many_jobs_02" ID="{0E474F21-3965-4466-95DC-0A921A3ABFDB}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_RACE_recall_01" ID="{E1179CDD-4E8D-4468-8E18-1DF962F46566}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
@@ -249,9 +255,11 @@
 						<ObjectRef Name="Stop_GAMEPLAY_chips_exchange" ID="{0BC11A9C-3870-4BB8-8F77-BA6345365932}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_event_FIRE_04" ID="{8ABD483C-93EE-4BDB-8D0C-9FFED9241F94}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Many_jobs_04" ID="{25C403FF-6A90-4BE9-A2ED-5225CCF548B1}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Break_01" ID="{4CBE0A08-3F52-4C02-AF4A-F42D1608F511}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Low_in_stock_03" ID="{72F74BDA-0423-4C4C-A560-FEEA08F6D21F}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_event_DESOLATE_04" ID="{24365F26-E464-4C74-A595-98FF09F0ABFC}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_BGM" ID="{72A6A7C1-F5DA-4CAF-95A3-D5102D0F31EB}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Break_Melodic_01" ID="{33F88AB5-DDD6-4CBD-8CD1-6E9F271A917C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Festival_01" ID="{18B90F1B-6B0E-4CD5-997E-5F5E8C9A3B44}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_BLACKJACK_rule_draw" ID="{8FEEFA04-FCA4-4D02-ADEE-9BFC697298A5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_TO_Discount_04" ID="{57709B85-9B59-4D05-BDFB-7E721F7C0550}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>

@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	443838562	Play_LOOP_vomit_01			\Default Work Unit\0102\Play_LOOP_vomit_01	
 	480150866	Play_BGM_01			\Default Work Unit\Play_BGM_01	
 	493229879	Stop_BLACKJACK_intro			\Default Work Unit\toto\Stop_BLACKJACK_intro	
+	501297411	Play_Break_01			\Default Work Unit\Play_Break_01	
 	504948858	Play_Race_BGM			\Default Work Unit\0102\Play_Race_BGM	
 	633610688	Play_TO_event_DESOLATE_03			\Default Work Unit\Play_TO_event_DESOLATE_03	
 	633610689	Play_TO_event_DESOLATE_02			\Default Work Unit\Play_TO_event_DESOLATE_02	
@@ -51,11 +52,13 @@ Event	ID	Name			Wwise Object Path	Notes
 	2706297873	Play_TO_Low_in_stock_03			\Default Work Unit\Play_TO_Low_in_stock_03	
 	2706297875	Play_TO_Low_in_stock_01			\Default Work Unit\Play_TO_Low_in_stock_01	
 	2706297878	Play_TO_Low_in_stock_04			\Default Work Unit\Play_TO_Low_in_stock_04	
+	2779889645	Play_Break_Rumble_01			\Default Work Unit\Play_Break_Rumble_01	
 	2787455057	Play_TO_Discount_01			\Default Work Unit\Play_TO_Discount_01	
 	2787455058	Play_TO_Discount_02			\Default Work Unit\Play_TO_Discount_02	
 	2787455059	Play_TO_Discount_03			\Default Work Unit\Play_TO_Discount_03	
 	2787455060	Play_TO_Discount_04			\Default Work Unit\Play_TO_Discount_04	
 	2854514125	Play_BLACKJACK_intro			\Default Work Unit\toto\Play_BLACKJACK_intro	
+	2927211377	Play_Break_Melodic_01			\Default Work Unit\Play_Break_Melodic_01	
 	2965005016	Stop_BLACKJACK_card_put_02			\Default Work Unit\toto\Stop_BLACKJACK_card_put_02	
 	2965005019	Stop_BLACKJACK_card_put_01			\Default Work Unit\toto\Stop_BLACKJACK_card_put_01	
 	3016710050	Play_LOOP_bar			\Default Work Unit\0102\Play_LOOP_bar	
@@ -69,6 +72,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3328211061	Play_BLACKJACK_LOOSE			\Default Work Unit\Play_BLACKJACK_LOOSE	
 	3403597365	Play_RACE_bet_01			\Default Work Unit\toto\Play_RACE_bet_01	
 	3403597366	Play_RACE_bet_02			\Default Work Unit\toto\Play_RACE_bet_02	
+	3499138947	Stop_Break_Rumble_01			\Default Work Unit\Stop_Break_Rumble_01	
 	3546129116	Play_RACE_recall_02			\Default Work Unit\toto\Play_RACE_recall_02	
 	3546129119	Play_RACE_recall_01			\Default Work Unit\toto\Play_RACE_recall_01	
 	3549795858	Stop_RACE_start			\Default Work Unit\toto\Stop_RACE_start	
@@ -134,6 +138,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	156090381	RACE_recall_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\RACE_recall_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_recall_01		9674
 	169061225	TO_Discount_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Discount_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\TOTOPIA_CONDITION_IN1_DIST\TO_Discount_02		728372
 	190275362	TO_Many_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Many_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\TOTOPIA_CONDITION_IN1\TO_Many_jobs_01		728672
+	201474464	Break_Melodic_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Break_Melodic_01_367389B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_Melodic_01		644216
 	227663847	RACE_bet_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\RACE_bet_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_bet_01		9688
 	228042333	TO_event_FIRE_04	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_FIRE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\TOTOPIA_CONDITION_IN2\TO_event_FIRE_04		1079100
 	250967311	BLACKJACK_intro	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BLACKJACK_intro_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_intro		305660
@@ -147,8 +152,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	415772296	TO_Festival_03	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Festival_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\TOTOPIA_CONDITION_IN2_DIST\TO_Festival_03		1004868
 	433461852	TO_event_DESOLATE_03	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_DESOLATE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\TOTOPIA_CONDITION_IN2_DIST\TO_event_DESOLATE_03		1076988
 	441200128	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM5_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		18432096
+	449843411	Break_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Break_01_9973206F.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_01		226532
 	488086698	BLACKJACK_rule_draw	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BLACKJACK_rule_draw_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_rule_draw		61708
 	498749437	BLACKJACK_card_put_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BLACKJACK_card_put_02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_card_put_02		23466
+	571800047	Break_Rumble_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Break_Rumble_01_A7FF4E2F.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_Rumble_01		1027184
 	605082462	RACE_countdown	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\RACE_countdown_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_countdown		3842
 	606623087	BLACKJACK_recall	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BLACKJACK_recall_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\BLACKJACK_recall		98372
 	610915002	RACE_bet_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\RACE_bet_02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\Totopia\RACE_bet_02		11462

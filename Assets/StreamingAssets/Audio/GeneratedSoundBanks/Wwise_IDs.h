@@ -86,6 +86,9 @@ namespace AK
         static const AkUniqueID PLAY_BLACKJACK_RULE_BUST = 1599756660U;
         static const AkUniqueID PLAY_BLACKJACK_RULE_DRAW = 2625493016U;
         static const AkUniqueID PLAY_BLACKJACK_RULE_WIN = 4012406984U;
+        static const AkUniqueID PLAY_BREAK_01 = 501297411U;
+        static const AkUniqueID PLAY_BREAK_MELODIC_01 = 2927211377U;
+        static const AkUniqueID PLAY_BREAK_RUMBLE_01 = 2779889645U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;
         static const AkUniqueID PLAY_BUILDINGSOUND = 2611274067U;
         static const AkUniqueID PLAY_CELLPHONE_01 = 7328488U;
@@ -270,6 +273,7 @@ namespace AK
         static const AkUniqueID STOP_BLACKJACK_RULE_BUST = 2122381770U;
         static const AkUniqueID STOP_BLACKJACK_RULE_DRAW = 1237074726U;
         static const AkUniqueID STOP_BLACKJACK_RULE_WIN = 1478085386U;
+        static const AkUniqueID STOP_BREAK_RUMBLE_01 = 3499138947U;
         static const AkUniqueID STOP_CONSTRUCTION = 3493507479U;
         static const AkUniqueID STOP_FORESTAMBIENCE = 1345079091U;
         static const AkUniqueID STOP_FORESTAMBIENCEINLOBBY = 2778003230U;
