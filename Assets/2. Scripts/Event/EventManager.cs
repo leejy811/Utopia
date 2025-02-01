@@ -148,8 +148,6 @@ public class EventManager : MonoBehaviour
             indexs.Add(ranIdx);
             targetBuildings[ranEvent.eventIndex][ranIdx].ApplyEvent(ranEvent);
         }
-
-        //BuildingSpawner.instance.EventHighlightUpdate();
     }
 
     public void EffectUpdate()

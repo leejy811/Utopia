@@ -95,10 +95,14 @@ MonoBehaviour:
   - {fileID: 4705107201506718315}
   texts:
   - {fileID: 4705107202309765975}
+  offset: {x: -10, y: 10}
   fadeInTime: 0
   waitTime: 0
   fadeOutTime: 1
   isFixed: 0
+  isOnOff: 0
+  offUI: 0
+  isMoved: 0
 --- !u!1 &4705107202309765973
 GameObject:
   m_ObjectHideFlags: 0

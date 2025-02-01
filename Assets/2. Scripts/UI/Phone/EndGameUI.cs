@@ -37,7 +37,7 @@ public class EndGameUI : MonoBehaviour
     private void SetValue()
     {
         DateTime day = RoutineManager.instance.day;
-        curDayText.text = day.ToString("yy") + "/" + day.ToString("MM") + "/" + day.ToString("dd");
+        curDayText.text = day.ToString("yyyy") + "." + day.ToString("MM") + "." + day.ToString("dd");
         playTimeText.text = SecondToString(RoutineManager.instance.playTime);
 
         int score = RoutineManager.instance.creditRating;

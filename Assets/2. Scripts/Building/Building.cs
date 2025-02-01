@@ -131,6 +131,7 @@ public class Building : MonoBehaviour
         if (GetEventProblemCount() == 0 && newEvent.type == EventType.Problem)
             EventManager.instance.SetEventBuildings(this, true);
         curEvents.Add(newEvent);
+        BuildingSpawner.instance.SetEventHighlight(this);
     }
 
     public void LoadEvent(Event newEvent)
@@ -178,6 +179,11 @@ public class Building : MonoBehaviour
         for (int i = 0; i < removeIdx.Count; i++)
         {
             curEvents.RemoveAt(removeIdx[i] - i);
+        }
+
+        if (removeIdx.Count > 0)
+        {
+            BuildingSpawner.instance.SetEventHighlight(this);
         }
     }
 
@@ -239,6 +245,7 @@ public class Building : MonoBehaviour
             EventManager.instance.SetEventBuildings(this, false);
         curEvents.Remove(curEvents[index]);
         AkSoundEngine.PostEvent("Play_UI_solve_001", gameObject);
+        BuildingSpawner.instance.SetEventHighlight(this);
     }
 
     public int GetEventProblemCount()

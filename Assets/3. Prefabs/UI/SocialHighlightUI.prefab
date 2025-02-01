@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2166691188783578386}
   m_Layer: 5
   m_Name: IconImage
-  m_TagString: Untagged
+  m_TagString: CanOverUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4705107201506718309}
   m_Layer: 5
   m_Name: SocialHighlightUI
-  m_TagString: Untagged
+  m_TagString: CanOverUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,6 +173,7 @@ MonoBehaviour:
   - {fileID: 2259796793655669088}
   - {fileID: 4705107201506718315}
   texts: []
+  offset: {x: -35, y: 0}
   fadeInTime: 0.1
   waitTime: 0
   fadeOutTime: 1
@@ -193,7 +194,7 @@ GameObject:
   - component: {fileID: 2259796793655669088}
   m_Layer: 5
   m_Name: IconImage (1)
-  m_TagString: Untagged
+  m_TagString: CanOverUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

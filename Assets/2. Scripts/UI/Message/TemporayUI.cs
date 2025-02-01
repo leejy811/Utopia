@@ -13,6 +13,7 @@ public class TemporayUI : MonoBehaviour, IPoolObject
     public string poolName;
     public Image[] images;
     public TextMeshProUGUI[] texts;
+    public Vector2 offset;
     public float fadeInTime;
     public float waitTime;
     public float fadeOutTime;
@@ -94,7 +95,7 @@ public class TemporayUI : MonoBehaviour, IPoolObject
         var localPos = Vector2.zero;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(rectParent, screenPos, uiCamera, out localPos);
 
-        rectSelf.localPosition = localPos + new Vector2(-10, 10);
+        rectSelf.localPosition = localPos + offset;
     }
 
     IEnumerator TempUpdate()

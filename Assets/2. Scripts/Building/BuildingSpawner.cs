@@ -2,6 +2,7 @@ using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -21,7 +22,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public int buildingRemoveCount;
 
     private bool isHighlight;
-    private List<TemporayUI> eventIconTemps = new List<TemporayUI>();
+    private Dictionary<Building, TemporayUI> eventIconTemps = new Dictionary<Building, TemporayUI>();
 
     private void Awake()
     {
@@ -186,6 +187,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
         Grid.instance.tiles[pos.x, pos.y].building = null;
         EventManager.instance.SetEventBuildings(buildingComp, false);
+        eventIconTemps[buildingComp].offUI = true;
 
         if (second == 0.0f)
             AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
@@ -222,24 +224,32 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         {
             foreach (Building building in buildings)
             {
+                if (building.GetEventProblemCount() == 0) continue;
                 TemporayUI temp = UIManager.instance.SetEventHighlightPopUp(building.curEvents.ToArray(), building.transform.position);
-                eventIconTemps.Add(temp);
+                eventIconTemps[building] = temp;
             }
         }
         else
         {
-            foreach (TemporayUI temp in eventIconTemps)
-                temp.offUI = true;
+            foreach (Building building in buildings)
+            {
+                if (eventIconTemps.ContainsKey(building))
+                    eventIconTemps[building].offUI = true;
+            }
 
             eventIconTemps.Clear();
         }
     }
 
-    public void EventHighlightUpdate()
+    public void SetEventHighlight(Building building)
     {
-        isHighlight = true;
-        EventBuildingsHighlight();
-        EventBuildingsHighlight();
+        if (eventIconTemps.ContainsKey(building))
+        {
+            if (building.GetEventProblemCount() == 0)
+                eventIconTemps[building].offUI = true;
+            else
+                eventIconTemps[building].SetUI(building.curEvents.ToArray(), building.transform.position);
+        }
     }
 
     public int GetEventBuildingCount()

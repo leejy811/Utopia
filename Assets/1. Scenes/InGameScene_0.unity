@@ -1829,6 +1829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 1579957405}
 --- !u!114 &18301598
 MonoBehaviour:
@@ -7246,6 +7247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 2122207183}
 --- !u!1 &109362710
 GameObject:
@@ -7460,6 +7462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 3
   index: 11
 --- !u!114 &110877739
@@ -11966,6 +11969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
 --- !u!114 &184421589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12368,6 +12372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 4
   index: 2
 --- !u!114 &186150379
@@ -12689,6 +12694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 2
   index: 6
 --- !u!114 &190797871
@@ -16410,6 +16416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   iconName: {fileID: 1798487859}
 --- !u!114 &254309986
 MonoBehaviour:
@@ -17895,6 +17902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 1
   index: 5
 --- !u!114 &275460850
@@ -21321,6 +21329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 4
   index: 0
 --- !u!114 &318980612
@@ -23233,6 +23242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 0
   index: 1
 --- !u!114 &354057793
@@ -26488,6 +26498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 1
   index: 4
 --- !u!114 &406206642
@@ -27561,6 +27572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 3
   index: 10
 --- !u!114 &428852049
@@ -32902,6 +32914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
 --- !u!114 &521507825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34156,6 +34169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 1982958439}
 --- !u!1 &547409205
 GameObject:
@@ -40921,6 +40935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   iconName: {fileID: 349659309}
 --- !u!114 &650738217
 MonoBehaviour:
@@ -49019,6 +49034,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 1681138835}
 --- !u!114 &799698060
 MonoBehaviour:
@@ -54245,6 +54261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 1821102347}
 --- !u!1 &925616548
 GameObject:
@@ -61346,6 +61363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 2
   index: 8
 --- !u!114 &1081287158
@@ -61513,7 +61531,7 @@ MonoBehaviour:
   buttons: {fileID: 1493098084}
   inline: {fileID: 1415421123}
   saveInfo: {fileID: 512550257}
-  curDayText: {fileID: 1039085485}
+  curDayText: {fileID: 1735487884}
   playTimeText: {fileID: 230711472}
   creditScoreText: {fileID: 906466320}
   buildingCntText:
@@ -67168,6 +67186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 4
   index: 1
 --- !u!114 &1202485619
@@ -68343,6 +68362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
 --- !u!114 &1220526401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82837,6 +82857,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 0
   index: 0
 --- !u!114 &1466232770
@@ -83309,6 +83330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   iconName: {fileID: 533344634}
 --- !u!114 &1473695779
 MonoBehaviour:
@@ -84898,6 +84920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 2
   index: 7
 --- !u!114 &1490254337
@@ -96990,6 +97013,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 0
   index: 2
 --- !u!114 &1682223985
@@ -97151,6 +97175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 476904894}
 --- !u!114 &1682297981
 MonoBehaviour:
@@ -97667,6 +97692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: 
+  interactable: 1
   detail: {fileID: 2105024609}
 --- !u!1 &1700859544
 GameObject:
@@ -98543,8 +98569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: 
-  panel: {fileID: 1341515225}
   interactable: 0
+  panel: {fileID: 1341515225}
 --- !u!1 &1709355230
 GameObject:
   m_ObjectHideFlags: 0
@@ -100717,6 +100743,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 256430022}
 --- !u!114 &1757929877
 MonoBehaviour:
@@ -103852,6 +103879,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   iconName: {fileID: 1134559834}
 --- !u!114 &1820299474
 MonoBehaviour:
@@ -104746,6 +104774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
 --- !u!114 &1833119350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116131,6 +116160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 3
   index: 9
 --- !u!114 &2018807206
@@ -119870,6 +119900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   iconName: {fileID: 2018269963}
 --- !u!114 &2082956945
 MonoBehaviour:
@@ -121719,8 +121750,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: 
-  panel: {fileID: 157811890}
   interactable: 0
+  panel: {fileID: 157811890}
 --- !u!1 &2111890163
 GameObject:
   m_ObjectHideFlags: 0
@@ -121997,6 +122028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   detail: {fileID: 987042216}
 --- !u!114 &2113854650
 MonoBehaviour:
@@ -123432,6 +123464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundName: Play_Mouse_001_v1
+  interactable: 1
   buttonType: 1
   index: 3
 --- !u!114 &2142321657
