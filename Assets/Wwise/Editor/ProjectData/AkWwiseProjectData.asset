@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584632014923691643
+    m_lastTime: -8584631997631411636
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -240,7 +240,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584632016298519330
+    m_lastTime: -8584631997631004911
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -2483,8 +2483,8 @@ MonoBehaviour:
         guid: 6de370690ce067488dfe5faa38500a0d
       Path: Events\Default Work Unit\old\Play_Mail_take_002
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.6675208
+      minDuration: 0.6675208
     - name: Play_MINIGAME_COIN
       guid: d0a09e6e3fe0264ba97e67181c1163a7
       id: 3433467811

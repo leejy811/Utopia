@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{FAB1C22A-A1ED-9758-DC16-A32C5F3084F7}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{17FD9CD2-5586-47D1-F4A4-483561EA0FF4}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -414,7 +414,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{0E1F0CE4-3848-3BED-7B3E-97F7813093A9}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{2E2F22A0-9303-EC55-8EA7-88180AB3A3EC}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -473,6 +473,10 @@
 				<File Id="265951174" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>D-Day_popup_001.wav</ShortName>
 					<CachePath>SFX/D-Day_popup_001_818F3B66.wem</CachePath>
+				</File>
+				<File Id="302694100" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Mail_take_002.wav</ShortName>
+					<CachePath>SFX/Mail_take_002_818F3B66.wem</CachePath>
 				</File>
 				<File Id="323079966" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DISEASE_001.wav</ShortName>
@@ -764,6 +768,11 @@
 						<MediaRef Id="327294676"/>
 					</MediaRefs>
 				</Event>
+				<Event Id="226547372" Name="Play_Mail_take_002" DurationType="OneShot" DurationMin="0.6675208" DurationMax="0.6675208">
+					<MediaRefs>
+						<MediaRef Id="302694100"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3906795593" Name="Play_Mouse_001_v1" DurationType="OneShot" DurationMin="0.098" DurationMax="0.098">
 					<MediaRefs>
 						<MediaRef Id="991450525"/>
@@ -824,7 +833,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{139008AA-D61A-0A08-C3A6-898E9EF4B247}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{4902D069-F7E3-25E5-39D9-8F33E1143032}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1600,7 +1609,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{F6E6FCDE-CD87-5F9F-EB40-B35DD4E0F135}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{3954711A-009D-5F0E-AAA3-D1F19B437ABB}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -2269,5 +2278,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A8EC71D6-68CB-A6BE-7A3B-085C921045A6}</FileHash>
+	<FileHash>{511B0E55-8D94-0B7C-F889-50E4938FFD2F}</FileHash>
 </SoundBanksInfo>

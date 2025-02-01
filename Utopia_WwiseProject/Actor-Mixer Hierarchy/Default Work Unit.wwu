@@ -25413,9 +25413,19 @@
 					<ChildrenList>
 						<Sound Name="Break_01" ID="{CB649E90-97E2-4B81-A08D-D5A9EA00A03C}" ShortID="846252826">
 							<PropertyList>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -25448,9 +25458,14 @@
 						</Sound>
 						<Sound Name="Break_Melodic_01" ID="{A658E898-F1C1-424F-9681-CDA349D943D4}" ShortID="935553977">
 							<PropertyList>
-								<Property Name="Volume" Type="Real64">
+								<Property Name="MaxSoundPerInstance" Type="int16">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -25486,7 +25501,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-10</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

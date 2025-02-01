@@ -115,6 +115,7 @@ namespace AK
         static const AkUniqueID PLAY_MAIL_ENTER_001 = 3897542940U;
         static const AkUniqueID PLAY_MAIL_OPEN_001 = 1751715434U;
         static const AkUniqueID PLAY_MAIL_TAKE_001 = 226547375U;
+        static const AkUniqueID PLAY_MAIL_TAKE_002 = 226547372U;
         static const AkUniqueID PLAY_MINIGAME_COIN = 3433467811U;
         static const AkUniqueID PLAY_MOUSE_001_V1 = 3906795593U;
         static const AkUniqueID PLAY_NAPT_EVENT_DESOLATE_01 = 3970961582U;

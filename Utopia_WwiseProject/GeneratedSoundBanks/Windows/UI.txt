@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	171395709	Play_GraphFallDown			\Default Work Unit\old\Play_GraphFallDown	
+	226547372	Play_Mail_take_002			\Default Work Unit\old\Play_Mail_take_002	
 	226547375	Play_Mail_take_001			\Default Work Unit\old\Play_Mail_take_001	
 	245688734	Play_ATP_event_ELEVATOR_			\Default Work Unit\Condition2\Play_ATP_event_ELEVATOR_	
 	263615490	Play_Jackpot_01			\Default Work Unit\old\Play_Jackpot_01	
@@ -86,6 +87,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	255281743	Pay_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Pay_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Pay_001		9113
 	256641271	Building_click_003	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Building_click_003_912821E8.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Building_click_003		1133
 	265951174	D-Day_popup_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\D-Day_popup_001_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\D-Day_popup_001		4215
+	302694100	Mail_take_002	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mail_take_002_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_take_002		9557
 	323079966	APT_event_DISEASE_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DISEASE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\conditionindex1\APT_event_DISEASE_001		72571
 	327294676	Mail_take_001	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Mail_take_001_56C0E596.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI2\Mail_take_001		8769
 	361543517	stamp	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\stamp_004775AA.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\stamp		4802
