@@ -57,15 +57,19 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>8.2</Value>
+							<Value>3.31959287531807</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>54</Value>
+							<Value>5.26701289475721</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MINIGAME" ID="{95531E89-701B-4C64-ADCF-DEF0612E084E}"/>
 							<Value>1.24448529411765</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="BC" ID="{04F7E054-F073-4D2E-A670-399FE51F9884}"/>
+							<Value>0</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="JACKPOT" ID="{08FEA616-C65E-4F0A-BEB3-F05E732D1D97}"/>
@@ -73,7 +77,7 @@
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+						<CurrentStateRef Name="None" ID="{40BF89BC-8BC3-42F1-910C-82A03B027692}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
 						<CurrentSwitchRef Name="FAIL" ID="{F2A4569E-DFDD-4B8C-8F1A-55D8468B4A57}"/>

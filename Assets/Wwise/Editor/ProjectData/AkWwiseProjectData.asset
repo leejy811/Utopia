@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 24e07c87093835479306e84d8ee884e1
     GuidInternal: 
-    m_lastTime: -8584633644558358865
+    m_lastTime: -8584633519876290963
     List:
     - name: BGM
       guid: 5ad6101f779a2d419574cd87b45b520c
@@ -7326,8 +7326,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584637147274634702
+    m_lastTime: -8584632039358099792
     List:
+    - name: BC
+      guid: 54e0f70473f02e4da670399fe51f9884
+      id: 1870080932
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: BC
+        ObjectType: 13
+        guid: 54e0f70473f02e4da670399fe51f9884
+      Path: Game Parameters\Default Work Unit\BC
     - name: BGM_VOL
       guid: 17e4ff598f446d498dddd6e9b337a6de
       id: 1622127507
@@ -7701,7 +7715,7 @@ MonoBehaviour:
     m_lastTime: -8584897083625962771
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 7e0000007f000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
