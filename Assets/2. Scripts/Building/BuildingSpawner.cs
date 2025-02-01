@@ -184,6 +184,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
         Vector2Int pos = buildingComp.position;
         Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
+        Grid.instance.tiles[pos.x, pos.y].building = null;
         EventManager.instance.SetEventBuildings(buildingComp, false);
 
         if (second == 0.0f)

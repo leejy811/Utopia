@@ -54,6 +54,7 @@ public class EventNotifyUI : MonoBehaviour, IObserver
             {
                 eventMouseOvers[i].interactable = true;
                 eventMouseOvers[i].GetComponent<Button>().interactable = true;
+                eventIconImages[i].enabled = true;
                 eventIconImages[i].sprite = building.curEvents[i].eventIcon;
                 eventSolutionPanels[i].SetValue(building.curEvents[i]);
             }

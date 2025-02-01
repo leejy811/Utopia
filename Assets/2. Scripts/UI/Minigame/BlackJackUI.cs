@@ -401,10 +401,11 @@ public class BlackJackUI : MinigameUI
 
         canClick = false;
         AkSoundEngine.PostEvent("Play_BLACKJACK_intro", gameObject);
-        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), throwInterval, rewardChip > 0 ? false : true));
-        yield return new WaitForSeconds(throwInterval * rewardChip + throwSecond * 5);
-        StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false));
-        yield return new WaitForSeconds(throwSecond);
+        Debug.Log(rewardChip + " / " + chips.Count);
+        yield return StartCoroutine(ThrowChip(Mathf.Abs(rewardChip), throwInterval, rewardChip > 0 ? false : true));
+        Debug.Log(rewardChip + " / " + chips.Count);
+        yield return StartCoroutine(ThrowChip(Mathf.Abs(rewardChip) * -1, 0.0f, rewardChip > 0 ? true : false));
+        Debug.Log(rewardChip + " / " + chips.Count);
         canClick = true;
     }
 
