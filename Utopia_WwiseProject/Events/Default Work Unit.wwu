@@ -444,6 +444,10 @@
 				<Event Name="Play_BGM_01" ID="{7D19FBCD-63BA-4B4A-85A2-E15569BDFF8B}">
 					<ChildrenList>
 						<Action Name="" ID="{5FD99236-CCE2-4300-ADB2-21961E914B04}" ShortID="1021493504">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BGM" ID="{BE4F73A0-B4FF-48E6-AB10-D90618596CD3}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
@@ -1442,6 +1446,7 @@
 						<Action Name="" ID="{7F216D6D-CC7B-4779-BA81-FDCE1CD8CEC2}" ShortID="97625298">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
