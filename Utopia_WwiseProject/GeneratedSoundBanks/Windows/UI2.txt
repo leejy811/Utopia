@@ -8,6 +8,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	946941744	Play_Tutorial_Pop_up			\Default Work Unit\old\Play_Tutorial_Pop_up	
 	1031511574	Play_SlotMachine_enter_001			\Default Work Unit\old\Play_SlotMachine_enter_001	
 	1042317409	Play_Slot_Rever_01			\Default Work Unit\old\Play_Slot_Rever_01	
+	1244365746	Play_Intro_camera			\Default Work Unit\Play_Intro_camera	
 	1571046380	Stop_Slotmashin_Jackpot_Ani_01			\Default Work Unit\old\Stop_Slotmashin_Jackpot_Ani_01	
 	2214109306	Play_Slotmashin_Jackpot_Ani_01			\Default Work Unit\old\Play_Slotmashin_Jackpot_Ani_01	
 	2450428583	Play_CellPhone_Click			\Default Work Unit\old\Play_CellPhone_Click	
@@ -23,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3803209012	Play_Slot_Spwan_01			\Default Work Unit\old\Play_Slot_Spwan_01	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	49256336	Intro_camera	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Intro_camera_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Intro_camera		34280
 	201474464	Break_Melodic_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Break_Melodic_01_D50B2123.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_Melodic_01		48197
 	204508889	Paythepayment_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Paythepayment_01_ABF879B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\Paythepayment_01		23728
 	236384276	POPUP_Positive	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\POPUP_Positive_v2_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0904\POPUP_Positive		16259

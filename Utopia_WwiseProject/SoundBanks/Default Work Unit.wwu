@@ -102,6 +102,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Break_Rumble_01" ID="{17C1931F-AE03-4274-B017-6220D4650F5B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Stop_Break_Rumble_01" ID="{EF99BEDA-D927-4453-AAC4-DD24CA6820F6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Intro_camera" ID="{A41F94AB-DB5D-44C8-B5D8-5404CA7F5A22}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_POPUP_Positive" ID="{C2EA6645-9659-44F5-83CB-638363E40A6D}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Slot_Stop_01" ID="{A75C96F9-C83A-44FB-89D3-323B688D0C69}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Deny_01" ID="{AE2A952F-11E5-457B-984A-F16885A753AA}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>

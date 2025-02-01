@@ -106,6 +106,7 @@ namespace AK
         static const AkUniqueID PLAY_GRAPH_FALL_002 = 1882539237U;
         static const AkUniqueID PLAY_GRAPHFALLDOWN = 171395709U;
         static const AkUniqueID PLAY_GRAPHUP = 3497197729U;
+        static const AkUniqueID PLAY_INTRO_CAMERA = 1244365746U;
         static const AkUniqueID PLAY_JACKPOT_01 = 263615490U;
         static const AkUniqueID PLAY_LEVER_001 = 3789420082U;
         static const AkUniqueID PLAY_LOBBY = 2111096682U;
