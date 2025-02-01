@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 public class EventMouseOverUI : UIMouseOver
 {
     public GameObject panel;
-    public bool interactable;
 
     public override void OnPointerEnter(PointerEventData eventData)
     {

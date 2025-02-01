@@ -42,7 +42,7 @@ public class MapUI : MonoBehaviour
 
         SetStat();
 
-        dataResetButton.gameObject.SetActive(!GameManager.instance.isLoad);
+        dataResetButton.gameObject.SetActive(!GameManager.instance.isLoad && DataBaseManager.instance.clearData[(int)mapType].playTime != 0.0f);
     }
 
     private void SetStat()
@@ -116,7 +116,7 @@ public class MapUI : MonoBehaviour
     public void OnClickResetData()
     {
         SetZeroStat();
-        DataBaseManager.instance.DeleteMapData(mapType, "/ClearData_");
-        DataBaseManager.instance.clearData[(int)mapType] = new MapData();
+        dataResetButton.gameObject.SetActive(false);
+        DataBaseManager.instance.ResetClearData(mapType, "/ClearData_");
     }
 }

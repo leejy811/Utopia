@@ -10,8 +10,6 @@ public class ScaleMouseOver : UIMouseOver
     public float enterScale;
     public float exitScale;
 
-    public bool interactable;
-
     public override void OnPointerEnter(PointerEventData eventData)
     {
         if (!interactable) return;

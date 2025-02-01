@@ -41,6 +41,7 @@ public class LobbyUIManager : MonoBehaviour, ISubject
         {
             continueButton.interactable = true;
             continueButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+            continueButton.GetComponent<UIMouseOver>().interactable = true;
         }
     }
 

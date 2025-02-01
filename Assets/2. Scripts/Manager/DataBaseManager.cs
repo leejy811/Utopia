@@ -253,7 +253,14 @@ public class MapData
 
     public MapData()
     {
+        playTime = 0.0f;
         day = new DayData();
+        destroyCount = 0;
+        happiness = 0;
+        for (int i = 0; i < buildingTypeCount.Length; i++)
+        {
+            buildingTypeCount[i] = 0;
+        }
     }
 
     public void Save(MapType mapType)
@@ -285,6 +292,13 @@ public class DayData
     public int year;
     public int month;
     public int day;
+
+    public DayData()
+    {
+        year = 0;
+        month = 0;
+        day = 0;
+    }
 
     public void Save(DateTime day)
     {
@@ -394,6 +408,16 @@ public class DataBaseManager : MonoBehaviour
             clearData[i] = LoadMapData((MapType)i, "/ClearData_");
             mapData[i] = LoadMapData((MapType)i, "/MapData_");
         }
+    }
+
+    public void ResetClearData(MapType mapType, string fileName)
+    {
+        MapData resetData = new MapData();
+        resetData.mapType = mapType;
+        clearData[(int)mapType] = resetData;
+
+        string jsonData = JsonUtility.ToJson(data, true);
+        SaveFile(jsonData, path + fileName + mapType.ToString());
     }
 
     public void SaveMapData(MapData data, MapType mapType, string fileName)
