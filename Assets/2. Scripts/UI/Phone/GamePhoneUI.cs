@@ -34,7 +34,7 @@ public class GamePhoneUI : MonoBehaviour, IObserver
             tile.smokeFX.Play();
 
             if (tile.building != null)
-                tile.building.transform.DOMoveY(-2.2f, gameoverTime);
+                tile.building.transform.DOMoveY(-3.0f, gameoverTime);
         }
 
         AkSoundEngine.PostEvent("Play_Break_Rumble_01", gameObject);

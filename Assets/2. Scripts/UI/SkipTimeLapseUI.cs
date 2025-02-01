@@ -20,15 +20,13 @@ public class SkipTimeLapseUI : MonoBehaviour
         else if (Input.GetKey(KeyCode.Escape))
         {
             skipImage.fillAmount += skipSpeed * Time.deltaTime;
-            if (skipImage.fillAmount > 0.999f)
-            {
-                isSkip = true;
-                skipImage.gameObject.SetActive(false);
-            }
         }
         else if (Input.GetKeyUp(KeyCode.Escape))
         {
             skipImage.gameObject.SetActive(false);
+
+            if (skipImage.fillAmount > 0.999f)
+                isSkip = true;
         }
     }
 
