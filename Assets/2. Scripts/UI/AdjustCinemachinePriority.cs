@@ -21,5 +21,7 @@ public class AdjustCinemachinePriority : MonoBehaviour
         virtualCamera.Priority = initialPriority;
 
         virtualCamera.Priority = targetPriority;
+
+        AkSoundEngine.PostEvent("Play_Intro_camera", gameObject);
     }
 }

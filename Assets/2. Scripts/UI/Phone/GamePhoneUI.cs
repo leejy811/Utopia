@@ -37,6 +37,7 @@ public class GamePhoneUI : MonoBehaviour, IObserver
                 tile.building.transform.DOMoveY(-2.2f, gameoverTime);
         }
 
+        AkSoundEngine.PostEvent("Play_Break_Rumble_01", gameObject);
         CinemachineBasicMultiChannelPerlin noise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         noise.m_AmplitudeGain = 5.0f;
         noise.m_FrequencyGain = 1.0f;
@@ -53,6 +54,7 @@ public class GamePhoneUI : MonoBehaviour, IObserver
     {
         if (state == EventState.GameClear || state == EventState.GameOver)
         {
+            SoundManager.instance.SetIngameBGM(false);
             gameObject.SetActive(true);
             InputManager.SetCanInput(false);
             RoutineManager.instance.OnOffDailyLight(false);

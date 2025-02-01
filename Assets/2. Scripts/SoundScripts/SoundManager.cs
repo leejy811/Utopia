@@ -201,6 +201,6 @@ public class SoundManager : MonoBehaviour
         }
 
         if (isPlay)
-            AkSoundEngine.SetState("BGM", "BASIC");
+            RoutineManager.instance.SetCreditRating(0);
     }
 }

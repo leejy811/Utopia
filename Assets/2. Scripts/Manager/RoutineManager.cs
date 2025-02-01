@@ -171,7 +171,6 @@ public class RoutineManager : MonoBehaviour
             if (creditRating - 25 <= 0)
             {
                 creditRating = 0;
-                AkSoundEngine.SetState("BGM", "None");
                 UIManager.instance.notifyObserver(EventState.GameOver);
             }
             else
@@ -198,7 +197,7 @@ public class RoutineManager : MonoBehaviour
         return paySuccessTime;
     }
 
-    private void SetCreditRating(int value)
+    public void SetCreditRating(int value)
     {
         creditRating = Mathf.Min(creditRating + value, 100);
 
@@ -276,8 +275,9 @@ public class RoutineManager : MonoBehaviour
         CinemachineBasicMultiChannelPerlin noise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         noise.m_AmplitudeGain = 5.0f;
         noise.m_FrequencyGain = 1.0f;
+        AkSoundEngine.PostEvent("Play_Break_Melodic_01", gameObject);
 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.5f);
 
         noise.m_AmplitudeGain = 0.0f;
         noise.m_FrequencyGain = 0.0f;

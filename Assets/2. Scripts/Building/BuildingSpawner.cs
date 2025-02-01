@@ -92,9 +92,6 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         }
 
         SoundManager.instance.PostEvent("Play_buildingsound");
-
-        if(buildings.Count >= 1)
-            AkSoundEngine.PostEvent("Stop_construction", gameObject);
     }
 
     public void LoadBuilding(BuildingData data)
@@ -185,13 +182,14 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
         CityLevelManager.instance.curFrames.Enqueue(new FrameInfo() { index = 0, position = new Vector2Int((int)building.transform.position.x, (int)building.transform.position.z), rotation = building.transform.rotation, isInsert = false });
 
-        if (buildings.Count < 1)
-            AkSoundEngine.PostEvent("Play_construction", gameObject);
-
         Vector2Int pos = buildingComp.position;
         Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
         EventManager.instance.SetEventBuildings(buildingComp, false);
-        AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
+
+        if (second == 0.0f)
+            AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
+        else
+            AkSoundEngine.PostEvent("Play_Break_01", gameObject);
 
         buildingComp.DestroyBuilding();
         PlayDestroy(building, second);
