@@ -126,10 +126,14 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{B033A64B-FCA5-3BD2-4622-7570F8BBDE46}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{EA3E8B45-34CD-767E-782B-FFD860878551}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
+				<File Id="49256336" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Intro_camera.wav</ShortName>
+					<CachePath>SFX/Intro_camera_818F3B66.wem</CachePath>
+				</File>
 				<File Id="201474464" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Break_Melodic_01.wav</ShortName>
 					<CachePath>SFX/Break_Melodic_01_367389B3.wem</CachePath>
@@ -246,6 +250,11 @@
 				<Event Id="3497197729" Name="Play_GraphUP" DurationType="OneShot" DurationMin="1.4934043" DurationMax="1.4934043">
 					<MediaRefs>
 						<MediaRef Id="927414738"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1244365746" Name="Play_Intro_camera" DurationType="OneShot" DurationMin="2.3836668" DurationMax="2.3836668">
+					<MediaRefs>
+						<MediaRef Id="49256336"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="139162049" Name="Play_Paythepayment_01" DurationType="OneShot" DurationMin="1.2935417" DurationMax="1.2935417">
@@ -2250,5 +2259,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{0D1A57DD-1D47-1F7B-8AD5-DDA501A6DB46}</FileHash>
+	<FileHash>{8B3FC277-A248-0182-17C2-839E329B76C2}</FileHash>
 </SoundBanksInfo>

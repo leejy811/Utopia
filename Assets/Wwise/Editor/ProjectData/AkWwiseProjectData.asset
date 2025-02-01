@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584637050066310944
+    m_lastTime: -8584632014923691643
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -240,7 +240,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584632019389259245
+    m_lastTime: -8584632016298519330
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -1897,6 +1897,57 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.0794375
       minDuration: 1.0794375
+    - name: Play_Break_01
+      guid: 080abe4c523f024caf4af42d1608f511
+      id: 501297411
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Break_01
+        ObjectType: 3
+        guid: 080abe4c523f024caf4af42d1608f511
+      Path: Events\Default Work Unit\Play_Break_01
+      maxAttenuation: 0
+      maxDuration: 1.1793529
+      minDuration: 1.1793529
+    - name: Play_Break_Melodic_01
+      guid: b58af833d6ddbd4c8cd16e9f271a917c
+      id: 2927211377
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Break_Melodic_01
+        ObjectType: 3
+        guid: b58af833d6ddbd4c8cd16e9f271a917c
+      Path: Events\Default Work Unit\Play_Break_Melodic_01
+      maxAttenuation: 0
+      maxDuration: 3.3547945
+      minDuration: 3.3547945
+    - name: Play_Break_Rumble_01
+      guid: 1f93c11703ae7442b0176220d4650f5b
+      id: 2779889645
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Break_Rumble_01
+        ObjectType: 3
+        guid: 1f93c11703ae7442b0176220d4650f5b
+      Path: Events\Default Work Unit\Play_Break_Rumble_01
+      maxAttenuation: 0
+      maxDuration: 5.349421
+      minDuration: 5.349421
     - name: Play_Building_click_003
       guid: 0c3f6499a09287418a9d7fc153ec194a
       id: 1278673985
@@ -2237,6 +2288,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.4934043
       minDuration: 1.4934043
+    - name: Play_Intro_camera
+      guid: ab941fa45ddbc844b5d85404ca7f5a22
+      id: 1244365746
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Play_Intro_camera
+        ObjectType: 3
+        guid: ab941fa45ddbc844b5d85404ca7f5a22
+      Path: Events\Default Work Unit\Play_Intro_camera
+      maxAttenuation: 0
+      maxDuration: 2.3836668
+      minDuration: 2.3836668
     - name: Play_Jackpot_01
       guid: 9423861b23ebdf4480578a288367cf6a
       id: 263615490
@@ -5458,6 +5526,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: bf7a3ee8a3c48245bd752377d29a7518
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_win
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Break_Rumble_01
+      guid: dabe99ef27d95344aac4dd24ca6820f6
+      id: 3499138947
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_Break_Rumble_01
+        ObjectType: 3
+        guid: dabe99ef27d95344aac4dd24ca6820f6
+      Path: Events\Default Work Unit\Stop_Break_Rumble_01
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
