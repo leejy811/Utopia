@@ -17,15 +17,11 @@
 							<ObjectRef Name="LOOP_vomit_01" ID="{158CA7B7-8196-406F-9068-CD003800A704}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="2" Y="0"/>
 						</Module>
-						<Module>
-							<ObjectRef Name="Play_BGM4" ID="{849790AB-77ED-4977-8E30-D33F7F1D663A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}"/>
-							<Position X="5" Y="1"/>
-						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">
 						<RTPCValue>
 							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
-							<Value>1.7002853380158</Value>
+							<Value>1.23824345319905</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX2" ID="{A40D30F1-D40E-40B4-BEC7-CD5462971C4A}"/>
@@ -33,7 +29,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
-							<Value>8.47293499609094</Value>
+							<Value>9.49074670092555</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="DIST" ID="{AA803A69-7AB3-455B-8FB2-E5033367A048}"/>
@@ -53,7 +49,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
-							<Value>2</Value>
+							<Value>1.35109508013269</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="BGM_VOL" ID="{59FFE417-448F-496D-8DDD-D6E9B337A6DE}"/>
@@ -61,11 +57,11 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
-							<Value>4.96682242990656</Value>
+							<Value>8.2</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
-							<Value>51</Value>
+							<Value>54</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="MINIGAME" ID="{95531E89-701B-4C64-ADCF-DEF0612E084E}"/>
@@ -86,12 +82,59 @@
 				<SoundcasterSession Name="New Soundcaster Session_01" ID="{FB2EABCA-D33C-44C2-BD4A-B7CD1B02DFD7}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Lobby" ID="{1767CBA6-779B-4513-A2AC-355E5D2CF6FF}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<ObjectRef Name="BGM" ID="{BE4F73A0-B4FF-48E6-AB10-D90618596CD3}" WorkUnitID="{2F66DAA3-FD34-438C-BDB9-3A2078DF18E5}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="protest_002" ID="{ADA81993-24A7-4BCD-9103-D640049C7004}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ForestAmbience" ID="{0537576E-F521-4F97-B2B4-2FBAF13ACD8F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Wind" ID="{91F06F63-020A-4CD8-9F20-7C4632F0AD9E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="TImeLapsBGM" ID="{5099CBCC-F9A5-4F7F-80F8-413B3CAFA122}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="protest_002" ID="{ADA81993-24A7-4BCD-9103-D640049C7004}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="testing" ID="{AF1FA326-C145-4FE6-A2D0-69973DBCD741}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
-					<CurrentStateList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="CLICK" ID="{F1E99AD2-0CCB-4026-AE58-8FEC60EAE1B5}"/>
+							<Value>1.23824345319905</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="INDEX1" ID="{EBE6FEF7-14F9-42E8-B8F4-ED02AE6BD2CC}"/>
+							<Value>4.60525051771944</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="BOOL" ID="{CDB772B9-0027-4915-BC02-AFD17DA6DC7D}"/>
+							<Value>1.36140641860837</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="ZOOM" ID="{683F9AD8-B42C-4997-A4A0-FC50453698A0}"/>
+							<Value>8.2</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}"/>
+							<Value>54</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="BASIC" ID="{55B847C9-06ED-4073-80DE-7947DED6F8A8}"/>
+					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 				<SoundcasterSession Name="New Soundcaster Session_02" ID="{4E56CF0D-E4F6-4194-AC59-BCA9215BDC88}">
@@ -110,6 +153,131 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="FAIL" ID="{A3DF7A4C-E59C-4E74-B6C0-7E58D9A72C0D}"/>
 					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_03" ID="{51B0B77E-461B-473D-A3AC-152289B24D90}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="BLACKJACK_bet" ID="{80CB6527-B0CB-4A22-A36A-8325FCD8552C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_rule_bust" ID="{ECD66E67-B77F-4B9E-8F89-9E451B50ADA2}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BlackJack_BGM" ID="{F6C14886-AEC4-4C77-9D9B-B786F9DC2953}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_rule_draw" ID="{0E1E35D1-D0E6-43D3-8CA1-F65E4245D67E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_card_flip" ID="{54102DC1-0423-4B5E-B723-C7FE2FBFCB29}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_rule_win" ID="{C487F2FB-C02A-43F0-9C53-831263A8E738}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_card_put_01" ID="{B4D8E2A3-F46B-4845-96CD-FAD4B39C269D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_LOOSE" ID="{52DBB1BA-1727-4F7C-A36F-95BF2BBD277A}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_recall" ID="{64212944-73F3-44D8-BEB1-BA1C48323D7E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_GETBACK" ID="{A031CAA1-5CD0-4760-8B16-E63FF7D7F4F0}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_rule_blackjack" ID="{F952FF72-0E55-4956-AF1F-70CF159321D7}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="5" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="BLACKJACK_ALLIN" ID="{E0C396FA-C39A-4DBF-9A88-5C3C89F8EAE5}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="5" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_04" ID="{DCF2781E-06B4-4719-9159-39491DF49BA1}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="RACE_SKILL" ID="{214A9A9D-CDB8-4C7C-9185-6F229C362B98}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_bet_01" ID="{04E9C29F-83DF-4942-902E-E5EF69DFC51A}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_INJURY" ID="{B6788797-3725-4E66-9D2E-01A885891BB1}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Race_BGM" ID="{20D5204B-E551-4258-8813-1D24648FD5B9}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_TANG" ID="{B3C7D3F8-EF6E-4BD9-ADE9-2D7B640F3911}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_countdown" ID="{9BA31036-12B8-46FA-8DC8-92255F0CA719}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_active" ID="{5D6F191B-7A85-477D-91F4-FC03E1BB975B}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_horserace" ID="{66FD814C-7385-4A42-8B11-8DDAA4CD6BAE}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_active(L)" ID="{D551C5CF-4203-4A24-AB7C-3A13E0FC19BD}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="RACE_recall_01" ID="{B1496FFA-7690-4837-BA8A-307BEEEC923A}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+				<SoundcasterSession Name="New Soundcaster Session_05" ID="{F1021B6C-1BC7-47D8-8A4C-F8AD968644AE}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Slot_BGM" ID="{612026C0-6FE5-415E-807C-D5277750909F}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Slot_Rever_01" ID="{F6EBB5A4-1D35-4130-8C03-7D86ECB5336E}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Slotmashin_Jackpot_Ani_01" ID="{72AB099D-6720-48FC-A11D-A3F3EE2233B2}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Slot_Drrrrrr_01" ID="{53D2C8E5-3CEA-481D-A337-CAD8B6B41031}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true"/>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>

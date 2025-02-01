@@ -79,7 +79,7 @@
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>3</Value>
+								<Value>-3</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -154,112 +154,6 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<RandomSequenceContainer Name="New Random Container" ID="{CCC9356F-EAF5-411B-9D99-054359EEBB7C}" ShortID="85598259">
-									<PropertyList>
-										<Property Name="InitialDelay" Type="Real64">
-											<ModifierList>
-												<ModifierInfo>
-													<Modifier Name="" ID="{C130F2DC-8E07-4485-953C-DE33782704D1}"/>
-												</ModifierInfo>
-											</ModifierList>
-										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<Sound Name="105guitarriffCmaj" ID="{B8A25245-0BD2-4530-B05F-7CD5F1615E9D}" ShortID="247917547">
-											<PropertyList>
-												<Property Name="InitialDelay" Type="Real64">
-													<ModifierList>
-														<ModifierInfo>
-															<Modifier Name="" ID="{4040EE30-A2AF-4CCB-ACE9-CCD4A9DCD5F8}"/>
-														</ModifierInfo>
-													</ModifierList>
-												</Property>
-											</PropertyList>
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="105guitarriffCmaj" ID="{3DB31EEC-9B4E-4C4A-A9F8-AE59432E5C61}">
-													<Language>SFX</Language>
-													<AudioFile>105guitarriffCmaj.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="336403806"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="105guitarriffCmaj" ID="{3DB31EEC-9B4E-4C4A-A9F8-AE59432E5C61}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="marimbaC#" ID="{F15504DC-A9BA-47D4-A234-56533E7D6DAD}" ShortID="497320472">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="marimbaC#" ID="{A861C273-33D4-4BBC-852D-F18F29F0716E}">
-													<PropertyList>
-														<Property Name="LoopBegin" Type="Real64" Value="0"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="1.73728951959206"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>marimbaC#.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="81639684"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="marimbaC#" ID="{A861C273-33D4-4BBC-852D-F18F29F0716E}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-										<Sound Name="xylophone" ID="{5C1329C9-61AD-4B72-8557-2F784A12CF72}" ShortID="74960751">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<AudioFileSource Name="xylophone" ID="{D7972282-F1FA-41FB-A910-183A756822FC}">
-													<PropertyList>
-														<Property Name="LoopBegin" Type="Real64" Value="0"/>
-														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-														<Property Name="TrimEnd" Type="Real64" Value="2.35564680622651"/>
-													</PropertyList>
-													<Language>SFX</Language>
-													<AudioFile>xylophone.wav</AudioFile>
-													<MediaIDList>
-														<MediaID ID="65709662"/>
-													</MediaIDList>
-												</AudioFileSource>
-											</ChildrenList>
-											<ActiveSourceList>
-												<ActiveSource Name="xylophone" ID="{D7972282-F1FA-41FB-A910-183A756822FC}" Platform="Linked"/>
-											</ActiveSourceList>
-										</Sound>
-									</ChildrenList>
-								</RandomSequenceContainer>
 								<BlendContainer Name="New Blend Container" ID="{CA0735E6-0B8F-41D6-B7A3-C4A812CF6132}" ShortID="87545958">
 									<PropertyList>
 										<Property Name="InitialDelay" Type="Real64">
@@ -512,7 +406,790 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{31244501-283C-4938-A4C3-0BF8FEDDA72A}" ShortID="193226131">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{979D259D-9358-4E8C-B292-D4FFDF79BB80}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>24.999</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>25</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>79</XPos>
+																				<YPos>0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>79.001</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
 								</BlendContainer>
+								<RandomSequenceContainer Name="New Random Container" ID="{06017EBD-3F77-4903-9F68-24AF2D929072}" ShortID="452394714">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>5</Value>
+											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{8F6D4C90-2141-4DAF-ADDC-37B0AE2534B7}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="10"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="AirPlane_02" ID="{CEF7C2F8-1859-423D-B20D-30253F4CF95D}" ShortID="678761170">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="1"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{E5EB568A-9BB2-41AE-BE43-8E8FF7B920B8}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{60AC6D19-B243-4E30-A4C9-B4ABD102F5A1}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AirPlane_02" ID="{5BBA969F-2916-42F0-B2E1-8D44F60191ED}">
+													<Language>SFX</Language>
+													<AudioFile>AirPlane_02.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="75298263"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{16005149-787D-4CEA-ACBC-702F85F965EA}">
+													<PropertyList>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="AirPlane_02_Path" ID="{3310B688-49C6-4FBA-9AD3-0B6918D8C933}">
+															<PointList>
+																<Point>
+																	<XPos>-75.63452</XPos>
+																	<YPos>-81.07345</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-78.6802030456853</XPos>
+																	<YPos>87.5706214689266</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_02_Path_01" ID="{02BCD397-BA5E-4393-8998-EDB95F3794FA}">
+															<PointList>
+																<Point>
+																	<XPos>83.75635</XPos>
+																	<YPos>77.11864</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-86.80203</XPos>
+																	<YPos>77.9661</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_02_Path_02" ID="{8D55F8DF-2A7A-4545-87C2-066B992738D5}">
+															<PointList>
+																<Point>
+																	<XPos>80.71066</XPos>
+																	<YPos>-81.07345</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>82.2335</XPos>
+																	<YPos>77.40113</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_02_Path_03" ID="{476C544E-4B65-4465-BADB-A3F9CA49A2AA}">
+															<PointList>
+																<Point>
+																	<XPos>-63.45178</XPos>
+																	<YPos>-78.81356</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>84.77157</XPos>
+																	<YPos>-79.09605</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="AirPlane_02" ID="{5BBA969F-2916-42F0-B2E1-8D44F60191ED}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AirPlane_01" ID="{692606F2-10B6-4138-B968-340E60C948CC}" ShortID="490161317">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{8B04C016-DD52-40F0-84E6-D6397FFBE54E}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{60AC6D19-B243-4E30-A4C9-B4ABD102F5A1}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AirPlane_01" ID="{5F59A64F-B99A-4AA8-ADE0-30BE57810EE2}">
+													<PropertyList>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>AirPlane_01.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="27631689"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{A8D2B781-C94E-4BE3-AB80-4ED8581F4EEB}">
+													<PropertyList>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="AirPlane_01_Path" ID="{DB06602D-B4A8-468F-98FE-D673642E3C73}">
+															<PointList>
+																<Point>
+																	<XPos>-76.14213</XPos>
+																	<YPos>-87.28814</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-79.18782</XPos>
+																	<YPos>94.35028</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_01_Path_01" ID="{CB7B5A71-12A1-40F6-82E4-B1EFD1148B53}">
+															<PointList>
+																<Point>
+																	<XPos>-79.69543</XPos>
+																	<YPos>77.68362</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>89.8477157360406</XPos>
+																	<YPos>80.7909604519774</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_01_Path_02" ID="{C3EA863E-2F8B-4B6B-857F-B69FA143D0B0}">
+															<PointList>
+																<Point>
+																	<XPos>85.7868</XPos>
+																	<YPos>-82.76836</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>82.741116751269</XPos>
+																	<YPos>82.4858757062147</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_01_Path_03" ID="{D0D3D699-030D-4A49-BB86-05A10544F50E}">
+															<PointList>
+																<Point>
+																	<XPos>80.71066</XPos>
+																	<YPos>-79.9435</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-82.74112</XPos>
+																	<YPos>-79.66102</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="AirPlane_01" ID="{5F59A64F-B99A-4AA8-ADE0-30BE57810EE2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AirPlane_06" ID="{21EC4376-3772-490D-B82C-264F739BF07B}" ShortID="736697745">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{BA13DE40-4F85-4CB5-BBE1-8C03F4E9A65D}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{60AC6D19-B243-4E30-A4C9-B4ABD102F5A1}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AirPlane_06" ID="{31F665B2-274D-4825-BBE3-2E17393727F0}">
+													<Language>SFX</Language>
+													<AudioFile>AirPlane_06.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="296884755"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{59D5D8A5-9F94-4BA7-A327-29BAA4F3FB8C}">
+													<PropertyList>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="AirPlane_06_Path" ID="{FF997C5F-F3B5-4943-BEE4-2D861F52CE14}">
+															<PointList>
+																<Point>
+																	<XPos>-78.17259</XPos>
+																	<YPos>91.24294</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-65.989847715736</XPos>
+																	<YPos>-85.8757062146893</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_06_Path_01" ID="{ECB5E0A8-FEBF-47E4-9656-D91AC2E71A59}">
+															<PointList>
+																<Point>
+																	<XPos>81.21827</XPos>
+																	<YPos>53.38983</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-75.6345177664975</XPos>
+																	<YPos>56.4971751412429</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_06_Path_02" ID="{6425F28B-0B81-4888-A612-1D1F8AEBA13B}">
+															<PointList>
+																<Point>
+																	<XPos>78.6802</XPos>
+																	<YPos>-79.9435</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>76.1421319796954</XPos>
+																	<YPos>70.0564971751412</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_06_Path_03" ID="{D697D2C8-2929-4AFF-9105-5D0D34971F30}">
+															<PointList>
+																<Point>
+																	<XPos>75.63452</XPos>
+																	<YPos>-78.24859</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-65.4822335025381</XPos>
+																	<YPos>-77.9661016949152</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="AirPlane_06" ID="{31F665B2-274D-4825-BBE3-2E17393727F0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AirPlane_03" ID="{005A62CE-4B42-4E73-AEF8-E8E2B644D2C4}" ShortID="423617778">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{9F80623B-7CF4-4D2E-9AAC-BAB70B6B5011}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{60AC6D19-B243-4E30-A4C9-B4ABD102F5A1}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AirPlane_03" ID="{6A4C0ACC-720F-4AB4-B8A9-7ADF890B8625}">
+													<Language>SFX</Language>
+													<AudioFile>AirPlane_03.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="611987134"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{4E5CD69C-FD0A-4E96-872B-8C68A1D286DC}">
+													<PropertyList>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="AirPlane_03_Path" ID="{08B4C29E-EAED-4E79-B1A5-F264EDF72B56}">
+															<PointList>
+																<Point>
+																	<XPos>-71.5736</XPos>
+																	<YPos>-79.9435</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-77.1573604060914</XPos>
+																	<YPos>70.6214689265537</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_03_Path_01" ID="{7C57B1FA-50D1-4FE6-A52A-85C642F5EA38}">
+															<PointList>
+																<Point>
+																	<XPos>69.03553</XPos>
+																	<YPos>61.29944</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-77.1573604060914</XPos>
+																	<YPos>67.2316384180791</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_03_Path_02" ID="{C303F42A-F531-47C8-AB32-C8032938C0A2}">
+															<PointList>
+																<Point>
+																	<XPos>82.74112</XPos>
+																	<YPos>76.55367</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>85.7868020304569</XPos>
+																	<YPos>-81.3559322033898</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_03_Path_03" ID="{87498BE9-40BE-458F-809E-540445B028B5}">
+															<PointList>
+																<Point>
+																	<XPos>77.66497</XPos>
+																	<YPos>-81.63842</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-78.1725888324873</XPos>
+																	<YPos>-77.9661016949152</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="AirPlane_03" ID="{6A4C0ACC-720F-4AB4-B8A9-7ADF890B8625}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AirPlane_04" ID="{8CB2AC9C-F1ED-4299-BA96-C5A8CD80AC3B}" ShortID="657116173">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{C3F1A4FE-63C0-42AA-8FCC-ABA34F8C0ECE}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{60AC6D19-B243-4E30-A4C9-B4ABD102F5A1}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AirPlane_04" ID="{A4409102-3547-4786-9022-4B1D82C92814}">
+													<Language>SFX</Language>
+													<AudioFile>AirPlane_04.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="490411330"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{EE828AD8-014E-40AD-8F59-A76FC699EEA2}">
+													<PropertyList>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="AirPlane_04_Path" ID="{B59A0E98-FD65-4397-B18D-611CB17DD73E}">
+															<PointList>
+																<Point>
+																	<XPos>-68.52792</XPos>
+																	<YPos>-77.11864</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-72.0812182741117</XPos>
+																	<YPos>85.8757062146893</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_04_Path_01" ID="{3F7FBE05-6166-4BD3-A196-661415C3492D}">
+															<PointList>
+																<Point>
+																	<XPos>-71.5736</XPos>
+																	<YPos>60.16949</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>77.6649746192894</XPos>
+																	<YPos>65.5367231638418</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_04_Path_02" ID="{01AD4570-4B94-4089-8721-990633100FE7}">
+															<PointList>
+																<Point>
+																	<XPos>83.24873</XPos>
+																	<YPos>61.29944</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>85.2791878172589</XPos>
+																	<YPos>-76.271186440678</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_04_Path_03" ID="{3335FA51-0144-4077-AC50-4462E1DBDB87}">
+															<PointList>
+																<Point>
+																	<XPos>78.6802</XPos>
+																	<YPos>-76.55367</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-74.1116751269035</XPos>
+																	<YPos>-77.4011299435028</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="AirPlane_04" ID="{A4409102-3547-4786-9022-4B1D82C92814}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="AirPlane_05" ID="{6C4C4DBB-0465-43B8-9D79-E1A17C77E612}" ShortID="287989053">
+											<PropertyList>
+												<Property Name="3DPosition" Type="int16" Value="2"/>
+												<Property Name="3DSpatialization" Type="int16" Value="2"/>
+												<Property Name="InitialDelay" Type="Real64">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{F7B1ABED-D639-48F2-A527-84AB399F1107}"/>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="OverridePositioning" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="SFX" ID="{60AC6D19-B243-4E30-A4C9-B4ABD102F5A1}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="AirPlane_05" ID="{D2DFD2D5-7E98-4C8E-85A3-2DF7FA60D924}">
+													<Language>SFX</Language>
+													<AudioFile>AirPlane_05.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="719121513"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<PositioningInfo>
+												<Position Name="" ID="{82DC6864-EBC8-4149-A8D8-67DE7E2EAD48}">
+													<PropertyList>
+														<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+													</PropertyList>
+													<ChildrenList>
+														<Path2D Name="AirPlane_05_Path" ID="{858BD2B3-182E-4C8D-A18A-73EC6FFFF77B}">
+															<PointList>
+																<Point>
+																	<XPos>-71.06599</XPos>
+																	<YPos>81.07345</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-67.005076142132</XPos>
+																	<YPos>-81.3559322033898</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_05_Path_01" ID="{9024D8AD-C31B-4878-8C66-BAE0EF6A967B}">
+															<PointList>
+																<Point>
+																	<XPos>74.61929</XPos>
+																	<YPos>68.0791</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>-83.756345177665</XPos>
+																	<YPos>69.4915254237288</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_05_Path_02" ID="{B1750CB9-B0BC-474F-8FAF-C02BECAF0A52}">
+															<PointList>
+																<Point>
+																	<XPos>76.14213</XPos>
+																	<YPos>-82.20339</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>71.5736040609137</XPos>
+																	<YPos>68.361581920904</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+														<Path2D Name="AirPlane_05_Path_03" ID="{A804891C-DB99-4AF1-907B-ACF25F978833}">
+															<PointList>
+																<Point>
+																	<XPos>-74.61929</XPos>
+																	<YPos>-78.24859</YPos>
+																	<Flags>12</Flags>
+																	<Time>0</Time>
+																</Point>
+																<Point>
+																	<XPos>77.6649746192894</XPos>
+																	<YPos>-79.0960451977401</YPos>
+																	<Flags>0</Flags>
+																	<Time>5000</Time>
+																</Point>
+															</PointList>
+														</Path2D>
+													</ChildrenList>
+												</Position>
+											</PositioningInfo>
+											<ActiveSourceList>
+												<ActiveSource Name="AirPlane_05" ID="{D2DFD2D5-7E98-4C8E-85A3-2DF7FA60D924}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<Reference>
+												<Local>
+													<RTPC Name="" ID="{F5F19D7E-783B-4FB9-8D69-C6BCED13C429}" ShortID="735813248">
+														<PropertyList>
+															<Property Name="PropertyName" Type="string" Value="Volume"/>
+														</PropertyList>
+														<ReferenceList>
+															<Reference Name="ControlInput">
+																<ObjectRef Name="HAPPY" ID="{B6231B24-D308-4A49-88DB-22D262F76310}" WorkUnitID="{3EBD77EE-3C2C-471A-BB27-B1A4B32E4169}"/>
+															</Reference>
+															<Reference Name="Curve">
+																<Custom>
+																	<Curve Name="" ID="{78EB09EF-1A77-4083-B059-3DAA3961F16B}">
+																		<PropertyList>
+																			<Property Name="Flags" Type="int32" Value="3"/>
+																		</PropertyList>
+																		<PointList>
+																			<Point>
+																				<XPos>0</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>5</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>79.999</XPos>
+																				<YPos>-200</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>80</XPos>
+																				<YPos>-0</YPos>
+																				<Flags>0</Flags>
+																			</Point>
+																			<Point>
+																				<XPos>100</XPos>
+																				<YPos>0</YPos>
+																				<Flags>37</Flags>
+																			</Point>
+																		</PointList>
+																	</Curve>
+																</Custom>
+															</Reference>
+														</ReferenceList>
+													</RTPC>
+												</Local>
+											</Reference>
+										</ObjectList>
+									</ObjectLists>
+								</RandomSequenceContainer>
 							</ChildrenList>
 							<ObjectLists>
 								<ObjectList Name="Playlist">
@@ -520,7 +1197,7 @@
 										<ObjectRef Name="New Blend Container" ID="{CA0735E6-0B8F-41D6-B7A3-C4A812CF6132}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 									</Reference>
 									<Reference>
-										<ObjectRef Name="New Random Container" ID="{CCC9356F-EAF5-411B-9D99-054359EEBB7C}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+										<ObjectRef Name="New Random Container" ID="{06017EBD-3F77-4903-9F68-24AF2D929072}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
 									</Reference>
 								</ObjectList>
 								<ObjectList Name="RTPC">
@@ -8788,7 +9465,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-13</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -8906,6 +9583,11 @@
 										<Value>0.5</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -8994,6 +9676,13 @@
 				<Folder Name="UI3" ID="{114257C3-A9EF-476E-AC31-996A5454AEFF}" ShortID="107161236">
 					<ChildrenList>
 						<Sound Name="Slotmashin_Jackpot_Ani_01" ID="{72AB099D-6720-48FC-A11D-A3F3EE2233B2}" ShortID="170328556">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -9018,6 +9707,11 @@
 						<Sound Name="Slot_Drrrrrr_01" ID="{53D2C8E5-3CEA-481D-A337-CAD8B6B41031}" ShortID="145724836">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -9075,6 +9769,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Slot_Rever_01" ID="{F6EBB5A4-1D35-4130-8C03-7D86ECB5336E}" ShortID="120508285">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -9165,7 +9866,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>5</Value>
+										<Value>1</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -9242,6 +9943,13 @@
 					</ChildrenList>
 				</Folder>
 				<Sound Name="TImeLapsBGM" ID="{5099CBCC-F9A5-4F7F-80F8-413B3CAFA122}" ShortID="979537640">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -9284,7 +9992,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -9337,6 +10045,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="POPUP_Negative" ID="{00522A8C-69DE-4356-AF77-A4C0C7387706}" ShortID="246244505">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -9359,6 +10074,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="POPUP_Positive" ID="{882A4969-5E4C-434D-BBB7-1AC9410AE7B0}" ShortID="755780881">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -9403,6 +10125,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="GraphUP" ID="{E584B23F-2F1F-4EC8-AB89-B385707D5C4F}" ShortID="895217019">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -9477,6 +10206,11 @@
 						<Sound Name="SP_Decrease_price_01" ID="{4B49E04D-32B1-4F93-AC61-B65F950300B7}" ShortID="853122704">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -9606,6 +10340,11 @@
 						<Sound Name="SP_Discount_01" ID="{E3C99AE9-874C-4238-A264-E149D4F24943}" ShortID="838626768">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -9735,6 +10474,11 @@
 						<Sound Name="SP_Festival_01" ID="{1C533041-06BB-4057-BCC5-D4C5D7BFF939}" ShortID="972605655">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -10400,11 +11144,6 @@
 						<Sound Name="APT_event_FIRE_01" ID="{05127E7A-747E-47B6-AE2C-896F75FC1D1B}" ShortID="778395461">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -10534,11 +11273,6 @@
 						<Sound Name="APT_event_DISEASE_01" ID="{985CCF1D-FB53-46E2-BD03-607CD0F27025}" ShortID="323107868">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -10668,11 +11402,6 @@
 						<Sound Name="APT_event_THIEF_01" ID="{3CE90CC1-3F05-4D98-9D22-50873B038A09}" ShortID="175852678">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -10804,7 +11533,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -10982,7 +11711,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -11154,11 +11883,6 @@
 						<Sound Name="NAPT_event_DISEASE_01" ID="{CD470C57-E6BD-43DD-BC3D-579A87A67FFE}" ShortID="478510750">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -11288,11 +12012,6 @@
 						<Sound Name="NAPT_event_FIRE_01" ID="{2B926633-6B35-4DD9-8D81-AA4A005DC2EF}" ShortID="540993232">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -11422,11 +12141,6 @@
 						<Sound Name="NAPT_event_THIEF_01" ID="{203B8B3D-798A-4085-8FC4-E24806F4D0BC}" ShortID="364531634">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -11556,6 +12270,11 @@
 						<Sound Name="NSP_Decrease_price_01" ID="{E7942D88-9FA5-4FA6-8A93-9BFD1634B19C}" ShortID="707828982">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -11814,6 +12533,11 @@
 						<Sound Name="NSP_Festival_01" ID="{F16D742E-A12F-4E9C-BCD9-D30674DE25E3}" ShortID="107880959">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -12485,7 +13209,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -12702,11 +13426,6 @@
 						<Sound Name="NNAPT_event_DISEASE_01" ID="{7BBB80EE-4B67-4106-905D-B09D0897911E}" ShortID="215144855">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -12881,11 +13600,6 @@
 						<Sound Name="NNAPT_event_FIRE_01" ID="{6D82E375-E826-4F84-A04E-46B8E85A2C14}" ShortID="937677483">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -13060,11 +13774,6 @@
 						<Sound Name="NNAPT_event_THIEF_01" ID="{BD007208-35E7-46FC-9794-A69E7FA0CA64}" ShortID="1039877475">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -13239,6 +13948,11 @@
 						<Sound Name="NNSP_Decrease_price_01" ID="{CD12FE16-EF83-4795-B0E1-06D917B0BAF5}" ShortID="156092898">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -13587,6 +14301,11 @@
 						<Sound Name="NNSP_Festival_01" ID="{9B8BF95F-01C2-496A-81ED-0F78448BB6D7}" ShortID="500110697">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -14483,7 +15202,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -14700,11 +15419,6 @@
 						<Sound Name="1APT_event_DISEASE_01" ID="{43F64803-92A1-4D1A-8F93-D7FA399E69C9}" ShortID="902123615">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -14879,11 +15593,6 @@
 						<Sound Name="1APT_event_FIRE_01" ID="{0DBD09AE-B46F-4ADE-8F52-06372417608A}" ShortID="1023576832">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -15058,11 +15767,6 @@
 						<Sound Name="1APT_event_THIEF_01" ID="{39549B72-D0C8-407D-BB8B-4ED0A15F5DB4}" ShortID="687494338">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-3</Value>
-									</ValueList>
-								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -15237,6 +15941,11 @@
 						<Sound Name="1SP_Decrease_price_01" ID="{86F27DEE-9CB5-45A4-AF85-BEA0963B82B5}" ShortID="120325198">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -15585,6 +16294,11 @@
 						<Sound Name="1SP_Festival_01" ID="{0F255D78-DFF6-4A85-B6F2-FB8C7F140D69}" ShortID="932508668">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -16609,6 +17323,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="BLACKJACK_rule_blackjack" ID="{F952FF72-0E55-4956-AF1F-70CF159321D7}" ShortID="21398056">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -16675,6 +17396,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="BLACKJACK_rule_win" ID="{C487F2FB-C02A-43F0-9C53-831263A8E738}" ShortID="268954515">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -16697,6 +17425,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="GAMEPLAY_chips_exchange" ID="{34E25E1D-F4B2-421A-8649-8CCEECB53F1A}" ShortID="850402609">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -16771,6 +17506,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="RACE_bet_01" ID="{04E9C29F-83DF-4942-902E-E5EF69DFC51A}" ShortID="45675806">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -16937,7 +17679,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-19</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -17160,6 +17902,11 @@
 						<Sound Name="LOOP_vomit_01" ID="{158CA7B7-8196-406F-9068-CD003800A704}" ShortID="1017110659">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>7</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -17477,7 +18224,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-11</Value>
+										<Value>-15</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -17636,7 +18383,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-8</Value>
+								<Value>-11</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -24708,7 +25455,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-5</Value>
+								<Value>-7</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -24809,7 +25556,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-12</Value>
+								<Value>-11</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -24838,7 +25585,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-7</Value>
+								<Value>-9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -24863,6 +25610,137 @@
 						<ActiveSource Name="RACE_SKILL" ID="{590BBACB-67B2-4D6D-9AD6-380C2AD42821}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Folder Name="0130" ID="{BF3FBFB6-C9BF-413C-A5FA-950AE6C1E648}" ShortID="763398387">
+					<ChildrenList>
+						<Sound Name="Break_01" ID="{CB649E90-97E2-4B81-A08D-D5A9EA00A03C}" ShortID="846252826">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Break_01" ID="{13680866-60A0-4B37-A878-CB369C9EAEE0}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0316604785478548"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0989389954620462"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.17935282590759"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Break_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="449843411"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Break_01" ID="{13680866-60A0-4B37-A878-CB369C9EAEE0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Break_Melodic_01" ID="{A658E898-F1C1-424F-9681-CDA349D943D4}" ShortID="935553977">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Break_Melodic_01" ID="{A68BAF34-A6B1-4916-9FF6-713445C54DC7}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.208490047442244"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.701284705033003"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.416980094884488"/>
+										<Property Name="TrimEnd" Type="Real64" Value="3.77177449463697"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Break_Melodic_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="201474464"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Break_Melodic_01" ID="{A68BAF34-A6B1-4916-9FF6-713445C54DC7}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Break_Rumble_01" ID="{A6F89A0F-0940-4DDA-A8D9-5D296C5C93FF}" ShortID="346550993">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Break_Rumble_01" ID="{1000F0DB-C03A-438F-8E0E-9EE321E60D34}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="1.71945668316832"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="5.34942079207922"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Break_Rumble_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="571800047"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Break_Rumble_01" ID="{1000F0DB-C03A-438F-8E0E-9EE321E60D34}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Intro_camera" ID="{17FA7FD2-E452-4AF3-83B6-FAF7EBB8E482}" ShortID="1008349376">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Intro_camera" ID="{8D6FFEC9-3990-40E1-A1AE-15F0F19D603B}">
+									<Language>SFX</Language>
+									<AudioFile>Intro_camera.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="49256336"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Intro_camera" ID="{8D6FFEC9-3990-40E1-A1AE-15F0F19D603B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

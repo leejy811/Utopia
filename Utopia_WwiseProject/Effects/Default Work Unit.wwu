@@ -5,8 +5,8 @@
 			<ChildrenList>
 				<Effect Name="New_Compressor" ID="{2E7C1BDE-F5A5-46E1-B5A0-B306F7A69E80}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 					<PropertyList>
+						<Property Name="OutputGain" Type="Real32" Value="3"/>
 						<Property Name="Ratio" Type="Real32" Value="23.7"/>
-						<Property Name="Threshold" Type="Real32" Value="-33.4"/>
 					</PropertyList>
 				</Effect>
 				<Effect Name="New_Guitar_Distortion" ID="{7D2599E4-D4D7-417E-9347-1C1A289CF10C}" PluginName="Wwise Guitar Distortion" CompanyID="0" PluginID="126" PluginType="3">
@@ -20,6 +20,11 @@
 						<Property Name="PreEQBand2Gain" Type="Real32" Value="26"/>
 						<Property Name="PreEQBand3Enable" Type="bool" Value="True"/>
 						<Property Name="PreEQBand3Gain" Type="Real32" Value="17"/>
+					</PropertyList>
+				</Effect>
+				<Effect Name="New_Meter" ID="{3BF26034-185C-4F56-ABDE-D1F80BF3A7EF}" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+					<PropertyList>
+						<Property Name="MeterMode" Type="int32" Value="1"/>
 					</PropertyList>
 				</Effect>
 			</ChildrenList>

@@ -52,9 +52,10 @@
 						</Effect>
 						<Effect Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
-								<Property Name="AttackTime" Type="Real32" Value="0.001"/>
-								<Property Name="Ratio" Type="Real32" Value="20"/>
-								<Property Name="ReleaseTime" Type="Real32" Value="0.5"/>
+								<Property Name="AttackTime" Type="Real32" Value="0.331"/>
+								<Property Name="OutputGain" Type="Real32" Value="1.2"/>
+								<Property Name="Ratio" Type="Real32" Value="2.5"/>
+								<Property Name="ReleaseTime" Type="Real32" Value="1.13"/>
 								<Property Name="Threshold" Type="Real32" Value="-25"/>
 							</PropertyList>
 						</Effect>
@@ -1984,6 +1985,7 @@
 						</Folder>
 					</ChildrenList>
 				</Folder>
+				<Effect Name="limiter" ID="{4C57ABE2-3436-49DE-919A-2C73176087B3}" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

@@ -9,7 +9,7 @@
 	</RootPaths>
 	<DialogueEvents/>
 	<SoundBanks>
-		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{237A1F8B-AECB-8FC1-D24C-EB61E2A05BFE}">
+		<SoundBank Id="412724365" Type="User" Language="SFX" Hash="{680A6FEB-807C-8E64-47E1-420A31B642C6}">
 			<ShortName>BGM</ShortName>
 			<Path>BGM.bnk</Path>
 			<Media>
@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{5A753B09-B1D5-8771-44D6-44BFCCA34A31}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{1F418814-35B1-55A6-E993-DF81796CC1F0}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -280,7 +280,7 @@
 				<Event Id="1571046380" Name="Stop_Slotmashin_Jackpot_Ani_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{EE8DC0B4-92EE-4806-FD13-439B29CC3442}">
+		<SoundBank Id="1189781957" Type="User" Language="SFX" Hash="{2EE8BAF6-1B32-1E56-030B-26E5A9B57182}">
 			<ShortName>BGM2</ShortName>
 			<Path>BGM2.bnk</Path>
 			<Media>
@@ -298,10 +298,14 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0AA0CB48-A070-B9E8-EB64-EC1810799085}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{07B370BB-5C72-96FE-51A8-2C769AA363AD}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
+				<ShareSets>
+					<Plugin Id="505060943" Name="limiter" LibName="Wwise Peak Limiter" LibId="7208963"/>
+					<Plugin Id="1763592331" Name="New_Meter" LibName="Wwise Meter" LibId="8454147"/>
+				</ShareSets>
 				<AudioDevices>
 					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
 					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
@@ -309,8 +313,21 @@
 			</Plugins>
 			<Busses>
 				<Bus Id="393239870" Name="SFX"/>
-				<Bus Id="412724365" Name="BGM"/>
-				<Bus Id="3803692087" Name="Master Audio Bus"/>
+				<Bus Id="412724365" Name="BGM">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="1763592331"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
+				<Bus Id="3803692087" Name="Master Audio Bus">
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="505060943"/>
+							<PluginRef Id="1763592331"/>
+						</ShareSets>
+					</PluginRefs>
+				</Bus>
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="42448320" Name="SFX_VOL"/>
@@ -347,7 +364,7 @@
 				</SwitchGroup>
 			</SwitchGroups>
 		</SoundBank>
-		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{3D55C522-B6BC-B0A8-49F0-B1D17B7F76D2}">
+		<SoundBank Id="1551306167" Type="User" Language="SFX" Hash="{B7F40D11-CCA5-694E-CB17-65B33391E818}">
 			<ShortName>UI</ShortName>
 			<Path>UI.bnk</Path>
 			<Media>
@@ -758,7 +775,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{B369B6B8-AE5D-CA69-60D7-410C08282F7E}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{749C18D0-352C-7238-0A6A-C26BBC8FAFC9}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -769,10 +786,6 @@
 				<File Id="20104006" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Slot_BGM.wav</ShortName>
 					<CachePath>SFX/Slot_BGM_D3225FD9.wem</CachePath>
-				</File>
-				<File Id="30720200" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM2.wav</ShortName>
-					<CachePath>SFX/BGM2_56CEF360.wem</CachePath>
 				</File>
 				<File Id="48900095" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>GAMEPLAY_chips_exchange.wav</ShortName>
@@ -793,10 +806,6 @@
 				<File Id="132635145" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_rule_win.wav</ShortName>
 					<CachePath>SFX/BLACKJACK_rule_win_8E324C96.wem</CachePath>
-				</File>
-				<File Id="141264882" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM5.wav</ShortName>
-					<CachePath>SFX/BGM5_56CEF360.wem</CachePath>
 				</File>
 				<File Id="156090381" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>RACE_recall_01.wav</ShortName>
@@ -826,6 +835,10 @@
 					<ShortName>SP_Increase_price_01.wav</ShortName>
 					<CachePath>SFX/SP_Increase_price_01_56CEF360.wem</CachePath>
 				</File>
+				<File Id="258521796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM2_LU3.wav</ShortName>
+					<CachePath>SFX/BGM2_LU3_56CEF360.wem</CachePath>
+				</File>
 				<File Id="270764609" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_rule_bust.wav</ShortName>
 					<CachePath>SFX/BLACKJACK_rule_bust_8E324C96.wem</CachePath>
@@ -854,9 +867,9 @@
 					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DESOLATE_001_56CEF360.wem</CachePath>
 				</File>
-				<File Id="442624949" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>torobgm3.wav</ShortName>
-					<CachePath>SFX/torobgm3_56CEF360.wem</CachePath>
+				<File Id="441200128" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM5_LU1.wav</ShortName>
+					<CachePath>SFX/BGM5_LU1_56CEF360.wem</CachePath>
 				</File>
 				<File Id="488086698" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_rule_draw.wav</ShortName>
@@ -914,10 +927,6 @@
 					<ShortName>Race_BGM.wav</ShortName>
 					<CachePath>SFX/Race_BGM_56CEF360.wem</CachePath>
 				</File>
-				<File Id="791981080" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM.wav</ShortName>
-					<CachePath>SFX/BGM_56CEF360.wem</CachePath>
-				</File>
 				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3131.wav</ShortName>
 					<CachePath>SFX/3131_56CEF360.wem</CachePath>
@@ -934,9 +943,17 @@
 					<ShortName>SP_Low_in_stock_01.wav</ShortName>
 					<CachePath>SFX/SP_Low_in_stock_01_56CEF360.wem</CachePath>
 				</File>
+				<File Id="929905877" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM6_LU1.wav</ShortName>
+					<CachePath>SFX/BGM6_LU1_56CEF360.wem</CachePath>
+				</File>
 				<File Id="963492286" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BlackJack_BGM.wav</ShortName>
 					<CachePath>SFX/BlackJack_BGM_56CEF360.wem</CachePath>
+				</File>
+				<File Id="993211934" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM_LU1.wav</ShortName>
+					<CachePath>SFX/BGM_LU1_56CEF360.wem</CachePath>
 				</File>
 				<File Id="1000881140" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BLACKJACK_card_flip.wav</ShortName>
@@ -959,22 +976,32 @@
 					<CachePath>SFX/RACE_STARTMOTION_2F7A5971.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="86245554" Name="Attack_Remover" LibName="Wwise Compressor" LibId="7077891"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="480150866" Name="Play_BGM_01" DurationType="Infinite">
 					<SwitchContainers>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="412724365" Id="3340296461"/>
 							<MediaRefs>
-								<MediaRef Id="30720200"/>
+								<MediaRef Id="258521796"/>
 								<MediaRef Id="348594287"/>
-								<MediaRef Id="442624949"/>
-								<MediaRef Id="791981080"/>
+								<MediaRef Id="929905877"/>
+								<MediaRef Id="993211934"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="86245554"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="412724365" Id="2596272617"/>
 							<MediaRefs>
-								<MediaRef Id="141264882"/>
+								<MediaRef Id="441200128"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1497,18 +1524,10 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{91A7F084-4084-67C3-E656-E4C083E9D98E}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{64FA059E-D6D0-A495-E2A9-155993887518}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
-				<File Id="30720200" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM2.wav</ShortName>
-					<CachePath>SFX/BGM2_56CEF360.wem</CachePath>
-				</File>
-				<File Id="141264882" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM5.wav</ShortName>
-					<CachePath>SFX/BGM5_56CEF360.wem</CachePath>
-				</File>
 				<File Id="169061225" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Discount_01.wav</ShortName>
 					<CachePath>SFX/SP_Discount_01_56CEF360.wem</CachePath>
@@ -1524,6 +1543,10 @@
 				<File Id="257243960" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Increase_price_01.wav</ShortName>
 					<CachePath>SFX/SP_Increase_price_01_56CEF360.wem</CachePath>
+				</File>
+				<File Id="258521796" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM2_LU3.wav</ShortName>
+					<CachePath>SFX/BGM2_LU3_56CEF360.wem</CachePath>
 				</File>
 				<File Id="323079966" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DISEASE_001.wav</ShortName>
@@ -1541,9 +1564,9 @@
 					<ShortName>APT_event_DESOLATE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DESOLATE_001_56CEF360.wem</CachePath>
 				</File>
-				<File Id="442624949" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>torobgm3.wav</ShortName>
-					<CachePath>SFX/torobgm3_56CEF360.wem</CachePath>
+				<File Id="441200128" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM5_LU1.wav</ShortName>
+					<CachePath>SFX/BGM5_LU1_56CEF360.wem</CachePath>
 				</File>
 				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_THIEF_001.wav</ShortName>
@@ -1552,10 +1575,6 @@
 				<File Id="698255832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Few_jobs_01.wav</ShortName>
 					<CachePath>SFX/SP_Few_jobs_01_56CEF360.wem</CachePath>
-				</File>
-				<File Id="791981080" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>BGM.wav</ShortName>
-					<CachePath>SFX/BGM_56CEF360.wem</CachePath>
 				</File>
 				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3131.wav</ShortName>
@@ -1569,7 +1588,20 @@
 					<ShortName>SP_Low_in_stock_01.wav</ShortName>
 					<CachePath>SFX/SP_Low_in_stock_01_56CEF360.wem</CachePath>
 				</File>
+				<File Id="929905877" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM6_LU1.wav</ShortName>
+					<CachePath>SFX/BGM6_LU1_56CEF360.wem</CachePath>
+				</File>
+				<File Id="993211934" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BGM_LU1.wav</ShortName>
+					<CachePath>SFX/BGM_LU1_56CEF360.wem</CachePath>
+				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="86245554" Name="Attack_Remover" LibName="Wwise Compressor" LibId="7077891"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="4209066311" Name="Play_1APT_event_DESOLATE_01" DurationType="Infinite">
 					<MediaRefs>
@@ -1651,16 +1683,21 @@
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="412724365" Id="3340296461"/>
 							<MediaRefs>
-								<MediaRef Id="30720200"/>
+								<MediaRef Id="258521796"/>
 								<MediaRef Id="348594287"/>
-								<MediaRef Id="442624949"/>
-								<MediaRef Id="791981080"/>
+								<MediaRef Id="929905877"/>
+								<MediaRef Id="993211934"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="86245554"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="412724365" Id="2596272617"/>
 							<MediaRefs>
-								<MediaRef Id="141264882"/>
+								<MediaRef Id="441200128"/>
 							</MediaRefs>
 						</SwitchContainer>
 						<SwitchContainer>
@@ -1882,10 +1919,14 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{723004D2-B575-D80F-16AB-4F4A12074D46}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{108C8ABA-DE91-9513-5237-4DBB2DED324B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
+				<File Id="27631689" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AirPlane_01.wav</ShortName>
+					<CachePath>SFX/AirPlane_01_8E324C96.wem</CachePath>
+				</File>
 				<File Id="32765491" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>shs_oat_ambience_construction_work_1_jackhammer.wav</ShortName>
 					<CachePath>SFX/shs_oat_ambience_construction_work_1_jackhammer_2C9019F0.wem</CachePath>
@@ -1894,33 +1935,41 @@
 					<ShortName>scary_2(noHeel).wav</ShortName>
 					<CachePath>SFX/scary_2(noHeel)_56CEF360.wem</CachePath>
 				</File>
-				<File Id="65709662" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>xylophone.wav</ShortName>
-					<CachePath>SFX/xylophone_797B5584.wem</CachePath>
-				</File>
-				<File Id="81639684" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>marimbaC#.wav</ShortName>
-					<CachePath>SFX/marimbaC#_292D3C5C.wem</CachePath>
+				<File Id="75298263" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AirPlane_02.wav</ShortName>
+					<CachePath>SFX/AirPlane_02_8E324C96.wem</CachePath>
 				</File>
 				<File Id="181388217" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>shs_oat_ambience_construction_work_5_jackhammer.wav</ShortName>
 					<CachePath>SFX/shs_oat_ambience_construction_work_5_jackhammer_56CEF360.wem</CachePath>
 				</File>
+				<File Id="296884755" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AirPlane_06.wav</ShortName>
+					<CachePath>SFX/AirPlane_06_8E324C96.wem</CachePath>
+				</File>
 				<File Id="314776306" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Building_click_002.wav</ShortName>
 					<CachePath>SFX/Building_click_002_6D585517.wem</CachePath>
-				</File>
-				<File Id="336403806" Language="SFX" Streaming="false" Location="Memory">
-					<ShortName>105guitarriffCmaj.wav</ShortName>
-					<CachePath>SFX/105guitarriffCmaj_8E324C96.wem</CachePath>
 				</File>
 				<File Id="367849771" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>Construction_S08IN.354.wav</ShortName>
 					<CachePath>SFX/Construction_S08IN.354_5292D4B6.wem</CachePath>
 				</File>
+				<File Id="490411330" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AirPlane_04.wav</ShortName>
+					<CachePath>SFX/AirPlane_04_8E324C96.wem</CachePath>
+				</File>
 				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>airplane.wav</ShortName>
 					<CachePath>SFX/airplane_AD430AB8.wem</CachePath>
+				</File>
+				<File Id="611987134" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AirPlane_03.wav</ShortName>
+					<CachePath>SFX/AirPlane_03_8E324C96.wem</CachePath>
+				</File>
+				<File Id="719121513" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>AirPlane_05.wav</ShortName>
+					<CachePath>SFX/AirPlane_05_8E324C96.wem</CachePath>
 				</File>
 				<File Id="742924674" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>ESM_Wind_Loop_Distant_Air_Steady_1.wav</ShortName>
@@ -2018,10 +2067,13 @@
 				</Event>
 				<Event Id="2149296550" Name="Play_testing" DurationType="Infinite">
 					<MediaRefs>
-						<MediaRef Id="65709662"/>
-						<MediaRef Id="81639684"/>
-						<MediaRef Id="336403806"/>
+						<MediaRef Id="27631689"/>
+						<MediaRef Id="75298263"/>
+						<MediaRef Id="296884755"/>
+						<MediaRef Id="490411330"/>
 						<MediaRef Id="583359231"/>
+						<MediaRef Id="611987134"/>
+						<MediaRef Id="719121513"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1020223172" Name="Play_Wind" DurationType="Infinite">
@@ -2042,7 +2094,7 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{67F9FF6B-B063-5521-4AB9-2AA182D7F3F0}">
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{84187F81-9DD4-6F4D-E3E7-CD082AE89ACB}">
 			<ShortName>TOTOPIA2</ShortName>
 			<Path>TOTOPIA2.bnk</Path>
 			<Media>
@@ -2142,5 +2194,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{890C046E-B250-E4D8-E65A-A66B7504DE51}</FileHash>
+	<FileHash>{EFD90FA9-586F-76B9-18BA-4ADACEFD4BEF}</FileHash>
 </SoundBanksInfo>

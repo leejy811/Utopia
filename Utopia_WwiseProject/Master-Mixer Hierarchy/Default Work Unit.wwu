@@ -12,6 +12,19 @@
 					<ChildrenList>
 						<Bus Name="BGM" ID="{1F10D65A-9A77-412D-9574-CD87B45B520C}">
 							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{45BB315C-66B8-4A9B-A57E-546E24E6F3D6}" ShortID="279980324">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+														<ObjectRef Name="New_Meter" ID="{3BF26034-185C-4F56-ABDE-D1F80BF3A7EF}" WorkUnitID="{AF2F5989-FACD-41BE-885F-E3319F38E576}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
 								<ObjectList Name="RTPC">
 									<Reference>
 										<Local>
@@ -94,6 +107,41 @@
 						</Bus>
 					</ChildrenList>
 					<ObjectLists>
+						<ObjectList Name="Effects">
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{883E3C9C-30FF-473A-8E84-4A3430ECB017}" ShortID="717258174">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+												<ObjectRef Name="New_Compressor" ID="{2E7C1BDE-F5A5-46E1-B5A0-B306F7A69E80}" WorkUnitID="{AF2F5989-FACD-41BE-885F-E3319F38E576}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{AE214A57-8AFA-421C-B6B1-F0B4AF4ECC89}" ShortID="52122692">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+												<ObjectRef Name="limiter" ID="{4C57ABE2-3436-49DE-919A-2C73176087B3}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+							<Reference>
+								<Local>
+									<EffectSlot Name="" ID="{C40F4D42-F645-4A48-B293-4F6213D0300D}" ShortID="1068634765">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise Meter" CompanyID="0" PluginID="129" PluginType="3">
+												<ObjectRef Name="New_Meter" ID="{3BF26034-185C-4F56-ABDE-D1F80BF3A7EF}" WorkUnitID="{AF2F5989-FACD-41BE-885F-E3319F38E576}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</Local>
+							</Reference>
+						</ObjectList>
 						<ObjectList Name="RTPC">
 							<Reference>
 								<Local>
@@ -119,7 +167,7 @@
 															</Point>
 															<Point>
 																<XPos>100</XPos>
-																<YPos>4.43698</YPos>
+																<YPos>0.03935</YPos>
 																<Flags>37</Flags>
 															</Point>
 														</PointList>

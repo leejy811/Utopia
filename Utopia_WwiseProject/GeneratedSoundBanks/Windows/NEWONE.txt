@@ -108,22 +108,25 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2212414277	DIST			\Default Work Unit\DIST	
 	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
 
+Effect plug-ins	ID	Name	Type				Notes
+	86245554	Attack_Remover	Wwise Compressor			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	30720200	BGM2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM2_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM2\BGM2		1235109
-	141264882	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM5_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		1491662
 	169061225	SP_Discount_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Discount_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Discount_01		55921
 	190275362	1SP_Many_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Many_jobs_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Many_jobs_01		79069
 	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_FIRE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_FIRE_01		106649
 	257243960	SP_Increase_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Increase_price_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Increase_price_01		65262
+	258521796	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM2_LU3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM2\New Music Track		1233901
 	323079966	NNAPT_event_DISEASE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DISEASE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNAPT_event_DISEASE_01		72571
-	348594287	BGM3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\BGM3		510731
+	348594287	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\New Music Track		510731
 	415772296	1SP_Festival_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Festival_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Festival_01		78311
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_DESOLATE_01		89357
-	442624949	torobgm3	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\torobgm3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM6\torobgm3		1024517
+	441200128	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM5_LU1_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		1394267
 	648936715	NAPT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_THIEF_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NAPT_event_THIEF_01		66098
 	698255832	SP_Few_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Few_jobs_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Few_jobs_01		83497
-	791981080	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM\BGM		792242
 	839951050	3131	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\3131_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Danger\BGM4\3131		896136
 	864269945	NSP_Decrease_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Decrease_price_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NSP_Decrease_price_01		86402
 	927128712	NNSP_Low_in_stock_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Low_in_stock_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNSP_Low_in_stock_01		87714
+	929905877	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM6_LU1_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM6\New Music Track		1002237
+	993211934	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM_LU1_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM\BGM		692660
 

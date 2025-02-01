@@ -27,15 +27,18 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3842075637	TIMELAP			\Default Work Unit\TIMELAP	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	27631689	AirPlane_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\AirPlane_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\AirPlane_01		180752
 	32765491	shs_oat_ambience_construction_work_1_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_1_jackhammer_2C9019F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_1_jackhammer		271306
 	57723684	ATP_event_scary_2(noHeel)v2	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\scary_2(noHeel)_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\condition2_1\ATP_event_scary_2(noHeel)v2		72003
-	65709662	xylophone	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\xylophone_797B5584.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\xylophone		46446
-	81639684	marimbaC#	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\marimbaC#_292D3C5C.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\marimbaC#		29386
+	75298263	AirPlane_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\AirPlane_02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\AirPlane_02		186854
 	181388217	shs_oat_ambience_construction_work_5_jackhammer	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\shs_oat_ambience_construction_work_5_jackhammer_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\shs_oat_ambience_construction_work_5_jackhammer		497487
+	296884755	AirPlane_06	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\AirPlane_06_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\AirPlane_06		183993
 	314776306	Select_Button	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Building_click_002_6D585517.wem		\Actor-Mixer Hierarchy\Default Work Unit\Select_Button		1014
-	336403806	105guitarriffCmaj	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\105guitarriffCmaj_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\105guitarriffCmaj		322021
 	367849771	Construction_S08IN_354	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Construction_S08IN.354_5292D4B6.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\construction\Construction_S08IN_354		1666750
+	490411330	AirPlane_04	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\AirPlane_04_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\AirPlane_04		181994
 	583359231	airplane	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\airplane_AD430AB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Blend Container\airplane		165969
+	611987134	AirPlane_03	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\AirPlane_03_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\AirPlane_03		189313
+	719121513	AirPlane_05	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\AirPlane_05_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\testing\New Random Container\AirPlane_05		181117
 	742924674	Wind	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\ESM_Wind_Loop_Distant_Air_Steady_1_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\Wind		632610
 	779451324	Slot_rimshot	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SO_BA_rim_chin_upbounce_8C239BD2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slot_rimshot		1951
 	824445506	ForestAmbience	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\utopia sound design_D7FFE3E4.wem		\Actor-Mixer Hierarchy\Default Work Unit\AMb\ForestAmbience		3219744

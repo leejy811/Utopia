@@ -252,6 +252,7 @@
 								<MusicSegment Name="BGM" ID="{ED885721-3D7B-4EBF-B122-8DE5CCD5BB41}" ShortID="676008833">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="40000"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -262,14 +263,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="BGM" ID="{1C4A3C6C-124E-4893-97D3-400849027A65}" ShortID="65058295">
+										<MusicTrack Name="BGM" ID="{7512AF2F-1059-4A88-A55E-76AA6BFE05B4}" ShortID="132866297">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{5D6E4DAE-130C-4124-8F94-5F2ED2A0B2EF}">
+														<MusicTransition Name="Root" ID="{126FEC2D-A09B-4CE2-B882-D56D1B33F9B1}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -279,11 +280,11 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="BGM" ID="{4339C1A2-A5D4-4447-B332-7DE4338D1577}">
+												<AudioFileSource Name="BGM_LU1" ID="{339906A3-4A59-4323-8EC9-BB95E48BBBF8}">
 													<Language>SFX</Language>
-													<AudioFile>BGM.wav</AudioFile>
+													<AudioFile>BGM_LU1.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="791981080"/>
+														<MediaID ID="993211934"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -291,18 +292,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{2FCDE8BB-7F34-48AB-9929-EB02C8187A49}">
+															<MusicTrackSequence Name="" ID="{218BCE27-747A-4C98-A373-5D15AD080F10}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="BGM" ID="{3F1A70E6-A97E-42D3-9F8F-7EF0E1437B9A}">
+																				<MusicClip Name="BGM_LU1" ID="{21FF7BEC-7480-4175-B83E-4E8BBC1C970B}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="40000"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="BGM" ID="{4339C1A2-A5D4-4447-B332-7DE4338D1577}"/>
+																					<AudioSourceRef Name="BGM_LU1" ID="{339906A3-4A59-4323-8EC9-BB95E48BBBF8}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -333,11 +334,29 @@
 												</Local>
 											</Reference>
 										</ObjectList>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{D04B16F0-E77B-44F6-86A5-F795DA7C0F19}" ShortID="685202649">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<ObjectRef Name="Attack_Remover" ID="{174E7B9A-A16F-4CA7-86D0-530212B5A6AA}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
+												</Local>
+											</Reference>
+										</ObjectList>
 									</ObjectLists>
 								</MusicSegment>
 								<MusicSegment Name="BGM2" ID="{52209A54-AEF4-4644-AE0B-9AB8281D00AE}" ShortID="173710090">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="80000.5833333333"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -348,14 +367,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="BGM2" ID="{2ACFC5C1-E8CA-4750-84F2-363DC798FB20}" ShortID="562307492">
+										<MusicTrack Name="New Music Track" ID="{91B3F8B1-AFC6-40EF-99E5-3A2567788703}" ShortID="948028442">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{8E1ECAAA-E434-4CDF-8228-83D1E5BB5A7A}">
+														<MusicTransition Name="Root" ID="{3E559B39-3858-4656-A4EC-039F9AFE4AB4}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -365,11 +384,11 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="BGM2" ID="{57130ABA-55E4-48D7-B1AE-90B6B1D7228B}">
+												<AudioFileSource Name="BGM2_LU3" ID="{92A75A20-26C1-4506-9097-AC83FE8686C2}">
 													<Language>SFX</Language>
-													<AudioFile>BGM2.wav</AudioFile>
+													<AudioFile>BGM2_LU3.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="30720200"/>
+														<MediaID ID="258521796"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -377,18 +396,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{3035D2F9-3FC7-495D-8E4D-C64FDFD975FF}">
+															<MusicTrackSequence Name="" ID="{D1393FD6-2003-4D74-B554-396AE2846127}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="BGM2" ID="{0B29DD86-11CE-46FA-84E0-4C40A2577DA9}">
+																				<MusicClip Name="BGM2_LU3" ID="{DB434B6E-CA7F-4C69-A964-AD423057CB43}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="80000.5833333333"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="BGM2" ID="{57130ABA-55E4-48D7-B1AE-90B6B1D7228B}"/>
+																					<AudioSourceRef Name="BGM2_LU3" ID="{92A75A20-26C1-4506-9097-AC83FE8686C2}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -424,6 +443,11 @@
 								<MusicSegment Name="BGM3" ID="{A4F590D4-7811-4BC2-ADAA-5DC688C4837F}" ShortID="965365563">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="32002.6041666667"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -434,14 +458,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="BGM3" ID="{91565292-02BF-4528-B0E7-C9DF6CA808EE}" ShortID="760308292">
+										<MusicTrack Name="New Music Track" ID="{D1D73DCE-9B9E-444A-A1C5-17B52382AB08}" ShortID="287056368">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{4F5958DE-8B7D-4F93-A533-9E70F2FFA224}">
+														<MusicTransition Name="Root" ID="{20456889-5353-4EEE-9721-F652B32FE4DF}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -451,7 +475,7 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="BGM3" ID="{6BABA455-CDFC-4006-A2EB-F496E09F9E8A}">
+												<AudioFileSource Name="BGM3" ID="{EAC81EC5-69F4-44F6-9A79-260CA327A3EE}">
 													<Language>SFX</Language>
 													<AudioFile>BGM3.wav</AudioFile>
 													<MediaIDList>
@@ -463,18 +487,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{9724AB24-D9ED-4FCC-909C-B10C7AD16262}">
+															<MusicTrackSequence Name="" ID="{B2381D4C-1890-4FE6-8F79-696B3399C010}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="BGM3" ID="{4EF95149-0B17-41E6-8111-739D49C6B0EB}">
+																				<MusicClip Name="BGM3" ID="{5D66ADBE-81DE-4017-956C-1A072B20922F}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="32002.6041666667"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="BGM3" ID="{6BABA455-CDFC-4006-A2EB-F496E09F9E8A}"/>
+																					<AudioSourceRef Name="BGM3" ID="{EAC81EC5-69F4-44F6-9A79-260CA327A3EE}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -660,6 +684,11 @@
 								<MusicSegment Name="BGM6" ID="{DDD9F18B-C92E-4115-A42A-3436223DE60F}" ShortID="550380880">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="64454.8493209757"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -670,14 +699,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<MusicTrack Name="torobgm3" ID="{0BC77F6B-0FBF-44B2-A811-17A19ACC0A26}" ShortID="435372169">
+										<MusicTrack Name="New Music Track" ID="{D8C68ECE-89C2-4432-8197-A3C5267A0A30}" ShortID="346034405">
 											<ReferenceList>
 												<Reference Name="OutputBus">
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
 												</Reference>
 												<Reference Name="TransitionRoot">
 													<Custom>
-														<MusicTransition Name="Root" ID="{F956329C-7226-42B8-A384-8B4DA3F9811E}">
+														<MusicTransition Name="Root" ID="{9C1C353C-0A45-4BF0-839B-BAB82C150DA4}">
 															<PropertyList>
 																<Property Name="IsFolder" Type="bool" Value="True"/>
 															</PropertyList>
@@ -687,11 +716,11 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="torobgm3" ID="{891FF875-C104-494B-B766-4EE1890C6E12}">
+												<AudioFileSource Name="BGM6_LU1" ID="{4D7DBE1C-3F04-484F-81A5-C55C14181478}">
 													<Language>SFX</Language>
-													<AudioFile>torobgm3.wav</AudioFile>
+													<AudioFile>BGM6_LU1.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="442624949"/>
+														<MediaID ID="929905877"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -699,18 +728,18 @@
 												<ObjectList Name="Sequences">
 													<Reference>
 														<Local>
-															<MusicTrackSequence Name="" ID="{A0DAB61C-356A-4BB9-B470-4547AEB61430}">
+															<MusicTrackSequence Name="" ID="{292BE191-5B25-40BF-83D4-8BC9BAF5054B}">
 																<ObjectLists>
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="torobgm3" ID="{E055E284-4CAF-4601-9211-0CEF936963BA}">
+																				<MusicClip Name="BGM6_LU1" ID="{4386684E-0EBB-40D7-B433-7D1E40DBBC20}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="64000"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="torobgm3" ID="{891FF875-C104-494B-B766-4EE1890C6E12}"/>
+																					<AudioSourceRef Name="BGM6_LU1" ID="{4D7DBE1C-3F04-484F-81A5-C55C14181478}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -746,6 +775,13 @@
 							</ChildrenList>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="fail" ID="{50F37AB9-5F41-49B7-8378-B020ACED3C30}" ShortID="159018657">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -795,11 +831,6 @@
 								<MusicSegment Name="Fail" ID="{9D4F96E5-4E11-4C1C-81C9-DBDF69613D9C}" ShortID="766889685">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="96000"/>
-										<Property Name="Volume" Type="Real64">
-											<ValueList>
-												<Value>-6</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -827,11 +858,11 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="BGM5" ID="{4A6CE8AC-530A-47B0-AA69-49C4B2147A37}">
+												<AudioFileSource Name="BGM5_LU1" ID="{BD4853EA-7259-4775-9AD5-D089CCA1F60D}">
 													<Language>SFX</Language>
-													<AudioFile>BGM5.wav</AudioFile>
+													<AudioFile>BGM5_LU1.wav</AudioFile>
 													<MediaIDList>
-														<MediaID ID="141264882"/>
+														<MediaID ID="441200128"/>
 													</MediaIDList>
 												</AudioFileSource>
 											</ChildrenList>
@@ -844,13 +875,13 @@
 																	<ObjectList Name="Clips">
 																		<Reference>
 																			<Local>
-																				<MusicClip Name="BGM5" ID="{65CF72C6-153E-40FE-8DF5-2E8AA8CAB6B7}">
+																				<MusicClip Name="BGM5_LU1" ID="{10AFF716-888D-4A73-9267-287419999B3B}">
 																					<PropertyList>
 																						<Property Name="EndTrimOffset" Type="Real64" Value="96000"/>
 																						<Property Name="FadeInMode" Type="int16" Value="0"/>
 																						<Property Name="FadeOutMode" Type="int16" Value="0"/>
 																					</PropertyList>
-																					<AudioSourceRef Name="BGM5" ID="{4A6CE8AC-530A-47B0-AA69-49C4B2147A37}"/>
+																					<AudioSourceRef Name="BGM5_LU1" ID="{BD4853EA-7259-4775-9AD5-D089CCA1F60D}"/>
 																				</MusicClip>
 																			</Local>
 																		</Reference>
@@ -948,6 +979,11 @@
 								<MusicSegment Name="BGM4" ID="{9F2F974F-DD6E-43A8-A57F-042AB4C81073}" ShortID="1065227574">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="64004.5833333333"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>4</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1499,7 +1535,7 @@
 										<Property Name="EndPosition" Type="Real64" Value="27576.4075723831"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-10</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1743,6 +1779,11 @@
 								<MusicSegment Name="BGM3" ID="{FC4DEE23-BC16-4E9E-B9B8-08D4474EEFEA}" ShortID="655966715">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="35500"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-5</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -1921,7 +1962,7 @@
 										<Property Name="EndPosition" Type="Real64" Value="32003.6682506281"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-7</Value>
+												<Value>-21</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
