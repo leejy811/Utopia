@@ -25517,6 +25517,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Intro_camera" ID="{17FA7FD2-E452-4AF3-83B6-FAF7EBB8E482}" ShortID="1008349376">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -25534,6 +25541,21 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{31D6CD6A-4A77-4266-ABD8-88E76EB650D2}" ShortID="197782475">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+														<ObjectRef Name="New_Parametric_EQ" ID="{2F9C4727-6E43-4361-A703-24BC81BC4313}" WorkUnitID="{AF2F5989-FACD-41BE-885F-E3319F38E576}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
 							<ActiveSourceList>
 								<ActiveSource Name="Intro_camera" ID="{8D6FFEC9-3990-40E1-A1AE-15F0F19D603B}" Platform="Linked"/>
 							</ActiveSourceList>

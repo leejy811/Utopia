@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{0ED91676-983E-496E-A1E4-1558EFEDB477}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{5A0D3524-BD3A-774F-61F7-9FD2F3014074}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -211,6 +211,11 @@
 					<CachePath>SFX/CellPhone_Click_8E324C96.wem</CachePath>
 				</File>
 			</Media>
+			<Plugins>
+				<ShareSets>
+					<Plugin Id="3657550167" Name="New_Parametric_EQ" LibName="Wwise Parametric EQ" LibId="6881283"/>
+				</ShareSets>
+			</Plugins>
 			<Events>
 				<Event Id="501297411" Name="Play_Break_01" DurationType="OneShot" DurationMin="1.1793529" DurationMax="1.1793529">
 					<MediaRefs>
@@ -256,6 +261,11 @@
 					<MediaRefs>
 						<MediaRef Id="49256336"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="3657550167"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="139162049" Name="Play_Paythepayment_01" DurationType="OneShot" DurationMin="1.2935417" DurationMax="1.2935417">
 					<MediaRefs>
@@ -335,7 +345,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{9B09B5E0-7FDB-06EA-7877-E8863C725B7B}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{686897B8-886A-6407-FF5F-E8A573EFBB9D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -2259,5 +2269,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{9AF1470B-7188-38AD-F1D6-1E2D27C8E036}</FileHash>
+	<FileHash>{3633EB9C-03A4-88A7-BA68-4E6183CD3C1C}</FileHash>
 </SoundBanksInfo>

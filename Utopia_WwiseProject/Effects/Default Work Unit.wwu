@@ -27,6 +27,13 @@
 						<Property Name="MeterMode" Type="int32" Value="1"/>
 					</PropertyList>
 				</Effect>
+				<Effect Name="New_Parametric_EQ" ID="{2F9C4727-6E43-4361-A703-24BC81BC4313}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+					<PropertyList>
+						<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
+						<Property Name="FrequencyBand1" Type="Real32" Value="600"/>
+						<Property Name="GainBand1" Type="Real32" Value="-3"/>
+					</PropertyList>
+				</Effect>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>

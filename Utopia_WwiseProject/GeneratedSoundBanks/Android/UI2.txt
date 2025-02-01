@@ -23,6 +23,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	3583156534	Play_POPUP_Positive			\Default Work Unit\old\Play_POPUP_Positive	
 	3803209012	Play_Slot_Spwan_01			\Default Work Unit\old\Play_Slot_Spwan_01	
 
+Effect plug-ins	ID	Name	Type				Notes
+	3657550167	New_Parametric_EQ	Wwise Parametric EQ			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	49256336	Intro_camera	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Intro_camera_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Intro_camera		457760
 	201474464	Break_Melodic_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Break_Melodic_01_367389B3.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Break_Melodic_01		644216
