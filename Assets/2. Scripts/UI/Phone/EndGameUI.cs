@@ -68,7 +68,13 @@ public class EndGameUI : MonoBehaviour
 
     private void InitAnimation()
     {
+        if (state == EventState.GameOver)
+            AkSoundEngine.PostEvent("Play_BREAK_MELODIC_02", gameObject);
+        else if (state == EventState.GameClear)
+            AkSoundEngine.PostEvent("Play_Last_Success_01", gameObject);
+
         AkSoundEngine.PostEvent("Play_Mail_take_002", gameObject);
+
         backGroundImage.DOLocalMove(Vector3.zero, 1f);
         frontImage.DOLocalMove(Vector3.zero, 1f);
         buttons.DOLocalMoveY(buttons.transform.localPosition.y + 130.0f, 1f).OnComplete(() =>
@@ -87,7 +93,7 @@ public class EndGameUI : MonoBehaviour
             }
 
             inline.DOLocalMoveX(inline.transform.localPosition.x + 10.0f, 0.7f);
-            AkSoundEngine.PostEvent("Play_Mail_take_001", gameObject);
+            AkSoundEngine.PostEvent("Play_Last_Paper_01", gameObject);
         });
     }
 
@@ -114,6 +120,7 @@ public class EndGameUI : MonoBehaviour
 
     public void OnClickSaveData()
     {
+        AkSoundEngine.PostEvent("Play_Save_01", gameObject);
         saveInfo.DOLocalMoveY(saveInfo.transform.localPosition.y - 40.0f, 0.7f);
         saveInfo.gameObject.GetComponent<Image>().DOFade(1.0f, 0.7f).OnComplete(() =>
         {

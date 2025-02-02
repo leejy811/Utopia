@@ -88,6 +88,8 @@ public class Grid : MonoBehaviour, IObserver
     {
         if (purchaseSize == prevSize) return;
 
+        if (time != 0.0f) AkSoundEngine.PostEvent("Play_Land_Expansion_01", gameObject);
+
         for (int i = (width / 2) - (purchaseSize.x / 2); i < (width / 2) + (purchaseSize.x / 2); i++)
         {
             for (int j = (height / 2) - (purchaseSize.y / 2); j < (height / 2) + (purchaseSize.y / 2); j++)

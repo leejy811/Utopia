@@ -143,6 +143,7 @@ public class SoundManager : MonoBehaviour
             PostEvent(state + "LOOP_bar");
             PostEvent(state + "LOOP_vomit_01");
             PostEvent(state + "Wind");
+            PostEvent(state + "TO_testing");
 
             PostEvent(state + "TO_Decrease_price_01");
             PostEvent(state + "TO_Decrease_price_02");

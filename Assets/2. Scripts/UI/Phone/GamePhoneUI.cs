@@ -37,7 +37,7 @@ public class GamePhoneUI : MonoBehaviour, IObserver
                 tile.building.transform.DOMoveY(-3.0f, gameoverTime);
         }
 
-        AkSoundEngine.PostEvent("Play_Break_Rumble_01", gameObject);
+        AkSoundEngine.PostEvent("Play_BREKE_02", gameObject);
         CinemachineBasicMultiChannelPerlin noise = virtualCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
         noise.m_AmplitudeGain = 5.0f;
         noise.m_FrequencyGain = 1.0f;

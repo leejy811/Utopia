@@ -52,6 +52,7 @@ public class HorseRacingUI : MinigameUI
     private int curBetChip;
     private Coroutine timeCountCoroutine;
     private HorseController prevPickHorse;
+    private int curGrade;
 
     private void Start()
     {
@@ -103,6 +104,7 @@ public class HorseRacingUI : MinigameUI
             case MinigameState.Lobby:
                 base.SetValue();
                 InitHorses();
+                AkSoundEngine.SetRTPCValue("GRADE", 5);
                 break;
             case MinigameState.Betting:
                 curBetChip = (int)curGameBuilding.values[ValueType.betChip].cur;
@@ -113,6 +115,8 @@ public class HorseRacingUI : MinigameUI
                 break;
             case MinigameState.Result:
                 SetGradeName();
+                AkSoundEngine.PostEvent("Play_Race_Win", gameObject);
+                AkSoundEngine.SetRTPCValue("GRADE", curGrade);
                 break;
         }
     }
@@ -203,6 +207,8 @@ public class HorseRacingUI : MinigameUI
         {
             gradePickImages[i].enabled = i == grade - 1;
         }
+
+        curGrade = grade;
     }
 
     private void GetReward()
