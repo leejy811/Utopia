@@ -187,7 +187,9 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         Grid.instance.tiles[pos.x, pos.y].smokeFX.Play(true);
         Grid.instance.tiles[pos.x, pos.y].building = null;
         EventManager.instance.SetEventBuildings(buildingComp, false);
-        eventIconTemps[buildingComp].offUI = true;
+
+        if (eventIconTemps.ContainsKey(buildingComp))
+            eventIconTemps[buildingComp].offUI = true;
 
         if (second == 0.0f)
             AkSoundEngine.PostEvent("Play_Demolition_001_v1", gameObject);
