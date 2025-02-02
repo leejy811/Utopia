@@ -345,7 +345,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0B205023-D834-76A5-551A-A8DD2230E11B}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{FFE8F66A-7316-1703-7CEA-E86B88656C0D}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -834,7 +834,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{8A66642C-19E2-1EF4-9C4F-D0C7B924E88D}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{CCD0D713-593B-FCE5-C75C-B6063605E8DE}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -2395,5 +2395,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{8C94ACB0-2E6F-D476-3CBC-9F9F2344FFEF}</FileHash>
+	<FileHash>{89B5FB6D-6AEC-0501-2179-DBDDA82A1957}</FileHash>
 </SoundBanksInfo>

@@ -17925,22 +17925,22 @@
 																</PropertyList>
 																<PointList>
 																	<Point>
-																		<XPos>0</XPos>
-																		<YPos>-8</YPos>
+																		<XPos>1</XPos>
+																		<YPos>-7.31259</YPos>
 																		<Flags>5</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>49.999</XPos>
+																		<XPos>2.99996</XPos>
 																		<YPos>-7</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>50</XPos>
+																		<XPos>3.00096</XPos>
 																		<YPos>0</YPos>
 																		<Flags>0</Flags>
 																	</Point>
 																	<Point>
-																		<XPos>100</XPos>
+																		<XPos>5</XPos>
 																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>

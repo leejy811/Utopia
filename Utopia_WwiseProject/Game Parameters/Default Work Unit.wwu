@@ -83,7 +83,13 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
-				<GameParameter Name="GRADE" ID="{5F546C47-5F39-43F1-90A7-46C01C468728}"/>
+				<GameParameter Name="GRADE" ID="{5F546C47-5F39-43F1-90A7-46C01C468728}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="5"/>
+						<Property Name="Max" Type="Real64" Value="5"/>
+						<Property Name="Min" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
