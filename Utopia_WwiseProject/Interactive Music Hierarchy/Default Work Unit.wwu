@@ -1532,7 +1532,8 @@
 							<ChildrenList>
 								<MusicSegment Name="BGM" ID="{6820675B-D51A-4C99-A1C7-293CBA0EA68A}" ShortID="218620251">
 									<PropertyList>
-										<Property Name="EndPosition" Type="Real64" Value="27576.4075723831"/>
+										<Property Name="EndPosition" Type="Real64" Value="30465.428240513"/>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-10</Value>
@@ -1621,6 +1622,19 @@
 															<Property Name="TimeMs" Type="Real64" Value="27340.428240513"/>
 														</PropertyList>
 													</MusicCue>
+												</Local>
+											</Reference>
+										</ObjectList>
+										<ObjectList Name="Effects">
+											<Reference>
+												<Local>
+													<EffectSlot Name="" ID="{2F9A590D-48A9-4F75-910E-B0D4EA37B2EE}" ShortID="837947849">
+														<ReferenceList>
+															<Reference Name="Effect" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
+																<ObjectRef Name="Hard_Knee_Minus_3dB_RMS" ID="{D083BAE5-F9EF-426B-A311-D9DF8DFE8807}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+															</Reference>
+														</ReferenceList>
+													</EffectSlot>
 												</Local>
 											</Reference>
 										</ObjectList>

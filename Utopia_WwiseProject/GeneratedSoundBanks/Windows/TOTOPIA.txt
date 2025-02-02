@@ -125,7 +125,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4121515321	JACKPOT			\Default Work Unit\JACKPOT	
 
 Effect plug-ins	ID	Name	Type				Notes
+	29232603	New_Parametric_EQ_01	Wwise Parametric EQ			
 	86245554	Attack_Remover	Wwise Compressor			
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	10352558	BLACKJACK_ALLIN	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BLACKJACK_ALLIN_35636681.wem		\Actor-Mixer Hierarchy\Default Work Unit\BLACKJACK_ALLIN		80274

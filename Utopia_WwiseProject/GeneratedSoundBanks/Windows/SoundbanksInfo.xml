@@ -126,7 +126,7 @@
 				<Event Id="3173136834" Name="Stop_Wind" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{A0A37CA7-E85E-1738-A74F-0ED8C240A109}">
+		<SoundBank Id="1181390631" Type="User" Language="SFX" Hash="{077D8DCB-C8CB-CBDB-2B5F-A73D70C31AE8}">
 			<ShortName>UI2</ShortName>
 			<Path>UI2.bnk</Path>
 			<Media>
@@ -833,7 +833,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{A18DAE70-410A-00EA-B2A6-E620246855E7}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{90959EEA-F693-EDAD-2CAD-31605D5AE61F}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1048,7 +1048,9 @@
 			</Media>
 			<Plugins>
 				<ShareSets>
+					<Plugin Id="29232603" Name="New_Parametric_EQ_01" LibName="Wwise Parametric EQ" LibId="6881283"/>
 					<Plugin Id="86245554" Name="Attack_Remover" LibName="Wwise Compressor" LibId="7077891"/>
+					<Plugin Id="3796564934" Name="Hard_Knee_Minus_3dB_RMS" LibName="Wwise Compressor" LibId="7077891"/>
 				</ShareSets>
 			</Plugins>
 			<Events>
@@ -1176,6 +1178,11 @@
 					<MediaRefs>
 						<MediaRef Id="56928845"/>
 					</MediaRefs>
+					<PluginRefs>
+						<ShareSets>
+							<PluginRef Id="29232603"/>
+						</ShareSets>
+					</PluginRefs>
 				</Event>
 				<Event Id="443838562" Name="Play_LOOP_vomit_01" DurationType="Infinite">
 					<MediaRefs>
@@ -1471,6 +1478,11 @@
 								<MediaRef Id="348594287"/>
 								<MediaRef Id="1023215211"/>
 							</MediaRefs>
+							<PluginRefs>
+								<ShareSets>
+									<PluginRef Id="3796564934"/>
+								</ShareSets>
+							</PluginRefs>
 						</SwitchContainer>
 						<SwitchContainer>
 							<SwitchValue GroupType="State" GroupId="412724365" Id="4174463524"/>
@@ -2004,7 +2016,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{4175E9DC-F940-BE35-36E7-4B434F695BE6}">
+		<SoundBank Id="3161908922" Type="User" Language="SFX" Hash="{F75C8AFC-BE60-1BE9-C5A4-C153C173D37B}">
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 			<Media>
@@ -2178,7 +2190,7 @@
 				<GameParameter Id="3842075637" Name="TIMELAP"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{84187F81-9DD4-6F4D-E3E7-CD082AE89ACB}">
+		<SoundBank Id="4245392693" Type="User" Language="SFX" Hash="{F3C23F54-B367-7826-9480-7142B15CB6F6}">
 			<ShortName>TOTOPIA2</ShortName>
 			<Path>TOTOPIA2.bnk</Path>
 			<Media>
@@ -2278,5 +2290,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{287631A2-B3AA-6503-A660-AD8A99CC0D8B}</FileHash>
+	<FileHash>{A1FF12F7-49BA-3DAB-B7E9-41035F673544}</FileHash>
 </SoundBanksInfo>
