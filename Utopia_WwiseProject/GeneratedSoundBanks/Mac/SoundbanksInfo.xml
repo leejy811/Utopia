@@ -1621,7 +1621,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{E62637A8-06BB-17F9-2132-EC44A83EC978}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{143217F9-45EB-2009-FFB8-E75343529E92}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -1629,9 +1629,17 @@
 					<ShortName>Last_Success_01.wav</ShortName>
 					<CachePath>SFX/Last_Success_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="79873597" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TO_AirPlane_03.wav</ShortName>
+					<CachePath>SFX/TO_AirPlane_03_818F3B66.wem</CachePath>
+				</File>
 				<File Id="169061225" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Discount_01.wav</ShortName>
 					<CachePath>SFX/SP_Discount_01_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="183237161" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TO_AirPlane_04.wav</ShortName>
+					<CachePath>SFX/TO_AirPlane_04_818F3B66.wem</CachePath>
 				</File>
 				<File Id="190275362" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Many_jobs_01.wav</ShortName>
@@ -1665,6 +1673,10 @@
 					<ShortName>BGM3.wav</ShortName>
 					<CachePath>SFX/BGM3_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="378253562" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TO_AirPlane_01.wav</ShortName>
+					<CachePath>SFX/TO_AirPlane_01_818F3B66.wem</CachePath>
+				</File>
 				<File Id="415772296" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Festival_01.wav</ShortName>
 					<CachePath>SFX/SP_Festival_01_FBC78EF0.wem</CachePath>
@@ -1681,9 +1693,17 @@
 					<ShortName>Save_01.wav</ShortName>
 					<CachePath>SFX/Save_01_818F3B66.wem</CachePath>
 				</File>
+				<File Id="583359231" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>airplane.wav</ShortName>
+					<CachePath>SFX/airplane_6BF23048.wem</CachePath>
+				</File>
 				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_THIEF_001.wav</ShortName>
 					<CachePath>SFX/APT_event_THIEF_001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="676991557" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TO_AirPlane_05.wav</ShortName>
+					<CachePath>SFX/TO_AirPlane_05_818F3B66.wem</CachePath>
 				</File>
 				<File Id="698255832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Few_jobs_01.wav</ShortName>
@@ -1696,6 +1716,14 @@
 				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3131.wav</ShortName>
 					<CachePath>SFX/3131_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="843364955" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TO_AirPlane_06.wav</ShortName>
+					<CachePath>SFX/TO_AirPlane_06_818F3B66.wem</CachePath>
+				</File>
+				<File Id="855943350" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>TO_AirPlane_02.wav</ShortName>
+					<CachePath>SFX/TO_AirPlane_02_818F3B66.wem</CachePath>
 				</File>
 				<File Id="864269945" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Decrease_price_01.wav</ShortName>
@@ -2011,6 +2039,17 @@
 				<Event Id="52587300" Name="Play_SP_Many_jobs_01" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="190275362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2183552080" Name="Play_TO_testing" DurationType="Infinite">
+					<MediaRefs>
+						<MediaRef Id="79873597"/>
+						<MediaRef Id="183237161"/>
+						<MediaRef Id="378253562"/>
+						<MediaRef Id="583359231"/>
+						<MediaRef Id="676991557"/>
+						<MediaRef Id="843364955"/>
+						<MediaRef Id="855943350"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="901839057" Name="Stop_1APT_event_DESOLATE_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
@@ -2353,5 +2392,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{A821975C-809A-38ED-39F1-6D777F545E30}</FileHash>
+	<FileHash>{CE53895C-FD4B-6738-380F-2188929BDB9F}</FileHash>
 </SoundBanksInfo>

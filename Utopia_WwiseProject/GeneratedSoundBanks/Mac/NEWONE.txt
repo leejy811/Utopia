@@ -59,6 +59,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2124694142	Stop_1SP_Low_in_stock_01			\Default Work Unit\0912_2\Stop_1SP_Low_in_stock_01	
 	2155125557	Stop_NNSP_Discount_01			\Default Work Unit\0912_3\Stop_NNSP_Discount_01	
 	2166055516	Stop_NNSP_Increase_price_01			\Default Work Unit\0912_3\Stop_NNSP_Increase_price_01	
+	2183552080	Play_TO_testing			\Default Work Unit\Play_TO_testing	
 	2241299872	Play_NSP_Increase_price_01			\Default Work Unit\0912_1\Play_NSP_Increase_price_01	
 	2313849096	Play_BREKE_02			\Default Work Unit\toto\Play_BREKE_02	
 	2398011252	Play_NNAPT_event_DESOLATE_01			\Default Work Unit\0912_3\Play_NNAPT_event_DESOLATE_01	
@@ -120,7 +121,9 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	48532910	Last_Success_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Last_Success_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Last_Success_01		972228
+	79873597	TO_AirPlane_03	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\TO_AirPlane_03_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_03		2557588
 	169061225	SP_Discount_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Discount_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Discount_01		728372
+	183237161	TO_AirPlane_04	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\TO_AirPlane_04_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_04		2557588
 	190275362	1SP_Many_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Many_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Many_jobs_01		728672
 	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_FIRE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_FIRE_01		1079100
 	257243960	SP_Increase_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Increase_price_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Increase_price_01		1076988
@@ -129,14 +132,19 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	323079966	NNAPT_event_DISEASE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_DISEASE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNAPT_event_DISEASE_01		960100
 	327340426	Race_Win	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Race_Win_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Race_Win		346492
 	348594287	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BGM3_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\New Music Track		6144660
+	378253562	TO_AirPlane_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\TO_AirPlane_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_01		2557588
 	415772296	1SP_Festival_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Festival_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Festival_01		1004868
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_DESOLATE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_DESOLATE_01		1076988
 	441200128	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BGM5_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		18432096
 	451529006	Save_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Save_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Save_01		149744
+	583359231	airplane	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\airplane_6BF23048.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Blend Container\airplane		2562680
 	648936715	NAPT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\APT_event_THIEF_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NAPT_event_THIEF_01		1030916
+	676991557	TO_AirPlane_05	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\TO_AirPlane_05_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_05		2557588
 	698255832	SP_Few_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Few_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Few_jobs_01		728372
 	762031420	Land_Expansion_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\Land_Expansion_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Land_Expansion_01		931284
 	839951050	3131	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\3131_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Danger\BGM4\3131		12289040
+	843364955	TO_AirPlane_06	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\TO_AirPlane_06_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_06		2557588
+	855943350	TO_AirPlane_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\TO_AirPlane_02_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_02		2557588
 	864269945	NSP_Decrease_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Decrease_price_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NSP_Decrease_price_01		1076988
 	898932227	BREAK_MELODIC_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\BREAK_MELODIC_02_B8724B98.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\BREAK_MELODIC_02		1077440
 	927128712	NNSP_Low_in_stock_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Mac\SFX\SP_Low_in_stock_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNSP_Low_in_stock_01		1079176

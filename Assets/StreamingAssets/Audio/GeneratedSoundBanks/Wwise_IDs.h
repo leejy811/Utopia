@@ -234,6 +234,7 @@ namespace AK
         static const AkUniqueID PLAY_TO_MANY_JOBS_02 = 4205911961U;
         static const AkUniqueID PLAY_TO_MANY_JOBS_03 = 4205911960U;
         static const AkUniqueID PLAY_TO_MANY_JOBS_04 = 4205911967U;
+        static const AkUniqueID PLAY_TO_TESTING = 2183552080U;
         static const AkUniqueID PLAY_TOBGM = 1553512265U;
         static const AkUniqueID PLAY_TURN_MOVE_CLOCK_001 = 2475783214U;
         static const AkUniqueID PLAY_TUTORIAL_POP_UP = 946941744U;

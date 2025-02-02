@@ -165,6 +165,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Stop_BGM_01" ID="{40E5DCC7-9DC3-4164-AC4B-B86559C72D9B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Last_Success_01" ID="{96E5F2EF-B0EC-4304-AF8A-938E5991865C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_TO_testing" ID="{D5F16C05-55CC-4413-BF6E-570A2F5190E0}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Land_Expansion_01" ID="{D90E0278-7334-4435-91CE-12DEED7E25F8}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BREAK_MELODIC_02" ID="{E53B6F01-1BD7-48CB-A26E-1B5D3ECA8CD2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="0912_1" ID="{29C5C0CC-D8DB-4A27-B93E-CF9DC9B762A5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>

@@ -59,6 +59,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2124694142	Stop_1SP_Low_in_stock_01			\Default Work Unit\0912_2\Stop_1SP_Low_in_stock_01	
 	2155125557	Stop_NNSP_Discount_01			\Default Work Unit\0912_3\Stop_NNSP_Discount_01	
 	2166055516	Stop_NNSP_Increase_price_01			\Default Work Unit\0912_3\Stop_NNSP_Increase_price_01	
+	2183552080	Play_TO_testing			\Default Work Unit\Play_TO_testing	
 	2241299872	Play_NSP_Increase_price_01			\Default Work Unit\0912_1\Play_NSP_Increase_price_01	
 	2313849096	Play_BREKE_02			\Default Work Unit\toto\Play_BREKE_02	
 	2398011252	Play_NNAPT_event_DESOLATE_01			\Default Work Unit\0912_3\Play_NNAPT_event_DESOLATE_01	
@@ -120,7 +121,9 @@ Effect plug-ins	ID	Name	Type				Notes
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	48532910	Last_Success_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Last_Success_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Last_Success_01		83135
+	79873597	TO_AirPlane_03	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\TO_AirPlane_03_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_03		185668
 	169061225	SP_Discount_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Discount_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Discount_01		55921
+	183237161	TO_AirPlane_04	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\TO_AirPlane_04_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_04		182341
 	190275362	1SP_Many_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Many_jobs_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Many_jobs_01		79069
 	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_FIRE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_FIRE_01		106649
 	257243960	SP_Increase_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Increase_price_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Increase_price_01		65262
@@ -129,14 +132,19 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	323079966	NNAPT_event_DISEASE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DISEASE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNAPT_event_DISEASE_01		72571
 	327340426	Race_Win	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Race_Win_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Race_Win		24631
 	348594287	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM3_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\New Music Track		510731
+	378253562	TO_AirPlane_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\TO_AirPlane_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_01		180704
 	415772296	1SP_Festival_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Festival_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Festival_01		78311
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_DESOLATE_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_DESOLATE_01		89357
 	441200128	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BGM5_LU1_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		1394267
 	451529006	Save_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Save_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Save_01		9496
+	583359231	airplane	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\airplane_AD430AB8.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Blend Container\airplane		165969
 	648936715	NAPT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\APT_event_THIEF_001_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NAPT_event_THIEF_01		66098
+	676991557	TO_AirPlane_05	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\TO_AirPlane_05_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_05		182040
 	698255832	SP_Few_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Few_jobs_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Few_jobs_01		83497
 	762031420	Land_Expansion_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\Land_Expansion_01_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Land_Expansion_01		80682
 	839951050	3131	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\3131_56CEF360.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Danger\BGM4\3131		896136
+	843364955	TO_AirPlane_06	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\TO_AirPlane_06_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_06		187153
+	855943350	TO_AirPlane_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\TO_AirPlane_02_8E324C96.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\TO_testing\New Random Container\TO_AirPlane_02		187745
 	864269945	NSP_Decrease_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Decrease_price_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NSP_Decrease_price_01		86402
 	898932227	BREAK_MELODIC_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\BREAK_MELODIC_02_7481C9A8.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\BREAK_MELODIC_02		82544
 	927128712	NNSP_Low_in_stock_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Windows\SFX\SP_Low_in_stock_01_56CEF360.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNSP_Low_in_stock_01		87714
