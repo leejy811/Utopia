@@ -381,7 +381,7 @@ public class UIManager : MonoBehaviour, ISubject
     {
         if (BuildingSpawner.instance.GetEventBuildingCount() <= 0)
         {
-            string[] str = { "문제가 발생한 건물이 없습니다." };
+            string[] str = { "사회현상이 발생한 건물이 없습니다." };
             SetErrorPopUp(str, transform.position);
             return;
         }
@@ -390,7 +390,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEventNotify()
     {
-        if (BuildingSpawner.instance.GetEventBuildingCount() <= 0) 
+        if (BuildingSpawner.instance.GetProblemBuildingCount() <= 0) 
         {
             string[] str = { "문제가 발생한 건물이 없습니다." };
             SetErrorPopUp(str, transform.position);

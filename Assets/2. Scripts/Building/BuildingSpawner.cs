@@ -224,7 +224,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
         {
             foreach (Building building in buildings)
             {
-                if (building.GetEventProblemCount() == 0) continue;
+                if (building.curEvents.Count == 0) continue;
                 TemporayUI temp = UIManager.instance.SetEventHighlightPopUp(building.curEvents.ToArray(), building.transform.position);
                 eventIconTemps[building] = temp;
             }
@@ -245,14 +245,14 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     {
         if (eventIconTemps.ContainsKey(building))
         {
-            if (building.GetEventProblemCount() == 0)
+            if (building.curEvents.Count == 0)
                 eventIconTemps[building].offUI = true;
             else
                 eventIconTemps[building].SetUI(building.curEvents.ToArray(), building.transform.position);
         }
     }
 
-    public int GetEventBuildingCount()
+    public int GetProblemBuildingCount()
     {
         int cnt = 0;
 
@@ -264,7 +264,20 @@ public class BuildingSpawner : MonoBehaviour, IObserver
 
         return cnt;
     }
-    
+
+    public int GetEventBuildingCount()
+    {
+        int cnt = 0;
+
+        foreach (Building building in buildings)
+        {
+            if (building.curEvents.Count > 0)
+                cnt++;
+        }
+
+        return cnt;
+    }
+
     public int[] GetBuildingsHappiness()
     {
         int[] cnt = new int[4];
