@@ -158,6 +158,8 @@
 							<ChildrenList>
 								<BlendContainer Name="New Blend Container" ID="{CA0735E6-0B8F-41D6-B7A3-C4A812CF6132}" ShortID="87545958">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>5</Value>
@@ -173,6 +175,7 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -407,6 +410,129 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{0CFABB86-2F7C-457C-BB5D-120E2C226584}">
+											<PropertyList>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="New Blend Container_Path" ID="{DD8A218D-A102-440F-A61D-902650233D59}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-80.71066</XPos>
+															<YPos>53.9548</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>82.741116751269</XPos>
+															<YPos>55.3672316384181</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_01" ID="{9A882846-DB27-424B-AB03-3E881F713B9C}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>84.26396</XPos>
+															<YPos>51.12994</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-78.1725888324873</XPos>
+															<YPos>49.1525423728814</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_02" ID="{0651C4CA-4FEB-47E6-AF7C-EB27488D14D4}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-75.1269</XPos>
+															<YPos>-85.02825</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>84.77157</XPos>
+															<YPos>-84.18079</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_03" ID="{92BB3841-F204-41A3-A604-F9E0A5E757BE}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>83.75635</XPos>
+															<YPos>-85.02825</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-75.1269</XPos>
+															<YPos>-89.26554</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_04" ID="{1CD4DBD1-47A0-4E69-8650-0C8503093B7E}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-79.69543</XPos>
+															<YPos>75.9887</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>89.8477157360406</XPos>
+															<YPos>-89.2655367231638</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_05" ID="{75886EB1-54B5-4650-97A5-FBFF0C9B31EB}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>90.35533</XPos>
+															<YPos>81.63842</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-86.8020304568528</XPos>
+															<YPos>-85.3107344632768</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo>
@@ -439,6 +565,8 @@
 								</BlendContainer>
 								<RandomSequenceContainer Name="New Random Container" ID="{06017EBD-3F77-4903-9F68-24AF2D929072}" ShortID="452394714">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>5</Value>
@@ -455,6 +583,7 @@
 											</ModifierList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -961,6 +1090,130 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{EE29E893-AA72-4FF2-9D7C-2569FDA9136E}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="New Random Container_Path" ID="{A1F66261-3DB8-43A5-8A48-617525758DB3}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-100</XPos>
+															<YPos>49.43503</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>50.84746</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_01" ID="{F1AA8E02-A928-4985-A3C4-F288918CA53C}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>100</XPos>
+															<YPos>51.12994</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-100</XPos>
+															<YPos>50.84746</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_02" ID="{1AC0A4D9-9DE0-4143-8B02-1DEBBE5177FE}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-83.24873</XPos>
+															<YPos>-89.54802</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>92.38579</XPos>
+															<YPos>-88.13559</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_03" ID="{2AE700EB-4370-413F-BD91-68706BF7C12F}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>90.86294</XPos>
+															<YPos>-86.15819</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-89.84772</XPos>
+															<YPos>-88.70056</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_04" ID="{641BE6F3-57D5-43F0-AF4A-A740183B07C0}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-85.7868</XPos>
+															<YPos>79.9435</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>89.3401015228426</XPos>
+															<YPos>-87.0056497175141</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_05" ID="{17B6E5B7-5F9B-4D66-941D-5A7A2AB0D417}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>87.81726</XPos>
+															<YPos>82.20339</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-87.3096446700508</XPos>
+															<YPos>-82.4858757062147</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo>
@@ -997,40 +1250,6 @@
 									<PropertyList>
 										<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
 									</PropertyList>
-									<ChildrenList>
-										<Path2D Name="testing_Path" ID="{ED0918E0-134C-4954-837F-01D968A677F9}">
-											<PointList>
-												<Point>
-													<XPos>-88.32487</XPos>
-													<YPos>57.9096</YPos>
-													<Flags>12</Flags>
-													<Time>0</Time>
-												</Point>
-												<Point>
-													<XPos>92.38579</XPos>
-													<YPos>59.32203</YPos>
-													<Flags>0</Flags>
-													<Time>5000</Time>
-												</Point>
-											</PointList>
-										</Path2D>
-										<Path2D Name="testing_Path_01" ID="{3C2AA704-DD2C-4D42-977D-7F182194EB5C}">
-											<PointList>
-												<Point>
-													<XPos>91.37056</XPos>
-													<YPos>61.29944</YPos>
-													<Flags>12</Flags>
-													<Time>0</Time>
-												</Point>
-												<Point>
-													<XPos>-97.9695431472081</XPos>
-													<YPos>57.6271186440678</YPos>
-													<Flags>0</Flags>
-													<Time>5000</Time>
-												</Point>
-											</PointList>
-										</Path2D>
-									</ChildrenList>
 								</Position>
 							</PositioningInfo>
 							<ObjectLists>
@@ -25792,6 +26011,8 @@
 							<ChildrenList>
 								<BlendContainer Name="New Blend Container" ID="{44230D9C-2C10-4AFF-99A7-A740E301526C}" ShortID="289081736">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>5</Value>
@@ -25807,6 +26028,7 @@
 												</ModifierInfo>
 											</ModifierList>
 										</Property>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -26041,6 +26263,130 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{E3EFF812-9DAF-432D-B441-6D5A12B3CA20}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="New Blend Container_Path" ID="{32158D1D-DE9A-444F-A61E-CD1E6066862D}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-89.84772</XPos>
+															<YPos>60.73446</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>87.3096446700508</XPos>
+															<YPos>63.8418079096045</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_01" ID="{25DC9293-832B-4A0D-B06A-B2F8587A1B11}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>90.35533</XPos>
+															<YPos>53.9548</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-91.8781725888325</XPos>
+															<YPos>56.4971751412429</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_02" ID="{1294BBF0-ADFF-4DDF-B07E-1A52019D84D8}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-80.71066</XPos>
+															<YPos>-88.41808</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>91.8781725888325</XPos>
+															<YPos>83.0508474576271</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_03" ID="{68E66FBA-BF91-470A-85E4-6C1590B2FE96}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>85.7868</XPos>
+															<YPos>-86.15819</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-86.2944162436548</XPos>
+															<YPos>82.4858757062147</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_04" ID="{06BA8C2A-7226-44EF-A195-1A9DF5B569BA}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-85.7868</XPos>
+															<YPos>80.50847</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>85.7868020304569</XPos>
+															<YPos>-87.5706214689266</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Blend Container_Path_05" ID="{453C6060-B390-477F-B067-E521B9BE2540}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>85.7868</XPos>
+															<YPos>72.59887</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-85.7868020304569</XPos>
+															<YPos>-88.7005649717514</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo>
@@ -26073,6 +26419,8 @@
 								</BlendContainer>
 								<RandomSequenceContainer Name="New Random Container" ID="{E01CA1FD-228B-4FFC-9FB0-E2BEA47F5D07}" ShortID="1055110794">
 									<PropertyList>
+										<Property Name="3DPosition" Type="int16" Value="2"/>
+										<Property Name="3DSpatialization" Type="int16" Value="2"/>
 										<Property Name="InitialDelay" Type="Real64">
 											<ValueList>
 												<Value>5</Value>
@@ -26089,6 +26437,7 @@
 											</ModifierList>
 										</Property>
 										<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -26232,6 +26581,130 @@
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
+									<PositioningInfo>
+										<Position Name="" ID="{1BFABD6A-588A-471F-9BCC-B8F91C119B3F}">
+											<PropertyList>
+												<Property Name="NewPathForEachSound" Type="bool" Value="True"/>
+												<Property Name="PlayMechanismRandomOrSequence" Type="int16" Value="1"/>
+											</PropertyList>
+											<ChildrenList>
+												<Path2D Name="New Random Container_Path" ID="{18788B4A-F487-47ED-8EEC-F699B8D551F5}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-79.69543</XPos>
+															<YPos>51.69492</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>84.77157</XPos>
+															<YPos>52.54237</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_01" ID="{88967610-C04D-4E59-A1DB-26D9A974F2C6}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>82.2335</XPos>
+															<YPos>51.12994</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-79.6954314720812</XPos>
+															<YPos>52.5423728813559</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_02" ID="{54C15AFA-6486-48E3-9887-4058E4DBDAF7}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-76.64975</XPos>
+															<YPos>-87.28814</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>87.3096446700508</XPos>
+															<YPos>85.3107344632768</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_03" ID="{69084E19-CF8F-4E63-90D6-028EC5FAC6DC}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>85.27919</XPos>
+															<YPos>-85.59322</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-89.8477157360406</XPos>
+															<YPos>85.8757062146893</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_04" ID="{CF4672E5-32D9-43A4-887C-71FD3CE56709}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>-81.21827</XPos>
+															<YPos>63.55932</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>72.0812182741117</XPos>
+															<YPos>-74.0112994350282</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+												<Path2D Name="New Random Container_Path_05" ID="{A577DC86-EB3B-4D83-8EBA-9733EEFA3AC5}">
+													<PropertyList>
+														<Property Name="Duration" Type="Uint32" Value="12000"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>88.83249</XPos>
+															<YPos>68.0791</YPos>
+															<Flags>12</Flags>
+															<Time>0</Time>
+														</Point>
+														<Point>
+															<XPos>-81.2182741116751</XPos>
+															<YPos>-89.2655367231638</YPos>
+															<Flags>0</Flags>
+															<Time>12000</Time>
+														</Point>
+													</PointList>
+												</Path2D>
+											</ChildrenList>
+										</Position>
+									</PositioningInfo>
 									<StateInfo>
 										<StateGroupList>
 											<StateGroupInfo>
@@ -26264,74 +26737,7 @@
 								</RandomSequenceContainer>
 							</ChildrenList>
 							<PositioningInfo>
-								<Position Name="" ID="{82B6FF6D-CA81-4F43-8AC5-3B7E3F8884A2}">
-									<ChildrenList>
-										<Path2D Name="TO_testing_Path" ID="{3BBC1DEF-7AC5-4C76-99F7-F6220A1DFB8C}">
-											<PointList>
-												<Point>
-													<XPos>-96.95431</XPos>
-													<YPos>69.77401</YPos>
-													<Flags>12</Flags>
-													<Time>0</Time>
-												</Point>
-												<Point>
-													<XPos>98.98477</XPos>
-													<YPos>72.31638</YPos>
-													<Flags>0</Flags>
-													<Time>5000</Time>
-												</Point>
-											</PointList>
-										</Path2D>
-										<Path2D Name="TO_testing_Path_01" ID="{D311F015-1192-4573-ABD8-539B2259B749}">
-											<PointList>
-												<Point>
-													<XPos>99.49239</XPos>
-													<YPos>68.64407</YPos>
-													<Flags>12</Flags>
-													<Time>0</Time>
-												</Point>
-												<Point>
-													<XPos>-100</XPos>
-													<YPos>67.23164</YPos>
-													<Flags>0</Flags>
-													<Time>5000</Time>
-												</Point>
-											</PointList>
-										</Path2D>
-										<Path2D Name="TO_testing_Path_02" ID="{DAC42481-DE6D-41DD-8C3F-9E438BFCA0DF}">
-											<PointList>
-												<Point>
-													<XPos>-90.35533</XPos>
-													<YPos>-91.24294</YPos>
-													<Flags>12</Flags>
-													<Time>0</Time>
-												</Point>
-												<Point>
-													<XPos>88.3248730964467</XPos>
-													<YPos>87.0056497175141</YPos>
-													<Flags>0</Flags>
-													<Time>5000</Time>
-												</Point>
-											</PointList>
-										</Path2D>
-										<Path2D Name="TO_testing_Path_03" ID="{140ECFFA-03D9-4AAD-A9E7-132A7FD5B43F}">
-											<PointList>
-												<Point>
-													<XPos>89.84772</XPos>
-													<YPos>-88.41808</YPos>
-													<Flags>12</Flags>
-													<Time>0</Time>
-												</Point>
-												<Point>
-													<XPos>-92.3857868020305</XPos>
-													<YPos>89.8305084745763</YPos>
-													<Flags>0</Flags>
-													<Time>5000</Time>
-												</Point>
-											</PointList>
-										</Path2D>
-									</ChildrenList>
-								</Position>
+								<Position Name="" ID="{82B6FF6D-CA81-4F43-8AC5-3B7E3F8884A2}"/>
 							</PositioningInfo>
 							<ObjectLists>
 								<ObjectList Name="Playlist">
