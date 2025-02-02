@@ -425,6 +425,7 @@ namespace AK
         static const AkUniqueID BOOL = 1761501017U;
         static const AkUniqueID CLICK = 1584507803U;
         static const AkUniqueID DIST = 2212414277U;
+        static const AkUniqueID GRADE = 138231710U;
         static const AkUniqueID HAPPY = 1427264549U;
         static const AkUniqueID INDEX1 = 187723092U;
         static const AkUniqueID INDEX2 = 187723095U;

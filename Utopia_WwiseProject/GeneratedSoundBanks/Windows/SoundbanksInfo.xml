@@ -345,7 +345,7 @@
 				<Event Id="1305109677" Name="Stop_TImeLapsBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 		</SoundBank>
-		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{686897B8-886A-6407-FF5F-E8A573EFBB9D}">
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{0DE0C598-1B86-A225-C6F0-81AA0C54A1FC}">
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<Plugins>
@@ -380,6 +380,7 @@
 			</Busses>
 			<GameParameters>
 				<GameParameter Id="42448320" Name="SFX_VOL"/>
+				<GameParameter Id="138231710" Name="GRADE"/>
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="731737678" Name="OPTION"/>
@@ -833,7 +834,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{90959EEA-F693-EDAD-2CAD-31605D5AE61F}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{AD6CDBB4-8ECD-CD5C-2B81-C62FADCFC462}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1600,6 +1601,7 @@
 				<Event Id="3666577687" Name="Stop_TOBGM" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
+				<GameParameter Id="138231710" Name="GRADE"/>
 				<GameParameter Id="187723092" Name="INDEX1"/>
 				<GameParameter Id="187723095" Name="INDEX2"/>
 				<GameParameter Id="848835168" Name="ZOOM"/>
@@ -2393,5 +2395,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{E4C355C7-CE9D-12B9-66FE-F5E870E2D5E2}</FileHash>
+	<FileHash>{8C66BB03-3F1A-4CB4-D0B1-BC0DE64E963F}</FileHash>
 </SoundBanksInfo>

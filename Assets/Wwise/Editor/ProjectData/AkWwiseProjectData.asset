@@ -7585,7 +7585,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
     GuidInternal: 
-    m_lastTime: -8584632039358099792
+    m_lastTime: -8584631083667380596
     List:
     - name: BC
       guid: 54e0f70473f02e4da670399fe51f9884
@@ -7657,6 +7657,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 693a80aab37a5b458fb2e5033367a048
       Path: Game Parameters\Default Work Unit\DIST
+    - name: GRADE
+      guid: 476c545f395ff14390a746c01c468728
+      id: 138231710
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: ee77bd3e2c3c1a47bb27b1a4b32e4169
+      - ElementName: GRADE
+        ObjectType: 13
+        guid: 476c545f395ff14390a746c01c468728
+      Path: Game Parameters\Default Work Unit\GRADE
     - name: HAPPY
       guid: 241b23b608d3494a88db22d262f76310
       id: 1427264549

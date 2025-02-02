@@ -114,6 +114,7 @@ State	ID	Name	State Group			Notes
 	4174463524	DANGER	BGM			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
+	138231710	GRADE			\Default Work Unit\GRADE	
 	187723092	INDEX1			\Default Work Unit\INDEX1	
 	187723095	INDEX2			\Default Work Unit\INDEX2	
 	848835168	ZOOM			\Default Work Unit\ZOOM	
