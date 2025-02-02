@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584631097843790671
+    m_lastTime: -8584631095190428597
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -240,7 +240,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584631097843909716
+    m_lastTime: -8584631095190552597
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -7479,6 +7479,23 @@ MonoBehaviour:
         ObjectType: 3
         guid: 52d85e3148d2eb4da9a486edc13cfb7c
       Path: Events\Default Work Unit\Stop_TO_Many_jobs_04
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_TO_testing
+      guid: 2d06915fd570ae47aa0ca6b3925f6180
+      id: 1061435042
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: Stop_TO_testing
+        ObjectType: 3
+        guid: 2d06915fd570ae47aa0ca6b3925f6180
+      Path: Events\Default Work Unit\Stop_TO_testing
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

@@ -20,6 +20,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	840400464	Stop_NSP_Many_jobs_01			\Default Work Unit\0912_1\Stop_NSP_Many_jobs_01	
 	901839057	Stop_1APT_event_DESOLATE_01			\Default Work Unit\0912_2\Stop_1APT_event_DESOLATE_01	
 	1009984523	Stop_NNAPT_event_FIRE_01			\Default Work Unit\0912_3\Stop_NNAPT_event_FIRE_01	
+	1061435042	Stop_TO_testing			\Default Work Unit\Stop_TO_testing	
 	1084494907	Stop_SP_Low_in_stock_01			\Default Work Unit\0912\Stop_SP_Low_in_stock_01	
 	1109279727	Stop_NNSP_Low_in_stock_01			\Default Work Unit\0912_3\Stop_NNSP_Low_in_stock_01	
 	1143460721	Play_NSP_Few_jobs_01			\Default Work Unit\0912_1\Play_NSP_Few_jobs_01	

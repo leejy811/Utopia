@@ -4676,6 +4676,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Stop_TO_testing" ID="{5F91062D-70D5-47AE-AA0C-A6B3925F6180}">
+					<ChildrenList>
+						<Action Name="" ID="{52F87FF5-F8C2-48E7-A6FD-F9B34DDA1F99}" ShortID="981494070">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TO_testing" ID="{AAF77CB8-3B90-4E1C-A522-BF192240646D}" WorkUnitID="{B2A6A92A-DF46-460E-96E0-19478B2857B4}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

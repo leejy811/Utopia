@@ -380,6 +380,7 @@ namespace AK
         static const AkUniqueID STOP_TO_MANY_JOBS_02 = 2692954107U;
         static const AkUniqueID STOP_TO_MANY_JOBS_03 = 2692954106U;
         static const AkUniqueID STOP_TO_MANY_JOBS_04 = 2692954109U;
+        static const AkUniqueID STOP_TO_TESTING = 1061435042U;
         static const AkUniqueID STOP_TOBGM = 3666577687U;
         static const AkUniqueID STOP_WIND = 3173136834U;
     } // namespace EVENTS

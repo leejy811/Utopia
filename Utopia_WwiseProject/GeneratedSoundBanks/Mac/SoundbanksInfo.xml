@@ -1621,7 +1621,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{143217F9-45EB-2009-FFB8-E75343529E92}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{993110EE-FCEE-83C1-2930-9E517F6CDD66}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -2097,6 +2097,7 @@
 				<Event Id="3256509184" Name="Stop_SP_Increase_price_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="1084494907" Name="Stop_SP_Low_in_stock_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 				<Event Id="2576315890" Name="Stop_SP_Many_jobs_01" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
+				<Event Id="1061435042" Name="Stop_TO_testing" MaxAttenuation="0" DurationType="OneShot" DurationMin="0" DurationMax="0"/>
 			</Events>
 			<GameParameters>
 				<GameParameter Id="187723092" Name="INDEX1"/>
@@ -2392,5 +2393,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{CE53895C-FD4B-6738-380F-2188929BDB9F}</FileHash>
+	<FileHash>{C8CA2811-FB35-AE55-7345-16B273921929}</FileHash>
 </SoundBanksInfo>
