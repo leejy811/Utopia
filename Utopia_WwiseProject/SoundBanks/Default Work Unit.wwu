@@ -164,9 +164,16 @@
 				<SoundBank Name="NEWONE" ID="{75536D12-E234-43B6-8998-D7725C4D7094}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Stop_BGM_01" ID="{40E5DCC7-9DC3-4164-AC4B-B86559C72D9B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Last_Success_01" ID="{96E5F2EF-B0EC-4304-AF8A-938E5991865C}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Land_Expansion_01" ID="{D90E0278-7334-4435-91CE-12DEED7E25F8}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BREAK_MELODIC_02" ID="{E53B6F01-1BD7-48CB-A26E-1B5D3ECA8CD2}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="0912_1" ID="{29C5C0CC-D8DB-4A27-B93E-CF9DC9B762A5}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Race_Win" ID="{02C7189E-82E7-4AF9-8888-AB39A3B9B5E6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_BGM_01" ID="{7D19FBCD-63BA-4B4A-85A2-E15569BDFF8B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Last_Paper_01" ID="{D77F5B6C-7858-4C22-832A-D4BD8FB171ED}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="0912_3" ID="{A3515C03-783C-4D1A-97F1-3420B8FC979A}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_BREKE_02" ID="{9BD68E45-A144-4E30-9FD3-7B3BCAF0DDC6}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Save_01" ID="{77049E6F-2F6C-4E3F-89E4-BA7E417E9B04}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="0912_2" ID="{77904E32-D4DB-4F44-9BEB-51A2670DAD1B}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="0912" ID="{0398E57F-6081-4FF0-BDB9-928FB0AE69E9}" WorkUnitID="{F0D24D87-4B58-411B-9CE9-95FD8724009D}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>

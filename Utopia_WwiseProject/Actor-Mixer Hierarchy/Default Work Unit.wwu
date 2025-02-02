@@ -25668,6 +25668,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Land_Expansion_01" ID="{6F5ACD5E-6A61-49EB-861F-8B77DB44FD6F}" ShortID="165125674">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
@@ -26336,6 +26343,35 @@
 								</ObjectList>
 							</ObjectLists>
 						</RandomSequenceContainer>
+						<Sound Name="Last_Success_01" ID="{3453D544-1403-4F09-AF82-6E7C67BB5DDE}" ShortID="1015782008">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{8F2DADFD-F775-4F64-A807-670AE81E2035}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{877CE024-3809-4735-9306-E84D8EE884E1}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Last_Success_01" ID="{1863B4E8-9D01-4A01-B582-7DCB65555511}">
+									<Language>SFX</Language>
+									<AudioFile>Last_Success_01.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="48532910"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Last_Success_01" ID="{1863B4E8-9D01-4A01-B582-7DCB65555511}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -1621,10 +1621,14 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{3954711A-009D-5F0E-AAA3-D1F19B437ABB}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{E62637A8-06BB-17F9-2132-EC44A83EC978}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
+				<File Id="48532910" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Last_Success_01.wav</ShortName>
+					<CachePath>SFX/Last_Success_01_818F3B66.wem</CachePath>
+				</File>
 				<File Id="169061225" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Discount_01.wav</ShortName>
 					<CachePath>SFX/SP_Discount_01_FBC78EF0.wem</CachePath>
@@ -1645,9 +1649,17 @@
 					<ShortName>BGM2_LU3.wav</ShortName>
 					<CachePath>SFX/BGM2_LU3_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="274611337" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BREKE_02.wav</ShortName>
+					<CachePath>SFX/BREKE_02_4688E578.wem</CachePath>
+				</File>
 				<File Id="323079966" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_DISEASE_001.wav</ShortName>
 					<CachePath>SFX/APT_event_DISEASE_001_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="327340426" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Race_Win.wav</ShortName>
+					<CachePath>SFX/Race_Win_818F3B66.wem</CachePath>
 				</File>
 				<File Id="348594287" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGM3.wav</ShortName>
@@ -1665,6 +1677,10 @@
 					<ShortName>BGM5_LU1.wav</ShortName>
 					<CachePath>SFX/BGM5_LU1_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="451529006" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Save_01.wav</ShortName>
+					<CachePath>SFX/Save_01_818F3B66.wem</CachePath>
+				</File>
 				<File Id="648936715" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>APT_event_THIEF_001.wav</ShortName>
 					<CachePath>SFX/APT_event_THIEF_001_FBC78EF0.wem</CachePath>
@@ -1672,6 +1688,10 @@
 				<File Id="698255832" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Few_jobs_01.wav</ShortName>
 					<CachePath>SFX/SP_Few_jobs_01_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="762031420" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Land_Expansion_01.wav</ShortName>
+					<CachePath>SFX/Land_Expansion_01_818F3B66.wem</CachePath>
 				</File>
 				<File Id="839951050" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>3131.wav</ShortName>
@@ -1681,6 +1701,10 @@
 					<ShortName>SP_Decrease_price_01.wav</ShortName>
 					<CachePath>SFX/SP_Decrease_price_01_FBC78EF0.wem</CachePath>
 				</File>
+				<File Id="898932227" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>BREAK_MELODIC_02.wav</ShortName>
+					<CachePath>SFX/BREAK_MELODIC_02_B8724B98.wem</CachePath>
+				</File>
 				<File Id="927128712" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>SP_Low_in_stock_01.wav</ShortName>
 					<CachePath>SFX/SP_Low_in_stock_01_FBC78EF0.wem</CachePath>
@@ -1688,6 +1712,10 @@
 				<File Id="929905877" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGM6_LU1.wav</ShortName>
 					<CachePath>SFX/BGM6_LU1_FBC78EF0.wem</CachePath>
+				</File>
+				<File Id="954427288" Language="SFX" Streaming="false" Location="Memory">
+					<ShortName>Last_Paper_01.wav</ShortName>
+					<CachePath>SFX/Last_Paper_01_7E52886E.wem</CachePath>
 				</File>
 				<File Id="993211934" Language="SFX" Streaming="false" Location="Memory">
 					<ShortName>BGM_LU1.wav</ShortName>
@@ -1805,6 +1833,31 @@
 						</SwitchContainer>
 					</SwitchContainers>
 				</Event>
+				<Event Id="2927211378" Name="Play_BREAK_MELODIC_02" DurationType="OneShot" DurationMin="5.6111627" DurationMax="5.6111627">
+					<MediaRefs>
+						<MediaRef Id="898932227"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2313849096" Name="Play_BREKE_02" DurationType="OneShot" DurationMin="1.916582" DurationMax="1.916582">
+					<MediaRefs>
+						<MediaRef Id="274611337"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="1171864963" Name="Play_Land_Expansion_01" DurationType="OneShot" DurationMin="4.8499374" DurationMax="4.8499374">
+					<MediaRefs>
+						<MediaRef Id="762031420"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="216261797" Name="Play_Last_Paper_01" DurationType="OneShot" DurationMin="1.4630691" DurationMax="1.4630691">
+					<MediaRefs>
+						<MediaRef Id="954427288"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2117164836" Name="Play_Last_Success_01" DurationType="OneShot" DurationMin="5.0631876" DurationMax="5.0631876">
+					<MediaRefs>
+						<MediaRef Id="48532910"/>
+					</MediaRefs>
+				</Event>
 				<Event Id="3970961582" Name="Play_NAPT_event_DESOLATE_01" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="433461852"/>
@@ -1913,6 +1966,16 @@
 				<Event Id="4289174930" Name="Play_NSP_Many_jobs_01" DurationType="Infinite">
 					<MediaRefs>
 						<MediaRef Id="190275362"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="272180694" Name="Play_Race_Win" DurationType="OneShot" DurationMin="1.8041458" DurationMax="1.8041458">
+					<MediaRefs>
+						<MediaRef Id="327340426"/>
+					</MediaRefs>
+				</Event>
+				<Event Id="2088831085" Name="Play_Save_01" DurationType="OneShot" DurationMin="0.7794167" DurationMax="0.7794167">
+					<MediaRefs>
+						<MediaRef Id="451529006"/>
 					</MediaRefs>
 				</Event>
 				<Event Id="1287155802" Name="Play_SP_Decrease_price_01" DurationType="Infinite">
@@ -2290,5 +2353,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C2992A11-2647-9928-EF6B-2605DDC57D21}</FileHash>
+	<FileHash>{A821975C-809A-38ED-39F1-6D777F545E30}</FileHash>
 </SoundBanksInfo>

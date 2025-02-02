@@ -100,7 +100,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: a3314ea6034880469012d6b012acb40a
     GuidInternal: 
-    m_lastTime: -8584631997631411636
+    m_lastTime: -8584631113037813619
     List:
     - name: BGM
       guid: e82912941e321d45b340bc49d9dd62ba
@@ -240,7 +240,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 874dd2f0584b1b419ce995fd8724009d
     GuidInternal: 
-    m_lastTime: -8584631997631004911
+    m_lastTime: -8584631113037972349
     List:
     - name: 0102
       guid: 92f71eaa1a2fda4c9b3f3099517df469
@@ -1931,6 +1931,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 3.3547945
       minDuration: 3.3547945
+    - name: Play_BREAK_MELODIC_02
+      guid: 016f3be5d71bcb48a26e1b5d3eca8cd2
+      id: 2927211378
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BREAK_MELODIC_02
+        ObjectType: 3
+        guid: 016f3be5d71bcb48a26e1b5d3eca8cd2
+      Path: Events\Default Work Unit\toto\Play_BREAK_MELODIC_02
+      maxAttenuation: 0
+      maxDuration: 5.6111627
+      minDuration: 5.6111627
     - name: Play_Break_Rumble_01
       guid: 1f93c11703ae7442b0176220d4650f5b
       id: 2779889645
@@ -1948,6 +1968,26 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 5.349421
       minDuration: 5.349421
+    - name: Play_BREKE_02
+      guid: 458ed69b44a1304e9fd37b3bcaf0ddc6
+      id: 2313849096
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_BREKE_02
+        ObjectType: 3
+        guid: 458ed69b44a1304e9fd37b3bcaf0ddc6
+      Path: Events\Default Work Unit\toto\Play_BREKE_02
+      maxAttenuation: 0
+      maxDuration: 1.916582
+      minDuration: 1.916582
     - name: Play_Building_click_003
       guid: 0c3f6499a09287418a9d7fc153ec194a
       id: 1278673985
@@ -2325,6 +2365,66 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 19.499855
       minDuration: 19.499855
+    - name: Play_Land_Expansion_01
+      guid: 78020ed93473354491ce12deed7e25f8
+      id: 1171864963
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_Land_Expansion_01
+        ObjectType: 3
+        guid: 78020ed93473354491ce12deed7e25f8
+      Path: Events\Default Work Unit\toto\Play_Land_Expansion_01
+      maxAttenuation: 0
+      maxDuration: 4.8499374
+      minDuration: 4.8499374
+    - name: Play_Last_Paper_01
+      guid: 6c5b7fd75878224c832ad4bd8fb171ed
+      id: 216261797
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_Last_Paper_01
+        ObjectType: 3
+        guid: 6c5b7fd75878224c832ad4bd8fb171ed
+      Path: Events\Default Work Unit\toto\Play_Last_Paper_01
+      maxAttenuation: 0
+      maxDuration: 1.4630691
+      minDuration: 1.4630691
+    - name: Play_Last_Success_01
+      guid: eff2e596ecb00443af8a938e5991865c
+      id: 2117164836
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_Last_Success_01
+        ObjectType: 3
+        guid: eff2e596ecb00443af8a938e5991865c
+      Path: Events\Default Work Unit\toto\Play_Last_Success_01
+      maxAttenuation: 0
+      maxDuration: 5.0631876
+      minDuration: 5.0631876
     - name: Play_Lever_001
       guid: c619ca1550fdbb468de8a9fc9d04af5b
       id: 3789420082
@@ -3367,6 +3467,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.6552708
       minDuration: 0.6552708
+    - name: Play_Race_Win
+      guid: 9e18c702e782f94a8888ab39a3b9b5e6
+      id: 272180694
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_Race_Win
+        ObjectType: 3
+        guid: 9e18c702e782f94a8888ab39a3b9b5e6
+      Path: Events\Default Work Unit\toto\Play_Race_Win
+      maxAttenuation: 0
+      maxDuration: 1.8041458
+      minDuration: 1.8041458
+    - name: Play_Save_01
+      guid: 6f9e04776c2f3f4e89e4ba7e417e9b04
+      id: 2088831085
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 874dd2f0584b1b419ce995fd8724009d
+      - ElementName: toto
+        ObjectType: 4
+        guid: 950f480523b7a346b25bea7125b5eba0
+      - ElementName: Play_Save_01
+        ObjectType: 3
+        guid: 6f9e04776c2f3f4e89e4ba7e417e9b04
+      Path: Events\Default Work Unit\toto\Play_Save_01
+      maxAttenuation: 0
+      maxDuration: 0.7794167
+      minDuration: 0.7794167
     - name: Play_Select_Button
       guid: 84c6369bcf91e748b6e9c8192be67e41
       id: 880454473
@@ -7800,7 +7940,7 @@ MonoBehaviour:
     m_lastTime: -8584897083625962771
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 01000000de000000df000000e0000000260100002701000028010000290100002a0100002b0100002c0100002d0100002e0100002f01000030010000310100009f010000a0010000e6010000e7010000e80100007202000073020000be020000bf020000c00200004203000083030000c1030000c2030000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

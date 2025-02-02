@@ -88,7 +88,9 @@ namespace AK
         static const AkUniqueID PLAY_BLACKJACK_RULE_WIN = 4012406984U;
         static const AkUniqueID PLAY_BREAK_01 = 501297411U;
         static const AkUniqueID PLAY_BREAK_MELODIC_01 = 2927211377U;
+        static const AkUniqueID PLAY_BREAK_MELODIC_02 = 2927211378U;
         static const AkUniqueID PLAY_BREAK_RUMBLE_01 = 2779889645U;
+        static const AkUniqueID PLAY_BREKE_02 = 2313849096U;
         static const AkUniqueID PLAY_BUILDING_CLICK_003 = 1278673985U;
         static const AkUniqueID PLAY_BUILDINGSOUND = 2611274067U;
         static const AkUniqueID PLAY_CELLPHONE_01 = 7328488U;
@@ -108,6 +110,9 @@ namespace AK
         static const AkUniqueID PLAY_GRAPHUP = 3497197729U;
         static const AkUniqueID PLAY_INTRO_CAMERA = 1244365746U;
         static const AkUniqueID PLAY_JACKPOT_01 = 263615490U;
+        static const AkUniqueID PLAY_LAND_EXPANSION_01 = 1171864963U;
+        static const AkUniqueID PLAY_LAST_PAPER_01 = 216261797U;
+        static const AkUniqueID PLAY_LAST_SUCCESS_01 = 2117164836U;
         static const AkUniqueID PLAY_LEVER_001 = 3789420082U;
         static const AkUniqueID PLAY_LOBBY = 2111096682U;
         static const AkUniqueID PLAY_LOOP_BAR = 3016710050U;
@@ -161,6 +166,8 @@ namespace AK
         static const AkUniqueID PLAY_RACE_START_01 = 3977497622U;
         static const AkUniqueID PLAY_RACE_STARTMOTION = 3801795766U;
         static const AkUniqueID PLAY_RACE_TANG = 4193698072U;
+        static const AkUniqueID PLAY_RACE_WIN = 272180694U;
+        static const AkUniqueID PLAY_SAVE_01 = 2088831085U;
         static const AkUniqueID PLAY_SELECT_BUTTON = 880454473U;
         static const AkUniqueID PLAY_SLOT_BGM = 123171413U;
         static const AkUniqueID PLAY_SLOT_DRRRRRR_01 = 3452595303U;

@@ -5,7 +5,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	75333342	Stop_NNSP_Many_jobs_01			\Default Work Unit\0912_3\Stop_NNSP_Many_jobs_01	
 	168960681	Play_NSP_Discount_01			\Default Work Unit\0912_1\Play_NSP_Discount_01	
 	188489140	Stop_APT_event_FIRE_02			\Default Work Unit\0912\Stop_APT_event_FIRE_02	
+	216261797	Play_Last_Paper_01			\Default Work Unit\toto\Play_Last_Paper_01	
 	261981424	Play_APT_event_DESOLATE_01			\Default Work Unit\0912\Play_APT_event_DESOLATE_01	
+	272180694	Play_Race_Win			\Default Work Unit\toto\Play_Race_Win	
 	348361594	Play_NSP_Festival_01			\Default Work Unit\0912_1\Play_NSP_Festival_01	
 	385490140	Play_NSP_Decrease_price_01			\Default Work Unit\0912_1\Play_NSP_Decrease_price_01	
 	452867657	Stop_SP_Discount_01			\Default Work Unit\0912\Stop_SP_Discount_01	
@@ -22,6 +24,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1109279727	Stop_NNSP_Low_in_stock_01			\Default Work Unit\0912_3\Stop_NNSP_Low_in_stock_01	
 	1143460721	Play_NSP_Few_jobs_01			\Default Work Unit\0912_1\Play_NSP_Few_jobs_01	
 	1149006024	Stop_APT_event_DISEASE_02			\Default Work Unit\0912\Stop_APT_event_DISEASE_02	
+	1171864963	Play_Land_Expansion_01			\Default Work Unit\toto\Play_Land_Expansion_01	
 	1224043236	Stop_1SP_Few_jobs_01			\Default Work Unit\0912_2\Stop_1SP_Few_jobs_01	
 	1287155802	Play_SP_Decrease_price_01			\Default Work Unit\0912\Play_SP_Decrease_price_01	
 	1296914678	Stop_NNSP_Festival_01			\Default Work Unit\0912_3\Stop_NNSP_Festival_01	
@@ -50,11 +53,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	2028788634	Stop_SP_Festival_01			\Default Work Unit\0912\Stop_SP_Festival_01	
 	2081122383	Play_NNSP_Few_jobs_01			\Default Work Unit\0912_3\Play_NNSP_Few_jobs_01	
 	2088385980	Stop_SP_Decrease_price_01			\Default Work Unit\0912\Stop_SP_Decrease_price_01	
+	2088831085	Play_Save_01			\Default Work Unit\toto\Play_Save_01	
 	2096024345	Play_APT_event_DISEASE_01			\Default Work Unit\0912\Play_APT_event_DISEASE_01	
+	2117164836	Play_Last_Success_01			\Default Work Unit\toto\Play_Last_Success_01	
 	2124694142	Stop_1SP_Low_in_stock_01			\Default Work Unit\0912_2\Stop_1SP_Low_in_stock_01	
 	2155125557	Stop_NNSP_Discount_01			\Default Work Unit\0912_3\Stop_NNSP_Discount_01	
 	2166055516	Stop_NNSP_Increase_price_01			\Default Work Unit\0912_3\Stop_NNSP_Increase_price_01	
 	2241299872	Play_NSP_Increase_price_01			\Default Work Unit\0912_1\Play_NSP_Increase_price_01	
+	2313849096	Play_BREKE_02			\Default Work Unit\toto\Play_BREKE_02	
 	2398011252	Play_NNAPT_event_DESOLATE_01			\Default Work Unit\0912_3\Play_NNAPT_event_DESOLATE_01	
 	2460715211	Stop_NAPT_event_THIEF_01			\Default Work Unit\0912_1\Stop_NAPT_event_THIEF_01	
 	2477356218	Play_1SP_Few_jobs_01			\Default Work Unit\0912_2\Play_1SP_Few_jobs_01	
@@ -64,6 +70,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2686632827	Play_NNSP_Discount_01			\Default Work Unit\0912_3\Play_NNSP_Discount_01	
 	2733485581	Stop_NAPT_event_DISEASE_01			\Default Work Unit\0912_1\Stop_NAPT_event_DISEASE_01	
 	2924011653	Stop_1SP_Decrease_price_01			\Default Work Unit\0912_2\Stop_1SP_Decrease_price_01	
+	2927211378	Play_BREAK_MELODIC_02			\Default Work Unit\toto\Play_BREAK_MELODIC_02	
 	2986176910	Stop_APT_event_DESOLATE_01			\Default Work Unit\0912\Stop_APT_event_DESOLATE_01	
 	3007530601	Stop_1SP_Many_jobs_01			\Default Work Unit\0912_2\Stop_1SP_Many_jobs_01	
 	3030862532	Stop_BGM_01			\Default Work Unit\Stop_BGM_01	
@@ -112,21 +119,28 @@ Effect plug-ins	ID	Name	Type				Notes
 	86245554	Attack_Remover	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	48532910	Last_Success_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Last_Success_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Last_Success_01		972228
 	169061225	SP_Discount_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Discount_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Discount_01		728372
 	190275362	1SP_Many_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Many_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Many_jobs_01		728672
 	228042333	APT_event_FIRE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_FIRE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_FIRE_01		1079100
 	257243960	SP_Increase_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Increase_price_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Increase_price_01		1076988
 	258521796	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM2_LU3_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM2\New Music Track		15360208
+	274611337	BREKE_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BREKE_02_4688E578.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\BREKE_02		368080
 	323079966	NNAPT_event_DISEASE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_DISEASE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNAPT_event_DISEASE_01		960100
+	327340426	Race_Win	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Race_Win_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Race_Win		346492
 	348594287	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM3_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM3\New Music Track		6144660
 	415772296	1SP_Festival_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Festival_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_2\1SP_Festival_01		1004868
 	433461852	APT_event_DESOLATE_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_DESOLATE_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\APT_event_DESOLATE_01		1076988
 	441200128	BGM5	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM5_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\fail\Fail\BGM5		18432096
+	451529006	Save_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Save_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Save_01		149744
 	648936715	NAPT_event_THIEF_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\APT_event_THIEF_001_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NAPT_event_THIEF_01		1030916
 	698255832	SP_Few_jobs_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Few_jobs_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912\SP_Few_jobs_01		728372
+	762031420	Land_Expansion_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Land_Expansion_01_818F3B66.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Land_Expansion_01		931284
 	839951050	3131	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\3131_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Danger\BGM4\3131		12289040
 	864269945	NSP_Decrease_price_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Decrease_price_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_1\NSP_Decrease_price_01		1076988
+	898932227	BREAK_MELODIC_02	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BREAK_MELODIC_02_B8724B98.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\BREAK_MELODIC_02		1077440
 	927128712	NNSP_Low_in_stock_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\SP_Low_in_stock_01_FBC78EF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\0912_3\NNSP_Low_in_stock_01		1079176
 	929905877	New Music Track	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM6_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM6\New Music Track		12288096
+	954427288	Last_Paper_01	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\Last_Paper_01_7E52886E.wem		\Actor-Mixer Hierarchy\Default Work Unit\0130\Last_Paper_01		281004
 	993211934	BGM	C:\Users\LEE\Desktop\Utopia\Utopia_WwiseProject\.cache\Android\SFX\BGM_LU1_FBC78EF0.wem		\Interactive Music Hierarchy\Default Work Unit\BGM\Baisc\BGM\BGM		7680096
 
