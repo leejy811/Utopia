@@ -433,7 +433,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEndingButton()
     {
-        notifyObserver(EventState.EndingCredit);
+        endingCredit.StartCredit();
     }
 
     public void OnClickLobbyButton()
@@ -524,7 +524,6 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(gamePhone);
 
         addObserver(tutorial);
-        addObserver(endingCredit);
 
         foreach (UILockButton lockButton in lockButtons)
         {

@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum CardShape { Spade, Diamond, Heart, Clover }
-public enum GameResult { Player_BlackJack, Player_Win, Dealer_BlackJack, Dealer_Win, Draw }
+public enum GameResult { Player_BlackJack, Player_Win, Dealer_BlackJack, Dealer_Win, Draw, Player_Bust, Dealer_Bust }
 
 public struct Card
 {
@@ -26,7 +26,8 @@ public struct Card
 [System.Serializable]
 public class MsgPanel
 {
-    public GameObject panel;
+    public Transform panel;
+    public Image msgImage;
     public TextMeshProUGUI msgText;
 }
 
@@ -48,8 +49,7 @@ public class BlackJackUI : MinigameUI
     public TextMeshProUGUI betTimesText_Betting;
 
     [Header("Play")]
-    public MsgPanel winResultMsg;
-    public MsgPanel defeatResultMsg;
+    public GameObject[] resultPanels;
 
     [Header("Parameter")]
     public List<Image> playerHand;
@@ -77,7 +77,7 @@ public class BlackJackUI : MinigameUI
     public Sprite backCard;
 
     private int betChip;
-    public List<RectTransform> chips = new List<RectTransform>();
+    private List<RectTransform> chips = new List<RectTransform>();
     private List<Card> deck = new List<Card>();
     private List<Card> player = new List<Card>();
     private List<Card> dealer = new List<Card>();
@@ -146,25 +146,7 @@ public class BlackJackUI : MinigameUI
 
     private void SetResultPanel(GameResult result)
     {
-        switch (result)
-        {
-            case GameResult.Player_BlackJack:
-                StartCoroutine(OnMessage(winResultMsg, "!! Player BlackJack !!", resultSecond));
-                break;
-            case GameResult.Player_Win:
-                StartCoroutine(OnMessage(winResultMsg, "!! Player Win !!", resultSecond));
-                break;
-            case GameResult.Dealer_BlackJack:
-                StartCoroutine(OnMessage(defeatResultMsg, "!! Dealer BlackJack !!", resultSecond));
-                break;
-            case GameResult.Dealer_Win:
-                StartCoroutine(OnMessage(defeatResultMsg, "!! Dealer Win !!", resultSecond));
-                break;
-            case GameResult.Draw:
-                StartCoroutine(OnMessage(defeatResultMsg, "!! Draw !!", resultSecond));
-                break;
-        }
-
+        StartCoroutine(OnResultMessage(result, resultSecond));
         StartCoroutine(ReturnToLobby(resultSecond, result));
     }
 
@@ -199,9 +181,9 @@ public class BlackJackUI : MinigameUI
     public void OnClickStartGame()
     {
         if (curGameBuilding.betTimes == 0)
-            StartCoroutine(OnMessage(errorMsg, "실행 가능 횟수를\n모두 소진하였습니다.", errorMsgSecond));
+            OnErrorMsg("실행 가능 횟수를 모두 소진하였습니다.");
         else if (ChipManager.instance.CurChip < curGameBuilding.values[ValueType.betChip].cur)
-            StartCoroutine(OnMessage(errorMsg, "해당 미니 게임을 하기 위한\n칩이 부족합니다.", errorMsgSecond));
+            OnErrorMsg("해당 미니 게임을 하기 위한 칩이 부족합니다.");
         else if (!canClick) return;
         else
         {
@@ -215,9 +197,9 @@ public class BlackJackUI : MinigameUI
     public void OnClickBetChip(int amount)
     {
         if(betChip + amount > ChipManager.instance.CurChip)
-            StartCoroutine(OnMessage(errorMsg, "배팅하기 위한\n칩이 부족합니다.", errorMsgSecond));
+            OnErrorMsg("배팅하기 위한 칩이 부족합니다.");
         else if (betChip + amount < curGameBuilding.values[ValueType.betChip].cur)
-            StartCoroutine(OnMessage(errorMsg, "기본 판돈이하로\n칩을 회수할 수 없습니다.", errorMsgSecond));
+            OnErrorMsg("기본 판돈이하로 칩을 회수할 수 없습니다.");
         else if (!canClick) return;
         else
         {
@@ -232,12 +214,12 @@ public class BlackJackUI : MinigameUI
     public void OnClickAllIn()
     {
         if (betChip == ChipManager.instance.CurChip)
-            StartCoroutine(OnMessage(errorMsg, "배팅하기 위한\n칩이 부족합니다.", errorMsgSecond));
+            OnErrorMsg("배팅하기 위한 칩이 부족합니다.");
         else if (!canClick) return;
         else
         {
             AkSoundEngine.PostEvent("Play_BLACKJACK_ALLIN", gameObject);
-            StartCoroutine(OnMessage(errorMsg, "ALL-IN", errorMsgSecond));
+            OnErrorMsg("ALL-IN");
             StartCoroutine(ThrowChip(ChipManager.instance.CurChip - betChip, 0.0f, true));
             betChip = ChipManager.instance.CurChip;
             SetUI(MinigameState.Betting);
@@ -439,7 +421,7 @@ public class BlackJackUI : MinigameUI
         if (CalculateResult(player) > 21)
         {
             AkSoundEngine.PostEvent("Play_BLACKJACK_rule_bust", gameObject);
-            StartCoroutine(OnMessage(defeatResultMsg, "!! Player Burst !!", resultSecond));
+            StartCoroutine(OnResultMessage(GameResult.Player_Bust, resultSecond));
             GetReward(GameResult.Dealer_Win);
             StartCoroutine(ReturnToLobby(resultSecond, GameResult.Dealer_Win));
         }
@@ -459,14 +441,14 @@ public class BlackJackUI : MinigameUI
         {
             if (CalculateResult(player) == 21)
             {
-                StartCoroutine(OnMessage(winResultMsg, "!! Player BlackJack !!", resultSecond));
+                StartCoroutine(OnResultMessage(GameResult.Player_BlackJack, resultSecond));
                 GetReward(GameResult.Player_BlackJack);
                 ResultSound(GameResult.Player_BlackJack);
                 StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_BlackJack));
             }
             else
             {
-                StartCoroutine(OnMessage(winResultMsg, "!! Dealer Burst !!", resultSecond));
+                StartCoroutine(OnResultMessage(GameResult.Dealer_Bust, resultSecond));
                 GetReward(GameResult.Player_Win);
                 ResultSound(GameResult.Player_Win);
                 StartCoroutine(ReturnToLobby(resultSecond, GameResult.Player_Win));
@@ -513,12 +495,29 @@ public class BlackJackUI : MinigameUI
         PoolSystem.instance.messagePool.TakeToPool<RectTransform>("Chip", transform);
     }
 
-    IEnumerator OnMessage(MsgPanel msgPanel, string msg, float second)
+    IEnumerator OnResultMessage(GameResult result, float second)
     {
-        msgPanel.panel.SetActive(true);
-        msgPanel.msgText.text = msg;
+        resultPanels[(int)result].gameObject.SetActive(true);
         yield return new WaitForSeconds(second);
-        msgPanel.panel.SetActive(false);
+        resultPanels[(int)result].gameObject.SetActive(false);
+    }
+
+    private void OnErrorMsg(string msg)
+    {
+        if (errorMsg.msgImage.color.a != 0.0f) return;
+
+        errorMsg.msgText.text = msg;
+
+        errorMsg.msgImage.DOFade(1.0f, errorMsgSecond);
+        errorMsg.msgText.DOFade(1.0f, errorMsgSecond);
+        errorMsg.panel.DOLocalMoveY(0.0f, errorMsgSecond).OnComplete(() =>
+        {
+            errorMsg.msgImage.DOFade(0.0f, errorMsgSecond);
+            errorMsg.msgText.DOFade(0.0f, errorMsgSecond).OnComplete(() =>
+            {
+                errorMsg.panel.localPosition += Vector3.up * 40.0f;
+            });
+        });
     }
 
     private void ResultSound(GameResult result)
