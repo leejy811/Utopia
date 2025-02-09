@@ -4754,46 +4754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b012c767edff7c40943cbb4d0f2c514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: {x: 0, y: 0}
   creditParent: {fileID: 1226836297}
-  creditTypePrefab: {fileID: 0}
-  creditSubTypePrefab: {fileID: 0}
-  creditNamePrefab: {fileID: 0}
+  creditPrefab: {fileID: 0}
   creditDB: {fileID: 11400000, guid: 4b7fb2aa1990a2b4c80529906992905a, type: 2}
-  creditEntities:
-  - typeName: DOTORI games
-    entities:
-    - typeName: "\uAE30\uD68D"
-      names:
-      - spriteIdx: 0
-        name: "\uC724\uC900\uC11D"
-    - typeName: "\uC544\uD2B8"
-      names:
-      - spriteIdx: 0
-        name: "\uD55C\uC724\uC9C0"
-      - spriteIdx: 0
-        name: "\uAE40\uC9C4\uC544"
-    - typeName: "\uD504\uB85C\uADF8\uB798\uBC0D"
-      names:
-      - spriteIdx: 0
-        name: "\uC774\uC8FC\uC6A9"
-      - spriteIdx: 0
-        name: "\uAE40\uC601\uD604"
-    - typeName: "\uC0AC\uC6B4\uB4DC"
-      names:
-      - spriteIdx: 0
-        name: "\uC774\uC885"
-  - typeName: Special Thanks
-    entities:
-    - typeName: "\uBA58\uD1A0"
-      names:
-      - spriteIdx: 0
-        name: "\uC804\uD615\uADFC"
-    - typeName: "\uD380\uB529 \uC9C0\uC6D0"
-      names:
-      - spriteIdx: 0
-        name: "\uAC15\uBBFC\uC218"
-      - spriteIdx: 0
-        name: "\uC774\uCC44\uD6C8"
 --- !u!1 &70479484
 GameObject:
   m_ObjectHideFlags: 0
@@ -31606,7 +31570,7 @@ MonoBehaviour:
     _container: {fileID: 475028861}
     _nonLazy: 0
   - _name: EventHighlight
-    _component: {fileID: 4705107201506718309, guid: adcff730413ed1a4fb87e95aa968ddae, type: 3}
+    _component: {fileID: 4705107201506718309, guid: b51aeabe8ea8d6843b848ad56bc1aaf5, type: 3}
     _count: 0
     _container: {fileID: 475028861}
     _nonLazy: 0
