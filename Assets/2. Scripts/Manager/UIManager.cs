@@ -74,6 +74,9 @@ public class UIManager : MonoBehaviour, ISubject
     [Header("TimeLapse")]
     public SkipTimeLapseUI skipTimeLapse;
 
+    [Header("Ending")]
+    public EndingCreditUI endingCredit;
+
     #endregion
 
     private Building targetBuilding;
@@ -428,6 +431,11 @@ public class UIManager : MonoBehaviour, ISubject
         SetTutorialPopup(true);
     }
 
+    public void OnClickEndingButton()
+    {
+        notifyObserver(EventState.EndingCredit);
+    }
+
     public void OnClickLobbyButton()
     {
         GameManager.instance.LoadLobbyScene();
@@ -516,6 +524,7 @@ public class UIManager : MonoBehaviour, ISubject
         addObserver(gamePhone);
 
         addObserver(tutorial);
+        addObserver(endingCredit);
 
         foreach (UILockButton lockButton in lockButtons)
         {

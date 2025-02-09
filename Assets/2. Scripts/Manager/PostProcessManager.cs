@@ -59,6 +59,16 @@ public class PostProcessManager : MonoBehaviour
         volume.profile.TryGet(out vignette);
     }
 
+    public void ApplyBlur(bool isOn)
+    {
+        DepthOfField depthOfField;
+
+        if (volume.profile.TryGet(out depthOfField))
+        {
+            depthOfField.active = isOn;
+        }
+    }
+
     public IEnumerator FadeInOut(float second, bool isIn)
     {
         Color targetColor = isIn ? Color.black : Color.white * brightness;

@@ -94,8 +94,8 @@ public class Grid : MonoBehaviour, IObserver
         {
             for (int j = (height / 2) - (purchaseSize.y / 2); j < (height / 2) + (purchaseSize.y / 2); j++)
             {
-                if (i > (width / 2) - (prevSize.x / 2) && i < (width / 2) + (prevSize.x / 2)
-                    && j > (height / 2) - (prevSize.y / 2) && j < (height / 2) + (prevSize.y / 2))
+                if (i >= (width / 2) - (prevSize.x / 2) && i < (width / 2) + (prevSize.x / 2)
+                    && j >= (height / 2) - (prevSize.y / 2) && j < (height / 2) + (prevSize.y / 2))
                     continue;
 
                 tiles[i, j].SetTilePurchased(true, time);
@@ -122,6 +122,41 @@ public class Grid : MonoBehaviour, IObserver
     {
         isColorMode = !isColorMode;
         SetTileColorMode(isColorMode);
+    }
+
+    public void ResetLevelUpTile()
+    {
+        for (int i = 0; i < width; i++)
+        {
+            for (int j = 0; j < height; j++)
+            {
+                if (levelUpTiles[i, j].building != null)
+                    Destroy(levelUpTiles[i, j].building.gameObject);
+
+                if (i >= (width / 2) - (startTileSize.x / 2) && i < (width / 2) + (startTileSize.x / 2)
+                    && j >= (height / 2) - (startTileSize.y / 2) && j < (height / 2) + (startTileSize.y / 2))
+                    continue;
+
+                levelUpTiles[i, j].SetTilePurchased(false, 0.0f);
+            }
+        }
+    }
+
+    public void PurchaseLevelUpTile(Vector2Int purchaseSize, Vector2Int prevSize, float time = 0.0f)
+    {
+        if (purchaseSize == prevSize) return;
+
+        for (int i = (width / 2) - (purchaseSize.x / 2); i < (width / 2) + (purchaseSize.x / 2); i++)
+        {
+            for (int j = (height / 2) - (purchaseSize.y / 2); j < (height / 2) + (purchaseSize.y / 2); j++)
+            {
+                if (i >= (width / 2) - (prevSize.x / 2) && i < (width / 2) + (prevSize.x / 2)
+                    && j >= (height / 2) - (prevSize.y / 2) && j < (height / 2) + (prevSize.y / 2))
+                    continue;
+
+                levelUpTiles[i, j].SetTilePurchased(true, time);
+            }
+        }
     }
 
     public void Notify(EventState state)

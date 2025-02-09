@@ -34,6 +34,8 @@ public class CityLevelManager : MonoBehaviour
 
     public TimeLapseCamera cameraController;
 
+    private List<int> levelFrameIdx = new List<int>();
+
     private void Awake()
     {
         if (instance != null && instance != this)
@@ -157,6 +159,9 @@ public class CityLevelManager : MonoBehaviour
         int timesOfRotate = 2;
         float timePerFrame = ((360 * timesOfRotate) / cameraController.rotationSpeed) / curFrames.Count;
 
+        if (prevFrames.Count != 0)
+            levelFrameIdx.Add(prevFrames.Count);
+
         while (curFrames.Count > 0)
         {
             FrameInfo curFrame = curFrames.Dequeue();
@@ -197,5 +202,50 @@ public class CityLevelManager : MonoBehaviour
 
         RoutineManager.instance.OnOffDailyLight(true);
         LevelUp();
+        cameraController.InitCamera();
+    }
+
+    public IEnumerator PlayEndingLapse()
+    {
+        InputManager.SetCanInput(false);
+        RoutineManager.instance.OnOffDailyLight(false);
+        cameraController.StartCoroutine(cameraController.SetCameraPrioritiesWithDelay());
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
+        StartCoroutine(PostProcessManager.instance.VignetteInOut(2f, 0.45f));
+        UIManager.instance.MovePanelAnim(2f, true);
+
+        yield return new WaitForSeconds(2.5f);
+
+        Grid.instance.ResetLevelUpTile();
+        PostProcessManager.instance.ApplyBlur(true);
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, false));
+
+        yield return new WaitForSeconds(2.0f);
+
+        cameraController.rotateOnCoroutine = StartCoroutine(cameraController.RotateCameraOn());
+
+        int timesOfRotate = 6;
+        float timePerFrame = ((360 * timesOfRotate) / cameraController.rotationSpeed) / prevFrames.Count;
+
+        int count = 0;
+        int idx = 0;
+        levelFrameIdx.Add(prevFrames.Count);
+
+        while (prevFrames.Count > 0)
+        {
+            count++;
+            FrameInfo curFrame = prevFrames.Dequeue();
+            DequeueFrame(curFrame);
+
+            if (count == levelFrameIdx[idx])
+            {
+                idx++;
+                Grid.instance.PurchaseLevelUpTile(level[idx].tileSize, level[idx - 1].tileSize, 3f);
+            }
+
+            yield return new WaitForSeconds(timePerFrame);
+        }
+
+        GameManager.instance.LoadLobbyScene();
     }
 }

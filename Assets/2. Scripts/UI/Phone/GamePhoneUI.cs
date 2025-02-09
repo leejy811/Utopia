@@ -65,5 +65,9 @@ public class GamePhoneUI : MonoBehaviour, IObserver
             else
                 Init();
         }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -7,7 +7,7 @@ public enum EventState { None, EventNotify, CityLevelUp, SlotMachine_Delete,
                         PaySuccess, HealCredit, LateReceipt, CityLevel, PayFail, GameOver, 
                         Menu, Setting, GameClear, Tutorial, DestroyBuilding, Phone,
                         GameStart, ConstructButton, ConstructBuilding, SocialEffect, MapSelect,
-                        Minigame }
+                        Minigame, EndingCredit }
 
 public interface IObserver
 {
