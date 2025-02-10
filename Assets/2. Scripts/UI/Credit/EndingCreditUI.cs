@@ -19,7 +19,7 @@ public class EndingCreditUI : MonoBehaviour
         //InitCredit();
     }
 
-    private void InitCredit()
+    public void InitCredit()
     {
         creditDB.entities.Sort(ComparePriceLesser);
 
@@ -42,7 +42,6 @@ public class EndingCreditUI : MonoBehaviour
 
     public void StartCredit()
     {
-        InitCredit();
         StartCoroutine(CityLevelManager.instance.PlayEndingLapse());
     }
 

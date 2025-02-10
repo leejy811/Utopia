@@ -219,6 +219,7 @@ public class CityLevelManager : MonoBehaviour
         Grid.instance.ResetLevelUpTile();
         PostProcessManager.instance.ApplyBlur(true);
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, false));
+        UIManager.instance.endingCredit.InitCredit();
 
         yield return new WaitForSeconds(2.0f);
 

@@ -433,6 +433,7 @@ public class UIManager : MonoBehaviour, ISubject
 
     public void OnClickEndingButton()
     {
+        gamePhone.gameObject.SetActive(false);
         endingCredit.StartCredit();
     }
 
