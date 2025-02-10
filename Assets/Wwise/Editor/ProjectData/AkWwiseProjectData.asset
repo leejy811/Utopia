@@ -1641,8 +1641,8 @@ MonoBehaviour:
         guid: d8cca3e964112b4b8adad2a20a084165
       Path: Events\Default Work Unit\Play_BLACKJACK_ALLIN
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.9104166
+      minDuration: 3.9104166
     - name: Play_BLACKJACK_bet
       guid: 21f0e4bf52f6cc4b95c70d509e2127c8
       id: 3857103390
@@ -1661,8 +1661,8 @@ MonoBehaviour:
         guid: 21f0e4bf52f6cc4b95c70d509e2127c8
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_bet
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.526625
+      minDuration: 0.526625
     - name: Play_BlackJack_BGM
       guid: 8d3ca823684b88469d05e8afebed3b9f
       id: 3823548201
@@ -1701,8 +1701,8 @@ MonoBehaviour:
         guid: 3cfcdbfbecd11d4586b4d795e830ce1d
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_card_flip
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.23854166
+      minDuration: 0.23854166
     - name: Play_BLACKJACK_card_put_01
       guid: 8e9c6937a2599049ba65c1a78b469aed
       id: 4014308333
@@ -1721,8 +1721,8 @@ MonoBehaviour:
         guid: 8e9c6937a2599049ba65c1a78b469aed
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_card_put_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.2434375
+      minDuration: 0.2434375
     - name: Play_BLACKJACK_card_put_02
       guid: 7fc28bcb838913488ba3bacfbef7f02e
       id: 4014308334
@@ -1741,8 +1741,8 @@ MonoBehaviour:
         guid: 7fc28bcb838913488ba3bacfbef7f02e
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_card_put_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.2434375
+      minDuration: 0.2434375
     - name: Play_BLACKJACK_GETBACK
       guid: de296b6a0fc25246b27e7c106794b13f
       id: 933227670
@@ -1758,8 +1758,8 @@ MonoBehaviour:
         guid: de296b6a0fc25246b27e7c106794b13f
       Path: Events\Default Work Unit\Play_BLACKJACK_GETBACK
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.1250417
+      minDuration: 1.1250417
     - name: Play_BLACKJACK_intro
       guid: 63add5f83567534a8e7f5bac406fb6de
       id: 2854514125
@@ -1778,8 +1778,8 @@ MonoBehaviour:
         guid: 63add5f83567534a8e7f5bac406fb6de
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_intro
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5914792
+      minDuration: 1.5914792
     - name: Play_BLACKJACK_LOOSE
       guid: f1bd304ac2e39545bfeaafc882ec6461
       id: 3328211061
@@ -1795,8 +1795,8 @@ MonoBehaviour:
         guid: f1bd304ac2e39545bfeaafc882ec6461
       Path: Events\Default Work Unit\Play_BLACKJACK_LOOSE
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.91818184
+      minDuration: 0.91818184
     - name: Play_BLACKJACK_recall
       guid: 9735693fffcfd748939b6ea4748e5f54
       id: 1114446378
@@ -1815,8 +1815,8 @@ MonoBehaviour:
         guid: 9735693fffcfd748939b6ea4748e5f54
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_recall
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5118542
+      minDuration: 0.5118542
     - name: Play_BLACKJACK_rule_blackjack
       guid: 1823aaade9b49347a0fa469f1920658d
       id: 3685917818
@@ -1835,8 +1835,8 @@ MonoBehaviour:
         guid: 1823aaade9b49347a0fa469f1920658d
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_blackjack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.0794375
+      minDuration: 1.0794375
     - name: Play_BLACKJACK_rule_bust
       guid: c0dded47f96baa449b98beb2f72d7a53
       id: 1599756660
@@ -1855,8 +1855,8 @@ MonoBehaviour:
         guid: c0dded47f96baa449b98beb2f72d7a53
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_bust
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5
+      minDuration: 1.5
     - name: Play_BLACKJACK_rule_draw
       guid: 51a798d146b35a45abfda8c7bff940d0
       id: 2625493016
@@ -1875,8 +1875,8 @@ MonoBehaviour:
         guid: 51a798d146b35a45abfda8c7bff940d0
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_draw
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.64179164
+      minDuration: 0.64179164
     - name: Play_BLACKJACK_rule_win
       guid: d84239c5d60a9d46af1ec4a0073fe8f0
       id: 4012406984
@@ -1895,8 +1895,8 @@ MonoBehaviour:
         guid: d84239c5d60a9d46af1ec4a0073fe8f0
       Path: Events\Default Work Unit\toto\Play_BLACKJACK_rule_win
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.0794375
+      minDuration: 1.0794375
     - name: Play_Break_01
       guid: 080abe4c523f024caf4af42d1608f511
       id: 501297411
@@ -1912,8 +1912,8 @@ MonoBehaviour:
         guid: 080abe4c523f024caf4af42d1608f511
       Path: Events\Default Work Unit\Play_Break_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.1793529
+      minDuration: 1.1793529
     - name: Play_Break_Melodic_01
       guid: b58af833d6ddbd4c8cd16e9f271a917c
       id: 2927211377
@@ -1929,8 +1929,8 @@ MonoBehaviour:
         guid: b58af833d6ddbd4c8cd16e9f271a917c
       Path: Events\Default Work Unit\Play_Break_Melodic_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.3547945
+      minDuration: 3.3547945
     - name: Play_BREAK_MELODIC_02
       guid: 016f3be5d71bcb48a26e1b5d3eca8cd2
       id: 2927211378
@@ -1949,8 +1949,8 @@ MonoBehaviour:
         guid: 016f3be5d71bcb48a26e1b5d3eca8cd2
       Path: Events\Default Work Unit\toto\Play_BREAK_MELODIC_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.6111627
+      minDuration: 5.6111627
     - name: Play_Break_Rumble_01
       guid: 1f93c11703ae7442b0176220d4650f5b
       id: 2779889645
@@ -1966,8 +1966,8 @@ MonoBehaviour:
         guid: 1f93c11703ae7442b0176220d4650f5b
       Path: Events\Default Work Unit\Play_Break_Rumble_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.349421
+      minDuration: 5.349421
     - name: Play_BREKE_02
       guid: 458ed69b44a1304e9fd37b3bcaf0ddc6
       id: 2313849096
@@ -1986,8 +1986,8 @@ MonoBehaviour:
         guid: 458ed69b44a1304e9fd37b3bcaf0ddc6
       Path: Events\Default Work Unit\toto\Play_BREKE_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.916582
+      minDuration: 1.916582
     - name: Play_Building_click_003
       guid: 0c3f6499a09287418a9d7fc153ec194a
       id: 1278673985
@@ -2006,8 +2006,8 @@ MonoBehaviour:
         guid: 0c3f6499a09287418a9d7fc153ec194a
       Path: Events\Default Work Unit\UI\Play_Building_click_003
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.049125
+      minDuration: 0.049125
     - name: Play_buildingsound
       guid: 1a0ead8cfff3374eba9a45792a2331ca
       id: 2611274067
@@ -2026,8 +2026,8 @@ MonoBehaviour:
         guid: 1a0ead8cfff3374eba9a45792a2331ca
       Path: Events\Default Work Unit\old\Play_buildingsound
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7253125
+      minDuration: 0.7253125
     - name: Play_CellPhone_01
       guid: 550934b30a83334eb87327d23a5b20cc
       id: 7328488
@@ -2046,8 +2046,8 @@ MonoBehaviour:
         guid: 550934b30a83334eb87327d23a5b20cc
       Path: Events\Default Work Unit\old\Play_CellPhone_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.75
+      minDuration: 1.75
     - name: Play_CellPhone_Click
       guid: 91969a88a46aa44aad396300eb5c75dc
       id: 2450428583
@@ -2066,8 +2066,8 @@ MonoBehaviour:
         guid: 91969a88a46aa44aad396300eb5c75dc
       Path: Events\Default Work Unit\old\Play_CellPhone_Click
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.8571655
+      minDuration: 0.8571655
     - name: Play_construction
       guid: b2105577e2d93b4da21a0bbe2b7ad426
       id: 1598463209
@@ -2106,8 +2106,8 @@ MonoBehaviour:
         guid: 6c8d2d70ced7a345b251d10d7454b271
       Path: Events\Default Work Unit\old\Play_D_Day_popup_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.3501875
+      minDuration: 0.3501875
     - name: Play_Day_Night
       guid: 93c274af3c74394caafffb07034743b5
       id: 2687999423
@@ -2126,8 +2126,8 @@ MonoBehaviour:
         guid: 93c274af3c74394caafffb07034743b5
       Path: Events\Default Work Unit\old\Play_Day_Night
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.7866666
+      minDuration: 2.7866666
     - name: Play_Demolition_001_v1
       guid: b77c67d05f673f4b9f6a640801369617
       id: 669897392
@@ -2146,8 +2146,8 @@ MonoBehaviour:
         guid: b77c67d05f673f4b9f6a640801369617
       Path: Events\Default Work Unit\UI\Play_Demolition_001_v1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7253125
+      minDuration: 0.7253125
     - name: Play_Deny_01
       guid: 2f952aaee5117b45984af16885a753aa
       id: 904270530
@@ -2166,8 +2166,8 @@ MonoBehaviour:
         guid: 2f952aaee5117b45984af16885a753aa
       Path: Events\Default Work Unit\old\Play_Deny_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.27504364
+      minDuration: 0.27504364
     - name: Play_Deny_02
       guid: 9c6f06012351014a99bb563c66f94685
       id: 904270529
@@ -2186,8 +2186,8 @@ MonoBehaviour:
         guid: 9c6f06012351014a99bb563c66f94685
       Path: Events\Default Work Unit\old\Play_Deny_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.43383914
+      minDuration: 0.43383914
     - name: Play_ForestAmbience
       guid: 4d99023123977c449b5c80ce8afeb234
       id: 3149538809
@@ -2246,8 +2246,8 @@ MonoBehaviour:
         guid: d23a6437fab50346b3ca7efafd7c08e1
       Path: Events\Default Work Unit\toto\Play_GAMEPLAY_chips_exchange
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.0018958
+      minDuration: 1.0018958
     - name: Play_Graph_fall_001
       guid: e71614efa462e0458d081548d8f586af
       id: 1882539238
@@ -2266,8 +2266,8 @@ MonoBehaviour:
         guid: e71614efa462e0458d081548d8f586af
       Path: Events\Default Work Unit\old\Play_Graph_fall_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.2626875
+      minDuration: 0.2626875
     - name: Play_Graph_fall_002
       guid: 7efaeaefb1f75e45bb4add47bf00f810
       id: 1882539237
@@ -2286,8 +2286,8 @@ MonoBehaviour:
         guid: 7efaeaefb1f75e45bb4add47bf00f810
       Path: Events\Default Work Unit\old\Play_Graph_fall_002
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.2626875
+      minDuration: 0.2626875
     - name: Play_GraphFallDown
       guid: e30bd985062c884f9e3f7b19d34c7942
       id: 171395709
@@ -2306,8 +2306,8 @@ MonoBehaviour:
         guid: e30bd985062c884f9e3f7b19d34c7942
       Path: Events\Default Work Unit\old\Play_GraphFallDown
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8163024
+      minDuration: 1.8163024
     - name: Play_GraphUP
       guid: c25462d6510b184fbbfb2ce78d8cabd3
       id: 3497197729
@@ -2326,8 +2326,8 @@ MonoBehaviour:
         guid: c25462d6510b184fbbfb2ce78d8cabd3
       Path: Events\Default Work Unit\old\Play_GraphUP
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4934043
+      minDuration: 1.4934043
     - name: Play_Intro_camera
       guid: ab941fa45ddbc844b5d85404ca7f5a22
       id: 1244365746
@@ -2343,8 +2343,8 @@ MonoBehaviour:
         guid: ab941fa45ddbc844b5d85404ca7f5a22
       Path: Events\Default Work Unit\Play_Intro_camera
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.3836668
+      minDuration: 2.3836668
     - name: Play_Jackpot_01
       guid: 9423861b23ebdf4480578a288367cf6a
       id: 263615490
@@ -2363,8 +2363,8 @@ MonoBehaviour:
         guid: 9423861b23ebdf4480578a288367cf6a
       Path: Events\Default Work Unit\old\Play_Jackpot_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 19.499855
+      minDuration: 19.499855
     - name: Play_Land_Expansion_01
       guid: 78020ed93473354491ce12deed7e25f8
       id: 1171864963
@@ -2383,8 +2383,8 @@ MonoBehaviour:
         guid: 78020ed93473354491ce12deed7e25f8
       Path: Events\Default Work Unit\toto\Play_Land_Expansion_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.8499374
+      minDuration: 4.8499374
     - name: Play_Last_Paper_01
       guid: 6c5b7fd75878224c832ad4bd8fb171ed
       id: 216261797
@@ -2403,8 +2403,8 @@ MonoBehaviour:
         guid: 6c5b7fd75878224c832ad4bd8fb171ed
       Path: Events\Default Work Unit\toto\Play_Last_Paper_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.4630691
+      minDuration: 1.4630691
     - name: Play_Last_Success_01
       guid: eff2e596ecb00443af8a938e5991865c
       id: 2117164836
@@ -2423,8 +2423,8 @@ MonoBehaviour:
         guid: eff2e596ecb00443af8a938e5991865c
       Path: Events\Default Work Unit\toto\Play_Last_Success_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.0631876
+      minDuration: 5.0631876
     - name: Play_Lever_001
       guid: c619ca1550fdbb468de8a9fc9d04af5b
       id: 3789420082
@@ -2443,8 +2443,8 @@ MonoBehaviour:
         guid: c619ca1550fdbb468de8a9fc9d04af5b
       Path: Events\Default Work Unit\old\Play_Lever_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5254167
+      minDuration: 0.5254167
     - name: Play_Lobby
       guid: d599e3d2d7df3c4ea4157d5e0b9ab7e5
       id: 2111096682
@@ -2523,8 +2523,8 @@ MonoBehaviour:
         guid: 55c6dfa0fab9e64ebbf794ac0ea60aed
       Path: Events\Default Work Unit\old\Play_Mail_enter_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.9781042
+      minDuration: 0.9781042
     - name: Play_Mail_open_001
       guid: aed318c42e41d84687604c247723d1b6
       id: 1751715434
@@ -2543,8 +2543,8 @@ MonoBehaviour:
         guid: aed318c42e41d84687604c247723d1b6
       Path: Events\Default Work Unit\old\Play_Mail_open_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.32891667
+      minDuration: 0.32891667
     - name: Play_Mail_take_001
       guid: 67e43914cf333446b80fe4ae722c1ee0
       id: 226547375
@@ -2563,8 +2563,8 @@ MonoBehaviour:
         guid: 67e43914cf333446b80fe4ae722c1ee0
       Path: Events\Default Work Unit\old\Play_Mail_take_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.5802917
+      minDuration: 0.5802917
     - name: Play_Mail_take_002
       guid: 6de370690ce067488dfe5faa38500a0d
       id: 226547372
@@ -2583,8 +2583,8 @@ MonoBehaviour:
         guid: 6de370690ce067488dfe5faa38500a0d
       Path: Events\Default Work Unit\old\Play_Mail_take_002
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.6675208
+      minDuration: 0.6675208
     - name: Play_MINIGAME_COIN
       guid: d0a09e6e3fe0264ba97e67181c1163a7
       id: 3433467811
@@ -2600,8 +2600,8 @@ MonoBehaviour:
         guid: d0a09e6e3fe0264ba97e67181c1163a7
       Path: Events\Default Work Unit\Play_MINIGAME_COIN
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.46508333
+      minDuration: 0.46508333
     - name: Play_Mouse_001_v1
       guid: f707d5dee5c0034b86f3c661a1b8da9c
       id: 3906795593
@@ -2620,8 +2620,8 @@ MonoBehaviour:
         guid: f707d5dee5c0034b86f3c661a1b8da9c
       Path: Events\Default Work Unit\UI\Play_Mouse_001_v1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.098
+      minDuration: 0.098
     - name: Play_NAPT_event_DESOLATE_01
       guid: 380b75df79200a429e86f88f95e461d7
       id: 3970961582
@@ -2720,8 +2720,8 @@ MonoBehaviour:
         guid: 3c013cca9eb3674395715ad47d84a6e5
       Path: Events\Default Work Unit\old\Play_Night_Dawn
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.7866666
+      minDuration: 2.7866666
     - name: Play_NNAPT_event_DESOLATE_01
       guid: 7369e14782a942478dc9e0a5eaa36b6e
       id: 2398011252
@@ -3100,8 +3100,8 @@ MonoBehaviour:
         guid: 5d95380dac9dcc41bd6135bfd685fdcc
       Path: Events\Default Work Unit\UI\Play_Pay_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.992875
+      minDuration: 0.992875
     - name: Play_Paythepayment_01
       guid: cc9736a643b7e14c960db12edfdfbf22
       id: 139162049
@@ -3120,8 +3120,8 @@ MonoBehaviour:
         guid: cc9736a643b7e14c960db12edfdfbf22
       Path: Events\Default Work Unit\old\Play_Paythepayment_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2935417
+      minDuration: 1.2935417
     - name: Play_POPUP_Negative
       guid: 1ea747018f34e445854ceda94d0620fe
       id: 2774129414
@@ -3140,8 +3140,8 @@ MonoBehaviour:
         guid: 1ea747018f34e445854ceda94d0620fe
       Path: Events\Default Work Unit\old\Play_POPUP_Negative
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2945417
+      minDuration: 1.2945417
     - name: Play_POPUP_Positive
       guid: 4566eac25996f54483cb638363e40a6d
       id: 3583156534
@@ -3160,8 +3160,8 @@ MonoBehaviour:
         guid: 4566eac25996f54483cb638363e40a6d
       Path: Events\Default Work Unit\old\Play_POPUP_Positive
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5687083
+      minDuration: 1.5687083
     - name: Play_protest_002
       guid: 25aa8928a341ed46a6f09e07a3b8d3d2
       id: 1749625636
@@ -3220,8 +3220,8 @@ MonoBehaviour:
         guid: 150d454be72acb4cbd19d3835ea99479
       Path: Events\Default Work Unit\toto\Play_RACE_active_L_
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.0942292
+      minDuration: 3.0942292
     - name: Play_RACE_bet_01
       guid: f1724994222cb0489ef235c77e527d78
       id: 3403597365
@@ -3240,8 +3240,8 @@ MonoBehaviour:
         guid: f1724994222cb0489ef235c77e527d78
       Path: Events\Default Work Unit\toto\Play_RACE_bet_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.09991667
+      minDuration: 0.09991667
     - name: Play_RACE_bet_02
       guid: 9388da2c8adbd443b0878ef6378c4449
       id: 3403597366
@@ -3260,8 +3260,8 @@ MonoBehaviour:
         guid: 9388da2c8adbd443b0878ef6378c4449
       Path: Events\Default Work Unit\toto\Play_RACE_bet_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.118395835
+      minDuration: 0.118395835
     - name: Play_Race_BGM
       guid: a47e0f64bc9c3c408db939b7dbc214ed
       id: 504948858
@@ -3300,8 +3300,8 @@ MonoBehaviour:
         guid: 91c86f0bde90394e99235c768a0523b8
       Path: Events\Default Work Unit\toto\Play_RACE_countdown
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.039020833
+      minDuration: 0.039020833
     - name: Play_RACE_horserace
       guid: f88ecf17bd35b74faa97689a23f1f3d7
       id: 2027986540
@@ -3320,8 +3320,8 @@ MonoBehaviour:
         guid: f88ecf17bd35b74faa97689a23f1f3d7
       Path: Events\Default Work Unit\toto\Play_RACE_horserace
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.2001875
+      minDuration: 0.2001875
     - name: Play_RACE_INJURY
       guid: 1c6e891e3129634bbafee0b135994acf
       id: 1657583265
@@ -3337,8 +3337,8 @@ MonoBehaviour:
         guid: 1c6e891e3129634bbafee0b135994acf
       Path: Events\Default Work Unit\Play_RACE_INJURY
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.81089586
+      minDuration: 0.81089586
     - name: Play_RACE_recall_01
       guid: 031ce6e276b0e74896a7c6e170a1daa0
       id: 3546129119
@@ -3357,8 +3357,8 @@ MonoBehaviour:
         guid: 031ce6e276b0e74896a7c6e170a1daa0
       Path: Events\Default Work Unit\toto\Play_RACE_recall_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.09977084
+      minDuration: 0.09977084
     - name: Play_RACE_recall_02
       guid: 41505d309d1de74995fc61a38488401c
       id: 3546129116
@@ -3377,8 +3377,8 @@ MonoBehaviour:
         guid: 41505d309d1de74995fc61a38488401c
       Path: Events\Default Work Unit\toto\Play_RACE_recall_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.118395835
+      minDuration: 0.118395835
     - name: Play_RACE_SKILL
       guid: 309802e99bdb384196ed1e0410a3aa5a
       id: 492449051
@@ -3394,8 +3394,8 @@ MonoBehaviour:
         guid: 309802e99bdb384196ed1e0410a3aa5a
       Path: Events\Default Work Unit\Play_RACE_SKILL
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8000208
+      minDuration: 1.8000208
     - name: Play_RACE_start
       guid: ed3c9a880bdc834c919d0aef72dbd2a0
       id: 1325406880
@@ -3414,8 +3414,8 @@ MonoBehaviour:
         guid: ed3c9a880bdc834c919d0aef72dbd2a0
       Path: Events\Default Work Unit\toto\Play_RACE_start
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 3.7500207
+      minDuration: 3.7500207
     - name: Play_RACE_START_01
       guid: 0a19fddbd5e5e1408010a19e4e35f3c4
       id: 3977497622
@@ -3431,8 +3431,8 @@ MonoBehaviour:
         guid: 0a19fddbd5e5e1408010a19e4e35f3c4
       Path: Events\Default Work Unit\Play_RACE_START_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5481738
+      minDuration: 1.5481738
     - name: Play_RACE_STARTMOTION
       guid: acef577019c9cd47add892f95b1f7c77
       id: 3801795766
@@ -3448,8 +3448,8 @@ MonoBehaviour:
         guid: acef577019c9cd47add892f95b1f7c77
       Path: Events\Default Work Unit\Play_RACE_STARTMOTION
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.5599617
+      minDuration: 1.5599617
     - name: Play_RACE_TANG
       guid: 888cab91fb043947b14c112183096696
       id: 4193698072
@@ -3465,8 +3465,8 @@ MonoBehaviour:
         guid: 888cab91fb043947b14c112183096696
       Path: Events\Default Work Unit\Play_RACE_TANG
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.6552708
+      minDuration: 0.6552708
     - name: Play_Race_Win
       guid: 9e18c702e782f94a8888ab39a3b9b5e6
       id: 272180694
@@ -3485,8 +3485,8 @@ MonoBehaviour:
         guid: 9e18c702e782f94a8888ab39a3b9b5e6
       Path: Events\Default Work Unit\toto\Play_Race_Win
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.8041458
+      minDuration: 1.8041458
     - name: Play_Save_01
       guid: 6f9e04776c2f3f4e89e4ba7e417e9b04
       id: 2088831085
@@ -3505,8 +3505,8 @@ MonoBehaviour:
         guid: 6f9e04776c2f3f4e89e4ba7e417e9b04
       Path: Events\Default Work Unit\toto\Play_Save_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.7794167
+      minDuration: 0.7794167
     - name: Play_Select_Button
       guid: 84c6369bcf91e748b6e9c8192be67e41
       id: 880454473
@@ -3525,8 +3525,8 @@ MonoBehaviour:
         guid: 84c6369bcf91e748b6e9c8192be67e41
       Path: Events\Default Work Unit\old\Play_Select_Button
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.06489583
+      minDuration: 0.06489583
     - name: Play_singsingsingmybird
       guid: 0988c9710d304f478bb9a49af57f7d98
       id: 2446290240
@@ -3602,8 +3602,8 @@ MonoBehaviour:
         guid: 005bd351787de9469c6a41c069fc3746
       Path: Events\Default Work Unit\old\Play_Slot_Effect_Spwan_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.32329836
+      minDuration: 0.32329836
     - name: Play_Slot_Rever_01
       guid: 3268da01928cd04ca9a63f8482d87a19
       id: 1042317409
@@ -3622,8 +3622,8 @@ MonoBehaviour:
         guid: 3268da01928cd04ca9a63f8482d87a19
       Path: Events\Default Work Unit\old\Play_Slot_Rever_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.3293589
+      minDuration: 0.3293589
     - name: Play_Slot_rimshot
       guid: 708a2a7e09af614689a2ca94201918a9
       id: 1073654463
@@ -3642,8 +3642,8 @@ MonoBehaviour:
         guid: 708a2a7e09af614689a2ca94201918a9
       Path: Events\Default Work Unit\old\Play_Slot_rimshot
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 4.0776334
+      minDuration: 4.0776334
     - name: Play_Slot_Spwan_01
       guid: 876d71707895364bbecbd3ae94194338
       id: 3803209012
@@ -3662,8 +3662,8 @@ MonoBehaviour:
         guid: 876d71707895364bbecbd3ae94194338
       Path: Events\Default Work Unit\old\Play_Slot_Spwan_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.93914586
+      minDuration: 0.93914586
     - name: Play_Slot_Stop_01
       guid: f9965ca73ac8fb4489d3323b688d0c69
       id: 3371155409
@@ -3682,8 +3682,8 @@ MonoBehaviour:
         guid: f9965ca73ac8fb4489d3323b688d0c69
       Path: Events\Default Work Unit\old\Play_Slot_Stop_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.0851875
+      minDuration: 0.0851875
     - name: Play_SlotMachine_enter_001
       guid: 1ca15062400e1148b5e1b70106aeb267
       id: 1031511574
@@ -3702,8 +3702,8 @@ MonoBehaviour:
         guid: 1ca15062400e1148b5e1b70106aeb267
       Path: Events\Default Work Unit\old\Play_SlotMachine_enter_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.93572915
+      minDuration: 0.93572915
     - name: Play_Slotmashin_Jackpot_Ani_01
       guid: ba1f93d6518aae4da40ee35591d67749
       id: 2214109306
@@ -3722,8 +3722,8 @@ MonoBehaviour:
         guid: ba1f93d6518aae4da40ee35591d67749
       Path: Events\Default Work Unit\old\Play_Slotmashin_Jackpot_Ani_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 19.781166
+      minDuration: 19.781166
     - name: Play_SomethingWrong_01
       guid: c783402483514d40a6a53313d37b89de
       id: 3676035621
@@ -3742,8 +3742,8 @@ MonoBehaviour:
         guid: c783402483514d40a6a53313d37b89de
       Path: Events\Default Work Unit\old\Play_SomethingWrong_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 5.141354
+      minDuration: 5.141354
     - name: Play_SP_Decrease_price_01
       guid: d6eec455dd25494fb7198dbec42d5e17
       id: 1287155802
@@ -3902,8 +3902,8 @@ MonoBehaviour:
         guid: cef81a4ceb52044f9ef55dfda1f79409
       Path: Events\Default Work Unit\old\Play_stamp
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.62745833
+      minDuration: 0.62745833
     - name: Play_testing
       guid: 725b592b908a2c4f811550d7c0ab7a77
       id: 2149296550
@@ -3942,8 +3942,8 @@ MonoBehaviour:
         guid: 88ca34d8e942634abc67b4cac3d77a7e
       Path: Events\Default Work Unit\UI\Play_Tile_Buy_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.992875
+      minDuration: 0.992875
     - name: Play_TImeLapsBGM
       guid: 98654b8f321d614999a7610b440024d7
       id: 318309431
@@ -3962,8 +3962,8 @@ MonoBehaviour:
         guid: 98654b8f321d614999a7610b440024d7
       Path: Events\Default Work Unit\old\Play_TImeLapsBGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 120.048
+      minDuration: 120.048
     - name: Play_TO_Decrease_price_01
       guid: bb0207b9ce4a7b4998920367d901a898
       id: 4042442036
@@ -4767,8 +4767,8 @@ MonoBehaviour:
         guid: cfb0945d13ab884288b577767d4e02d3
       Path: Events\Default Work Unit\UI\Play_Turn_Move_Clock_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 2.4492707
+      minDuration: 2.4492707
     - name: Play_Tutorial_Pop_up
       guid: 33fa616afaaf2648a939b6ae4efe9a63
       id: 946941744
@@ -4787,8 +4787,8 @@ MonoBehaviour:
         guid: 33fa616afaaf2648a939b6ae4efe9a63
       Path: Events\Default Work Unit\old\Play_Tutorial_Pop_up
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.2190975
+      minDuration: 1.2190975
     - name: Play_UI_papersound_001
       guid: 3621294fe4585f40a60727f06fbae288
       id: 424395900
@@ -4807,8 +4807,8 @@ MonoBehaviour:
         guid: 3621294fe4585f40a60727f06fbae288
       Path: Events\Default Work Unit\old\Play_UI_papersound_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0.41116667
+      minDuration: 0.41116667
     - name: Play_UI_solve_001
       guid: 43750a9e41b89445a6bd983964b23928
       id: 1520262876
@@ -4827,8 +4827,8 @@ MonoBehaviour:
         guid: 43750a9e41b89445a6bd983964b23928
       Path: Events\Default Work Unit\old\Play_UI_solve_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.125
+      minDuration: 1.125
     - name: Play_Wind
       guid: 3b25c306708b4f48a5a922c238d68be3
       id: 1020223172
@@ -4867,8 +4867,8 @@ MonoBehaviour:
         guid: cba5cd8c60382d408cdfc2ffd55160c7
       Path: Events\Default Work Unit\0912_2\Stop_1APT_event_DESOLATE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1APT_event_DISEASE_01
       guid: 80cbdc6041c810478fbe1c6cd3bba5ca
       id: 25594662
@@ -4887,8 +4887,8 @@ MonoBehaviour:
         guid: 80cbdc6041c810478fbe1c6cd3bba5ca
       Path: Events\Default Work Unit\0912_2\Stop_1APT_event_DISEASE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1APT_event_FIRE_01
       guid: 8589e18b96a0bb438517c83309476f63
       id: 1533283580
@@ -4907,8 +4907,8 @@ MonoBehaviour:
         guid: 8589e18b96a0bb438517c83309476f63
       Path: Events\Default Work Unit\0912_2\Stop_1APT_event_FIRE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1APT_event_THIEF_01
       guid: 8212d928dcf0af40b39afded5066df26
       id: 2025134512
@@ -4927,8 +4927,8 @@ MonoBehaviour:
         guid: 8212d928dcf0af40b39afded5066df26
       Path: Events\Default Work Unit\0912_2\Stop_1APT_event_THIEF_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1SP_Decrease_price_01
       guid: b8596992d68f354cb69460fa3c492e2a
       id: 2924011653
@@ -4947,8 +4947,8 @@ MonoBehaviour:
         guid: b8596992d68f354cb69460fa3c492e2a
       Path: Events\Default Work Unit\0912_2\Stop_1SP_Decrease_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1SP_Discount_01
       guid: c4efd9091ecdde45b814e91f037cf35f
       id: 1412284584
@@ -4967,8 +4967,8 @@ MonoBehaviour:
         guid: c4efd9091ecdde45b814e91f037cf35f
       Path: Events\Default Work Unit\0912_2\Stop_1SP_Discount_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1SP_Festival_01
       guid: 0004a9be7539ad4ba69d699404517f78
       id: 1788621083
@@ -4987,8 +4987,8 @@ MonoBehaviour:
         guid: 0004a9be7539ad4ba69d699404517f78
       Path: Events\Default Work Unit\0912_2\Stop_1SP_Festival_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1SP_Few_jobs_01
       guid: 3d26ed42fee607488b12e2e8e1241131
       id: 1224043236
@@ -5007,8 +5007,8 @@ MonoBehaviour:
         guid: 3d26ed42fee607488b12e2e8e1241131
       Path: Events\Default Work Unit\0912_2\Stop_1SP_Few_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1SP_Increase_price_01
       guid: 3f73eb83d289354285af5031cfb10f3e
       id: 561424697
@@ -5027,8 +5027,8 @@ MonoBehaviour:
         guid: 3f73eb83d289354285af5031cfb10f3e
       Path: Events\Default Work Unit\0912_2\Stop_1SP_Increase_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1SP_Low_in_stock_01
       guid: be5681b9a737f34d891cc2917e5badf1
       id: 2124694142
@@ -5047,8 +5047,8 @@ MonoBehaviour:
         guid: be5681b9a737f34d891cc2917e5badf1
       Path: Events\Default Work Unit\0912_2\Stop_1SP_Low_in_stock_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_1SP_Many_jobs_01
       guid: 530eee5df61e9d44b80a55a05a4a4582
       id: 3007530601
@@ -5067,8 +5067,8 @@ MonoBehaviour:
         guid: 530eee5df61e9d44b80a55a05a4a4582
       Path: Events\Default Work Unit\0912_2\Stop_1SP_Many_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_DESOLATE_01
       guid: 0c0edda469ad47458894920a10f1b68d
       id: 2986176910
@@ -5087,8 +5087,8 @@ MonoBehaviour:
         guid: 0c0edda469ad47458894920a10f1b68d
       Path: Events\Default Work Unit\0912\Stop_APT_event_DESOLATE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_DISEASE_001
       guid: 7e0259e4bd0be646b79e2ae012125422
       id: 2581958095
@@ -5107,8 +5107,8 @@ MonoBehaviour:
         guid: 7e0259e4bd0be646b79e2ae012125422
       Path: Events\Default Work Unit\old\Stop_APT_event_DISEASE_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_DISEASE_001_1
       guid: 2c7f2fc69d4a2249a2ecb14aadd0d79e
       id: 4284039319
@@ -5127,8 +5127,8 @@ MonoBehaviour:
         guid: 2c7f2fc69d4a2249a2ecb14aadd0d79e
       Path: Events\Default Work Unit\old\Stop_APT_event_DISEASE_001_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_DISEASE_01
       guid: 7e1f26322dfce345bf02e44853677f2e
       id: 1149006027
@@ -5147,8 +5147,8 @@ MonoBehaviour:
         guid: 7e1f26322dfce345bf02e44853677f2e
       Path: Events\Default Work Unit\old\Stop_APT_event_DISEASE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_DISEASE_01_1
       guid: 0893ff8704678744bacd749413d5e4fc
       id: 2774622587
@@ -5167,8 +5167,8 @@ MonoBehaviour:
         guid: 0893ff8704678744bacd749413d5e4fc
       Path: Events\Default Work Unit\old\Stop_APT_event_DISEASE_01_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_DISEASE_02
       guid: 48429460b62ebd4ab0b06683c23ed42b
       id: 1149006024
@@ -5187,8 +5187,8 @@ MonoBehaviour:
         guid: 48429460b62ebd4ab0b06683c23ed42b
       Path: Events\Default Work Unit\0912\Stop_APT_event_DISEASE_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_FIRE_001
       guid: 00a5f988459abc43a38caf1a134546ef
       id: 1705166259
@@ -5207,8 +5207,8 @@ MonoBehaviour:
         guid: 00a5f988459abc43a38caf1a134546ef
       Path: Events\Default Work Unit\old\Stop_APT_event_FIRE_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_FIRE_001_1
       guid: f92893d5ea88e641b35b9d625c926ab8
       id: 744494099
@@ -5227,8 +5227,8 @@ MonoBehaviour:
         guid: f92893d5ea88e641b35b9d625c926ab8
       Path: Events\Default Work Unit\old\Stop_APT_event_FIRE_001_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_FIRE_01
       guid: cae8ad30f3deaa4b969fe393c4a7cfe1
       id: 188489143
@@ -5247,8 +5247,8 @@ MonoBehaviour:
         guid: cae8ad30f3deaa4b969fe393c4a7cfe1
       Path: Events\Default Work Unit\old\Stop_APT_event_FIRE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_FIRE_01_1
       guid: a6f39376258f4f4fa1601017559c2a27
       id: 3695163727
@@ -5267,8 +5267,8 @@ MonoBehaviour:
         guid: a6f39376258f4f4fa1601017559c2a27
       Path: Events\Default Work Unit\old\Stop_APT_event_FIRE_01_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_FIRE_02
       guid: 57c6aca171d15746b1fae9706140b14e
       id: 188489140
@@ -5287,8 +5287,8 @@ MonoBehaviour:
         guid: 57c6aca171d15746b1fae9706140b14e
       Path: Events\Default Work Unit\0912\Stop_APT_event_FIRE_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_THIEF_001
       guid: 5a7a6bc58c93304aa69487a65942078c
       id: 2648810501
@@ -5307,8 +5307,8 @@ MonoBehaviour:
         guid: 5a7a6bc58c93304aa69487a65942078c
       Path: Events\Default Work Unit\old\Stop_APT_event_THIEF_001
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_THIEF_001_1
       guid: 4889969fcad14c44974c62f02e38fab8
       id: 4039119537
@@ -5327,8 +5327,8 @@ MonoBehaviour:
         guid: 4889969fcad14c44974c62f02e38fab8
       Path: Events\Default Work Unit\old\Stop_APT_event_THIEF_001_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_THIEF_01
       guid: 219230b61e335140ac05633955827a46
       id: 1525431165
@@ -5347,8 +5347,8 @@ MonoBehaviour:
         guid: 219230b61e335140ac05633955827a46
       Path: Events\Default Work Unit\old\Stop_APT_event_THIEF_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_THIEF_01_1
       guid: 316e0bf568f4254986231bc8860fe4dc
       id: 3040325241
@@ -5367,8 +5367,8 @@ MonoBehaviour:
         guid: 316e0bf568f4254986231bc8860fe4dc
       Path: Events\Default Work Unit\old\Stop_APT_event_THIEF_01_1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_APT_event_THIEF_02
       guid: 3b454a1c8a71b84b970a68ae2ea011db
       id: 1525431166
@@ -5387,8 +5387,8 @@ MonoBehaviour:
         guid: 3b454a1c8a71b84b970a68ae2ea011db
       Path: Events\Default Work Unit\0912\Stop_APT_event_THIEF_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BGM_01
       guid: c7dce540c39d6441ac4bb86559c72d9b
       id: 3030862532
@@ -5404,8 +5404,8 @@ MonoBehaviour:
         guid: c7dce540c39d6441ac4bb86559c72d9b
       Path: Events\Default Work Unit\Stop_BGM_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BGM4
       guid: 855111e0b411be419fd657c0f93886e0
       id: 4016311350
@@ -5424,8 +5424,8 @@ MonoBehaviour:
         guid: 855111e0b411be419fd657c0f93886e0
       Path: Events\Default Work Unit\old\Stop_BGM4
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BGM5
       guid: 59ffbb70523d784e96c096d23ac85e4a
       id: 4016311351
@@ -5444,8 +5444,8 @@ MonoBehaviour:
         guid: 59ffbb70523d784e96c096d23ac85e4a
       Path: Events\Default Work Unit\old\Stop_BGM5
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BGMsequnce1
       guid: 4e74c806f2b51c418801ae5333a7c028
       id: 1894363095
@@ -5464,8 +5464,8 @@ MonoBehaviour:
         guid: 4e74c806f2b51c418801ae5333a7c028
       Path: Events\Default Work Unit\old\Stop_BGMsequnce1
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_bet
       guid: a128ede032546c43a57bab3a59014404
       id: 4195040360
@@ -5484,8 +5484,8 @@ MonoBehaviour:
         guid: a128ede032546c43a57bab3a59014404
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_bet
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BlackJack_BGM
       guid: d339509c6182a443bc7067507b44476c
       id: 4228595503
@@ -5504,8 +5504,8 @@ MonoBehaviour:
         guid: d339509c6182a443bc7067507b44476c
       Path: Events\Default Work Unit\0102\Stop_BlackJack_BGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_card_flip
       guid: cf3f2c1a81ab3a448607866be08ee76d
       id: 3308072525
@@ -5524,8 +5524,8 @@ MonoBehaviour:
         guid: cf3f2c1a81ab3a448607866be08ee76d
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_card_flip
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_card_put_01
       guid: 798fa52d08f5ba46972360d099049e4f
       id: 2965005019
@@ -5544,8 +5544,8 @@ MonoBehaviour:
         guid: 798fa52d08f5ba46972360d099049e4f
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_card_put_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_card_put_02
       guid: 986f3710edcb3b418f7b8e513d6d9276
       id: 2965005016
@@ -5564,8 +5564,8 @@ MonoBehaviour:
         guid: 986f3710edcb3b418f7b8e513d6d9276
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_card_put_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_intro
       guid: 44d236736120024f9069d5d31601383e
       id: 493229879
@@ -5584,8 +5584,8 @@ MonoBehaviour:
         guid: 44d236736120024f9069d5d31601383e
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_intro
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_recall
       guid: 35fb2aa16faba542b2bd149a0c3fdf39
       id: 2433175204
@@ -5604,8 +5604,8 @@ MonoBehaviour:
         guid: 35fb2aa16faba542b2bd149a0c3fdf39
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_recall
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_rule_blackjack
       guid: bd03fb82459d664794fcd43267c0745e
       id: 1903408204
@@ -5624,8 +5624,8 @@ MonoBehaviour:
         guid: bd03fb82459d664794fcd43267c0745e
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_blackjack
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_rule_bust
       guid: ffd991340b05b047beffa9528bf58295
       id: 2122381770
@@ -5644,8 +5644,8 @@ MonoBehaviour:
         guid: ffd991340b05b047beffa9528bf58295
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_bust
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_rule_draw
       guid: 04faee8fa4fc024dadee9bfc697298a5
       id: 1237074726
@@ -5664,8 +5664,8 @@ MonoBehaviour:
         guid: 04faee8fa4fc024dadee9bfc697298a5
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_draw
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_BLACKJACK_rule_win
       guid: bf7a3ee8a3c48245bd752377d29a7518
       id: 1478085386
@@ -5684,8 +5684,8 @@ MonoBehaviour:
         guid: bf7a3ee8a3c48245bd752377d29a7518
       Path: Events\Default Work Unit\toto\Stop_BLACKJACK_rule_win
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Break_Rumble_01
       guid: dabe99ef27d95344aac4dd24ca6820f6
       id: 3499138947
@@ -5701,8 +5701,8 @@ MonoBehaviour:
         guid: dabe99ef27d95344aac4dd24ca6820f6
       Path: Events\Default Work Unit\Stop_Break_Rumble_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_construction
       guid: f52f07cca1b231439ba45051290aac45
       id: 3493507479
@@ -5721,8 +5721,8 @@ MonoBehaviour:
         guid: f52f07cca1b231439ba45051290aac45
       Path: Events\Default Work Unit\old\Stop_construction
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_ForestAmbience
       guid: 9d094c2ccf728e4aa2e61f63aa227eec
       id: 1345079091
@@ -5741,8 +5741,8 @@ MonoBehaviour:
         guid: 9d094c2ccf728e4aa2e61f63aa227eec
       Path: Events\Default Work Unit\old\Stop_ForestAmbience
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_ForestAmbienceInLobby
       guid: 0ce839401049de489968d7600f9d172c
       id: 2778003230
@@ -5761,8 +5761,8 @@ MonoBehaviour:
         guid: 0ce839401049de489968d7600f9d172c
       Path: Events\Default Work Unit\old\Stop_ForestAmbienceInLobby
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_GAMEPLAY_chips_exchange
       guid: 9c1ac10b7038b84b8f77ba6345365932
       id: 885567024
@@ -5781,8 +5781,8 @@ MonoBehaviour:
         guid: 9c1ac10b7038b84b8f77ba6345365932
       Path: Events\Default Work Unit\toto\Stop_GAMEPLAY_chips_exchange
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Lobby
       guid: 1d8d9155e784b240b88480815932c6cc
       id: 3639729344
@@ -5801,8 +5801,8 @@ MonoBehaviour:
         guid: 1d8d9155e784b240b88480815932c6cc
       Path: Events\Default Work Unit\old\Stop_Lobby
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_LOOP_bar
       guid: 5795d740b8fd744c94a6b6276bace465
       id: 3544330092
@@ -5818,8 +5818,8 @@ MonoBehaviour:
         guid: 5795d740b8fd744c94a6b6276bace465
       Path: Events\Default Work Unit\Stop_LOOP_bar
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_LOOP_vomit_01
       guid: d9d28ef9fd98104bbb0b368d8aa34ced
       id: 1761728308
@@ -5835,8 +5835,8 @@ MonoBehaviour:
         guid: d9d28ef9fd98104bbb0b368d8aa34ced
       Path: Events\Default Work Unit\Stop_LOOP_vomit_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NAPT_event_DESOLATE_01
       guid: 5657233ffb6941498552adf4d096059f
       id: 2017181012
@@ -5855,8 +5855,8 @@ MonoBehaviour:
         guid: 5657233ffb6941498552adf4d096059f
       Path: Events\Default Work Unit\0912_1\Stop_NAPT_event_DESOLATE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NAPT_event_DISEASE_01
       guid: 47b813330b688446851ff123bf4d2378
       id: 2733485581
@@ -5875,8 +5875,8 @@ MonoBehaviour:
         guid: 47b813330b688446851ff123bf4d2378
       Path: Events\Default Work Unit\0912_1\Stop_NAPT_event_DISEASE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NAPT_event_FIRE_01
       guid: d766e3a14a10f340a8f32a4cdf3e45db
       id: 1792249901
@@ -5895,8 +5895,8 @@ MonoBehaviour:
         guid: d766e3a14a10f340a8f32a4cdf3e45db
       Path: Events\Default Work Unit\0912_1\Stop_NAPT_event_FIRE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NAPT_event_THIEF_01
       guid: a2d914d63c368349baefa839435f10ff
       id: 2460715211
@@ -5915,8 +5915,8 @@ MonoBehaviour:
         guid: a2d914d63c368349baefa839435f10ff
       Path: Events\Default Work Unit\0912_1\Stop_NAPT_event_THIEF_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNAPT_event_DESOLATE_01
       guid: 938a54a97b0e344398eeaefbd341177b
       id: 1933472978
@@ -5935,8 +5935,8 @@ MonoBehaviour:
         guid: 938a54a97b0e344398eeaefbd341177b
       Path: Events\Default Work Unit\0912_3\Stop_NNAPT_event_DESOLATE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNAPT_event_DISEASE_01
       guid: 80a1af26d4a6404bb612d6d053028b15
       id: 1815035551
@@ -5955,8 +5955,8 @@ MonoBehaviour:
         guid: 80a1af26d4a6404bb612d6d053028b15
       Path: Events\Default Work Unit\0912_3\Stop_NNAPT_event_DISEASE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNAPT_event_FIRE_01
       guid: 312deb0a6704b54a8113a48a9d81445a
       id: 1009984523
@@ -5975,8 +5975,8 @@ MonoBehaviour:
         guid: 312deb0a6704b54a8113a48a9d81445a
       Path: Events\Default Work Unit\0912_3\Stop_NNAPT_event_FIRE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNAPT_event_THIEF_01
       guid: 7ffc767a721df448bd007d1ae363741f
       id: 3293080945
@@ -5995,8 +5995,8 @@ MonoBehaviour:
         guid: 7ffc767a721df448bd007d1ae363741f
       Path: Events\Default Work Unit\0912_3\Stop_NNAPT_event_THIEF_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNSP_Decrease_price_01
       guid: 2264d2924dd31f4283831483352ad93e
       id: 1786706416
@@ -6015,8 +6015,8 @@ MonoBehaviour:
         guid: 2264d2924dd31f4283831483352ad93e
       Path: Events\Default Work Unit\0912_3\Stop_NNSP_Decrease_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNSP_Discount_01
       guid: ad98afd3d35b3542aab3a6aa5bbbb3c6
       id: 2155125557
@@ -6035,8 +6035,8 @@ MonoBehaviour:
         guid: ad98afd3d35b3542aab3a6aa5bbbb3c6
       Path: Events\Default Work Unit\0912_3\Stop_NNSP_Discount_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNSP_Festival_01
       guid: 38ae5273d7319d4db4b8229b2fa2d2b3
       id: 1296914678
@@ -6055,8 +6055,8 @@ MonoBehaviour:
         guid: 38ae5273d7319d4db4b8229b2fa2d2b3
       Path: Events\Default Work Unit\0912_3\Stop_NNSP_Festival_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNSP_Few_jobs_01
       guid: 3164fd678de4f44783a8e9ba10681378
       id: 1794795005
@@ -6075,8 +6075,8 @@ MonoBehaviour:
         guid: 3164fd678de4f44783a8e9ba10681378
       Path: Events\Default Work Unit\0912_3\Stop_NNSP_Few_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNSP_Increase_price_01
       guid: 6895ae991f544e4295af1ec250ce7b58
       id: 2166055516
@@ -6095,8 +6095,8 @@ MonoBehaviour:
         guid: 6895ae991f544e4295af1ec250ce7b58
       Path: Events\Default Work Unit\0912_3\Stop_NNSP_Increase_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNSP_Low_in_stock_01
       guid: 36072bb763785a4dabbb88c1f2a45470
       id: 1109279727
@@ -6115,8 +6115,8 @@ MonoBehaviour:
         guid: 36072bb763785a4dabbb88c1f2a45470
       Path: Events\Default Work Unit\0912_3\Stop_NNSP_Low_in_stock_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NNSP_Many_jobs_01
       guid: 7012b13f0f1664448b9990455d53b838
       id: 75333342
@@ -6135,8 +6135,8 @@ MonoBehaviour:
         guid: 7012b13f0f1664448b9990455d53b838
       Path: Events\Default Work Unit\0912_3\Stop_NNSP_Many_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NSP_Decrease_price_01
       guid: 9608bd30077f2242940f8ef1dbc7ce82
       id: 1808963438
@@ -6155,8 +6155,8 @@ MonoBehaviour:
         guid: 9608bd30077f2242940f8ef1dbc7ce82
       Path: Events\Default Work Unit\0912_1\Stop_NSP_Decrease_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NSP_Discount_01
       guid: aea9d5a83a6c1848acef27e7eebdbaaf
       id: 3941357211
@@ -6175,8 +6175,8 @@ MonoBehaviour:
         guid: aea9d5a83a6c1848acef27e7eebdbaaf
       Path: Events\Default Work Unit\0912_1\Stop_NSP_Discount_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NSP_Festival_01
       guid: 7a69ea50a1f096469c65c29ef7fdd03c
       id: 1946673176
@@ -6195,8 +6195,8 @@ MonoBehaviour:
         guid: 7a69ea50a1f096469c65c29ef7fdd03c
       Path: Events\Default Work Unit\0912_1\Stop_NSP_Festival_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NSP_Few_jobs_01
       guid: 2b55dbbcfaea7f46b3a25e56f483c0eb
       id: 3241841583
@@ -6215,8 +6215,8 @@ MonoBehaviour:
         guid: 2b55dbbcfaea7f46b3a25e56f483c0eb
       Path: Events\Default Work Unit\0912_1\Stop_NSP_Few_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NSP_Increase_price_01
       guid: 8f3afe47fd033a4385d057b91837fafd
       id: 706914262
@@ -6235,8 +6235,8 @@ MonoBehaviour:
         guid: 8f3afe47fd033a4385d057b91837fafd
       Path: Events\Default Work Unit\0912_1\Stop_NSP_Increase_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NSP_Low_in_stock_01
       guid: df0199565c252c42958ec180e93e9259
       id: 3492403713
@@ -6255,8 +6255,8 @@ MonoBehaviour:
         guid: df0199565c252c42958ec180e93e9259
       Path: Events\Default Work Unit\0912_1\Stop_NSP_Low_in_stock_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_NSP_Many_jobs_01
       guid: 0c2b10dd0a872848a00aaea998edbbd6
       id: 840400464
@@ -6275,8 +6275,8 @@ MonoBehaviour:
         guid: 0c2b10dd0a872848a00aaea998edbbd6
       Path: Events\Default Work Unit\0912_1\Stop_NSP_Many_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_protest_002
       guid: d6b1c3a8cdb22747a98e346d1340bc72
       id: 3906996890
@@ -6295,8 +6295,8 @@ MonoBehaviour:
         guid: d6b1c3a8cdb22747a98e346d1340bc72
       Path: Events\Default Work Unit\old\Stop_protest_002
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_active
       guid: ba2e2ec38ee5e54d825781fd37941b5f
       id: 3220345088
@@ -6315,8 +6315,8 @@ MonoBehaviour:
         guid: ba2e2ec38ee5e54d825781fd37941b5f
       Path: Events\Default Work Unit\toto\Stop_RACE_active
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_active_L_
       guid: 2e7a51308d563d4ab8eb822f5388edc4
       id: 2355063916
@@ -6335,8 +6335,8 @@ MonoBehaviour:
         guid: 2e7a51308d563d4ab8eb822f5388edc4
       Path: Events\Default Work Unit\toto\Stop_RACE_active_L_
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_bet_01
       guid: 445115975a2ba3428833e2759267f771
       id: 1635092595
@@ -6355,8 +6355,8 @@ MonoBehaviour:
         guid: 445115975a2ba3428833e2759267f771
       Path: Events\Default Work Unit\toto\Stop_RACE_bet_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_bet_02
       guid: a1e2393d2649d742940be661ab0a35c4
       id: 1635092592
@@ -6375,8 +6375,8 @@ MonoBehaviour:
         guid: a1e2393d2649d742940be661ab0a35c4
       Path: Events\Default Work Unit\toto\Stop_RACE_bet_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Race_BGM
       guid: 7fe1c2965f152340bd2896d35a863656
       id: 3972443436
@@ -6395,8 +6395,8 @@ MonoBehaviour:
         guid: 7fe1c2965f152340bd2896d35a863656
       Path: Events\Default Work Unit\0102\Stop_Race_BGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_countdown
       guid: 19d69ce87a80e9478cbbf287c9ad7007
       id: 1877882295
@@ -6415,8 +6415,8 @@ MonoBehaviour:
         guid: 19d69ce87a80e9478cbbf287c9ad7007
       Path: Events\Default Work Unit\toto\Stop_RACE_countdown
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_horserace
       guid: 5f32d628063a2743823958f3f9bfdb3f
       id: 2347644930
@@ -6435,8 +6435,8 @@ MonoBehaviour:
         guid: 5f32d628063a2743823958f3f9bfdb3f
       Path: Events\Default Work Unit\toto\Stop_RACE_horserace
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_recall_01
       guid: dd9c17e18d4e68448e181df962f46566
       id: 4039949733
@@ -6455,8 +6455,8 @@ MonoBehaviour:
         guid: dd9c17e18d4e68448e181df962f46566
       Path: Events\Default Work Unit\toto\Stop_RACE_recall_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_recall_02
       guid: f7935d0aac3313489ebfaf35f81b12ce
       id: 4039949734
@@ -6475,8 +6475,8 @@ MonoBehaviour:
         guid: f7935d0aac3313489ebfaf35f81b12ce
       Path: Events\Default Work Unit\toto\Stop_RACE_recall_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_RACE_start
       guid: 06261ccd76451e4ab962c456d8fb0d86
       id: 3549795858
@@ -6495,8 +6495,8 @@ MonoBehaviour:
         guid: 06261ccd76451e4ab962c456d8fb0d86
       Path: Events\Default Work Unit\toto\Stop_RACE_start
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Slot_BGM
       guid: 4eeba6d4a4eac94e85eabdc6c8e24153
       id: 4154771207
@@ -6512,8 +6512,8 @@ MonoBehaviour:
         guid: 4eeba6d4a4eac94e85eabdc6c8e24153
       Path: Events\Default Work Unit\Stop_Slot_BGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Slot_Drrrrrr_01
       guid: 121a9767894bb945a42f14209fde0e34
       id: 3035396721
@@ -6532,8 +6532,8 @@ MonoBehaviour:
         guid: 121a9767894bb945a42f14209fde0e34
       Path: Events\Default Work Unit\old\Stop_Slot_Drrrrrr_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Slotmashin_Jackpot_Ani_01
       guid: 010940931a8efe4680b105eae31e6c0e
       id: 1571046380
@@ -6552,8 +6552,8 @@ MonoBehaviour:
         guid: 010940931a8efe4680b105eae31e6c0e
       Path: Events\Default Work Unit\old\Stop_Slotmashin_Jackpot_Ani_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_SP_Decrease_price_01
       guid: 52ef16884a75164b87b1b1c9594d9693
       id: 2088385980
@@ -6572,8 +6572,8 @@ MonoBehaviour:
         guid: 52ef16884a75164b87b1b1c9594d9693
       Path: Events\Default Work Unit\0912\Stop_SP_Decrease_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_SP_Discount_01
       guid: 8b64c586abc24d40abb265fcef4d263b
       id: 452867657
@@ -6592,8 +6592,8 @@ MonoBehaviour:
         guid: 8b64c586abc24d40abb265fcef4d263b
       Path: Events\Default Work Unit\0912\Stop_SP_Discount_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_SP_Festival_01
       guid: 4d680eb471467d4e8e79eb04bbadf320
       id: 2028788634
@@ -6612,8 +6612,8 @@ MonoBehaviour:
         guid: 4d680eb471467d4e8e79eb04bbadf320
       Path: Events\Default Work Unit\0912\Stop_SP_Festival_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_SP_Few_jobs_01
       guid: 24f9126c95397b4387c9cbffd1b37edf
       id: 3363240785
@@ -6632,8 +6632,8 @@ MonoBehaviour:
         guid: 24f9126c95397b4387c9cbffd1b37edf
       Path: Events\Default Work Unit\0912\Stop_SP_Few_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_SP_Increase_price_01
       guid: 89ee0c4e8211ea41b296087b5add7a0c
       id: 3256509184
@@ -6652,8 +6652,8 @@ MonoBehaviour:
         guid: 89ee0c4e8211ea41b296087b5add7a0c
       Path: Events\Default Work Unit\0912\Stop_SP_Increase_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_SP_Low_in_stock_01
       guid: cd3deaecccfcf943b044a85e726d7ddd
       id: 1084494907
@@ -6672,8 +6672,8 @@ MonoBehaviour:
         guid: cd3deaecccfcf943b044a85e726d7ddd
       Path: Events\Default Work Unit\0912\Stop_SP_Low_in_stock_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_SP_Many_jobs_01
       guid: 1884f6b7e6a18c4197a2d9039a4f66c0
       id: 2576315890
@@ -6692,8 +6692,8 @@ MonoBehaviour:
         guid: 1884f6b7e6a18c4197a2d9039a4f66c0
       Path: Events\Default Work Unit\0912\Stop_SP_Many_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_testing
       guid: 2529e918a5ec3947875c06abfbb45236
       id: 3190087908
@@ -6712,8 +6712,8 @@ MonoBehaviour:
         guid: 2529e918a5ec3947875c06abfbb45236
       Path: Events\Default Work Unit\old\Stop_testing
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TImeLapsBGM
       guid: 07e3244c5f20da4f894d90d01338e8b1
       id: 1305109677
@@ -6732,8 +6732,8 @@ MonoBehaviour:
         guid: 07e3244c5f20da4f894d90d01338e8b1
       Path: Events\Default Work Unit\old\Stop_TImeLapsBGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Decrease_price_01
       guid: 9ed5beb58b60c04eb3d12c01202864dc
       id: 4014218246
@@ -6749,8 +6749,8 @@ MonoBehaviour:
         guid: 9ed5beb58b60c04eb3d12c01202864dc
       Path: Events\Default Work Unit\Stop_TO_Decrease_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Decrease_price_02
       guid: e49df6fe1fa0764fad688449ddcf6d42
       id: 4014218245
@@ -6766,8 +6766,8 @@ MonoBehaviour:
         guid: e49df6fe1fa0764fad688449ddcf6d42
       Path: Events\Default Work Unit\Stop_TO_Decrease_price_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Decrease_price_03
       guid: ca69ac2ede9c424c8b68c33d018114b2
       id: 4014218244
@@ -6783,8 +6783,8 @@ MonoBehaviour:
         guid: ca69ac2ede9c424c8b68c33d018114b2
       Path: Events\Default Work Unit\Stop_TO_Decrease_price_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Decrease_price_04
       guid: d9280820eae7664fbe30d1ad428ef3a8
       id: 4014218243
@@ -6800,8 +6800,8 @@ MonoBehaviour:
         guid: d9280820eae7664fbe30d1ad428ef3a8
       Path: Events\Default Work Unit\Stop_TO_Decrease_price_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Discount_01
       guid: 8308467975366a4793ed34e40488b2e4
       id: 3754217315
@@ -6817,8 +6817,8 @@ MonoBehaviour:
         guid: 8308467975366a4793ed34e40488b2e4
       Path: Events\Default Work Unit\Stop_TO_Discount_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Discount_02
       guid: df3cc3fab7a61046a88aa53104e9dcdc
       id: 3754217312
@@ -6834,8 +6834,8 @@ MonoBehaviour:
         guid: df3cc3fab7a61046a88aa53104e9dcdc
       Path: Events\Default Work Unit\Stop_TO_Discount_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Discount_03
       guid: 05cf7e2df0aff943b015e61a29bca888
       id: 3754217313
@@ -6851,8 +6851,8 @@ MonoBehaviour:
         guid: 05cf7e2df0aff943b015e61a29bca888
       Path: Events\Default Work Unit\Stop_TO_Discount_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Discount_04
       guid: 5c9427f7f1c79341a09c658f93abcb50
       id: 3754217318
@@ -6868,8 +6868,8 @@ MonoBehaviour:
         guid: 5c9427f7f1c79341a09c658f93abcb50
       Path: Events\Default Work Unit\Stop_TO_Discount_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DESOLATE_01
       guid: 2d4f38665cfe54448dbf1089c121af44
       id: 4031053600
@@ -6885,8 +6885,8 @@ MonoBehaviour:
         guid: 2d4f38665cfe54448dbf1089c121af44
       Path: Events\Default Work Unit\Stop_TO_event_DESOLATE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DESOLATE_02
       guid: b415728a342ac04abf7c78e7c4b7b422
       id: 4031053603
@@ -6902,8 +6902,8 @@ MonoBehaviour:
         guid: b415728a342ac04abf7c78e7c4b7b422
       Path: Events\Default Work Unit\Stop_TO_event_DESOLATE_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DESOLATE_03
       guid: 4bafc66e3d2a444ebe16d659b8bb8b0a
       id: 4031053602
@@ -6919,8 +6919,8 @@ MonoBehaviour:
         guid: 4bafc66e3d2a444ebe16d659b8bb8b0a
       Path: Events\Default Work Unit\Stop_TO_event_DESOLATE_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DESOLATE_04
       guid: 32741dc6d149c14b8f7cd031039a81f4
       id: 4031053605
@@ -6936,8 +6936,8 @@ MonoBehaviour:
         guid: 32741dc6d149c14b8f7cd031039a81f4
       Path: Events\Default Work Unit\Stop_TO_event_DESOLATE_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DISEASE_01
       guid: 94cd2eea7398854a924a3e22e0c6c940
       id: 37099561
@@ -6953,8 +6953,8 @@ MonoBehaviour:
         guid: 94cd2eea7398854a924a3e22e0c6c940
       Path: Events\Default Work Unit\Stop_TO_event_DISEASE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DISEASE_02
       guid: fede92caa630144fa0b0bba1402f07dc
       id: 37099562
@@ -6970,8 +6970,8 @@ MonoBehaviour:
         guid: fede92caa630144fa0b0bba1402f07dc
       Path: Events\Default Work Unit\Stop_TO_event_DISEASE_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DISEASE_03
       guid: 1379088021604244ba0e9744cff9be36
       id: 37099563
@@ -6987,8 +6987,8 @@ MonoBehaviour:
         guid: 1379088021604244ba0e9744cff9be36
       Path: Events\Default Work Unit\Stop_TO_event_DISEASE_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_DISEASE_04
       guid: 1947d7de95ed8147a4078dada462d07b
       id: 37099564
@@ -7004,8 +7004,8 @@ MonoBehaviour:
         guid: 1947d7de95ed8147a4078dada462d07b
       Path: Events\Default Work Unit\Stop_TO_event_DISEASE_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_FIRE_01
       guid: 3839904a9b3f9a41aa62e31b0a537d18
       id: 3572679577
@@ -7021,8 +7021,8 @@ MonoBehaviour:
         guid: 3839904a9b3f9a41aa62e31b0a537d18
       Path: Events\Default Work Unit\Stop_TO_event_FIRE_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_FIRE_02
       guid: d95e4cc86427524a97ecba670e86248e
       id: 3572679578
@@ -7038,8 +7038,8 @@ MonoBehaviour:
         guid: d95e4cc86427524a97ecba670e86248e
       Path: Events\Default Work Unit\Stop_TO_event_FIRE_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_FIRE_03
       guid: b1e6317eee968045aa374289b401b5ee
       id: 3572679579
@@ -7055,8 +7055,8 @@ MonoBehaviour:
         guid: b1e6317eee968045aa374289b401b5ee
       Path: Events\Default Work Unit\Stop_TO_event_FIRE_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_FIRE_04
       guid: c653fdb1fd89f2448dd5a68f19b0e34d
       id: 3572679580
@@ -7072,8 +7072,8 @@ MonoBehaviour:
         guid: c653fdb1fd89f2448dd5a68f19b0e34d
       Path: Events\Default Work Unit\Stop_TO_event_FIRE_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_THIEF_01
       guid: d3fe0353b74a074e8a6e90f6975fb18e
       id: 3689082583
@@ -7089,8 +7089,8 @@ MonoBehaviour:
         guid: d3fe0353b74a074e8a6e90f6975fb18e
       Path: Events\Default Work Unit\Stop_TO_event_THIEF_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_THIEF_02
       guid: 35e62733a0cb4f42bb761f65942f571a
       id: 3689082580
@@ -7106,8 +7106,8 @@ MonoBehaviour:
         guid: 35e62733a0cb4f42bb761f65942f571a
       Path: Events\Default Work Unit\Stop_TO_event_THIEF_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_THIEF_03
       guid: ccf524655ef024448dfd6fc14852294e
       id: 3689082581
@@ -7123,8 +7123,8 @@ MonoBehaviour:
         guid: ccf524655ef024448dfd6fc14852294e
       Path: Events\Default Work Unit\Stop_TO_event_THIEF_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_event_THIEF_04
       guid: 42d8b04511ed3946a01033b65b95744b
       id: 3689082578
@@ -7140,8 +7140,8 @@ MonoBehaviour:
         guid: 42d8b04511ed3946a01033b65b95744b
       Path: Events\Default Work Unit\Stop_TO_event_THIEF_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Festival_01
       guid: 1b3991e74c22f148a0323df45965d9ca
       id: 1778818128
@@ -7157,8 +7157,8 @@ MonoBehaviour:
         guid: 1b3991e74c22f148a0323df45965d9ca
       Path: Events\Default Work Unit\Stop_TO_Festival_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Festival_02
       guid: fc43dc17df7bc74dbd1a3f4e3bb196d6
       id: 1778818131
@@ -7174,8 +7174,8 @@ MonoBehaviour:
         guid: fc43dc17df7bc74dbd1a3f4e3bb196d6
       Path: Events\Default Work Unit\Stop_TO_Festival_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Festival_03
       guid: 57105b95acca854d8919c66c398bf0fc
       id: 1778818130
@@ -7191,8 +7191,8 @@ MonoBehaviour:
         guid: 57105b95acca854d8919c66c398bf0fc
       Path: Events\Default Work Unit\Stop_TO_Festival_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Festival_04
       guid: 5f3d8a7fb04f5a4eabe7f5b3e93107e0
       id: 1778818133
@@ -7208,8 +7208,8 @@ MonoBehaviour:
         guid: 5f3d8a7fb04f5a4eabe7f5b3e93107e0
       Path: Events\Default Work Unit\Stop_TO_Festival_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Few_jobs_01
       guid: ade0816920989b4f996aa40a9b3db074
       id: 2443780343
@@ -7225,8 +7225,8 @@ MonoBehaviour:
         guid: ade0816920989b4f996aa40a9b3db074
       Path: Events\Default Work Unit\Stop_TO_Few_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Few_jobs_02
       guid: c033f39dd469d64db6f9ac64bfadc8df
       id: 2443780340
@@ -7242,8 +7242,8 @@ MonoBehaviour:
         guid: c033f39dd469d64db6f9ac64bfadc8df
       Path: Events\Default Work Unit\Stop_TO_Few_jobs_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Few_jobs_03
       guid: 845bad93afc05a46a35e6ce9dd15e972
       id: 2443780341
@@ -7259,8 +7259,8 @@ MonoBehaviour:
         guid: 845bad93afc05a46a35e6ce9dd15e972
       Path: Events\Default Work Unit\Stop_TO_Few_jobs_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Few_jobs_04
       guid: 522010eb0f7ede4eb3c8a8c590fe023c
       id: 2443780338
@@ -7276,8 +7276,8 @@ MonoBehaviour:
         guid: 522010eb0f7ede4eb3c8a8c590fe023c
       Path: Events\Default Work Unit\Stop_TO_Few_jobs_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Increase_price_01
       guid: d37fe90f084e2d4e919b05ac0d8a07e4
       id: 1408964430
@@ -7293,8 +7293,8 @@ MonoBehaviour:
         guid: d37fe90f084e2d4e919b05ac0d8a07e4
       Path: Events\Default Work Unit\Stop_TO_Increase_price_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Increase_price_02
       guid: 43d1bdecda242e4bbfd059e892603d93
       id: 1408964429
@@ -7310,8 +7310,8 @@ MonoBehaviour:
         guid: 43d1bdecda242e4bbfd059e892603d93
       Path: Events\Default Work Unit\Stop_TO_Increase_price_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Increase_price_03
       guid: 4caf90a44a030847a437086e3aac230a
       id: 1408964428
@@ -7327,8 +7327,8 @@ MonoBehaviour:
         guid: 4caf90a44a030847a437086e3aac230a
       Path: Events\Default Work Unit\Stop_TO_Increase_price_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Increase_price_04
       guid: 2782b812b988444285c77000dcfb275d
       id: 1408964427
@@ -7344,8 +7344,8 @@ MonoBehaviour:
         guid: 2782b812b988444285c77000dcfb275d
       Path: Events\Default Work Unit\Stop_TO_Increase_price_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Low_in_stock_01
       guid: b15451c472b961419abb4db973d975fa
       id: 3333135353
@@ -7361,8 +7361,8 @@ MonoBehaviour:
         guid: b15451c472b961419abb4db973d975fa
       Path: Events\Default Work Unit\Stop_TO_Low_in_stock_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Low_in_stock_02
       guid: 341ae923e9d7cf45a278c42e66c2ea43
       id: 3333135354
@@ -7378,8 +7378,8 @@ MonoBehaviour:
         guid: 341ae923e9d7cf45a278c42e66c2ea43
       Path: Events\Default Work Unit\Stop_TO_Low_in_stock_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Low_in_stock_03
       guid: ed648906379fd5449be97e770c8b863d
       id: 3333135355
@@ -7395,8 +7395,8 @@ MonoBehaviour:
         guid: ed648906379fd5449be97e770c8b863d
       Path: Events\Default Work Unit\Stop_TO_Low_in_stock_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Low_in_stock_04
       guid: 10be65079032a54998a6935da8492d58
       id: 3333135356
@@ -7412,8 +7412,8 @@ MonoBehaviour:
         guid: 10be65079032a54998a6935da8492d58
       Path: Events\Default Work Unit\Stop_TO_Low_in_stock_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Many_jobs_01
       guid: 50f2ba6468aa64488194e5738049089c
       id: 2692954104
@@ -7429,8 +7429,8 @@ MonoBehaviour:
         guid: 50f2ba6468aa64488194e5738049089c
       Path: Events\Default Work Unit\Stop_TO_Many_jobs_01
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Many_jobs_02
       guid: c8a8eca137bb904cb8526e72ce604698
       id: 2692954107
@@ -7446,8 +7446,8 @@ MonoBehaviour:
         guid: c8a8eca137bb904cb8526e72ce604698
       Path: Events\Default Work Unit\Stop_TO_Many_jobs_02
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Many_jobs_03
       guid: 5d0628ae50bc9f4ebee1f4dcedb947b0
       id: 2692954106
@@ -7463,8 +7463,8 @@ MonoBehaviour:
         guid: 5d0628ae50bc9f4ebee1f4dcedb947b0
       Path: Events\Default Work Unit\Stop_TO_Many_jobs_03
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_Many_jobs_04
       guid: 52d85e3148d2eb4da9a486edc13cfb7c
       id: 2692954109
@@ -7480,8 +7480,8 @@ MonoBehaviour:
         guid: 52d85e3148d2eb4da9a486edc13cfb7c
       Path: Events\Default Work Unit\Stop_TO_Many_jobs_04
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TO_testing
       guid: 2d06915fd570ae47aa0ca6b3925f6180
       id: 1061435042
@@ -7497,8 +7497,8 @@ MonoBehaviour:
         guid: 2d06915fd570ae47aa0ca6b3925f6180
       Path: Events\Default Work Unit\Stop_TO_testing
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_TOBGM
       guid: a1a6c92a040fd14584588f8a3b581d8e
       id: 3666577687
@@ -7517,8 +7517,8 @@ MonoBehaviour:
         guid: a1a6c92a040fd14584588f8a3b581d8e
       Path: Events\Default Work Unit\0102\Stop_TOBGM
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Wind
       guid: 3c9ba89c227cc7408b8f05c976874076
       id: 3173136834
@@ -7537,8 +7537,8 @@ MonoBehaviour:
         guid: 3c9ba89c227cc7408b8f05c976874076
       Path: Events\Default Work Unit\old\Stop_Wind
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: toto
       guid: 950f480523b7a346b25bea7125b5eba0
       id: 3108347557

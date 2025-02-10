@@ -834,7 +834,7 @@
 				<GameParameter Id="2212414277" Name="DIST"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{F9E7C332-37FC-2597-072F-42A8DE157675}">
+		<SoundBank Id="2864201533" Type="User" Language="SFX" Hash="{AA059600-DCEA-AAE8-B180-149F4EAB0F07}">
 			<ShortName>TOTOPIA</ShortName>
 			<Path>TOTOPIA.bnk</Path>
 			<Media>
@@ -1623,7 +1623,7 @@
 				</StateGroup>
 			</StateGroups>
 		</SoundBank>
-		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{D6094997-5F0B-C69D-58FA-0860FB90EBC7}">
+		<SoundBank Id="2890627007" Type="User" Language="SFX" Hash="{85996470-9A97-E954-A008-2B981CEE598F}">
 			<ShortName>NEWONE</ShortName>
 			<Path>NEWONE.bnk</Path>
 			<Media>
@@ -2395,5 +2395,5 @@
 			</Events>
 		</SoundBank>
 	</SoundBanks>
-	<FileHash>{C6DCB170-6B00-B625-8547-890C07DD39FB}</FileHash>
+	<FileHash>{A4098BCA-68EF-3A99-70AC-D7DBA181F8C8}</FileHash>
 </SoundBanksInfo>
