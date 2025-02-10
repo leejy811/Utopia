@@ -21,7 +21,7 @@ public class BuildingSpawner : MonoBehaviour, IObserver
     public int[,] buildingGradeCount;
     public int buildingRemoveCount;
 
-    private bool isHighlight;
+    public bool isHighlight;
     private Dictionary<Building, TemporayUI> eventIconTemps = new Dictionary<Building, TemporayUI>();
 
     private void Awake()

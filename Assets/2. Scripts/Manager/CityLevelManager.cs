@@ -132,6 +132,8 @@ public class CityLevelManager : MonoBehaviour
     {
         InputManager.SetCanInput(false);
         RoutineManager.instance.OnOffDailyLight(false);
+        if (BuildingSpawner.instance.isHighlight)
+            UIManager.instance.notifyObserver(EventState.EventIcon);
 
         yield return new WaitForSeconds(2.0f);
 
@@ -223,6 +225,7 @@ public class CityLevelManager : MonoBehaviour
 
         yield return new WaitForSeconds(2.0f);
 
+        UIManager.instance.skipTimeLapse.gameObject.SetActive(true);
         cameraController.rotateOnCoroutine = StartCoroutine(cameraController.RotateCameraOn());
 
         int timesOfRotate = 6;
@@ -244,8 +247,15 @@ public class CityLevelManager : MonoBehaviour
                 Grid.instance.PurchaseLevelUpTile(level[idx].tileSize, level[idx - 1].tileSize, 3f);
             }
 
-            yield return new WaitForSeconds(timePerFrame);
+            float second = 0.0f;
+            while (second < timePerFrame && !UIManager.instance.skipTimeLapse.isSkip)
+            {
+                second += Time.fixedDeltaTime;
+                yield return new WaitForFixedUpdate();
+            }
         }
+
+        UIManager.instance.skipTimeLapse.gameObject.SetActive(false);
 
         GameManager.instance.LoadLobbyScene();
     }

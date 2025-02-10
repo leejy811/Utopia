@@ -25,8 +25,10 @@ public class SkipTimeLapseUI : MonoBehaviour
         {
             skipImage.gameObject.SetActive(false);
 
-            if (skipImage.fillAmount > 0.999f)
+            if (skipImage.fillAmount > 0.99f)
                 isSkip = true;
+            else
+                skipImage.fillAmount = 0f;
         }
     }
 
