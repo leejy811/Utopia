@@ -1,6 +1,8 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.PlayerSettings;
 
 
 public class EndingCreditUI : MonoBehaviour
@@ -24,10 +26,13 @@ public class EndingCreditUI : MonoBehaviour
             Vector3 pos = creditParent.localPosition;
             pos += new Vector3(col * distance.x, row * distance.y, 0);
 
-            GameObject credit = Instantiate(creditPrefab, creditParent);
+            GameObject credit = Instantiate(creditPrefab, transform);
             credit.transform.localPosition = pos;
             credit.GetComponent<CreditEntityUI>().SetValue(creditDB.entities[i]);
         }
+
+        float moveDist = (creditParent.localPosition.y + ((creditDB.entities.Count / 3) + 3) * distance.y) * -1;
+        transform.DOLocalMoveY(transform.localPosition.y + moveDist, 90.0f);
     }
 
     public void StartCredit()

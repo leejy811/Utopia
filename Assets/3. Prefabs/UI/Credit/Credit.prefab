@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -106.3, y: 23.4}
-  m_SizeDelta: {x: 1025, y: 1025}
+  m_AnchoredPosition: {x: -109.9, y: 12.6}
+  m_SizeDelta: {x: 1252, y: 1761}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5843769827303699341
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 717e5f539caf0954c9838a9fb136871a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3c9471bee0f42af49a79c02e635a0d05, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1489810531608264482}
   - component: {fileID: 1418745711387239272}
   - component: {fileID: 6588944397461096998}
+  - component: {fileID: 7582831591121940541}
   m_Layer: 5
   m_Name: Credit
   m_TagString: Untagged
@@ -154,6 +155,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7582831591121940541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2619129121160412925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6e3fb20cd8e444ea8947cd3c51c961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buildingImage: {fileID: 8696437977267566412}
+  nameText: {fileID: 7188300759215443301}
+  buildingSprites:
+  - {fileID: 21300000, guid: 6afb9b4925d71a64ebebfafdbadb1dff, type: 3}
+  - {fileID: 21300000, guid: 3c9471bee0f42af49a79c02e635a0d05, type: 3}
+  - {fileID: 21300000, guid: db8976f5193b89e46933b575df8eae5a, type: 3}
+  - {fileID: 21300000, guid: 77e4ba37b9f359e47a42e7db8388da3b, type: 3}
+  - {fileID: 21300000, guid: 94fcbc87e19012c49b58094de0284178, type: 3}
 --- !u!1 &2797783840145473432
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +241,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB3D9\uB300\uBB38\uC5ED\uC0AC\uBB38\uD654\uACF5\uC6D0\uC5ED"
+  m_text: "\uC774\uC8FC\uC6A9"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
   m_sharedMaterial: {fileID: 4479025330240497328, guid: ebc7eae8d75ba5247a080ef74dbb6d26, type: 2}
@@ -247,7 +268,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.55
+  m_fontSize: 20
   m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 1

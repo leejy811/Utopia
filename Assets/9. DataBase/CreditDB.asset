@@ -14,11 +14,446 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   entities:
   - spriteIdx: 0
-    price: 10000
-    name: aa
-  - spriteIdx: 1
+    price: 0
+    name: "\uC131\uD76C\uC6D0"
+  - spriteIdx: 0
+    price: 0
+    name: Mechanic Raccoon
+  - spriteIdx: 0
+    price: 0
+    name: "\uACBD\uAE30\uAD11\uC8FC\uCD5C\uC2DC\uC7A5"
+  - spriteIdx: 0
+    price: 0
+    name: PaulHan
+  - spriteIdx: 0
+    price: 0
+    name: "\uD0C0\uC5D0\uC640\uB098"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC815\uB2E4\uC740"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC774\uC724\uC885"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD22C\uD22C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD504\uB780\uC2DC\uC2A4"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC591\uC740\uC815"
+  - spriteIdx: 0
+    price: 0
+    name: sea
+  - spriteIdx: 0
+    price: 0
+    name: ggome
+  - spriteIdx: 0
+    price: 0
+    name: 816815
+  - spriteIdx: 0
+    price: 0
+    name: "\uADF8\uB9B0"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC591\uC591\uCE58"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAE40\uC720\uBE48"
+  - spriteIdx: 0
+    price: 0
+    name: ChoJell
+  - spriteIdx: 0
+    price: 0
+    name: "\uAC15\uB3D9\uB300 \uAE40\uD55C\uC7AC"
+  - spriteIdx: 0
     price: 30000
-    name: bb
-  - spriteIdx: 2
+    name: "\uAE40\uC120\uC6B0"
+  - spriteIdx: 0
+    price: 10000
+    name: "\uAE40\uC7AC\uC6B1"
+  - spriteIdx: 0
+    price: 0
+    name: waple
+  - spriteIdx: 0
     price: 20000
-    name: cc
+    name: "\uAE40\uC9C4\uB77C\uBA74"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD55C\uBC14\uB78C\uBE5B"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC9C4\uB3C4\uD654"
+  - spriteIdx: 0
+    price: 0
+    name: FCha
+  - spriteIdx: 0
+    price: 0
+    name: Reha
+  - spriteIdx: 0
+    price: 0
+    name: THY
+  - spriteIdx: 0
+    price: 0
+    name: "\uC18C\uBA38\uB9AC\uAD6D\uBC25"
+  - spriteIdx: 0
+    price: 0
+    name: "\uACE0\uB4DC\uB984\uD33D\uADC4"
+  - spriteIdx: 0
+    price: 0
+    name: "\uBA54\uD478"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAE40\uB77C\uC601"
+  - spriteIdx: 0
+    price: 25000
+    name: Cloud_WhiteBear
+  - spriteIdx: 0
+    price: 0
+    name: "\uB098\uB3CC\uC774"
+  - spriteIdx: 0
+    price: 50000
+    name: "\uBC15\uBBFC\uC11C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC18C\uD1A0\uC2A4"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC2A4\uC704\uD2B8\uD53C"
+  - spriteIdx: 0
+    price: 100000
+    name: "\uACFC\uBD84"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB370\uC774\uC9C0 \uC2A4\uD29C\uB514\uC624"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAE40\uBC18\uC11D"
+  - spriteIdx: 0
+    price: 0
+    name: "\uBC14\uAE0D\uC218"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC784\uB385\uB0E5"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC7AC\uC0DD\uC0B0"
+  - spriteIdx: 0
+    price: 0
+    name: Roeal
+  - spriteIdx: 0
+    price: 0
+    name: "\uC870\uC120\uC758 \uC720\uC77C\uD55C \uD76C\uB9DD"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC2A4\uD0C0\uC640\uBC88\uAC1C"
+  - spriteIdx: 0
+    price: 0
+    name: daro
+  - spriteIdx: 0
+    price: 0
+    name: "\uBC15\uB871"
+  - spriteIdx: 0
+    price: 0
+    name: "\uCF69\uB2D8"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC544\uC774\uB8E8\uC2A4 \uC560\uB12C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB3C4\uCC2C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAD6C\uBCF8\uD615"
+  - spriteIdx: 0
+    price: 0
+    name: Barzillai
+  - spriteIdx: 0
+    price: 0
+    name: "\uB864\uC5D0\uD280\uAE40"
+  - spriteIdx: 0
+    price: 50000
+    name: "\uC0C8\uBCBD\uC5D0\uB0B4\uB9B0\uCCAB\uB208"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC784\uB4E0\uD574"
+  - spriteIdx: 0
+    price: 0
+    name: wood08
+  - spriteIdx: 0
+    price: 0
+    name: "\uC774\uAC15\uD76C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB098\uC5D8\uC2A4"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB78C\uC950"
+  - spriteIdx: 0
+    price: 50000
+    name: leejy
+  - spriteIdx: 0
+    price: 0
+    name: "\uC624\uB9AC5\uB9AC"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC591\uC6B0\uC815"
+  - spriteIdx: 0
+    price: 50000
+    name: "\uC804\uD615\uADFC"
+  - spriteIdx: 0
+    price: 50000
+    name: "\uAD8C\uAC00\uB9BC"
+  - spriteIdx: 0
+    price: 0
+    name: "\uBC15\uC8FC\uC5F0"
+  - spriteIdx: 0
+    price: 0
+    name: kdnsuebs
+  - spriteIdx: 0
+    price: 100000
+    name: "\uD1A0\uB9C8\uC2A4\uD1B5\uC2E0\uAE30"
+  - spriteIdx: 0
+    price: 0
+    name: "\uBC00\uD06C\uD2F0\uB0E0"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB3D9\uB300\uBB38\uC5ED\uC0AC\uBB38\uD654\uACF5\uC6D0\uC5ED"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB0A8\uADF9\uC5EC\uC6B0"
+  - spriteIdx: 0
+    price: 0
+    name: "YU\uC6A9"
+  - spriteIdx: 0
+    price: 0
+    name: "\uCE74\uB974\uC2A4\uD53C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD478\uACF0\uC090"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB2E8\uD638\uBC15\uD325\uC8FD"
+  - spriteIdx: 0
+    price: 30000
+    name: "\uB9AC\uCE74\uC2DC\uC728"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB8E8\uC774\uC2DC\uC2A4"
+  - spriteIdx: 0
+    price: 0
+    name: kul_PeAcE
+  - spriteIdx: 0
+    price: 0
+    name: "\uC11C\uD574\uBBF8"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC77C\uB2E8 \uB09C \uC544\uB2C8\uC57C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAD6C\uC6B4\uB9C8\uC2DC\uB8F8"
+  - spriteIdx: 0
+    price: 30000
+    name: "\uD63C\uBC25\uD558\uB2E4\uC0AC\uB808\uB4E4\uB9BC"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD6C4\uB974\uCE20\uB41C\uC7A5\uCC0C\uAC1C"
+  - spriteIdx: 0
+    price: 100000
+    name: "\uC606\uB3D9\uB124"
+  - spriteIdx: 0
+    price: 0
+    name: "\uBB49\uBB49"
+  - spriteIdx: 0
+    price: 0
+    name: hyha
+  - spriteIdx: 0
+    price: 0
+    name: "\uAE40\uC464\uC2A4"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB9AC\uC774\uC548"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAE40\uC624\uAE30"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC1A1\uAC1C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC678\uB208\uACE0\uC591\uC774"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB3C8 \uC5F4\uC2EC\uD788 \uBC8C\uC790"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAC15\uD150\uAD6C"
+  - spriteIdx: 0
+    price: 0
+    name: aborrecido
+  - spriteIdx: 0
+    price: 0
+    name: "\uC5D8\uC2DC"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC0C8\uB78C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD14C\uB9C8"
+  - spriteIdx: 0
+    price: 0
+    name: Hyacinth
+  - spriteIdx: 0
+    price: 0
+    name: "\uC218\uC601\uD558\uB298"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD61C\uBE48\uC774\uC544\uBE60"
+  - spriteIdx: 0
+    price: 50000
+    name: "\uC3D8\uC8FC\uAC00\uC870\uD558"
+  - spriteIdx: 0
+    price: 0
+    name: CoffeeRhys
+  - spriteIdx: 0
+    price: 0
+    name: linkmin
+  - spriteIdx: 0
+    price: 0
+    name: "\uAD6C\uC2EC"
+  - spriteIdx: 0
+    price: 0
+    name: INSTALL
+  - spriteIdx: 0
+    price: 0
+    name: "\uBC15\uBCD1\uAD11"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD0C0\uC784"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB178\uC6B0\uB9C1"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC774\uC9C0\uD658"
+  - spriteIdx: 0
+    price: 100000
+    name: "\uD638\uBE75"
+  - spriteIdx: 0
+    price: 0
+    name: ON
+  - spriteIdx: 0
+    price: 0
+    name: "\uC815\uB2E8\uBE44"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD478\uB978\uC790\uBABD"
+  - spriteIdx: 0
+    price: 0
+    name: "\uBBF8\uB974\uC2A4"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB370\uB808"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB9AC\uD2B8\uC288\uD0C0\uC778(Ritstein)"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB3C4\uCFE0\uD398"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC815\uC2DC\uBAAC"
+  - spriteIdx: 0
+    price: 0
+    name: setda1494
+  - spriteIdx: 0
+    price: 0
+    name: Retalia.K
+  - spriteIdx: 0
+    price: 25000
+    name: "\uB2EC\uB098\uD55CDalNaHan"
+  - spriteIdx: 0
+    price: 25000
+    name: "\uB9AC\uBBF8"
+  - spriteIdx: 0
+    price: 50000
+    name: "\uC7A5 \uC7AC\uC740 J.E"
+  - spriteIdx: 0
+    price: 0
+    name: klein
+  - spriteIdx: 0
+    price: 0
+    name: Nura__
+  - spriteIdx: 0
+    price: 0
+    name: "\uD55C\uC138\uB77C"
+  - spriteIdx: 0
+    price: 50000
+    name: "\uC774\uB098\uBE44\uD2B8"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC5F0\uC624"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB77C\uC138\uCE74\uB208"
+  - spriteIdx: 0
+    price: 0
+    name: Yeseul Shin
+  - spriteIdx: 0
+    price: 0
+    name: "\uD604\uAE30\uB294\uC720\uD1A0\uD53C\uC544\uC655"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB77C\uD06C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC9D1\uC774\uC88B\uC544\uC694"
+  - spriteIdx: 0
+    price: 100000
+    name: "\uB178\uC900\uD6C4"
+  - spriteIdx: 0
+    price: 25000
+    name: "\uD0B4\uD398\uB9AC"
+  - spriteIdx: 0
+    price: 0
+    name: "\uAE40\uB098\uD604"
+  - spriteIdx: 0
+    price: 0
+    name: Skystars
+  - spriteIdx: 0
+    price: 100000
+    name: "[MN]\uB0A8_\uAC04"
+  - spriteIdx: 0
+    price: 0
+    name: "\uB9C8\uB8E8\uB294 \uAC31\uC5BC\uC950"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD480\uAF43\uC78E\uC0C8"
+  - spriteIdx: 0
+    price: 0
+    name: "\uBC15\uBFE1\uADDC\uBC15\uBFE1\uADDC\uBC15\uBFE1\uADDC"
+  - spriteIdx: 0
+    price: 0
+    name: "\uCCAD\uC6D4\uC801\uC77C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC870\uCC2C\uD76C"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC124\uC591"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC9C0\uC6B4"
+  - spriteIdx: 0
+    price: 0
+    name: "\uD6C5\uB204"
+  - spriteIdx: 0
+    price: 0
+    name: "\uC720\uC774\uBBF8\uC57C"
+  - spriteIdx: 0
+    price: 0
+    name: STHSTH
+  - spriteIdx: 0
+    price: 0
+    name: "\uB3D9\uB3D9"
