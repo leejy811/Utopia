@@ -14,6 +14,11 @@ public class EndingCreditUI : MonoBehaviour
 
     public CreditDB creditDB;
 
+    private void Start()
+    {
+        //InitCredit();
+    }
+
     private void InitCredit()
     {
         creditDB.entities.Sort(ComparePriceLesser);
