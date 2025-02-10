@@ -132,12 +132,12 @@ MonoBehaviour:
   happinessRate: 50
   happinessDifference: 0
   position: {x: 0, y: 0}
-  influencePower: 400
+  influencePower: 600
   additionalInfluencePower: 0
   influenceSize: 3
   influenceObject: {fileID: 110504375413987016}
   curEvents: []
-  cost: 5000
+  cost: 2500
   buildingIcon: {fileID: 21300000, guid: 95f7eddfe7d8ba94397dfe08bd85e77d, type: 3}
   zeroCnt: 0
   costPerDay: 400
