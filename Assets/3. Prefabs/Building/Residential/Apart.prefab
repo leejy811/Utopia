@@ -137,7 +137,7 @@ MonoBehaviour:
   influenceSize: 2
   influenceObject: {fileID: 8547929079635860779}
   curEvents: []
-  cost: 500
+  cost: 1000
   buildingIcon: {fileID: 21300000, guid: 4671da3345ac3334dbba7e80410a4e64, type: 3}
   zeroCnt: 0
   existFacility: 00000000
@@ -151,7 +151,7 @@ MonoBehaviour:
     cur: 0
   cultureCSAT:
     max: 200
-    min: 100
+    min: 150
     cur: 0
   serviceCSAT:
     max: 200
