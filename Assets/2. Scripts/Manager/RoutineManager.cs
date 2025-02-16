@@ -189,7 +189,7 @@ public class RoutineManager : MonoBehaviour
     {
         debt = debtsOfWeek[GetWeekOfYear()];
 
-        if (payFailTime > 0) debt += Mathf.Max(totalIncome * 4, 0);
+        if (payFailTime > 0) debt += Mathf.Max(totalIncome * 3, 0);
     }
 
     public int GetWeekOfYear()

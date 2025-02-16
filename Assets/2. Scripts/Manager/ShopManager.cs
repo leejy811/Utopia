@@ -139,7 +139,7 @@ public class ShopManager : MonoBehaviour, IObserver
         float weight = 2.5f;
         if (grade == 2)
         {
-            coefficient = 0.2f;
+            coefficient = 0.1f;
             //baseValue *= weight;
         }
         else if (grade == 3)
