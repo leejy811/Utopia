@@ -19,7 +19,7 @@ public class SettingUI : MonoBehaviour
     public Slider sfxSlider;
 
     private List<Resolution> resolutions = new List<Resolution>();
-    private bool fullScreen;
+    private FullScreenMode fullScreen;
 
     private void Start()
     {
@@ -61,7 +61,7 @@ public class SettingUI : MonoBehaviour
                 resDropdown.value = i;
         }
 
-        fullScreen = Screen.fullScreen;
+        fullScreen = Screen.fullScreenMode;
         screenDropdown.value = Convert.ToInt32(fullScreen);
 
         resDropdown.RefreshShownValue();
@@ -88,7 +88,7 @@ public class SettingUI : MonoBehaviour
     public void ChangeScreenMode(int value)
     {
         int idx = resDropdown.value;
-        fullScreen = Convert.ToBoolean(value);
+        fullScreen = Convert.ToBoolean(value) ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed;
         Screen.SetResolution(resolutions[idx].width, resolutions[idx].height, fullScreen);
     }
 

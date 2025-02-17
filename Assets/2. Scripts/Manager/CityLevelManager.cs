@@ -223,6 +223,9 @@ public class CityLevelManager : MonoBehaviour
         StartCoroutine(PostProcessManager.instance.FadeInOut(2f, false));
         UIManager.instance.endingCredit.InitCredit();
 
+        string bgmName = GameManager.instance.curMapType == MapType.Utopia ? "Play_BGM_01" : "Play_TOBGM";
+        SoundManager.instance.PostEvent(bgmName);
+
         yield return new WaitForSeconds(2.0f);
 
         UIManager.instance.skipTimeLapse.gameObject.SetActive(true);
@@ -254,8 +257,10 @@ public class CityLevelManager : MonoBehaviour
                 yield return new WaitForFixedUpdate();
             }
         }
-
         UIManager.instance.skipTimeLapse.gameObject.SetActive(false);
+
+        StartCoroutine(PostProcessManager.instance.FadeInOut(2f, true));
+        yield return new WaitForSeconds(2.0f);
 
         GameManager.instance.LoadLobbyScene();
     }
