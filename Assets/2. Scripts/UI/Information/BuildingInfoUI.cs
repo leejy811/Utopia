@@ -11,8 +11,8 @@ public class BuildingInfoUI : InfoUI
 
     protected Building building;
 
-    string[] typeString = { "주거", "상업", "문화", "서비스" };
-    string[] subTypeString = { "아파트", "잡화", "영화", "경찰", "음식", "미술", "소방", "여가", "의료", "오락" };
+    protected string[] typeString = { "주거", "상업", "문화", "서비스" };
+    protected string[] subTypeString = { "아파트", "잡화", "영화", "경찰", "음식", "미술", "소방", "여가", "의료", "오락" };
 
     public override void SetValue(int index)
     {

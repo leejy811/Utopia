@@ -135,7 +135,7 @@ MonoBehaviour:
   influencePower: 200
   additionalInfluencePower: 0
   influenceSize: 2
-  influenceObject: {fileID: 110504375413987016, guid: 0b74c1711ba20da4e9189a45b8aaee05, type: 3}
+  influenceObject: {fileID: 862766586697668818}
   curEvents: []
   cost: 1200
   buildingIcon: {fileID: 21300000, guid: 4b414a771c98ead4496a024b9037e2fb, type: 3}
@@ -285,6 +285,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 987a3b05943dcd14486132189315b959, type: 3}
+--- !u!1 &862766586697668818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5496325555039607170, guid: 987a3b05943dcd14486132189315b959, type: 3}
+  m_PrefabInstance: {fileID: 5170122867496010064}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &862766586697668819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5496325555039607171, guid: 987a3b05943dcd14486132189315b959, type: 3}

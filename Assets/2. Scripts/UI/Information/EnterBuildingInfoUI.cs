@@ -10,6 +10,8 @@ public class EnterBuildingInfoUI : UtilityBuildingInfoUI
 
     public override void SetValue(int index)
     {
+        typeString[(int)BuildingType.Culture] = "¿Ø»Ô";
+
         base.SetValue(index);
         EnterBuilding enterBuilding = building as EnterBuilding;
 
