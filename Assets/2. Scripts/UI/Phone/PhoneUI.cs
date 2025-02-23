@@ -170,7 +170,7 @@ public class PhoneUI : MonoBehaviour, IObserver
 
     public bool CheckZoom()
     {
-        return state != PhoneState.Chip && state != PhoneState.GameList;
+        return !gameObject.activeSelf || (state != PhoneState.Chip && state != PhoneState.GameList);
     }
 
     public void Notify(EventState state)
