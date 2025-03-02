@@ -260,6 +260,7 @@ public class HorseRacingUI : MinigameUI
         if (timeCountCoroutine != null)
             StopCoroutine(timeCountCoroutine);
 
+        curGameBuilding.betTimes--;
         ChipManager.instance.PayChip(curBetChip);
         resultInfo.Clear();
         SetState(MinigameState.Play);
